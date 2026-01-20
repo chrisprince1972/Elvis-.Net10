@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
+using System.Text.Json;
 using Elvis.Common;
 using ElvisDataModel;
 using ElvisDataModel.EDMX;
@@ -20,56 +20,64 @@ namespace Elvis.Model
 
         #region Bin File: Save and Load
         /// <summary>
-        /// Push out the events to a binary file.
+        /// Push out the events to a file.
         /// </summary>
-        /// <param name="events">A boolean with state of Save</param>
+        /// <param name="events">List of events to save</param>
         public static bool SaveEvents(List<ProductionEvent> events)
         {
             try
             {
-                using (FileStream stream = new FileStream("data.bin", FileMode.Create))
+                // Keep the same filename if you want, even though the content is now JSON.
+                const string fileName = "data.bin";
+
+                var options = new JsonSerializerOptions
                 {
-                    if (stream != null && stream.CanRead && stream.CanWrite)
-                    {//Added checks to try and remove certain user errors.
-                        BinaryFormatter bin = new BinaryFormatter();
-                        bin.Serialize(stream, events);
-                        return true;
-                    }
-                }
+                    WriteIndented = false,
+                    // Helps if your model uses fields, not properties.
+                    IncludeFields = true
+                };
+
+                string json = JsonSerializer.Serialize(events ?? new List<ProductionEvent>(), options);
+                File.WriteAllText(fileName, json);
+
+                return true;
             }
             catch (Exception ex)
             {
                 logger.ErrorException("BIN DATA ERROR -- Save Failure -- ", ex);
+                return false;
             }
-            return false;
         }
 
         /// <summary>
-        /// Pull in the events from a binary file.
+        /// Pull in the events from a file.
         /// </summary>
         /// <returns>A list of event objects.</returns>
         public static List<ProductionEvent> LoadEvents()
         {
-            List<ProductionEvent> events = new List<ProductionEvent>();
             try
             {
-                if (File.Exists("data.bin"))
+                const string fileName = "data.bin";
+                if (!File.Exists(fileName))
+                    return new List<ProductionEvent>();
+
+                string json = File.ReadAllText(fileName);
+                if (string.IsNullOrWhiteSpace(json))
+                    return new List<ProductionEvent>();
+
+                var options = new JsonSerializerOptions
                 {
-                    using (FileStream stream = new FileStream("data.bin", FileMode.Open))
-                    {
-                        if (stream != null && stream.CanRead && stream.CanWrite)
-                        {//Added checks to try and remove certain user errors.
-                            BinaryFormatter bin = new BinaryFormatter();
-                            events = (List<ProductionEvent>)bin.Deserialize(stream);
-                        }
-                    }
-                }
+                    IncludeFields = true
+                };
+
+                return JsonSerializer.Deserialize<List<ProductionEvent>>(json, options)
+                       ?? new List<ProductionEvent>();
             }
             catch (Exception ex)
             {
                 logger.ErrorException("BIN DATA ERROR -- Load Failure -- ", ex);
+                return new List<ProductionEvent>();
             }
-            return events;
         }
         #endregion
 

@@ -57,8 +57,8 @@ namespace Elvis.Forms.Tib
             if (!this.tibEvent.EventEnd.HasValue)
                 this.onGoingEndTime = onGoingEndTime;
 
-            BindListView(lstLevel1, tibReasons
-                    .DistinctBy(t => t.DelayReason1)
+            BindListView(lstLevel1, 
+                    Enumerable.DistinctBy(tibReasons,t => t.DelayReason1)
                     .OrderByDescending(o => o.DelayIndex)
                     .ToList()
                 );
@@ -737,14 +737,15 @@ namespace Elvis.Forms.Tib
             switch (lstLevel.Tag.ToString())
             {//Determine which level of issue
                 case "DelayReason1":
-                    BindListView(lstLevel2, tibReasons
-                        .OrderByDescending(o => o.DelayIndex)
-                        .Where(t =>
-                            t.DelayReason1 == lstLevel.SelectedValue.ToString() &&
-                            !string.IsNullOrWhiteSpace(t.DelayReason2))
-                        .DistinctBy(t =>
-                            t.DelayReason2)
-                        .ToList());
+                    BindListView(lstLevel2,
+                        Enumerable.DistinctBy(
+                                tibReasons
+                                    .OrderByDescending(o => o.DelayIndex)
+                                    .Where(t =>
+                                        t.DelayReason1 == lstLevel.SelectedValue.ToString() &&
+                                        !string.IsNullOrWhiteSpace(t.DelayReason2)),
+                                t => t.DelayReason2)
+                            .ToList());
                     ClearCheckedListBox(lstLevel3);
                     ClearCheckedListBox(lstLevel4);
 
@@ -754,15 +755,17 @@ namespace Elvis.Forms.Tib
                         ClearCheckedListBox(lstLevel2);
                     break;
                 case "DelayReason2":
-                    BindListView(lstLevel3, tibReasons
-                        .OrderByDescending(o => o.DelayIndex)
-                        .Where(t =>
-                            t.DelayReason1 == lstLevel1.SelectedValue.ToString() &&
-                            t.DelayReason2 == lstLevel.SelectedValue.ToString() &&
-                            !string.IsNullOrWhiteSpace(t.DelayReason3))
-                        .DistinctBy(t =>
-                            t.DelayReason3)
-                        .ToList());
+                    BindListView(lstLevel3,
+                        Enumerable.DistinctBy(
+                                tibReasons
+                                    .OrderByDescending(o => o.DelayIndex)
+                                    .Where(t =>
+                                        t.DelayReason1 == lstLevel1.SelectedValue.ToString() &&
+                                        t.DelayReason2 == lstLevel.SelectedValue.ToString() &&
+                                        !string.IsNullOrWhiteSpace(t.DelayReason3)),
+                                t => t.DelayReason3)
+                            .ToList());
+
                     ClearCheckedListBox(lstLevel4);
 
                     if (lstLevel3.Items.Count == 0)
@@ -771,16 +774,18 @@ namespace Elvis.Forms.Tib
                         ClearCheckedListBox(lstLevel3);
                     break;
                 case "DelayReason3":
-                    BindListView(lstLevel4, tibReasons
-                        .OrderByDescending(o => o.DelayIndex)
-                        .Where(t =>
-                            t.DelayReason1 == lstLevel1.SelectedValue.ToString() &&
-                            t.DelayReason2 == lstLevel2.SelectedValue.ToString() &&
-                            t.DelayReason3 == lstLevel.SelectedValue.ToString() &&
-                            !string.IsNullOrWhiteSpace(t.DelayReason4))
-                        .DistinctBy(t =>
-                            t.DelayReason4)
-                        .ToList());
+                    BindListView(lstLevel4,
+                        Enumerable.DistinctBy(
+                                tibReasons
+                                    .OrderByDescending(o => o.DelayIndex)
+                                    .Where(t =>
+                                        t.DelayReason1 == lstLevel1.SelectedValue.ToString() &&
+                                        t.DelayReason2 == lstLevel2.SelectedValue.ToString() &&
+                                        t.DelayReason3 == lstLevel.SelectedValue.ToString() &&
+                                        !string.IsNullOrWhiteSpace(t.DelayReason4)),
+                                t => t.DelayReason4)
+                            .ToList());
+
 
                     if (lstLevel4.Items.Count == 0)
                         SetDelayReason(3);

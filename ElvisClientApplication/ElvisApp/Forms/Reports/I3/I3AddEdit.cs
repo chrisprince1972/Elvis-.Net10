@@ -112,10 +112,10 @@ namespace Elvis.Forms.Reports.I3
         private void BindDropDowns()
         {
             List<string> ddl =
-                EntityHelper
+                
+                Enumerable.DistinctBy(EntityHelper
                 .DRFDropDownLookUp
-                .GetAll()
-                .DistinctBy(l => l.Rota)
+                .GetAll(),l => l.Rota)
                 .Where(l => l.Rota != null && l.Rota != "Please Select")
                 .Select(s => s.Rota)
                 .ToList();

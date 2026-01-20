@@ -20,10 +20,10 @@ namespace Elvis.Common
         /// <param name="dt">The Time Stamp to do it at.</param>
         public static void DrawVerticalAnnotation(Chart chart, DateTime dt)
         {
-            foreach (Annotation a in chart.Annotations)
-            {
-                a.Dispose();
-            }
+            //foreach (Annotation a in chart.Annotations)
+            //{
+            //    a.Dispose();
+            //}
 
             chart.Annotations.Clear();
 
@@ -51,10 +51,10 @@ namespace Elvis.Common
                 series.Points.Clear();
             }
 
-            foreach (Annotation a in chart.Annotations)
-            {
-                a.Dispose();
-            }
+            //foreach (Annotation a in chart.Annotations)
+            //{
+            //    a.Dispose();
+            //}
             chart.Annotations.Clear();
         }
 

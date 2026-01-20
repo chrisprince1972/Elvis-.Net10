@@ -340,9 +340,9 @@ namespace Elvis.Forms.Trending
         {
             cmboRota.Items.Add("All");
             //Loop data finding all the rotas and adding them to combo box.
-            foreach (TrendDataIndex trendDataIndex in this.trendDataIndex
-                        .DistinctBy(h => h.Rota)
-                        .OrderBy(h => h.Rota))
+            foreach (TrendDataIndex trendDataIndex in
+                    Enumerable.DistinctBy(this.trendDataIndex, h => h.Rota)
+                    .OrderBy(h => h.Rota))
             {
                 if (!string.IsNullOrWhiteSpace(trendDataIndex.Rota) &&
                     !cmboRota.Items.Contains(trendDataIndex.Rota))
@@ -363,8 +363,8 @@ namespace Elvis.Forms.Trending
             ccbGrades.ValueSeparator = ", ";
 
             //Loop data finding all the grades and adding them to combo box.
-            foreach (TrendDataIndex trendDataIndex in this.trendDataIndex
-                        .DistinctBy(h => h.Grade)
+            foreach (TrendDataIndex trendDataIndex in 
+                        Enumerable.DistinctBy(this.trendDataIndex,h => h.Grade)
                         .OrderBy(h => h.Grade))
             {
                 //Only add if grade exists and not already in list.
@@ -391,8 +391,8 @@ namespace Elvis.Forms.Trending
             ccbXHeats.ValueSeparator = ", ";
 
             //Loop data finding all the XHeats and adding them to combo box.
-            foreach (TrendDataIndex trendDataIndex in this.trendDataIndex
-                        .DistinctBy(h => h.XHeat)
+            foreach (TrendDataIndex trendDataIndex in 
+                        Enumerable.DistinctBy(this.trendDataIndex,h => h.XHeat)
                         .OrderBy(h => h.XHeat))
             {
                 //Only add if XHeat exists and not already in list.

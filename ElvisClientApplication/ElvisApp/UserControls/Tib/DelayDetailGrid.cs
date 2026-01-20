@@ -263,7 +263,7 @@ namespace Elvis.UserControls.Tib
         /// </summary>
         public void Reset()
         {
-            SetupUserControl(DelayList.DistinctBy(r => r.TibIndex).Select(r => int.Parse(r.TibIndex)).ToList());
+            SetupUserControl(Enumerable.DistinctBy(DelayList,r => r.TibIndex).Select(r => int.Parse(r.TibIndex)).ToList());
             ShowData();
         }
 

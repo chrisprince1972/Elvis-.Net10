@@ -57,7 +57,9 @@ namespace Elvis.Forms.Process_Control
             //if (vesselNo != 0) sql.Append(" AND      hv.actual_converter = " + vesselNo.ToString());
             //if (shift != 0) sql.Append(" AND      hv.shift_no = " + shift.ToString());
             sql.Append(" ORDER BY hv.start_tap_time ASC");
-            data = FetchRdbData(sql.ToString(), csPsmetRO);
+            //TODO: this wont be happening ever again
+        //    data = FetchRdbData(sql.ToString(), csPsmetRO)
+            data = null;
         }
 
         private void ShowTapWeightData(DataTable dt)
@@ -72,18 +74,19 @@ namespace Elvis.Forms.Process_Control
             chart1.DataBind();            
         }
 
-        public DataTable FetchRdbData(string sql, string connectionString)
-        {
-            using (OdbcDataAdapter adapt = new OdbcDataAdapter(sql, connectionString))
-            {
-                DataTable dt = new DataTable();
-                adapt.Fill(dt);
-                foreach (DataRow dr in dt.Rows)
-                    for (int c = 0; c < dt.Columns.Count; c++)
-                        if (dt.Columns[c].DataType == typeof(string)) dr[c] = dr[c].ToString().Trim();
-                return dt;
-            }
-        }
+//TODO: conversion fix not sure if this will be needed
+//public DataTable FetchRdbData(string sql, string connectionString)
+        //{
+        //    using (OdbcDataAdapter adapt = new OdbcDataAdapter(sql, connectionString))
+        //    {
+        //        DataTable dt = new DataTable();
+        //        adapt.Fill(dt);
+        //        foreach (DataRow dr in dt.Rows)
+        //            for (int c = 0; c < dt.Columns.Count; c++)
+        //                if (dt.Columns[c].DataType == typeof(string)) dr[c] = dr[c].ToString().Trim();
+        //        return dt;
+        //    }
+        //}
 
         private void chart1_MouseMove(object sender, MouseEventArgs e)
         {

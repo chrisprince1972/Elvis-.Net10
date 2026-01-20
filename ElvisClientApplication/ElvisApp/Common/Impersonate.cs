@@ -175,4 +175,29 @@
 //}
 
 
+using System;
+
+internal sealed class Impersonate : IDisposable
+{
+    public Impersonate(string domainName, string username, string password)
+    {
+        // Intentionally disabled – see NET10 upgrade
+    }
+
+    public void Run(Action action)
+    {
+        // Just run normally for now
+        action?.Invoke();
+    }
+
+    public T Run<T>(Func<T> func)
+    {
+        return func != null ? func() : default!;
+    }
+
+    public void Dispose()
+    {
+        // no-op
+    }
+}
 

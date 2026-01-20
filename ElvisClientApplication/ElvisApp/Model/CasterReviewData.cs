@@ -110,8 +110,9 @@ namespace Elvis.Model
                 hour, 0, 0);
             DateTime dateTo = dateFrom.AddHours(24);
 
-            tibEventList = Tib.GetCasterReviewActualEvents(dateFrom, dateTo);
-
+            //TODO: check where this method went maybe lost on conversion
+            //tibEventList = Tib.GetCasterReviewActualEvents(dateFrom, dateTo);
+            tibEventList = null;
             // Fix missing end times by creating an end time that is 2 minutes before the start time
             // of the next heat processed by the same caster.
             foreach (TibEvent tibEvent in tibEventList)

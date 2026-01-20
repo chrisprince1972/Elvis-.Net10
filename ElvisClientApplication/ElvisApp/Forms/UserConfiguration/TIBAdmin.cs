@@ -13,7 +13,7 @@ namespace Elvis.Forms.UserConfiguration
     public partial class TIBAdmin : Form
     {
         #region Variables
-        private int indexNo; 
+        private int indexNo;
         private List<TIBReasonsView> rawTIBReasons;
         private static Logger logger = NLog.LogManager.GetCurrentClassLogger();
         #endregion
@@ -83,7 +83,8 @@ namespace Elvis.Forms.UserConfiguration
                     this.Cursor = Cursors.WaitCursor;
                     GetReportData(GetFilter());
                     BindDataGridView();
-                };
+                }
+                ;
             }
             this.Cursor = Cursors.Default;
         }
@@ -169,12 +170,12 @@ namespace Elvis.Forms.UserConfiguration
         {
             this.BackColor =
                 pnlFilter.BackColor =
-                grpFilter.BackColor = 
+                grpFilter.BackColor =
                 pnlSearchCriteria.BackColor =
                 grpSearchCriteria.BackColor =
                 pnlAdmin.BackColor =
-                grpAdmin.BackColor = 
-                pnlGridviewButtons.BackColor = 
+                grpAdmin.BackColor =
+                pnlGridviewButtons.BackColor =
                 dgvTIBAdmin.BackgroundColor =
                     Settings.Default.ColourBackground;
 
@@ -188,7 +189,7 @@ namespace Elvis.Forms.UserConfiguration
                 pnlGridviewButtons.ForeColor =
                     Settings.Default.ColourText;
         }
-        
+
         /// <summary>
         /// Controlling method for building the form search drop downs.
         /// </summary>
@@ -206,39 +207,47 @@ namespace Elvis.Forms.UserConfiguration
         {
             string filter = string.Empty;
             cboDelayReason1.Items.Add("All");
-            cboDelayReason1.Items.AddRange(EntityHelper.TIBReasons.GetColumnData("it.DelayReason1")
-               .DistinctBy(d => d.DelayReason1)
-               .Where(a => a.DelayReason1 != null)
-               .OrderBy(o => o.DelayReason1)
-               .Select(p => p.DelayReason1)
-               .ToList().ToArray());
+            cboDelayReason1.Items.AddRange(
+                System.Linq.Enumerable.DistinctBy(
+                        EntityHelper.TIBReasons.GetColumnData("it.DelayReason1"),
+                        d => d.DelayReason1)
+                    .Where(a => a.DelayReason1 != null)
+                    .OrderBy(o => o.DelayReason1)
+                    .Select(p => p.DelayReason1)
+                    .ToList().ToArray());
             cboDelayReason1.SelectedIndex = -1;
 
             cboDelayReason2.Items.Add("All");
-            cboDelayReason2.Items.AddRange(EntityHelper.TIBReasons.GetColumnData("it.DelayReason2")
-                .DistinctBy(d => d.DelayReason2)
-                .Where(a => a.DelayReason2 != null)
-                .OrderBy(o => o.DelayReason2)
-                .Select(p => p.DelayReason2)
-                .ToList().ToArray());
+            cboDelayReason2.Items.AddRange(
+                System.Linq.Enumerable.DistinctBy(
+                        EntityHelper.TIBReasons.GetColumnData("it.DelayReason2"),
+                        d => d.DelayReason2)
+                    .Where(a => a.DelayReason2 != null)
+                    .OrderBy(o => o.DelayReason2)
+                    .Select(p => p.DelayReason2)
+                    .ToList().ToArray());
             cboDelayReason2.SelectedIndex = -1;
 
             cboDelayReason3.Items.Add("All");
-            cboDelayReason3.Items.AddRange(EntityHelper.TIBReasons.GetColumnData("it.DelayReason3")
-                .DistinctBy(d => d.DelayReason3)
-                .Where(a => a.DelayReason3 != null)
-                .OrderBy(o => o.DelayReason3)
-                .Select(p => p.DelayReason3)
-                .ToList().ToArray());
+            cboDelayReason3.Items.AddRange(
+                System.Linq.Enumerable.DistinctBy(
+                        EntityHelper.TIBReasons.GetColumnData("it.DelayReason3"),
+                        d => d.DelayReason3)
+                    .Where(a => a.DelayReason3 != null)
+                    .OrderBy(o => o.DelayReason3)
+                    .Select(p => p.DelayReason3)
+                    .ToList().ToArray());
             cboDelayReason3.SelectedIndex = -1;
 
             cboDelayReason4.Items.Add("All");
-            cboDelayReason4.Items.AddRange(EntityHelper.TIBReasons.GetColumnData("it.DelayReason4")
-                .DistinctBy(d => d.DelayReason4)
-                .Where(a => a.DelayReason4 != null)
-                .OrderBy(o => o.DelayReason4)
-                .Select(p => p.DelayReason4)
-                .ToList().ToArray());
+            cboDelayReason4.Items.AddRange(
+                System.Linq.Enumerable.DistinctBy(
+                        EntityHelper.TIBReasons.GetColumnData("it.DelayReason4"),
+                        d => d.DelayReason4)
+                    .Where(a => a.DelayReason4 != null)
+                    .OrderBy(o => o.DelayReason4)
+                    .Select(p => p.DelayReason4)
+                    .ToList().ToArray());
             cboDelayReason4.SelectedIndex = -1;
         }
 
@@ -252,32 +261,38 @@ namespace Elvis.Forms.UserConfiguration
             List<TibCategoryLookUp> categoryData = new List<TibCategoryLookUp>();
             List<TibDisciplineLookUp> disciplineData = new List<TibDisciplineLookUp>();
             cboPlantArea.Items.Add("All");
-            cboPlantArea.Items.AddRange(EntityHelper.TIBReasons.GetColumnData("it.PlantArea")
-              .DistinctBy(r => r.PlantArea)
-              .Where(r => r.PlantArea != null)
-              .OrderBy(r => r.PlantArea)
-              .Select(r => r.PlantArea)
-              .ToList().ToArray());
+            cboPlantArea.Items.AddRange(
+                System.Linq.Enumerable.DistinctBy(
+                        EntityHelper.TIBReasons.GetColumnData("it.PlantArea"),
+                        r => r.PlantArea)
+                    .Where(r => r.PlantArea != null)
+                    .OrderBy(r => r.PlantArea)
+                    .Select(r => r.PlantArea)
+                    .ToList().ToArray());
 
-            unitData.Add(new Unit { UnitGroupNumber = -1, UnitGroupText = "All"});
-            unitData.AddRange(EntityHelper.Units.GetAll().DistinctBy(u => u.UnitGroupNumber)
-                .OrderBy(u => u.UnitGroupText).ToList());
+            unitData.Add(new Unit { UnitGroupNumber = -1, UnitGroupText = "All" });
+            unitData.AddRange(
+                System.Linq.Enumerable.DistinctBy(
+                        EntityHelper.Units.GetAll(),
+                        u => u.UnitGroupNumber)
+                    .OrderBy(u => u.UnitGroupText)
+                    .ToList());
             cboUnit.DataSource = unitData;
             cboUnit.DisplayMember = "UnitGroupText";
             cboUnit.ValueMember = "UnitGroupNumber";
-            
+
             classData.Add(new TibClassLookUp { TIBClassIndex = 0, TIBClassText = "All" });
             classData.AddRange(EntityHelper.TibClassLookUp.GetAll().OrderBy(c => c.TIBClassText).ToList());
             cboDelayClass.DataSource = classData;
             cboDelayClass.DisplayMember = "TIBClassText";
             cboDelayClass.ValueMember = "TIBClassIndex";
-            
+
             categoryData.Add(new TibCategoryLookUp { TIBCategoryIndex = 0, TIBCategoryText = "All" });
             categoryData.AddRange(EntityHelper.TibCategoryLookUp.GetAll().OrderBy(c => c.TIBCategoryText).ToList());
             cboDelayCategory.DataSource = categoryData;
             cboDelayCategory.DisplayMember = "TIBCategoryText";
             cboDelayCategory.ValueMember = "TIBCategoryIndex";
-            
+
             disciplineData.Add(new TibDisciplineLookUp { TIBDisIndex = 0, TIBDisText = "All" });
             disciplineData.AddRange(EntityHelper.TibDisciplineLookUp.GetAll().OrderBy(d => d.TIBDisText).ToList());
             cboDiscipline.DataSource = disciplineData;
@@ -300,7 +315,7 @@ namespace Elvis.Forms.UserConfiguration
                 }
             }
         }
-        
+
         /// <summary>
         /// Binds the Data Griview.
         /// </summary>
@@ -328,7 +343,7 @@ namespace Elvis.Forms.UserConfiguration
             catch (Exception ex)
             {
                 logger.ErrorException(
-                    "DATA ERROR -- GetReportData() -- Error getting tib reasons on TIBAdmin form -- ", 
+                    "DATA ERROR -- GetReportData() -- Error getting tib reasons on TIBAdmin form -- ",
                     ex);
             }
         }
@@ -437,7 +452,8 @@ namespace Elvis.Forms.UserConfiguration
                     this.Cursor = Cursors.WaitCursor;
                     GetReportData(GetFilter());
                     BindDataGridView();
-                };
+                }
+                ;
                 this.Cursor = Cursors.Default;
             }
         }
@@ -455,17 +471,6 @@ namespace Elvis.Forms.UserConfiguration
             }
         }
 
-        //private void ShowAddEditConfigItem(string itemType)
-        //{
-        //    AddEditTIBConfigItem configItemDialog = new AddEditTIBConfigItem();
-        //    configItemDialog.Text = "Edit " + itemType;
-        //    configItemDialog.ShowDialog();
-        //}
-
-        //private void tIBCategoryToolStripMenuItem_Click(object sender, EventArgs e)
-        //{
-        //    ShowAddEditConfigItem("TIB Categories");
-        //}
         #endregion       
     }
 }

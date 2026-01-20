@@ -153,23 +153,23 @@ namespace Elvis.Forms.Reports.DRF
         /// </summary>
         private void BindDropDowns()
         {
-            cmboArea.DataSource = this.locationsFull
-                .DistinctBy(l => l.Works)
+            cmboArea.DataSource = 
+                Enumerable.DistinctBy(this.locationsFull,l => l.Works)
                 .Select(s => s.Works)
                 .ToList();
             cmboArea.DisplayMember = "Works";
 
             BindDynamicDropDowns();
 
-            cmboDelayType.DataSource = this.lookUpFull
-                .DistinctBy(l => l.DelayType)
+            cmboDelayType.DataSource = 
+                Enumerable.DistinctBy(this.lookUpFull,l => l.DelayType)
                 .Where(l => l.DelayType != null)
                 .Select(s => s.DelayType)
                 .ToList();
             cmboDelayType.DisplayMember = "DelayType";
 
-            cmboDiscipline.DataSource = this.lookUpFull
-                .DistinctBy(l => l.Discipline)
+            cmboDiscipline.DataSource = 
+                Enumerable.DistinctBy(this.lookUpFull,l => l.Discipline)
                 .Where(l => l.Discipline != null)
                 .Select(s => s.Discipline)
                 .ToList();
@@ -186,16 +186,16 @@ namespace Elvis.Forms.Reports.DRF
             {//Grouped Units
                 if (cmboArea.Text == "All")
                 {
-                    cmboUnits.DataSource = this.locationsFull
-                        .DistinctBy(l => l.UnitGroup)
+                    cmboUnits.DataSource = 
+                        Enumerable.DistinctBy(this.locationsFull,l => l.UnitGroup)
                         .Where(l => l.UnitGroup != null)
                         .Select(s => s.UnitGroup)
                         .ToList();
                 }
                 else
                 {
-                    cmboUnits.DataSource = this.locationsFull
-                        .DistinctBy(l => l.UnitGroup)
+                    cmboUnits.DataSource = 
+                        Enumerable.DistinctBy(this.locationsFull,l => l.UnitGroup)
                         .Where(l => l.UnitGroup != null)
                         .Where(l => l.Works == cmboArea.Text ||
                                     l.Works == "All")
@@ -208,15 +208,15 @@ namespace Elvis.Forms.Reports.DRF
             {//Ungrouped Units
                 if (cmboArea.Text == "All")
                 {
-                    cmboUnits.DataSource = this.locationsFull
-                        .DistinctBy(l => l.Location)
+                    cmboUnits.DataSource = 
+                        Enumerable.DistinctBy(this.locationsFull,l => l.Location)
                         .Select(s => s.Location)
                         .ToList();
                 }
                 else
                 {
-                    cmboUnits.DataSource = this.locationsFull
-                        .DistinctBy(l => l.Location)
+                    cmboUnits.DataSource = 
+                        Enumerable.DistinctBy(this.locationsFull,l => l.Location)
                         .Where(l => l.Works == cmboArea.Text ||
                                     l.Works == "All")
                         .Select(s => s.Location )
@@ -490,8 +490,8 @@ namespace Elvis.Forms.Reports.DRF
             if (this.locationsFull != null &&
                 this.locationsFull.Count > 0)
             {
-                return this.locationsFull
-                    .DistinctBy(l => l.Location)
+                return 
+                    Enumerable.DistinctBy(this.locationsFull,l => l.Location)
                     .Where(l => l.UnitGroup == group)
                     .Select(l => l.Location)
                     .ToList();

@@ -438,7 +438,7 @@ namespace Elvis.Forms.Reports
         private static IEnumerable<UncompletedReportSummary> GroupDelaysByRota(List<TibReportDelaysView> rawDelaysData)
         {
             // Filter to distinct events only by TIBEvent.TibIndex
-            var rawEvents = rawDelaysData.DistinctBy(d => d.TibIndex).ToList();
+            var rawEvents = Enumerable.DistinctBy(rawDelaysData,d => d.TibIndex).ToList();
 
             // Count the number of TIB Events by Rota and sum the total number of minutes.
             var eventsData = from t in rawEvents
@@ -573,7 +573,7 @@ namespace Elvis.Forms.Reports
         private static IEnumerable<UncompletedReportSummary> GroupDelaysByShift(List<TibReportDelaysView> rawDelaysData)
         {
             // Filter to distinct events only by TIBEvent.TibIndex
-            var rawEvents = rawDelaysData.DistinctBy(d => d.TibIndex).ToList();
+            var rawEvents =  Enumerable.DistinctBy(rawDelaysData,d => d.TibIndex).ToList();
 
             // Count the number of TIB Events by Shift and sum the total number of minutes.
             var eventsData = from t in rawEvents
@@ -713,7 +713,7 @@ namespace Elvis.Forms.Reports
         private static IEnumerable<UncompletedReportSummary> GroupDelaysByUnit(List<TibReportDelaysView> rawDelaysData)
         {
             // Filter to distinct events only by TIBEvent.TibIndex
-            var rawEvents = rawDelaysData.DistinctBy(d => d.TibIndex).ToList();
+            var rawEvents = Enumerable.DistinctBy(rawDelaysData, d => d.TibIndex).ToList();
                         
             // Count the number of TIB Events by unit and sum the total number of minutes.
             var eventsData = from t in rawEvents
@@ -759,7 +759,7 @@ namespace Elvis.Forms.Reports
             foreach (DelayDataSummary summary in dataSummary)
             {
                 var delaysByUnit = rawDelaysData.Where(u => u.UnitShort == summary.Unit && u.TibDelayIndex.HasValue);
-                var distinctEvents = delaysByUnit.DistinctBy(t => t.TibIndex).ToList();
+                var distinctEvents = Enumerable.DistinctBy(delaysByUnit,t => t.TibIndex).ToList();
                 int minsToRemove = 0;
                 foreach (var distinctEvent in distinctEvents)
                 {
@@ -1011,7 +1011,7 @@ namespace Elvis.Forms.Reports
         private List<TibReportDelaysView> BuildDelaysToEnterByUnit(List<TibReportDelaysView> rawDelays)
         {
             List<TibReportDelaysView> delaysByUnit = new List<TibReportDelaysView>();
-            foreach(var d in rawDelays.DistinctBy(e => e.TibIndex))
+            foreach(var d in Enumerable.DistinctBy(rawDelays, e => e.TibIndex))
             {
                 //add the tib delays where tibdelayindex is null
                 if (!d.TibDelayIndex.HasValue)

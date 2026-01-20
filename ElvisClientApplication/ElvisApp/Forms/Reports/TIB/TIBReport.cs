@@ -480,7 +480,7 @@ namespace Elvis.Forms
         {
             StringBuilder sb = new StringBuilder();
             //Get a list of distinct tib indexes from the base list
-            List<TibReportsView> distinctEvents = baseData.DistinctBy(d => d.TibIndex).ToList();
+            List<TibReportsView> distinctEvents = Enumerable.DistinctBy(baseData,d => d.TibIndex).ToList();
             List<TibReportsView> partiallyCompletedEvents = new List<TibReportsView>();
             int? tibDuration = 0;
             int? delayDuration = 0;

@@ -61,8 +61,8 @@ namespace Elvis.Forms.General
             if (this.listHeatAimGrades != null)
             {
                 //Loop data finding all the grades and adding them to combo box.
-                foreach (HeatAimGrade heatAimGrade in this.listHeatAimGrades
-                            .DistinctBy(r => r.Grade)
+                foreach (HeatAimGrade heatAimGrade in 
+                            Enumerable.DistinctBy(this.listHeatAimGrades,r => r.Grade)
                             .OrderBy(r => r.Grade)
                             .ToList())
                 {
@@ -152,7 +152,7 @@ namespace Elvis.Forms.General
             if (filteredList != null)
             {
                 gradeList = string.Join(", ", 
-                    (filteredList.DistinctBy(r => r.Grade).Select(g => g.Grade)));
+                    (Enumerable.DistinctBy(filteredList,r => r.Grade).Select(g => g.Grade)));
             }
 
             return gradeList;

@@ -570,12 +570,12 @@ namespace Elvis.Forms.Reports.OEE
         private void AddPartiallyCompletedTibs(List<TibReportDelaysView> allDelays, List<TibOEEReport> oeeData)
         {
             //Get a list of all Tib index numbers
-            var tibIndexList = allDelays.DistinctBy(i => i.TibIndex);
+            var tibIndexList = Enumerable.DistinctBy(allDelays,i => i.TibIndex);
             int delayDuration = 0;
             TibReportDelaysView tibItem = new TibReportDelaysView();
 
             //Get a list of delay items for each index
-            foreach (var tibIndex in allDelays.DistinctBy(e => e.TibIndex).ToList())// tibIndexList)//.Distinct().ToList())
+            foreach (var tibIndex in Enumerable.DistinctBy(allDelays,e => e.TibIndex).ToList())// tibIndexList)//.Distinct().ToList())
             {
                 var delayItems = allDelays.Where(d => d.TibIndex == tibIndex.TibIndex).ToList();
                 //Sum the delay duration for each Tib index

@@ -44,8 +44,8 @@ namespace Elvis.Forms
                 btnSkip.Visible = true;
             }
 
-            rectangleShape3.Enabled = false;
-            rectangleShape1.Enabled = false;
+            //rectangleShape3.Enabled = false;
+            //rectangleShape1.Enabled = false;
         }
         #endregion
 
