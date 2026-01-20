@@ -1,0 +1,1445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MiscastReportSchema.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="MiscastReportSchemaStoreContainer">
+          <EntitySet Name="LookupStandardPracticeFollowed" EntityType="MiscastReportSchema.Store.LookupStandardPracticeFollowed" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastActions" EntityType="MiscastReportSchema.Store.MiscastActions" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastAreaResponsible" EntityType="MiscastReportSchema.Store.MiscastAreaResponsible" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastFailureMode" EntityType="MiscastReportSchema.Store.MiscastFailureMode" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastFunction" EntityType="MiscastReportSchema.Store.MiscastFunction" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastInvestigation" EntityType="MiscastReportSchema.Store.MiscastInvestigation" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastMain" EntityType="MiscastReportSchema.Store.MiscastMain" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastOwners" EntityType="MiscastReportSchema.Store.MiscastOwners" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastRootCause" EntityType="MiscastReportSchema.Store.MiscastRootCause" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastRota" EntityType="MiscastReportSchema.Store.MiscastRota" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastStatus" EntityType="MiscastReportSchema.Store.MiscastStatus" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastType" EntityType="MiscastReportSchema.Store.MiscastType" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastUnit" EntityType="MiscastReportSchema.Store.MiscastUnit" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastWhy" EntityType="MiscastReportSchema.Store.MiscastWhy" store:Type="Tables" Schema="ReportMiscast" />
+          <EntitySet Name="MiscastActionsReportView" EntityType="MiscastReportSchema.Store.MiscastActionsReportView" store:Type="Views" store:Schema="ReportMiscast" store:Name="MiscastActionsReportView">
+            <DefiningQuery>SELECT 
+      [MiscastActionsReportView].[MiscastActionID] AS [MiscastActionID], 
+      [MiscastActionsReportView].[MiscastID] AS [MiscastID], 
+      [MiscastActionsReportView].[ActionText] AS [ActionText], 
+      [MiscastActionsReportView].[ActionOwnerID] AS [ActionOwnerID], 
+      [MiscastActionsReportView].[TargetDate] AS [TargetDate], 
+      [MiscastActionsReportView].[ActionState] AS [ActionState], 
+      [MiscastActionsReportView].[OwnerName] AS [OwnerName], 
+      [MiscastActionsReportView].[HeatNumber] AS [HeatNumber], 
+      [MiscastActionsReportView].[MiscastAreaResponsibleID] AS [MiscastAreaResponsibleID], 
+      [MiscastActionsReportView].[MiscastFailureModeID] AS [MiscastFailureModeID], 
+      [MiscastActionsReportView].[MiscastTypeID] AS [MiscastTypeID], 
+      [MiscastActionsReportView].[MiscastRotaID] AS [MiscastRotaID], 
+      [MiscastActionsReportView].[MiscastUnitID] AS [MiscastUnitID], 
+      [MiscastActionsReportView].[MiscastFunctionID] AS [MiscastFunctionID], 
+      [MiscastActionsReportView].[RootCauseID] AS [RootCauseID], 
+      [MiscastActionsReportView].[MiscastStatusID] AS [MiscastStatusID], 
+      [MiscastActionsReportView].[OrderedGrade] AS [OrderedGrade]
+      FROM [ReportMiscast].[MiscastActionsReportView] AS [MiscastActionsReportView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="MiscastReportView" EntityType="MiscastReportSchema.Store.MiscastReportView" store:Type="Views" store:Schema="ReportMiscast" store:Name="MiscastReportView">
+            <DefiningQuery>SELECT 
+      [MiscastReportView].[MiscastID] AS [MiscastID], 
+      [MiscastReportView].[HeatNumber] AS [HeatNumber], 
+      [MiscastReportView].[TapTime] AS [TapTime], 
+      [MiscastReportView].[OrderedGrade] AS [OrderedGrade], 
+      [MiscastReportView].[FailureMode] AS [FailureMode], 
+      [MiscastReportView].[Rota] AS [Rota], 
+      [MiscastReportView].[AreaResponsible] AS [AreaResponsible], 
+      [MiscastReportView].[MiscastUnit] AS [MiscastUnit], 
+      [MiscastReportView].[Type] AS [Type], 
+      [MiscastReportView].[Status] AS [Status], 
+      [MiscastReportView].[RootCause] AS [RootCause], 
+      [MiscastReportView].[MiscastAreaResponsibleID] AS [MiscastAreaResponsibleID], 
+      [MiscastReportView].[MiscastFunctionID] AS [MiscastFunctionID], 
+      [MiscastReportView].[MiscastTypeID] AS [MiscastTypeID], 
+      [MiscastReportView].[MiscastStatusID] AS [MiscastStatusID], 
+      [MiscastReportView].[MiscastUnitID] AS [MiscastUnitID], 
+      [MiscastReportView].[MiscastFailureModeID] AS [MiscastFailureModeID], 
+      [MiscastReportView].[MiscastRotaID] AS [MiscastRotaID], 
+      [MiscastReportView].[RootCauseID] AS [RootCauseID], 
+      [MiscastReportView].[HeatNumberSet] AS [HeatNumberSet]
+      FROM [ReportMiscast].[MiscastReportView] AS [MiscastReportView]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_MiscastActions_MiscastMain" Association="MiscastReportSchema.Store.FK_MiscastActions_MiscastMain">
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+            <End Role="MiscastActions" EntitySet="MiscastActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastActions_MiscastOwners" Association="MiscastReportSchema.Store.FK_MiscastActions_MiscastOwners">
+            <End Role="MiscastOwners" EntitySet="MiscastOwners" />
+            <End Role="MiscastActions" EntitySet="MiscastActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastInvestigation_MiscastAreaResponsible" Association="MiscastReportSchema.Store.FK_MiscastInvestigation_MiscastAreaResponsible">
+            <End Role="MiscastAreaResponsible" EntitySet="MiscastAreaResponsible" />
+            <End Role="MiscastInvestigation" EntitySet="MiscastInvestigation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastInvestigation_MiscastMain" Association="MiscastReportSchema.Store.FK_MiscastInvestigation_MiscastMain">
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+            <End Role="MiscastInvestigation" EntitySet="MiscastInvestigation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_LookupStandardPracticeFollowed" Association="MiscastReportSchema.Store.FK_MiscastMain_LookupStandardPracticeFollowed">
+            <End Role="LookupStandardPracticeFollowed" EntitySet="LookupStandardPracticeFollowed" />
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastAreaResponsible" Association="MiscastReportSchema.Store.FK_MiscastMain_MiscastAreaResponsible">
+            <End Role="MiscastAreaResponsible" EntitySet="MiscastAreaResponsible" />
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastFailureMode" Association="MiscastReportSchema.Store.FK_MiscastMain_MiscastFailureMode">
+            <End Role="MiscastFailureMode" EntitySet="MiscastFailureMode" />
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastFunction" Association="MiscastReportSchema.Store.FK_MiscastMain_MiscastFunction">
+            <End Role="MiscastFunction" EntitySet="MiscastFunction" />
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastOwners" Association="MiscastReportSchema.Store.FK_MiscastMain_MiscastOwners">
+            <End Role="MiscastOwners" EntitySet="MiscastOwners" />
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastRootCause" Association="MiscastReportSchema.Store.FK_MiscastMain_MiscastRootCause">
+            <End Role="MiscastRootCause" EntitySet="MiscastRootCause" />
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastRota" Association="MiscastReportSchema.Store.FK_MiscastMain_MiscastRota">
+            <End Role="MiscastRota" EntitySet="MiscastRota" />
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastStatus" Association="MiscastReportSchema.Store.FK_MiscastMain_MiscastStatus">
+            <End Role="MiscastStatus" EntitySet="MiscastStatus" />
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastType" Association="MiscastReportSchema.Store.FK_MiscastMain_MiscastType">
+            <End Role="MiscastType" EntitySet="MiscastType" />
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastUnit" Association="MiscastReportSchema.Store.FK_MiscastMain_MiscastUnit">
+            <End Role="MiscastUnit" EntitySet="MiscastUnit" />
+            <End Role="MiscastMain" EntitySet="MiscastMain" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastUnit_MiscastAreaResponsible" Association="MiscastReportSchema.Store.FK_MiscastUnit_MiscastAreaResponsible">
+            <End Role="MiscastAreaResponsible" EntitySet="MiscastAreaResponsible" />
+            <End Role="MiscastUnit" EntitySet="MiscastUnit" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastWhy_MiscastInvestigation" Association="MiscastReportSchema.Store.FK_MiscastWhy_MiscastInvestigation">
+            <End Role="MiscastInvestigation" EntitySet="MiscastInvestigation" />
+            <End Role="MiscastWhy" EntitySet="MiscastWhy" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="LookupStandardPracticeFollowed">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="tinyint" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MiscastActions">
+          <Key>
+            <PropertyRef Name="MiscastActionID" />
+          </Key>
+          <Property Name="MiscastActionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MiscastID" Type="int" Nullable="false" />
+          <Property Name="ActionText" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="ActionOwnerID" Type="int" Nullable="false" />
+          <Property Name="TargetDate" Type="datetime" Nullable="false" />
+          <Property Name="ActionState" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MiscastAreaResponsible">
+          <Key>
+            <PropertyRef Name="AreaResponsibleID" />
+          </Key>
+          <Property Name="AreaResponsibleID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="AreaResponsible" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="ChartColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="ChartForeColourHex" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="MiscastFailureMode">
+          <Key>
+            <PropertyRef Name="FailureModeID" />
+          </Key>
+          <Property Name="FailureModeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FailureMode" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="ChartColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="ChartForeColourHex" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="MiscastFunction">
+          <Key>
+            <PropertyRef Name="FunctionID" />
+          </Key>
+          <Property Name="FunctionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TrioFunction" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="ChartColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="ChartForeColourHex" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="MiscastInvestigation">
+          <Key>
+            <PropertyRef Name="InvestigationID" />
+          </Key>
+          <Property Name="InvestigationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MiscastID" Type="int" Nullable="false" />
+          <Property Name="InvestigationNumber" Type="int" Nullable="false" />
+          <Property Name="AreaResponsibleID" Type="int" Nullable="false" />
+          <Property Name="Investigator" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProblemStatement" Type="nvarchar" MaxLength="1000" />
+          <Property Name="RootCause" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="MiscastMain">
+          <Key>
+            <PropertyRef Name="MiscastID" />
+          </Key>
+          <Property Name="MiscastID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HeatNumberSet" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="OrderedGrade" Type="int" />
+          <Property Name="MadeGrade" Type="int" />
+          <Property Name="HotConnect" Type="bit" Nullable="false" />
+          <Property Name="MiscastRotaID" Type="int" Nullable="false" />
+          <Property Name="MiscastTypeID" Type="int" />
+          <Property Name="MiscastFailureModeID" Type="int" />
+          <Property Name="MiscastAreaResponsibleID" Type="int" />
+          <Property Name="MiscastUnitID" Type="int" />
+          <Property Name="MiscastFunctionID" Type="int" />
+          <Property Name="ProblemStatement" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ProblemStatementName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ContainmentAction" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ShiftComments" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ShiftName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShiftComplete" Type="bit" Nullable="false" />
+          <Property Name="TechComments" Type="nvarchar" MaxLength="2000" />
+          <Property Name="TechNameID" Type="int" />
+          <Property Name="RootCauseID" Type="int" />
+          <Property Name="TechComplete" Type="bit" Nullable="false" />
+          <Property Name="DateRaised" Type="datetime" Nullable="false" />
+          <Property Name="LastEdit" Type="datetime" Nullable="false" />
+          <Property Name="TapTime" Type="datetime" Nullable="false" />
+          <Property Name="MiscastStatusID" Type="int" Nullable="false" />
+          <Property Name="InstallationGoodCondition" Type="bit" Nullable="false" />
+          <Property Name="StandardPracticeFollowedID" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MiscastOwners">
+          <Key>
+            <PropertyRef Name="MiscastOwnerID" />
+          </Key>
+          <Property Name="MiscastOwnerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OwnerName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="OwnerEmail" Type="nvarchar" MaxLength="500" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="ChartColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="ChartForeColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsTechnical" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MiscastRootCause">
+          <Key>
+            <PropertyRef Name="RootCauseID" />
+          </Key>
+          <Property Name="RootCauseID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RootCause" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="ChartColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="ChartForeColourHex" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="MiscastRota">
+          <Key>
+            <PropertyRef Name="RotaID" />
+          </Key>
+          <Property Name="RotaID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Rota" Type="nvarchar" Nullable="false" MaxLength="1" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="ChartColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="ChartForeColourHex" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="MiscastStatus">
+          <Key>
+            <PropertyRef Name="MiscastStatusID" />
+          </Key>
+          <Property Name="MiscastStatusID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="ChartColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="ChartForeColourHex" Type="nvarchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="MiscastType">
+          <Key>
+            <PropertyRef Name="MiscastTypeID" />
+          </Key>
+          <Property Name="MiscastTypeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="ChartColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="ChartForeColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="ShortType" Type="nvarchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="MiscastUnit">
+          <Key>
+            <PropertyRef Name="MiscastUnitID" />
+          </Key>
+          <Property Name="MiscastUnitID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MiscastUnit" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Sort" Type="int" />
+          <Property Name="ChartColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="ChartForeColourHex" Type="nvarchar" MaxLength="7" />
+          <Property Name="MiscastAreaResponsibleID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MiscastWhy">
+          <Key>
+            <PropertyRef Name="WhyID" />
+          </Key>
+          <Property Name="WhyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="InvestigationID" Type="int" Nullable="false" />
+          <Property Name="WhyText" Type="nvarchar" MaxLength="100" />
+          <Property Name="SortNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ReportMiscast.MiscastActionsReportView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="MiscastActionsReportView">
+          <Key>
+            <PropertyRef Name="MiscastActionID" />
+            <PropertyRef Name="MiscastID" />
+            <PropertyRef Name="ActionText" />
+            <PropertyRef Name="ActionOwnerID" />
+            <PropertyRef Name="TargetDate" />
+            <PropertyRef Name="ActionState" />
+          </Key>
+          <Property Name="MiscastActionID" Type="int" Nullable="false" />
+          <Property Name="MiscastID" Type="int" Nullable="false" />
+          <Property Name="ActionText" Type="nvarchar" Nullable="false" MaxLength="1000" />
+          <Property Name="ActionOwnerID" Type="int" Nullable="false" />
+          <Property Name="TargetDate" Type="datetime" Nullable="false" />
+          <Property Name="ActionState" Type="bit" Nullable="false" />
+          <Property Name="OwnerName" Type="nvarchar" MaxLength="50" />
+          <Property Name="HeatNumber" Type="int" />
+          <Property Name="MiscastAreaResponsibleID" Type="int" />
+          <Property Name="MiscastFailureModeID" Type="int" />
+          <Property Name="MiscastTypeID" Type="int" />
+          <Property Name="MiscastRotaID" Type="int" />
+          <Property Name="MiscastUnitID" Type="int" />
+          <Property Name="MiscastFunctionID" Type="int" />
+          <Property Name="RootCauseID" Type="int" />
+          <Property Name="MiscastStatusID" Type="int" />
+          <Property Name="OrderedGrade" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ReportMiscast.MiscastReportView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="MiscastReportView">
+          <Key>
+            <PropertyRef Name="MiscastID" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="TapTime" />
+            <PropertyRef Name="MiscastStatusID" />
+            <PropertyRef Name="MiscastRotaID" />
+            <PropertyRef Name="HeatNumberSet" />
+          </Key>
+          <Property Name="MiscastID" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="TapTime" Type="datetime" Nullable="false" />
+          <Property Name="OrderedGrade" Type="int" />
+          <Property Name="FailureMode" Type="nvarchar" MaxLength="50" />
+          <Property Name="Rota" Type="nvarchar" MaxLength="1" />
+          <Property Name="AreaResponsible" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiscastUnit" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="RootCause" Type="nvarchar" MaxLength="50" />
+          <Property Name="MiscastAreaResponsibleID" Type="int" />
+          <Property Name="MiscastFunctionID" Type="int" />
+          <Property Name="MiscastTypeID" Type="int" />
+          <Property Name="MiscastStatusID" Type="int" Nullable="false" />
+          <Property Name="MiscastUnitID" Type="int" />
+          <Property Name="MiscastFailureModeID" Type="int" />
+          <Property Name="MiscastRotaID" Type="int" Nullable="false" />
+          <Property Name="RootCauseID" Type="int" />
+          <Property Name="HeatNumberSet" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_MiscastActions_MiscastMain">
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="1" />
+          <End Role="MiscastActions" Type="MiscastReportSchema.Store.MiscastActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastMain">
+              <PropertyRef Name="MiscastID" />
+            </Principal>
+            <Dependent Role="MiscastActions">
+              <PropertyRef Name="MiscastID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastActions_MiscastOwners">
+          <End Role="MiscastOwners" Type="MiscastReportSchema.Store.MiscastOwners" Multiplicity="1" />
+          <End Role="MiscastActions" Type="MiscastReportSchema.Store.MiscastActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastOwners">
+              <PropertyRef Name="MiscastOwnerID" />
+            </Principal>
+            <Dependent Role="MiscastActions">
+              <PropertyRef Name="ActionOwnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastInvestigation_MiscastAreaResponsible">
+          <End Role="MiscastAreaResponsible" Type="MiscastReportSchema.Store.MiscastAreaResponsible" Multiplicity="1" />
+          <End Role="MiscastInvestigation" Type="MiscastReportSchema.Store.MiscastInvestigation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastAreaResponsible">
+              <PropertyRef Name="AreaResponsibleID" />
+            </Principal>
+            <Dependent Role="MiscastInvestigation">
+              <PropertyRef Name="AreaResponsibleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastInvestigation_MiscastMain">
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="1" />
+          <End Role="MiscastInvestigation" Type="MiscastReportSchema.Store.MiscastInvestigation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastMain">
+              <PropertyRef Name="MiscastID" />
+            </Principal>
+            <Dependent Role="MiscastInvestigation">
+              <PropertyRef Name="MiscastID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_LookupStandardPracticeFollowed">
+          <End Role="LookupStandardPracticeFollowed" Type="MiscastReportSchema.Store.LookupStandardPracticeFollowed" Multiplicity="1" />
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupStandardPracticeFollowed">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="StandardPracticeFollowedID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastAreaResponsible">
+          <End Role="MiscastAreaResponsible" Type="MiscastReportSchema.Store.MiscastAreaResponsible" Multiplicity="0..1" />
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastAreaResponsible">
+              <PropertyRef Name="AreaResponsibleID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastAreaResponsibleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastFailureMode">
+          <End Role="MiscastFailureMode" Type="MiscastReportSchema.Store.MiscastFailureMode" Multiplicity="0..1" />
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastFailureMode">
+              <PropertyRef Name="FailureModeID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastFailureModeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastFunction">
+          <End Role="MiscastFunction" Type="MiscastReportSchema.Store.MiscastFunction" Multiplicity="0..1" />
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastFunction">
+              <PropertyRef Name="FunctionID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastFunctionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastOwners">
+          <End Role="MiscastOwners" Type="MiscastReportSchema.Store.MiscastOwners" Multiplicity="0..1" />
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastOwners">
+              <PropertyRef Name="MiscastOwnerID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="TechNameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastRootCause">
+          <End Role="MiscastRootCause" Type="MiscastReportSchema.Store.MiscastRootCause" Multiplicity="0..1" />
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastRootCause">
+              <PropertyRef Name="RootCauseID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="RootCauseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastRota">
+          <End Role="MiscastRota" Type="MiscastReportSchema.Store.MiscastRota" Multiplicity="1" />
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastRota">
+              <PropertyRef Name="RotaID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastRotaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastStatus">
+          <End Role="MiscastStatus" Type="MiscastReportSchema.Store.MiscastStatus" Multiplicity="1" />
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastStatus">
+              <PropertyRef Name="MiscastStatusID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastStatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastType">
+          <End Role="MiscastType" Type="MiscastReportSchema.Store.MiscastType" Multiplicity="0..1" />
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastType">
+              <PropertyRef Name="MiscastTypeID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastUnit">
+          <End Role="MiscastUnit" Type="MiscastReportSchema.Store.MiscastUnit" Multiplicity="0..1" />
+          <End Role="MiscastMain" Type="MiscastReportSchema.Store.MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastUnit">
+              <PropertyRef Name="MiscastUnitID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastUnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastUnit_MiscastAreaResponsible">
+          <End Role="MiscastAreaResponsible" Type="MiscastReportSchema.Store.MiscastAreaResponsible" Multiplicity="1" />
+          <End Role="MiscastUnit" Type="MiscastReportSchema.Store.MiscastUnit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastAreaResponsible">
+              <PropertyRef Name="AreaResponsibleID" />
+            </Principal>
+            <Dependent Role="MiscastUnit">
+              <PropertyRef Name="MiscastAreaResponsibleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastWhy_MiscastInvestigation">
+          <End Role="MiscastInvestigation" Type="MiscastReportSchema.Store.MiscastInvestigation" Multiplicity="1" />
+          <End Role="MiscastWhy" Type="MiscastReportSchema.Store.MiscastWhy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastInvestigation">
+              <PropertyRef Name="InvestigationID" />
+            </Principal>
+            <Dependent Role="MiscastWhy">
+              <PropertyRef Name="InvestigationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ReportMiscastSchema" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ReportMiscastSchemaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="MiscastActions" EntityType="ReportMiscastSchema.MiscastAction" />
+          <EntitySet Name="MiscastAreaResponsibles" EntityType="ReportMiscastSchema.MiscastAreaResponsible" />
+          <EntitySet Name="MiscastFailureModes" EntityType="ReportMiscastSchema.MiscastFailureMode" />
+          <EntitySet Name="MiscastInvestigations" EntityType="ReportMiscastSchema.MiscastInvestigation" />
+          <EntitySet Name="MiscastOwners" EntityType="ReportMiscastSchema.MiscastOwner" />
+          <EntitySet Name="MiscastRootCauses" EntityType="ReportMiscastSchema.MiscastRootCause" />
+          <EntitySet Name="MiscastRotas" EntityType="ReportMiscastSchema.MiscastRota" />
+          <EntitySet Name="MiscastTypes" EntityType="ReportMiscastSchema.MiscastType" />
+          <EntitySet Name="MiscastUnits" EntityType="ReportMiscastSchema.MiscastUnit" />
+          <EntitySet Name="MiscastWhies" EntityType="ReportMiscastSchema.MiscastWhy" />
+          <AssociationSet Name="FK_MiscastActions_MiscastOwners" Association="ReportMiscastSchema.FK_MiscastActions_MiscastOwners">
+            <End Role="MiscastOwners" EntitySet="MiscastOwners" />
+            <End Role="MiscastActions" EntitySet="MiscastActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastInvestigation_MiscastAreaResponsible" Association="ReportMiscastSchema.FK_MiscastInvestigation_MiscastAreaResponsible">
+            <End Role="MiscastAreaResponsible" EntitySet="MiscastAreaResponsibles" />
+            <End Role="MiscastInvestigation" EntitySet="MiscastInvestigations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastWhy_MiscastInvestigation" Association="ReportMiscastSchema.FK_MiscastWhy_MiscastInvestigation">
+            <End Role="MiscastInvestigation" EntitySet="MiscastInvestigations" />
+            <End Role="MiscastWhy" EntitySet="MiscastWhies" />
+          </AssociationSet>
+          <EntitySet Name="MiscastFunctions" EntityType="ReportMiscastSchema.MiscastFunction" />
+          <EntitySet Name="MiscastStatus" EntityType="ReportMiscastSchema.MiscastStatu" />
+          <EntitySet Name="MiscastReportViews" EntityType="ReportMiscastSchema.MiscastReportView" />
+          <AssociationSet Name="FK_MiscastUnit_MiscastAreaResponsible" Association="ReportMiscastSchema.FK_MiscastUnit_MiscastAreaResponsible">
+            <End Role="MiscastAreaResponsible" EntitySet="MiscastAreaResponsibles" />
+            <End Role="MiscastUnit" EntitySet="MiscastUnits" />
+          </AssociationSet>
+          <EntitySet Name="MiscastActionsReportViews" EntityType="ReportMiscastSchema.MiscastActionsReportView" />
+          <EntitySet Name="LookupStandardPracticeFolloweds" EntityType="ReportMiscastSchema.LookupStandardPracticeFollowed" />
+          <EntitySet Name="MiscastMains" EntityType="ReportMiscastSchema.MiscastMain" />
+          <AssociationSet Name="FK_MiscastMain_LookupStandardPracticeFollowed" Association="ReportMiscastSchema.FK_MiscastMain_LookupStandardPracticeFollowed">
+            <End Role="LookupStandardPracticeFollowed" EntitySet="LookupStandardPracticeFolloweds" />
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastActions_MiscastMain" Association="ReportMiscastSchema.FK_MiscastActions_MiscastMain">
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+            <End Role="MiscastAction" EntitySet="MiscastActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastAreaResponsible" Association="ReportMiscastSchema.FK_MiscastMain_MiscastAreaResponsible">
+            <End Role="MiscastAreaResponsible" EntitySet="MiscastAreaResponsibles" />
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastFailureMode" Association="ReportMiscastSchema.FK_MiscastMain_MiscastFailureMode">
+            <End Role="MiscastFailureMode" EntitySet="MiscastFailureModes" />
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastFunction" Association="ReportMiscastSchema.FK_MiscastMain_MiscastFunction">
+            <End Role="MiscastFunction" EntitySet="MiscastFunctions" />
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastInvestigation_MiscastMain" Association="ReportMiscastSchema.FK_MiscastInvestigation_MiscastMain">
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+            <End Role="MiscastInvestigation" EntitySet="MiscastInvestigations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastOwners" Association="ReportMiscastSchema.FK_MiscastMain_MiscastOwners">
+            <End Role="MiscastOwner" EntitySet="MiscastOwners" />
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastRootCause" Association="ReportMiscastSchema.FK_MiscastMain_MiscastRootCause">
+            <End Role="MiscastRootCause" EntitySet="MiscastRootCauses" />
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastRota" Association="ReportMiscastSchema.FK_MiscastMain_MiscastRota">
+            <End Role="MiscastRota" EntitySet="MiscastRotas" />
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastStatus" Association="ReportMiscastSchema.FK_MiscastMain_MiscastStatus">
+            <End Role="MiscastStatu" EntitySet="MiscastStatus" />
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastType" Association="ReportMiscastSchema.FK_MiscastMain_MiscastType">
+            <End Role="MiscastType" EntitySet="MiscastTypes" />
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MiscastMain_MiscastUnit" Association="ReportMiscastSchema.FK_MiscastMain_MiscastUnit">
+            <End Role="MiscastUnit" EntitySet="MiscastUnits" />
+            <End Role="MiscastMain" EntitySet="MiscastMains" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MiscastAction">
+          <Key>
+            <PropertyRef Name="MiscastActionID" />
+          </Key>
+          <Property Name="MiscastActionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MiscastID" Type="Int32" Nullable="false" />
+          <Property Name="ActionText" Type="String" Nullable="false" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="ActionOwnerID" Type="Int32" Nullable="false" />
+          <Property Name="TargetDate" Type="DateTime" Nullable="false" />
+          <Property Name="ActionState" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="MiscastOwner" Relationship="ReportMiscastSchema.FK_MiscastActions_MiscastOwners" FromRole="MiscastActions" ToRole="MiscastOwners" />
+          <NavigationProperty Name="MiscastMain" Relationship="ReportMiscastSchema.FK_MiscastActions_MiscastMain" FromRole="MiscastAction" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastAreaResponsible">
+          <Key>
+            <PropertyRef Name="AreaResponsibleID" />
+          </Key>
+          <Property Name="AreaResponsibleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AreaResponsible" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="ChartColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="ChartForeColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MiscastInvestigations" Relationship="ReportMiscastSchema.FK_MiscastInvestigation_MiscastAreaResponsible" FromRole="MiscastAreaResponsible" ToRole="MiscastInvestigation" />
+          <NavigationProperty Name="MiscastUnits" Relationship="ReportMiscastSchema.FK_MiscastUnit_MiscastAreaResponsible" FromRole="MiscastAreaResponsible" ToRole="MiscastUnit" />
+          <NavigationProperty Name="MiscastMains" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastAreaResponsible" FromRole="MiscastAreaResponsible" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastFailureMode">
+          <Key>
+            <PropertyRef Name="FailureModeID" />
+          </Key>
+          <Property Name="FailureModeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FailureMode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="ChartColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="ChartForeColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MiscastMains" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastFailureMode" FromRole="MiscastFailureMode" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastInvestigation">
+          <Key>
+            <PropertyRef Name="InvestigationID" />
+          </Key>
+          <Property Name="InvestigationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MiscastID" Type="Int32" Nullable="false" />
+          <Property Name="InvestigationNumber" Type="Int32" Nullable="false" />
+          <Property Name="AreaResponsibleID" Type="Int32" Nullable="false" />
+          <Property Name="Investigator" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProblemStatement" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <Property Name="RootCause" Type="String" MaxLength="1000" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MiscastAreaResponsible" Relationship="ReportMiscastSchema.FK_MiscastInvestigation_MiscastAreaResponsible" FromRole="MiscastInvestigation" ToRole="MiscastAreaResponsible" />
+          <NavigationProperty Name="MiscastWhies" Relationship="ReportMiscastSchema.FK_MiscastWhy_MiscastInvestigation" FromRole="MiscastInvestigation" ToRole="MiscastWhy" />
+          <NavigationProperty Name="MiscastMain" Relationship="ReportMiscastSchema.FK_MiscastInvestigation_MiscastMain" FromRole="MiscastInvestigation" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastOwner">
+          <Key>
+            <PropertyRef Name="MiscastOwnerID" />
+          </Key>
+          <Property Name="MiscastOwnerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="OwnerName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="OwnerEmail" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="ChartColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="ChartForeColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MiscastActions" Relationship="ReportMiscastSchema.FK_MiscastActions_MiscastOwners" FromRole="MiscastOwners" ToRole="MiscastActions" />
+          <Property Type="String" Name="UserName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IsTechnical" Nullable="false" />
+          <NavigationProperty Name="MiscastMains" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastOwners" FromRole="MiscastOwner" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastRootCause">
+          <Key>
+            <PropertyRef Name="RootCauseID" />
+          </Key>
+          <Property Name="RootCauseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RootCause" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="ChartColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="ChartForeColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MiscastMains" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastRootCause" FromRole="MiscastRootCause" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastRota">
+          <Key>
+            <PropertyRef Name="RotaID" />
+          </Key>
+          <Property Name="RotaID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Rota" Type="String" Nullable="false" MaxLength="1" Unicode="true" FixedLength="false" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="ChartColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="ChartForeColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MiscastMains" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastRota" FromRole="MiscastRota" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastType">
+          <Key>
+            <PropertyRef Name="MiscastTypeID" />
+          </Key>
+          <Property Name="MiscastTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="ChartColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="ChartForeColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="ShortType" MaxLength="1" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MiscastMains" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastType" FromRole="MiscastType" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastUnit">
+          <Key>
+            <PropertyRef Name="MiscastUnitID" />
+          </Key>
+          <Property Name="MiscastUnitID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MiscastUnit1" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Sort" Type="Int32" />
+          <Property Name="ChartColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Name="ChartForeColourHex" Type="String" MaxLength="7" Unicode="true" FixedLength="false" />
+          <Property Type="Int32" Name="MiscastAreaResponsibleID" Nullable="false" />
+          <NavigationProperty Name="MiscastAreaResponsible" Relationship="ReportMiscastSchema.FK_MiscastUnit_MiscastAreaResponsible" FromRole="MiscastUnit" ToRole="MiscastAreaResponsible" />
+          <NavigationProperty Name="MiscastMains" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastUnit" FromRole="MiscastUnit" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastWhy">
+          <Key>
+            <PropertyRef Name="WhyID" />
+          </Key>
+          <Property Name="WhyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InvestigationID" Type="Int32" Nullable="false" />
+          <Property Name="WhyText" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="SortNumber" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="MiscastInvestigation" Relationship="ReportMiscastSchema.FK_MiscastWhy_MiscastInvestigation" FromRole="MiscastWhy" ToRole="MiscastInvestigation" />
+        </EntityType>
+        <Association Name="FK_MiscastActions_MiscastOwners">
+          <End Role="MiscastOwners" Type="ReportMiscastSchema.MiscastOwner" Multiplicity="1" />
+          <End Role="MiscastActions" Type="ReportMiscastSchema.MiscastAction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastOwners">
+              <PropertyRef Name="MiscastOwnerID" />
+            </Principal>
+            <Dependent Role="MiscastActions">
+              <PropertyRef Name="ActionOwnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastInvestigation_MiscastAreaResponsible">
+          <End Role="MiscastAreaResponsible" Type="ReportMiscastSchema.MiscastAreaResponsible" Multiplicity="1" />
+          <End Role="MiscastInvestigation" Type="ReportMiscastSchema.MiscastInvestigation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastAreaResponsible">
+              <PropertyRef Name="AreaResponsibleID" />
+            </Principal>
+            <Dependent Role="MiscastInvestigation">
+              <PropertyRef Name="AreaResponsibleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastWhy_MiscastInvestigation">
+          <End Role="MiscastInvestigation" Type="ReportMiscastSchema.MiscastInvestigation" Multiplicity="1" />
+          <End Role="MiscastWhy" Type="ReportMiscastSchema.MiscastWhy" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastInvestigation">
+              <PropertyRef Name="InvestigationID" />
+            </Principal>
+            <Dependent Role="MiscastWhy">
+              <PropertyRef Name="InvestigationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="MiscastFunction">
+          <Key>
+            <PropertyRef Name="FunctionID" />
+          </Key>
+          <Property Type="Int32" Name="FunctionID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="TrioFunction" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Sort" />
+          <Property Type="String" Name="ChartColourHex" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ChartForeColourHex" MaxLength="7" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MiscastMains" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastFunction" FromRole="MiscastFunction" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastStatu">
+          <Key>
+            <PropertyRef Name="MiscastStatusID" />
+          </Key>
+          <Property Type="Int32" Name="MiscastStatusID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="Sort" />
+          <Property Type="String" Name="ChartColourHex" MaxLength="7" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ChartForeColourHex" MaxLength="7" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="MiscastMains" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastStatus" FromRole="MiscastStatu" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastReportView">
+          <Key>
+            <PropertyRef Name="MiscastID" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="TapTime" />
+            <PropertyRef Name="MiscastStatusID" />
+            <PropertyRef Name="MiscastRotaID" />
+            <PropertyRef Name="HeatNumberSet" />
+          </Key>
+          <Property Type="Int32" Name="MiscastID" Nullable="false" />
+          <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+          <Property Type="DateTime" Name="TapTime" Nullable="false" />
+          <Property Type="Int32" Name="OrderedGrade" />
+          <Property Type="String" Name="FailureMode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Rota" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AreaResponsible" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MiscastUnit" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Type" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Status" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RootCause" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="MiscastAreaResponsibleID" />
+          <Property Type="Int32" Name="MiscastFunctionID" />
+          <Property Type="Int32" Name="MiscastTypeID" />
+          <Property Type="Int32" Name="MiscastStatusID" Nullable="false" />
+          <Property Type="Int32" Name="MiscastUnitID" />
+          <Property Type="Int32" Name="MiscastFailureModeID" />
+          <Property Type="Int32" Name="MiscastRotaID" Nullable="false" />
+          <Property Type="Int32" Name="RootCauseID" />
+          <Property Type="Int32" Name="HeatNumberSet" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_MiscastUnit_MiscastAreaResponsible">
+          <End Type="ReportMiscastSchema.MiscastAreaResponsible" Role="MiscastAreaResponsible" Multiplicity="1" />
+          <End Type="ReportMiscastSchema.MiscastUnit" Role="MiscastUnit" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastAreaResponsible">
+              <PropertyRef Name="AreaResponsibleID" />
+            </Principal>
+            <Dependent Role="MiscastUnit">
+              <PropertyRef Name="MiscastAreaResponsibleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="MiscastActionsReportView">
+          <Key>
+            <PropertyRef Name="MiscastActionID" />
+            <PropertyRef Name="MiscastID" />
+            <PropertyRef Name="ActionText" />
+            <PropertyRef Name="ActionOwnerID" />
+            <PropertyRef Name="TargetDate" />
+            <PropertyRef Name="ActionState" />
+          </Key>
+          <Property Type="Int32" Name="MiscastActionID" Nullable="false" />
+          <Property Type="Int32" Name="MiscastID" Nullable="false" />
+          <Property Type="String" Name="ActionText" Nullable="false" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="ActionOwnerID" Nullable="false" />
+          <Property Type="DateTime" Name="TargetDate" Nullable="false" />
+          <Property Type="Boolean" Name="ActionState" Nullable="false" />
+          <Property Type="String" Name="OwnerName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="HeatNumber" />
+          <Property Type="Int32" Name="MiscastAreaResponsibleID" />
+          <Property Type="Int32" Name="MiscastFailureModeID" />
+          <Property Type="Int32" Name="MiscastTypeID" />
+          <Property Type="Int32" Name="MiscastRotaID" />
+          <Property Type="Int32" Name="MiscastUnitID" />
+          <Property Type="Int32" Name="MiscastFunctionID" />
+          <Property Type="Int32" Name="RootCauseID" />
+          <Property Type="Int32" Name="MiscastStatusID" />
+          <Property Type="Int32" Name="OrderedGrade" />
+        </EntityType>
+        <EntityType Name="LookupStandardPracticeFollowed">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Byte" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="MiscastMains" Relationship="ReportMiscastSchema.FK_MiscastMain_LookupStandardPracticeFollowed" FromRole="LookupStandardPracticeFollowed" ToRole="MiscastMain" />
+        </EntityType>
+        <EntityType Name="MiscastMain">
+          <Key>
+            <PropertyRef Name="MiscastID" />
+          </Key>
+          <Property Type="Int32" Name="MiscastID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="HeatNumberSet" Nullable="false" />
+          <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+          <Property Type="Int32" Name="OrderedGrade" />
+          <Property Type="Int32" Name="MadeGrade" />
+          <Property Type="Boolean" Name="HotConnect" Nullable="false" />
+          <Property Type="Int32" Name="MiscastRotaID" Nullable="false" />
+          <Property Type="Int32" Name="MiscastTypeID" />
+          <Property Type="Int32" Name="MiscastFailureModeID" />
+          <Property Type="Int32" Name="MiscastAreaResponsibleID" />
+          <Property Type="Int32" Name="MiscastUnitID" />
+          <Property Type="Int32" Name="MiscastFunctionID" />
+          <Property Type="String" Name="ProblemStatement" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ProblemStatementName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ContainmentAction" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShiftComments" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ShiftName" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="ShiftComplete" Nullable="false" />
+          <Property Type="String" Name="TechComments" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="TechNameID" />
+          <Property Type="Int32" Name="RootCauseID" />
+          <Property Type="Boolean" Name="TechComplete" Nullable="false" />
+          <Property Type="DateTime" Name="DateRaised" Nullable="false" />
+          <Property Type="DateTime" Name="LastEdit" Nullable="false" />
+          <Property Type="DateTime" Name="TapTime" Nullable="false" />
+          <Property Type="Int32" Name="MiscastStatusID" Nullable="false" />
+          <Property Type="Boolean" Name="InstallationGoodCondition" Nullable="false" />
+          <Property Type="Byte" Name="StandardPracticeFollowedID" Nullable="false" />
+          <NavigationProperty Name="LookupStandardPracticeFollowed" Relationship="ReportMiscastSchema.FK_MiscastMain_LookupStandardPracticeFollowed" FromRole="MiscastMain" ToRole="LookupStandardPracticeFollowed" />
+          <NavigationProperty Name="MiscastActions" Relationship="ReportMiscastSchema.FK_MiscastActions_MiscastMain" FromRole="MiscastMain" ToRole="MiscastAction" />
+          <NavigationProperty Name="MiscastAreaResponsible" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastAreaResponsible" FromRole="MiscastMain" ToRole="MiscastAreaResponsible" />
+          <NavigationProperty Name="MiscastFailureMode" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastFailureMode" FromRole="MiscastMain" ToRole="MiscastFailureMode" />
+          <NavigationProperty Name="MiscastFunction" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastFunction" FromRole="MiscastMain" ToRole="MiscastFunction" />
+          <NavigationProperty Name="MiscastInvestigations" Relationship="ReportMiscastSchema.FK_MiscastInvestigation_MiscastMain" FromRole="MiscastMain" ToRole="MiscastInvestigation" />
+          <NavigationProperty Name="MiscastOwner" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastOwners" FromRole="MiscastMain" ToRole="MiscastOwner" />
+          <NavigationProperty Name="MiscastRootCause" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastRootCause" FromRole="MiscastMain" ToRole="MiscastRootCause" />
+          <NavigationProperty Name="MiscastRota" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastRota" FromRole="MiscastMain" ToRole="MiscastRota" />
+          <NavigationProperty Name="MiscastStatu" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastStatus" FromRole="MiscastMain" ToRole="MiscastStatu" />
+          <NavigationProperty Name="MiscastType" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastType" FromRole="MiscastMain" ToRole="MiscastType" />
+          <NavigationProperty Name="MiscastUnit" Relationship="ReportMiscastSchema.FK_MiscastMain_MiscastUnit" FromRole="MiscastMain" ToRole="MiscastUnit" />
+        </EntityType>
+        <Association Name="FK_MiscastMain_LookupStandardPracticeFollowed">
+          <End Type="ReportMiscastSchema.LookupStandardPracticeFollowed" Role="LookupStandardPracticeFollowed" Multiplicity="1" />
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LookupStandardPracticeFollowed">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="StandardPracticeFollowedID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastActions_MiscastMain">
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="1" />
+          <End Type="ReportMiscastSchema.MiscastAction" Role="MiscastAction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastMain">
+              <PropertyRef Name="MiscastID" />
+            </Principal>
+            <Dependent Role="MiscastAction">
+              <PropertyRef Name="MiscastID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastAreaResponsible">
+          <End Type="ReportMiscastSchema.MiscastAreaResponsible" Role="MiscastAreaResponsible" Multiplicity="0..1" />
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastAreaResponsible">
+              <PropertyRef Name="AreaResponsibleID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastAreaResponsibleID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastFailureMode">
+          <End Type="ReportMiscastSchema.MiscastFailureMode" Role="MiscastFailureMode" Multiplicity="0..1" />
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastFailureMode">
+              <PropertyRef Name="FailureModeID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastFailureModeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastFunction">
+          <End Type="ReportMiscastSchema.MiscastFunction" Role="MiscastFunction" Multiplicity="0..1" />
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastFunction">
+              <PropertyRef Name="FunctionID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastFunctionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastInvestigation_MiscastMain">
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="1" />
+          <End Type="ReportMiscastSchema.MiscastInvestigation" Role="MiscastInvestigation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastMain">
+              <PropertyRef Name="MiscastID" />
+            </Principal>
+            <Dependent Role="MiscastInvestigation">
+              <PropertyRef Name="MiscastID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastOwners">
+          <End Type="ReportMiscastSchema.MiscastOwner" Role="MiscastOwner" Multiplicity="0..1" />
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastOwner">
+              <PropertyRef Name="MiscastOwnerID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="TechNameID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastRootCause">
+          <End Type="ReportMiscastSchema.MiscastRootCause" Role="MiscastRootCause" Multiplicity="0..1" />
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastRootCause">
+              <PropertyRef Name="RootCauseID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="RootCauseID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastRota">
+          <End Type="ReportMiscastSchema.MiscastRota" Role="MiscastRota" Multiplicity="1" />
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastRota">
+              <PropertyRef Name="RotaID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastRotaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastStatus">
+          <End Type="ReportMiscastSchema.MiscastStatu" Role="MiscastStatu" Multiplicity="1" />
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastStatu">
+              <PropertyRef Name="MiscastStatusID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastStatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastType">
+          <End Type="ReportMiscastSchema.MiscastType" Role="MiscastType" Multiplicity="0..1" />
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastType">
+              <PropertyRef Name="MiscastTypeID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MiscastMain_MiscastUnit">
+          <End Type="ReportMiscastSchema.MiscastUnit" Role="MiscastUnit" Multiplicity="0..1" />
+          <End Type="ReportMiscastSchema.MiscastMain" Role="MiscastMain" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MiscastUnit">
+              <PropertyRef Name="MiscastUnitID" />
+            </Principal>
+            <Dependent Role="MiscastMain">
+              <PropertyRef Name="MiscastUnitID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MiscastReportSchemaStoreContainer" CdmEntityContainer="ReportMiscastSchemaEntities">
+          <EntitySetMapping Name="MiscastActions">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastAction">
+              <MappingFragment StoreEntitySet="MiscastActions">
+                <ScalarProperty Name="MiscastActionID" ColumnName="MiscastActionID" />
+                <ScalarProperty Name="MiscastID" ColumnName="MiscastID" />
+                <ScalarProperty Name="ActionText" ColumnName="ActionText" />
+                <ScalarProperty Name="ActionOwnerID" ColumnName="ActionOwnerID" />
+                <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+                <ScalarProperty Name="ActionState" ColumnName="ActionState" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastAreaResponsibles">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastAreaResponsible">
+              <MappingFragment StoreEntitySet="MiscastAreaResponsible">
+                <ScalarProperty Name="AreaResponsibleID" ColumnName="AreaResponsibleID" />
+                <ScalarProperty Name="AreaResponsible" ColumnName="AreaResponsible" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+                <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastFailureModes">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastFailureMode">
+              <MappingFragment StoreEntitySet="MiscastFailureMode">
+                <ScalarProperty Name="FailureModeID" ColumnName="FailureModeID" />
+                <ScalarProperty Name="FailureMode" ColumnName="FailureMode" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+                <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastInvestigations">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastInvestigation">
+              <MappingFragment StoreEntitySet="MiscastInvestigation">
+                <ScalarProperty Name="InvestigationID" ColumnName="InvestigationID" />
+                <ScalarProperty Name="MiscastID" ColumnName="MiscastID" />
+                <ScalarProperty Name="InvestigationNumber" ColumnName="InvestigationNumber" />
+                <ScalarProperty Name="AreaResponsibleID" ColumnName="AreaResponsibleID" />
+                <ScalarProperty Name="Investigator" ColumnName="Investigator" />
+                <ScalarProperty Name="ProblemStatement" ColumnName="ProblemStatement" />
+                <ScalarProperty Name="RootCause" ColumnName="RootCause" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastOwners">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastOwner">
+              <MappingFragment StoreEntitySet="MiscastOwners">
+                <ScalarProperty Name="IsTechnical" ColumnName="IsTechnical" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="MiscastOwnerID" ColumnName="MiscastOwnerID" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+                <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastRootCauses">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastRootCause">
+              <MappingFragment StoreEntitySet="MiscastRootCause">
+                <ScalarProperty Name="RootCauseID" ColumnName="RootCauseID" />
+                <ScalarProperty Name="RootCause" ColumnName="RootCause" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+                <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastRotas">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastRota">
+              <MappingFragment StoreEntitySet="MiscastRota">
+                <ScalarProperty Name="RotaID" ColumnName="RotaID" />
+                <ScalarProperty Name="Rota" ColumnName="Rota" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+                <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastTypes">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastType">
+              <MappingFragment StoreEntitySet="MiscastType">
+                <ScalarProperty Name="ShortType" ColumnName="ShortType" />
+                <ScalarProperty Name="MiscastTypeID" ColumnName="MiscastTypeID" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+                <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastUnits">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastUnit">
+              <MappingFragment StoreEntitySet="MiscastUnit">
+                <ScalarProperty Name="MiscastAreaResponsibleID" ColumnName="MiscastAreaResponsibleID" />
+                <ScalarProperty Name="MiscastUnitID" ColumnName="MiscastUnitID" />
+                <ScalarProperty Name="MiscastUnit1" ColumnName="MiscastUnit" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+                <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastWhies">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastWhy">
+              <MappingFragment StoreEntitySet="MiscastWhy">
+                <ScalarProperty Name="WhyID" ColumnName="WhyID" />
+                <ScalarProperty Name="InvestigationID" ColumnName="InvestigationID" />
+                <ScalarProperty Name="WhyText" ColumnName="WhyText" />
+                <ScalarProperty Name="SortNumber" ColumnName="SortNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastFunctions">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastFunction">
+              <MappingFragment StoreEntitySet="MiscastFunction">
+                <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+                <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="TrioFunction" ColumnName="TrioFunction" />
+                <ScalarProperty Name="FunctionID" ColumnName="FunctionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastStatus">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastStatu">
+              <MappingFragment StoreEntitySet="MiscastStatus">
+                <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+                <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+                <ScalarProperty Name="Sort" ColumnName="Sort" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="MiscastStatusID" ColumnName="MiscastStatusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastReportViews">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastReportView">
+              <MappingFragment StoreEntitySet="MiscastReportView">
+                <ScalarProperty Name="HeatNumberSet" ColumnName="HeatNumberSet" />
+                <ScalarProperty Name="RootCauseID" ColumnName="RootCauseID" />
+                <ScalarProperty Name="MiscastRotaID" ColumnName="MiscastRotaID" />
+                <ScalarProperty Name="MiscastFailureModeID" ColumnName="MiscastFailureModeID" />
+                <ScalarProperty Name="MiscastUnitID" ColumnName="MiscastUnitID" />
+                <ScalarProperty Name="MiscastStatusID" ColumnName="MiscastStatusID" />
+                <ScalarProperty Name="MiscastTypeID" ColumnName="MiscastTypeID" />
+                <ScalarProperty Name="MiscastFunctionID" ColumnName="MiscastFunctionID" />
+                <ScalarProperty Name="MiscastAreaResponsibleID" ColumnName="MiscastAreaResponsibleID" />
+                <ScalarProperty Name="RootCause" ColumnName="RootCause" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="MiscastUnit" ColumnName="MiscastUnit" />
+                <ScalarProperty Name="AreaResponsible" ColumnName="AreaResponsible" />
+                <ScalarProperty Name="Rota" ColumnName="Rota" />
+                <ScalarProperty Name="FailureMode" ColumnName="FailureMode" />
+                <ScalarProperty Name="OrderedGrade" ColumnName="OrderedGrade" />
+                <ScalarProperty Name="TapTime" ColumnName="TapTime" />
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="MiscastID" ColumnName="MiscastID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastActionsReportViews">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastActionsReportView">
+              <MappingFragment StoreEntitySet="MiscastActionsReportView">
+                <ScalarProperty Name="OrderedGrade" ColumnName="OrderedGrade" />
+                <ScalarProperty Name="MiscastStatusID" ColumnName="MiscastStatusID" />
+                <ScalarProperty Name="RootCauseID" ColumnName="RootCauseID" />
+                <ScalarProperty Name="MiscastFunctionID" ColumnName="MiscastFunctionID" />
+                <ScalarProperty Name="MiscastUnitID" ColumnName="MiscastUnitID" />
+                <ScalarProperty Name="MiscastRotaID" ColumnName="MiscastRotaID" />
+                <ScalarProperty Name="MiscastTypeID" ColumnName="MiscastTypeID" />
+                <ScalarProperty Name="MiscastFailureModeID" ColumnName="MiscastFailureModeID" />
+                <ScalarProperty Name="MiscastAreaResponsibleID" ColumnName="MiscastAreaResponsibleID" />
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="ActionState" ColumnName="ActionState" />
+                <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+                <ScalarProperty Name="ActionOwnerID" ColumnName="ActionOwnerID" />
+                <ScalarProperty Name="ActionText" ColumnName="ActionText" />
+                <ScalarProperty Name="MiscastID" ColumnName="MiscastID" />
+                <ScalarProperty Name="MiscastActionID" ColumnName="MiscastActionID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LookupStandardPracticeFolloweds">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.LookupStandardPracticeFollowed">
+              <MappingFragment StoreEntitySet="LookupStandardPracticeFollowed">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MiscastMains">
+            <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastMain">
+              <MappingFragment StoreEntitySet="MiscastMain">
+                <ScalarProperty Name="StandardPracticeFollowedID" ColumnName="StandardPracticeFollowedID" />
+                <ScalarProperty Name="InstallationGoodCondition" ColumnName="InstallationGoodCondition" />
+                <ScalarProperty Name="MiscastStatusID" ColumnName="MiscastStatusID" />
+                <ScalarProperty Name="TapTime" ColumnName="TapTime" />
+                <ScalarProperty Name="LastEdit" ColumnName="LastEdit" />
+                <ScalarProperty Name="DateRaised" ColumnName="DateRaised" />
+                <ScalarProperty Name="TechComplete" ColumnName="TechComplete" />
+                <ScalarProperty Name="RootCauseID" ColumnName="RootCauseID" />
+                <ScalarProperty Name="TechNameID" ColumnName="TechNameID" />
+                <ScalarProperty Name="TechComments" ColumnName="TechComments" />
+                <ScalarProperty Name="ShiftComplete" ColumnName="ShiftComplete" />
+                <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+                <ScalarProperty Name="ShiftComments" ColumnName="ShiftComments" />
+                <ScalarProperty Name="ContainmentAction" ColumnName="ContainmentAction" />
+                <ScalarProperty Name="ProblemStatementName" ColumnName="ProblemStatementName" />
+                <ScalarProperty Name="ProblemStatement" ColumnName="ProblemStatement" />
+                <ScalarProperty Name="MiscastFunctionID" ColumnName="MiscastFunctionID" />
+                <ScalarProperty Name="MiscastUnitID" ColumnName="MiscastUnitID" />
+                <ScalarProperty Name="MiscastAreaResponsibleID" ColumnName="MiscastAreaResponsibleID" />
+                <ScalarProperty Name="MiscastFailureModeID" ColumnName="MiscastFailureModeID" />
+                <ScalarProperty Name="MiscastTypeID" ColumnName="MiscastTypeID" />
+                <ScalarProperty Name="MiscastRotaID" ColumnName="MiscastRotaID" />
+                <ScalarProperty Name="HotConnect" ColumnName="HotConnect" />
+                <ScalarProperty Name="MadeGrade" ColumnName="MadeGrade" />
+                <ScalarProperty Name="OrderedGrade" ColumnName="OrderedGrade" />
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="HeatNumberSet" ColumnName="HeatNumberSet" />
+                <ScalarProperty Name="MiscastID" ColumnName="MiscastID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ElvisReportMiscastSchema" ZoomLevel="55">
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastAction" Width="1.5" PointX="7.75" PointY="0.5" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastAreaResponsible" Width="1.5" PointX="1.75" PointY="0.5" Height="2.3648893229166648" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastFailureMode" Width="1.5" PointX="2.25" PointY="6.875" Height="2.1725878906250014" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastInvestigation" Width="1.5" PointX="3.75" PointY="0.5" Height="2.9417936197916648" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastOwner" Width="1.5" PointX="7.75" PointY="3.375" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastRootCause" Width="1.5" PointX="10.75" PointY="3.625" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastRota" Width="1.5" PointX="10.125" PointY="6.375" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastType" Width="1.5" PointX="7.875" PointY="6.375" Height="2.172587890624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastUnit" Width="1.875" PointX="4" PointY="10.625" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastWhy" Width="1.5" PointX="3.75" PointY="3.75" Height="1.9802864583333317" IsExpanded="true" />
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastActions_MiscastOwners" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.5" PointY="3.375" />
+          <ConnectorPoint PointX="8.5" PointY="3.0571907552083331" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastInvestigation_MiscastAreaResponsible" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.25" PointY="2.6076871744791679" />
+          <ConnectorPoint PointX="3.75" PointY="2.6076871744791679" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastWhy_MiscastInvestigation" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="3.4417936197916665" />
+          <ConnectorPoint PointX="4.5" PointY="3.75" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastFunction" Width="1.5" PointX="4.75" PointY="14.625" Height="2.1725878906249996" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastStatu" Width="1.5" PointX="8.375" PointY="9.875" Height="2.1725878906250031" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastReportView" Width="1.5" PointX="0.75" PointY="10.75" Height="3.1340950520833388" />
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastUnit_MiscastAreaResponsible" >
+          <ConnectorPoint PointX="2.5" PointY="3.0571907552083331" />
+          <ConnectorPoint PointX="2.5" PointY="6.625" />
+          <ConnectorPoint PointX="4" PointY="6.625" />
+          <ConnectorPoint PointX="4" PointY="10.375" />
+          <ConnectorPoint PointX="2.5" PointY="10.375" />
+          <ConnectorPoint PointX="2.5" PointY="11.903595377604166" />
+          <ConnectorPoint PointX="4" PointY="11.903595377604166" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastActionsReportView" Width="1.5" PointX="10.375" PointY="9.75" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.LookupStandardPracticeFollowed" Width="1.5" PointX="6.875" PointY="14.25" Height="1.5956835937500031" />
+        <EntityTypeShape EntityType="ReportMiscastSchema.MiscastMain" Width="1.5" PointX="5.875" PointY="0.75" Height="8.7108365885416674" />
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastMain_LookupStandardPracticeFollowed" >
+          <ConnectorPoint PointX="7.125" PointY="14.25" />
+          <ConnectorPoint PointX="7.125" PointY="9.4608365885416674" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastActions_MiscastMain" >
+          <ConnectorPoint PointX="7.375" PointY="1.9035953776041663" />
+          <ConnectorPoint PointX="7.75" PointY="1.9035953776041663" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastMain_MiscastAreaResponsible" >
+          <ConnectorPoint PointX="1.96875" PointY="3.0571907552083331" />
+          <ConnectorPoint PointX="1.96875" PointY="6.2088932291666659" />
+          <ConnectorPoint PointX="2.4166666666666665" PointY="6.208893229166665" />
+          <ConnectorPoint PointX="2.5833333333333335" PointY="6.2088932291666659" />
+          <ConnectorPoint PointX="5.875" PointY="6.2088932291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastMain_MiscastFailureMode" >
+          <ConnectorPoint PointX="3.75" PointY="7.9612939453125" />
+          <ConnectorPoint PointX="3.9166666666666665" PointY="7.9612939453124989" />
+          <ConnectorPoint PointX="4.083333333333333" PointY="7.9612939453125" />
+          <ConnectorPoint PointX="5.479166666666667" PointY="7.9612939453124989" />
+          <ConnectorPoint PointX="5.645833333333333" PointY="7.9612939453125" />
+          <ConnectorPoint PointX="5.875" PointY="7.9612939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastMain_MiscastFunction" >
+          <ConnectorPoint PointX="6.09375" PointY="14.625" />
+          <ConnectorPoint PointX="6.09375" PointY="9.4608365885416674" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastInvestigation_MiscastMain" >
+          <ConnectorPoint PointX="5.875" PointY="2.0958968098958333" />
+          <ConnectorPoint PointX="5.25" PointY="2.0958968098958333" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastMain_MiscastOwners" >
+          <ConnectorPoint PointX="7.75" PointY="4.8458968098958328" />
+          <ConnectorPoint PointX="7.375" PointY="4.8458968098958328" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastMain_MiscastRootCause" >
+          <ConnectorPoint PointX="11.96875" PointY="5.797587890625" />
+          <ConnectorPoint PointX="11.96875" PointY="9.1316129557291674" />
+          <ConnectorPoint PointX="7.375" PointY="9.1316129557291674" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastMain_MiscastRota" >
+          <ConnectorPoint PointX="10.875" PointY="8.547587890625" />
+          <ConnectorPoint PointX="10.875" PointY="8.9357486393229237" />
+          <ConnectorPoint PointX="7.375" PointY="8.9357486393229237" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastMain_MiscastStatus" >
+          <ConnectorPoint PointX="9.65625" PointY="9.875" />
+          <ConnectorPoint PointX="9.65625" PointY="9.3274772721354111" />
+          <ConnectorPoint PointX="7.375" PointY="9.3274772721354111" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastMain_MiscastType" >
+          <ConnectorPoint PointX="7.875" PointY="7.5574446614583328" />
+          <ConnectorPoint PointX="7.375" PointY="7.5574446614583328" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportMiscastSchema.FK_MiscastMain_MiscastUnit" >
+          <ConnectorPoint PointX="5.5625" PointY="10.625" />
+          <ConnectorPoint PointX="5.5625" PointY="7.0850935872395828" />
+          <ConnectorPoint PointX="5.875" PointY="7.0850935872395828" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,2372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ReportSchemaEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ReportSchemaEntitiesStoreContainer">
+          <EntitySet Name="AreaLookUp" EntityType="ReportSchemaEntities.Store.AreaLookUp" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="Codes" EntityType="ReportSchemaEntities.Store.Codes" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="Comments" EntityType="ReportSchemaEntities.Store.Comments" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="Cost" EntityType="ReportSchemaEntities.Store.Cost" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="Documents" EntityType="ReportSchemaEntities.Store.Documents" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="DRFActions" EntityType="ReportSchemaEntities.Store.DRFActions" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="DRFDropDownLookUp" EntityType="ReportSchemaEntities.Store.DRFDropDownLookUp" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="DRFLocationLookUp" EntityType="ReportSchemaEntities.Store.DRFLocationLookUp" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="DRFOwners" EntityType="ReportSchemaEntities.Store.DRFOwners" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="DRFReports" EntityType="ReportSchemaEntities.Store.DRFReports" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="FunctionLookUp" EntityType="ReportSchemaEntities.Store.FunctionLookUp" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="I3s" EntityType="ReportSchemaEntities.Store.I3s" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="IncidentActions" EntityType="ReportSchemaEntities.Store.IncidentActions" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="IncidentOwners" EntityType="ReportSchemaEntities.Store.IncidentOwners" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="IncidentReport" EntityType="ReportSchemaEntities.Store.IncidentReport" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="Links" EntityType="ReportSchemaEntities.Store.Links" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="MainReport" EntityType="ReportSchemaEntities.Store.MainReport" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="MangementAgendaThreats" EntityType="ReportSchemaEntities.Store.MangementAgendaThreats" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="Sections" EntityType="ReportSchemaEntities.Store.Sections" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="StatusLookUp" EntityType="ReportSchemaEntities.Store.StatusLookUp" store:Type="Tables" Schema="Report" />
+          <EntitySet Name="AimsAnalysisGridData" EntityType="ReportSchemaEntities.Store.AimsAnalysisGridData" store:Type="Views" store:Schema="Report" store:Name="AimsAnalysisGridData">
+            <DefiningQuery>SELECT 
+      [AimsAnalysisGridData].[AimAnalysisIndex] AS [AimAnalysisIndex], 
+      [AimsAnalysisGridData].[HeatNumber] AS [HeatNumber], 
+      [AimsAnalysisGridData].[HNS] AS [HNS], 
+      [AimsAnalysisGridData].[UnitNumber] AS [UnitNumber], 
+      [AimsAnalysisGridData].[Type] AS [Type], 
+      [AimsAnalysisGridData].[TimeStamp] AS [TimeStamp], 
+      [AimsAnalysisGridData].[C] AS [C], 
+      [AimsAnalysisGridData].[Si] AS [Si], 
+      [AimsAnalysisGridData].[S] AS [S], 
+      [AimsAnalysisGridData].[P] AS [P], 
+      [AimsAnalysisGridData].[Ni] AS [Ni], 
+      [AimsAnalysisGridData].[Cu] AS [Cu], 
+      [AimsAnalysisGridData].[Mn] AS [Mn], 
+      [AimsAnalysisGridData].[Sn] AS [Sn], 
+      [AimsAnalysisGridData].[Cr] AS [Cr], 
+      [AimsAnalysisGridData].[As] AS [As], 
+      [AimsAnalysisGridData].[Mo] AS [Mo], 
+      [AimsAnalysisGridData].[N2] AS [N2], 
+      [AimsAnalysisGridData].[AlT] AS [AlT], 
+      [AimsAnalysisGridData].[Ti] AS [Ti], 
+      [AimsAnalysisGridData].[AlS] AS [AlS], 
+      [AimsAnalysisGridData].[B] AS [B], 
+      [AimsAnalysisGridData].[Ca] AS [Ca], 
+      [AimsAnalysisGridData].[Ce] AS [Ce], 
+      [AimsAnalysisGridData].[Co] AS [Co], 
+      [AimsAnalysisGridData].[Nb] AS [Nb], 
+      [AimsAnalysisGridData].[V] AS [V], 
+      [AimsAnalysisGridData].[VersionNumber] AS [VersionNumber], 
+      [AimsAnalysisGridData].[TempTypeText] AS [TempTypeText], 
+      [AimsAnalysisGridData].[UnitText] AS [UnitText]
+      FROM [Report].[AimsAnalysisGridData] AS [AimsAnalysisGridData]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AimsExtendAnalysisGridData" EntityType="ReportSchemaEntities.Store.AimsExtendAnalysisGridData" store:Type="Views" store:Schema="Report" store:Name="AimsExtendAnalysisGridData">
+            <DefiningQuery>SELECT 
+      [AimsExtendAnalysisGridData].[AimAnalysisIndex] AS [AimAnalysisIndex], 
+      [AimsExtendAnalysisGridData].[HeatNumber] AS [HeatNumber], 
+      [AimsExtendAnalysisGridData].[HNS] AS [HNS], 
+      [AimsExtendAnalysisGridData].[UnitNumber] AS [UnitNumber], 
+      [AimsExtendAnalysisGridData].[Type] AS [Type], 
+      [AimsExtendAnalysisGridData].[TimeStamp] AS [TimeStamp], 
+      [AimsExtendAnalysisGridData].[VersionNumber] AS [VersionNumber], 
+      [AimsExtendAnalysisGridData].[TempTypeText] AS [TempTypeText], 
+      [AimsExtendAnalysisGridData].[CEV1] AS [CEV1], 
+      [AimsExtendAnalysisGridData].[CEV2] AS [CEV2], 
+      [AimsExtendAnalysisGridData].[CEV3] AS [CEV3], 
+      [AimsExtendAnalysisGridData].[FreeC1] AS [FreeC1], 
+      [AimsExtendAnalysisGridData].[FreeC2] AS [FreeC2], 
+      [AimsExtendAnalysisGridData].[XSTi1] AS [XSTi1], 
+      [AimsExtendAnalysisGridData].[XSTi2] AS [XSTi2], 
+      [AimsExtendAnalysisGridData].[XSTi3] AS [XSTi3], 
+      [AimsExtendAnalysisGridData].[AlN2] AS [AlN2], 
+      [AimsExtendAnalysisGridData].[CuP] AS [CuP], 
+      [AimsExtendAnalysisGridData].[BN2] AS [BN2], 
+      [AimsExtendAnalysisGridData].[SP] AS [SP], 
+      [AimsExtendAnalysisGridData].[CUNiCrMoSn] AS [CUNiCrMoSn], 
+      [AimsExtendAnalysisGridData].[CrEq] AS [CrEq], 
+      [AimsExtendAnalysisGridData].[SiForm] AS [SiForm], 
+      [AimsExtendAnalysisGridData].[MnS] AS [MnS], 
+      [AimsExtendAnalysisGridData].[MnSi] AS [MnSi], 
+      [AimsExtendAnalysisGridData].[FreeC3] AS [FreeC3], 
+      [AimsExtendAnalysisGridData].[UnitText] AS [UnitText]
+      FROM [Report].[AimsExtendAnalysisGridData] AS [AimsExtendAnalysisGridData]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="AnalysisGridData" EntityType="ReportSchemaEntities.Store.AnalysisGridData" store:Type="Views" store:Schema="Report" store:Name="AnalysisGridData">
+            <DefiningQuery>SELECT 
+      [AnalysisGridData].[TimeStamp] AS [TimeStamp], 
+      [AnalysisGridData].[SampleType] AS [SampleType], 
+      [AnalysisGridData].[UnitShort] AS [UnitShort], 
+      [AnalysisGridData].[C] AS [C], 
+      [AnalysisGridData].[Si] AS [Si], 
+      [AnalysisGridData].[S] AS [S], 
+      [AnalysisGridData].[P] AS [P], 
+      [AnalysisGridData].[Mn] AS [Mn], 
+      [AnalysisGridData].[Ni] AS [Ni], 
+      [AnalysisGridData].[Cu] AS [Cu], 
+      [AnalysisGridData].[Sn] AS [Sn], 
+      [AnalysisGridData].[Cr] AS [Cr], 
+      [AnalysisGridData].[As] AS [As], 
+      [AnalysisGridData].[Mo] AS [Mo], 
+      [AnalysisGridData].[N2] AS [N2], 
+      [AnalysisGridData].[AlT] AS [AlT], 
+      [AnalysisGridData].[AlS] AS [AlS], 
+      [AnalysisGridData].[Ti] AS [Ti], 
+      [AnalysisGridData].[B] AS [B], 
+      [AnalysisGridData].[Ca] AS [Ca], 
+      [AnalysisGridData].[Ce] AS [Ce], 
+      [AnalysisGridData].[Co] AS [Co], 
+      [AnalysisGridData].[Nb] AS [Nb], 
+      [AnalysisGridData].[V] AS [V], 
+      [AnalysisGridData].[AnalysisIndex] AS [AnalysisIndex], 
+      [AnalysisGridData].[HeatNumber] AS [HeatNumber], 
+      [AnalysisGridData].[HNS] AS [HNS], 
+      [AnalysisGridData].[SubSampleNumber] AS [SubSampleNumber]
+      FROM [Report].[AnalysisGridData] AS [AnalysisGridData]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ExtendAnalysisGridData" EntityType="ReportSchemaEntities.Store.ExtendAnalysisGridData" store:Type="Views" store:Schema="Report" store:Name="ExtendAnalysisGridData">
+            <DefiningQuery>SELECT 
+      [ExtendAnalysisGridData].[UnitShort] AS [UnitShort], 
+      [ExtendAnalysisGridData].[AnalysisIndex] AS [AnalysisIndex], 
+      [ExtendAnalysisGridData].[HeatNumber] AS [HeatNumber], 
+      [ExtendAnalysisGridData].[HNS] AS [HNS], 
+      [ExtendAnalysisGridData].[TimeStamp] AS [TimeStamp], 
+      [ExtendAnalysisGridData].[SampleType] AS [SampleType], 
+      [ExtendAnalysisGridData].[CEV1] AS [CEV1], 
+      [ExtendAnalysisGridData].[CEV2] AS [CEV2], 
+      [ExtendAnalysisGridData].[CEV3] AS [CEV3], 
+      [ExtendAnalysisGridData].[FreeC1] AS [FreeC1], 
+      [ExtendAnalysisGridData].[FreeC2] AS [FreeC2], 
+      [ExtendAnalysisGridData].[XSTi1] AS [XSTi1], 
+      [ExtendAnalysisGridData].[XSTi2] AS [XSTi2], 
+      [ExtendAnalysisGridData].[XSTi3] AS [XSTi3], 
+      [ExtendAnalysisGridData].[AlN2] AS [AlN2], 
+      [ExtendAnalysisGridData].[CuP] AS [CuP], 
+      [ExtendAnalysisGridData].[BN2] AS [BN2], 
+      [ExtendAnalysisGridData].[SP] AS [SP], 
+      [ExtendAnalysisGridData].[CUNiCrMoSn] AS [CUNiCrMoSn], 
+      [ExtendAnalysisGridData].[CrEq] AS [CrEq], 
+      [ExtendAnalysisGridData].[SiForm] AS [SiForm], 
+      [ExtendAnalysisGridData].[MnS] AS [MnS], 
+      [ExtendAnalysisGridData].[MnSi] AS [MnSi], 
+      [ExtendAnalysisGridData].[FreeC3] AS [FreeC3], 
+      [ExtendAnalysisGridData].[Fe] AS [Fe], 
+      [ExtendAnalysisGridData].[Liquidus] AS [Liquidus], 
+      [ExtendAnalysisGridData].[SubSampleNumber] AS [SubSampleNumber]
+      FROM [Report].[ExtendAnalysisGridData] AS [ExtendAnalysisGridData]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="HeatDetailsEvents" EntityType="ReportSchemaEntities.Store.HeatDetailsEvents" store:Type="Views" store:Schema="Report" store:Name="HeatDetailsEvents">
+            <DefiningQuery>SELECT 
+      [HeatDetailsEvents].[HeatNumber] AS [HeatNumber], 
+      [HeatDetailsEvents].[HNS] AS [HNS], 
+      [HeatDetailsEvents].[TimeStampStart] AS [TimeStampStart], 
+      [HeatDetailsEvents].[TimeStampEnd] AS [TimeStampEnd], 
+      [HeatDetailsEvents].[UnitShort] AS [UnitShort], 
+      [HeatDetailsEvents].[Duration] AS [Duration], 
+      [HeatDetailsEvents].[TimeCreated] AS [TimeCreated], 
+      [HeatDetailsEvents].[TrackIndex] AS [TrackIndex], 
+      [HeatDetailsEvents].[UnitNumber] AS [UnitNumber], 
+      [HeatDetailsEvents].[ProgramNumber] AS [ProgramNumber], 
+      [HeatDetailsEvents].[TempBegin] AS [TempBegin], 
+      [HeatDetailsEvents].[TempEnd] AS [TempEnd], 
+      [HeatDetailsEvents].[WeightBegin] AS [WeightBegin], 
+      [HeatDetailsEvents].[WeightEnd] AS [WeightEnd]
+      FROM [Report].[HeatDetailsEvents] AS [HeatDetailsEvents]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ReportOverview" EntityType="ReportSchemaEntities.Store.ReportOverview" store:Type="Views" store:Schema="Report" store:Name="ReportOverview">
+            <DefiningQuery>SELECT 
+      [ReportOverview].[ReportID] AS [ReportID], 
+      [ReportOverview].[HeatID] AS [HeatID], 
+      [ReportOverview].[CodeID] AS [CodeID], 
+      [ReportOverview].[CostID] AS [CostID], 
+      [ReportOverview].[Description] AS [Description], 
+      [ReportOverview].[Status] AS [Status], 
+      [ReportOverview].[CreatedDT] AS [CreatedDT], 
+      [ReportOverview].[ClosedDT] AS [ClosedDT], 
+      [ReportOverview].[DamageOccurredDT] AS [DamageOccurredDT], 
+      [ReportOverview].[DamageOccurredShift] AS [DamageOccurredShift], 
+      [ReportOverview].[ReferencedSection] AS [ReferencedSection], 
+      [ReportOverview].[DamageCost] AS [DamageCost], 
+      [ReportOverview].[IndicationReportDeleted] AS [IndicationReportDeleted], 
+      [ReportOverview].[TypeCause] AS [TypeCause], 
+      [ReportOverview].[PCName] AS [PCName], 
+      [ReportOverview].[CentralMorningMeeting] AS [CentralMorningMeeting], 
+      [ReportOverview].[CentralMorningDiscussedDT] AS [CentralMorningDiscussedDT], 
+      [ReportOverview].[HMPrepMeeting] AS [HMPrepMeeting], 
+      [ReportOverview].[HMPrepDiscussedDT] AS [HMPrepDiscussedDT], 
+      [ReportOverview].[VesselsMeeting] AS [VesselsMeeting], 
+      [ReportOverview].[VesselsDiscussedDT] AS [VesselsDiscussedDT], 
+      [ReportOverview].[SecondaryAndLadleMeeting] AS [SecondaryAndLadleMeeting], 
+      [ReportOverview].[SecAndLadleDiscussedDT] AS [SecAndLadleDiscussedDT], 
+      [ReportOverview].[CasterMeeting] AS [CasterMeeting], 
+      [ReportOverview].[CasterMeetingDiscussedDT] AS [CasterMeetingDiscussedDT], 
+      [ReportOverview].[CommentsCentralMornMeet] AS [CommentsCentralMornMeet], 
+      [ReportOverview].[TotalCost] AS [TotalCost]
+      FROM [Report].[ReportOverview] AS [ReportOverview]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TempAimsData" EntityType="ReportSchemaEntities.Store.TempAimsData" store:Type="Views" store:Schema="Report" store:Name="TempAimsData">
+            <DefiningQuery>SELECT 
+      [TempAimsData].[HeatNumber] AS [HeatNumber], 
+      [TempAimsData].[AimTempIndex] AS [AimTempIndex], 
+      [TempAimsData].[HNS] AS [HNS], 
+      [TempAimsData].[ProgramNumber] AS [ProgramNumber], 
+      [TempAimsData].[UnitText] AS [UnitText], 
+      [TempAimsData].[TemperatureType] AS [TemperatureType], 
+      [TempAimsData].[Temperature] AS [Temperature], 
+      [TempAimsData].[TempTypeText] AS [TempTypeText]
+      FROM [Report].[TempAimsData] AS [TempAimsData]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TempDipData" EntityType="ReportSchemaEntities.Store.TempDipData" store:Type="Views" store:Schema="Report" store:Name="TempDipData">
+            <DefiningQuery>SELECT 
+      [TempDipData].[UnitText] AS [UnitText], 
+      [TempDipData].[DipIndex] AS [DipIndex], 
+      [TempDipData].[HeatNumber] AS [HeatNumber], 
+      [TempDipData].[HNS] AS [HNS], 
+      [TempDipData].[UnitNumber] AS [UnitNumber], 
+      [TempDipData].[DipType] AS [DipType], 
+      [TempDipData].[TimeStamp] AS [TimeStamp], 
+      [TempDipData].[Temperature] AS [Temperature], 
+      [TempDipData].[S] AS [S], 
+      [TempDipData].[O2] AS [O2], 
+      [TempDipData].[Al] AS [Al], 
+      [TempDipData].[EMF] AS [EMF], 
+      [TempDipData].[Carbon] AS [Carbon]
+      FROM [Report].[TempDipData] AS [TempDipData]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Codes_Sections1" Association="ReportSchemaEntities.Store.FK_Codes_Sections1">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Codes" EntitySet="Codes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_MainReport1" Association="ReportSchemaEntities.Store.FK_Comments_MainReport1">
+            <End Role="MainReport" EntitySet="MainReport" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Sections1" Association="ReportSchemaEntities.Store.FK_Comments_Sections1">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cost_MainReport1" Association="ReportSchemaEntities.Store.FK_Cost_MainReport1">
+            <End Role="MainReport" EntitySet="MainReport" />
+            <End Role="Cost" EntitySet="Cost" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documents_MainReport1" Association="ReportSchemaEntities.Store.FK_Documents_MainReport1">
+            <End Role="MainReport" EntitySet="MainReport" />
+            <End Role="Documents" EntitySet="Documents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentActions_IncidentOwners" Association="ReportSchemaEntities.Store.FK_IncidentActions_IncidentOwners">
+            <End Role="IncidentOwners" EntitySet="IncidentOwners" />
+            <End Role="IncidentActions" EntitySet="IncidentActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentActions_IncidentReport" Association="ReportSchemaEntities.Store.FK_IncidentActions_IncidentReport">
+            <End Role="IncidentReport" EntitySet="IncidentReport" />
+            <End Role="IncidentActions" EntitySet="IncidentActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentActions_StatusLookUp" Association="ReportSchemaEntities.Store.FK_IncidentActions_StatusLookUp">
+            <End Role="StatusLookUp" EntitySet="StatusLookUp" />
+            <End Role="IncidentActions" EntitySet="IncidentActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentReport_AreaLookUp" Association="ReportSchemaEntities.Store.FK_IncidentReport_AreaLookUp">
+            <End Role="AreaLookUp" EntitySet="AreaLookUp" />
+            <End Role="IncidentReport" EntitySet="IncidentReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentReport_FunctionLookUp" Association="ReportSchemaEntities.Store.FK_IncidentReport_FunctionLookUp">
+            <End Role="FunctionLookUp" EntitySet="FunctionLookUp" />
+            <End Role="IncidentReport" EntitySet="IncidentReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentReport_ReportOwnerID" Association="ReportSchemaEntities.Store.FK_IncidentReport_ReportOwnerID">
+            <End Role="IncidentOwners" EntitySet="IncidentOwners" />
+            <End Role="IncidentReport" EntitySet="IncidentReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentReport_StatusLookUp" Association="ReportSchemaEntities.Store.FK_IncidentReport_StatusLookUp">
+            <End Role="StatusLookUp" EntitySet="StatusLookUp" />
+            <End Role="IncidentReport" EntitySet="IncidentReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Links_MainReport1" Association="ReportSchemaEntities.Store.FK_Links_MainReport1">
+            <End Role="MainReport" EntitySet="MainReport" />
+            <End Role="Links" EntitySet="Links" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MainReport_Codes" Association="ReportSchemaEntities.Store.FK_MainReport_Codes">
+            <End Role="Codes" EntitySet="Codes" />
+            <End Role="MainReport" EntitySet="MainReport" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MainReport_Cost" Association="ReportSchemaEntities.Store.FK_MainReport_Cost">
+            <End Role="Cost" EntitySet="Cost" />
+            <End Role="MainReport" EntitySet="MainReport" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AreaLookUp">
+          <Key>
+            <PropertyRef Name="AreaId" />
+          </Key>
+          <Property Name="AreaId" Type="int" Nullable="false" />
+          <Property Name="AreaDesc" Type="varchar" MaxLength="10" />
+          <Property Name="AreaDescFull" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Codes">
+          <Key>
+            <PropertyRef Name="CodeID" />
+          </Key>
+          <Property Name="CodeID" Type="int" Nullable="false" />
+          <Property Name="ParentID" Type="int" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="SectionID" Type="int" Nullable="false" />
+          <Property Name="SerialNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="int" Nullable="false" />
+          <Property Name="ReportID" Type="int" Nullable="false" />
+          <Property Name="SectionID" Type="int" />
+          <Property Name="CreatedDT" Type="datetime" />
+          <Property Name="LastUpdatedDT" Type="datetime" />
+          <Property Name="PCName" Type="varchar" MaxLength="20" />
+          <Property Name="Username" Type="varchar" MaxLength="40" />
+          <Property Name="FullName" Type="varchar" MaxLength="40" />
+          <Property Name="SAPID" Type="varchar" MaxLength="10" />
+          <Property Name="Department" Type="varchar" MaxLength="20" />
+          <Property Name="PhoneNumber" Type="varchar" MaxLength="15" />
+          <Property Name="CommentWhatHappened" Type="varchar" MaxLength="4000" />
+          <Property Name="CommentHowHappened" Type="varchar" MaxLength="4000" />
+          <Property Name="CommentWhatActions" Type="varchar" MaxLength="4000" />
+          <Property Name="CommentHowPrevent" Type="varchar" MaxLength="4000" />
+          <Property Name="CommentLMM" Type="varchar" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="Cost">
+          <Key>
+            <PropertyRef Name="CostID" />
+          </Key>
+          <Property Name="CostID" Type="int" Nullable="false" />
+          <Property Name="ReportID" Type="int" Nullable="false" />
+          <Property Name="PlanLengthTundish" Type="float" />
+          <Property Name="ActLengthTundish" Type="float" />
+          <Property Name="MinsCasterFailure" Type="float" />
+          <Property Name="TonTundishSkull" Type="float" />
+          <Property Name="TonSteelReturnVessel" Type="float" />
+          <Property Name="TonSteelInSlagPan" Type="float" />
+          <Property Name="ReheatingDegrees" Type="float" />
+          <Property Name="DamageAmountOthers" Type="float" />
+          <Property Name="CostPerTonTundishSkull" Type="float" />
+          <Property Name="CostPerMinFailCaster" Type="float" />
+          <Property Name="CostPerTonSteelToVessel" Type="float" />
+          <Property Name="CostPerTonSteelSlagPan" Type="float" />
+          <Property Name="CostPerDegreeReheatLadle" Type="float" />
+          <Property Name="Cost1Tundish" Type="float" />
+        </EntityType>
+        <EntityType Name="Documents">
+          <Key>
+            <PropertyRef Name="DocumentID" />
+          </Key>
+          <Property Name="DocumentID" Type="int" Nullable="false" />
+          <Property Name="ReportID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="ContentType" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="IsImage" Type="bit" Nullable="false" />
+          <Property Name="Data" Type="varbinary(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DRFActions">
+          <Key>
+            <PropertyRef Name="ActionIndex" />
+          </Key>
+          <Property Name="ActionIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DRFIndex" Type="int" />
+          <Property Name="Action" Type="varchar(max)" />
+          <Property Name="ActionOwner" Type="varchar" MaxLength="100" />
+          <Property Name="TargetDate" Type="smalldatetime" />
+          <Property Name="ActionState" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DRFDropDownLookUp">
+          <Key>
+            <PropertyRef Name="DDIndex" />
+          </Key>
+          <Property Name="DDIndex" Type="int" Nullable="false" />
+          <Property Name="DelayType" Type="varchar" MaxLength="50" />
+          <Property Name="Discipline" Type="varchar" MaxLength="50" />
+          <Property Name="Shift" Type="varchar" MaxLength="10" />
+          <Property Name="Rota" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="DRFLocationLookUp">
+          <Key>
+            <PropertyRef Name="PlantIndex" />
+          </Key>
+          <Property Name="PlantIndex" Type="int" Nullable="false" />
+          <Property Name="Works" Type="varchar" MaxLength="50" />
+          <Property Name="Location" Type="varchar" MaxLength="50" />
+          <Property Name="PlantItem" Type="varchar" MaxLength="50" />
+          <Property Name="UnitGroup" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="DRFOwners">
+          <Key>
+            <PropertyRef Name="Works" />
+            <PropertyRef Name="Owner" />
+          </Key>
+          <Property Name="Works" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Owner" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="ValidUntil" Type="datetime2" Precision="2" />
+        </EntityType>
+        <EntityType Name="DRFReports">
+          <Key>
+            <PropertyRef Name="DRFIndex" />
+          </Key>
+          <Property Name="DRFIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="smalldatetime" />
+          <Property Name="Works" Type="varchar" MaxLength="30" />
+          <Property Name="Location" Type="varchar" MaxLength="100" />
+          <Property Name="PlantItem" Type="varchar" MaxLength="100" />
+          <Property Name="StartDateTime" Type="smalldatetime" />
+          <Property Name="DelayDuration" Type="int" />
+          <Property Name="InitiatorName" Type="varchar" MaxLength="50" />
+          <Property Name="ShortDescription" Type="varchar" MaxLength="500" />
+          <Property Name="Description" Type="varchar(max)" />
+          <Property Name="ImmediateActions" Type="varchar(max)" />
+          <Property Name="RootCause" Type="varchar(max)" />
+          <Property Name="CorrectiveMeasure" Type="varchar(max)" />
+          <Property Name="ClosureDate" Type="smalldatetime" />
+          <Property Name="ClosedByName" Type="varchar" MaxLength="50" />
+          <Property Name="ReportStatus" Type="tinyint" />
+          <Property Name="OwnerName" Type="varchar" MaxLength="50" />
+          <Property Name="Discipline" Type="varchar" MaxLength="30" />
+          <Property Name="DelayType" Type="varchar" MaxLength="100" />
+          <Property Name="Year" Type="int" />
+          <Property Name="Week" Type="int" />
+          <Property Name="Day" Type="int" />
+          <Property Name="Rota" Type="varchar" MaxLength="5" />
+          <Property Name="Shift" Type="varchar" MaxLength="50" />
+          <Property Name="ReviewDate" Type="smalldatetime" />
+          <Property Name="TIBDelayIndex" Type="int" />
+          <Property Name="TIBIndex" Type="int" />
+          <Property Name="HasAttachments" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FunctionLookUp">
+          <Key>
+            <PropertyRef Name="FunctionId" />
+          </Key>
+          <Property Name="FunctionId" Type="int" Nullable="false" />
+          <Property Name="FunctionDesc" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="FunctionDescFull" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="I3s">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Created" Type="datetime" Nullable="false" />
+          <Property Name="Shift" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Title" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ShiftManager" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="CompleteIn24Hrs" Type="bit" Nullable="false" />
+          <Property Name="HigherLevelInvestigationRequired" Type="bit" Nullable="false" />
+          <Property Name="Trio" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="FeedBackBy" Type="date" />
+          <Property Name="Complete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IncidentActions">
+          <Key>
+            <PropertyRef Name="ActionId" />
+          </Key>
+          <Property Name="ActionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="IncidentId" Type="int" Nullable="false" />
+          <Property Name="ActionDesc" Type="varchar(max)" Nullable="false" />
+          <Property Name="ActionOwner" Type="int" Nullable="false" />
+          <Property Name="ActionTargetDate" Type="datetime" Nullable="false" />
+          <Property Name="ActionStatus" Type="int" Nullable="false" />
+          <Property Name="TimeStampCreated" Type="datetime" />
+          <Property Name="TimeStampClosed" Type="datetime" />
+          <Property Name="ClosedBy" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="IncidentOwners">
+          <Key>
+            <PropertyRef Name="OwnerId" />
+          </Key>
+          <Property Name="OwnerId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="OwnerDesc" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="OwnerEmail" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="IncidentReport">
+          <Key>
+            <PropertyRef Name="IncidentId" />
+          </Key>
+          <Property Name="IncidentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TimeStampCreated" Type="datetime" Nullable="false" />
+          <Property Name="TimeStampClosed" Type="datetime" />
+          <Property Name="AreaId" Type="int" Nullable="false" />
+          <Property Name="FunctionId" Type="int" Nullable="false" />
+          <Property Name="IncidentDescription" Type="varchar(max)" Nullable="false" />
+          <Property Name="IncidentStatus" Type="int" Nullable="false" />
+          <Property Name="ReportOwnerID" Type="int" />
+        </EntityType>
+        <EntityType Name="Links">
+          <Key>
+            <PropertyRef Name="LinkID" />
+          </Key>
+          <Property Name="LinkID" Type="int" Nullable="false" />
+          <Property Name="ReportID" Type="int" Nullable="false" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="URL" Type="varchar" Nullable="false" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="MainReport">
+          <Key>
+            <PropertyRef Name="ReportID" />
+          </Key>
+          <Property Name="ReportID" Type="int" Nullable="false" />
+          <Property Name="HeatID" Type="varchar" MaxLength="5" />
+          <Property Name="CodeID" Type="int" />
+          <Property Name="CostID" Type="int" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="char" MaxLength="1" />
+          <Property Name="CreatedDT" Type="datetime" />
+          <Property Name="ClosedDT" Type="datetime" />
+          <Property Name="DamageOccurredDT" Type="datetime" />
+          <Property Name="DamageOccurredShift" Type="varchar" MaxLength="5" />
+          <Property Name="ReferencedSection" Type="int" />
+          <Property Name="DamageCost" Type="decimal" Precision="19" Scale="4" />
+          <Property Name="IndicationReportDeleted" Type="bit" />
+          <Property Name="TypeCause" Type="char" MaxLength="1" />
+          <Property Name="PCName" Type="varchar" MaxLength="20" />
+          <Property Name="CentralMorningMeeting" Type="bit" />
+          <Property Name="CentralMorningDiscussedDT" Type="datetime" />
+          <Property Name="HMPrepMeeting" Type="bit" />
+          <Property Name="HMPrepDiscussedDT" Type="datetime" />
+          <Property Name="VesselsMeeting" Type="bit" />
+          <Property Name="VesselsDiscussedDT" Type="datetime" />
+          <Property Name="SecondaryAndLadleMeeting" Type="bit" />
+          <Property Name="SecAndLadleDiscussedDT" Type="datetime" />
+          <Property Name="CasterMeeting" Type="bit" />
+          <Property Name="CasterMeetingDiscussedDT" Type="nchar" MaxLength="10" />
+          <Property Name="CommentsCentralMornMeet" Type="varchar" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="MangementAgendaThreats">
+          <Key>
+            <PropertyRef Name="DmaThreatId" />
+          </Key>
+          <Property Name="DmaThreatId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ThreatLocationId" Type="int" Nullable="false" />
+          <Property Name="ThreatTimeScaleId" Type="int" Nullable="false" />
+          <Property Name="Threat" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sections">
+          <Key>
+            <PropertyRef Name="SectionID" />
+          </Key>
+          <Property Name="SectionID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="15" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="SerialNumber" Type="int" />
+        </EntityType>
+        <EntityType Name="StatusLookUp">
+          <Key>
+            <PropertyRef Name="StatusId" />
+          </Key>
+          <Property Name="StatusId" Type="int" Nullable="false" />
+          <Property Name="StatusDesc" Type="varchar" Nullable="false" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.AimsAnalysisGridData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="AimsAnalysisGridData">
+          <Key>
+            <PropertyRef Name="AimAnalysisIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="AimAnalysisIndex" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="UnitNumber" Type="int" />
+          <Property Name="Type" Type="int" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="C" Type="real" />
+          <Property Name="Si" Type="real" />
+          <Property Name="S" Type="real" />
+          <Property Name="P" Type="real" />
+          <Property Name="Ni" Type="real" />
+          <Property Name="Cu" Type="real" />
+          <Property Name="Mn" Type="real" />
+          <Property Name="Sn" Type="real" />
+          <Property Name="Cr" Type="real" />
+          <Property Name="As" Type="real" />
+          <Property Name="Mo" Type="real" />
+          <Property Name="N2" Type="real" />
+          <Property Name="AlT" Type="real" />
+          <Property Name="Ti" Type="real" />
+          <Property Name="AlS" Type="real" />
+          <Property Name="B" Type="real" />
+          <Property Name="Ca" Type="real" />
+          <Property Name="Ce" Type="real" />
+          <Property Name="Co" Type="real" />
+          <Property Name="Nb" Type="real" />
+          <Property Name="V" Type="real" />
+          <Property Name="VersionNumber" Type="int" />
+          <Property Name="TempTypeText" Type="varchar" MaxLength="3" />
+          <Property Name="UnitText" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.AimsExtendAnalysisGridData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="AimsExtendAnalysisGridData">
+          <Key>
+            <PropertyRef Name="AimAnalysisIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="AimAnalysisIndex" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="UnitNumber" Type="int" />
+          <Property Name="Type" Type="int" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="VersionNumber" Type="int" />
+          <Property Name="TempTypeText" Type="varchar" MaxLength="3" />
+          <Property Name="CEV1" Type="real" />
+          <Property Name="CEV2" Type="real" />
+          <Property Name="CEV3" Type="real" />
+          <Property Name="FreeC1" Type="real" />
+          <Property Name="FreeC2" Type="real" />
+          <Property Name="XSTi1" Type="real" />
+          <Property Name="XSTi2" Type="real" />
+          <Property Name="XSTi3" Type="real" />
+          <Property Name="AlN2" Type="real" />
+          <Property Name="CuP" Type="real" />
+          <Property Name="BN2" Type="real" />
+          <Property Name="SP" Type="real" />
+          <Property Name="CUNiCrMoSn" Type="real" />
+          <Property Name="CrEq" Type="real" />
+          <Property Name="SiForm" Type="real" />
+          <Property Name="MnS" Type="real" />
+          <Property Name="MnSi" Type="real" />
+          <Property Name="FreeC3" Type="real" />
+          <Property Name="UnitText" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.AnalysisGridData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="AnalysisGridData">
+          <Key>
+            <PropertyRef Name="AnalysisIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="SampleType" Type="varchar" MaxLength="150" />
+          <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+          <Property Name="C" Type="real" />
+          <Property Name="Si" Type="real" />
+          <Property Name="S" Type="real" />
+          <Property Name="P" Type="real" />
+          <Property Name="Mn" Type="real" />
+          <Property Name="Ni" Type="real" />
+          <Property Name="Cu" Type="real" />
+          <Property Name="Sn" Type="real" />
+          <Property Name="Cr" Type="real" />
+          <Property Name="As" Type="real" />
+          <Property Name="Mo" Type="real" />
+          <Property Name="N2" Type="real" />
+          <Property Name="AlT" Type="real" />
+          <Property Name="AlS" Type="real" />
+          <Property Name="Ti" Type="real" />
+          <Property Name="B" Type="real" />
+          <Property Name="Ca" Type="real" />
+          <Property Name="Ce" Type="real" />
+          <Property Name="Co" Type="real" />
+          <Property Name="Nb" Type="real" />
+          <Property Name="V" Type="real" />
+          <Property Name="AnalysisIndex" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="SubSampleNumber" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.ExtendAnalysisGridData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ExtendAnalysisGridData">
+          <Key>
+            <PropertyRef Name="AnalysisIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+          <Property Name="AnalysisIndex" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="SampleType" Type="varchar" MaxLength="150" />
+          <Property Name="CEV1" Type="real" />
+          <Property Name="CEV2" Type="real" />
+          <Property Name="CEV3" Type="real" />
+          <Property Name="FreeC1" Type="real" />
+          <Property Name="FreeC2" Type="real" />
+          <Property Name="XSTi1" Type="real" />
+          <Property Name="XSTi2" Type="real" />
+          <Property Name="XSTi3" Type="real" />
+          <Property Name="AlN2" Type="real" />
+          <Property Name="CuP" Type="real" />
+          <Property Name="BN2" Type="real" />
+          <Property Name="SP" Type="real" />
+          <Property Name="CUNiCrMoSn" Type="real" />
+          <Property Name="CrEq" Type="real" />
+          <Property Name="SiForm" Type="real" />
+          <Property Name="MnS" Type="real" />
+          <Property Name="MnSi" Type="real" />
+          <Property Name="FreeC3" Type="real" />
+          <Property Name="Fe" Type="real" />
+          <Property Name="Liquidus" Type="real" />
+          <Property Name="SubSampleNumber" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.HeatDetailsEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="HeatDetailsEvents">
+          <Key>
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+            <PropertyRef Name="TimeStampStart" />
+            <PropertyRef Name="TrackIndex" />
+            <PropertyRef Name="UnitNumber" />
+          </Key>
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="TimeStampStart" Type="datetime" Nullable="false" />
+          <Property Name="TimeStampEnd" Type="datetime" />
+          <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+          <Property Name="Duration" Type="int" />
+          <Property Name="TimeCreated" Type="datetime" />
+          <Property Name="TrackIndex" Type="int" Nullable="false" />
+          <Property Name="UnitNumber" Type="int" Nullable="false" />
+          <Property Name="ProgramNumber" Type="int" />
+          <Property Name="TempBegin" Type="real" />
+          <Property Name="TempEnd" Type="real" />
+          <Property Name="WeightBegin" Type="real" />
+          <Property Name="WeightEnd" Type="real" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.ReportOverview' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ReportOverview">
+          <Key>
+            <PropertyRef Name="ReportID" />
+          </Key>
+          <Property Name="ReportID" Type="int" Nullable="false" />
+          <Property Name="HeatID" Type="varchar" MaxLength="5" />
+          <Property Name="CodeID" Type="int" />
+          <Property Name="CostID" Type="int" />
+          <Property Name="Description" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="char" MaxLength="1" />
+          <Property Name="CreatedDT" Type="datetime" />
+          <Property Name="ClosedDT" Type="datetime" />
+          <Property Name="DamageOccurredDT" Type="datetime" />
+          <Property Name="DamageOccurredShift" Type="varchar" MaxLength="5" />
+          <Property Name="ReferencedSection" Type="int" />
+          <Property Name="DamageCost" Type="decimal" Precision="19" Scale="4" />
+          <Property Name="IndicationReportDeleted" Type="bit" />
+          <Property Name="TypeCause" Type="char" MaxLength="1" />
+          <Property Name="PCName" Type="varchar" MaxLength="20" />
+          <Property Name="CentralMorningMeeting" Type="bit" />
+          <Property Name="CentralMorningDiscussedDT" Type="datetime" />
+          <Property Name="HMPrepMeeting" Type="bit" />
+          <Property Name="HMPrepDiscussedDT" Type="datetime" />
+          <Property Name="VesselsMeeting" Type="bit" />
+          <Property Name="VesselsDiscussedDT" Type="datetime" />
+          <Property Name="SecondaryAndLadleMeeting" Type="bit" />
+          <Property Name="SecAndLadleDiscussedDT" Type="datetime" />
+          <Property Name="CasterMeeting" Type="bit" />
+          <Property Name="CasterMeetingDiscussedDT" Type="nchar" MaxLength="10" />
+          <Property Name="CommentsCentralMornMeet" Type="varchar" MaxLength="4000" />
+          <Property Name="TotalCost" Type="float" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.TempAimsData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TempAimsData">
+          <Key>
+            <PropertyRef Name="AimTempIndex" />
+          </Key>
+          <Property Name="HeatNumber" Type="int" />
+          <Property Name="AimTempIndex" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" />
+          <Property Name="ProgramNumber" Type="int" />
+          <Property Name="UnitText" Type="varchar" MaxLength="20" />
+          <Property Name="TemperatureType" Type="int" />
+          <Property Name="Temperature" Type="int" />
+          <Property Name="TempTypeText" Type="varchar" MaxLength="3" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.TempDipData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TempDipData">
+          <Key>
+            <PropertyRef Name="DipIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+            <PropertyRef Name="UnitNumber" />
+            <PropertyRef Name="DipType" />
+            <PropertyRef Name="TimeStamp" />
+          </Key>
+          <Property Name="UnitText" Type="varchar" MaxLength="50" />
+          <Property Name="DipIndex" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="UnitNumber" Type="int" Nullable="false" />
+          <Property Name="DipType" Type="int" Nullable="false" />
+          <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="Temperature" Type="real" />
+          <Property Name="S" Type="real" />
+          <Property Name="O2" Type="real" />
+          <Property Name="Al" Type="real" />
+          <Property Name="EMF" Type="real" />
+          <Property Name="Carbon" Type="real" />
+        </EntityType>
+        <Association Name="FK_Codes_Sections1">
+          <End Role="Sections" Type="ReportSchemaEntities.Store.Sections" Multiplicity="1" />
+          <End Role="Codes" Type="ReportSchemaEntities.Store.Codes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionID" />
+            </Principal>
+            <Dependent Role="Codes">
+              <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_MainReport1">
+          <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="1" />
+          <End Role="Comments" Type="ReportSchemaEntities.Store.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainReport">
+              <PropertyRef Name="ReportID" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="ReportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Sections1">
+          <End Role="Sections" Type="ReportSchemaEntities.Store.Sections" Multiplicity="0..1" />
+          <End Role="Comments" Type="ReportSchemaEntities.Store.Comments" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionID" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cost_MainReport1">
+          <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="1" />
+          <End Role="Cost" Type="ReportSchemaEntities.Store.Cost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainReport">
+              <PropertyRef Name="ReportID" />
+            </Principal>
+            <Dependent Role="Cost">
+              <PropertyRef Name="ReportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documents_MainReport1">
+          <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="1" />
+          <End Role="Documents" Type="ReportSchemaEntities.Store.Documents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainReport">
+              <PropertyRef Name="ReportID" />
+            </Principal>
+            <Dependent Role="Documents">
+              <PropertyRef Name="ReportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentActions_IncidentOwners">
+          <End Role="IncidentOwners" Type="ReportSchemaEntities.Store.IncidentOwners" Multiplicity="1" />
+          <End Role="IncidentActions" Type="ReportSchemaEntities.Store.IncidentActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IncidentOwners">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="IncidentActions">
+              <PropertyRef Name="ActionOwner" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentActions_IncidentReport">
+          <End Role="IncidentReport" Type="ReportSchemaEntities.Store.IncidentReport" Multiplicity="1" />
+          <End Role="IncidentActions" Type="ReportSchemaEntities.Store.IncidentActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IncidentReport">
+              <PropertyRef Name="IncidentId" />
+            </Principal>
+            <Dependent Role="IncidentActions">
+              <PropertyRef Name="IncidentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentActions_StatusLookUp">
+          <End Role="StatusLookUp" Type="ReportSchemaEntities.Store.StatusLookUp" Multiplicity="1" />
+          <End Role="IncidentActions" Type="ReportSchemaEntities.Store.IncidentActions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusLookUp">
+              <PropertyRef Name="StatusId" />
+            </Principal>
+            <Dependent Role="IncidentActions">
+              <PropertyRef Name="ActionStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentReport_AreaLookUp">
+          <End Role="AreaLookUp" Type="ReportSchemaEntities.Store.AreaLookUp" Multiplicity="1" />
+          <End Role="IncidentReport" Type="ReportSchemaEntities.Store.IncidentReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AreaLookUp">
+              <PropertyRef Name="AreaId" />
+            </Principal>
+            <Dependent Role="IncidentReport">
+              <PropertyRef Name="AreaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentReport_FunctionLookUp">
+          <End Role="FunctionLookUp" Type="ReportSchemaEntities.Store.FunctionLookUp" Multiplicity="1" />
+          <End Role="IncidentReport" Type="ReportSchemaEntities.Store.IncidentReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FunctionLookUp">
+              <PropertyRef Name="FunctionId" />
+            </Principal>
+            <Dependent Role="IncidentReport">
+              <PropertyRef Name="FunctionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentReport_ReportOwnerID">
+          <End Role="IncidentOwners" Type="ReportSchemaEntities.Store.IncidentOwners" Multiplicity="0..1" />
+          <End Role="IncidentReport" Type="ReportSchemaEntities.Store.IncidentReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IncidentOwners">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="IncidentReport">
+              <PropertyRef Name="ReportOwnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentReport_StatusLookUp">
+          <End Role="StatusLookUp" Type="ReportSchemaEntities.Store.StatusLookUp" Multiplicity="1" />
+          <End Role="IncidentReport" Type="ReportSchemaEntities.Store.IncidentReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusLookUp">
+              <PropertyRef Name="StatusId" />
+            </Principal>
+            <Dependent Role="IncidentReport">
+              <PropertyRef Name="IncidentStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Links_MainReport1">
+          <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="1" />
+          <End Role="Links" Type="ReportSchemaEntities.Store.Links" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainReport">
+              <PropertyRef Name="ReportID" />
+            </Principal>
+            <Dependent Role="Links">
+              <PropertyRef Name="ReportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MainReport_Codes">
+          <End Role="Codes" Type="ReportSchemaEntities.Store.Codes" Multiplicity="0..1" />
+          <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Codes">
+              <PropertyRef Name="CodeID" />
+            </Principal>
+            <Dependent Role="MainReport">
+              <PropertyRef Name="CodeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MainReport_Cost">
+          <End Role="Cost" Type="ReportSchemaEntities.Store.Cost" Multiplicity="0..1" />
+          <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cost">
+              <PropertyRef Name="CostID" />
+            </Principal>
+            <Dependent Role="MainReport">
+              <PropertyRef Name="CostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ReportSchema" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ReportSchemaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Codes" EntityType="ReportSchema.Code" />
+          <EntitySet Name="Comments" EntityType="ReportSchema.Comment" />
+          <EntitySet Name="Costs" EntityType="ReportSchema.Cost" />
+          <EntitySet Name="Documents" EntityType="ReportSchema.Document" />
+          <EntitySet Name="DRFActions" EntityType="ReportSchema.DRFAction" />
+          <EntitySet Name="DRFDropDownLookUps" EntityType="ReportSchema.DRFDropDownLookUp" />
+          <EntitySet Name="DRFLocationLookUps" EntityType="ReportSchema.DRFLocationLookUp" />
+          <EntitySet Name="Links" EntityType="ReportSchema.Link" />
+          <EntitySet Name="MainReports" EntityType="ReportSchema.MainReport" />
+          <EntitySet Name="Sections" EntityType="ReportSchema.Section" />
+          <EntitySet Name="AimsAnalysisGridDatas" EntityType="ReportSchema.AimsAnalysisGridData" />
+          <EntitySet Name="AimsExtendAnalysisGridDatas" EntityType="ReportSchema.AimsExtendAnalysisGridData" />
+          <EntitySet Name="AnalysisGridDatas" EntityType="ReportSchema.AnalysisGridData" />
+          <EntitySet Name="ExtendAnalysisGridDatas" EntityType="ReportSchema.ExtendAnalysisGridData" />
+          <EntitySet Name="HeatDetailsEvents" EntityType="ReportSchema.HeatDetailsEvent" />
+          <EntitySet Name="ReportOverviews" EntityType="ReportSchema.ReportOverview" />
+          <EntitySet Name="TempAimsDatas" EntityType="ReportSchema.TempAimsData" />
+          <EntitySet Name="TempDipDatas" EntityType="ReportSchema.TempDipData" />
+          <AssociationSet Name="FK_Codes_Sections1" Association="ReportSchema.FK_Codes_Sections1">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Codes" EntitySet="Codes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MainReport_Codes" Association="ReportSchema.FK_MainReport_Codes">
+            <End Role="Codes" EntitySet="Codes" />
+            <End Role="MainReport" EntitySet="MainReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_MainReport1" Association="ReportSchema.FK_Comments_MainReport1">
+            <End Role="MainReport" EntitySet="MainReports" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Comments_Sections1" Association="ReportSchema.FK_Comments_Sections1">
+            <End Role="Sections" EntitySet="Sections" />
+            <End Role="Comments" EntitySet="Comments" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cost_MainReport1" Association="ReportSchema.FK_Cost_MainReport1">
+            <End Role="MainReport" EntitySet="MainReports" />
+            <End Role="Cost" EntitySet="Costs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MainReport_Cost" Association="ReportSchema.FK_MainReport_Cost">
+            <End Role="Cost" EntitySet="Costs" />
+            <End Role="MainReport" EntitySet="MainReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Documents_MainReport1" Association="ReportSchema.FK_Documents_MainReport1">
+            <End Role="MainReport" EntitySet="MainReports" />
+            <End Role="Documents" EntitySet="Documents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Links_MainReport1" Association="ReportSchema.FK_Links_MainReport1">
+            <End Role="MainReport" EntitySet="MainReports" />
+            <End Role="Links" EntitySet="Links" />
+          </AssociationSet>
+          <EntitySet Name="I3s" EntityType="ReportSchema.I3s" />
+          <EntitySet Name="DRFReports" EntityType="ReportSchema.DRFReport" />
+          <EntitySet Name="StatusLookUps" EntityType="ReportSchema.StatusLookUp" />
+          <EntitySet Name="FunctionLookUps" EntityType="ReportSchema.FunctionLookUp" />
+          <EntitySet Name="IncidentOwners" EntityType="ReportSchema.IncidentOwner" />
+          <EntitySet Name="IncidentReports" EntityType="ReportSchema.IncidentReport" />
+          <AssociationSet Name="FK_IncidentReport_FunctionLookUp" Association="ReportSchema.FK_IncidentReport_FunctionLookUp">
+            <End Role="FunctionLookUp" EntitySet="FunctionLookUps" />
+            <End Role="IncidentReport" EntitySet="IncidentReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentReport_StatusLookUp" Association="ReportSchema.FK_IncidentReport_StatusLookUp">
+            <End Role="StatusLookUp" EntitySet="StatusLookUps" />
+            <End Role="IncidentReport" EntitySet="IncidentReports" />
+          </AssociationSet>
+          <EntitySet Name="AreaLookUps" EntityType="ReportSchema.AreaLookUp" />
+          <AssociationSet Name="FK_IncidentReport_AreaLookUp" Association="ReportSchema.FK_IncidentReport_AreaLookUp">
+            <End Role="AreaLookUp" EntitySet="AreaLookUps" />
+            <End Role="IncidentReport" EntitySet="IncidentReports" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentReport_ReportOwnerID" Association="ReportSchema.FK_IncidentReport_ReportOwnerID">
+            <End Role="IncidentOwner" EntitySet="IncidentOwners" />
+            <End Role="IncidentReport" EntitySet="IncidentReports" />
+          </AssociationSet>
+          <EntitySet Name="IncidentActions" EntityType="ReportSchema.IncidentAction" />
+          <AssociationSet Name="FK_IncidentActions_IncidentOwners" Association="ReportSchema.FK_IncidentActions_IncidentOwners">
+            <End Role="IncidentOwner" EntitySet="IncidentOwners" />
+            <End Role="IncidentAction" EntitySet="IncidentActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentActions_IncidentReport" Association="ReportSchema.FK_IncidentActions_IncidentReport">
+            <End Role="IncidentReport" EntitySet="IncidentReports" />
+            <End Role="IncidentAction" EntitySet="IncidentActions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_IncidentActions_StatusLookUp" Association="ReportSchema.FK_IncidentActions_StatusLookUp">
+            <End Role="StatusLookUp" EntitySet="StatusLookUps" />
+            <End Role="IncidentAction" EntitySet="IncidentActions" />
+          </AssociationSet>
+          <EntitySet Name="MangementAgendaThreats" EntityType="ReportSchema.MangementAgendaThreat" />
+          <EntitySet Name="DRFOwners" EntityType="ReportSchema.DRFOwner" />
+          </EntityContainer>
+        <EntityType Name="Code">
+          <Key>
+            <PropertyRef Name="CodeID" />
+          </Key>
+          <Property Name="CodeID" Type="Int32" Nullable="false" />
+          <Property Name="ParentID" Type="Int32" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="SectionID" Type="Int32" Nullable="false" />
+          <Property Name="SerialNumber" Type="Int32" />
+          <NavigationProperty Name="Section" Relationship="ReportSchema.FK_Codes_Sections1" FromRole="Codes" ToRole="Sections" />
+          <NavigationProperty Name="MainReports" Relationship="ReportSchema.FK_MainReport_Codes" FromRole="Codes" ToRole="MainReport" />
+        </EntityType>
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="CommentID" />
+          </Key>
+          <Property Name="CommentID" Type="Int32" Nullable="false" />
+          <Property Name="ReportID" Type="Int32" Nullable="false" />
+          <Property Name="SectionID" Type="Int32" />
+          <Property Name="CreatedDT" Type="DateTime" />
+          <Property Name="LastUpdatedDT" Type="DateTime" />
+          <Property Name="PCName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Username" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="FullName" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="SAPID" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Department" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="CommentWhatHappened" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+          <Property Name="CommentHowHappened" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+          <Property Name="CommentWhatActions" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+          <Property Name="CommentHowPrevent" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+          <Property Name="CommentLMM" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MainReport" Relationship="ReportSchema.FK_Comments_MainReport1" FromRole="Comments" ToRole="MainReport" />
+          <NavigationProperty Name="Section" Relationship="ReportSchema.FK_Comments_Sections1" FromRole="Comments" ToRole="Sections" />
+        </EntityType>
+        <EntityType Name="Cost">
+          <Key>
+            <PropertyRef Name="CostID" />
+          </Key>
+          <Property Name="CostID" Type="Int32" Nullable="false" />
+          <Property Name="ReportID" Type="Int32" Nullable="false" />
+          <Property Name="PlanLengthTundish" Type="Double" />
+          <Property Name="ActLengthTundish" Type="Double" />
+          <Property Name="MinsCasterFailure" Type="Double" />
+          <Property Name="TonTundishSkull" Type="Double" />
+          <Property Name="TonSteelReturnVessel" Type="Double" />
+          <Property Name="TonSteelInSlagPan" Type="Double" />
+          <Property Name="ReheatingDegrees" Type="Double" />
+          <Property Name="DamageAmountOthers" Type="Double" />
+          <Property Name="CostPerTonTundishSkull" Type="Double" />
+          <Property Name="CostPerMinFailCaster" Type="Double" />
+          <Property Name="CostPerTonSteelToVessel" Type="Double" />
+          <Property Name="CostPerTonSteelSlagPan" Type="Double" />
+          <Property Name="CostPerDegreeReheatLadle" Type="Double" />
+          <Property Name="Cost1Tundish" Type="Double" />
+          <NavigationProperty Name="MainReport" Relationship="ReportSchema.FK_Cost_MainReport1" FromRole="Cost" ToRole="MainReport" />
+          <NavigationProperty Name="MainReports" Relationship="ReportSchema.FK_MainReport_Cost" FromRole="Cost" ToRole="MainReport" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="DocumentID" />
+          </Key>
+          <Property Name="DocumentID" Type="Int32" Nullable="false" />
+          <Property Name="ReportID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ContentType" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="IsImage" Type="Boolean" Nullable="false" />
+          <Property Name="Data" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="MainReport" Relationship="ReportSchema.FK_Documents_MainReport1" FromRole="Documents" ToRole="MainReport" />
+        </EntityType>
+        <EntityType Name="DRFAction">
+          <Key>
+            <PropertyRef Name="ActionIndex" />
+          </Key>
+          <Property Name="ActionIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DRFIndex" Type="Int32" />
+          <Property Name="Action" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="ActionOwner" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TargetDate" Type="DateTime" />
+          <Property Name="ActionState" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DRFDropDownLookUp">
+          <Key>
+            <PropertyRef Name="DDIndex" />
+          </Key>
+          <Property Name="DDIndex" Type="Int32" Nullable="false" />
+          <Property Name="DelayType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Discipline" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Shift" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Rota" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DRFLocationLookUp">
+          <Key>
+            <PropertyRef Name="PlantIndex" />
+          </Key>
+          <Property Name="PlantIndex" Type="Int32" Nullable="false" />
+          <Property Name="Works" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Location" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="PlantItem" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Type="String" Name="UnitGroup" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Link">
+          <Key>
+            <PropertyRef Name="LinkID" />
+          </Key>
+          <Property Name="LinkID" Type="Int32" Nullable="false" />
+          <Property Name="ReportID" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="URL" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="MainReport" Relationship="ReportSchema.FK_Links_MainReport1" FromRole="Links" ToRole="MainReport" />
+        </EntityType>
+        <EntityType Name="MainReport">
+          <Key>
+            <PropertyRef Name="ReportID" />
+          </Key>
+          <Property Name="ReportID" Type="Int32" Nullable="false" />
+          <Property Name="HeatID" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="CodeID" Type="Int32" />
+          <Property Name="CostID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Status" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CreatedDT" Type="DateTime" />
+          <Property Name="ClosedDT" Type="DateTime" />
+          <Property Name="DamageOccurredDT" Type="DateTime" />
+          <Property Name="DamageOccurredShift" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="ReferencedSection" Type="Int32" />
+          <Property Name="DamageCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="IndicationReportDeleted" Type="Boolean" />
+          <Property Name="TypeCause" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="PCName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CentralMorningMeeting" Type="Boolean" />
+          <Property Name="CentralMorningDiscussedDT" Type="DateTime" />
+          <Property Name="HMPrepMeeting" Type="Boolean" />
+          <Property Name="HMPrepDiscussedDT" Type="DateTime" />
+          <Property Name="VesselsMeeting" Type="Boolean" />
+          <Property Name="VesselsDiscussedDT" Type="DateTime" />
+          <Property Name="SecondaryAndLadleMeeting" Type="Boolean" />
+          <Property Name="SecAndLadleDiscussedDT" Type="DateTime" />
+          <Property Name="CasterMeeting" Type="Boolean" />
+          <Property Name="CasterMeetingDiscussedDT" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="CommentsCentralMornMeet" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="Code" Relationship="ReportSchema.FK_MainReport_Codes" FromRole="MainReport" ToRole="Codes" />
+          <NavigationProperty Name="Comments" Relationship="ReportSchema.FK_Comments_MainReport1" FromRole="MainReport" ToRole="Comments" />
+          <NavigationProperty Name="Costs" Relationship="ReportSchema.FK_Cost_MainReport1" FromRole="MainReport" ToRole="Cost" />
+          <NavigationProperty Name="Cost" Relationship="ReportSchema.FK_MainReport_Cost" FromRole="MainReport" ToRole="Cost" />
+          <NavigationProperty Name="Documents" Relationship="ReportSchema.FK_Documents_MainReport1" FromRole="MainReport" ToRole="Documents" />
+          <NavigationProperty Name="Links" Relationship="ReportSchema.FK_Links_MainReport1" FromRole="MainReport" ToRole="Links" />
+        </EntityType>
+        <EntityType Name="Section">
+          <Key>
+            <PropertyRef Name="SectionID" />
+          </Key>
+          <Property Name="SectionID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="SerialNumber" Type="Int32" />
+          <NavigationProperty Name="Codes" Relationship="ReportSchema.FK_Codes_Sections1" FromRole="Sections" ToRole="Codes" />
+          <NavigationProperty Name="Comments" Relationship="ReportSchema.FK_Comments_Sections1" FromRole="Sections" ToRole="Comments" />
+        </EntityType>
+        <EntityType Name="AimsAnalysisGridData">
+          <Key>
+            <PropertyRef Name="AimAnalysisIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="AimAnalysisIndex" Type="Int32" Nullable="false" />
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="UnitNumber" Type="Int32" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="TimeStamp" Type="DateTime" />
+          <Property Name="C" Type="Single" />
+          <Property Name="Si" Type="Single" />
+          <Property Name="S" Type="Single" />
+          <Property Name="P" Type="Single" />
+          <Property Name="Ni" Type="Single" />
+          <Property Name="Cu" Type="Single" />
+          <Property Name="Mn" Type="Single" />
+          <Property Name="Sn" Type="Single" />
+          <Property Name="Cr" Type="Single" />
+          <Property Name="As" Type="Single" />
+          <Property Name="Mo" Type="Single" />
+          <Property Name="N2" Type="Single" />
+          <Property Name="AlT" Type="Single" />
+          <Property Name="Ti" Type="Single" />
+          <Property Name="AlS" Type="Single" />
+          <Property Name="B" Type="Single" />
+          <Property Name="Ca" Type="Single" />
+          <Property Name="Ce" Type="Single" />
+          <Property Name="Co" Type="Single" />
+          <Property Name="Nb" Type="Single" />
+          <Property Name="V" Type="Single" />
+          <Property Name="VersionNumber" Type="Int32" />
+          <Property Name="TempTypeText" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="UnitText" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="AimsExtendAnalysisGridData">
+          <Key>
+            <PropertyRef Name="AimAnalysisIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="AimAnalysisIndex" Type="Int32" Nullable="false" />
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="UnitNumber" Type="Int32" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="TimeStamp" Type="DateTime" />
+          <Property Name="VersionNumber" Type="Int32" />
+          <Property Name="TempTypeText" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="CEV1" Type="Single" />
+          <Property Name="CEV2" Type="Single" />
+          <Property Name="CEV3" Type="Single" />
+          <Property Name="FreeC1" Type="Single" />
+          <Property Name="FreeC2" Type="Single" />
+          <Property Name="XSTi1" Type="Single" />
+          <Property Name="XSTi2" Type="Single" />
+          <Property Name="XSTi3" Type="Single" />
+          <Property Name="AlN2" Type="Single" />
+          <Property Name="CuP" Type="Single" />
+          <Property Name="BN2" Type="Single" />
+          <Property Name="SP" Type="Single" />
+          <Property Name="CUNiCrMoSn" Type="Single" />
+          <Property Name="CrEq" Type="Single" />
+          <Property Name="SiForm" Type="Single" />
+          <Property Name="MnS" Type="Single" />
+          <Property Name="MnSi" Type="Single" />
+          <Property Name="FreeC3" Type="Single" />
+          <Property Name="UnitText" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="AnalysisGridData">
+          <Key>
+            <PropertyRef Name="AnalysisIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="TimeStamp" Type="DateTime" />
+          <Property Name="SampleType" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="UnitShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="C" Type="Single" />
+          <Property Name="Si" Type="Single" />
+          <Property Name="S" Type="Single" />
+          <Property Name="P" Type="Single" />
+          <Property Name="Mn" Type="Single" />
+          <Property Name="Ni" Type="Single" />
+          <Property Name="Cu" Type="Single" />
+          <Property Name="Sn" Type="Single" />
+          <Property Name="Cr" Type="Single" />
+          <Property Name="As" Type="Single" />
+          <Property Name="Mo" Type="Single" />
+          <Property Name="N2" Type="Single" />
+          <Property Name="AlT" Type="Single" />
+          <Property Name="AlS" Type="Single" />
+          <Property Name="Ti" Type="Single" />
+          <Property Name="B" Type="Single" />
+          <Property Name="Ca" Type="Single" />
+          <Property Name="Ce" Type="Single" />
+          <Property Name="Co" Type="Single" />
+          <Property Name="Nb" Type="Single" />
+          <Property Name="V" Type="Single" />
+          <Property Name="AnalysisIndex" Type="Int32" Nullable="false" />
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="SubSampleNumber" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ExtendAnalysisGridData">
+          <Key>
+            <PropertyRef Name="AnalysisIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="UnitShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="AnalysisIndex" Type="Int32" Nullable="false" />
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="TimeStamp" Type="DateTime" />
+          <Property Name="SampleType" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="CEV1" Type="Single" />
+          <Property Name="CEV2" Type="Single" />
+          <Property Name="CEV3" Type="Single" />
+          <Property Name="FreeC1" Type="Single" />
+          <Property Name="FreeC2" Type="Single" />
+          <Property Name="XSTi1" Type="Single" />
+          <Property Name="XSTi2" Type="Single" />
+          <Property Name="XSTi3" Type="Single" />
+          <Property Name="AlN2" Type="Single" />
+          <Property Name="CuP" Type="Single" />
+          <Property Name="BN2" Type="Single" />
+          <Property Name="SP" Type="Single" />
+          <Property Name="CUNiCrMoSn" Type="Single" />
+          <Property Name="CrEq" Type="Single" />
+          <Property Name="SiForm" Type="Single" />
+          <Property Name="MnS" Type="Single" />
+          <Property Name="MnSi" Type="Single" />
+          <Property Name="FreeC3" Type="Single" />
+          <Property Name="Fe" Type="Single" />
+          <Property Name="Liquidus" Type="Single" />
+          <Property Name="SubSampleNumber" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HeatDetailsEvent">
+          <Key>
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+            <PropertyRef Name="TimeStampStart" />
+            <PropertyRef Name="TrackIndex" />
+            <PropertyRef Name="UnitNumber" />
+          </Key>
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="TimeStampStart" Type="DateTime" Nullable="false" />
+          <Property Name="TimeStampEnd" Type="DateTime" />
+          <Property Name="UnitShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Duration" Type="Int32" />
+          <Property Name="TimeCreated" Type="DateTime" />
+          <Property Name="TrackIndex" Type="Int32" Nullable="false" />
+          <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+          <Property Name="ProgramNumber" Type="Int32" />
+          <Property Name="TempBegin" Type="Single" />
+          <Property Name="TempEnd" Type="Single" />
+          <Property Name="WeightBegin" Type="Single" />
+          <Property Name="WeightEnd" Type="Single" />
+        </EntityType>
+        <EntityType Name="ReportOverview">
+          <Key>
+            <PropertyRef Name="ReportID" />
+          </Key>
+          <Property Name="ReportID" Type="Int32" Nullable="false" />
+          <Property Name="HeatID" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="CodeID" Type="Int32" />
+          <Property Name="CostID" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Status" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="CreatedDT" Type="DateTime" />
+          <Property Name="ClosedDT" Type="DateTime" />
+          <Property Name="DamageOccurredDT" Type="DateTime" />
+          <Property Name="DamageOccurredShift" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="ReferencedSection" Type="Int32" />
+          <Property Name="DamageCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="IndicationReportDeleted" Type="Boolean" />
+          <Property Name="TypeCause" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="PCName" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CentralMorningMeeting" Type="Boolean" />
+          <Property Name="CentralMorningDiscussedDT" Type="DateTime" />
+          <Property Name="HMPrepMeeting" Type="Boolean" />
+          <Property Name="HMPrepDiscussedDT" Type="DateTime" />
+          <Property Name="VesselsMeeting" Type="Boolean" />
+          <Property Name="VesselsDiscussedDT" Type="DateTime" />
+          <Property Name="SecondaryAndLadleMeeting" Type="Boolean" />
+          <Property Name="SecAndLadleDiscussedDT" Type="DateTime" />
+          <Property Name="CasterMeeting" Type="Boolean" />
+          <Property Name="CasterMeetingDiscussedDT" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="CommentsCentralMornMeet" Type="String" MaxLength="4000" Unicode="false" FixedLength="false" />
+          <Property Name="TotalCost" Type="Double" />
+        </EntityType>
+        <EntityType Name="TempAimsData">
+          <Key>
+            <PropertyRef Name="AimTempIndex" />
+          </Key>
+          <Property Name="HeatNumber" Type="Int32" />
+          <Property Name="AimTempIndex" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" />
+          <Property Name="ProgramNumber" Type="Int32" />
+          <Property Name="UnitText" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TemperatureType" Type="Int32" />
+          <Property Name="Temperature" Type="Int32" />
+          <Property Name="TempTypeText" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TempDipData">
+          <Key>
+            <PropertyRef Name="DipIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+            <PropertyRef Name="UnitNumber" />
+            <PropertyRef Name="DipType" />
+            <PropertyRef Name="TimeStamp" />
+          </Key>
+          <Property Name="UnitText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DipIndex" Type="Int32" Nullable="false" />
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+          <Property Name="DipType" Type="Int32" Nullable="false" />
+          <Property Name="TimeStamp" Type="DateTime" Nullable="false" />
+          <Property Name="Temperature" Type="Single" />
+          <Property Name="S" Type="Single" />
+          <Property Name="O2" Type="Single" />
+          <Property Name="Al" Type="Single" />
+          <Property Name="EMF" Type="Single" />
+          <Property Name="Carbon" Type="Single" />
+        </EntityType>
+        <Association Name="FK_Codes_Sections1">
+          <End Role="Sections" Type="ReportSchema.Section" Multiplicity="1" />
+          <End Role="Codes" Type="ReportSchema.Code" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionID" />
+            </Principal>
+            <Dependent Role="Codes">
+              <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MainReport_Codes">
+          <End Role="Codes" Type="ReportSchema.Code" Multiplicity="0..1" />
+          <End Role="MainReport" Type="ReportSchema.MainReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Codes">
+              <PropertyRef Name="CodeID" />
+            </Principal>
+            <Dependent Role="MainReport">
+              <PropertyRef Name="CodeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_MainReport1">
+          <End Role="MainReport" Type="ReportSchema.MainReport" Multiplicity="1" />
+          <End Role="Comments" Type="ReportSchema.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainReport">
+              <PropertyRef Name="ReportID" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="ReportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Comments_Sections1">
+          <End Role="Sections" Type="ReportSchema.Section" Multiplicity="0..1" />
+          <End Role="Comments" Type="ReportSchema.Comment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sections">
+              <PropertyRef Name="SectionID" />
+            </Principal>
+            <Dependent Role="Comments">
+              <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cost_MainReport1">
+          <End Role="MainReport" Type="ReportSchema.MainReport" Multiplicity="1" />
+          <End Role="Cost" Type="ReportSchema.Cost" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainReport">
+              <PropertyRef Name="ReportID" />
+            </Principal>
+            <Dependent Role="Cost">
+              <PropertyRef Name="ReportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MainReport_Cost">
+          <End Role="Cost" Type="ReportSchema.Cost" Multiplicity="0..1" />
+          <End Role="MainReport" Type="ReportSchema.MainReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cost">
+              <PropertyRef Name="CostID" />
+            </Principal>
+            <Dependent Role="MainReport">
+              <PropertyRef Name="CostID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Documents_MainReport1">
+          <End Role="MainReport" Type="ReportSchema.MainReport" Multiplicity="1" />
+          <End Role="Documents" Type="ReportSchema.Document" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainReport">
+              <PropertyRef Name="ReportID" />
+            </Principal>
+            <Dependent Role="Documents">
+              <PropertyRef Name="ReportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Links_MainReport1">
+          <End Role="MainReport" Type="ReportSchema.MainReport" Multiplicity="1" />
+          <End Role="Links" Type="ReportSchema.Link" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MainReport">
+              <PropertyRef Name="ReportID" />
+            </Principal>
+            <Dependent Role="Links">
+              <PropertyRef Name="ReportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="I3s">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Created" Nullable="false" />
+          <Property Type="String" Name="Shift" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Title" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShiftManager" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="CompleteIn24Hrs" Nullable="false" />
+          <Property Type="Boolean" Name="HigherLevelInvestigationRequired" Nullable="false" />
+          <Property Type="String" Name="Trio" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="FeedBackBy" />
+          <Property Type="Boolean" Name="Complete" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DRFReport">
+          <Key>
+            <PropertyRef Name="DRFIndex" />
+          </Key>
+          <Property Type="Int32" Name="DRFIndex" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="DateCreated" />
+          <Property Type="String" Name="Works" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Location" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PlantItem" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="StartDateTime" />
+          <Property Type="Int32" Name="DelayDuration" />
+          <Property Type="String" Name="InitiatorName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ShortDescription" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ImmediateActions" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RootCause" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CorrectiveMeasure" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ClosureDate" />
+          <Property Type="String" Name="ClosedByName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Byte" Name="ReportStatus" />
+          <Property Type="String" Name="OwnerName" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Discipline" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="DelayType" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Year" />
+          <Property Type="Int32" Name="Week" />
+          <Property Type="Int32" Name="Day" />
+          <Property Type="String" Name="Rota" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Shift" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ReviewDate" />
+          <Property Type="Int32" Name="TIBDelayIndex" />
+          <Property Type="Int32" Name="TIBIndex" />
+          <Property Type="Boolean" Name="HasAttachments" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StatusLookUp">
+          <Key>
+            <PropertyRef Name="StatusId" />
+          </Key>
+          <Property Type="Int32" Name="StatusId" Nullable="false" />
+          <Property Type="String" Name="StatusDesc" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="IncidentReports" Relationship="ReportSchema.FK_IncidentReport_StatusLookUp" FromRole="StatusLookUp" ToRole="IncidentReport" />
+          <NavigationProperty Name="IncidentActions" Relationship="ReportSchema.FK_IncidentActions_StatusLookUp" FromRole="StatusLookUp" ToRole="IncidentAction" />
+          </EntityType>
+        <EntityType Name="FunctionLookUp">
+          <Key>
+            <PropertyRef Name="FunctionId" />
+          </Key>
+          <Property Type="Int32" Name="FunctionId" Nullable="false" />
+          <Property Type="String" Name="FunctionDesc" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FunctionDescFull" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="IncidentReports" Relationship="ReportSchema.FK_IncidentReport_FunctionLookUp" FromRole="FunctionLookUp" ToRole="IncidentReport" />
+        </EntityType>
+        <EntityType Name="IncidentOwner">
+          <Key>
+            <PropertyRef Name="OwnerId" />
+          </Key>
+          <Property Type="Int32" Name="OwnerId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="OwnerDesc" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="IncidentReports" Relationship="ReportSchema.FK_IncidentReport_ReportOwnerID" FromRole="IncidentOwner" ToRole="IncidentReport" />
+          <Property Type="String" Name="OwnerEmail" MaxLength="500" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="IncidentActions" Relationship="ReportSchema.FK_IncidentActions_IncidentOwners" FromRole="IncidentOwner" ToRole="IncidentAction" />
+        </EntityType>
+        <EntityType Name="IncidentReport">
+          <Key>
+            <PropertyRef Name="IncidentId" />
+          </Key>
+          <Property Type="Int32" Name="IncidentId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="TimeStampCreated" Nullable="false" />
+          <Property Type="DateTime" Name="TimeStampClosed" />
+          <Property Type="Int32" Name="AreaId" Nullable="false" />
+          <Property Type="Int32" Name="FunctionId" Nullable="false" />
+          <Property Type="String" Name="IncidentDescription" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IncidentStatus" Nullable="false" />
+          <NavigationProperty Name="FunctionLookUp" Relationship="ReportSchema.FK_IncidentReport_FunctionLookUp" FromRole="IncidentReport" ToRole="FunctionLookUp" />
+          <NavigationProperty Name="StatusLookUp" Relationship="ReportSchema.FK_IncidentReport_StatusLookUp" FromRole="IncidentReport" ToRole="StatusLookUp" />
+          <NavigationProperty Name="AreaLookUp" Relationship="ReportSchema.FK_IncidentReport_AreaLookUp" FromRole="IncidentReport" ToRole="AreaLookUp" />
+          <Property Type="Int32" Name="ReportOwnerID" />
+          <NavigationProperty Name="IncidentOwner" Relationship="ReportSchema.FK_IncidentReport_ReportOwnerID" FromRole="IncidentReport" ToRole="IncidentOwner" />
+          <NavigationProperty Name="IncidentActions" Relationship="ReportSchema.FK_IncidentActions_IncidentReport" FromRole="IncidentReport" ToRole="IncidentAction" />
+        </EntityType>
+        <Association Name="FK_IncidentReport_FunctionLookUp">
+          <End Type="ReportSchema.FunctionLookUp" Role="FunctionLookUp" Multiplicity="1" />
+          <End Type="ReportSchema.IncidentReport" Role="IncidentReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="FunctionLookUp">
+              <PropertyRef Name="FunctionId" />
+            </Principal>
+            <Dependent Role="IncidentReport">
+              <PropertyRef Name="FunctionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentReport_StatusLookUp">
+          <End Type="ReportSchema.StatusLookUp" Role="StatusLookUp" Multiplicity="1" />
+          <End Type="ReportSchema.IncidentReport" Role="IncidentReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusLookUp">
+              <PropertyRef Name="StatusId" />
+            </Principal>
+            <Dependent Role="IncidentReport">
+              <PropertyRef Name="IncidentStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="AreaLookUp">
+          <Key>
+            <PropertyRef Name="AreaId" />
+          </Key>
+          <Property Type="Int32" Name="AreaId" Nullable="false" />
+          <Property Type="String" Name="AreaDesc" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AreaDescFull" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="IncidentReports" Relationship="ReportSchema.FK_IncidentReport_AreaLookUp" FromRole="AreaLookUp" ToRole="IncidentReport" />
+        </EntityType>
+        <Association Name="FK_IncidentReport_AreaLookUp">
+          <End Type="ReportSchema.AreaLookUp" Role="AreaLookUp" Multiplicity="1" />
+          <End Type="ReportSchema.IncidentReport" Role="IncidentReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AreaLookUp">
+              <PropertyRef Name="AreaId" />
+            </Principal>
+            <Dependent Role="IncidentReport">
+              <PropertyRef Name="AreaId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentReport_ReportOwnerID">
+          <End Type="ReportSchema.IncidentOwner" Role="IncidentOwner" Multiplicity="0..1" />
+          <End Type="ReportSchema.IncidentReport" Role="IncidentReport" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IncidentOwner">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="IncidentReport">
+              <PropertyRef Name="ReportOwnerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="IncidentAction">
+          <Key>
+            <PropertyRef Name="ActionId" />
+          </Key>
+          <Property Type="Int32" Name="ActionId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="IncidentId" Nullable="false" />
+          <Property Type="String" Name="ActionDesc" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ActionOwner" Nullable="false" />
+          <Property Type="DateTime" Name="ActionTargetDate" Nullable="false" />
+          <Property Type="Int32" Name="ActionStatus" Nullable="false" />
+          <Property Type="DateTime" Name="TimeStampCreated" />
+          <Property Type="DateTime" Name="TimeStampClosed" />
+          <Property Type="String" Name="ClosedBy" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="IncidentOwner" Relationship="ReportSchema.FK_IncidentActions_IncidentOwners" FromRole="IncidentAction" ToRole="IncidentOwner" />
+          <NavigationProperty Name="IncidentReport" Relationship="ReportSchema.FK_IncidentActions_IncidentReport" FromRole="IncidentAction" ToRole="IncidentReport" />
+          <NavigationProperty Name="StatusLookUp" Relationship="ReportSchema.FK_IncidentActions_StatusLookUp" FromRole="IncidentAction" ToRole="StatusLookUp" />
+        </EntityType>
+        <Association Name="FK_IncidentActions_IncidentOwners">
+          <End Type="ReportSchema.IncidentOwner" Role="IncidentOwner" Multiplicity="1" />
+          <End Type="ReportSchema.IncidentAction" Role="IncidentAction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IncidentOwner">
+              <PropertyRef Name="OwnerId" />
+            </Principal>
+            <Dependent Role="IncidentAction">
+              <PropertyRef Name="ActionOwner" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentActions_IncidentReport">
+          <End Type="ReportSchema.IncidentReport" Role="IncidentReport" Multiplicity="1" />
+          <End Type="ReportSchema.IncidentAction" Role="IncidentAction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IncidentReport">
+              <PropertyRef Name="IncidentId" />
+            </Principal>
+            <Dependent Role="IncidentAction">
+              <PropertyRef Name="IncidentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_IncidentActions_StatusLookUp">
+          <End Type="ReportSchema.StatusLookUp" Role="StatusLookUp" Multiplicity="1" />
+          <End Type="ReportSchema.IncidentAction" Role="IncidentAction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StatusLookUp">
+              <PropertyRef Name="StatusId" />
+            </Principal>
+            <Dependent Role="IncidentAction">
+              <PropertyRef Name="ActionStatus" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="MangementAgendaThreat">
+          <Key>
+            <PropertyRef Name="DmaThreatId" />
+          </Key>
+          <Property Type="Int32" Name="DmaThreatId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ThreatLocationId" Nullable="false" />
+          <Property Type="Int32" Name="ThreatTimeScaleId" Nullable="false" />
+          <Property Type="String" Name="Threat" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DRFOwner">
+          <Key>
+            <PropertyRef Name="Works" />
+            <PropertyRef Name="Owner" />
+          </Key>
+          <Property Type="String" Name="Works" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Owner" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ValidUntil" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ReportSchemaEntitiesStoreContainer" CdmEntityContainer="ReportSchemaEntities">
+          <EntitySetMapping Name="Codes"><EntityTypeMapping TypeName="ReportSchema.Code"><MappingFragment StoreEntitySet="Codes">
+            <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+            <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+            <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Comments"><EntityTypeMapping TypeName="ReportSchema.Comment"><MappingFragment StoreEntitySet="Comments">
+            <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+            <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+            <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+            <ScalarProperty Name="CreatedDT" ColumnName="CreatedDT" />
+            <ScalarProperty Name="LastUpdatedDT" ColumnName="LastUpdatedDT" />
+            <ScalarProperty Name="PCName" ColumnName="PCName" />
+            <ScalarProperty Name="Username" ColumnName="Username" />
+            <ScalarProperty Name="FullName" ColumnName="FullName" />
+            <ScalarProperty Name="SAPID" ColumnName="SAPID" />
+            <ScalarProperty Name="Department" ColumnName="Department" />
+            <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+            <ScalarProperty Name="CommentWhatHappened" ColumnName="CommentWhatHappened" />
+            <ScalarProperty Name="CommentHowHappened" ColumnName="CommentHowHappened" />
+            <ScalarProperty Name="CommentWhatActions" ColumnName="CommentWhatActions" />
+            <ScalarProperty Name="CommentHowPrevent" ColumnName="CommentHowPrevent" />
+            <ScalarProperty Name="CommentLMM" ColumnName="CommentLMM" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Costs"><EntityTypeMapping TypeName="ReportSchema.Cost"><MappingFragment StoreEntitySet="Cost">
+            <ScalarProperty Name="CostID" ColumnName="CostID" />
+            <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+            <ScalarProperty Name="PlanLengthTundish" ColumnName="PlanLengthTundish" />
+            <ScalarProperty Name="ActLengthTundish" ColumnName="ActLengthTundish" />
+            <ScalarProperty Name="MinsCasterFailure" ColumnName="MinsCasterFailure" />
+            <ScalarProperty Name="TonTundishSkull" ColumnName="TonTundishSkull" />
+            <ScalarProperty Name="TonSteelReturnVessel" ColumnName="TonSteelReturnVessel" />
+            <ScalarProperty Name="TonSteelInSlagPan" ColumnName="TonSteelInSlagPan" />
+            <ScalarProperty Name="ReheatingDegrees" ColumnName="ReheatingDegrees" />
+            <ScalarProperty Name="DamageAmountOthers" ColumnName="DamageAmountOthers" />
+            <ScalarProperty Name="CostPerTonTundishSkull" ColumnName="CostPerTonTundishSkull" />
+            <ScalarProperty Name="CostPerMinFailCaster" ColumnName="CostPerMinFailCaster" />
+            <ScalarProperty Name="CostPerTonSteelToVessel" ColumnName="CostPerTonSteelToVessel" />
+            <ScalarProperty Name="CostPerTonSteelSlagPan" ColumnName="CostPerTonSteelSlagPan" />
+            <ScalarProperty Name="CostPerDegreeReheatLadle" ColumnName="CostPerDegreeReheatLadle" />
+            <ScalarProperty Name="Cost1Tundish" ColumnName="Cost1Tundish" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Documents"><EntityTypeMapping TypeName="ReportSchema.Document"><MappingFragment StoreEntitySet="Documents">
+            <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+            <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+            <ScalarProperty Name="IsImage" ColumnName="IsImage" />
+            <ScalarProperty Name="Data" ColumnName="Data" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DRFActions"><EntityTypeMapping TypeName="ReportSchema.DRFAction"><MappingFragment StoreEntitySet="DRFActions">
+            <ScalarProperty Name="ActionIndex" ColumnName="ActionIndex" />
+            <ScalarProperty Name="DRFIndex" ColumnName="DRFIndex" />
+            <ScalarProperty Name="Action" ColumnName="Action" />
+            <ScalarProperty Name="ActionOwner" ColumnName="ActionOwner" />
+            <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+            <ScalarProperty Name="ActionState" ColumnName="ActionState" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DRFDropDownLookUps"><EntityTypeMapping TypeName="ReportSchema.DRFDropDownLookUp"><MappingFragment StoreEntitySet="DRFDropDownLookUp">
+            <ScalarProperty Name="DDIndex" ColumnName="DDIndex" />
+            <ScalarProperty Name="DelayType" ColumnName="DelayType" />
+            <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+            <ScalarProperty Name="Shift" ColumnName="Shift" />
+            <ScalarProperty Name="Rota" ColumnName="Rota" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DRFLocationLookUps"><EntityTypeMapping TypeName="ReportSchema.DRFLocationLookUp"><MappingFragment StoreEntitySet="DRFLocationLookUp">
+            <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+                <ScalarProperty Name="PlantIndex" ColumnName="PlantIndex" />
+            <ScalarProperty Name="Works" ColumnName="Works" />
+            <ScalarProperty Name="Location" ColumnName="Location" />
+            <ScalarProperty Name="PlantItem" ColumnName="PlantItem" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Links"><EntityTypeMapping TypeName="ReportSchema.Link"><MappingFragment StoreEntitySet="Links">
+            <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+            <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="URL" ColumnName="URL" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="MainReports"><EntityTypeMapping TypeName="ReportSchema.MainReport"><MappingFragment StoreEntitySet="MainReport">
+            <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+            <ScalarProperty Name="HeatID" ColumnName="HeatID" />
+            <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+            <ScalarProperty Name="CostID" ColumnName="CostID" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="CreatedDT" ColumnName="CreatedDT" />
+            <ScalarProperty Name="ClosedDT" ColumnName="ClosedDT" />
+            <ScalarProperty Name="DamageOccurredDT" ColumnName="DamageOccurredDT" />
+            <ScalarProperty Name="DamageOccurredShift" ColumnName="DamageOccurredShift" />
+            <ScalarProperty Name="ReferencedSection" ColumnName="ReferencedSection" />
+            <ScalarProperty Name="DamageCost" ColumnName="DamageCost" />
+            <ScalarProperty Name="IndicationReportDeleted" ColumnName="IndicationReportDeleted" />
+            <ScalarProperty Name="TypeCause" ColumnName="TypeCause" />
+            <ScalarProperty Name="PCName" ColumnName="PCName" />
+            <ScalarProperty Name="CentralMorningMeeting" ColumnName="CentralMorningMeeting" />
+            <ScalarProperty Name="CentralMorningDiscussedDT" ColumnName="CentralMorningDiscussedDT" />
+            <ScalarProperty Name="HMPrepMeeting" ColumnName="HMPrepMeeting" />
+            <ScalarProperty Name="HMPrepDiscussedDT" ColumnName="HMPrepDiscussedDT" />
+            <ScalarProperty Name="VesselsMeeting" ColumnName="VesselsMeeting" />
+            <ScalarProperty Name="VesselsDiscussedDT" ColumnName="VesselsDiscussedDT" />
+            <ScalarProperty Name="SecondaryAndLadleMeeting" ColumnName="SecondaryAndLadleMeeting" />
+            <ScalarProperty Name="SecAndLadleDiscussedDT" ColumnName="SecAndLadleDiscussedDT" />
+            <ScalarProperty Name="CasterMeeting" ColumnName="CasterMeeting" />
+            <ScalarProperty Name="CasterMeetingDiscussedDT" ColumnName="CasterMeetingDiscussedDT" />
+            <ScalarProperty Name="CommentsCentralMornMeet" ColumnName="CommentsCentralMornMeet" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="Sections"><EntityTypeMapping TypeName="ReportSchema.Section"><MappingFragment StoreEntitySet="Sections">
+            <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+            <ScalarProperty Name="Name" ColumnName="Name" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AimsAnalysisGridDatas"><EntityTypeMapping TypeName="ReportSchema.AimsAnalysisGridData"><MappingFragment StoreEntitySet="AimsAnalysisGridData">
+            <ScalarProperty Name="AimAnalysisIndex" ColumnName="AimAnalysisIndex" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="Type" ColumnName="Type" />
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+            <ScalarProperty Name="C" ColumnName="C" />
+            <ScalarProperty Name="Si" ColumnName="Si" />
+            <ScalarProperty Name="S" ColumnName="S" />
+            <ScalarProperty Name="P" ColumnName="P" />
+            <ScalarProperty Name="Ni" ColumnName="Ni" />
+            <ScalarProperty Name="Cu" ColumnName="Cu" />
+            <ScalarProperty Name="Mn" ColumnName="Mn" />
+            <ScalarProperty Name="Sn" ColumnName="Sn" />
+            <ScalarProperty Name="Cr" ColumnName="Cr" />
+            <ScalarProperty Name="As" ColumnName="As" />
+            <ScalarProperty Name="Mo" ColumnName="Mo" />
+            <ScalarProperty Name="N2" ColumnName="N2" />
+            <ScalarProperty Name="AlT" ColumnName="AlT" />
+            <ScalarProperty Name="Ti" ColumnName="Ti" />
+            <ScalarProperty Name="AlS" ColumnName="AlS" />
+            <ScalarProperty Name="B" ColumnName="B" />
+            <ScalarProperty Name="Ca" ColumnName="Ca" />
+            <ScalarProperty Name="Ce" ColumnName="Ce" />
+            <ScalarProperty Name="Co" ColumnName="Co" />
+            <ScalarProperty Name="Nb" ColumnName="Nb" />
+            <ScalarProperty Name="V" ColumnName="V" />
+            <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+            <ScalarProperty Name="TempTypeText" ColumnName="TempTypeText" />
+            <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AimsExtendAnalysisGridDatas"><EntityTypeMapping TypeName="ReportSchema.AimsExtendAnalysisGridData"><MappingFragment StoreEntitySet="AimsExtendAnalysisGridData">
+            <ScalarProperty Name="AimAnalysisIndex" ColumnName="AimAnalysisIndex" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="Type" ColumnName="Type" />
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+            <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+            <ScalarProperty Name="TempTypeText" ColumnName="TempTypeText" />
+            <ScalarProperty Name="CEV1" ColumnName="CEV1" />
+            <ScalarProperty Name="CEV2" ColumnName="CEV2" />
+            <ScalarProperty Name="CEV3" ColumnName="CEV3" />
+            <ScalarProperty Name="FreeC1" ColumnName="FreeC1" />
+            <ScalarProperty Name="FreeC2" ColumnName="FreeC2" />
+            <ScalarProperty Name="XSTi1" ColumnName="XSTi1" />
+            <ScalarProperty Name="XSTi2" ColumnName="XSTi2" />
+            <ScalarProperty Name="XSTi3" ColumnName="XSTi3" />
+            <ScalarProperty Name="AlN2" ColumnName="AlN2" />
+            <ScalarProperty Name="CuP" ColumnName="CuP" />
+            <ScalarProperty Name="BN2" ColumnName="BN2" />
+            <ScalarProperty Name="SP" ColumnName="SP" />
+            <ScalarProperty Name="CUNiCrMoSn" ColumnName="CUNiCrMoSn" />
+            <ScalarProperty Name="CrEq" ColumnName="CrEq" />
+            <ScalarProperty Name="SiForm" ColumnName="SiForm" />
+            <ScalarProperty Name="MnS" ColumnName="MnS" />
+            <ScalarProperty Name="MnSi" ColumnName="MnSi" />
+            <ScalarProperty Name="FreeC3" ColumnName="FreeC3" />
+            <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="AnalysisGridDatas"><EntityTypeMapping TypeName="ReportSchema.AnalysisGridData"><MappingFragment StoreEntitySet="AnalysisGridData">
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+            <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+            <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+            <ScalarProperty Name="C" ColumnName="C" />
+            <ScalarProperty Name="Si" ColumnName="Si" />
+            <ScalarProperty Name="S" ColumnName="S" />
+            <ScalarProperty Name="P" ColumnName="P" />
+            <ScalarProperty Name="Mn" ColumnName="Mn" />
+            <ScalarProperty Name="Ni" ColumnName="Ni" />
+            <ScalarProperty Name="Cu" ColumnName="Cu" />
+            <ScalarProperty Name="Sn" ColumnName="Sn" />
+            <ScalarProperty Name="Cr" ColumnName="Cr" />
+            <ScalarProperty Name="As" ColumnName="As" />
+            <ScalarProperty Name="Mo" ColumnName="Mo" />
+            <ScalarProperty Name="N2" ColumnName="N2" />
+            <ScalarProperty Name="AlT" ColumnName="AlT" />
+            <ScalarProperty Name="AlS" ColumnName="AlS" />
+            <ScalarProperty Name="Ti" ColumnName="Ti" />
+            <ScalarProperty Name="B" ColumnName="B" />
+            <ScalarProperty Name="Ca" ColumnName="Ca" />
+            <ScalarProperty Name="Ce" ColumnName="Ce" />
+            <ScalarProperty Name="Co" ColumnName="Co" />
+            <ScalarProperty Name="Nb" ColumnName="Nb" />
+            <ScalarProperty Name="V" ColumnName="V" />
+            <ScalarProperty Name="AnalysisIndex" ColumnName="AnalysisIndex" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="SubSampleNumber" ColumnName="SubSampleNumber" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ExtendAnalysisGridDatas"><EntityTypeMapping TypeName="ReportSchema.ExtendAnalysisGridData"><MappingFragment StoreEntitySet="ExtendAnalysisGridData">
+            <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+            <ScalarProperty Name="AnalysisIndex" ColumnName="AnalysisIndex" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+            <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+            <ScalarProperty Name="CEV1" ColumnName="CEV1" />
+            <ScalarProperty Name="CEV2" ColumnName="CEV2" />
+            <ScalarProperty Name="CEV3" ColumnName="CEV3" />
+            <ScalarProperty Name="FreeC1" ColumnName="FreeC1" />
+            <ScalarProperty Name="FreeC2" ColumnName="FreeC2" />
+            <ScalarProperty Name="XSTi1" ColumnName="XSTi1" />
+            <ScalarProperty Name="XSTi2" ColumnName="XSTi2" />
+            <ScalarProperty Name="XSTi3" ColumnName="XSTi3" />
+            <ScalarProperty Name="AlN2" ColumnName="AlN2" />
+            <ScalarProperty Name="CuP" ColumnName="CuP" />
+            <ScalarProperty Name="BN2" ColumnName="BN2" />
+            <ScalarProperty Name="SP" ColumnName="SP" />
+            <ScalarProperty Name="CUNiCrMoSn" ColumnName="CUNiCrMoSn" />
+            <ScalarProperty Name="CrEq" ColumnName="CrEq" />
+            <ScalarProperty Name="SiForm" ColumnName="SiForm" />
+            <ScalarProperty Name="MnS" ColumnName="MnS" />
+            <ScalarProperty Name="MnSi" ColumnName="MnSi" />
+            <ScalarProperty Name="FreeC3" ColumnName="FreeC3" />
+            <ScalarProperty Name="Fe" ColumnName="Fe" />
+            <ScalarProperty Name="Liquidus" ColumnName="Liquidus" />
+            <ScalarProperty Name="SubSampleNumber" ColumnName="SubSampleNumber" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="HeatDetailsEvents"><EntityTypeMapping TypeName="ReportSchema.HeatDetailsEvent"><MappingFragment StoreEntitySet="HeatDetailsEvents">
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="TimeStampStart" ColumnName="TimeStampStart" />
+            <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+            <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+            <ScalarProperty Name="Duration" ColumnName="Duration" />
+            <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+            <ScalarProperty Name="TrackIndex" ColumnName="TrackIndex" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+            <ScalarProperty Name="TempBegin" ColumnName="TempBegin" />
+            <ScalarProperty Name="TempEnd" ColumnName="TempEnd" />
+            <ScalarProperty Name="WeightBegin" ColumnName="WeightBegin" />
+            <ScalarProperty Name="WeightEnd" ColumnName="WeightEnd" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ReportOverviews"><EntityTypeMapping TypeName="ReportSchema.ReportOverview"><MappingFragment StoreEntitySet="ReportOverview">
+            <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+            <ScalarProperty Name="HeatID" ColumnName="HeatID" />
+            <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+            <ScalarProperty Name="CostID" ColumnName="CostID" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="CreatedDT" ColumnName="CreatedDT" />
+            <ScalarProperty Name="ClosedDT" ColumnName="ClosedDT" />
+            <ScalarProperty Name="DamageOccurredDT" ColumnName="DamageOccurredDT" />
+            <ScalarProperty Name="DamageOccurredShift" ColumnName="DamageOccurredShift" />
+            <ScalarProperty Name="ReferencedSection" ColumnName="ReferencedSection" />
+            <ScalarProperty Name="DamageCost" ColumnName="DamageCost" />
+            <ScalarProperty Name="IndicationReportDeleted" ColumnName="IndicationReportDeleted" />
+            <ScalarProperty Name="TypeCause" ColumnName="TypeCause" />
+            <ScalarProperty Name="PCName" ColumnName="PCName" />
+            <ScalarProperty Name="CentralMorningMeeting" ColumnName="CentralMorningMeeting" />
+            <ScalarProperty Name="CentralMorningDiscussedDT" ColumnName="CentralMorningDiscussedDT" />
+            <ScalarProperty Name="HMPrepMeeting" ColumnName="HMPrepMeeting" />
+            <ScalarProperty Name="HMPrepDiscussedDT" ColumnName="HMPrepDiscussedDT" />
+            <ScalarProperty Name="VesselsMeeting" ColumnName="VesselsMeeting" />
+            <ScalarProperty Name="VesselsDiscussedDT" ColumnName="VesselsDiscussedDT" />
+            <ScalarProperty Name="SecondaryAndLadleMeeting" ColumnName="SecondaryAndLadleMeeting" />
+            <ScalarProperty Name="SecAndLadleDiscussedDT" ColumnName="SecAndLadleDiscussedDT" />
+            <ScalarProperty Name="CasterMeeting" ColumnName="CasterMeeting" />
+            <ScalarProperty Name="CasterMeetingDiscussedDT" ColumnName="CasterMeetingDiscussedDT" />
+            <ScalarProperty Name="CommentsCentralMornMeet" ColumnName="CommentsCentralMornMeet" />
+            <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TempAimsDatas"><EntityTypeMapping TypeName="ReportSchema.TempAimsData"><MappingFragment StoreEntitySet="TempAimsData">
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="AimTempIndex" ColumnName="AimTempIndex" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+            <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+            <ScalarProperty Name="TemperatureType" ColumnName="TemperatureType" />
+            <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+            <ScalarProperty Name="TempTypeText" ColumnName="TempTypeText" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TempDipDatas"><EntityTypeMapping TypeName="ReportSchema.TempDipData"><MappingFragment StoreEntitySet="TempDipData">
+            <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+            <ScalarProperty Name="DipIndex" ColumnName="DipIndex" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="DipType" ColumnName="DipType" />
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+            <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+            <ScalarProperty Name="S" ColumnName="S" />
+            <ScalarProperty Name="O2" ColumnName="O2" />
+            <ScalarProperty Name="Al" ColumnName="Al" />
+            <ScalarProperty Name="EMF" ColumnName="EMF" />
+            <ScalarProperty Name="Carbon" ColumnName="Carbon" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="I3s">
+            <EntityTypeMapping TypeName="ReportSchema.I3s">
+              <MappingFragment StoreEntitySet="I3s">
+                <ScalarProperty Name="Complete" ColumnName="Complete" />
+                <ScalarProperty Name="FeedBackBy" ColumnName="FeedBackBy" />
+                <ScalarProperty Name="Trio" ColumnName="Trio" />
+                <ScalarProperty Name="HigherLevelInvestigationRequired" ColumnName="HigherLevelInvestigationRequired" />
+                <ScalarProperty Name="CompleteIn24Hrs" ColumnName="CompleteIn24Hrs" />
+                <ScalarProperty Name="ShiftManager" ColumnName="ShiftManager" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="Created" ColumnName="Created" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DRFReports">
+            <EntityTypeMapping TypeName="ReportSchema.DRFReport">
+              <MappingFragment StoreEntitySet="DRFReports">
+                <ScalarProperty Name="HasAttachments" ColumnName="HasAttachments" />
+                <ScalarProperty Name="TIBIndex" ColumnName="TIBIndex" />
+                <ScalarProperty Name="TIBDelayIndex" ColumnName="TIBDelayIndex" />
+                <ScalarProperty Name="ReviewDate" ColumnName="ReviewDate" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="Rota" ColumnName="Rota" />
+                <ScalarProperty Name="Day" ColumnName="Day" />
+                <ScalarProperty Name="Week" ColumnName="Week" />
+                <ScalarProperty Name="Year" ColumnName="Year" />
+                <ScalarProperty Name="DelayType" ColumnName="DelayType" />
+                <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="ReportStatus" ColumnName="ReportStatus" />
+                <ScalarProperty Name="ClosedByName" ColumnName="ClosedByName" />
+                <ScalarProperty Name="ClosureDate" ColumnName="ClosureDate" />
+                <ScalarProperty Name="CorrectiveMeasure" ColumnName="CorrectiveMeasure" />
+                <ScalarProperty Name="RootCause" ColumnName="RootCause" />
+                <ScalarProperty Name="ImmediateActions" ColumnName="ImmediateActions" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+                <ScalarProperty Name="InitiatorName" ColumnName="InitiatorName" />
+                <ScalarProperty Name="DelayDuration" ColumnName="DelayDuration" />
+                <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+                <ScalarProperty Name="PlantItem" ColumnName="PlantItem" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Works" ColumnName="Works" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="DRFIndex" ColumnName="DRFIndex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StatusLookUps">
+            <EntityTypeMapping TypeName="ReportSchema.StatusLookUp">
+              <MappingFragment StoreEntitySet="StatusLookUp">
+                <ScalarProperty Name="StatusDesc" ColumnName="StatusDesc" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FunctionLookUps">
+            <EntityTypeMapping TypeName="ReportSchema.FunctionLookUp">
+              <MappingFragment StoreEntitySet="FunctionLookUp">
+                <ScalarProperty Name="FunctionDescFull" ColumnName="FunctionDescFull" />
+                <ScalarProperty Name="FunctionDesc" ColumnName="FunctionDesc" />
+                <ScalarProperty Name="FunctionId" ColumnName="FunctionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IncidentOwners">
+            <EntityTypeMapping TypeName="ReportSchema.IncidentOwner">
+              <MappingFragment StoreEntitySet="IncidentOwners">
+                <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+                <ScalarProperty Name="OwnerDesc" ColumnName="OwnerDesc" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IncidentReports">
+            <EntityTypeMapping TypeName="ReportSchema.IncidentReport">
+              <MappingFragment StoreEntitySet="IncidentReport">
+                <ScalarProperty Name="ReportOwnerID" ColumnName="ReportOwnerID" />
+                <ScalarProperty Name="IncidentStatus" ColumnName="IncidentStatus" />
+                <ScalarProperty Name="IncidentDescription" ColumnName="IncidentDescription" />
+                <ScalarProperty Name="FunctionId" ColumnName="FunctionId" />
+                <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+                <ScalarProperty Name="TimeStampClosed" ColumnName="TimeStampClosed" />
+                <ScalarProperty Name="TimeStampCreated" ColumnName="TimeStampCreated" />
+                <ScalarProperty Name="IncidentId" ColumnName="IncidentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AreaLookUps">
+            <EntityTypeMapping TypeName="ReportSchema.AreaLookUp">
+              <MappingFragment StoreEntitySet="AreaLookUp">
+                <ScalarProperty Name="AreaDescFull" ColumnName="AreaDescFull" />
+                <ScalarProperty Name="AreaDesc" ColumnName="AreaDesc" />
+                <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IncidentActions">
+            <EntityTypeMapping TypeName="ReportSchema.IncidentAction">
+              <MappingFragment StoreEntitySet="IncidentActions">
+                <ScalarProperty Name="ClosedBy" ColumnName="ClosedBy" />
+                <ScalarProperty Name="TimeStampClosed" ColumnName="TimeStampClosed" />
+                <ScalarProperty Name="TimeStampCreated" ColumnName="TimeStampCreated" />
+                <ScalarProperty Name="ActionStatus" ColumnName="ActionStatus" />
+                <ScalarProperty Name="ActionTargetDate" ColumnName="ActionTargetDate" />
+                <ScalarProperty Name="ActionOwner" ColumnName="ActionOwner" />
+                <ScalarProperty Name="ActionDesc" ColumnName="ActionDesc" />
+                <ScalarProperty Name="IncidentId" ColumnName="IncidentId" />
+                <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MangementAgendaThreats">
+            <EntityTypeMapping TypeName="ReportSchema.MangementAgendaThreat">
+              <MappingFragment StoreEntitySet="MangementAgendaThreats">
+                <ScalarProperty Name="Threat" ColumnName="Threat" />
+                <ScalarProperty Name="ThreatTimeScaleId" ColumnName="ThreatTimeScaleId" />
+                <ScalarProperty Name="ThreatLocationId" ColumnName="ThreatLocationId" />
+                <ScalarProperty Name="DmaThreatId" ColumnName="DmaThreatId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DRFOwners">
+            <EntityTypeMapping TypeName="ReportSchema.DRFOwner">
+              <MappingFragment StoreEntitySet="DRFOwners">
+                <ScalarProperty Name="ValidUntil" ColumnName="ValidUntil" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="Works" ColumnName="Works" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ElvisReportSchema">
+        <EntityTypeShape EntityType="ReportSchema.Code" Width="1.5" PointX="3" PointY="7.375" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.Comment" Width="1.5" PointX="7.5" PointY="3.5" Height="3.8931689453124996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.Cost" Width="1.5" PointX="7.5" PointY="8.5" Height="3.8931689453124996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.Document" Width="1.5" PointX="7.5" PointY="13.125" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.DRFAction" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9210009765624996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.DRFDropDownLookUp" Width="1.5" PointX="2.75" PointY="0.75" Height="1.7566536458333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.DRFLocationLookUp" Width="1.5" PointX="0.75" PointY="3.75" Height="1.5923063151041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.Link" Width="1.5" PointX="7.5" PointY="16" Height="1.7566536458333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.MainReport" Width="1.5" PointX="5.25" PointY="5.375" Height="6.1940315755208317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.Section" Width="1.5" PointX="0.75" PointY="7.5" Height="1.9210009765625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.AimsAnalysisGridData" Width="1.5" PointX="9.75" PointY="7.75" Height="5.8653369140625031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.AimsExtendAnalysisGridData" Width="2.5" PointX="0.75" PointY="10.75" Height="5.3722949218750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.AnalysisGridData" Width="1.5" PointX="11.75" PointY="0.75" Height="5.5366422526041674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.ExtendAnalysisGridData" Width="1.5" PointX="11.75" PointY="7.75" Height="5.3722949218750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.HeatDetailsEvent" Width="1.5" PointX="2.75" PointY="12.75" Height="3.2357796223958388" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.ReportOverview" Width="1.5" PointX="4.75" PointY="12.75" Height="5.3722949218750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.TempAimsData" Width="1.5" PointX="13.75" PointY="0.75" Height="2.2496956380208388" IsExpanded="true" />
+        <EntityTypeShape EntityType="ReportSchema.TempDipData" Width="1.5" PointX="13.75" PointY="3.75" Height="3.0714322916666674" IsExpanded="true" />
+        <AssociationConnector Association="ReportSchema.FK_Codes_Sections1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="8.4605004882812516" />
+          <ConnectorPoint PointX="3" PointY="8.4605004882812516" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_MainReport_Codes" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="8.4176741536458337" />
+          <ConnectorPoint PointX="5.25" PointY="8.4176741536458337" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_Comments_MainReport1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="6.38408447265625" />
+          <ConnectorPoint PointX="7.5" PointY="6.38408447265625" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_Comments_Sections1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="7.5" />
+          <ConnectorPoint PointX="2.625" PointY="7.125" />
+          <ConnectorPoint PointX="2.625" PointY="3.125" />
+          <ConnectorPoint PointX="7.125" PointY="3.125" />
+          <ConnectorPoint PointX="7.5" PointY="3.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_Cost_MainReport1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="10.034515787760416" />
+          <ConnectorPoint PointX="7.5" PointY="10.034515787760416" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_MainReport_Cost" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.5" PointY="9.2047578938802079" />
+          <ConnectorPoint PointX="6.75" PointY="9.2047578938802079" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_Documents_MainReport1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="11.51249211398237" />
+          <ConnectorPoint PointX="7.28125" PointY="12.04374211398237" />
+          <ConnectorPoint PointX="7.28125" PointY="14.167674153645834" />
+          <ConnectorPoint PointX="7.5" PointY="14.167674153645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_Links_MainReport1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.72576923076923" PointY="11.569031575520832" />
+          <ConnectorPoint PointX="7.125" PointY="11.9682623447516" />
+          <ConnectorPoint PointX="7.125" PointY="16.878326822916666" />
+          <ConnectorPoint PointX="7.5" PointY="16.878326822916666" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ReportSchema.I3s" Width="1.5" PointX="14.375" PointY="7.75" Height="2.5783902994791674" />
+        <EntityTypeShape EntityType="ReportSchema.DRFReport" Width="1.5" PointX="10.375" PointY="14.75" Height="5.5366422526041674" />
+        <EntityTypeShape EntityType="ReportSchema.StatusLookUp" Width="1.5" PointX="18" PointY="10.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="ReportSchema.FunctionLookUp" Width="1.5" PointX="22.125" PointY="13.75" Height="1.9802864583333388" />
+        <EntityTypeShape EntityType="ReportSchema.IncidentOwner" Width="1.5" PointX="20" PointY="14.625" Height="1.7566536458333353" />
+        <EntityTypeShape EntityType="ReportSchema.IncidentReport" Width="1.5" PointX="20" PointY="11.25" Height="2.9417936197916674" />
+        <AssociationConnector Association="ReportSchema.FK_IncidentReport_FunctionLookUp" >
+          <ConnectorPoint PointX="22.125" PointY="14.035716145833334" />
+          <ConnectorPoint PointX="21.958333333333332" PointY="14.035716145833334" />
+          <ConnectorPoint PointX="21.791666666666668" PointY="14.035716145833334" />
+          <ConnectorPoint PointX="21.5" PointY="14.035716145833334" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_IncidentReport_StatusLookUp" >
+          <ConnectorPoint PointX="19.5" PointY="11.796153157552084" />
+          <ConnectorPoint PointX="20" PointY="11.796153157552084" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ReportSchema.AreaLookUp" Width="1.5" PointX="23.375" PointY="16.375" Height="1.9802864583333388" />
+        <AssociationConnector Association="ReportSchema.FK_IncidentReport_AreaLookUp" >
+          <ConnectorPoint PointX="24.34375" PointY="16.375" />
+          <ConnectorPoint PointX="24.34375" PointY="13.391042480468755" />
+          <ConnectorPoint PointX="23.083333333333332" PointY="13.391042480468755" />
+          <ConnectorPoint PointX="22.916666666666668" PointY="13.391042480468755" />
+          <ConnectorPoint PointX="21.5" PointY="13.391042480468755" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_IncidentReport_ReportOwnerID" >
+          <ConnectorPoint PointX="20.75" PointY="14.625" />
+          <ConnectorPoint PointX="20.75" PointY="14.321432291666667" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ReportSchema.IncidentAction" Width="1.5" PointX="22.25" PointY="10.125" Height="2.9070849609375102" />
+        <AssociationConnector Association="ReportSchema.FK_IncidentActions_IncidentOwners" >
+          <ConnectorPoint PointX="21.5" PointY="15.503326822916666" />
+          <ConnectorPoint PointX="21.875" PointY="15.503326822916666" />
+          <ConnectorPoint PointX="21.875" PointY="13.625" />
+          <ConnectorPoint PointX="23" PointY="13.625" />
+          <ConnectorPoint PointX="23" PointY="13.03208496093751" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_IncidentActions_IncidentReport" >
+          <ConnectorPoint PointX="21.5" PointY="12.141042480468755" />
+          <ConnectorPoint PointX="22.25" PointY="12.141042480468755" />
+        </AssociationConnector>
+        <AssociationConnector Association="ReportSchema.FK_IncidentActions_StatusLookUp" >
+          <ConnectorPoint PointX="19.5" PointY="10.96875" />
+          <ConnectorPoint PointX="22.25" PointY="10.96875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="ReportSchema.MangementAgendaThreat" Width="2.5" PointX="7.375" PointY="0.75" Height="1.7879850260416674" />
+        <EntityTypeShape EntityType="ReportSchema.DRFOwner" Width="1.5" PointX="4.75" PointY="0.75" Height="1.7879850260416674" />
+        </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

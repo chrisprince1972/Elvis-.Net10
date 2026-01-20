@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net48;net10.0</TargetFrameworks>
+    <AssemblyName>ElvisDataModel</AssemblyName>
+    <RootNamespace>ElvisDataModel</RootNamespace>
+
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+
+    <!-- Because you have Properties\AssemblyInfo.cs -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <!-- App.config should still be included for net48.
+       For net10, you can keep it in the project; runtime behavior depends on how you load config. -->
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+
+  <!-- NuGet packages (move away from HintPath packages\...) -->
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+    <PackageReference Include="NLog" Version="5.2.0" />
+  </ItemGroup>
+
+  <!-- If you truly need NLog.Extended, add it back (but many projects don’t anymore).
+       Try without first; if you get missing type errors, we’ll add the specific package. -->
+
+  <!-- If you use ConfigurationManager in this project -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>

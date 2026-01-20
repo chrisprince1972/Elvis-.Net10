@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ElvisDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ElvisDBModelStoreContainer" />
+        <Function Name="GetCasterTotalsByShiftForDay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+          <Parameter Name="shiftStartDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GetCasterTotalsByShiftForWeek" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+          <Parameter Name="productionDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GetDailyActualCasterHeats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+          <Parameter Name="scheduleDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GetDailyActualCasterHeats7AM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+          <Parameter Name="scheduleDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GetDailyPlannedCasterHeats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+          <Parameter Name="scheduleDate" Type="datetime" Mode="In" />
+          <Parameter Name="startHour" Type="int" Mode="In" />
+          <Parameter Name="planHour" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetDayShiftPlan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+          <Parameter Name="productionDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GetDayShiftPlanByCaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+          <Parameter Name="productionDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GetNightShiftPlan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+          <Parameter Name="productionDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GetNightShiftPlanByCaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+          <Parameter Name="productionDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GetHNS" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Config" />
+        <Function Name="GetParameter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Config">
+          <Parameter Name="i" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetRota" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Config">
+          <Parameter Name="t" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="SetParameter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Config">
+          <Parameter Name="i" Type="int" Mode="In" />
+          <Parameter Name="v" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="TodayDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Config" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ElvisDBModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ElvisDBEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="GetDailyActualCasterHeats" ReturnType="Collection(ElvisDBModel.CastersProductionItem)">
+          <Parameter Name="scheduleDate" Type="DateTime" Mode="In" />
+          </FunctionImport>
+          <FunctionImport Name="GetDailyPlannedCasterHeats" ReturnType="Collection(ElvisDBModel.CastersScheduleItem)">
+            <Parameter Name="scheduleDate" Mode="In" Type="DateTime" />
+            <Parameter Name="startHour" Mode="In" Type="Int32" />
+            <Parameter Name="planHour" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetCasterTotalsByShiftForDay" ReturnType="Collection(ElvisDBModel.CasterTotalsByShiftForDay)">
+          <Parameter Name="shiftStartDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetCasterTotalsByShiftForWeek" ReturnType="Collection(ElvisDBModel.CasterTotalsByShiftForWeek)">
+          <Parameter Name="productionDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetDayShiftPlanByCaster" ReturnType="Collection(ElvisDBModel.CasterTotalsByShiftForDay)">
+          <Parameter Name="productionDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetNightShiftPlanByCaster" ReturnType="Collection(ElvisDBModel.CasterTotalsByShiftForDay)">
+          <Parameter Name="productionDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetDayShiftPlan" ReturnType="Collection(ElvisDBModel.ShiftStartHeatPlanItem)">
+          <Parameter Name="productionDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetNightShiftPlan" ReturnType="Collection(ElvisDBModel.ShiftStartHeatPlanItem)">
+          <Parameter Name="productionDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetTodayDate" ReturnType="Collection(ElvisDBModel.TodayDate)" />
+          <FunctionImport Name="GetParameter" ReturnType="Collection(String)">
+          <Parameter Name="i" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="SetParameter">
+            <Parameter Name="i" Mode="In" Type="Int32" />
+            <Parameter Name="v" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetDailyActualCasterHeats7AM" ReturnType="Collection(ElvisDBModel.CastersProductionItem)">
+            <Parameter Name="scheduleDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="CastersProductionItem">
+          <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+          <Property Type="Int32" Name="ProgramNumber" Nullable="true" />
+          <Property Type="Int32" Name="Grade1" Nullable="true" />
+          <Property Type="String" Name="ActualCaster" Nullable="true" MaxLength="3" />
+          <Property Type="Int32" Name="CasterNumber" Nullable="true" />
+          <Property Type="Int32" Name="UnitNumber" Nullable="false" />
+          <Property Type="DateTime" Name="ActualStartDate" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="ActualEndDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="HNS" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="CastersScheduleItem">
+          <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+          <Property Type="Int16" Name="ProgramNumber" Nullable="true" />
+          <Property Type="Int16" Name="Grade1" Nullable="true" />
+          <Property Type="String" Name="PlannedCaster" Nullable="true" MaxLength="3" />
+          <Property Type="Int16" Name="CasterNumber" Nullable="true" />
+          <Property Type="Int32" Name="UnitNumber" Nullable="true" />
+          <Property Type="DateTime" Name="PlannedStartDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="PlannedEndDate" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="PlannedChargeTime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="HNS" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="CasterTotalsByShiftForDay">
+          <Property Type="String" Name="Shift" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="CC1" Nullable="true" />
+          <Property Type="Int32" Name="CC2" Nullable="true" />
+          <Property Type="Int32" Name="CC3" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="CasterTotalsByShiftForWeek">
+          <Property Type="Byte" Name="TataDay" Nullable="false" />
+          <Property Type="String" Name="Shift" Nullable="true" MaxLength="10" />
+          <Property Type="Int32" Name="CC1" Nullable="true" />
+          <Property Type="Int32" Name="CC2" Nullable="true" />
+          <Property Type="Int32" Name="CC3" Nullable="true" />
+          <Property Type="DateTime" Name="ShiftDate" Nullable="false" Precision="16" />
+        </ComplexType>
+        <ComplexType Name="ShiftStartHeatPlanItem">
+          <Property Type="String" Name="Shift" Nullable="false" MaxLength="3" />
+          <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+          <Property Type="Int32" Name="HeatNumberSet" Nullable="false" />
+          <Property Type="Int16" Name="ProgramNumber" Nullable="true" />
+          <Property Type="Int16" Name="Grade" Nullable="true" />
+          <Property Type="Int16" Name="VesselNumber" Nullable="true" />
+          <Property Type="Int16" Name="CasterNumber" Nullable="true" />
+          <Property Type="DateTime" Name="PlannedEndCastTime" Nullable="true" Precision="23" />
+          <Property Type="DateTime" Name="PlannedStartCastTime" Nullable="true" Precision="23" />
+          <Property Type="Int16" Name="CombinedWidth" Nullable="true" />
+          <Property Type="Int16" Name="Duration" Nullable="true" />
+          <Property Type="DateTime" Name="UpdateTime" Nullable="true" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="TodayDate">
+          <Property Type="Int16" Name="CurrentYear" Nullable="false" />
+          <Property Type="Byte" Name="CurrentWeek" Nullable="false" />
+          <Property Type="Byte" Name="CurrentDay" Nullable="false" />
+          <Property Type="String" Name="CurrentRota" Nullable="false" MaxLength="5" />
+          <Property Type="DateTime" Name="StartDay" Nullable="true" Precision="16" />
+          <Property Type="DateTime" Name="StartShift" Nullable="true" Precision="16" />
+          <Property Type="String" Name="CurrentShift" Nullable="false" MaxLength="3" />
+          <Property Type="Int32" Name="CurrentShiftNumber" Nullable="false" />
+        </ComplexType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ElvisDBModelStoreContainer" CdmEntityContainer="ElvisDBEntities">
+          <FunctionImportMapping FunctionImportName="GetDailyActualCasterHeats" FunctionName="ElvisDBModel.Store.GetDailyActualCasterHeats">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ElvisDBModel.CastersProductionItem">
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+                <ScalarProperty Name="Grade1" ColumnName="Grade1" />
+                <ScalarProperty Name="ActualCaster" ColumnName="ActualCaster" />
+                <ScalarProperty Name="CasterNumber" ColumnName="CasterNumber" />
+                <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+                <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+                <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetDailyPlannedCasterHeats" FunctionName="ElvisDBModel.Store.GetDailyPlannedCasterHeats">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ElvisDBModel.CastersScheduleItem">
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+                <ScalarProperty Name="Grade1" ColumnName="Grade1" />
+                <ScalarProperty Name="PlannedCaster" ColumnName="PlannedCaster" />
+                <ScalarProperty Name="CasterNumber" ColumnName="CasterNumber" />
+                <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+                <ScalarProperty Name="PlannedStartDate" ColumnName="PlannedStartDate" />
+                <ScalarProperty Name="PlannedEndDate" ColumnName="PlannedEndDate" />
+                <ScalarProperty Name="PlannedChargeTime" ColumnName="PlannedChargeTime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetCasterTotalsByShiftForDay" FunctionName="ElvisDBModel.Store.GetCasterTotalsByShiftForDay">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ElvisDBModel.CasterTotalsByShiftForDay">
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="CC1" ColumnName="CC1" />
+                <ScalarProperty Name="CC2" ColumnName="CC2" />
+                <ScalarProperty Name="CC3" ColumnName="CC3" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetCasterTotalsByShiftForWeek" FunctionName="ElvisDBModel.Store.GetCasterTotalsByShiftForWeek">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ElvisDBModel.CasterTotalsByShiftForWeek">
+                <ScalarProperty Name="TataDay" ColumnName="TataDay" />
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="CC1" ColumnName="CC1" />
+                <ScalarProperty Name="CC2" ColumnName="CC2" />
+                <ScalarProperty Name="CC3" ColumnName="CC3" />
+                <ScalarProperty Name="ShiftDate" ColumnName="ShiftDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetDayShiftPlanByCaster" FunctionName="ElvisDBModel.Store.GetDayShiftPlanByCaster">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ElvisDBModel.CasterTotalsByShiftForDay">
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="CC1" ColumnName="CC1" />
+                <ScalarProperty Name="CC2" ColumnName="CC2" />
+                <ScalarProperty Name="CC3" ColumnName="CC3" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNightShiftPlanByCaster" FunctionName="ElvisDBModel.Store.GetNightShiftPlanByCaster">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ElvisDBModel.CasterTotalsByShiftForDay">
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="CC1" ColumnName="CC1" />
+                <ScalarProperty Name="CC2" ColumnName="CC2" />
+                <ScalarProperty Name="CC3" ColumnName="CC3" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetDayShiftPlan" FunctionName="ElvisDBModel.Store.GetDayShiftPlan">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ElvisDBModel.ShiftStartHeatPlanItem">
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="HeatNumberSet" ColumnName="HeatNumberSet" />
+                <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="VesselNumber" ColumnName="VesselNumber" />
+                <ScalarProperty Name="CasterNumber" ColumnName="CasterNumber" />
+                <ScalarProperty Name="PlannedEndCastTime" ColumnName="PlannedEndCastTime" />
+                <ScalarProperty Name="PlannedStartCastTime" ColumnName="PlannedStartCastTime" />
+                <ScalarProperty Name="CombinedWidth" ColumnName="CombinedWidth" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNightShiftPlan" FunctionName="ElvisDBModel.Store.GetNightShiftPlan">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ElvisDBModel.ShiftStartHeatPlanItem">
+                <ScalarProperty Name="Shift" ColumnName="Shift" />
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="HeatNumberSet" ColumnName="HeatNumberSet" />
+                <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+                <ScalarProperty Name="Grade" ColumnName="Grade" />
+                <ScalarProperty Name="VesselNumber" ColumnName="VesselNumber" />
+                <ScalarProperty Name="CasterNumber" ColumnName="CasterNumber" />
+                <ScalarProperty Name="PlannedEndCastTime" ColumnName="PlannedEndCastTime" />
+                <ScalarProperty Name="PlannedStartCastTime" ColumnName="PlannedStartCastTime" />
+                <ScalarProperty Name="CombinedWidth" ColumnName="CombinedWidth" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+                <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetTodayDate" FunctionName="ElvisDBModel.Store.TodayDate">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ElvisDBModel.TodayDate">
+                <ScalarProperty Name="CurrentYear" ColumnName="CurrentYear" />
+                <ScalarProperty Name="CurrentWeek" ColumnName="CurrentWeek" />
+                <ScalarProperty Name="CurrentDay" ColumnName="CurrentDay" />
+                <ScalarProperty Name="CurrentRota" ColumnName="CurrentRota" />
+                <ScalarProperty Name="StartDay" ColumnName="StartDay" />
+                <ScalarProperty Name="StartShift" ColumnName="StartShift" />
+                <ScalarProperty Name="CurrentShift" ColumnName="CurrentShift" />
+                <ScalarProperty Name="CurrentShiftNumber" ColumnName="CurrentShiftNumber" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetParameter" FunctionName="ElvisDBModel.Store.GetParameter" />
+          <FunctionImportMapping FunctionImportName="SetParameter" FunctionName="ElvisDBModel.Store.SetParameter" />
+          <FunctionImportMapping FunctionImportName="GetDailyActualCasterHeats7AM" FunctionName="ElvisDBModel.Store.GetDailyActualCasterHeats7AM">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ElvisDBModel.CastersProductionItem">
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+                <ScalarProperty Name="Grade1" ColumnName="Grade1" />
+                <ScalarProperty Name="ActualCaster" ColumnName="ActualCaster" />
+                <ScalarProperty Name="CasterNumber" ColumnName="CasterNumber" />
+                <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+                <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+                <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+                <ScalarProperty Name="HNS" ColumnName="HNS" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ElvisModel" ZoomLevel="67">
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

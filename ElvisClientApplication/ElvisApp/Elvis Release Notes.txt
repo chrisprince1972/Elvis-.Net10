@@ -1,0 +1,733 @@
+---------------------------------------------------------------------------------------------------------
+Steel & Slab Heat Information System - Port Talbot, UK - Elvis
+---------------------------------------------------------------------------------------------------------
+
+Release Notes - 
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 04/08/2014 -- v2.1.0.20 - 
+
+	New Features -- 
+
+		1. DRF Section
+		2. Delays To Enter Report
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 21/08/2014 -- v2.1.0.21 - 
+
+	New Features -- 
+
+		1. Miscast Data on Overview
+		2. Miscast on/off checkbox on Overview
+		3. Forward planning slow casts now shown on all views 
+			(red blocks on the planning areas)
+		4. Steel Ladle Overview screen
+		5. BOS Plant schedule added in table form under Coordination --> Schedule
+		6. Added user option to customise miscast text
+		7. Admin page for security (only admins will see this change)
+		8. Parameter config page (only certain users have access to this)
+		9. Replaced drop down lists on Delay Entry with text boxes
+		10. Added Ideal Cast duration to Planned Heat Details page
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 26/08/2014 -- v2.1.0.22 - 
+
+	Bug Fixes -- 
+
+		1. Fixed miscast data error for non Port Talbot users
+		2. Fixed predicted casting rate line on HM Buffer and Caster Review charts
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 16/09/2014 -- v3.0.0.0 - 
+
+	New Features -- 
+
+		1. Miscast Reports added to heat details.
+		2. Miscast reports form Reports --> Miscasts (read only).
+		3. Added Release Notes.
+		4. Added OEE Level 2 Report.
+		5. Added Hydris dips, slag depth and freeboard readings to heat log from PSSV2 
+			manual entries.
+		6. Added reheat manual entries from PSSSV2 Secondary Steel Treatments web page.
+		7. Added Sulphox dip results to the Heat Details analysis.
+		8. Heat details defaults to miscast tab if miscast exists.
+
+	Bug Fixes -- 
+
+		1. Fixed zero degrees dip temperatures introduced by hydris dips on Heat Details 
+			Temperature tab.
+		2. Fixed missing date bug on Temperature Graphs.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 18/09/2014 -- v3.0.0.1 - 
+
+	New Features -- 
+
+		1. Hot Metal Buffer screen now has navigation.
+		2. Added customised error box for handling unknown errors. Users can now enter text 
+			to help with debugging.
+		3. Changed majority of forms back to normal non-dialog boxes (they can now lose focus).
+		4. Changed Miscast Report read-only text box background colour.
+		5. Miscast Overview now contains Tap Time info and filters on this value.
+		6. New menu item added - 'Daily Review'.
+		7. Date picker on main screens now changes with the scheduler's date.
+		8. Changed the 10pm plan to 7pm on the Caster Review.
+		9. Added treatment times to the TIB Delay screen.
+		10. Heat details only defaults to miscast if clicked from caster event.
+
+	Bug Fixes -- 
+
+		1. Temperature dips now ignore null values.
+		2. Fixed predicted casting rate bug.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 18/09/2014 -- v3.0.0.2 - 
+
+	New Features -- 
+
+		1. Modified UI colours, textboxes, backgrounds.
+		2. Increased font size on Miscasts.
+		3. Added loading screen for filters as they were taking some time (Miscast Overview).
+		4. DRF default filter now changed to Daily (same as Miscast default).
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 18/09/2014 -- v3.0.0.3 - 
+
+	New Features -- 
+
+		1. Textboxes increased in size for miscast reports.
+
+	Bug Fix -- 
+
+		1. Date bug fixed when navigating to the earliest date on the scheduler.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 18/09/2014 -- v3.0.0.4 - 
+
+	Bug Fix -- 
+
+		1.  Re-added the missing events on the Tib Delay Entry screen.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 23/09/2014 -- v3.0.0.5 - 
+
+	Bug Fix -- 
+
+		1.  Date bug fix.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 09/10/2014 -- v3.0.0.6 - 
+
+	New Features -- 
+
+		1. Modified Miscast Overview to display Heat Details as default when clicking a report.
+		2. Changed Daily Review menu item 'Plan' to 'Overview'. It now opens a 7-7 view of the 
+			Overview screen for the current day.
+		3. Added DRF Analysis Reports (Reports -> DRF -> Analysis).
+
+	Bug Fix -- 
+		
+		1. Schedulers and Hot Metal Graphs now showing planning events and predicted data that 
+			were hidden from view previously.
+		2. Fixed date bug when navigating forward in time under certain conditions.
+		3. Fixed Hot Metal Buffer not predicting more than 12 hours.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 09/10/2014 -- v3.0.0.7 - 
+
+	Bug Fix -- 
+		
+		1. Fixed missing event on Schedule menu item.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 06/11/2014 -- v3.1.0.0 - 
+
+	New Features -- 
+
+		1. Redesigned Heat Details page to include new tabs.
+		2. BOS Grade Viewer Tab on heat details completed.
+		3. Slabs Tab on heat details completed.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 06/11/2014 -- v3.1.0.1 - 
+
+	New Features -- 
+
+		1. Added extra table to Slabs tab to display Failures.
+		2. BOS Grade Viewer now contains additional data to tie up with the current system.
+		3. Printing of the schedulers modified and improved.
+		4. CBM Tab on Heat Details.
+		5. Scrap Tab on Heat Details.
+		6. OEE Level 2 Changes -- 
+			a. User can modify colours of report through options.
+			b. Report now ordered as requested.
+			c. Added additional filters for Unit Groups.
+			d. Unnamed items now included.
+			e. Relocated 'Speed of Work' loss type data to different table.
+
+	Bug Fix -- 
+		
+		1. Fixed bug where certain TIB Delay Reasons were not adding correctly.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 06/11/2014 -- v3.1.0.2 - 
+
+	New Features -- 
+
+		1. Removed Unit Selection from Schedulers.
+		2. Added new location to DRF Reports (South Transfer Car).
+
+	Bug Fix -- 
+		
+		1. Fixed bug where heat details form would store previous heats data if no new 
+			data was present.
+		2. Fixed bug where heat number 11111 was causing the delay entry screen to crash.
+		3. Fixed bug where BOS Grade Viewer was not showing correct data in table.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 19/11/2014 -- v3.1.0.3 - 
+
+	Bug Fix -- 
+		
+		1. Fixed bug on DRF Analysis when selecting the drop downs.
+		2. Fixed table ordering bug on schedule form.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 12/01/2015 -- v3.2.0.0 - 
+
+	New Features -- 
+
+		1. Blowing tab added to heat details.
+		2. Added feature to options, user can select number of days to show on the schedulers. 
+			(This should improve performance for users if values are low)
+		3. Caster Trend tab added to heat details.
+		4. Added HM Ladles Overview screen to 'Ladles' menu item.
+
+	Bug Fix -- 
+		
+		1. Fixed bug where scheduler was showing events with unusual Heat Numbers. Events with 
+			heat numbers less than 10001 or greater than 89999 are now hidden.
+		2. Fixed bug where 'TIB' option on 'Daily Review' was not operating as expected.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 12/01/2015 -- v3.2.0.1 - 
+
+	New Features -- 
+
+		1. Added Printing to Current Plan Form.
+		2. Added printing/export to DRF Reports.
+		3. Added printing/export to Miscast Reports.
+		4. DRF Main report filtering now contains option for grouping locations/units.
+		5. Added Planning tab to the Heat Details form, removed old planning form.
+		6. Updated Caster Trend tab so that the data is easier to read.
+		7. Added Ladle Number to Overview screen.
+		8. Printing added to numerous forms.
+
+	Bug Fix -- 
+		
+		1. Fixed 'Page Down' bug on the main window.
+		2. Improved performance of Scrap Tab.
+		3. Fixed styling issue with the tables on the Blowing Tab.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 12/01/2015 -- v3.2.0.2 - 
+
+	Bug Fix -- 
+		
+		1. Fixed bug with some Tib Delays crashing the system.
+		2. Ladle Numbers now only appear on units after desulph (Overview screen) 
+			and also on planning events.
+		3. Fixed Hot Metal Buffer form load bug.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 19/01/2015 -- v3.2.0.3 - 
+
+	New Features -- 
+		
+		1. Added End Blow Sublance Dips table to blowing tab on Heat Details.
+
+	Bug Fix -- 
+
+		1. Fixed Steel Ladle Overview URL after it had reverted back to a previous value.
+		2. Fixed Date bug on the schedulers that was causing the app to crash.
+		
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 13/03/2015 -- v4.0.0.0 - 
+
+	New Features -- 
+		
+		1. Added Trending form (Overview Menu).
+		2. Added Parameter and Grouping Configuration forms for trending.
+		3. Modified the Memory Limit to be a user setting in options.
+
+	Bug Fix -- 
+
+		1. Fixed missing Tundish max carbon value on blowing screen.
+		
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 13/03/2015 -- v4.0.0.1 - 
+
+	New Features -- 
+		
+		1. Ladle Numbers for the HM and Desulph Events.
+		2. Numerous improvements/changes to the Trending form and config screens.
+		3. Added Central Morning Meeting Dashboard form.
+		4. Added Printing to the Trending Charts Form.
+		5. Added Diagnostics form in the Help section.
+		6. Added I3 Saftey reporting.
+		7. Added TIB Admin screen.
+		8. Added Print dialog box to forms.
+
+	Bug Fix -- 
+
+		1. Date bug on main scheduler fixed.
+		2. Fixed OEE Speed of Work section to display correct summary data.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 13/03/2015 -- v4.0.0.2 - 
+
+	New Features -- 
+		
+		1. Added printing to CMM Dashboard.
+		2. User interface changes to TIB Admin screens.
+		3. Updated main menu items.
+		4. Added toolbar items to CMM dashboard.
+		5. Increased default Overview/Tib days to show from 4 to 8.
+		6. Added default button to memory limit option.
+		7. Added Rota filter to Trending Form.
+		8. Added Parameter field to Parameter Config table.
+			(Editable through Tools -> Trending Configuration)
+		9. Added Excel Export to Trending form.
+		10. I3 modifications.
+
+	Bug Fix -- 
+
+		1. Fixed unexpected group change on trending screen.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 13/03/2015 -- v4.0.0.3 - 
+
+	New Features -- 
+		
+		1. Added RFT Summary Form to Dashboard.
+		2. Temporarily removed I3 until further notice.
+		3. Minor Dashboard UI mods.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 08/04/2015 -- v4.0.0.4 - 
+
+	Bug Fix -- 
+		
+		1. Minimum Heat Number has now changed from 10001 to 10000.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 08/05/2015 -- v4.0.1.0 - 
+
+	New Features -- 
+		
+		1. Replaced Tundish Schedule on Daily Review with the Current Schedule Form. 
+		2. Added Engineering Maintenance Plan.
+		3. TIB Admin role added to the Security roles.
+		4. Caster Review - 
+			a. Heat/Program highlight simplified.
+			b. Now displays 7-7 timescale.
+			c. Checkbox to show old 10am plan if required.
+			d. Actual lines now show Tib Data rather than Overview data.
+		5. Added Hot Metal tab to Heat Details form.
+		6. OEE - 
+			a. Tib Admin now exports to Excel.
+			b. Speed of Work added to OEE Report.
+			c. Tib Admin UI mods.
+	
+	Bug Fix -- 
+		
+		1. Fixed Heat search on Heat Details form.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 08/05/2015 -- v4.0.1.1 - 
+
+	New Features -- 
+		
+		1. Hot metal tab on Heat Details - 
+			a. Now shows entries from HM Pour North and South.
+			b. Hot Metal Details page now ordered correctly.
+		2. Caster Review - 
+			a. Additional data now controlled via radio buttons.
+			b. Heat events are now all consistent heights.
+	
+	Bug Fix -- 
+		
+		1. Hot Metal Tab on Heat Details - 
+			a. Fixed bug where time was not showing on pre desulph.
+			b. HM Dip now shows blank instead of 0.
+			c. Fixed Aim Steel Sulphur bug.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 08/05/2015 -- v4.0.1.2 - 
+
+	New Features -- 
+		
+		1. Heats Cast per Day by Caster 24 hour planning is now based on 7am plan rather 
+			than the 10am plan.
+		2. Added seconds to time stamps on the Heat Details form.
+		3. User can now highlight by area on the trending charts.
+			(This feature on distribution charts to be added at a later date)
+		4. Added a new tab to Heats Cast per Day by Caster to show the Steel in Mould and
+			Speed Ratio per caster by day from midnight.
+		5. Treatment Details on Hot Metal now to 3 d.p.
+	
+	Bug Fix -- 
+		
+		1. Fixed bug on Heats Cast per Day by Caster when calculating the weekly
+			planned heats.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 05/06/2015 -- v4.0.1.3 - 
+
+	New Features -- 
+		
+		1. EBM chart on Heat Details screen upgraded.
+		2. Added highlighting to Distribution Charts on Trending Form.
+		3. Added server to diagnostics form (PTBOSAPP).
+		4. Added search by slab into the search by heat box.
+		5. Added search by grade.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 05/06/2015 -- v4.0.1.4 - 
+
+	New Features -- 
+		
+		1. Updated Dashboard form. Now displays 7 day view.
+		2. Removed 'Parameter' from chart titles on trending form.
+		3. Checkbox values now persist between heat numbers for EBM and caster trending.
+		4. Added weekly KPI values to Dashboards.
+		5. Added Primary Dashboard.
+		6. Updated EBM layout.
+
+	Bug Fix -- 
+		
+		1. Fixed EBM and caster trending reloading values in the bottom left.
+		2. Fixed EBM not drawing when heat numbers changed quickly.
+		3. Fixed Trending bug where Dolomet values were incorrectly displayed.
+		4. Fixed TIB Admin delay index bug.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 18/06/2015 -- v4.0.1.5 - 
+
+	New Features -- 
+		
+		1. Added manual input screen for steelmaking KPI's.
+		2. Added customisable colours to Dashboards (located in Options).
+		3. Modified dashboard layout to include predictions.
+
+	Bug Fix -- 
+		
+		1. Fixed bug on trending charts where Axis labels and stats were not  
+			showing correctly for small values.
+		2. Fixed bug on dashboards where longer KPI levels were being hidden.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 13/07/2015 -- v4.0.1.6 - 
+
+	New Features -- 
+		
+		1. Modified the Daily Review menu items.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 24/08/2015 -- v4.0.2.0 - 
+
+	New Features -- 
+		
+		1. Simplified Trending form legend.
+		2. Added default highlighting to Group Configs on Trending form.
+		3. Added default highlighting to Trending Configuration form (admin only).
+		4. Added Near Miss report viewer.
+		5. Added new tab to Heat Details screen to show TIB data.
+
+	Bug Fix -- 
+		
+		1. Fixed bug on Trend form when trying to print with no data.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 24/08/2015 -- v4.0.2.1 - 
+
+	New Features -- 
+		
+		1. Added Slab Stocks Summary form to dashboard.
+		2. Modified Trending highlighting to group all Sec Steel units.
+		3. Added KPI Dashboard Configuration/Information form.
+			- Accessible through the menu item or clicking a KPI description.
+		4. Added DRF attachment functionality.
+		5. Added link to TIB delay entry for each line item in the TIB Report.
+		6. Added unit and unit group filters to TIB Report to be in line with selections 
+			on OEE L2 Report. TIB Report filters are multi select not drop down lists.
+		7. Added an option on the Tib Reports form that allows the user to include 
+			Tibs without delays in the selection.
+		8. Added new Group By options to the TIB Delay Analysis. New options are OEE 
+			Loss Category, Loss Type, Owner, Report Level 1 and Report Level 2.
+
+	Bug Fix -- 
+		
+		1. Fixed bug on Dashboards where linked trends were not showing correct
+			dates when clicking a single day.
+		2. Fixed bug on Trending Charts where negative numbers were not
+			being displayed correctly.
+		3. Fixed rounding bug on Trending Charts.
+		4. Fixed bug on OEE L2 report where delays are not apportioned correctly 
+			across shifts.
+		5. Fixed bug on OEE L2 report where unnamed items do not match with TIB 
+			Delays To Enter report for the selected period.
+		6. Fixed a bug where not all delay information was saved when editing on 
+			the Tib Delay entry popup.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 24/08/2015 -- v4.0.2.2 - 
+
+	New Features -- 
+
+		1. Dashboard Admins can now edit D.P. of Min/Max values on Dashboard Config.
+		2. Added Skim Quality data to the Hot Metal tab on Heat Details.
+		3. Added out of range colour group to trending distribution charts.
+
+	Bug Fix -- 
+		
+		1. Fixed bug when trying to print distribution charts without any highlight. 
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 10/09/2015 -- v4.0.2.3 - 
+
+	Bug Fix -- 
+		
+		1. Fixed bug with Tib delay remaining time when inputting delays.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 02/10/2015 -- v4.0.3.0 - 
+
+	New Features -- 
+
+		1. Added Miscast Analysis.
+		2. Updated latest trending configuration.
+		3. Added Casting Dashboard.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 02/10/2015 -- v4.0.3.1 - 
+
+	New Features -- 
+
+		1. Added Tap Watch to Heat Details.
+		2. Added option to edit the KPI Actions on the Dashboard Config (admin only).
+		3. Added Display TIB 24 Hour View function to the KPI Action list.
+		4. Added Secondary Steel Dashboard.
+		5. Updated Menu Items on Main Form.
+		6. Removed Miscast Analysis.
+		7. Added the option to include unnamed Tib delays on the Tib Analysis report.
+
+	Bug Fix -- 
+
+		1. Fixed search bug on Find by Grade on the main form.
+		2. Fixed bug on Dashboard where weekly values were not formatted.
+		3. Fixed bug on Tib Delays To Enter form so delay information matches that on 
+			the OEE Level 2 report.
+		4. Fixed bug on Tib Report viewer when hitting reset button.
+	
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 19/11/2015 -- v4.0.4.0 - 
+
+	New Features -- 
+
+		1. Added Miscast Analysis.
+		2. Added more Trending graphs.
+		3. Added new Elvis Miscast system.
+	
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 19/11/2015 -- v4.0.4.1 - 
+
+	New Features -- 
+
+		1. Miscast updates - 
+			a. Added Miscast Report Printing.
+			b. Added viewable Miscast Actions list.
+			c. Unit now filters depending on the area selected.
+			d. Tech Name now populates with a list of technical people.
+		2. Updated latest trending configuration.
+	
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 19/11/2015 -- v4.0.4.2 - 
+
+	New Features -- 
+
+		1. Miscast Analysis chart now opens Miscasts when clicked.
+		2. Added initial filtering for when opening Miscast Reports overview.
+		3. Removed old Miscast System.
+
+	Bug Fix -- 
+
+		1. Fixed trending bug where some trends were not displaying.
+	
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 19/11/2015 -- v4.0.4.3 - 
+
+	New Features -- 
+
+		1. Miscast Actions now filter on the Miscast Main view.
+		2. Reorganised menu items on the Main Form.
+
+	Bug Fix -- 
+
+		1. Fixed bug on Overview Scheduler where miscasts were not being
+			highlighted if no Miscast Type was selected.
+		2. Fixed date selection bug on Trending Form filters.
+	
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 26/11/2015 -- v4.0.4.4 - 
+
+	Features -- 
+
+		1. Miscast reports now shows actions as default.
+		2. Added data entry validation to Miscast Reports.
+		
+	Bug Fix -- 
+
+		1. Fixed Dashboards showing incorrect Miscast figures.
+		2. Fixed Rota allocation for Miscast records.
+		3. Fixed Area/Unit drop down filtering on Miscast Reports.
+	
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 08/03/2016 -- v4.0.4.5 - 
+
+	Features -- 
+
+		1. Added link for TIB Screen yesterday 7 to 7 on each area context menu.
+		2. Made Miscast Name Investigator mandatory.
+		3. Added fields to Miscast 'Installation In Good Condition' and 'Standard Practice'.
+		4. Mapped trends to be added to configuration.
+		
+	Bug Fix -- 
+
+		1. Fixed blank miscast opening when adding new miscast that already exists.
+		2. Fixed Primary menu ordering issue.
+	
+---------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+Date: To be published -- v4.0.4.12 - 
+
+	Features -- 
+
+		1. Mapped trends to be added to configuration SecN2Pickup (EL-25), COProduct (EL-5), Al2O3 
+			(EL-43) and Mgo (EL43). 
+		2. Modified slab search to a count for new slab number set. EL-16.
+		3. Changed link for Ladles/Hot Metal Ladles. EL-1
+		4. Added outstanding actions panel to the bottom of the DRF list. EL-29.
+		5. Modified DRF report search to use the report's start date rather than its created date. EL-28.
+		6. Changed Hot Metal Buffer and the Caster Review graph so the values that are not HM Stock are 
+			now averaged so they are clearer on the screen. EL-2.
+		7. Changed Trend chart so that 4 decimal places are now visible. EL-7.
+		8. Defaulted miscast Technical Root Cause field to be set to Not Set. EL-40.
+		9. Trending Screen - Change the graph to show all values in a range for the x-axis even 
+			without data.  EL-41.
+		10. Added Machine Condition Summary. MCS-12.
+
+---------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+Date: 06/04/2017 -- v4.0.4.22 - 
+
+	Features -- 
+
+		1. Configured Safety and Dashboard links from area menus. [ELVIS5-8] [ELVIS5-10]
+		2. Created new incident/actions section (linked from reports and area menus). [ELVIS5-5]
+			a.	Initial form to display incidents/actions, by default opens to show open 
+				incidents/actions from a timespan that automatically expands to include all currently 
+				open incidents, this is further filtered depending on which menu you launched from.
+			b.	Initial form allows cfor filtering/searching incidents/actions.
+			c.	Initial form highlights overdue actions.
+			d.	Incidents can be added or edited via an incident form (launched from initial form or 
+				menu).
+			e.	Actions can be added or edited via an action form (launched from the initial form - 
+				assuming attachment to the highlighted incident - or from the incident form)
+			f.	Incidents cannot be closed unless all actions associated with it are also closed.
+			g.	Incidents will be automatically closed upon closure of the last open action associated 
+				with it.
+
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 19/04/2017 -- v4.0.4.25 - 
+
+	Features -- 
+
+		1. Bug fixes, crash on loading reports screen if no open reports in DB.
+
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+Date: 15/06/2017 -- v5.2.0.1 - 
+
+	Features -- 
+
+		1. PST-100 DRFs Add a “Area” new field
+		2. PST-101 TIB change from the 24 hour view to the TIB Analysis report
+		3. PST-102 Daily Management Agenda – Threats
+
+---------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+Date: 08/12/2017 -- v5.2.0.9 - 
+
+	Features -- 
+		1. PST-142 Added Caster Cranes to threats (database change).
+		2. ELVIS5-27 Added shift rota dashboards.
+		3. PST-146 Added preset filters on DRF report links.
+		4. Historical sulphur print analysis view fixed. 
+
+---------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+

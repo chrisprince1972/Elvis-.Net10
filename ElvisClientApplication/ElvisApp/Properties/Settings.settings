@@ -1,0 +1,372 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Elvis.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="MainFormLocation" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">t</Value>
+    </Setting>
+    <Setting Name="ColourCaster1" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">94, 255, 252</Value>
+    </Setting>
+    <Setting Name="ColourCaster1Plan" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">191, 255, 254</Value>
+    </Setting>
+    <Setting Name="ColourCaster2" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">255, 71, 234</Value>
+    </Setting>
+    <Setting Name="ColourCaster2Plan" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">255, 184, 247</Value>
+    </Setting>
+    <Setting Name="ColourCaster3" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">249, 255, 69</Value>
+    </Setting>
+    <Setting Name="ColourCaster3Plan" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">253, 255, 196</Value>
+    </Setting>
+    <Setting Name="ColourVessel1" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">18, 46, 255</Value>
+    </Setting>
+    <Setting Name="ColourVessel1Plan" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">138, 151, 255</Value>
+    </Setting>
+    <Setting Name="ColourVessel2" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">255, 157, 0</Value>
+    </Setting>
+    <Setting Name="ColourVessel2Plan" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">255, 211, 140</Value>
+    </Setting>
+    <Setting Name="ColourHeatScheduler1" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">214, 219, 255</Value>
+    </Setting>
+    <Setting Name="ColourHeatScheduler2" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">220, 255, 207</Value>
+    </Setting>
+    <Setting Name="TableTheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Default</Value>
+    </Setting>
+    <Setting Name="ColourBackground" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">ControlLight</Value>
+    </Setting>
+    <Setting Name="ColourText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">ControlText</Value>
+    </Setting>
+    <Setting Name="RefreshRate" Type="System.TimeSpan" Scope="Application">
+      <Value Profile="(Default)">00:05:00</Value>
+    </Setting>
+    <Setting Name="ColourHighlight" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="TibExternal" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="TibMultiServ" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">BlueViolet</Value>
+    </Setting>
+    <Setting Name="TibHMScrap" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Gold</Value>
+    </Setting>
+    <Setting Name="TibVessels" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">SeaGreen</Value>
+    </Setting>
+    <Setting Name="TibPlan" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">HotPink</Value>
+    </Setting>
+    <Setting Name="TibSecSteel" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">YellowGreen</Value>
+    </Setting>
+    <Setting Name="TibCasters" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">SkyBlue</Value>
+    </Setting>
+    <Setting Name="TibCranes" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Peru</Value>
+    </Setting>
+    <Setting Name="TibNoReason" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">DarkGray</Value>
+    </Setting>
+    <Setting Name="TibExternalText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="TibMultiServText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="TibHMScrapText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="TibVesselsText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="TibPlanText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="TibSecSteelText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="TibCastersText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="TibCranesText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="TibNoReasonText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="HeightTibNotProducing" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="HeightTibProducing" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
+    </Setting>
+    <Setting Name="HeightTibInProcess" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">18</Value>
+    </Setting>
+    <Setting Name="HeightTibOutProcess" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">12</Value>
+    </Setting>
+    <Setting Name="HeightTibUnproductive" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="QuickTibShadows" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="QuickTibTimeLine" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="QuickTibLegend" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="QuickTibCellWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">65</Value>
+    </Setting>
+    <Setting Name="QuickHeatShadows" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="QuickHeatTimeLine" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="QuickHeatCellWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="QuickHeatColourBy" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Caster</Value>
+    </Setting>
+    <Setting Name="QuickHeatExtraData" Type="System.String" Scope="User">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="QuickCasterShadows" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="QuickCasterTimeLine" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="QuickCasterChart" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="QuickCaster7pmPlan" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="QuickCasterExtraData" Type="System.String" Scope="User">
+      <Value Profile="(Default)">None</Value>
+    </Setting>
+    <Setting Name="QuickCaster7amStock" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FontOverviewHeatNo" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 8.25pt</Value>
+    </Setting>
+    <Setting Name="FontOverviewExtraData" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 8.25pt</Value>
+    </Setting>
+    <Setting Name="FontTibHeatNo" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 8.25pt</Value>
+    </Setting>
+    <Setting Name="FontCasterHeatNo" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 8.25pt</Value>
+    </Setting>
+    <Setting Name="FontCasterExtraData" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 8.25pt</Value>
+    </Setting>
+    <Setting Name="AutoUpdate" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="TibUnitsToHide" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="HeatUnitsToHide" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TibReportFilters" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DelayAnalysisReportFilters" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DelayAnalysisReportGroupBy" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SlowCastColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="LimePlantEventColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="LimePlantChangeOverColour" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">HotPink</Value>
+    </Setting>
+    <Setting Name="FontOverviewMiscast" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">Courier New, 8.25pt</Value>
+    </Setting>
+    <Setting Name="ShowTargetCastingRateLine" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowTonnesPerHourHMGridline" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowTonnesPerMinuteHMGridline" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="QuickHeatMiscasts" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowHMBufferLines" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowCastingRateLines" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CBMColourScheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Default</Value>
+    </Setting>
+    <Setting Name="OEELevel1Background" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">128, 128, 255</Value>
+    </Setting>
+    <Setting Name="OEELevel2Background" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Azure</Value>
+    </Setting>
+    <Setting Name="OEEL1Text" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="OEEL2Text" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="ShowSelectors" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="EBMColourScheme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Default</Value>
+    </Setting>
+    <Setting Name="OverviewDaysToShow" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="TibDaysToShow" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="MemoryLimit" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">400</Value>
+    </Setting>
+    <Setting Name="QuickCaster10amPlan" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MinHeatNumber" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10000</Value>
+    </Setting>
+    <Setting Name="MaxHeatNumber" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">89999</Value>
+    </Setting>
+    <Setting Name="ColourHighlight1" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">20, 200, 250</Value>
+    </Setting>
+    <Setting Name="ColourHighlight2" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">244, 60, 60</Value>
+    </Setting>
+    <Setting Name="ColourHighlight3" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">24, 160, 24</Value>
+    </Setting>
+    <Setting Name="ColourHighlight4" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">255, 142, 30</Value>
+    </Setting>
+    <Setting Name="MinSlabNumber" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10000018</Value>
+    </Setting>
+    <Setting Name="MaxSlabNumber" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">99999999</Value>
+    </Setting>
+    <Setting Name="ColourDashHeaderBack" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">PowderBlue</Value>
+    </Setting>
+    <Setting Name="ColourDashRowBack" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">WhiteSmoke</Value>
+    </Setting>
+    <Setting Name="ColourDashAltRowBack" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">218, 235, 255</Value>
+    </Setting>
+    <Setting Name="ColourDashGoodBack" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">38, 244, 62</Value>
+    </Setting>
+    <Setting Name="ColourDashBadBack" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">225, 35, 1</Value>
+    </Setting>
+    <Setting Name="ColourDashMissingBack" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="ColourDashHeaderText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="ColourDashRowText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="ColourDashAltRowText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="ColourDashGoodText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="ColourDashBadText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">White</Value>
+    </Setting>
+    <Setting Name="ColourDashMissingText" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="TrendShowLegend" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="DashboardRowHeight" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">21</Value>
+    </Setting>
+    <Setting Name="DashboardSingleBoxWidth" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="DashboardBoxPadding" Type="System.Windows.Forms.Padding" Scope="Application">
+      <Value Profile="(Default)">1, 1, 1, 1</Value>
+    </Setting>
+    <Setting Name="DashboardBoxFont" Type="System.Drawing.Font" Scope="Application">
+      <Value Profile="(Default)">Microsoft Sans Serif, 8.25pt</Value>
+    </Setting>
+    <Setting Name="DRFFolderForAttachment" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\pt-fs1.porttalbot.pcswales.corusgroup.com\ELVISDRF</Value>
+    </Setting>
+    <Setting Name="DRFFileOperationUserUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">elvisdrf</Value>
+    </Setting>
+    <Setting Name="DRFFileOperationUserPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">M@nchester</Value>
+    </Setting>
+    <Setting Name="DRFFileOperationDomain" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">bspt_proc_ctrl</Value>
+    </Setting>
+    <Setting Name="DRFFileMaxSize" Type="System.Int64" Scope="Application">
+      <Value Profile="(Default)">50000000</Value>
+    </Setting>
+    <Setting Name="HMSkimImageLocation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\1.61.67.198\plant data\PT HMDeS IR Data\SkimImages\</Value>
+    </Setting>
+    <Setting Name="RotaService" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://ptwide.porttalbot.pcswales.corusgroup.com/RotaService/api/Rota/</Value>
+    </Setting>
+    <Setting Name="CMCMaxDaysHistory" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-30</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OasisSchema.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="OasisSchemaStoreContainer">
+          <EntitySet Name="HotConnect" EntityType="OasisSchema.Store.HotConnect" store:Type="Tables" Schema="Oasis" />
+          <EntitySet Name="RFTData" EntityType="OasisSchema.Store.RFTData" store:Type="Tables" Schema="Oasis" />
+          <EntitySet Name="SlabStocks" EntityType="OasisSchema.Store.SlabStocks" store:Type="Tables" Schema="Oasis" />
+        </EntityContainer>
+        <EntityType Name="HotConnect">
+          <Key>
+            <PropertyRef Name="HCId" />
+          </Key>
+          <Property Name="HCId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HeatNumber" Type="int" />
+          <Property Name="HNS" Type="int" />
+          <Property Name="ProgramNumber" Type="int" />
+          <Property Name="HotConnectFlag" Type="int" />
+          <Property Name="LastUpdate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="RFTData">
+          <Key>
+            <PropertyRef Name="RFTIndex" />
+          </Key>
+          <Property Name="RFTIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RFTDate" Type="datetime" />
+          <Property Name="SlabsMade" Type="int" />
+          <Property Name="SlabsMadeSchedule" Type="int" />
+          <Property Name="ShedGradeOk" Type="int" />
+          <Property Name="ShedWidthOk" Type="int" />
+          <Property Name="ShedLengthOk" Type="int" />
+          <Property Name="SlabsRFT" Type="int" />
+          <Property Name="SlabsAppliedTGrade" Type="int" />
+          <Property Name="TonnesMade" Type="real" />
+          <Property Name="TonnesMadeSchedule" Type="real" />
+          <Property Name="TonnesGradeOk" Type="real" />
+          <Property Name="TonnesWidthOk" Type="real" />
+          <Property Name="TonnesLengthOk" Type="real" />
+          <Property Name="TonnesRFT" Type="real" />
+          <Property Name="TonnesAppliedTGrade" Type="real" />
+          <Property Name="CC1SlabsMade" Type="int" />
+          <Property Name="CC1SlabsMadeSchedule" Type="int" />
+          <Property Name="CC1ShedGradeOk" Type="int" />
+          <Property Name="CC1ShedWidthOk" Type="int" />
+          <Property Name="CC1ShedLengthOk" Type="int" />
+          <Property Name="CC1SlabsRFT" Type="int" />
+          <Property Name="CC1SlabsAppliedTGrade" Type="int" />
+          <Property Name="CC1TonnesMade" Type="real" />
+          <Property Name="CC1TonnesMadeSchedule" Type="real" />
+          <Property Name="CC1TonnesGradeOk" Type="real" />
+          <Property Name="CC1TonnesWidthOk" Type="real" />
+          <Property Name="CC1TonnesLengthOk" Type="real" />
+          <Property Name="CC1TonnesRFT" Type="real" />
+          <Property Name="CC1TonnesAppliedTGrade" Type="real" />
+          <Property Name="CC2SlabsMade" Type="int" />
+          <Property Name="CC2SlabsMadeSchedule" Type="int" />
+          <Property Name="CC2ShedGradeOk" Type="int" />
+          <Property Name="CC2ShedWidthOk" Type="int" />
+          <Property Name="CC2ShedLengthOk" Type="int" />
+          <Property Name="CC2SlabsRFT" Type="int" />
+          <Property Name="CC2SlabsAppliedTGrade" Type="int" />
+          <Property Name="CC2TonnesMade" Type="real" />
+          <Property Name="CC2TonnesMadeSchedule" Type="real" />
+          <Property Name="CC2TonnesGradeOk" Type="real" />
+          <Property Name="CC2TonnesWidthOk" Type="real" />
+          <Property Name="CC2TonnesLengthOk" Type="real" />
+          <Property Name="CC2TonnesRFT" Type="real" />
+          <Property Name="CC2TonnesAppliedTGrade" Type="real" />
+          <Property Name="CC3SlabsMade" Type="int" />
+          <Property Name="CC3SlabsMadeSchedule" Type="int" />
+          <Property Name="CC3ShedGradeOk" Type="int" />
+          <Property Name="CC3ShedWidthOk" Type="int" />
+          <Property Name="CC3ShedLengthOk" Type="int" />
+          <Property Name="CC3SlabsRFT" Type="int" />
+          <Property Name="CC3SlabsAppliedTGrade" Type="int" />
+          <Property Name="CC3TonnesMade" Type="real" />
+          <Property Name="CC3TonnesMadeSchedule" Type="real" />
+          <Property Name="CC3TonnesGradeOk" Type="real" />
+          <Property Name="CC3TonnesWidthOk" Type="real" />
+          <Property Name="CC3TonnesLengthOk" Type="real" />
+          <Property Name="CC3TonnesRFT" Type="real" />
+          <Property Name="CC3TonnesAppliedTGrade" Type="real" />
+        </EntityType>
+        <EntityType Name="SlabStocks">
+          <Key>
+            <PropertyRef Name="SSIndex" />
+          </Key>
+          <Property Name="SSIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SSDate" Type="datetime" />
+          <Property Name="LSTD" Type="varchar" MaxLength="15" />
+          <Property Name="LSTT" Type="varchar" MaxLength="15" />
+          <Property Name="SLAB_STOCK" Type="real" />
+          <Property Name="PT_STOCK" Type="real" />
+          <Property Name="LL_STOCK" Type="real" />
+          <Property Name="IW_STOCK" Type="real" />
+          <Property Name="FREETOROLL" Type="real" />
+          <Property Name="PROCESSING" Type="real" />
+          <Property Name="HELD" Type="real" />
+          <Property Name="APPLIED" Type="real" />
+          <Property Name="APPLIED_PT" Type="real" />
+          <Property Name="APPLIED_LL" Type="real" />
+          <Property Name="UNAPPLIED" Type="real" />
+          <Property Name="UNAPPLIED_PT" Type="real" />
+          <Property Name="UNAPPLIED_LL" Type="real" />
+          <Property Name="CONCESSION" Type="real" />
+          <Property Name="TAPERED" Type="real" />
+          <Property Name="ONSCHED" Type="real" />
+          <Property Name="GRIDDED" Type="real" />
+          <Property Name="AVE_DWELL" Type="real" />
+          <Property Name="AVE_EVENTS" Type="real" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OasisSchema" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="OasisSchemaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="RFTDatas" EntityType="OasisSchema.RFTData" />
+          <EntitySet Name="SlabStocks" EntityType="OasisSchema.SlabStock" />
+          <EntitySet Name="HotConnects" EntityType="OasisSchema.HotConnect" />
+        </EntityContainer>
+        <EntityType Name="RFTData">
+          <Key>
+            <PropertyRef Name="RFTIndex" />
+          </Key>
+          <Property Name="RFTIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RFTDate" Type="DateTime" />
+          <Property Name="SlabsMade" Type="Int32" />
+          <Property Name="SlabsMadeSchedule" Type="Int32" />
+          <Property Name="ShedGradeOk" Type="Int32" />
+          <Property Name="ShedWidthOk" Type="Int32" />
+          <Property Name="ShedLengthOk" Type="Int32" />
+          <Property Name="SlabsRFT" Type="Int32" />
+          <Property Name="SlabsAppliedTGrade" Type="Int32" />
+          <Property Name="TonnesMade" Type="Single" />
+          <Property Name="TonnesMadeSchedule" Type="Single" />
+          <Property Name="TonnesGradeOk" Type="Single" />
+          <Property Name="TonnesWidthOk" Type="Single" />
+          <Property Name="TonnesLengthOk" Type="Single" />
+          <Property Name="TonnesRFT" Type="Single" />
+          <Property Name="TonnesAppliedTGrade" Type="Single" />
+          <Property Name="CC1SlabsMade" Type="Int32" />
+          <Property Name="CC1SlabsMadeSchedule" Type="Int32" />
+          <Property Name="CC1ShedGradeOk" Type="Int32" />
+          <Property Name="CC1ShedWidthOk" Type="Int32" />
+          <Property Name="CC1ShedLengthOk" Type="Int32" />
+          <Property Name="CC1SlabsRFT" Type="Int32" />
+          <Property Name="CC1SlabsAppliedTGrade" Type="Int32" />
+          <Property Name="CC1TonnesMade" Type="Single" />
+          <Property Name="CC1TonnesMadeSchedule" Type="Single" />
+          <Property Name="CC1TonnesGradeOk" Type="Single" />
+          <Property Name="CC1TonnesWidthOk" Type="Single" />
+          <Property Name="CC1TonnesLengthOk" Type="Single" />
+          <Property Name="CC1TonnesRFT" Type="Single" />
+          <Property Name="CC1TonnesAppliedTGrade" Type="Single" />
+          <Property Name="CC2SlabsMade" Type="Int32" />
+          <Property Name="CC2SlabsMadeSchedule" Type="Int32" />
+          <Property Name="CC2ShedGradeOk" Type="Int32" />
+          <Property Name="CC2ShedWidthOk" Type="Int32" />
+          <Property Name="CC2ShedLengthOk" Type="Int32" />
+          <Property Name="CC2SlabsRFT" Type="Int32" />
+          <Property Name="CC2SlabsAppliedTGrade" Type="Int32" />
+          <Property Name="CC2TonnesMade" Type="Single" />
+          <Property Name="CC2TonnesMadeSchedule" Type="Single" />
+          <Property Name="CC2TonnesGradeOk" Type="Single" />
+          <Property Name="CC2TonnesWidthOk" Type="Single" />
+          <Property Name="CC2TonnesLengthOk" Type="Single" />
+          <Property Name="CC2TonnesRFT" Type="Single" />
+          <Property Name="CC2TonnesAppliedTGrade" Type="Single" />
+          <Property Name="CC3SlabsMade" Type="Int32" />
+          <Property Name="CC3SlabsMadeSchedule" Type="Int32" />
+          <Property Name="CC3ShedGradeOk" Type="Int32" />
+          <Property Name="CC3ShedWidthOk" Type="Int32" />
+          <Property Name="CC3ShedLengthOk" Type="Int32" />
+          <Property Name="CC3SlabsRFT" Type="Int32" />
+          <Property Name="CC3SlabsAppliedTGrade" Type="Int32" />
+          <Property Name="CC3TonnesMade" Type="Single" />
+          <Property Name="CC3TonnesMadeSchedule" Type="Single" />
+          <Property Name="CC3TonnesGradeOk" Type="Single" />
+          <Property Name="CC3TonnesWidthOk" Type="Single" />
+          <Property Name="CC3TonnesLengthOk" Type="Single" />
+          <Property Name="CC3TonnesRFT" Type="Single" />
+          <Property Name="CC3TonnesAppliedTGrade" Type="Single" />
+        </EntityType>
+        <EntityType Name="SlabStock">
+          <Key>
+            <PropertyRef Name="SSIndex" />
+          </Key>
+          <Property Type="Int32" Name="SSIndex" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="SSDate" />
+          <Property Type="String" Name="LSTD" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LSTT" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="Single" Name="SLAB_STOCK" />
+          <Property Type="Single" Name="PT_STOCK" />
+          <Property Type="Single" Name="LL_STOCK" />
+          <Property Type="Single" Name="IW_STOCK" />
+          <Property Type="Single" Name="FREETOROLL" />
+          <Property Type="Single" Name="PROCESSING" />
+          <Property Type="Single" Name="HELD" />
+          <Property Type="Single" Name="APPLIED" />
+          <Property Type="Single" Name="APPLIED_PT" />
+          <Property Type="Single" Name="APPLIED_LL" />
+          <Property Type="Single" Name="UNAPPLIED" />
+          <Property Type="Single" Name="UNAPPLIED_PT" />
+          <Property Type="Single" Name="UNAPPLIED_LL" />
+          <Property Type="Single" Name="CONCESSION" />
+          <Property Type="Single" Name="TAPERED" />
+          <Property Type="Single" Name="ONSCHED" />
+          <Property Type="Single" Name="GRIDDED" />
+          <Property Type="Single" Name="AVE_DWELL" />
+          <Property Type="Single" Name="AVE_EVENTS" />
+        </EntityType>
+        <EntityType Name="HotConnect">
+          <Key>
+            <PropertyRef Name="HCId" />
+          </Key>
+          <Property Type="Int32" Name="HCId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="HeatNumber" />
+          <Property Type="Int32" Name="HNS" />
+          <Property Type="Int32" Name="ProgramNumber" />
+          <Property Type="Int32" Name="HotConnectFlag" />
+          <Property Type="DateTime" Name="LastUpdate" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OasisSchemaStoreContainer" CdmEntityContainer="OasisSchemaEntities">
+          <EntitySetMapping Name="RFTDatas"><EntityTypeMapping TypeName="OasisSchema.RFTData"><MappingFragment StoreEntitySet="RFTData">
+            <ScalarProperty Name="RFTIndex" ColumnName="RFTIndex" />
+            <ScalarProperty Name="RFTDate" ColumnName="RFTDate" />
+            <ScalarProperty Name="SlabsMade" ColumnName="SlabsMade" />
+            <ScalarProperty Name="SlabsMadeSchedule" ColumnName="SlabsMadeSchedule" />
+            <ScalarProperty Name="ShedGradeOk" ColumnName="ShedGradeOk" />
+            <ScalarProperty Name="ShedWidthOk" ColumnName="ShedWidthOk" />
+            <ScalarProperty Name="ShedLengthOk" ColumnName="ShedLengthOk" />
+            <ScalarProperty Name="SlabsRFT" ColumnName="SlabsRFT" />
+            <ScalarProperty Name="SlabsAppliedTGrade" ColumnName="SlabsAppliedTGrade" />
+            <ScalarProperty Name="TonnesMade" ColumnName="TonnesMade" />
+            <ScalarProperty Name="TonnesMadeSchedule" ColumnName="TonnesMadeSchedule" />
+            <ScalarProperty Name="TonnesGradeOk" ColumnName="TonnesGradeOk" />
+            <ScalarProperty Name="TonnesWidthOk" ColumnName="TonnesWidthOk" />
+            <ScalarProperty Name="TonnesLengthOk" ColumnName="TonnesLengthOk" />
+            <ScalarProperty Name="TonnesRFT" ColumnName="TonnesRFT" />
+            <ScalarProperty Name="TonnesAppliedTGrade" ColumnName="TonnesAppliedTGrade" />
+            <ScalarProperty Name="CC1SlabsMade" ColumnName="CC1SlabsMade" />
+            <ScalarProperty Name="CC1SlabsMadeSchedule" ColumnName="CC1SlabsMadeSchedule" />
+            <ScalarProperty Name="CC1ShedGradeOk" ColumnName="CC1ShedGradeOk" />
+            <ScalarProperty Name="CC1ShedWidthOk" ColumnName="CC1ShedWidthOk" />
+            <ScalarProperty Name="CC1ShedLengthOk" ColumnName="CC1ShedLengthOk" />
+            <ScalarProperty Name="CC1SlabsRFT" ColumnName="CC1SlabsRFT" />
+            <ScalarProperty Name="CC1SlabsAppliedTGrade" ColumnName="CC1SlabsAppliedTGrade" />
+            <ScalarProperty Name="CC1TonnesMade" ColumnName="CC1TonnesMade" />
+            <ScalarProperty Name="CC1TonnesMadeSchedule" ColumnName="CC1TonnesMadeSchedule" />
+            <ScalarProperty Name="CC1TonnesGradeOk" ColumnName="CC1TonnesGradeOk" />
+            <ScalarProperty Name="CC1TonnesWidthOk" ColumnName="CC1TonnesWidthOk" />
+            <ScalarProperty Name="CC1TonnesLengthOk" ColumnName="CC1TonnesLengthOk" />
+            <ScalarProperty Name="CC1TonnesRFT" ColumnName="CC1TonnesRFT" />
+            <ScalarProperty Name="CC1TonnesAppliedTGrade" ColumnName="CC1TonnesAppliedTGrade" />
+            <ScalarProperty Name="CC2SlabsMade" ColumnName="CC2SlabsMade" />
+            <ScalarProperty Name="CC2SlabsMadeSchedule" ColumnName="CC2SlabsMadeSchedule" />
+            <ScalarProperty Name="CC2ShedGradeOk" ColumnName="CC2ShedGradeOk" />
+            <ScalarProperty Name="CC2ShedWidthOk" ColumnName="CC2ShedWidthOk" />
+            <ScalarProperty Name="CC2ShedLengthOk" ColumnName="CC2ShedLengthOk" />
+            <ScalarProperty Name="CC2SlabsRFT" ColumnName="CC2SlabsRFT" />
+            <ScalarProperty Name="CC2SlabsAppliedTGrade" ColumnName="CC2SlabsAppliedTGrade" />
+            <ScalarProperty Name="CC2TonnesMade" ColumnName="CC2TonnesMade" />
+            <ScalarProperty Name="CC2TonnesMadeSchedule" ColumnName="CC2TonnesMadeSchedule" />
+            <ScalarProperty Name="CC2TonnesGradeOk" ColumnName="CC2TonnesGradeOk" />
+            <ScalarProperty Name="CC2TonnesWidthOk" ColumnName="CC2TonnesWidthOk" />
+            <ScalarProperty Name="CC2TonnesLengthOk" ColumnName="CC2TonnesLengthOk" />
+            <ScalarProperty Name="CC2TonnesRFT" ColumnName="CC2TonnesRFT" />
+            <ScalarProperty Name="CC2TonnesAppliedTGrade" ColumnName="CC2TonnesAppliedTGrade" />
+            <ScalarProperty Name="CC3SlabsMade" ColumnName="CC3SlabsMade" />
+            <ScalarProperty Name="CC3SlabsMadeSchedule" ColumnName="CC3SlabsMadeSchedule" />
+            <ScalarProperty Name="CC3ShedGradeOk" ColumnName="CC3ShedGradeOk" />
+            <ScalarProperty Name="CC3ShedWidthOk" ColumnName="CC3ShedWidthOk" />
+            <ScalarProperty Name="CC3ShedLengthOk" ColumnName="CC3ShedLengthOk" />
+            <ScalarProperty Name="CC3SlabsRFT" ColumnName="CC3SlabsRFT" />
+            <ScalarProperty Name="CC3SlabsAppliedTGrade" ColumnName="CC3SlabsAppliedTGrade" />
+            <ScalarProperty Name="CC3TonnesMade" ColumnName="CC3TonnesMade" />
+            <ScalarProperty Name="CC3TonnesMadeSchedule" ColumnName="CC3TonnesMadeSchedule" />
+            <ScalarProperty Name="CC3TonnesGradeOk" ColumnName="CC3TonnesGradeOk" />
+            <ScalarProperty Name="CC3TonnesWidthOk" ColumnName="CC3TonnesWidthOk" />
+            <ScalarProperty Name="CC3TonnesLengthOk" ColumnName="CC3TonnesLengthOk" />
+            <ScalarProperty Name="CC3TonnesRFT" ColumnName="CC3TonnesRFT" />
+            <ScalarProperty Name="CC3TonnesAppliedTGrade" ColumnName="CC3TonnesAppliedTGrade" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="SlabStocks">
+            <EntityTypeMapping TypeName="OasisSchema.SlabStock">
+              <MappingFragment StoreEntitySet="SlabStocks">
+                <ScalarProperty Name="AVE_EVENTS" ColumnName="AVE_EVENTS" />
+                <ScalarProperty Name="AVE_DWELL" ColumnName="AVE_DWELL" />
+                <ScalarProperty Name="GRIDDED" ColumnName="GRIDDED" />
+                <ScalarProperty Name="ONSCHED" ColumnName="ONSCHED" />
+                <ScalarProperty Name="TAPERED" ColumnName="TAPERED" />
+                <ScalarProperty Name="CONCESSION" ColumnName="CONCESSION" />
+                <ScalarProperty Name="UNAPPLIED_LL" ColumnName="UNAPPLIED_LL" />
+                <ScalarProperty Name="UNAPPLIED_PT" ColumnName="UNAPPLIED_PT" />
+                <ScalarProperty Name="UNAPPLIED" ColumnName="UNAPPLIED" />
+                <ScalarProperty Name="APPLIED_LL" ColumnName="APPLIED_LL" />
+                <ScalarProperty Name="APPLIED_PT" ColumnName="APPLIED_PT" />
+                <ScalarProperty Name="APPLIED" ColumnName="APPLIED" />
+                <ScalarProperty Name="HELD" ColumnName="HELD" />
+                <ScalarProperty Name="PROCESSING" ColumnName="PROCESSING" />
+                <ScalarProperty Name="FREETOROLL" ColumnName="FREETOROLL" />
+                <ScalarProperty Name="IW_STOCK" ColumnName="IW_STOCK" />
+                <ScalarProperty Name="LL_STOCK" ColumnName="LL_STOCK" />
+                <ScalarProperty Name="PT_STOCK" ColumnName="PT_STOCK" />
+                <ScalarProperty Name="SLAB_STOCK" ColumnName="SLAB_STOCK" />
+                <ScalarProperty Name="LSTT" ColumnName="LSTT" />
+                <ScalarProperty Name="LSTD" ColumnName="LSTD" />
+                <ScalarProperty Name="SSDate" ColumnName="SSDate" />
+                <ScalarProperty Name="SSIndex" ColumnName="SSIndex" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HotConnects">
+            <EntityTypeMapping TypeName="OasisSchema.HotConnect">
+              <MappingFragment StoreEntitySet="HotConnect">
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="HotConnectFlag" ColumnName="HotConnectFlag" />
+                <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+                <ScalarProperty Name="HNS" ColumnName="HNS" />
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="HCId" ColumnName="HCId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ElvisOasisSchema" ZoomLevel="64">
+        <EntityTypeShape EntityType="OasisSchema.RFTData" Width="1.5" PointX="0.5" PointY="0.5" Height="10.467062174479166" IsExpanded="true" />
+        <EntityTypeShape EntityType="OasisSchema.SlabStock" Width="1.5" PointX="3.375" PointY="0.75" Height="5.4417122395833317" />
+        <EntityTypeShape EntityType="OasisSchema.HotConnect" Width="1.5" PointX="5.375" PointY="0.75" Height="1.9210009765624996" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

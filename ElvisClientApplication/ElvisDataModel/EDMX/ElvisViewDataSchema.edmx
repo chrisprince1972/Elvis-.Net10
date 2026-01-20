@@ -1,0 +1,1595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ViewDataSchemaEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ViewDataSchemaEntitiesStoreContainer">
+          <EntitySet Name="CastTimes" EntityType="ViewDataSchemaEntities.Store.CastTimes" store:Type="Views" store:Schema="ViewData" store:Name="CastTimes">
+            <DefiningQuery>SELECT 
+      [CastTimes].[HeatNumber] AS [HeatNumber], 
+      [CastTimes].[HNS] AS [HNS], 
+      [CastTimes].[StartCast] AS [StartCast], 
+      [CastTimes].[EndCast] AS [EndCast], 
+      [CastTimes].[UnitNumber] AS [UnitNumber]
+      FROM [ViewData].[CastTimes] AS [CastTimes]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="DailyPlanCasterHeats" EntityType="ViewDataSchemaEntities.Store.DailyPlanCasterHeats" store:Type="Views" store:Schema="ViewData" store:Name="DailyPlanCasterHeats">
+            <DefiningQuery>SELECT 
+      [DailyPlanCasterHeats].[FixDate] AS [FixDate], 
+      [DailyPlanCasterHeats].[AimGenIndex] AS [AimGenIndex], 
+      [DailyPlanCasterHeats].[BestCastTime] AS [BestCastTime], 
+      [DailyPlanCasterHeats].[PROGRAM_NUMBER] AS [PROGRAM_NUMBER], 
+      [DailyPlanCasterHeats].[GRADE_1] AS [GRADE_1], 
+      [DailyPlanCasterHeats].[CASTER_NUMBER] AS [CASTER_NUMBER], 
+      [DailyPlanCasterHeats].[PLANNED_START_CAST_TIME] AS [PLANNED_START_CAST_TIME], 
+      [DailyPlanCasterHeats].[PLANNED_END_CAST_TIME] AS [PLANNED_END_CAST_TIME], 
+      [DailyPlanCasterHeats].[PlannedCastTime] AS [PlannedCastTime], 
+      [DailyPlanCasterHeats].[HEAT_NUMBER] AS [HEAT_NUMBER], 
+      [DailyPlanCasterHeats].[HNS] AS [HNS]
+      FROM [ViewData].[DailyPlanCasterHeats] AS [DailyPlanCasterHeats]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="HMDesulphTrackTibView" EntityType="ViewDataSchemaEntities.Store.HMDesulphTrackTibView" store:Type="Views" store:Schema="ViewData" store:Name="HMDesulphTrackTibView">
+            <DefiningQuery>SELECT 
+      [HMDesulphTrackTibView].[HMDesIndex] AS [HMDesIndex], 
+      [HMDesulphTrackTibView].[HeatNumber] AS [HeatNumber], 
+      [HMDesulphTrackTibView].[HNS] AS [HNS], 
+      [HMDesulphTrackTibView].[UnitNumber] AS [UnitNumber], 
+      [HMDesulphTrackTibView].[UnitShort] AS [UnitShort], 
+      [HMDesulphTrackTibView].[TrackingStart] AS [TrackingStart], 
+      [HMDesulphTrackTibView].[TrackingEnd] AS [TrackingEnd], 
+      [HMDesulphTrackTibView].[TrackingDuration] AS [TrackingDuration], 
+      [HMDesulphTrackTibView].[StartSulphur] AS [StartSulphur], 
+      [HMDesulphTrackTibView].[AimSulphur] AS [AimSulphur], 
+      [HMDesulphTrackTibView].[LastTemperature] AS [LastTemperature], 
+      [HMDesulphTrackTibView].[InjectionCount] AS [InjectionCount], 
+      [HMDesulphTrackTibView].[SkimCount] AS [SkimCount], 
+      [HMDesulphTrackTibView].[LimeTotal] AS [LimeTotal], 
+      [HMDesulphTrackTibView].[MgTotal] AS [MgTotal], 
+      [HMDesulphTrackTibView].[TibProdStart] AS [TibProdStart], 
+      [HMDesulphTrackTibView].[TibProdEnd] AS [TibProdEnd], 
+      [HMDesulphTrackTibView].[TIbProdDuration] AS [TIbProdDuration], 
+      [HMDesulphTrackTibView].[TibProdDelayStart] AS [TibProdDelayStart], 
+      [HMDesulphTrackTibView].[TibProdDelayEnd] AS [TibProdDelayEnd], 
+      [HMDesulphTrackTibView].[TibProdDelayDuration] AS [TibProdDelayDuration], 
+      [HMDesulphTrackTibView].[StartTreatment] AS [StartTreatment], 
+      [HMDesulphTrackTibView].[EndTreatment] AS [EndTreatment], 
+      [HMDesulphTrackTibView].[TreatmentDuration] AS [TreatmentDuration]
+      FROM [ViewData].[HMDesulphTrackTibView] AS [HMDesulphTrackTibView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="HMDesulphTrackTibView2" EntityType="ViewDataSchemaEntities.Store.HMDesulphTrackTibView2" store:Type="Views" store:Schema="ViewData" store:Name="HMDesulphTrackTibView2">
+            <DefiningQuery>SELECT 
+      [HMDesulphTrackTibView2].[TrackIndex] AS [TrackIndex], 
+      [HMDesulphTrackTibView2].[HeatNumber] AS [HeatNumber], 
+      [HMDesulphTrackTibView2].[HNS] AS [HNS], 
+      [HMDesulphTrackTibView2].[UnitNumber] AS [UnitNumber], 
+      [HMDesulphTrackTibView2].[UnitShort] AS [UnitShort], 
+      [HMDesulphTrackTibView2].[TrackingStart] AS [TrackingStart], 
+      [HMDesulphTrackTibView2].[TrackingEnd] AS [TrackingEnd], 
+      [HMDesulphTrackTibView2].[TrackingDuration] AS [TrackingDuration], 
+      [HMDesulphTrackTibView2].[StartSulphur] AS [StartSulphur], 
+      [HMDesulphTrackTibView2].[AimSulphur] AS [AimSulphur], 
+      [HMDesulphTrackTibView2].[TreatmentCount] AS [TreatmentCount], 
+      [HMDesulphTrackTibView2].[SkimCount] AS [SkimCount], 
+      [HMDesulphTrackTibView2].[LimeTotal] AS [LimeTotal], 
+      [HMDesulphTrackTibView2].[MgTotal] AS [MgTotal], 
+      [HMDesulphTrackTibView2].[TibProdStart] AS [TibProdStart], 
+      [HMDesulphTrackTibView2].[TibProdEnd] AS [TibProdEnd], 
+      [HMDesulphTrackTibView2].[TibProdDuration] AS [TibProdDuration], 
+      [HMDesulphTrackTibView2].[TibProdDelayStart] AS [TibProdDelayStart], 
+      [HMDesulphTrackTibView2].[TibProdDelayEnd] AS [TibProdDelayEnd], 
+      [HMDesulphTrackTibView2].[TibProdDelayDuration] AS [TibProdDelayDuration]
+      FROM [ViewData].[HMDesulphTrackTibView2] AS [HMDesulphTrackTibView2]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="HMDesulphTreatments" EntityType="ViewDataSchemaEntities.Store.HMDesulphTreatments" store:Type="Views" store:Schema="ViewData" store:Name="HMDesulphTreatments">
+            <DefiningQuery>SELECT 
+      [HMDesulphTreatments].[TreatmentIndex] AS [TreatmentIndex], 
+      [HMDesulphTreatments].[HeatNumber] AS [HeatNumber], 
+      [HMDesulphTreatments].[HNS] AS [HNS], 
+      [HMDesulphTreatments].[UnitShort] AS [UnitShort], 
+      [HMDesulphTreatments].[TimeStampStart] AS [TimeStampStart], 
+      [HMDesulphTreatments].[TimeStampEnd] AS [TimeStampEnd], 
+      [HMDesulphTreatments].[TreatmentDuration] AS [TreatmentDuration], 
+      [HMDesulphTreatments].[TreatmentText] AS [TreatmentText], 
+      [HMDesulphTreatments].[TapShift] AS [TapShift], 
+      [HMDesulphTreatments].[TapYear] AS [TapYear], 
+      [HMDesulphTreatments].[TapWeek] AS [TapWeek], 
+      [HMDesulphTreatments].[TapDay] AS [TapDay], 
+      [HMDesulphTreatments].[TapRota] AS [TapRota]
+      FROM [ViewData].[HMDesulphTreatments] AS [HMDesulphTreatments]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="HMPourTrackTibView" EntityType="ViewDataSchemaEntities.Store.HMPourTrackTibView" store:Type="Views" store:Schema="ViewData" store:Name="HMPourTrackTibView">
+            <DefiningQuery>SELECT 
+      [HMPourTrackTibView].[HMPourIndex] AS [HMPourIndex], 
+      [HMPourTrackTibView].[HeatNumber] AS [HeatNumber], 
+      [HMPourTrackTibView].[HNS] AS [HNS], 
+      [HMPourTrackTibView].[UnitNumber] AS [UnitNumber], 
+      [HMPourTrackTibView].[UnitShort] AS [UnitShort], 
+      [HMPourTrackTibView].[TrackingStart] AS [TrackingStart], 
+      [HMPourTrackTibView].[TrackingEnd] AS [TrackingEnd], 
+      [HMPourTrackTibView].[TrackDur] AS [TrackDur], 
+      [HMPourTrackTibView].[TibProdStart] AS [TibProdStart], 
+      [HMPourTrackTibView].[TibProdEnd] AS [TibProdEnd], 
+      [HMPourTrackTibView].[TibProdDuration] AS [TibProdDuration], 
+      [HMPourTrackTibView].[TibProdDelayStart] AS [TibProdDelayStart], 
+      [HMPourTrackTibView].[TibProdDelayEnd] AS [TibProdDelayEnd], 
+      [HMPourTrackTibView].[TibProdDelayDuration] AS [TibProdDelayDuration]
+      FROM [ViewData].[HMPourTrackTibView] AS [HMPourTrackTibView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TapTimes" EntityType="ViewDataSchemaEntities.Store.TapTimes" store:Type="Views" store:Schema="ViewData" store:Name="TapTimes">
+            <DefiningQuery>SELECT 
+      [TapTimes].[HeatNumber] AS [HeatNumber], 
+      [TapTimes].[HNS] AS [HNS], 
+      [TapTimes].[StartTap] AS [StartTap]
+      FROM [ViewData].[TapTimes] AS [TapTimes]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ThreeMonthProd" EntityType="ViewDataSchemaEntities.Store.ThreeMonthProd" store:Type="Views" store:Schema="ViewData" store:Name="ThreeMonthProd">
+            <DefiningQuery>SELECT 
+      [ThreeMonthProd].[Heat] AS [Heat], 
+      [ThreeMonthProd].[HNS] AS [HNS], 
+      [ThreeMonthProd].[Grade] AS [Grade], 
+      [ThreeMonthProd].[Ladle] AS [Ladle], 
+      [ThreeMonthProd].[Caster] AS [Caster], 
+      [ThreeMonthProd].[StartBlow] AS [StartBlow], 
+      [ThreeMonthProd].[StartTap] AS [StartTap], 
+      [ThreeMonthProd].[StartCast] AS [StartCast], 
+      [ThreeMonthProd].[EndCast] AS [EndCast], 
+      [ThreeMonthProd].[DwellTime] AS [DwellTime]
+      FROM [ViewData].[ThreeMonthProd] AS [ThreeMonthProd]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TibOEEReport" EntityType="ViewDataSchemaEntities.Store.TibOEEReport" store:Type="Views" store:Schema="ViewData" store:Name="TibOEEReport">
+            <DefiningQuery>SELECT 
+      [TibOEEReport].[TibIndex] AS [TibIndex], 
+      [TibOEEReport].[UnitNumber] AS [UnitNumber], 
+      [TibOEEReport].[UnitShort] AS [UnitShort], 
+      [TibOEEReport].[UnitGroup] AS [UnitGroup], 
+      [TibOEEReport].[UnitGroupText] AS [UnitGroupText], 
+      [TibOEEReport].[HeatNumber] AS [HeatNumber], 
+      [TibOEEReport].[HNS] AS [HNS], 
+      [TibOEEReport].[ProgramNumber] AS [ProgramNumber], 
+      [TibOEEReport].[EventStart] AS [EventStart], 
+      [TibOEEReport].[EventEnd] AS [EventEnd], 
+      [TibOEEReport].[TibDuration] AS [TibDuration], 
+      [TibOEEReport].[TibStatus] AS [TibStatus], 
+      [TibOEEReport].[TIBStatusDescription] AS [TIBStatusDescription], 
+      [TibOEEReport].[DelayNumber] AS [DelayNumber], 
+      [TibOEEReport].[DelayStart] AS [DelayStart], 
+      [TibOEEReport].[DelayEnd] AS [DelayEnd], 
+      [TibOEEReport].[DelayDuration] AS [DelayDuration], 
+      [TibOEEReport].[PlantArea] AS [PlantArea], 
+      [TibOEEReport].[DelayReason1] AS [DelayReason1], 
+      [TibOEEReport].[DelayReason2] AS [DelayReason2], 
+      [TibOEEReport].[DelayReason3] AS [DelayReason3], 
+      [TibOEEReport].[DelayReason4] AS [DelayReason4], 
+      [TibOEEReport].[DelayClass] AS [DelayClass], 
+      [TibOEEReport].[TIBClassText] AS [TIBClassText], 
+      [TibOEEReport].[Category] AS [Category], 
+      [TibOEEReport].[TIBCategoryText] AS [TIBCategoryText], 
+      [TibOEEReport].[Discipline] AS [Discipline], 
+      [TibOEEReport].[TIBDisText] AS [TIBDisText], 
+      [TibOEEReport].[Comment] AS [Comment], 
+      [TibOEEReport].[TibDelayIndex] AS [TibDelayIndex], 
+      [TibOEEReport].[YearNumber] AS [YearNumber], 
+      [TibOEEReport].[WeekNumber] AS [WeekNumber], 
+      [TibOEEReport].[DayNumber] AS [DayNumber], 
+      [TibOEEReport].[Shift] AS [Shift], 
+      [TibOEEReport].[Rota] AS [Rota], 
+      [TibOEEReport].[UnitText] AS [UnitText], 
+      [TibOEEReport].[OEECategory] AS [OEECategory], 
+      [TibOEEReport].[LossType] AS [LossType], 
+      [TibOEEReport].[Owner] AS [Owner], 
+      [TibOEEReport].[ReportingTextLevel1] AS [ReportingTextLevel1], 
+      [TibOEEReport].[ReportingTextLevel2] AS [ReportingTextLevel2], 
+      [TibOEEReport].[ObjectDescription] AS [ObjectDescription], 
+      [TibOEEReport].[ObjectCode] AS [ObjectCode], 
+      [TibOEEReport].[DamageDescription] AS [DamageDescription], 
+      [TibOEEReport].[DamageCode] AS [DamageCode], 
+      [TibOEEReport].[DeviationType] AS [DeviationType], 
+      [TibOEEReport].[CauseText] AS [CauseText], 
+      [TibOEEReport].[Section] AS [Section], 
+      [TibOEEReport].[ExternalInternal] AS [ExternalInternal], 
+      [TibOEEReport].[SupplierDownStream] AS [SupplierDownStream], 
+      [TibOEEReport].[NoExtraWork] AS [NoExtraWork], 
+      [TibOEEReport].[FlocDescriptionL3] AS [FlocDescriptionL3], 
+      [TibOEEReport].[FlocNumberL3] AS [FlocNumberL3], 
+      [TibOEEReport].[FlocDescriptionL4] AS [FlocDescriptionL4], 
+      [TibOEEReport].[FlocNumberL4] AS [FlocNumberL4], 
+      [TibOEEReport].[FlocDescriptionL5] AS [FlocDescriptionL5], 
+      [TibOEEReport].[FlocNumberL5] AS [FlocNumberL5]
+      FROM [ViewData].[TibOEEReport] AS [TibOEEReport]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TIBReasonsView" EntityType="ViewDataSchemaEntities.Store.TIBReasonsView" store:Type="Views" store:Schema="ViewData" store:Name="TIBReasonsView">
+            <DefiningQuery>SELECT 
+      [TIBReasonsView].[ReasonIndex] AS [ReasonIndex], 
+      [TIBReasonsView].[DelayIndex] AS [DelayIndex], 
+      [TIBReasonsView].[UnitGroup] AS [UnitGroup], 
+      [TIBReasonsView].[PlantArea] AS [PlantArea], 
+      [TIBReasonsView].[DelayReason1] AS [DelayReason1], 
+      [TIBReasonsView].[DelayReason2] AS [DelayReason2], 
+      [TIBReasonsView].[DelayReason3] AS [DelayReason3], 
+      [TIBReasonsView].[DelayReason4] AS [DelayReason4], 
+      [TIBReasonsView].[DelayClass] AS [DelayClass], 
+      [TIBReasonsView].[Category] AS [Category], 
+      [TIBReasonsView].[Discipline] AS [Discipline], 
+      [TIBReasonsView].[TIBClassIndex] AS [TIBClassIndex], 
+      [TIBReasonsView].[TIBClassText] AS [TIBClassText], 
+      [TIBReasonsView].[TIBDisIndex] AS [TIBDisIndex], 
+      [TIBReasonsView].[TIBDisText] AS [TIBDisText], 
+      [TIBReasonsView].[OEECategory] AS [OEECategory], 
+      [TIBReasonsView].[LossType] AS [LossType], 
+      [TIBReasonsView].[Owner] AS [Owner], 
+      [TIBReasonsView].[ReportingTextLevel1] AS [ReportingTextLevel1], 
+      [TIBReasonsView].[ReportingTextLevel2] AS [ReportingTextLevel2], 
+      [TIBReasonsView].[ObjectDescription] AS [ObjectDescription], 
+      [TIBReasonsView].[ObjectCode] AS [ObjectCode], 
+      [TIBReasonsView].[DamageDescription] AS [DamageDescription], 
+      [TIBReasonsView].[DamageCode] AS [DamageCode], 
+      [TIBReasonsView].[DeviationType] AS [DeviationType], 
+      [TIBReasonsView].[CauseText] AS [CauseText], 
+      [TIBReasonsView].[Section] AS [Section], 
+      [TIBReasonsView].[ExternalInternal] AS [ExternalInternal], 
+      [TIBReasonsView].[SupplierDownStream] AS [SupplierDownStream], 
+      [TIBReasonsView].[NoExtraWork] AS [NoExtraWork], 
+      [TIBReasonsView].[FlocDescriptionL3] AS [FlocDescriptionL3], 
+      [TIBReasonsView].[FlocNumberL3] AS [FlocNumberL3], 
+      [TIBReasonsView].[FlocDescriptionL4] AS [FlocDescriptionL4], 
+      [TIBReasonsView].[FlocNumberL4] AS [FlocNumberL4], 
+      [TIBReasonsView].[FlocDescriptionL5] AS [FlocDescriptionL5], 
+      [TIBReasonsView].[FlocNumberL5] AS [FlocNumberL5], 
+      [TIBReasonsView].[UnitGroupText] AS [UnitGroupText], 
+      [TIBReasonsView].[TIBCategoryText] AS [TIBCategoryText]
+      FROM [ViewData].[TIBReasonsView] AS [TIBReasonsView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TibReportDelaysView" EntityType="ViewDataSchemaEntities.Store.TibReportDelaysView" store:Type="Views" store:Schema="ViewData" store:Name="TibReportDelaysView">
+            <DefiningQuery>SELECT 
+      [TibReportDelaysView].[TibIndex] AS [TibIndex], 
+      [TibReportDelaysView].[TibReportsDelayViewID] AS [TibReportsDelayViewID], 
+      [TibReportDelaysView].[UnitNumber] AS [UnitNumber], 
+      [TibReportDelaysView].[UnitShort] AS [UnitShort], 
+      [TibReportDelaysView].[UnitText] AS [UnitText], 
+      [TibReportDelaysView].[UnitGroup] AS [UnitGroup], 
+      [TibReportDelaysView].[UnitGroupText] AS [UnitGroupText], 
+      [TibReportDelaysView].[HeatNumber] AS [HeatNumber], 
+      [TibReportDelaysView].[HNS] AS [HNS], 
+      [TibReportDelaysView].[ProgramNumber] AS [ProgramNumber], 
+      [TibReportDelaysView].[EventStart] AS [EventStart], 
+      [TibReportDelaysView].[EventEnd] AS [EventEnd], 
+      [TibReportDelaysView].[TibDuration] AS [TibDuration], 
+      [TibReportDelaysView].[TibStatus] AS [TibStatus], 
+      [TibReportDelaysView].[TIBStatusDescription] AS [TIBStatusDescription], 
+      [TibReportDelaysView].[DelayNumber] AS [DelayNumber], 
+      [TibReportDelaysView].[DelayStart] AS [DelayStart], 
+      [TibReportDelaysView].[DelayEnd] AS [DelayEnd], 
+      [TibReportDelaysView].[DelayDuration] AS [DelayDuration], 
+      [TibReportDelaysView].[PlantArea] AS [PlantArea], 
+      [TibReportDelaysView].[DelayReason1] AS [DelayReason1], 
+      [TibReportDelaysView].[DelayReason2] AS [DelayReason2], 
+      [TibReportDelaysView].[DelayReason3] AS [DelayReason3], 
+      [TibReportDelaysView].[DelayReason4] AS [DelayReason4], 
+      [TibReportDelaysView].[DelayClass] AS [DelayClass], 
+      [TibReportDelaysView].[TIBClassText] AS [TIBClassText], 
+      [TibReportDelaysView].[Category] AS [Category], 
+      [TibReportDelaysView].[TIBCategoryText] AS [TIBCategoryText], 
+      [TibReportDelaysView].[Discipline] AS [Discipline], 
+      [TibReportDelaysView].[TIBDisText] AS [TIBDisText], 
+      [TibReportDelaysView].[Comment] AS [Comment], 
+      [TibReportDelaysView].[TibDelayIndex] AS [TibDelayIndex], 
+      [TibReportDelaysView].[DayNumber] AS [DayNumber], 
+      [TibReportDelaysView].[TataYear] AS [TataYear], 
+      [TibReportDelaysView].[TataWeek] AS [TataWeek], 
+      [TibReportDelaysView].[Shift] AS [Shift], 
+      [TibReportDelaysView].[Rota] AS [Rota]
+      FROM [ViewData].[TibReportDelaysView] AS [TibReportDelaysView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TibReportsView" EntityType="ViewDataSchemaEntities.Store.TibReportsView" store:Type="Views" store:Schema="ViewData" store:Name="TibReportsView">
+            <DefiningQuery>SELECT 
+      [TibReportsView].[TibIndex] AS [TibIndex], 
+      [TibReportsView].[UnitNumber] AS [UnitNumber], 
+      [TibReportsView].[UnitShort] AS [UnitShort], 
+      [TibReportsView].[UnitGroup] AS [UnitGroup], 
+      [TibReportsView].[UnitGroupText] AS [UnitGroupText], 
+      [TibReportsView].[HeatNumber] AS [HeatNumber], 
+      [TibReportsView].[HNS] AS [HNS], 
+      [TibReportsView].[ProgramNumber] AS [ProgramNumber], 
+      [TibReportsView].[EventStart] AS [EventStart], 
+      [TibReportsView].[EventEnd] AS [EventEnd], 
+      [TibReportsView].[TibDuration] AS [TibDuration], 
+      [TibReportsView].[TibStatus] AS [TibStatus], 
+      [TibReportsView].[TIBStatusDescription] AS [TIBStatusDescription], 
+      [TibReportsView].[DelayNumber] AS [DelayNumber], 
+      [TibReportsView].[DelayStart] AS [DelayStart], 
+      [TibReportsView].[DelayEnd] AS [DelayEnd], 
+      [TibReportsView].[DelayDuration] AS [DelayDuration], 
+      [TibReportsView].[PlantArea] AS [PlantArea], 
+      [TibReportsView].[DelayReason1] AS [DelayReason1], 
+      [TibReportsView].[DelayReason2] AS [DelayReason2], 
+      [TibReportsView].[DelayReason3] AS [DelayReason3], 
+      [TibReportsView].[DelayReason4] AS [DelayReason4], 
+      [TibReportsView].[DelayClass] AS [DelayClass], 
+      [TibReportsView].[TIBClassText] AS [TIBClassText], 
+      [TibReportsView].[Category] AS [Category], 
+      [TibReportsView].[TIBCategoryText] AS [TIBCategoryText], 
+      [TibReportsView].[Discipline] AS [Discipline], 
+      [TibReportsView].[TIBDisText] AS [TIBDisText], 
+      [TibReportsView].[Comment] AS [Comment], 
+      [TibReportsView].[TibDelayIndex] AS [TibDelayIndex], 
+      [TibReportsView].[YearNumber] AS [YearNumber], 
+      [TibReportsView].[WeekNumber] AS [WeekNumber], 
+      [TibReportsView].[DayNumber] AS [DayNumber], 
+      [TibReportsView].[Shift] AS [Shift], 
+      [TibReportsView].[Rota] AS [Rota], 
+      [TibReportsView].[UnitText] AS [UnitText]
+      FROM [ViewData].[TibReportsView] AS [TibReportsView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TibTimeInProductionView" EntityType="ViewDataSchemaEntities.Store.TibTimeInProductionView" store:Type="Views" store:Schema="ViewData" store:Name="TibTimeInProductionView">
+            <DefiningQuery>SELECT 
+      [TibTimeInProductionView].[TibIndex] AS [TibIndex], 
+      [TibTimeInProductionView].[UnitGroup] AS [UnitGroup], 
+      [TibTimeInProductionView].[TibDuration] AS [TibDuration], 
+      [TibTimeInProductionView].[UnitText] AS [UnitText], 
+      [TibTimeInProductionView].[EventStart] AS [EventStart], 
+      [TibTimeInProductionView].[EventEnd] AS [EventEnd], 
+      [TibTimeInProductionView].[UnitNumber] AS [UnitNumber], 
+      [TibTimeInProductionView].[UnitGroupSort] AS [UnitGroupSort]
+      FROM [ViewData].[TibTimeInProductionView] AS [TibTimeInProductionView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TibUnitTimeInProductionView" EntityType="ViewDataSchemaEntities.Store.TibUnitTimeInProductionView" store:Type="Views" store:Schema="ViewData" store:Name="TibUnitTimeInProductionView">
+            <DefiningQuery>SELECT 
+      [TibUnitTimeInProductionView].[TibIndex] AS [TibIndex], 
+      [TibUnitTimeInProductionView].[UnitGroup] AS [UnitGroup], 
+      [TibUnitTimeInProductionView].[TibDuration] AS [TibDuration], 
+      [TibUnitTimeInProductionView].[YearNumber] AS [YearNumber], 
+      [TibUnitTimeInProductionView].[WeekNumber] AS [WeekNumber], 
+      [TibUnitTimeInProductionView].[DayNumber] AS [DayNumber], 
+      [TibUnitTimeInProductionView].[UnitText] AS [UnitText]
+      FROM [ViewData].[TibUnitTimeInProductionView] AS [TibUnitTimeInProductionView]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="TwoWeekProd" EntityType="ViewDataSchemaEntities.Store.TwoWeekProd" store:Type="Views" store:Schema="ViewData" store:Name="TwoWeekProd">
+            <DefiningQuery>SELECT 
+      [TwoWeekProd].[Heat] AS [Heat], 
+      [TwoWeekProd].[HNS] AS [HNS], 
+      [TwoWeekProd].[Grade] AS [Grade], 
+      [TwoWeekProd].[Ladle] AS [Ladle], 
+      [TwoWeekProd].[Caster] AS [Caster], 
+      [TwoWeekProd].[StartBlow] AS [StartBlow], 
+      [TwoWeekProd].[StartTap] AS [StartTap], 
+      [TwoWeekProd].[StartCast] AS [StartCast], 
+      [TwoWeekProd].[EndCast] AS [EndCast], 
+      [TwoWeekProd].[DwellTime] AS [DwellTime]
+      FROM [ViewData].[TwoWeekProd] AS [TwoWeekProd]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.CastTimes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="CastTimes">
+          <Key>
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+            <PropertyRef Name="StartCast" />
+            <PropertyRef Name="UnitNumber" />
+          </Key>
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="StartCast" Type="datetime" Nullable="false" />
+          <Property Name="EndCast" Type="datetime" />
+          <Property Name="UnitNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.DailyPlanCasterHeats' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="DailyPlanCasterHeats">
+          <Key>
+            <PropertyRef Name="FixDate" />
+            <PropertyRef Name="HEAT_NUMBER" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="FixDate" Type="datetime" Nullable="false" />
+          <Property Name="AimGenIndex" Type="int" />
+          <Property Name="BestCastTime" Type="int" />
+          <Property Name="PROGRAM_NUMBER" Type="smallint" />
+          <Property Name="GRADE_1" Type="smallint" />
+          <Property Name="CASTER_NUMBER" Type="smallint" />
+          <Property Name="PLANNED_START_CAST_TIME" Type="datetime" />
+          <Property Name="PLANNED_END_CAST_TIME" Type="datetime" />
+          <Property Name="PlannedCastTime" Type="smallint" />
+          <Property Name="HEAT_NUMBER" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.HMDesulphTrackTibView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="HMDesulphTrackTibView">
+          <Key>
+            <PropertyRef Name="HMDesIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="HMDesIndex" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="UnitNumber" Type="int" />
+          <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+          <Property Name="TrackingStart" Type="datetime" />
+          <Property Name="TrackingEnd" Type="datetime" />
+          <Property Name="TrackingDuration" Type="int" />
+          <Property Name="StartSulphur" Type="real" />
+          <Property Name="AimSulphur" Type="real" />
+          <Property Name="LastTemperature" Type="real" />
+          <Property Name="InjectionCount" Type="int" />
+          <Property Name="SkimCount" Type="int" />
+          <Property Name="LimeTotal" Type="real" />
+          <Property Name="MgTotal" Type="real" />
+          <Property Name="TibProdStart" Type="datetime" />
+          <Property Name="TibProdEnd" Type="datetime" />
+          <Property Name="TIbProdDuration" Type="int" />
+          <Property Name="TibProdDelayStart" Type="datetime" />
+          <Property Name="TibProdDelayEnd" Type="datetime" />
+          <Property Name="TibProdDelayDuration" Type="int" />
+          <Property Name="StartTreatment" Type="datetime" />
+          <Property Name="EndTreatment" Type="datetime" />
+          <Property Name="TreatmentDuration" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.HMDesulphTrackTibView2' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="HMDesulphTrackTibView2">
+          <Key>
+            <PropertyRef Name="TrackIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+            <PropertyRef Name="UnitNumber" />
+            <PropertyRef Name="TrackingStart" />
+          </Key>
+          <Property Name="TrackIndex" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="UnitNumber" Type="int" Nullable="false" />
+          <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+          <Property Name="TrackingStart" Type="datetime" Nullable="false" />
+          <Property Name="TrackingEnd" Type="datetime" />
+          <Property Name="TrackingDuration" Type="int" />
+          <Property Name="StartSulphur" Type="real" />
+          <Property Name="AimSulphur" Type="real" />
+          <Property Name="TreatmentCount" Type="int" />
+          <Property Name="SkimCount" Type="int" />
+          <Property Name="LimeTotal" Type="real" />
+          <Property Name="MgTotal" Type="real" />
+          <Property Name="TibProdStart" Type="datetime" />
+          <Property Name="TibProdEnd" Type="datetime" />
+          <Property Name="TibProdDuration" Type="int" />
+          <Property Name="TibProdDelayStart" Type="datetime" />
+          <Property Name="TibProdDelayEnd" Type="datetime" />
+          <Property Name="TibProdDelayDuration" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.HMDesulphTreatments' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="HMDesulphTreatments">
+          <Key>
+            <PropertyRef Name="TreatmentIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="TreatmentIndex" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+          <Property Name="TimeStampStart" Type="datetime" />
+          <Property Name="TimeStampEnd" Type="datetime" />
+          <Property Name="TreatmentDuration" Type="int" />
+          <Property Name="TreatmentText" Type="varchar" MaxLength="100" />
+          <Property Name="TapShift" Type="varchar" MaxLength="10" />
+          <Property Name="TapYear" Type="int" />
+          <Property Name="TapWeek" Type="int" />
+          <Property Name="TapDay" Type="int" />
+          <Property Name="TapRota" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.HMPourTrackTibView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="HMPourTrackTibView">
+          <Key>
+            <PropertyRef Name="HMPourIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="HMPourIndex" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="UnitNumber" Type="int" />
+          <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+          <Property Name="TrackingStart" Type="datetime" />
+          <Property Name="TrackingEnd" Type="datetime" />
+          <Property Name="TrackDur" Type="int" />
+          <Property Name="TibProdStart" Type="datetime" />
+          <Property Name="TibProdEnd" Type="datetime" />
+          <Property Name="TibProdDuration" Type="int" />
+          <Property Name="TibProdDelayStart" Type="datetime" />
+          <Property Name="TibProdDelayEnd" Type="datetime" />
+          <Property Name="TibProdDelayDuration" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.TapTimes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TapTimes">
+          <Key>
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="StartTap" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.ThreeMonthProd' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="ThreeMonthProd">
+          <Key>
+            <PropertyRef Name="Heat" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="Heat" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="Grade" Type="smallint" />
+          <Property Name="Ladle" Type="smallint" />
+          <Property Name="Caster" Type="smallint" />
+          <Property Name="StartBlow" Type="datetime" />
+          <Property Name="StartTap" Type="datetime" />
+          <Property Name="StartCast" Type="datetime" />
+          <Property Name="EndCast" Type="datetime" />
+          <Property Name="DwellTime" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.TibOEEReport' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TibOEEReport">
+          <Key>
+            <PropertyRef Name="TibIndex" />
+            <PropertyRef Name="UnitNumber" />
+            <PropertyRef Name="DelayNumber" />
+            <PropertyRef Name="TibDelayIndex" />
+          </Key>
+          <Property Name="TibIndex" Type="int" Nullable="false" />
+          <Property Name="UnitNumber" Type="int" Nullable="false" />
+          <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+          <Property Name="UnitGroup" Type="int" />
+          <Property Name="UnitGroupText" Type="varchar" MaxLength="50" />
+          <Property Name="HeatNumber" Type="int" />
+          <Property Name="HNS" Type="int" />
+          <Property Name="ProgramNumber" Type="int" />
+          <Property Name="EventStart" Type="datetime" />
+          <Property Name="EventEnd" Type="datetime" />
+          <Property Name="TibDuration" Type="int" />
+          <Property Name="TibStatus" Type="int" />
+          <Property Name="TIBStatusDescription" Type="varchar" MaxLength="50" />
+          <Property Name="DelayNumber" Type="int" Nullable="false" />
+          <Property Name="DelayStart" Type="datetime" />
+          <Property Name="DelayEnd" Type="datetime" />
+          <Property Name="DelayDuration" Type="int" />
+          <Property Name="PlantArea" Type="varchar" MaxLength="50" />
+          <Property Name="DelayReason1" Type="varchar" MaxLength="128" />
+          <Property Name="DelayReason2" Type="varchar" MaxLength="128" />
+          <Property Name="DelayReason3" Type="varchar" MaxLength="128" />
+          <Property Name="DelayReason4" Type="varchar" MaxLength="128" />
+          <Property Name="DelayClass" Type="int" />
+          <Property Name="TIBClassText" Type="varchar" MaxLength="30" />
+          <Property Name="Category" Type="int" />
+          <Property Name="TIBCategoryText" Type="varchar" MaxLength="30" />
+          <Property Name="Discipline" Type="int" />
+          <Property Name="TIBDisText" Type="varchar" MaxLength="30" />
+          <Property Name="Comment" Type="varchar(max)" />
+          <Property Name="TibDelayIndex" Type="int" Nullable="false" />
+          <Property Name="YearNumber" Type="int" />
+          <Property Name="WeekNumber" Type="int" />
+          <Property Name="DayNumber" Type="int" />
+          <Property Name="Shift" Type="varchar" MaxLength="10" />
+          <Property Name="Rota" Type="varchar" MaxLength="10" />
+          <Property Name="UnitText" Type="varchar" MaxLength="50" />
+          <Property Name="OEECategory" Type="varchar" MaxLength="100" />
+          <Property Name="LossType" Type="varchar" MaxLength="100" />
+          <Property Name="Owner" Type="varchar" MaxLength="100" />
+          <Property Name="ReportingTextLevel1" Type="varchar" MaxLength="100" />
+          <Property Name="ReportingTextLevel2" Type="varchar" MaxLength="100" />
+          <Property Name="ObjectDescription" Type="varchar" MaxLength="150" />
+          <Property Name="ObjectCode" Type="varchar" MaxLength="150" />
+          <Property Name="DamageDescription" Type="varchar" MaxLength="150" />
+          <Property Name="DamageCode" Type="varchar" MaxLength="150" />
+          <Property Name="DeviationType" Type="varchar" MaxLength="150" />
+          <Property Name="CauseText" Type="varchar" MaxLength="150" />
+          <Property Name="Section" Type="varchar" MaxLength="150" />
+          <Property Name="ExternalInternal" Type="varchar" MaxLength="150" />
+          <Property Name="SupplierDownStream" Type="varchar" MaxLength="150" />
+          <Property Name="NoExtraWork" Type="varchar" MaxLength="150" />
+          <Property Name="FlocDescriptionL3" Type="varchar" MaxLength="150" />
+          <Property Name="FlocNumberL3" Type="varchar" MaxLength="150" />
+          <Property Name="FlocDescriptionL4" Type="varchar" MaxLength="150" />
+          <Property Name="FlocNumberL4" Type="varchar" MaxLength="150" />
+          <Property Name="FlocDescriptionL5" Type="varchar" MaxLength="150" />
+          <Property Name="FlocNumberL5" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.TIBReasonsView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TIBReasonsView">
+          <Key>
+            <PropertyRef Name="ReasonIndex" />
+            <PropertyRef Name="DelayIndex" />
+          </Key>
+          <Property Name="ReasonIndex" Type="int" Nullable="false" />
+          <Property Name="DelayIndex" Type="int" Nullable="false" />
+          <Property Name="UnitGroup" Type="int" />
+          <Property Name="PlantArea" Type="nvarchar" MaxLength="32" />
+          <Property Name="DelayReason1" Type="nvarchar" MaxLength="128" />
+          <Property Name="DelayReason2" Type="nvarchar" MaxLength="128" />
+          <Property Name="DelayReason3" Type="nvarchar" MaxLength="128" />
+          <Property Name="DelayReason4" Type="nvarchar" MaxLength="128" />
+          <Property Name="DelayClass" Type="int" />
+          <Property Name="Category" Type="int" />
+          <Property Name="Discipline" Type="int" />
+          <Property Name="TIBClassIndex" Type="int" />
+          <Property Name="TIBClassText" Type="varchar" MaxLength="30" />
+          <Property Name="TIBDisIndex" Type="int" />
+          <Property Name="TIBDisText" Type="varchar" MaxLength="30" />
+          <Property Name="OEECategory" Type="varchar" MaxLength="100" />
+          <Property Name="LossType" Type="varchar" MaxLength="100" />
+          <Property Name="Owner" Type="varchar" MaxLength="100" />
+          <Property Name="ReportingTextLevel1" Type="varchar" MaxLength="100" />
+          <Property Name="ReportingTextLevel2" Type="varchar" MaxLength="100" />
+          <Property Name="ObjectDescription" Type="varchar" MaxLength="150" />
+          <Property Name="ObjectCode" Type="varchar" MaxLength="150" />
+          <Property Name="DamageDescription" Type="varchar" MaxLength="150" />
+          <Property Name="DamageCode" Type="varchar" MaxLength="150" />
+          <Property Name="DeviationType" Type="varchar" MaxLength="150" />
+          <Property Name="CauseText" Type="varchar" MaxLength="150" />
+          <Property Name="Section" Type="varchar" MaxLength="150" />
+          <Property Name="ExternalInternal" Type="varchar" MaxLength="150" />
+          <Property Name="SupplierDownStream" Type="varchar" MaxLength="150" />
+          <Property Name="NoExtraWork" Type="varchar" MaxLength="150" />
+          <Property Name="FlocDescriptionL3" Type="varchar" MaxLength="150" />
+          <Property Name="FlocNumberL3" Type="varchar" MaxLength="150" />
+          <Property Name="FlocDescriptionL4" Type="varchar" MaxLength="150" />
+          <Property Name="FlocNumberL4" Type="varchar" MaxLength="150" />
+          <Property Name="FlocDescriptionL5" Type="varchar" MaxLength="150" />
+          <Property Name="FlocNumberL5" Type="varchar" MaxLength="150" />
+          <Property Name="UnitGroupText" Type="varchar" MaxLength="50" />
+          <Property Name="TIBCategoryText" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.TibReportDelaysView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TibReportDelaysView">
+          <Key>
+            <PropertyRef Name="TibIndex" />
+            <PropertyRef Name="TibReportsDelayViewID" />
+            <PropertyRef Name="UnitNumber" />
+            <PropertyRef Name="DayNumber" />
+            <PropertyRef Name="TataYear" />
+            <PropertyRef Name="TataWeek" />
+          </Key>
+          <Property Name="TibIndex" Type="int" Nullable="false" />
+          <Property Name="TibReportsDelayViewID" Type="bigint" Nullable="false" />
+          <Property Name="UnitNumber" Type="int" Nullable="false" />
+          <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+          <Property Name="UnitText" Type="varchar" MaxLength="50" />
+          <Property Name="UnitGroup" Type="int" />
+          <Property Name="UnitGroupText" Type="varchar" MaxLength="50" />
+          <Property Name="HeatNumber" Type="int" />
+          <Property Name="HNS" Type="int" />
+          <Property Name="ProgramNumber" Type="int" />
+          <Property Name="EventStart" Type="datetime" />
+          <Property Name="EventEnd" Type="datetime" />
+          <Property Name="TibDuration" Type="int" />
+          <Property Name="TibStatus" Type="int" />
+          <Property Name="TIBStatusDescription" Type="varchar" MaxLength="50" />
+          <Property Name="DelayNumber" Type="int" />
+          <Property Name="DelayStart" Type="datetime" />
+          <Property Name="DelayEnd" Type="datetime" />
+          <Property Name="DelayDuration" Type="int" />
+          <Property Name="PlantArea" Type="varchar" MaxLength="50" />
+          <Property Name="DelayReason1" Type="varchar" MaxLength="128" />
+          <Property Name="DelayReason2" Type="varchar" MaxLength="128" />
+          <Property Name="DelayReason3" Type="varchar" MaxLength="128" />
+          <Property Name="DelayReason4" Type="varchar" MaxLength="128" />
+          <Property Name="DelayClass" Type="int" />
+          <Property Name="TIBClassText" Type="varchar" MaxLength="30" />
+          <Property Name="Category" Type="int" />
+          <Property Name="TIBCategoryText" Type="varchar" MaxLength="30" />
+          <Property Name="Discipline" Type="int" />
+          <Property Name="TIBDisText" Type="varchar" MaxLength="30" />
+          <Property Name="Comment" Type="varchar(max)" />
+          <Property Name="TibDelayIndex" Type="int" />
+          <Property Name="DayNumber" Type="tinyint" Nullable="false" />
+          <Property Name="TataYear" Type="smallint" Nullable="false" />
+          <Property Name="TataWeek" Type="tinyint" Nullable="false" />
+          <Property Name="Shift" Type="varchar" MaxLength="10" />
+          <Property Name="Rota" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.TibReportsView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TibReportsView">
+          <Key>
+            <PropertyRef Name="TibIndex" />
+            <PropertyRef Name="UnitNumber" />
+            <PropertyRef Name="DelayNumber" />
+            <PropertyRef Name="TibDelayIndex" />
+          </Key>
+          <Property Name="TibIndex" Type="int" Nullable="false" />
+          <Property Name="UnitNumber" Type="int" Nullable="false" />
+          <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+          <Property Name="UnitGroup" Type="int" />
+          <Property Name="UnitGroupText" Type="varchar" MaxLength="50" />
+          <Property Name="HeatNumber" Type="int" />
+          <Property Name="HNS" Type="int" />
+          <Property Name="ProgramNumber" Type="int" />
+          <Property Name="EventStart" Type="datetime" />
+          <Property Name="EventEnd" Type="datetime" />
+          <Property Name="TibDuration" Type="int" />
+          <Property Name="TibStatus" Type="int" />
+          <Property Name="TIBStatusDescription" Type="varchar" MaxLength="50" />
+          <Property Name="DelayNumber" Type="int" Nullable="false" />
+          <Property Name="DelayStart" Type="datetime" />
+          <Property Name="DelayEnd" Type="datetime" />
+          <Property Name="DelayDuration" Type="int" />
+          <Property Name="PlantArea" Type="varchar" MaxLength="50" />
+          <Property Name="DelayReason1" Type="varchar" MaxLength="128" />
+          <Property Name="DelayReason2" Type="varchar" MaxLength="128" />
+          <Property Name="DelayReason3" Type="varchar" MaxLength="128" />
+          <Property Name="DelayReason4" Type="varchar" MaxLength="128" />
+          <Property Name="DelayClass" Type="int" />
+          <Property Name="TIBClassText" Type="varchar" MaxLength="30" />
+          <Property Name="Category" Type="int" />
+          <Property Name="TIBCategoryText" Type="varchar" MaxLength="30" />
+          <Property Name="Discipline" Type="int" />
+          <Property Name="TIBDisText" Type="varchar" MaxLength="30" />
+          <Property Name="Comment" Type="varchar(max)" />
+          <Property Name="TibDelayIndex" Type="int" Nullable="false" />
+          <Property Name="YearNumber" Type="int" />
+          <Property Name="WeekNumber" Type="int" />
+          <Property Name="DayNumber" Type="int" />
+          <Property Name="Shift" Type="varchar" MaxLength="10" />
+          <Property Name="Rota" Type="varchar" MaxLength="10" />
+          <Property Name="UnitText" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.TibTimeInProductionView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TibTimeInProductionView">
+          <Key>
+            <PropertyRef Name="TibIndex" />
+            <PropertyRef Name="UnitNumber" />
+          </Key>
+          <Property Name="TibIndex" Type="int" Nullable="false" />
+          <Property Name="UnitGroup" Type="int" />
+          <Property Name="TibDuration" Type="int" />
+          <Property Name="UnitText" Type="varchar" MaxLength="50" />
+          <Property Name="EventStart" Type="datetime" />
+          <Property Name="EventEnd" Type="datetime" />
+          <Property Name="UnitNumber" Type="int" Nullable="false" />
+          <Property Name="UnitGroupSort" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.TibUnitTimeInProductionView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TibUnitTimeInProductionView">
+          <Key>
+            <PropertyRef Name="TibIndex" />
+          </Key>
+          <Property Name="TibIndex" Type="int" Nullable="false" />
+          <Property Name="UnitGroup" Type="int" />
+          <Property Name="TibDuration" Type="int" />
+          <Property Name="YearNumber" Type="int" />
+          <Property Name="WeekNumber" Type="int" />
+          <Property Name="DayNumber" Type="int" />
+          <Property Name="UnitText" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.ViewData.TwoWeekProd' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="TwoWeekProd">
+          <Key>
+            <PropertyRef Name="Heat" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="Heat" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="Grade" Type="smallint" />
+          <Property Name="Ladle" Type="smallint" />
+          <Property Name="Caster" Type="smallint" />
+          <Property Name="StartBlow" Type="datetime" />
+          <Property Name="StartTap" Type="datetime" />
+          <Property Name="StartCast" Type="datetime" />
+          <Property Name="EndCast" Type="datetime" />
+          <Property Name="DwellTime" Type="int" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ViewDataSchema" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ViewDataSchemaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CastTimes" EntityType="ViewDataSchema.CastTime" />
+          <EntitySet Name="DailyPlanCasterHeats" EntityType="ViewDataSchema.DailyPlanCasterHeat" />
+          <EntitySet Name="HMDesulphTrackTibViews" EntityType="ViewDataSchema.HMDesulphTrackTibView" />
+          <EntitySet Name="HMDesulphTrackTibView2" EntityType="ViewDataSchema.HMDesulphTrackTibView2" />
+          <EntitySet Name="HMDesulphTreatments" EntityType="ViewDataSchema.HMDesulphTreatment" />
+          <EntitySet Name="HMPourTrackTibViews" EntityType="ViewDataSchema.HMPourTrackTibView" />
+          <EntitySet Name="TapTimes" EntityType="ViewDataSchema.TapTime" />
+          <EntitySet Name="ThreeMonthProds" EntityType="ViewDataSchema.ThreeMonthProd" />
+          <EntitySet Name="TibOEEReports" EntityType="ViewDataSchema.TibOEEReport" />
+          <EntitySet Name="TIBReasonsViews" EntityType="ViewDataSchema.TIBReasonsView" />
+          <EntitySet Name="TibReportDelaysViews" EntityType="ViewDataSchema.TibReportDelaysView" />
+          <EntitySet Name="TibReportsViews" EntityType="ViewDataSchema.TibReportsView" />
+          <EntitySet Name="TibTimeInProductionViews" EntityType="ViewDataSchema.TibTimeInProductionView" />
+          <EntitySet Name="TibUnitTimeInProductionViews" EntityType="ViewDataSchema.TibUnitTimeInProductionView" />
+          <EntitySet Name="TwoWeekProds" EntityType="ViewDataSchema.TwoWeekProd" />
+        </EntityContainer>
+        <EntityType Name="CastTime">
+          <Key>
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+            <PropertyRef Name="StartCast" />
+            <PropertyRef Name="UnitNumber" />
+          </Key>
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="StartCast" Type="DateTime" Nullable="false" />
+          <Property Name="EndCast" Type="DateTime" />
+          <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DailyPlanCasterHeat">
+          <Key>
+            <PropertyRef Name="FixDate" />
+            <PropertyRef Name="HEAT_NUMBER" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="FixDate" Type="DateTime" Nullable="false" />
+          <Property Name="AimGenIndex" Type="Int32" />
+          <Property Name="BestCastTime" Type="Int32" />
+          <Property Name="PROGRAM_NUMBER" Type="Int16" />
+          <Property Name="GRADE_1" Type="Int16" />
+          <Property Name="CASTER_NUMBER" Type="Int16" />
+          <Property Name="PLANNED_START_CAST_TIME" Type="DateTime" />
+          <Property Name="PLANNED_END_CAST_TIME" Type="DateTime" />
+          <Property Name="PlannedCastTime" Type="Int16" />
+          <Property Name="HEAT_NUMBER" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HMDesulphTrackTibView">
+          <Key>
+            <PropertyRef Name="HMDesIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="HMDesIndex" Type="Int32" Nullable="false" />
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="UnitNumber" Type="Int32" />
+          <Property Name="UnitShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TrackingStart" Type="DateTime" />
+          <Property Name="TrackingEnd" Type="DateTime" />
+          <Property Name="TrackingDuration" Type="Int32" />
+          <Property Name="StartSulphur" Type="Single" />
+          <Property Name="AimSulphur" Type="Single" />
+          <Property Name="LastTemperature" Type="Single" />
+          <Property Name="InjectionCount" Type="Int32" />
+          <Property Name="SkimCount" Type="Int32" />
+          <Property Name="LimeTotal" Type="Single" />
+          <Property Name="MgTotal" Type="Single" />
+          <Property Name="TibProdStart" Type="DateTime" />
+          <Property Name="TibProdEnd" Type="DateTime" />
+          <Property Name="TIbProdDuration" Type="Int32" />
+          <Property Name="TibProdDelayStart" Type="DateTime" />
+          <Property Name="TibProdDelayEnd" Type="DateTime" />
+          <Property Name="TibProdDelayDuration" Type="Int32" />
+          <Property Name="StartTreatment" Type="DateTime" />
+          <Property Name="EndTreatment" Type="DateTime" />
+          <Property Name="TreatmentDuration" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HMDesulphTrackTibView2">
+          <Key>
+            <PropertyRef Name="TrackIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+            <PropertyRef Name="UnitNumber" />
+            <PropertyRef Name="TrackingStart" />
+          </Key>
+          <Property Name="TrackIndex" Type="Int32" Nullable="false" />
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+          <Property Name="UnitShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TrackingStart" Type="DateTime" Nullable="false" />
+          <Property Name="TrackingEnd" Type="DateTime" />
+          <Property Name="TrackingDuration" Type="Int32" />
+          <Property Name="StartSulphur" Type="Single" />
+          <Property Name="AimSulphur" Type="Single" />
+          <Property Name="TreatmentCount" Type="Int32" />
+          <Property Name="SkimCount" Type="Int32" />
+          <Property Name="LimeTotal" Type="Single" />
+          <Property Name="MgTotal" Type="Single" />
+          <Property Name="TibProdStart" Type="DateTime" />
+          <Property Name="TibProdEnd" Type="DateTime" />
+          <Property Name="TibProdDuration" Type="Int32" />
+          <Property Name="TibProdDelayStart" Type="DateTime" />
+          <Property Name="TibProdDelayEnd" Type="DateTime" />
+          <Property Name="TibProdDelayDuration" Type="Int32" />
+        </EntityType>
+        <EntityType Name="HMDesulphTreatment">
+          <Key>
+            <PropertyRef Name="TreatmentIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="TreatmentIndex" Type="Int32" Nullable="false" />
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="UnitShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TimeStampStart" Type="DateTime" />
+          <Property Name="TimeStampEnd" Type="DateTime" />
+          <Property Name="TreatmentDuration" Type="Int32" />
+          <Property Name="TreatmentText" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TapShift" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="TapYear" Type="Int32" />
+          <Property Name="TapWeek" Type="Int32" />
+          <Property Name="TapDay" Type="Int32" />
+          <Property Name="TapRota" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="HMPourTrackTibView">
+          <Key>
+            <PropertyRef Name="HMPourIndex" />
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="HMPourIndex" Type="Int32" Nullable="false" />
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="UnitNumber" Type="Int32" />
+          <Property Name="UnitShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="TrackingStart" Type="DateTime" />
+          <Property Name="TrackingEnd" Type="DateTime" />
+          <Property Name="TrackDur" Type="Int32" />
+          <Property Name="TibProdStart" Type="DateTime" />
+          <Property Name="TibProdEnd" Type="DateTime" />
+          <Property Name="TibProdDuration" Type="Int32" />
+          <Property Name="TibProdDelayStart" Type="DateTime" />
+          <Property Name="TibProdDelayEnd" Type="DateTime" />
+          <Property Name="TibProdDelayDuration" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TapTime">
+          <Key>
+            <PropertyRef Name="HeatNumber" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="StartTap" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="ThreeMonthProd">
+          <Key>
+            <PropertyRef Name="Heat" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="Heat" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="Grade" Type="Int16" />
+          <Property Name="Ladle" Type="Int16" />
+          <Property Name="Caster" Type="Int16" />
+          <Property Name="StartBlow" Type="DateTime" />
+          <Property Name="StartTap" Type="DateTime" />
+          <Property Name="StartCast" Type="DateTime" />
+          <Property Name="EndCast" Type="DateTime" />
+          <Property Name="DwellTime" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TibOEEReport">
+          <Key>
+            <PropertyRef Name="TibIndex" />
+            <PropertyRef Name="UnitNumber" />
+            <PropertyRef Name="DelayNumber" />
+            <PropertyRef Name="TibDelayIndex" />
+          </Key>
+          <Property Name="TibIndex" Type="Int32" Nullable="false" />
+          <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+          <Property Name="UnitShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UnitGroup" Type="Int32" />
+          <Property Name="UnitGroupText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HeatNumber" Type="Int32" />
+          <Property Name="HNS" Type="Int32" />
+          <Property Name="ProgramNumber" Type="Int32" />
+          <Property Name="EventStart" Type="DateTime" />
+          <Property Name="EventEnd" Type="DateTime" />
+          <Property Name="TibDuration" Type="Int32" />
+          <Property Name="TibStatus" Type="Int32" />
+          <Property Name="TIBStatusDescription" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DelayNumber" Type="Int32" Nullable="false" />
+          <Property Name="DelayStart" Type="DateTime" />
+          <Property Name="DelayEnd" Type="DateTime" />
+          <Property Name="DelayDuration" Type="Int32" />
+          <Property Name="PlantArea" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason2" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason3" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason4" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayClass" Type="Int32" />
+          <Property Name="TIBClassText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Category" Type="Int32" />
+          <Property Name="TIBCategoryText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Discipline" Type="Int32" />
+          <Property Name="TIBDisText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="TibDelayIndex" Type="Int32" Nullable="false" />
+          <Property Name="YearNumber" Type="Int32" />
+          <Property Name="WeekNumber" Type="Int32" />
+          <Property Name="DayNumber" Type="Int32" />
+          <Property Name="Shift" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Rota" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="UnitText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="OEECategory" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="LossType" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Owner" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ReportingTextLevel1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ReportingTextLevel2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ObjectDescription" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="ObjectCode" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="DamageDescription" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="DamageCode" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="DeviationType" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="CauseText" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Section" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="ExternalInternal" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="SupplierDownStream" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="NoExtraWork" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocDescriptionL3" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocNumberL3" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocDescriptionL4" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocNumberL4" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocDescriptionL5" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocNumberL5" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TIBReasonsView">
+          <Key>
+            <PropertyRef Name="ReasonIndex" />
+            <PropertyRef Name="DelayIndex" />
+          </Key>
+          <Property Name="ReasonIndex" Type="Int32" Nullable="false" />
+          <Property Name="DelayIndex" Type="Int32" Nullable="false" />
+          <Property Name="UnitGroup" Type="Int32" />
+          <Property Name="PlantArea" Type="String" MaxLength="32" Unicode="true" FixedLength="false" />
+          <Property Name="DelayReason1" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="DelayReason2" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="DelayReason3" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="DelayReason4" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="DelayClass" Type="Int32" />
+          <Property Name="Category" Type="Int32" />
+          <Property Name="Discipline" Type="Int32" />
+          <Property Name="TIBClassIndex" Type="Int32" />
+          <Property Name="TIBClassText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="TIBDisIndex" Type="Int32" />
+          <Property Name="TIBDisText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="OEECategory" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="LossType" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Owner" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ReportingTextLevel1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ReportingTextLevel2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ObjectDescription" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="ObjectCode" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="DamageDescription" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="DamageCode" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="DeviationType" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="CauseText" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Section" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="ExternalInternal" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="SupplierDownStream" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="NoExtraWork" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocDescriptionL3" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocNumberL3" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocDescriptionL4" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocNumberL4" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocDescriptionL5" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="FlocNumberL5" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Type="String" Name="UnitGroupText" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TIBCategoryText" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TibReportDelaysView">
+          <Key>
+            <PropertyRef Name="TibIndex" />
+            <PropertyRef Name="TibReportsDelayViewID" />
+            <PropertyRef Name="UnitNumber" />
+            <PropertyRef Name="DayNumber" />
+            <PropertyRef Name="TataYear" />
+            <PropertyRef Name="TataWeek" />
+          </Key>
+          <Property Name="TibIndex" Type="Int32" Nullable="false" />
+          <Property Name="TibReportsDelayViewID" Type="Int64" Nullable="false" />
+          <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+          <Property Name="UnitShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UnitText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="UnitGroup" Type="Int32" />
+          <Property Name="UnitGroupText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HeatNumber" Type="Int32" />
+          <Property Name="HNS" Type="Int32" />
+          <Property Name="ProgramNumber" Type="Int32" />
+          <Property Name="EventStart" Type="DateTime" />
+          <Property Name="EventEnd" Type="DateTime" />
+          <Property Name="TibDuration" Type="Int32" />
+          <Property Name="TibStatus" Type="Int32" />
+          <Property Name="TIBStatusDescription" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DelayNumber" Type="Int32" />
+          <Property Name="DelayStart" Type="DateTime" />
+          <Property Name="DelayEnd" Type="DateTime" />
+          <Property Name="DelayDuration" Type="Int32" />
+          <Property Name="PlantArea" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason2" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason3" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason4" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayClass" Type="Int32" />
+          <Property Name="TIBClassText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Category" Type="Int32" />
+          <Property Name="TIBCategoryText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Discipline" Type="Int32" />
+          <Property Name="TIBDisText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="TibDelayIndex" Type="Int32" />
+          <Property Name="DayNumber" Type="Byte" Nullable="false" />
+          <Property Name="TataYear" Type="Int16" Nullable="false" />
+          <Property Name="TataWeek" Type="Byte" Nullable="false" />
+          <Property Name="Shift" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Rota" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TibReportsView">
+          <Key>
+            <PropertyRef Name="TibIndex" />
+            <PropertyRef Name="UnitNumber" />
+            <PropertyRef Name="DelayNumber" />
+            <PropertyRef Name="TibDelayIndex" />
+          </Key>
+          <Property Name="TibIndex" Type="Int32" Nullable="false" />
+          <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+          <Property Name="UnitShort" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="UnitGroup" Type="Int32" />
+          <Property Name="UnitGroupText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="HeatNumber" Type="Int32" />
+          <Property Name="HNS" Type="Int32" />
+          <Property Name="ProgramNumber" Type="Int32" />
+          <Property Name="EventStart" Type="DateTime" />
+          <Property Name="EventEnd" Type="DateTime" />
+          <Property Name="TibDuration" Type="Int32" />
+          <Property Name="TibStatus" Type="Int32" />
+          <Property Name="TIBStatusDescription" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DelayNumber" Type="Int32" Nullable="false" />
+          <Property Name="DelayStart" Type="DateTime" />
+          <Property Name="DelayEnd" Type="DateTime" />
+          <Property Name="DelayDuration" Type="Int32" />
+          <Property Name="PlantArea" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason2" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason3" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayReason4" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="DelayClass" Type="Int32" />
+          <Property Name="TIBClassText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Category" Type="Int32" />
+          <Property Name="TIBCategoryText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Discipline" Type="Int32" />
+          <Property Name="TIBDisText" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Comment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="TibDelayIndex" Type="Int32" Nullable="false" />
+          <Property Name="YearNumber" Type="Int32" />
+          <Property Name="WeekNumber" Type="Int32" />
+          <Property Name="DayNumber" Type="Int32" />
+          <Property Name="Shift" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Rota" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="UnitText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TibTimeInProductionView">
+          <Key>
+            <PropertyRef Name="TibIndex" />
+            <PropertyRef Name="UnitNumber" />
+          </Key>
+          <Property Name="TibIndex" Type="Int32" Nullable="false" />
+          <Property Name="UnitGroup" Type="Int32" />
+          <Property Name="TibDuration" Type="Int32" />
+          <Property Name="UnitText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="EventStart" Type="DateTime" />
+          <Property Name="EventEnd" Type="DateTime" />
+          <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+          <Property Name="UnitGroupSort" Type="Int32" />
+        </EntityType>
+        <EntityType Name="TibUnitTimeInProductionView">
+          <Key>
+            <PropertyRef Name="TibIndex" />
+          </Key>
+          <Property Name="TibIndex" Type="Int32" Nullable="false" />
+          <Property Name="UnitGroup" Type="Int32" />
+          <Property Name="TibDuration" Type="Int32" />
+          <Property Name="YearNumber" Type="Int32" />
+          <Property Name="WeekNumber" Type="Int32" />
+          <Property Name="DayNumber" Type="Int32" />
+          <Property Name="UnitText" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TwoWeekProd">
+          <Key>
+            <PropertyRef Name="Heat" />
+            <PropertyRef Name="HNS" />
+          </Key>
+          <Property Name="Heat" Type="Int32" Nullable="false" />
+          <Property Name="HNS" Type="Int32" Nullable="false" />
+          <Property Name="Grade" Type="Int16" />
+          <Property Name="Ladle" Type="Int16" />
+          <Property Name="Caster" Type="Int16" />
+          <Property Name="StartBlow" Type="DateTime" />
+          <Property Name="StartTap" Type="DateTime" />
+          <Property Name="StartCast" Type="DateTime" />
+          <Property Name="EndCast" Type="DateTime" />
+          <Property Name="DwellTime" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ViewDataSchemaEntitiesStoreContainer" CdmEntityContainer="ViewDataSchemaEntities">
+          <EntitySetMapping Name="CastTimes"><EntityTypeMapping TypeName="ViewDataSchema.CastTime"><MappingFragment StoreEntitySet="CastTimes">
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="StartCast" ColumnName="StartCast" />
+            <ScalarProperty Name="EndCast" ColumnName="EndCast" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DailyPlanCasterHeats"><EntityTypeMapping TypeName="ViewDataSchema.DailyPlanCasterHeat"><MappingFragment StoreEntitySet="DailyPlanCasterHeats">
+            <ScalarProperty Name="FixDate" ColumnName="FixDate" />
+            <ScalarProperty Name="AimGenIndex" ColumnName="AimGenIndex" />
+            <ScalarProperty Name="BestCastTime" ColumnName="BestCastTime" />
+            <ScalarProperty Name="PROGRAM_NUMBER" ColumnName="PROGRAM_NUMBER" />
+            <ScalarProperty Name="GRADE_1" ColumnName="GRADE_1" />
+            <ScalarProperty Name="CASTER_NUMBER" ColumnName="CASTER_NUMBER" />
+            <ScalarProperty Name="PLANNED_START_CAST_TIME" ColumnName="PLANNED_START_CAST_TIME" />
+            <ScalarProperty Name="PLANNED_END_CAST_TIME" ColumnName="PLANNED_END_CAST_TIME" />
+            <ScalarProperty Name="PlannedCastTime" ColumnName="PlannedCastTime" />
+            <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="HMDesulphTrackTibViews"><EntityTypeMapping TypeName="ViewDataSchema.HMDesulphTrackTibView"><MappingFragment StoreEntitySet="HMDesulphTrackTibView">
+            <ScalarProperty Name="HMDesIndex" ColumnName="HMDesIndex" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+            <ScalarProperty Name="TrackingStart" ColumnName="TrackingStart" />
+            <ScalarProperty Name="TrackingEnd" ColumnName="TrackingEnd" />
+            <ScalarProperty Name="TrackingDuration" ColumnName="TrackingDuration" />
+            <ScalarProperty Name="StartSulphur" ColumnName="StartSulphur" />
+            <ScalarProperty Name="AimSulphur" ColumnName="AimSulphur" />
+            <ScalarProperty Name="LastTemperature" ColumnName="LastTemperature" />
+            <ScalarProperty Name="InjectionCount" ColumnName="InjectionCount" />
+            <ScalarProperty Name="SkimCount" ColumnName="SkimCount" />
+            <ScalarProperty Name="LimeTotal" ColumnName="LimeTotal" />
+            <ScalarProperty Name="MgTotal" ColumnName="MgTotal" />
+            <ScalarProperty Name="TibProdStart" ColumnName="TibProdStart" />
+            <ScalarProperty Name="TibProdEnd" ColumnName="TibProdEnd" />
+            <ScalarProperty Name="TIbProdDuration" ColumnName="TIbProdDuration" />
+            <ScalarProperty Name="TibProdDelayStart" ColumnName="TibProdDelayStart" />
+            <ScalarProperty Name="TibProdDelayEnd" ColumnName="TibProdDelayEnd" />
+            <ScalarProperty Name="TibProdDelayDuration" ColumnName="TibProdDelayDuration" />
+            <ScalarProperty Name="StartTreatment" ColumnName="StartTreatment" />
+            <ScalarProperty Name="EndTreatment" ColumnName="EndTreatment" />
+            <ScalarProperty Name="TreatmentDuration" ColumnName="TreatmentDuration" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="HMDesulphTrackTibView2"><EntityTypeMapping TypeName="ViewDataSchema.HMDesulphTrackTibView2"><MappingFragment StoreEntitySet="HMDesulphTrackTibView2">
+            <ScalarProperty Name="TrackIndex" ColumnName="TrackIndex" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+            <ScalarProperty Name="TrackingStart" ColumnName="TrackingStart" />
+            <ScalarProperty Name="TrackingEnd" ColumnName="TrackingEnd" />
+            <ScalarProperty Name="TrackingDuration" ColumnName="TrackingDuration" />
+            <ScalarProperty Name="StartSulphur" ColumnName="StartSulphur" />
+            <ScalarProperty Name="AimSulphur" ColumnName="AimSulphur" />
+            <ScalarProperty Name="TreatmentCount" ColumnName="TreatmentCount" />
+            <ScalarProperty Name="SkimCount" ColumnName="SkimCount" />
+            <ScalarProperty Name="LimeTotal" ColumnName="LimeTotal" />
+            <ScalarProperty Name="MgTotal" ColumnName="MgTotal" />
+            <ScalarProperty Name="TibProdStart" ColumnName="TibProdStart" />
+            <ScalarProperty Name="TibProdEnd" ColumnName="TibProdEnd" />
+            <ScalarProperty Name="TibProdDuration" ColumnName="TibProdDuration" />
+            <ScalarProperty Name="TibProdDelayStart" ColumnName="TibProdDelayStart" />
+            <ScalarProperty Name="TibProdDelayEnd" ColumnName="TibProdDelayEnd" />
+            <ScalarProperty Name="TibProdDelayDuration" ColumnName="TibProdDelayDuration" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="HMDesulphTreatments"><EntityTypeMapping TypeName="ViewDataSchema.HMDesulphTreatment"><MappingFragment StoreEntitySet="HMDesulphTreatments">
+            <ScalarProperty Name="TreatmentIndex" ColumnName="TreatmentIndex" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+            <ScalarProperty Name="TimeStampStart" ColumnName="TimeStampStart" />
+            <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+            <ScalarProperty Name="TreatmentDuration" ColumnName="TreatmentDuration" />
+            <ScalarProperty Name="TreatmentText" ColumnName="TreatmentText" />
+            <ScalarProperty Name="TapShift" ColumnName="TapShift" />
+            <ScalarProperty Name="TapYear" ColumnName="TapYear" />
+            <ScalarProperty Name="TapWeek" ColumnName="TapWeek" />
+            <ScalarProperty Name="TapDay" ColumnName="TapDay" />
+            <ScalarProperty Name="TapRota" ColumnName="TapRota" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="HMPourTrackTibViews"><EntityTypeMapping TypeName="ViewDataSchema.HMPourTrackTibView"><MappingFragment StoreEntitySet="HMPourTrackTibView">
+            <ScalarProperty Name="HMPourIndex" ColumnName="HMPourIndex" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+            <ScalarProperty Name="TrackingStart" ColumnName="TrackingStart" />
+            <ScalarProperty Name="TrackingEnd" ColumnName="TrackingEnd" />
+            <ScalarProperty Name="TrackDur" ColumnName="TrackDur" />
+            <ScalarProperty Name="TibProdStart" ColumnName="TibProdStart" />
+            <ScalarProperty Name="TibProdEnd" ColumnName="TibProdEnd" />
+            <ScalarProperty Name="TibProdDuration" ColumnName="TibProdDuration" />
+            <ScalarProperty Name="TibProdDelayStart" ColumnName="TibProdDelayStart" />
+            <ScalarProperty Name="TibProdDelayEnd" ColumnName="TibProdDelayEnd" />
+            <ScalarProperty Name="TibProdDelayDuration" ColumnName="TibProdDelayDuration" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TapTimes"><EntityTypeMapping TypeName="ViewDataSchema.TapTime"><MappingFragment StoreEntitySet="TapTimes">
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="StartTap" ColumnName="StartTap" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="ThreeMonthProds"><EntityTypeMapping TypeName="ViewDataSchema.ThreeMonthProd"><MappingFragment StoreEntitySet="ThreeMonthProd">
+            <ScalarProperty Name="Heat" ColumnName="Heat" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="Grade" ColumnName="Grade" />
+            <ScalarProperty Name="Ladle" ColumnName="Ladle" />
+            <ScalarProperty Name="Caster" ColumnName="Caster" />
+            <ScalarProperty Name="StartBlow" ColumnName="StartBlow" />
+            <ScalarProperty Name="StartTap" ColumnName="StartTap" />
+            <ScalarProperty Name="StartCast" ColumnName="StartCast" />
+            <ScalarProperty Name="EndCast" ColumnName="EndCast" />
+            <ScalarProperty Name="DwellTime" ColumnName="DwellTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TibOEEReports"><EntityTypeMapping TypeName="ViewDataSchema.TibOEEReport"><MappingFragment StoreEntitySet="TibOEEReport">
+            <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+            <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+            <ScalarProperty Name="UnitGroupText" ColumnName="UnitGroupText" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+            <ScalarProperty Name="EventStart" ColumnName="EventStart" />
+            <ScalarProperty Name="EventEnd" ColumnName="EventEnd" />
+            <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+            <ScalarProperty Name="TibStatus" ColumnName="TibStatus" />
+            <ScalarProperty Name="TIBStatusDescription" ColumnName="TIBStatusDescription" />
+            <ScalarProperty Name="DelayNumber" ColumnName="DelayNumber" />
+            <ScalarProperty Name="DelayStart" ColumnName="DelayStart" />
+            <ScalarProperty Name="DelayEnd" ColumnName="DelayEnd" />
+            <ScalarProperty Name="DelayDuration" ColumnName="DelayDuration" />
+            <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+            <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+            <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+            <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+            <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+            <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+            <ScalarProperty Name="TIBClassText" ColumnName="TIBClassText" />
+            <ScalarProperty Name="Category" ColumnName="Category" />
+            <ScalarProperty Name="TIBCategoryText" ColumnName="TIBCategoryText" />
+            <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+            <ScalarProperty Name="TIBDisText" ColumnName="TIBDisText" />
+            <ScalarProperty Name="Comment" ColumnName="Comment" />
+            <ScalarProperty Name="TibDelayIndex" ColumnName="TibDelayIndex" />
+            <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+            <ScalarProperty Name="WeekNumber" ColumnName="WeekNumber" />
+            <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+            <ScalarProperty Name="Shift" ColumnName="Shift" />
+            <ScalarProperty Name="Rota" ColumnName="Rota" />
+            <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+            <ScalarProperty Name="OEECategory" ColumnName="OEECategory" />
+            <ScalarProperty Name="LossType" ColumnName="LossType" />
+            <ScalarProperty Name="Owner" ColumnName="Owner" />
+            <ScalarProperty Name="ReportingTextLevel1" ColumnName="ReportingTextLevel1" />
+            <ScalarProperty Name="ReportingTextLevel2" ColumnName="ReportingTextLevel2" />
+            <ScalarProperty Name="ObjectDescription" ColumnName="ObjectDescription" />
+            <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+            <ScalarProperty Name="DamageDescription" ColumnName="DamageDescription" />
+            <ScalarProperty Name="DamageCode" ColumnName="DamageCode" />
+            <ScalarProperty Name="DeviationType" ColumnName="DeviationType" />
+            <ScalarProperty Name="CauseText" ColumnName="CauseText" />
+            <ScalarProperty Name="Section" ColumnName="Section" />
+            <ScalarProperty Name="ExternalInternal" ColumnName="ExternalInternal" />
+            <ScalarProperty Name="SupplierDownStream" ColumnName="SupplierDownStream" />
+            <ScalarProperty Name="NoExtraWork" ColumnName="NoExtraWork" />
+            <ScalarProperty Name="FlocDescriptionL3" ColumnName="FlocDescriptionL3" />
+            <ScalarProperty Name="FlocNumberL3" ColumnName="FlocNumberL3" />
+            <ScalarProperty Name="FlocDescriptionL4" ColumnName="FlocDescriptionL4" />
+            <ScalarProperty Name="FlocNumberL4" ColumnName="FlocNumberL4" />
+            <ScalarProperty Name="FlocDescriptionL5" ColumnName="FlocDescriptionL5" />
+            <ScalarProperty Name="FlocNumberL5" ColumnName="FlocNumberL5" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TIBReasonsViews"><EntityTypeMapping TypeName="ViewDataSchema.TIBReasonsView"><MappingFragment StoreEntitySet="TIBReasonsView">
+            <ScalarProperty Name="TIBCategoryText" ColumnName="TIBCategoryText" />
+                <ScalarProperty Name="UnitGroupText" ColumnName="UnitGroupText" />
+                <ScalarProperty Name="ReasonIndex" ColumnName="ReasonIndex" />
+            <ScalarProperty Name="DelayIndex" ColumnName="DelayIndex" />
+            <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+            <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+            <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+            <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+            <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+            <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+            <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+            <ScalarProperty Name="Category" ColumnName="Category" />
+            <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+            <ScalarProperty Name="TIBClassIndex" ColumnName="TIBClassIndex" />
+            <ScalarProperty Name="TIBClassText" ColumnName="TIBClassText" />
+            <ScalarProperty Name="TIBDisIndex" ColumnName="TIBDisIndex" />
+            <ScalarProperty Name="TIBDisText" ColumnName="TIBDisText" />
+            <ScalarProperty Name="OEECategory" ColumnName="OEECategory" />
+            <ScalarProperty Name="LossType" ColumnName="LossType" />
+            <ScalarProperty Name="Owner" ColumnName="Owner" />
+            <ScalarProperty Name="ReportingTextLevel1" ColumnName="ReportingTextLevel1" />
+            <ScalarProperty Name="ReportingTextLevel2" ColumnName="ReportingTextLevel2" />
+            <ScalarProperty Name="ObjectDescription" ColumnName="ObjectDescription" />
+            <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+            <ScalarProperty Name="DamageDescription" ColumnName="DamageDescription" />
+            <ScalarProperty Name="DamageCode" ColumnName="DamageCode" />
+            <ScalarProperty Name="DeviationType" ColumnName="DeviationType" />
+            <ScalarProperty Name="CauseText" ColumnName="CauseText" />
+            <ScalarProperty Name="Section" ColumnName="Section" />
+            <ScalarProperty Name="ExternalInternal" ColumnName="ExternalInternal" />
+            <ScalarProperty Name="SupplierDownStream" ColumnName="SupplierDownStream" />
+            <ScalarProperty Name="NoExtraWork" ColumnName="NoExtraWork" />
+            <ScalarProperty Name="FlocDescriptionL3" ColumnName="FlocDescriptionL3" />
+            <ScalarProperty Name="FlocNumberL3" ColumnName="FlocNumberL3" />
+            <ScalarProperty Name="FlocDescriptionL4" ColumnName="FlocDescriptionL4" />
+            <ScalarProperty Name="FlocNumberL4" ColumnName="FlocNumberL4" />
+            <ScalarProperty Name="FlocDescriptionL5" ColumnName="FlocDescriptionL5" />
+            <ScalarProperty Name="FlocNumberL5" ColumnName="FlocNumberL5" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TibReportDelaysViews"><EntityTypeMapping TypeName="ViewDataSchema.TibReportDelaysView"><MappingFragment StoreEntitySet="TibReportDelaysView">
+            <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+            <ScalarProperty Name="TibReportsDelayViewID" ColumnName="TibReportsDelayViewID" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+            <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+            <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+            <ScalarProperty Name="UnitGroupText" ColumnName="UnitGroupText" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+            <ScalarProperty Name="EventStart" ColumnName="EventStart" />
+            <ScalarProperty Name="EventEnd" ColumnName="EventEnd" />
+            <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+            <ScalarProperty Name="TibStatus" ColumnName="TibStatus" />
+            <ScalarProperty Name="TIBStatusDescription" ColumnName="TIBStatusDescription" />
+            <ScalarProperty Name="DelayNumber" ColumnName="DelayNumber" />
+            <ScalarProperty Name="DelayStart" ColumnName="DelayStart" />
+            <ScalarProperty Name="DelayEnd" ColumnName="DelayEnd" />
+            <ScalarProperty Name="DelayDuration" ColumnName="DelayDuration" />
+            <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+            <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+            <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+            <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+            <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+            <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+            <ScalarProperty Name="TIBClassText" ColumnName="TIBClassText" />
+            <ScalarProperty Name="Category" ColumnName="Category" />
+            <ScalarProperty Name="TIBCategoryText" ColumnName="TIBCategoryText" />
+            <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+            <ScalarProperty Name="TIBDisText" ColumnName="TIBDisText" />
+            <ScalarProperty Name="Comment" ColumnName="Comment" />
+            <ScalarProperty Name="TibDelayIndex" ColumnName="TibDelayIndex" />
+            <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+            <ScalarProperty Name="TataYear" ColumnName="TataYear" />
+            <ScalarProperty Name="TataWeek" ColumnName="TataWeek" />
+            <ScalarProperty Name="Shift" ColumnName="Shift" />
+            <ScalarProperty Name="Rota" ColumnName="Rota" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TibReportsViews"><EntityTypeMapping TypeName="ViewDataSchema.TibReportsView"><MappingFragment StoreEntitySet="TibReportsView">
+            <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+            <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+            <ScalarProperty Name="UnitGroupText" ColumnName="UnitGroupText" />
+            <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+            <ScalarProperty Name="EventStart" ColumnName="EventStart" />
+            <ScalarProperty Name="EventEnd" ColumnName="EventEnd" />
+            <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+            <ScalarProperty Name="TibStatus" ColumnName="TibStatus" />
+            <ScalarProperty Name="TIBStatusDescription" ColumnName="TIBStatusDescription" />
+            <ScalarProperty Name="DelayNumber" ColumnName="DelayNumber" />
+            <ScalarProperty Name="DelayStart" ColumnName="DelayStart" />
+            <ScalarProperty Name="DelayEnd" ColumnName="DelayEnd" />
+            <ScalarProperty Name="DelayDuration" ColumnName="DelayDuration" />
+            <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+            <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+            <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+            <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+            <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+            <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+            <ScalarProperty Name="TIBClassText" ColumnName="TIBClassText" />
+            <ScalarProperty Name="Category" ColumnName="Category" />
+            <ScalarProperty Name="TIBCategoryText" ColumnName="TIBCategoryText" />
+            <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+            <ScalarProperty Name="TIBDisText" ColumnName="TIBDisText" />
+            <ScalarProperty Name="Comment" ColumnName="Comment" />
+            <ScalarProperty Name="TibDelayIndex" ColumnName="TibDelayIndex" />
+            <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+            <ScalarProperty Name="WeekNumber" ColumnName="WeekNumber" />
+            <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+            <ScalarProperty Name="Shift" ColumnName="Shift" />
+            <ScalarProperty Name="Rota" ColumnName="Rota" />
+            <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TibTimeInProductionViews"><EntityTypeMapping TypeName="ViewDataSchema.TibTimeInProductionView"><MappingFragment StoreEntitySet="TibTimeInProductionView">
+            <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+            <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+            <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+            <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+            <ScalarProperty Name="EventStart" ColumnName="EventStart" />
+            <ScalarProperty Name="EventEnd" ColumnName="EventEnd" />
+            <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+            <ScalarProperty Name="UnitGroupSort" ColumnName="UnitGroupSort" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TibUnitTimeInProductionViews"><EntityTypeMapping TypeName="ViewDataSchema.TibUnitTimeInProductionView"><MappingFragment StoreEntitySet="TibUnitTimeInProductionView">
+            <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+            <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+            <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+            <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+            <ScalarProperty Name="WeekNumber" ColumnName="WeekNumber" />
+            <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+            <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="TwoWeekProds"><EntityTypeMapping TypeName="ViewDataSchema.TwoWeekProd"><MappingFragment StoreEntitySet="TwoWeekProd">
+            <ScalarProperty Name="Heat" ColumnName="Heat" />
+            <ScalarProperty Name="HNS" ColumnName="HNS" />
+            <ScalarProperty Name="Grade" ColumnName="Grade" />
+            <ScalarProperty Name="Ladle" ColumnName="Ladle" />
+            <ScalarProperty Name="Caster" ColumnName="Caster" />
+            <ScalarProperty Name="StartBlow" ColumnName="StartBlow" />
+            <ScalarProperty Name="StartTap" ColumnName="StartTap" />
+            <ScalarProperty Name="StartCast" ColumnName="StartCast" />
+            <ScalarProperty Name="EndCast" ColumnName="EndCast" />
+            <ScalarProperty Name="DwellTime" ColumnName="DwellTime" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ElvisViewDataSchema" ZoomLevel="82">
+        <EntityTypeShape EntityType="ViewDataSchema.CastTime" Width="1.5" PointX="0.5" PointY="0.5" Height="1.7566536458333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.DailyPlanCasterHeat" Width="1.5" PointX="2.25" PointY="0.5" Height="2.7427376302083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.HMDesulphTrackTibView" Width="2.125" PointX="4" PointY="0.5" Height="4.8792529296875031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.HMDesulphTrackTibView2" Width="2.125" PointX="6.375" PointY="0.5" Height="4.2218636067708353" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.HMDesulphTreatment" Width="2" PointX="8.75" PointY="0.5" Height="3.0714322916666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.HMPourTrackTibView" Width="2.25" PointX="11" PointY="0.5" Height="3.2357796223958388" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.TapTime" Width="1.5" PointX="4.75" PointY="5.75" Height="1.4279589843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.ThreeMonthProd" Width="1.5" PointX="10.875" PointY="8.875" Height="2.5783902994791674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.TibOEEReport" Width="1.5" PointX="16.75" PointY="3.625" Height="10.302714843750003" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.TIBReasonsView" Width="1.5" PointX="6.75" PointY="7.25" Height="6.8514208984375031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.TibReportDelaysView" Width="1.5" PointX="12.75" PointY="6.5" Height="7.0157682291666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.TibReportsView" Width="1.5" PointX="14.75" PointY="0.75" Height="6.8514208984375031" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.TibTimeInProductionView" Width="1.5" PointX="14.75" PointY="7.875" Height="2.2496956380208317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.TibUnitTimeInProductionView" Width="2.5" PointX="3.5" PointY="8" Height="2.0853483072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="ViewDataSchema.TwoWeekProd" Width="1.5" PointX="16.75" PointY="0.75" Height="2.5783902994791674" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

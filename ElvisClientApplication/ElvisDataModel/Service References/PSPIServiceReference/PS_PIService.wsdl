@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PS_PIService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://ptwide.porttalbot.pcswales.corusgroup.com/PIService/PS_PIService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://ptwide.porttalbot.pcswales.corusgroup.com/PIService/PS_PIService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://ptwide.porttalbot.pcswales.corusgroup.com/PIService/PS_PIService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CSP.PT.PI" />
+      <xsd:import schemaLocation="http://ptwide.porttalbot.pcswales.corusgroup.com/PIService/PS_PIService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPIContracts_GetRecordedValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordedValues" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetRecordedValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordedValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetServerTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetServerTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetSnapshot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSnapshot" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetSnapshot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSnapshotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetSnapshotWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSnapshotWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetSnapshotWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSnapshotWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetStandardDeviation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStandardDeviation" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetStandardDeviation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStandardDeviationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetStringArchive_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringArchive" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetStringArchive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringArchiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetStringArchiveWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringArchiveWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetStringArchiveWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringArchiveWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetStringSnapshot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringSnapshot" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetStringSnapshot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringSnapshotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetStringSnapshotWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringSnapshotWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetStringSnapshotWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStringSnapshotWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_SetValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetValue" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_SetValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_SetValueWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetValueWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_SetValueWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetValueWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_TagExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:TagExists" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_TagExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TagExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_FindTags_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindTags" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_FindTags_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindTagsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetArchive_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArchive" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetArchive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArchiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetArchiveWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArchiveWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetArchiveWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArchiveWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetAverage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAverage" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetAverage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAverageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetBoolArchive_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBoolArchive" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetBoolArchive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBoolArchiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetBoolArchiveWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBoolArchiveWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetBoolArchiveWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBoolArchiveWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetBoolSnapshot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBoolSnapshot" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetBoolSnapshot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBoolSnapshotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetBoolSnapshotWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBoolSnapshotWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetBoolSnapshotWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBoolSnapshotWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetFloatArchive_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFloatArchive" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetFloatArchive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFloatArchiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetFloatArchiveWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFloatArchiveWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetFloatArchiveWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFloatArchiveWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetFloatSnapshot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFloatSnapshot" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetFloatSnapshot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFloatSnapshotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetFloatSnapshotWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFloatSnapshotWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetFloatSnapshotWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFloatSnapshotWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetIntArchive_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntArchive" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetIntArchive_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntArchiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetIntArchiveWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntArchiveWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetIntArchiveWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntArchiveWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetInterpolatedValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterpolatedValues" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetInterpolatedValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterpolatedValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetInterpolatedValuesFromArray_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterpolatedValuesFromArray" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetInterpolatedValuesFromArray_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInterpolatedValuesFromArrayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetIntSnapshot_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntSnapshot" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetIntSnapshot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntSnapshotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetIntSnapshotWithUpdateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntSnapshotWithUpdateTime" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetIntSnapshotWithUpdateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntSnapshotWithUpdateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetMax_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMax" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetMax_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetMin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMin" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetMin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetPointAttribute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointAttribute" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetPointAttribute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointAttributeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetPointDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointDescription" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetPointDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetPointSource_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointSource" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetPointSource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetPointType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointType" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetPointType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetPointUnits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointUnits" />
+  </wsdl:message>
+  <wsdl:message name="IPIContracts_GetPointUnits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPointUnitsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPIContracts">
+    <wsdl:operation name="GetRecordedValues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetRecordedValues" message="tns:IPIContracts_GetRecordedValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetRecordedValuesResponse" message="tns:IPIContracts_GetRecordedValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetServerTime" message="tns:IPIContracts_GetServerTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetServerTimeResponse" message="tns:IPIContracts_GetServerTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSnapshot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetSnapshot" message="tns:IPIContracts_GetSnapshot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetSnapshotResponse" message="tns:IPIContracts_GetSnapshot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSnapshotWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetSnapshotWithUpdateTime" message="tns:IPIContracts_GetSnapshotWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetSnapshotWithUpdateTimeResponse" message="tns:IPIContracts_GetSnapshotWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStandardDeviation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetStandardDeviation" message="tns:IPIContracts_GetStandardDeviation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetStandardDeviationResponse" message="tns:IPIContracts_GetStandardDeviation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStringArchive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetStringArchive" message="tns:IPIContracts_GetStringArchive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetStringArchiveResponse" message="tns:IPIContracts_GetStringArchive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStringArchiveWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetStringArchiveWithUpdateTime" message="tns:IPIContracts_GetStringArchiveWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetStringArchiveWithUpdateTimeResponse" message="tns:IPIContracts_GetStringArchiveWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStringSnapshot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetStringSnapshot" message="tns:IPIContracts_GetStringSnapshot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetStringSnapshotResponse" message="tns:IPIContracts_GetStringSnapshot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStringSnapshotWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetStringSnapshotWithUpdateTime" message="tns:IPIContracts_GetStringSnapshotWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetStringSnapshotWithUpdateTimeResponse" message="tns:IPIContracts_GetStringSnapshotWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetValue">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/SetValue" message="tns:IPIContracts_SetValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/SetValueResponse" message="tns:IPIContracts_SetValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetValueWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/SetValueWithUpdateTime" message="tns:IPIContracts_SetValueWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/SetValueWithUpdateTimeResponse" message="tns:IPIContracts_SetValueWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TagExists">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/TagExists" message="tns:IPIContracts_TagExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/TagExistsResponse" message="tns:IPIContracts_TagExists_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindTags">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/FindTags" message="tns:IPIContracts_FindTags_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/FindTagsResponse" message="tns:IPIContracts_FindTags_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArchive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetArchive" message="tns:IPIContracts_GetArchive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetArchiveResponse" message="tns:IPIContracts_GetArchive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArchiveWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetArchiveWithUpdateTime" message="tns:IPIContracts_GetArchiveWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetArchiveWithUpdateTimeResponse" message="tns:IPIContracts_GetArchiveWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAverage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetAverage" message="tns:IPIContracts_GetAverage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetAverageResponse" message="tns:IPIContracts_GetAverage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoolArchive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetBoolArchive" message="tns:IPIContracts_GetBoolArchive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetBoolArchiveResponse" message="tns:IPIContracts_GetBoolArchive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoolArchiveWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetBoolArchiveWithUpdateTime" message="tns:IPIContracts_GetBoolArchiveWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetBoolArchiveWithUpdateTimeResponse" message="tns:IPIContracts_GetBoolArchiveWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoolSnapshot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetBoolSnapshot" message="tns:IPIContracts_GetBoolSnapshot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetBoolSnapshotResponse" message="tns:IPIContracts_GetBoolSnapshot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoolSnapshotWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetBoolSnapshotWithUpdateTime" message="tns:IPIContracts_GetBoolSnapshotWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetBoolSnapshotWithUpdateTimeResponse" message="tns:IPIContracts_GetBoolSnapshotWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFloatArchive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetFloatArchive" message="tns:IPIContracts_GetFloatArchive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetFloatArchiveResponse" message="tns:IPIContracts_GetFloatArchive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFloatArchiveWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetFloatArchiveWithUpdateTime" message="tns:IPIContracts_GetFloatArchiveWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetFloatArchiveWithUpdateTimeResponse" message="tns:IPIContracts_GetFloatArchiveWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFloatSnapshot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetFloatSnapshot" message="tns:IPIContracts_GetFloatSnapshot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetFloatSnapshotResponse" message="tns:IPIContracts_GetFloatSnapshot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFloatSnapshotWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetFloatSnapshotWithUpdateTime" message="tns:IPIContracts_GetFloatSnapshotWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetFloatSnapshotWithUpdateTimeResponse" message="tns:IPIContracts_GetFloatSnapshotWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntArchive">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetIntArchive" message="tns:IPIContracts_GetIntArchive_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetIntArchiveResponse" message="tns:IPIContracts_GetIntArchive_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntArchiveWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetIntArchiveWithUpdateTime" message="tns:IPIContracts_GetIntArchiveWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetIntArchiveWithUpdateTimeResponse" message="tns:IPIContracts_GetIntArchiveWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterpolatedValues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetInterpolatedValues" message="tns:IPIContracts_GetInterpolatedValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetInterpolatedValuesResponse" message="tns:IPIContracts_GetInterpolatedValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInterpolatedValuesFromArray">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetInterpolatedValuesFromArray" message="tns:IPIContracts_GetInterpolatedValuesFromArray_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetInterpolatedValuesFromArrayResponse" message="tns:IPIContracts_GetInterpolatedValuesFromArray_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntSnapshot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetIntSnapshot" message="tns:IPIContracts_GetIntSnapshot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetIntSnapshotResponse" message="tns:IPIContracts_GetIntSnapshot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntSnapshotWithUpdateTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetIntSnapshotWithUpdateTime" message="tns:IPIContracts_GetIntSnapshotWithUpdateTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetIntSnapshotWithUpdateTimeResponse" message="tns:IPIContracts_GetIntSnapshotWithUpdateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMax">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetMax" message="tns:IPIContracts_GetMax_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetMaxResponse" message="tns:IPIContracts_GetMax_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetMin" message="tns:IPIContracts_GetMin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetMinResponse" message="tns:IPIContracts_GetMin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointAttribute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetPointAttribute" message="tns:IPIContracts_GetPointAttribute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetPointAttributeResponse" message="tns:IPIContracts_GetPointAttribute_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetPointDescription" message="tns:IPIContracts_GetPointDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetPointDescriptionResponse" message="tns:IPIContracts_GetPointDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointSource">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetPointSource" message="tns:IPIContracts_GetPointSource_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetPointSourceResponse" message="tns:IPIContracts_GetPointSource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetPointType" message="tns:IPIContracts_GetPointType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetPointTypeResponse" message="tns:IPIContracts_GetPointType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPointUnits">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPIContracts/GetPointUnits" message="tns:IPIContracts_GetPointUnits_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPIContracts/GetPointUnitsResponse" message="tns:IPIContracts_GetPointUnits_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPIContracts" type="tns:IPIContracts">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetRecordedValues">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetRecordedValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetServerTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSnapshot">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetSnapshot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSnapshotWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetSnapshotWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStandardDeviation">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetStandardDeviation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStringArchive">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetStringArchive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStringArchiveWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetStringArchiveWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStringSnapshot">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetStringSnapshot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStringSnapshotWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetStringSnapshotWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetValue">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/SetValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetValueWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/SetValueWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagExists">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/TagExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindTags">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/FindTags" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArchive">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetArchive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArchiveWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetArchiveWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAverage">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetAverage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoolArchive">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetBoolArchive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoolArchiveWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetBoolArchiveWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoolSnapshot">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetBoolSnapshot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoolSnapshotWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetBoolSnapshotWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFloatArchive">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetFloatArchive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFloatArchiveWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetFloatArchiveWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFloatSnapshot">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetFloatSnapshot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFloatSnapshotWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetFloatSnapshotWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntArchive">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetIntArchive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntArchiveWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetIntArchiveWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInterpolatedValues">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetInterpolatedValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInterpolatedValuesFromArray">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetInterpolatedValuesFromArray" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntSnapshot">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetIntSnapshot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntSnapshotWithUpdateTime">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetIntSnapshotWithUpdateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMax">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetMax" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMin">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetMin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointAttribute">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetPointAttribute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointDescription">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetPointDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointSource">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetPointSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointType">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetPointType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPointUnits">
+      <soap:operation soapAction="http://tempuri.org/IPIContracts/GetPointUnits" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PS_PIService">
+    <wsdl:port name="BasicHttpBinding_IPIContracts" binding="tns:BasicHttpBinding_IPIContracts">
+      <soap:address location="http://ptwide.porttalbot.pcswales.corusgroup.com/PIService/PS_PIService.svc/~/PS_PIService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

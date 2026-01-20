@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net48;net10.0</TargetFrameworks>
+    <AssemblyName>BusinessLogic</AssemblyName>
+    <RootNamespace>BusinessLogic</RootNamespace>
+
+    <!-- Keep migration quiet initially -->
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <!-- IMPORTANT: ElvisDataModel is net48 today, so only reference it when building net48 -->
+
+  <!-- If you have code that uses EF6 types directly in BusinessLogic, keep EF6 available.
+       This is optional; add only if you get compile errors about missing System.Data.Entity. -->
+  <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
+    <PackageReference Include="EntityFramework" Version="6.5.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ElvisDataModel\ElvisDataModel.csproj" />
+  </ItemGroup>
+
+</Project>

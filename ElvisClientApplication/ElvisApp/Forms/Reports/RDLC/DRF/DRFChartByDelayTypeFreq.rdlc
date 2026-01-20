@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition">
+  <DataSources>
+    <DataSource Name="ElvisDataModel">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>81e9e948-ef6c-42f1-8929-3ecf47d89f94</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DRFReportsByDelayTypeFreq">
+      <Fields>
+        <Field Name="ClosedByName">
+          <DataField>ClosedByName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ClosureDate">
+          <DataField>ClosureDate</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="CorrectiveMeasure">
+          <DataField>CorrectiveMeasure</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateCreated">
+          <DataField>DateCreated</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="Day">
+          <DataField>Day</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="DelayDuration">
+          <DataField>DelayDuration</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="DelayType">
+          <DataField>DelayType</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Description">
+          <DataField>Description</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Discipline">
+          <DataField>Discipline</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DRFIndex">
+          <DataField>DRFIndex</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ImmediateActions">
+          <DataField>ImmediateActions</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="InitiatorName">
+          <DataField>InitiatorName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Location">
+          <DataField>Location</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OwnerName">
+          <DataField>OwnerName</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PlantItem">
+          <DataField>PlantItem</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportStatus">
+          <DataField>ReportStatus</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Byte, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="ReviewDate">
+          <DataField>ReviewDate</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="RootCause">
+          <DataField>RootCause</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Rota">
+          <DataField>Rota</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Shift">
+          <DataField>Shift</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ShortDescription">
+          <DataField>ShortDescription</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="StartDateTime">
+          <DataField>StartDateTime</DataField>
+          <rd:TypeName>System.Nullable`1[[System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="TIBDelayIndex">
+          <DataField>TIBDelayIndex</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="TIBIndex">
+          <DataField>TIBIndex</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="Week">
+          <DataField>Week</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+        <Field Name="Works">
+          <DataField>Works</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Year">
+          <DataField>Year</DataField>
+          <rd:TypeName>System.Nullable`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>ElvisDataModel</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ElvisDataModel</rd:DataSetName>
+        <rd:TableName>DRFReport</rd:TableName>
+        <rd:ObjectDataSourceType>ElvisDataModel.DRFReport, ElvisDataModel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</rd:ObjectDataSourceType>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Body>
+    <ReportItems>
+      <Image Name="Image5">
+        <Source>Embedded</Source>
+        <Value>Tata_Steel_logo_left</Value>
+        <Height>1.5875cm</Height>
+        <Width>3.175cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Image Name="Image6">
+        <Source>Embedded</Source>
+        <Value>Tata_logo</Value>
+        <Sizing>FitProportional</Sizing>
+        <Left>21.82181cm</Left>
+        <Height>1.5cm</Height>
+        <Width>1.5cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Image>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>DRF Delay Types By Frequency</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>14pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>0.40667cm</Top>
+        <Left>8.16916cm</Left>
+        <Height>1.09333cm</Height>
+        <Width>8.83558cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date From:</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>1.99698cm</Top>
+        <Left>3.7867cm</Left>
+        <Height>0.65cm</Height>
+        <Width>2.6846cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="DateTitle">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!DateFrom.Value</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <Color>DarkBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>DateTitle</rd:DefaultName>
+        <Top>1.99698cm</Top>
+        <Left>6.4713cm</Left>
+        <Height>0.65cm</Height>
+        <Width>5cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>4pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Date To:</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>1.99698cm</Top>
+        <Left>11.4713cm</Left>
+        <Height>0.65cm</Height>
+        <Width>2.6846cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="DateTitle2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!DateTo.Value</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <Color>DarkBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>DateTitle</rd:DefaultName>
+        <Top>1.99698cm</Top>
+        <Left>14.08535cm</Left>
+        <Height>0.65cm</Height>
+        <Width>5cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>4pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Area:</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>2.64698cm</Top>
+        <Left>3.7867cm</Left>
+        <Height>0.65cm</Height>
+        <Width>2.6846cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="DateTitle3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!Area.Value</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <Color>DarkBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>DateTitle</rd:DefaultName>
+        <Top>2.64698cm</Top>
+        <Left>6.4713cm</Left>
+        <Height>0.65cm</Height>
+        <Width>5cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>4pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Report Date:</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Right</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>2.64698cm</Top>
+        <Left>11.4713cm</Left>
+        <Height>0.65cm</Height>
+        <Width>2.6846cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="DateTitle4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!DateCreated.Value</Value>
+                <Style>
+                  <FontFamily>Tahoma</FontFamily>
+                  <FontSize>11pt</FontSize>
+                  <FontWeight>Normal</FontWeight>
+                  <Color>DarkBlue</Color>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>DateTitle</rd:DefaultName>
+        <Top>2.64698cm</Top>
+        <Left>14.11181cm</Left>
+        <Height>0.65cm</Height>
+        <Width>5cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <VerticalAlign>Middle</VerticalAlign>
+          <PaddingLeft>4pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Chart Name="Chart1">
+        <ChartCategoryHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Group Name="Chart1_CategoryGroup1">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!DelayType.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <Label>=Fields!DelayType.Value</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartCategoryHierarchy>
+        <ChartSeriesHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Label>DRFIndex</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartSeriesHierarchy>
+        <ChartData>
+          <ChartSeriesCollection>
+            <ChartSeries Name="DRFIndex">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Count(Fields!DRFIndex.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style />
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Bar</Type>
+              <Subtype>Stacked</Subtype>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ChartItemInLegend>
+                <LegendText>Status</LegendText>
+              </ChartItemInLegend>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+          </ChartSeriesCollection>
+        </ChartData>
+        <ChartAreas>
+          <ChartArea Name="Default">
+            <ChartCategoryAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Delay Type</Caption>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </ChartAxisTitle>
+                <Interval>1</Interval>
+                <IntervalType>Number</IntervalType>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMajorTickMarks>
+                  <Enabled>False</Enabled>
+                </ChartMajorTickMarks>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Scalar>true</Scalar>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <AllowLabelRotation>Rotate45</AllowLabelRotation>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+              </ChartAxis>
+            </ChartCategoryAxes>
+            <ChartValueAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Count</Caption>
+                  <Style>
+                    <FontWeight>Bold</FontWeight>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+              </ChartAxis>
+            </ChartValueAxes>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </ChartArea>
+        </ChartAreas>
+        <Palette>BrightPastel</Palette>
+        <ChartBorderSkin>
+          <Style>
+            <BackgroundColor>Gray</BackgroundColor>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <Color>White</Color>
+          </Style>
+        </ChartBorderSkin>
+        <ChartNoDataMessage Name="NoDataMessage">
+          <Caption>No Data Available</Caption>
+          <Style>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <TextAlign>General</TextAlign>
+            <VerticalAlign>Top</VerticalAlign>
+          </Style>
+        </ChartNoDataMessage>
+        <DataSetName>DRFReportsByDelayTypeFreq</DataSetName>
+        <Top>3.29698cm</Top>
+        <Left>0.42649cm</Left>
+        <Height>10.76792cm</Height>
+        <Width>18.65886cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Color>LightGrey</Color>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <BackgroundGradientType>None</BackgroundGradientType>
+        </Style>
+      </Chart>
+    </ReportItems>
+    <Height>6.46517in</Height>
+    <Style>
+      <Border />
+    </Style>
+  </Body>
+  <ReportParameters>
+    <ReportParameter Name="DateFrom">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateTo">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateCreated">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Area">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Width>9.18182in</Width>
+  <Page>
+    <PageHeight>21cm</PageHeight>
+    <PageWidth>29.7cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>2cm</RightMargin>
+    <TopMargin>2cm</TopMargin>
+    <BottomMargin>2cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Tata_Steel_logo_left">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+    <EmbeddedImage Name="Tata_logo">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <rd:ReportID>abe89a01-b731-4512-b4d6-4c189dec01af</rd:ReportID>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+</Report>

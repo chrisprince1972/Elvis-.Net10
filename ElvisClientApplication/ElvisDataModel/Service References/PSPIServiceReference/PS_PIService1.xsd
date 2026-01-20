@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://ptwide.porttalbot.pcswales.corusgroup.com/PIService/PS_PIService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/CSP.PT.PI" />
+  <xs:import schemaLocation="http://ptwide.porttalbot.pcswales.corusgroup.com/PIService/PS_PIService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetRecordedValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="IncludeBad" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordedValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/CSP.PT.PI" minOccurs="0" name="GetRecordedValuesResult" nillable="true" type="q1:ArrayOfPIValueObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerTime">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServerTimeResult" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSnapshot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSnapshotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSnapshotResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSnapshotWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSnapshotWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSnapshotWithUpdateTimeResult" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStandardDeviation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStandardDeviationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStandardDeviationResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStringArchive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SnapshotTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStringArchiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStringArchiveResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStringArchiveWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SnapshotTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStringArchiveWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStringArchiveWithUpdateTimeResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStringSnapshot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStringSnapshotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStringSnapshotResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStringSnapshotWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStringSnapshotWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStringSnapshotWithUpdateTimeResult" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NewValue" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetValueResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetValueWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="NewValue" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetValueWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TagExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TagExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTags">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Wildcard" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindTagsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="FindTagsResult" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArchive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SnapshotTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArchiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetArchiveResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArchiveWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SnapshotTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArchiveWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetArchiveWithUpdateTimeResult" nillable="true" type="xs:anyType" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAverage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAverageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAverageResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBoolArchive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SnapshotTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBoolArchiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBoolArchiveResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBoolArchiveWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SnapshotTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBoolArchiveWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBoolArchiveWithUpdateTimeResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBoolSnapshot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBoolSnapshotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBoolSnapshotResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBoolSnapshotWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBoolSnapshotWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBoolSnapshotWithUpdateTimeResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFloatArchive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SnapshotTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFloatArchiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFloatArchiveResult" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFloatArchiveWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SnapshotTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFloatArchiveWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFloatArchiveWithUpdateTimeResult" type="xs:float" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFloatSnapshot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFloatSnapshotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFloatSnapshotResult" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFloatSnapshotWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFloatSnapshotWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFloatSnapshotWithUpdateTimeResult" type="xs:float" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntArchive">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SnapshotTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntArchiveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIntArchiveResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntArchiveWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SnapshotTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntArchiveWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIntArchiveWithUpdateTimeResult" type="xs:int" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterpolatedValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="IntervalSeconds" type="xs:float" />
+        <xs:element minOccurs="0" name="IncludeBad" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterpolatedValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/CSP.PT.PI" minOccurs="0" name="GetInterpolatedValuesResult" nillable="true" type="q3:ArrayOfPIValueObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterpolatedValuesFromArray">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="TagNames" nillable="true" type="q4:ArrayOfstring" />
+        <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="IntervalSeconds" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInterpolatedValuesFromArrayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/CSP.PT.PI" minOccurs="0" name="GetInterpolatedValuesFromArrayResult" nillable="true" type="q5:ArrayOfPIValueObject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntSnapshot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntSnapshotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIntSnapshotResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntSnapshotWithUpdateTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntSnapshotWithUpdateTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIntSnapshotWithUpdateTimeResult" type="xs:int" />
+        <xs:element minOccurs="0" name="UpdateTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMax">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMaxResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMaxResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndTime" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMinResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPointAttribute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="AttributeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPointAttributeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPointAttributeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPointDescription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPointDescriptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPointDescriptionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPointSource">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPointSourceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPointSourceResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPointType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPointTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPointTypeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPointUnits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPointUnitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPointUnitsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

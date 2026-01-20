@@ -1,0 +1,391 @@
+﻿//-----------------------------------------------------------------------
+// <copyright file="Data.cs" company="Tata Steel Europe">
+//     Copyright (c) Tata Steel Europe. All rights reserved.
+// </copyright>
+// <author>Matt Joslin | MLJ Systems Ltd written for Tata Steel</author>
+//-----------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Odbc;
+using System.IO;
+using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Text;
+using ElvisDataModel;
+
+namespace Elvis.Model
+{
+    /// <summary>
+    /// Temporary class to provide data access to PMSET and PSSUP database.
+    /// </summary>
+    public class Data
+    {
+        /// <summary>
+        /// Push out the events to a binary file.
+        /// </summary>
+        /// <param name="events">A list of event objects.</param>
+        public void SaveEvents(List<UtilEvent> events)
+        {
+            try
+            {
+                using (Stream stream = File.Open("data.bin", FileMode.Create))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, events);
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Pull in the events from a binary file.
+        /// </summary>
+        /// <returns>A list of event objects.</returns>
+        public List<UtilEvent> LoadEvents()
+        {
+            List<UtilEvent> events = new List<UtilEvent>();
+            try
+            {
+                using (Stream stream = File.Open("data.bin", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+
+                    events = (List<UtilEvent>)bin.Deserialize(stream);
+                }
+            }
+            catch
+            {
+                //throw;
+            }
+
+            return events;
+        }
+
+        /// <summary>
+        /// Gets all planned heats from the coordination systems.
+        /// </summary>
+        /// <returns>A list of event objects.</returns>
+        public List<UtilEvent> GetPlannedHeats()
+        {
+            string sql = @"select HEAT_NUMBER
+                        ,PROGRAM_NUMBER            
+                        ,GRADE_1                         
+                        ,GRADE_2                         
+                        ,VESSEL_NUMBER                   
+                        ,STEEL_LADLE_NUMBER              
+                        ,SS_UNIT                         
+                        ,CASTER_NUMBER                  
+                        ,PLANNED_POUR_TIME             
+                        ,PLANNED_END_DESULPH_TIME     
+                        ,PLANNED_CHARGE_TIME          
+                        ,PLANNED_TAP_TIME                
+                        ,ACTUAL_TAP_TIME                
+                        ,PLANNED_END_SS_TIME            
+                        ,PLANNED_DWELL_TIME             
+                        ,PLANNED_START_CAST_TIME        
+                        ,PLANNED_END_CAST_TIME          
+                        ,COMBINED_WIDTH                  
+                        ,CAST_DURATION                   
+                        ,CASTING_RATE                   
+                        ,CASTING_SPEED                   
+                        ,COMMENTS                       
+                        ,UPDATE_TIME                   
+                        ,RELEASE_TEMPERATURE            
+                        ,AIM_LADLE_TEMPERATURE          
+                        ,X_HEAT           from COORD_LINK";
+
+            List<UtilEvent> events = new List<UtilEvent>();
+            OdbcConnection connection = new OdbcConnection("DSN=pssup; UID=int_ro; PWD=readbos");
+            OdbcCommand command = new OdbcCommand(sql, connection);
+            connection.Open();
+            DataTable dt = new DataTable();
+            dt.Load(command.ExecuteReader());
+
+            connection.Close();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                // Add pour info
+                UtilEvent unitEvent = new UtilEvent();
+                unitEvent.UnitId = 20; // we dont know! 
+                unitEvent.HeatNumber = Convert.ToInt32(dr["HEAT_NUMBER"]);
+                unitEvent.ProgramNumber = Convert.ToInt32(dr["PROGRAM_NUMBER"]);
+                if (dr["PLANNED_POUR_TIME"] != DBNull.Value)
+                {
+                    unitEvent.StartTime = Convert.ToDateTime(dr["PLANNED_POUR_TIME"]);
+                    unitEvent.EndTime = unitEvent.StartTime.AddMinutes(15);
+                }
+                unitEvent.IsPlanningBlock = true;
+                events.Add(unitEvent);
+
+                // Add desulph info
+                unitEvent = new UtilEvent();
+                unitEvent.UnitId = 30; // we dont know! 
+                unitEvent.HeatNumber = Convert.ToInt32(dr["HEAT_NUMBER"]);
+                unitEvent.ProgramNumber = Convert.ToInt32(dr["PROGRAM_NUMBER"]);
+                if (dr["PLANNED_POUR_TIME"] != DBNull.Value)
+                {
+                    unitEvent.StartTime = Convert.ToDateTime(dr["PLANNED_POUR_TIME"]).AddMinutes(25);
+                    unitEvent.EndTime = Convert.ToDateTime(dr["PLANNED_END_DESULPH_TIME"]);
+                }
+                unitEvent.IsPlanningBlock = true;
+                events.Add(unitEvent);                
+                
+                // Add vessel plan
+                int vessel = Convert.ToInt32(dr["VESSEL_NUMBER"]);
+                unitEvent = new UtilEvent();
+                unitEvent.UnitId = vessel == 1 ? 50 : 60;
+                unitEvent.HeatNumber = Convert.ToInt32(dr["HEAT_NUMBER"]);
+                unitEvent.ProgramNumber = Convert.ToInt32(dr["PROGRAM_NUMBER"]);
+                if (dr["PLANNED_CHARGE_TIME"] != DBNull.Value)
+                {
+                    unitEvent.StartTime = Convert.ToDateTime(dr["PLANNED_CHARGE_TIME"]);
+                }
+                if (dr["PLANNED_TAP_TIME"] != DBNull.Value)
+                {
+                    unitEvent.EndTime = Convert.ToDateTime(dr["PLANNED_TAP_TIME"]);
+                }
+                unitEvent.IsPlanningBlock = true;
+                events.Add(unitEvent);
+
+                // Secondary steel
+                string secondaryUnit = Convert.ToString(dr["SS_UNIT"]).Trim();
+                int secondaryUnitNumber = 0;
+                switch (secondaryUnit)
+                {
+                    case "CAS1":
+                        secondaryUnitNumber = 100;
+                        break;
+                    case "RD":
+                        secondaryUnitNumber = 120;
+                        break;
+                    case "RH":
+                        secondaryUnitNumber = 130;
+                        break;
+                    case "CAS2":
+                        secondaryUnitNumber = 110;
+                        break;
+                }
+
+                unitEvent = new UtilEvent();
+                unitEvent.UnitId = secondaryUnitNumber;
+                unitEvent.HeatNumber = Convert.ToInt32(dr["HEAT_NUMBER"]);
+                unitEvent.ProgramNumber = Convert.ToInt32(dr["PROGRAM_NUMBER"]);
+                if (dr["PLANNED_TAP_TIME"] != DBNull.Value)
+                {
+                    unitEvent.StartTime = Convert.ToDateTime(dr["PLANNED_TAP_TIME"]).AddMinutes(10);
+                }
+                unitEvent.EndTime = Convert.ToDateTime(dr["PLANNED_END_SS_TIME"]);
+                unitEvent.IsPlanningBlock = true;
+                events.Add(unitEvent);
+
+                // Caster
+                int casterNo = Convert.ToInt32(dr["CASTER_NUMBER"]);
+                int casterUnit = 0;
+                switch (casterNo)
+                {
+                    case 1:
+                        casterUnit = 210;
+                        break;
+                    case 2:
+                        casterUnit = 220;
+                        break;
+                    case 3:
+                        casterUnit = 230;
+                        break;
+                }
+
+                unitEvent = new UtilEvent();
+                unitEvent.UnitId = casterUnit;
+                unitEvent.HeatNumber = Convert.ToInt32(dr["HEAT_NUMBER"]);
+                unitEvent.ProgramNumber = Convert.ToInt32(dr["PROGRAM_NUMBER"]);
+                unitEvent.StartTime = Convert.ToDateTime(dr["PLANNED_START_CAST_TIME"]);
+
+                if (dr["PLANNED_END_CAST_TIME"] != DBNull.Value)
+                    unitEvent.EndTime = Convert.ToDateTime(dr["PLANNED_END_CAST_TIME"]);
+
+                unitEvent.IsPlanningBlock = true;
+                events.Add(unitEvent);
+            }
+
+            return events;
+        }
+
+        /// <summary>
+        /// Gets all existing records of utilization events from the database.
+        /// </summary>
+        /// <returns>A list of event objects.</returns>
+        public List<UtilEvent> GetData()
+        {
+            List<UtilEvent> events = new List<UtilEvent>();
+
+            string sql = @"SELECT   ue.unit_id, 
+                    ue.event_type, 
+                    ue.event_start, 
+                    ue.event_start_gmt, 
+                    ue.event_end, 
+                    ue.duration, 
+                    ue.heat_number, 
+                    ue.heat_number_set, 
+                    ue.program_number, 
+                    dr1.plant_area, 
+                    dr1.delay_reason_1, 
+                    dr1.delay_reason_2, 
+                    dr1.delay_reason_3, 
+                    dr1.delay_reason_4, 
+                    dr1.reason_number, 
+                    dr1.delay_duration, 
+                    (SELECT sum(dr2.delay_duration) 
+                     FROM   delay_reason dr2 
+                     WHERE  ue.event_start_gmt = dr2.event_start_gmt 
+                     AND    ue.unit_id         = dr2.unit_id 
+                     AND    ue.unit_type       = dr2.unit_type) AS time_explained 
+            FROM     utilisation_event ue 
+                    LEFT JOIN delay_reason dr1 
+                          ON  ue.event_start_gmt = dr1.event_start_gmt 
+                          AND ue.unit_id         = dr1.unit_id 
+                          AND ue.unit_type       = dr1.unit_type 
+                          AND dr1.reason_number  = 1 
+            WHERE    ue.event_start >= '@starttime'
+            
+            ORDER BY ue.unit_id, ue.event_start ";
+            
+            sql = sql.Replace("@starttime", DateTime.Now.AddDays(-20).ToString("dd-MMM-yyy HH:mm:ss"));
+
+            OdbcConnection connection = new OdbcConnection("DSN=psmet; UID=int_ro; PWD=bosmis");
+            OdbcCommand command = new OdbcCommand(sql, connection);
+            connection.Open();
+            DataTable dt = new DataTable();
+            dt.Load(command.ExecuteReader());
+
+            connection.Close();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                if ((dr["HEAT_NUMBER"] != DBNull.Value) &&
+                    (dr["event_start"] != DBNull.Value) &&
+                    (dr["program_number"] != DBNull.Value) && 
+                    (dr["event_end"] != DBNull.Value))
+                {
+                    UtilEvent unitEvent = new UtilEvent();
+                    unitEvent.UnitId = Convert.ToInt32(dr["UNIT_ID"]);
+                    unitEvent.HeatNumber = Convert.ToInt32(dr["HEAT_NUMBER"]);
+                    unitEvent.ProgramNumber = Convert.ToInt32(dr["PROGRAM_NUMBER"]);
+                    unitEvent.StartTime = Convert.ToDateTime(dr["event_start"]);
+                    unitEvent.EndTime = Convert.ToDateTime(dr["event_end"]);
+                    unitEvent.IsPlanningBlock = false;
+
+                    events.Add(unitEvent);
+                }
+            }
+
+            return events;
+        }
+
+        public int GetCurrentProgramNumber(int heat_number)
+        {
+            string sqltxt;
+            sqltxt = "select CURRENT_PROGRAM_NUMBER from HEAT where HEAT_NUMBER = " + heat_number;
+            OdbcConnection connection = new OdbcConnection("DSN=pssup; UID=int_ro; PWD=readbos");
+            OdbcCommand command = new OdbcCommand(sqltxt, connection);
+            connection.Open();
+            object o = command.ExecuteScalar();
+            connection.Close();
+
+            return Convert.ToInt32(o);
+        }
+
+        public void GetCasterAims(int heat_number)
+        {
+            // Get the program number
+            int program_number = GetCurrentProgramNumber(heat_number);
+
+            string sqltxt;
+
+            // Get caster aims
+            sqltxt = "select    ELEMENT_C,        ELEMENT_SI,      ELEMENT_S,       ELEMENT_P,       ELEMENT_MN,";
+            sqltxt = sqltxt + " ELEMENT_NI,       ELEMENT_CU,      ELEMENT_SN,      ELEMENT_CR,      ELEMENT_AS,";
+            sqltxt = sqltxt + " ELEMENT_MO,       ELEMENT_N2,      ELEMENT_AL_TOT,  ELEMENT_AL_SOL,  ELEMENT_TI,";
+            sqltxt = sqltxt + " ELEMENT_B,        ELEMENT_CA,      ELEMENT_CE,      ELEMENT_CO,      ELEMENT_NB,";
+            sqltxt = sqltxt + " ELEMENT_V,        CALC_CEV_1,      CALC_CEV_2,      CALC_CEV_3,      CALC_FREE_C_1,";
+            sqltxt = sqltxt + " CALC_FREE_C_2,    CALC_FREE_C_3,   CALC_XS_TI_1,    CALC_XS_TI_2,    CALC_XS_TI_3,";
+            sqltxt = sqltxt + " CALC_AL_N2_RATIO, CALC_CU_P_RATIO, CALC_B_N2_RATIO, CALC_S_P,        CALC_CUNICRMOSN,";
+            sqltxt = sqltxt + " CALC_CR_EQUIV,    CALC_SI_FORMULA, CALC_MN_S_RATIO, CALC_MN_SI_RATIO";
+            sqltxt = sqltxt + " from PROGRAM_ANALYSIS where program_number = " + program_number;
+            sqltxt = sqltxt + " and UNIT = 99 order by ANALYSIS_TYPE ASC";
+
+            OdbcConnection connection = new OdbcConnection("DSN=pssup; UID=int_ro; PWD=readbos");
+            OdbcCommand command = new OdbcCommand(sqltxt, connection);
+            connection.Open();
+            DataTable aimsData = new DataTable();
+            aimsData.Load(command.ExecuteReader());
+            connection.Close();
+        }
+
+        public DataTable GetAnalysis(int heat_number)
+        {
+            string sqltxt;
+            // Get actuals
+            sqltxt = "select    ANALYSIS_MATERIAL_NUMBER, ANALYSIS_LOCATION_NUMBER,SAMPLE_TIME_STAMP,";
+            sqltxt = sqltxt + " ELEMENT_C,       ELEMENT_SI,     ELEMENT_S,      ELEMENT_P,      ELEMENT_MN,";
+            sqltxt = sqltxt + " ELEMENT_NI,      ELEMENT_CU,     ELEMENT_SN,     ELEMENT_CR,     ELEMENT_AS,";
+            sqltxt = sqltxt + " ELEMENT_MO,      ELEMENT_N2,     ELEMENT_ALT,    ELEMENT_ALS,    ELEMENT_TI,";
+            sqltxt = sqltxt + " ELEMENT_B,       ELEMENT_CA,     ELEMENT_CE,     ELEMENT_CO,     ELEMENT_NB,";
+            sqltxt = sqltxt + " ELEMENT_V,       CALC_CEV_1,     CALC_CEV_2,     CALC_CEV_3,     CALC_FREE_C_1,";
+            sqltxt = sqltxt + " CALC_FREE_C_2,   CALC_FREE_C_3,  CALC_XS_TI_1,   CALC_XS_TI_2,   CALC_XS_TI_3,";
+            sqltxt = sqltxt + " CALC_AL_N2_RATIO,CALC_CU_P_RATIO,CALC_B_N2_RATIO,CALC_S_P,       CALC_CUNICRMOSN,";
+            sqltxt = sqltxt + " CALC_CR_EQUIV,   CALC_SI_FORMULA, CALC_MN_S_RATIO,CALC_MN_SI_RATIO,CALC_LIQUIDUS";
+            sqltxt = sqltxt + " from METAL_ANALYSIS where ANALYSIS_SAMPLE_NUMBER = " + heat_number;
+            sqltxt = sqltxt + " and ANALYSIS_SUB_SAMPLE_NUMBER <> 99 order by SAMPLE_TIME_STAMP_GMT ASC";
+           
+            OdbcConnection connection = new OdbcConnection("DSN=pssup; UID=int_ro; PWD=readbos");
+            OdbcCommand command = new OdbcCommand(sqltxt, connection);
+            connection.Open();
+            DataTable analysisData = new DataTable();
+            analysisData.Load(command.ExecuteReader());
+            connection.Close();
+
+            return analysisData;
+        }
+
+        public DataTable GetHeatLog(int heatNumber)
+        {
+            string sql = "select event_text, event_time from heat_event where heat_number_set = 2 and heat_number = " + heatNumber.ToString() + " order by event_time";
+
+            OdbcConnection connection = new OdbcConnection("DSN=psmet; UID=int_ro; PWD=bosmis");
+            OdbcCommand command = new OdbcCommand(sql, connection);
+            connection.Open();
+            DataTable dt = new DataTable();
+            dt.Load(command.ExecuteReader());
+            connection.Close();
+
+            return dt;
+        }
+
+        public DataTable GetEventData(int heatNumber)
+        {
+            string sql = @"select UNIT_TYPE,
+                                 UNIT_ID,                      
+                                 EVENT_TYPE,                     
+                                 EVENT_START,          
+                                 EVENT_END,
+                                 PROGRAM_NUMBER
+                            from UTILISATION_EVENT
+                           where HEAT_NUMBER_SET = 2 and HEAT_NUMBER = " + heatNumber +
+                        " order by EVENT_START_GMT";
+
+            OdbcConnection connection = new OdbcConnection("DSN=psmet; UID=int_ro; PWD=bosmis");
+            OdbcCommand command = new OdbcCommand(sql, connection);
+            connection.Open();
+            DataTable dt = new DataTable();
+            dt.Load(command.ExecuteReader());
+            connection.Close();
+
+            return dt;
+        }
+    }
+}

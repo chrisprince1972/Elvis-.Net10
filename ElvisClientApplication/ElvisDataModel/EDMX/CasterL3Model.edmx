@@ -1,0 +1,741 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="CasterLevel3Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="CasterLevel3ModelStoreContainer">
+          <EntitySet Name="cast_slab" EntityType="CasterLevel3Model.Store.cast_slab" store:Type="Tables" store:Schema="CCT" store:Name="cast_slab">
+            <DefiningQuery>SELECT 
+      [cast_slab].[SLAB_NUMBER_SET] AS [SLAB_NUMBER_SET], 
+      [cast_slab].[CAST_SLAB_NUMBER] AS [CAST_SLAB_NUMBER], 
+      [cast_slab].[CONCAST_NUMBER_SET] AS [CONCAST_NUMBER_SET], 
+      [cast_slab].[CONCAST_NUMBER] AS [CONCAST_NUMBER], 
+      [cast_slab].[HEAT_NUMBER_SET] AS [HEAT_NUMBER_SET], 
+      [cast_slab].[CAST_HEAT_NUMBER] AS [CAST_HEAT_NUMBER], 
+      [cast_slab].[TUNDISH_TRIP_NUMBER] AS [TUNDISH_TRIP_NUMBER], 
+      [cast_slab].[SHROUD_NUMBER] AS [SHROUD_NUMBER], 
+      [cast_slab].[SES_NUMBER] AS [SES_NUMBER], 
+      [cast_slab].[MOULD_POWDER_NUMBER] AS [MOULD_POWDER_NUMBER], 
+      [cast_slab].[STRAND_NUMBER] AS [STRAND_NUMBER], 
+      [cast_slab].[ORDERED_SLAB_NUMBER] AS [ORDERED_SLAB_NUMBER], 
+      [cast_slab].[SLAB_POSITION] AS [SLAB_POSITION], 
+      [cast_slab].[FIRST_SEGMENT_NUMBER] AS [FIRST_SEGMENT_NUMBER], 
+      [cast_slab].[WIDTH_MADE_FIRST_SEGMENT] AS [WIDTH_MADE_FIRST_SEGMENT], 
+      [cast_slab].[WIDTH_CHECKED_FIRST_SEGMENT] AS [WIDTH_CHECKED_FIRST_SEGMENT], 
+      [cast_slab].[FIRST_SEGMENT_TIMESTAMP] AS [FIRST_SEGMENT_TIMESTAMP], 
+      [cast_slab].[FIRST_SEGMENT_TIMESTAMP_GMT] AS [FIRST_SEGMENT_TIMESTAMP_GMT], 
+      [cast_slab].[LAST_SEGMENT_NUMBER] AS [LAST_SEGMENT_NUMBER], 
+      [cast_slab].[WIDTH_MADE_LAST_SEGMENT] AS [WIDTH_MADE_LAST_SEGMENT], 
+      [cast_slab].[WIDTH_CHECKED_LAST_SEGMENT] AS [WIDTH_CHECKED_LAST_SEGMENT], 
+      [cast_slab].[LAST_SEGMENT_TIMESTAMP] AS [LAST_SEGMENT_TIMESTAMP], 
+      [cast_slab].[LAST_SEGMENT_TIMESTAMP_GMT] AS [LAST_SEGMENT_TIMESTAMP_GMT], 
+      [cast_slab].[SYSTEM_1_LENGTH] AS [SYSTEM_1_LENGTH], 
+      [cast_slab].[SYSTEM_2_LENGTH] AS [SYSTEM_2_LENGTH], 
+      [cast_slab].[SYSTEM_3_LENGTH] AS [SYSTEM_3_LENGTH], 
+      [cast_slab].[LENGTH_SYSTEM_USED] AS [LENGTH_SYSTEM_USED], 
+      [cast_slab].[LENGTH_MADE] AS [LENGTH_MADE], 
+      [cast_slab].[LENGTH_CHECKED] AS [LENGTH_CHECKED], 
+      [cast_slab].[WEIGHT] AS [WEIGHT], 
+      [cast_slab].[GRADE_ORDERED] AS [GRADE_ORDERED], 
+      [cast_slab].[GRADE_MADE] AS [GRADE_MADE], 
+      [cast_slab].[THICKNESS_MADE] AS [THICKNESS_MADE], 
+      [cast_slab].[COMMENT_TEXT] AS [COMMENT_TEXT], 
+      [cast_slab].[METALLOGRAPHY] AS [METALLOGRAPHY], 
+      [cast_slab].[ACCUMETRIC_TEMPERATURE] AS [ACCUMETRIC_TEMPERATURE], 
+      [cast_slab].[MADE_TO_GRADE] AS [MADE_TO_GRADE], 
+      [cast_slab].[DOWNGRADE_REASON] AS [DOWNGRADE_REASON], 
+      [cast_slab].[MANUALLY_GRADED] AS [MANUALLY_GRADED], 
+      [cast_slab].[MANUALLY_GRADED_REASON] AS [MANUALLY_GRADED_REASON], 
+      [cast_slab].[MOULD_TAPER] AS [MOULD_TAPER], 
+      [cast_slab].[AVERAGE_STRAND_SPEED] AS [AVERAGE_STRAND_SPEED], 
+      [cast_slab].[AVERAGE_AR_FLOW_TO_NOZZLE] AS [AVERAGE_AR_FLOW_TO_NOZZLE], 
+      [cast_slab].[AVERAGE_AR_FLOW_TO_STOPPER] AS [AVERAGE_AR_FLOW_TO_STOPPER], 
+      [cast_slab].[AVERAGE_AR_FLOW_TO_PLATE] AS [AVERAGE_AR_FLOW_TO_PLATE], 
+      [cast_slab].[AVERAGE_AR_PRESSURE_TO_NOZZLE] AS [AVERAGE_AR_PRESSURE_TO_NOZZLE], 
+      [cast_slab].[AVERAGE_AR_PRESSURE_TO_STOPPER] AS [AVERAGE_AR_PRESSURE_TO_STOPPER], 
+      [cast_slab].[AVERAGE_AR_PRESSURE_TO_PLATE] AS [AVERAGE_AR_PRESSURE_TO_PLATE], 
+      [cast_slab].[STOPPER_BUILDUP] AS [STOPPER_BUILDUP], 
+      [cast_slab].[MAX_FLATNESS] AS [MAX_FLATNESS], 
+      [cast_slab].[LAST_TUNDISH_TEMPERATURE] AS [LAST_TUNDISH_TEMPERATURE], 
+      [cast_slab].[SES_SERVICE_LIFE] AS [SES_SERVICE_LIFE], 
+      [cast_slab].[SPRAY_WATER_PATTERN] AS [SPRAY_WATER_PATTERN], 
+      [cast_slab].[SPRAY_WATER_MODE] AS [SPRAY_WATER_MODE], 
+      [cast_slab].[MOULD_THERM_VAR_TOP_S] AS [MOULD_THERM_VAR_TOP_S], 
+      [cast_slab].[MOULD_THERM_VAR_TOP_MID] AS [MOULD_THERM_VAR_TOP_MID], 
+      [cast_slab].[MOULD_THERM_VAR_TOP_N] AS [MOULD_THERM_VAR_TOP_N], 
+      [cast_slab].[MOULD_THERM_VAR_BTM_S] AS [MOULD_THERM_VAR_BTM_S], 
+      [cast_slab].[MOULD_THERM_VAR_BTM_MID] AS [MOULD_THERM_VAR_BTM_MID], 
+      [cast_slab].[MOULD_THERM_VAR_BTM_N] AS [MOULD_THERM_VAR_BTM_N], 
+      [cast_slab].[SPEED_CHANGE] AS [SPEED_CHANGE], 
+      [cast_slab].[FLUSH] AS [FLUSH], 
+      [cast_slab].[TUBE_CHANGE] AS [TUBE_CHANGE], 
+      [cast_slab].[STREAM_UNSHROUDED] AS [STREAM_UNSHROUDED], 
+      [cast_slab].[MTM_ALARM] AS [MTM_ALARM], 
+      [cast_slab].[SURGE_SIZE] AS [SURGE_SIZE], 
+      [cast_slab].[MOULD_LEVEL_CONTROL_AUTO] AS [MOULD_LEVEL_CONTROL_AUTO], 
+      [cast_slab].[DOWNGRADE_FOR_TEMPERATURE] AS [DOWNGRADE_FOR_TEMPERATURE], 
+      [cast_slab].[DOWNGRADE_FOR_CASTING_SPEED] AS [DOWNGRADE_FOR_CASTING_SPEED], 
+      [cast_slab].[DOWNGRADE_FOR_MOULD_LEVEL] AS [DOWNGRADE_FOR_MOULD_LEVEL], 
+      [cast_slab].[QUALITY_CODE] AS [QUALITY_CODE], 
+      [cast_slab].[ROTA] AS [ROTA], 
+      [cast_slab].[SHIFT_NO] AS [SHIFT_NO], 
+      [cast_slab].[DAY_NO] AS [DAY_NO], 
+      [cast_slab].[WEEK_NO] AS [WEEK_NO], 
+      [cast_slab].[YEAR_NO] AS [YEAR_NO], 
+      [cast_slab].[SLAB_CUT_TIMESTAMP] AS [SLAB_CUT_TIMESTAMP], 
+      [cast_slab].[SLAB_CUT_TIMESTAMP_GMT] AS [SLAB_CUT_TIMESTAMP_GMT], 
+      [cast_slab].[CASTER] AS [CASTER], 
+      [cast_slab].[MANUAL_INSERT] AS [MANUAL_INSERT]
+      FROM [CCT].[cast_slab] AS [cast_slab]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="cct_grade_failures" EntityType="CasterLevel3Model.Store.cct_grade_failures" store:Type="Tables" store:Schema="CCT" store:Name="cct_grade_failures">
+            <DefiningQuery>SELECT 
+      [cct_grade_failures].[HEAT_NUMBER] AS [HEAT_NUMBER], 
+      [cct_grade_failures].[SLAB_NUMBER] AS [SLAB_NUMBER], 
+      [cct_grade_failures].[REASON_1] AS [REASON_1], 
+      [cct_grade_failures].[REASON_2] AS [REASON_2], 
+      [cct_grade_failures].[REASON_3] AS [REASON_3], 
+      [cct_grade_failures].[COMMENT] AS [COMMENT], 
+      [cct_grade_failures].[CREATED] AS [CREATED], 
+      [cct_grade_failures].[HEAT_NUMBER_SET] AS [HEAT_NUMBER_SET], 
+      [cct_grade_failures].[RFT_FAILURE] AS [RFT_FAILURE]
+      FROM [CCT].[cct_grade_failures] AS [cct_grade_failures]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="cct_length_failures" EntityType="CasterLevel3Model.Store.cct_length_failures" store:Type="Tables" store:Schema="CCT" store:Name="cct_length_failures">
+            <DefiningQuery>SELECT 
+      [cct_length_failures].[HEAT_NUMBER] AS [HEAT_NUMBER], 
+      [cct_length_failures].[SLAB_NUMBER] AS [SLAB_NUMBER], 
+      [cct_length_failures].[REASON_1] AS [REASON_1], 
+      [cct_length_failures].[REASON_2] AS [REASON_2], 
+      [cct_length_failures].[REASON_3] AS [REASON_3], 
+      [cct_length_failures].[COMMENT] AS [COMMENT], 
+      [cct_length_failures].[CREATED] AS [CREATED], 
+      [cct_length_failures].[HEAT_NUMBER_SET] AS [HEAT_NUMBER_SET], 
+      [cct_length_failures].[RFT_FAILURE] AS [RFT_FAILURE]
+      FROM [CCT].[cct_length_failures] AS [cct_length_failures]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="cct_width_failures" EntityType="CasterLevel3Model.Store.cct_width_failures" store:Type="Tables" store:Schema="CCT" store:Name="cct_width_failures">
+            <DefiningQuery>SELECT 
+      [cct_width_failures].[HEAT_NUMBER] AS [HEAT_NUMBER], 
+      [cct_width_failures].[SLAB_NUMBER] AS [SLAB_NUMBER], 
+      [cct_width_failures].[REASON_1] AS [REASON_1], 
+      [cct_width_failures].[REASON_2] AS [REASON_2], 
+      [cct_width_failures].[REASON_3] AS [REASON_3], 
+      [cct_width_failures].[COMMENT] AS [COMMENT], 
+      [cct_width_failures].[CREATED] AS [CREATED], 
+      [cct_width_failures].[HEAT_NUMBER_SET] AS [HEAT_NUMBER_SET], 
+      [cct_width_failures].[RFT_FAILURE] AS [RFT_FAILURE]
+      FROM [CCT].[cct_width_failures] AS [cct_width_failures]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="cast_slab_view" EntityType="CasterLevel3Model.Store.cast_slab_view" store:Type="Views" store:Schema="CCT" store:Name="cast_slab_view">
+            <DefiningQuery>SELECT 
+      [cast_slab_view].[SLAB_NUMBER_SET] AS [SLAB_NUMBER_SET], 
+      [cast_slab_view].[CAST_SLAB_NUMBER] AS [CAST_SLAB_NUMBER], 
+      [cast_slab_view].[HEAT_NUMBER_SET] AS [HEAT_NUMBER_SET], 
+      [cast_slab_view].[CAST_HEAT_NUMBER] AS [CAST_HEAT_NUMBER], 
+      [cast_slab_view].[STRAND_NUMBER] AS [STRAND_NUMBER], 
+      [cast_slab_view].[ORDERED_SLAB_NUMBER] AS [ORDERED_SLAB_NUMBER], 
+      [cast_slab_view].[SLAB_POSITION] AS [SLAB_POSITION], 
+      [cast_slab_view].[FIRST_SEGMENT_NUMBER] AS [FIRST_SEGMENT_NUMBER], 
+      [cast_slab_view].[WIDTH_MADE_FIRST_SEGMENT] AS [WIDTH_MADE_FIRST_SEGMENT], 
+      [cast_slab_view].[FIRST_SEGMENT_TIMESTAMP] AS [FIRST_SEGMENT_TIMESTAMP], 
+      [cast_slab_view].[FIRST_SEGMENT_TIMESTAMP_GMT] AS [FIRST_SEGMENT_TIMESTAMP_GMT], 
+      [cast_slab_view].[LAST_SEGMENT_NUMBER] AS [LAST_SEGMENT_NUMBER], 
+      [cast_slab_view].[WIDTH_MADE_LAST_SEGMENT] AS [WIDTH_MADE_LAST_SEGMENT], 
+      [cast_slab_view].[LAST_SEGMENT_TIMESTAMP] AS [LAST_SEGMENT_TIMESTAMP], 
+      [cast_slab_view].[LAST_SEGMENT_TIMESTAMP_GMT] AS [LAST_SEGMENT_TIMESTAMP_GMT], 
+      [cast_slab_view].[LENGTH_MADE] AS [LENGTH_MADE], 
+      [cast_slab_view].[WEIGHT] AS [WEIGHT], 
+      [cast_slab_view].[GRADE_ORDERED] AS [GRADE_ORDERED], 
+      [cast_slab_view].[GRADE_MADE] AS [GRADE_MADE], 
+      [cast_slab_view].[THICKNESS_MADE] AS [THICKNESS_MADE], 
+      [cast_slab_view].[COMMENT_TEXT] AS [COMMENT_TEXT], 
+      [cast_slab_view].[MADE_TO_GRADE] AS [MADE_TO_GRADE], 
+      [cast_slab_view].[DOWNGRADE_REASON] AS [DOWNGRADE_REASON], 
+      [cast_slab_view].[MANUALLY_GRADED] AS [MANUALLY_GRADED], 
+      [cast_slab_view].[MANUALLY_GRADED_REASON] AS [MANUALLY_GRADED_REASON], 
+      [cast_slab_view].[ROTA] AS [ROTA], 
+      [cast_slab_view].[SHIFT_NO] AS [SHIFT_NO], 
+      [cast_slab_view].[DAY_NO] AS [DAY_NO], 
+      [cast_slab_view].[WEEK_NO] AS [WEEK_NO], 
+      [cast_slab_view].[YEAR_NO] AS [YEAR_NO], 
+      [cast_slab_view].[SLAB_CUT_TIMESTAMP] AS [SLAB_CUT_TIMESTAMP], 
+      [cast_slab_view].[SLAB_CUT_TIMESTAMP_GMT] AS [SLAB_CUT_TIMESTAMP_GMT], 
+      [cast_slab_view].[CASTER] AS [CASTER], 
+      [cast_slab_view].[MANUAL_INSERT] AS [MANUAL_INSERT]
+      FROM [CCT].[cast_slab_view] AS [cast_slab_view]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CasterLevel3.CCT.cast_slab' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="cast_slab">
+          <Key>
+            <PropertyRef Name="SLAB_NUMBER_SET" />
+            <PropertyRef Name="CAST_SLAB_NUMBER" />
+          </Key>
+          <Property Name="SLAB_NUMBER_SET" Type="int" Nullable="false" />
+          <Property Name="CAST_SLAB_NUMBER" Type="int" Nullable="false" />
+          <Property Name="CONCAST_NUMBER_SET" Type="int" />
+          <Property Name="CONCAST_NUMBER" Type="int" />
+          <Property Name="HEAT_NUMBER_SET" Type="int" />
+          <Property Name="CAST_HEAT_NUMBER" Type="int" />
+          <Property Name="TUNDISH_TRIP_NUMBER" Type="int" />
+          <Property Name="SHROUD_NUMBER" Type="int" />
+          <Property Name="SES_NUMBER" Type="int" />
+          <Property Name="MOULD_POWDER_NUMBER" Type="int" />
+          <Property Name="STRAND_NUMBER" Type="smallint" />
+          <Property Name="ORDERED_SLAB_NUMBER" Type="int" />
+          <Property Name="SLAB_POSITION" Type="smallint" />
+          <Property Name="FIRST_SEGMENT_NUMBER" Type="int" />
+          <Property Name="WIDTH_MADE_FIRST_SEGMENT" Type="int" />
+          <Property Name="WIDTH_CHECKED_FIRST_SEGMENT" Type="int" />
+          <Property Name="FIRST_SEGMENT_TIMESTAMP" Type="datetime" />
+          <Property Name="FIRST_SEGMENT_TIMESTAMP_GMT" Type="datetime" />
+          <Property Name="LAST_SEGMENT_NUMBER" Type="int" />
+          <Property Name="WIDTH_MADE_LAST_SEGMENT" Type="int" />
+          <Property Name="WIDTH_CHECKED_LAST_SEGMENT" Type="int" />
+          <Property Name="LAST_SEGMENT_TIMESTAMP" Type="datetime" />
+          <Property Name="LAST_SEGMENT_TIMESTAMP_GMT" Type="datetime" />
+          <Property Name="SYSTEM_1_LENGTH" Type="int" />
+          <Property Name="SYSTEM_2_LENGTH" Type="int" />
+          <Property Name="SYSTEM_3_LENGTH" Type="int" />
+          <Property Name="LENGTH_SYSTEM_USED" Type="smallint" />
+          <Property Name="LENGTH_MADE" Type="real" />
+          <Property Name="LENGTH_CHECKED" Type="real" />
+          <Property Name="WEIGHT" Type="real" />
+          <Property Name="GRADE_ORDERED" Type="smallint" />
+          <Property Name="GRADE_MADE" Type="smallint" />
+          <Property Name="THICKNESS_MADE" Type="smallint" />
+          <Property Name="COMMENT_TEXT" Type="nvarchar" MaxLength="64" />
+          <Property Name="METALLOGRAPHY" Type="nvarchar" MaxLength="64" />
+          <Property Name="ACCUMETRIC_TEMPERATURE" Type="real" />
+          <Property Name="MADE_TO_GRADE" Type="smallint" />
+          <Property Name="DOWNGRADE_REASON" Type="smallint" />
+          <Property Name="MANUALLY_GRADED" Type="smallint" />
+          <Property Name="MANUALLY_GRADED_REASON" Type="smallint" />
+          <Property Name="MOULD_TAPER" Type="real" />
+          <Property Name="AVERAGE_STRAND_SPEED" Type="real" />
+          <Property Name="AVERAGE_AR_FLOW_TO_NOZZLE" Type="real" />
+          <Property Name="AVERAGE_AR_FLOW_TO_STOPPER" Type="real" />
+          <Property Name="AVERAGE_AR_FLOW_TO_PLATE" Type="real" />
+          <Property Name="AVERAGE_AR_PRESSURE_TO_NOZZLE" Type="real" />
+          <Property Name="AVERAGE_AR_PRESSURE_TO_STOPPER" Type="real" />
+          <Property Name="AVERAGE_AR_PRESSURE_TO_PLATE" Type="real" />
+          <Property Name="STOPPER_BUILDUP" Type="real" />
+          <Property Name="MAX_FLATNESS" Type="real" />
+          <Property Name="LAST_TUNDISH_TEMPERATURE" Type="real" />
+          <Property Name="SES_SERVICE_LIFE" Type="smallint" />
+          <Property Name="SPRAY_WATER_PATTERN" Type="smallint" />
+          <Property Name="SPRAY_WATER_MODE" Type="smallint" />
+          <Property Name="MOULD_THERM_VAR_TOP_S" Type="real" />
+          <Property Name="MOULD_THERM_VAR_TOP_MID" Type="real" />
+          <Property Name="MOULD_THERM_VAR_TOP_N" Type="real" />
+          <Property Name="MOULD_THERM_VAR_BTM_S" Type="real" />
+          <Property Name="MOULD_THERM_VAR_BTM_MID" Type="real" />
+          <Property Name="MOULD_THERM_VAR_BTM_N" Type="real" />
+          <Property Name="SPEED_CHANGE" Type="smallint" />
+          <Property Name="FLUSH" Type="smallint" />
+          <Property Name="TUBE_CHANGE" Type="smallint" />
+          <Property Name="STREAM_UNSHROUDED" Type="smallint" />
+          <Property Name="MTM_ALARM" Type="smallint" />
+          <Property Name="SURGE_SIZE" Type="real" />
+          <Property Name="MOULD_LEVEL_CONTROL_AUTO" Type="smallint" />
+          <Property Name="DOWNGRADE_FOR_TEMPERATURE" Type="smallint" />
+          <Property Name="DOWNGRADE_FOR_CASTING_SPEED" Type="smallint" />
+          <Property Name="DOWNGRADE_FOR_MOULD_LEVEL" Type="smallint" />
+          <Property Name="QUALITY_CODE" Type="real" />
+          <Property Name="ROTA" Type="smallint" />
+          <Property Name="SHIFT_NO" Type="smallint" />
+          <Property Name="DAY_NO" Type="smallint" />
+          <Property Name="WEEK_NO" Type="smallint" />
+          <Property Name="YEAR_NO" Type="smallint" />
+          <Property Name="SLAB_CUT_TIMESTAMP" Type="datetime" />
+          <Property Name="SLAB_CUT_TIMESTAMP_GMT" Type="datetime" />
+          <Property Name="CASTER" Type="int" />
+          <Property Name="MANUAL_INSERT" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CasterLevel3.CCT.cct_grade_failures' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="cct_grade_failures">
+          <Key>
+            <PropertyRef Name="HEAT_NUMBER" />
+            <PropertyRef Name="SLAB_NUMBER" />
+          </Key>
+          <Property Name="HEAT_NUMBER" Type="int" Nullable="false" />
+          <Property Name="SLAB_NUMBER" Type="int" Nullable="false" />
+          <Property Name="REASON_1" Type="varchar" MaxLength="100" />
+          <Property Name="REASON_2" Type="varchar" MaxLength="100" />
+          <Property Name="REASON_3" Type="varchar" MaxLength="100" />
+          <Property Name="COMMENT" Type="varchar" MaxLength="1024" />
+          <Property Name="CREATED" Type="smalldatetime" />
+          <Property Name="HEAT_NUMBER_SET" Type="int" />
+          <Property Name="RFT_FAILURE" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CasterLevel3.CCT.cct_length_failures' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="cct_length_failures">
+          <Key>
+            <PropertyRef Name="HEAT_NUMBER" />
+            <PropertyRef Name="SLAB_NUMBER" />
+          </Key>
+          <Property Name="HEAT_NUMBER" Type="int" Nullable="false" />
+          <Property Name="SLAB_NUMBER" Type="int" Nullable="false" />
+          <Property Name="REASON_1" Type="varchar" MaxLength="100" />
+          <Property Name="REASON_2" Type="varchar" MaxLength="100" />
+          <Property Name="REASON_3" Type="varchar" MaxLength="100" />
+          <Property Name="COMMENT" Type="varchar" MaxLength="1024" />
+          <Property Name="CREATED" Type="smalldatetime" />
+          <Property Name="HEAT_NUMBER_SET" Type="int" />
+          <Property Name="RFT_FAILURE" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CasterLevel3.CCT.cct_width_failures' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="cct_width_failures">
+          <Key>
+            <PropertyRef Name="HEAT_NUMBER" />
+            <PropertyRef Name="SLAB_NUMBER" />
+          </Key>
+          <Property Name="HEAT_NUMBER" Type="int" Nullable="false" />
+          <Property Name="SLAB_NUMBER" Type="int" Nullable="false" />
+          <Property Name="REASON_1" Type="varchar" MaxLength="100" />
+          <Property Name="REASON_2" Type="varchar" MaxLength="100" />
+          <Property Name="REASON_3" Type="varchar" MaxLength="100" />
+          <Property Name="COMMENT" Type="varchar" MaxLength="1024" />
+          <Property Name="CREATED" Type="smalldatetime" />
+          <Property Name="HEAT_NUMBER_SET" Type="int" />
+          <Property Name="RFT_FAILURE" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'CasterLevel3.CCT.cast_slab_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="cast_slab_view">
+          <Key>
+            <PropertyRef Name="SLAB_NUMBER_SET" />
+            <PropertyRef Name="CAST_SLAB_NUMBER" />
+          </Key>
+          <Property Name="SLAB_NUMBER_SET" Type="int" Nullable="false" />
+          <Property Name="CAST_SLAB_NUMBER" Type="int" Nullable="false" />
+          <Property Name="HEAT_NUMBER_SET" Type="int" />
+          <Property Name="CAST_HEAT_NUMBER" Type="int" />
+          <Property Name="STRAND_NUMBER" Type="smallint" />
+          <Property Name="ORDERED_SLAB_NUMBER" Type="int" />
+          <Property Name="SLAB_POSITION" Type="smallint" />
+          <Property Name="FIRST_SEGMENT_NUMBER" Type="int" />
+          <Property Name="WIDTH_MADE_FIRST_SEGMENT" Type="int" />
+          <Property Name="FIRST_SEGMENT_TIMESTAMP" Type="datetime" />
+          <Property Name="FIRST_SEGMENT_TIMESTAMP_GMT" Type="datetime" />
+          <Property Name="LAST_SEGMENT_NUMBER" Type="int" />
+          <Property Name="WIDTH_MADE_LAST_SEGMENT" Type="int" />
+          <Property Name="LAST_SEGMENT_TIMESTAMP" Type="datetime" />
+          <Property Name="LAST_SEGMENT_TIMESTAMP_GMT" Type="datetime" />
+          <Property Name="LENGTH_MADE" Type="real" />
+          <Property Name="WEIGHT" Type="real" />
+          <Property Name="GRADE_ORDERED" Type="smallint" />
+          <Property Name="GRADE_MADE" Type="smallint" />
+          <Property Name="THICKNESS_MADE" Type="smallint" />
+          <Property Name="COMMENT_TEXT" Type="nvarchar" MaxLength="64" />
+          <Property Name="MADE_TO_GRADE" Type="smallint" />
+          <Property Name="DOWNGRADE_REASON" Type="smallint" />
+          <Property Name="MANUALLY_GRADED" Type="smallint" />
+          <Property Name="MANUALLY_GRADED_REASON" Type="smallint" />
+          <Property Name="ROTA" Type="smallint" />
+          <Property Name="SHIFT_NO" Type="smallint" />
+          <Property Name="DAY_NO" Type="smallint" />
+          <Property Name="WEEK_NO" Type="smallint" />
+          <Property Name="YEAR_NO" Type="smallint" />
+          <Property Name="SLAB_CUT_TIMESTAMP" Type="datetime" />
+          <Property Name="SLAB_CUT_TIMESTAMP_GMT" Type="datetime" />
+          <Property Name="CASTER" Type="int" />
+          <Property Name="MANUAL_INSERT" Type="int" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CasterLevel3Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="CasterLevel3Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="cast_slab_view" EntityType="CasterLevel3Model.cast_slab_view" />
+          <EntitySet Name="cct_grade_failures" EntityType="CasterLevel3Model.cct_grade_failures" />
+          <EntitySet Name="cct_length_failures" EntityType="CasterLevel3Model.cct_length_failures" />
+          <EntitySet Name="cct_width_failures" EntityType="CasterLevel3Model.cct_width_failures" />
+          <EntitySet Name="cast_slab" EntityType="CasterLevel3Model.cast_slab" />
+        </EntityContainer>
+        <EntityType Name="cast_slab_view">
+          <Key>
+            <PropertyRef Name="SLAB_NUMBER_SET" />
+            <PropertyRef Name="CAST_SLAB_NUMBER" />
+          </Key>
+          <Property Name="SLAB_NUMBER_SET" Type="Int32" Nullable="false" />
+          <Property Name="CAST_SLAB_NUMBER" Type="Int32" Nullable="false" />
+          <Property Name="HEAT_NUMBER_SET" Type="Int32" />
+          <Property Name="CAST_HEAT_NUMBER" Type="Int32" />
+          <Property Name="STRAND_NUMBER" Type="Int16" />
+          <Property Name="ORDERED_SLAB_NUMBER" Type="Int32" />
+          <Property Name="SLAB_POSITION" Type="Int16" />
+          <Property Name="FIRST_SEGMENT_NUMBER" Type="Int32" />
+          <Property Name="WIDTH_MADE_FIRST_SEGMENT" Type="Int32" />
+          <Property Name="FIRST_SEGMENT_TIMESTAMP" Type="DateTime" />
+          <Property Name="FIRST_SEGMENT_TIMESTAMP_GMT" Type="DateTime" />
+          <Property Name="LAST_SEGMENT_NUMBER" Type="Int32" />
+          <Property Name="WIDTH_MADE_LAST_SEGMENT" Type="Int32" />
+          <Property Name="LAST_SEGMENT_TIMESTAMP" Type="DateTime" />
+          <Property Name="LAST_SEGMENT_TIMESTAMP_GMT" Type="DateTime" />
+          <Property Name="LENGTH_MADE" Type="Single" />
+          <Property Name="WEIGHT" Type="Single" />
+          <Property Name="GRADE_ORDERED" Type="Int16" />
+          <Property Name="GRADE_MADE" Type="Int16" />
+          <Property Name="THICKNESS_MADE" Type="Int16" />
+          <Property Name="COMMENT_TEXT" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+          <Property Name="MADE_TO_GRADE" Type="Int16" />
+          <Property Name="DOWNGRADE_REASON" Type="Int16" />
+          <Property Name="MANUALLY_GRADED" Type="Int16" />
+          <Property Name="MANUALLY_GRADED_REASON" Type="Int16" />
+          <Property Name="ROTA" Type="Int16" />
+          <Property Name="SHIFT_NO" Type="Int16" />
+          <Property Name="DAY_NO" Type="Int16" />
+          <Property Name="WEEK_NO" Type="Int16" />
+          <Property Name="YEAR_NO" Type="Int16" />
+          <Property Name="SLAB_CUT_TIMESTAMP" Type="DateTime" />
+          <Property Name="SLAB_CUT_TIMESTAMP_GMT" Type="DateTime" />
+          <Property Name="CASTER" Type="Int32" />
+          <Property Name="MANUAL_INSERT" Type="Int32" />
+        </EntityType>
+        <EntityType Name="cct_grade_failures">
+          <Key>
+            <PropertyRef Name="HEAT_NUMBER" />
+            <PropertyRef Name="SLAB_NUMBER" />
+          </Key>
+          <Property Type="Int32" Name="HEAT_NUMBER" Nullable="false" />
+          <Property Type="Int32" Name="SLAB_NUMBER" Nullable="false" />
+          <Property Type="String" Name="REASON_1" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REASON_2" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REASON_3" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMMENT" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CREATED" />
+          <Property Type="Int32" Name="HEAT_NUMBER_SET" />
+          <Property Type="Int32" Name="RFT_FAILURE" />
+        </EntityType>
+        <EntityType Name="cct_length_failures">
+          <Key>
+            <PropertyRef Name="HEAT_NUMBER" />
+            <PropertyRef Name="SLAB_NUMBER" />
+          </Key>
+          <Property Type="Int32" Name="HEAT_NUMBER" Nullable="false" />
+          <Property Type="Int32" Name="SLAB_NUMBER" Nullable="false" />
+          <Property Type="String" Name="REASON_1" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REASON_2" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REASON_3" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMMENT" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CREATED" />
+          <Property Type="Int32" Name="HEAT_NUMBER_SET" />
+          <Property Type="Int32" Name="RFT_FAILURE" />
+        </EntityType>
+        <EntityType Name="cct_width_failures">
+          <Key>
+            <PropertyRef Name="HEAT_NUMBER" />
+            <PropertyRef Name="SLAB_NUMBER" />
+          </Key>
+          <Property Type="Int32" Name="HEAT_NUMBER" Nullable="false" />
+          <Property Type="Int32" Name="SLAB_NUMBER" Nullable="false" />
+          <Property Type="String" Name="REASON_1" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REASON_2" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REASON_3" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="COMMENT" MaxLength="1024" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="CREATED" />
+          <Property Type="Int32" Name="HEAT_NUMBER_SET" />
+          <Property Type="Int32" Name="RFT_FAILURE" />
+        </EntityType>
+        <EntityType Name="cast_slab">
+          <Key>
+            <PropertyRef Name="SLAB_NUMBER_SET" />
+            <PropertyRef Name="CAST_SLAB_NUMBER" />
+          </Key>
+          <Property Type="Int32" Name="SLAB_NUMBER_SET" Nullable="false" />
+          <Property Type="Int32" Name="CAST_SLAB_NUMBER" Nullable="false" />
+          <Property Type="Int32" Name="CONCAST_NUMBER_SET" />
+          <Property Type="Int32" Name="CONCAST_NUMBER" />
+          <Property Type="Int32" Name="HEAT_NUMBER_SET" />
+          <Property Type="Int32" Name="CAST_HEAT_NUMBER" />
+          <Property Type="Int32" Name="TUNDISH_TRIP_NUMBER" />
+          <Property Type="Int32" Name="SHROUD_NUMBER" />
+          <Property Type="Int32" Name="SES_NUMBER" />
+          <Property Type="Int32" Name="MOULD_POWDER_NUMBER" />
+          <Property Type="Int16" Name="STRAND_NUMBER" />
+          <Property Type="Int32" Name="ORDERED_SLAB_NUMBER" />
+          <Property Type="Int16" Name="SLAB_POSITION" />
+          <Property Type="Int32" Name="FIRST_SEGMENT_NUMBER" />
+          <Property Type="Int32" Name="WIDTH_MADE_FIRST_SEGMENT" />
+          <Property Type="Int32" Name="WIDTH_CHECKED_FIRST_SEGMENT" />
+          <Property Type="DateTime" Name="FIRST_SEGMENT_TIMESTAMP" />
+          <Property Type="DateTime" Name="FIRST_SEGMENT_TIMESTAMP_GMT" />
+          <Property Type="Int32" Name="LAST_SEGMENT_NUMBER" />
+          <Property Type="Int32" Name="WIDTH_MADE_LAST_SEGMENT" />
+          <Property Type="Int32" Name="WIDTH_CHECKED_LAST_SEGMENT" />
+          <Property Type="DateTime" Name="LAST_SEGMENT_TIMESTAMP" />
+          <Property Type="DateTime" Name="LAST_SEGMENT_TIMESTAMP_GMT" />
+          <Property Type="Int32" Name="SYSTEM_1_LENGTH" />
+          <Property Type="Int32" Name="SYSTEM_2_LENGTH" />
+          <Property Type="Int32" Name="SYSTEM_3_LENGTH" />
+          <Property Type="Int16" Name="LENGTH_SYSTEM_USED" />
+          <Property Type="Single" Name="LENGTH_MADE" />
+          <Property Type="Single" Name="LENGTH_CHECKED" />
+          <Property Type="Single" Name="WEIGHT" />
+          <Property Type="Int16" Name="GRADE_ORDERED" />
+          <Property Type="Int16" Name="GRADE_MADE" />
+          <Property Type="Int16" Name="THICKNESS_MADE" />
+          <Property Type="String" Name="COMMENT_TEXT" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="METALLOGRAPHY" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Type="Single" Name="ACCUMETRIC_TEMPERATURE" />
+          <Property Type="Int16" Name="MADE_TO_GRADE" />
+          <Property Type="Int16" Name="DOWNGRADE_REASON" />
+          <Property Type="Int16" Name="MANUALLY_GRADED" />
+          <Property Type="Int16" Name="MANUALLY_GRADED_REASON" />
+          <Property Type="Single" Name="MOULD_TAPER" />
+          <Property Type="Single" Name="AVERAGE_STRAND_SPEED" />
+          <Property Type="Single" Name="AVERAGE_AR_FLOW_TO_NOZZLE" />
+          <Property Type="Single" Name="AVERAGE_AR_FLOW_TO_STOPPER" />
+          <Property Type="Single" Name="AVERAGE_AR_FLOW_TO_PLATE" />
+          <Property Type="Single" Name="AVERAGE_AR_PRESSURE_TO_NOZZLE" />
+          <Property Type="Single" Name="AVERAGE_AR_PRESSURE_TO_STOPPER" />
+          <Property Type="Single" Name="AVERAGE_AR_PRESSURE_TO_PLATE" />
+          <Property Type="Single" Name="STOPPER_BUILDUP" />
+          <Property Type="Single" Name="MAX_FLATNESS" />
+          <Property Type="Single" Name="LAST_TUNDISH_TEMPERATURE" />
+          <Property Type="Int16" Name="SES_SERVICE_LIFE" />
+          <Property Type="Int16" Name="SPRAY_WATER_PATTERN" />
+          <Property Type="Int16" Name="SPRAY_WATER_MODE" />
+          <Property Type="Single" Name="MOULD_THERM_VAR_TOP_S" />
+          <Property Type="Single" Name="MOULD_THERM_VAR_TOP_MID" />
+          <Property Type="Single" Name="MOULD_THERM_VAR_TOP_N" />
+          <Property Type="Single" Name="MOULD_THERM_VAR_BTM_S" />
+          <Property Type="Single" Name="MOULD_THERM_VAR_BTM_MID" />
+          <Property Type="Single" Name="MOULD_THERM_VAR_BTM_N" />
+          <Property Type="Int16" Name="SPEED_CHANGE" />
+          <Property Type="Int16" Name="FLUSH" />
+          <Property Type="Int16" Name="TUBE_CHANGE" />
+          <Property Type="Int16" Name="STREAM_UNSHROUDED" />
+          <Property Type="Int16" Name="MTM_ALARM" />
+          <Property Type="Single" Name="SURGE_SIZE" />
+          <Property Type="Int16" Name="MOULD_LEVEL_CONTROL_AUTO" />
+          <Property Type="Int16" Name="DOWNGRADE_FOR_TEMPERATURE" />
+          <Property Type="Int16" Name="DOWNGRADE_FOR_CASTING_SPEED" />
+          <Property Type="Int16" Name="DOWNGRADE_FOR_MOULD_LEVEL" />
+          <Property Type="Single" Name="QUALITY_CODE" />
+          <Property Type="Int16" Name="ROTA" />
+          <Property Type="Int16" Name="SHIFT_NO" />
+          <Property Type="Int16" Name="DAY_NO" />
+          <Property Type="Int16" Name="WEEK_NO" />
+          <Property Type="Int16" Name="YEAR_NO" />
+          <Property Type="DateTime" Name="SLAB_CUT_TIMESTAMP" />
+          <Property Type="DateTime" Name="SLAB_CUT_TIMESTAMP_GMT" />
+          <Property Type="Int32" Name="CASTER" />
+          <Property Type="Int32" Name="MANUAL_INSERT" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CasterLevel3ModelStoreContainer" CdmEntityContainer="CasterLevel3Entities">
+          <EntitySetMapping Name="cast_slab_view"><EntityTypeMapping TypeName="CasterLevel3Model.cast_slab_view"><MappingFragment StoreEntitySet="cast_slab_view">
+            <ScalarProperty Name="SLAB_NUMBER_SET" ColumnName="SLAB_NUMBER_SET" />
+            <ScalarProperty Name="CAST_SLAB_NUMBER" ColumnName="CAST_SLAB_NUMBER" />
+            <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+            <ScalarProperty Name="CAST_HEAT_NUMBER" ColumnName="CAST_HEAT_NUMBER" />
+            <ScalarProperty Name="STRAND_NUMBER" ColumnName="STRAND_NUMBER" />
+            <ScalarProperty Name="ORDERED_SLAB_NUMBER" ColumnName="ORDERED_SLAB_NUMBER" />
+            <ScalarProperty Name="SLAB_POSITION" ColumnName="SLAB_POSITION" />
+            <ScalarProperty Name="FIRST_SEGMENT_NUMBER" ColumnName="FIRST_SEGMENT_NUMBER" />
+            <ScalarProperty Name="WIDTH_MADE_FIRST_SEGMENT" ColumnName="WIDTH_MADE_FIRST_SEGMENT" />
+            <ScalarProperty Name="FIRST_SEGMENT_TIMESTAMP" ColumnName="FIRST_SEGMENT_TIMESTAMP" />
+            <ScalarProperty Name="FIRST_SEGMENT_TIMESTAMP_GMT" ColumnName="FIRST_SEGMENT_TIMESTAMP_GMT" />
+            <ScalarProperty Name="LAST_SEGMENT_NUMBER" ColumnName="LAST_SEGMENT_NUMBER" />
+            <ScalarProperty Name="WIDTH_MADE_LAST_SEGMENT" ColumnName="WIDTH_MADE_LAST_SEGMENT" />
+            <ScalarProperty Name="LAST_SEGMENT_TIMESTAMP" ColumnName="LAST_SEGMENT_TIMESTAMP" />
+            <ScalarProperty Name="LAST_SEGMENT_TIMESTAMP_GMT" ColumnName="LAST_SEGMENT_TIMESTAMP_GMT" />
+            <ScalarProperty Name="LENGTH_MADE" ColumnName="LENGTH_MADE" />
+            <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+            <ScalarProperty Name="GRADE_ORDERED" ColumnName="GRADE_ORDERED" />
+            <ScalarProperty Name="GRADE_MADE" ColumnName="GRADE_MADE" />
+            <ScalarProperty Name="THICKNESS_MADE" ColumnName="THICKNESS_MADE" />
+            <ScalarProperty Name="COMMENT_TEXT" ColumnName="COMMENT_TEXT" />
+            <ScalarProperty Name="MADE_TO_GRADE" ColumnName="MADE_TO_GRADE" />
+            <ScalarProperty Name="DOWNGRADE_REASON" ColumnName="DOWNGRADE_REASON" />
+            <ScalarProperty Name="MANUALLY_GRADED" ColumnName="MANUALLY_GRADED" />
+            <ScalarProperty Name="MANUALLY_GRADED_REASON" ColumnName="MANUALLY_GRADED_REASON" />
+            <ScalarProperty Name="ROTA" ColumnName="ROTA" />
+            <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+            <ScalarProperty Name="DAY_NO" ColumnName="DAY_NO" />
+            <ScalarProperty Name="WEEK_NO" ColumnName="WEEK_NO" />
+            <ScalarProperty Name="YEAR_NO" ColumnName="YEAR_NO" />
+            <ScalarProperty Name="SLAB_CUT_TIMESTAMP" ColumnName="SLAB_CUT_TIMESTAMP" />
+            <ScalarProperty Name="SLAB_CUT_TIMESTAMP_GMT" ColumnName="SLAB_CUT_TIMESTAMP_GMT" />
+            <ScalarProperty Name="CASTER" ColumnName="CASTER" />
+            <ScalarProperty Name="MANUAL_INSERT" ColumnName="MANUAL_INSERT" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="cct_grade_failures">
+            <EntityTypeMapping TypeName="CasterLevel3Model.cct_grade_failures">
+              <MappingFragment StoreEntitySet="cct_grade_failures">
+                <ScalarProperty Name="RFT_FAILURE" ColumnName="RFT_FAILURE" />
+                <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+                <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+                <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+                <ScalarProperty Name="REASON_3" ColumnName="REASON_3" />
+                <ScalarProperty Name="REASON_2" ColumnName="REASON_2" />
+                <ScalarProperty Name="REASON_1" ColumnName="REASON_1" />
+                <ScalarProperty Name="SLAB_NUMBER" ColumnName="SLAB_NUMBER" />
+                <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cct_length_failures">
+            <EntityTypeMapping TypeName="CasterLevel3Model.cct_length_failures">
+              <MappingFragment StoreEntitySet="cct_length_failures">
+                <ScalarProperty Name="RFT_FAILURE" ColumnName="RFT_FAILURE" />
+                <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+                <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+                <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+                <ScalarProperty Name="REASON_3" ColumnName="REASON_3" />
+                <ScalarProperty Name="REASON_2" ColumnName="REASON_2" />
+                <ScalarProperty Name="REASON_1" ColumnName="REASON_1" />
+                <ScalarProperty Name="SLAB_NUMBER" ColumnName="SLAB_NUMBER" />
+                <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cct_width_failures">
+            <EntityTypeMapping TypeName="CasterLevel3Model.cct_width_failures">
+              <MappingFragment StoreEntitySet="cct_width_failures">
+                <ScalarProperty Name="RFT_FAILURE" ColumnName="RFT_FAILURE" />
+                <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+                <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+                <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+                <ScalarProperty Name="REASON_3" ColumnName="REASON_3" />
+                <ScalarProperty Name="REASON_2" ColumnName="REASON_2" />
+                <ScalarProperty Name="REASON_1" ColumnName="REASON_1" />
+                <ScalarProperty Name="SLAB_NUMBER" ColumnName="SLAB_NUMBER" />
+                <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cast_slab">
+            <EntityTypeMapping TypeName="CasterLevel3Model.cast_slab">
+              <MappingFragment StoreEntitySet="cast_slab">
+                <ScalarProperty Name="MANUAL_INSERT" ColumnName="MANUAL_INSERT" />
+                <ScalarProperty Name="CASTER" ColumnName="CASTER" />
+                <ScalarProperty Name="SLAB_CUT_TIMESTAMP_GMT" ColumnName="SLAB_CUT_TIMESTAMP_GMT" />
+                <ScalarProperty Name="SLAB_CUT_TIMESTAMP" ColumnName="SLAB_CUT_TIMESTAMP" />
+                <ScalarProperty Name="YEAR_NO" ColumnName="YEAR_NO" />
+                <ScalarProperty Name="WEEK_NO" ColumnName="WEEK_NO" />
+                <ScalarProperty Name="DAY_NO" ColumnName="DAY_NO" />
+                <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+                <ScalarProperty Name="ROTA" ColumnName="ROTA" />
+                <ScalarProperty Name="QUALITY_CODE" ColumnName="QUALITY_CODE" />
+                <ScalarProperty Name="DOWNGRADE_FOR_MOULD_LEVEL" ColumnName="DOWNGRADE_FOR_MOULD_LEVEL" />
+                <ScalarProperty Name="DOWNGRADE_FOR_CASTING_SPEED" ColumnName="DOWNGRADE_FOR_CASTING_SPEED" />
+                <ScalarProperty Name="DOWNGRADE_FOR_TEMPERATURE" ColumnName="DOWNGRADE_FOR_TEMPERATURE" />
+                <ScalarProperty Name="MOULD_LEVEL_CONTROL_AUTO" ColumnName="MOULD_LEVEL_CONTROL_AUTO" />
+                <ScalarProperty Name="SURGE_SIZE" ColumnName="SURGE_SIZE" />
+                <ScalarProperty Name="MTM_ALARM" ColumnName="MTM_ALARM" />
+                <ScalarProperty Name="STREAM_UNSHROUDED" ColumnName="STREAM_UNSHROUDED" />
+                <ScalarProperty Name="TUBE_CHANGE" ColumnName="TUBE_CHANGE" />
+                <ScalarProperty Name="FLUSH" ColumnName="FLUSH" />
+                <ScalarProperty Name="SPEED_CHANGE" ColumnName="SPEED_CHANGE" />
+                <ScalarProperty Name="MOULD_THERM_VAR_BTM_N" ColumnName="MOULD_THERM_VAR_BTM_N" />
+                <ScalarProperty Name="MOULD_THERM_VAR_BTM_MID" ColumnName="MOULD_THERM_VAR_BTM_MID" />
+                <ScalarProperty Name="MOULD_THERM_VAR_BTM_S" ColumnName="MOULD_THERM_VAR_BTM_S" />
+                <ScalarProperty Name="MOULD_THERM_VAR_TOP_N" ColumnName="MOULD_THERM_VAR_TOP_N" />
+                <ScalarProperty Name="MOULD_THERM_VAR_TOP_MID" ColumnName="MOULD_THERM_VAR_TOP_MID" />
+                <ScalarProperty Name="MOULD_THERM_VAR_TOP_S" ColumnName="MOULD_THERM_VAR_TOP_S" />
+                <ScalarProperty Name="SPRAY_WATER_MODE" ColumnName="SPRAY_WATER_MODE" />
+                <ScalarProperty Name="SPRAY_WATER_PATTERN" ColumnName="SPRAY_WATER_PATTERN" />
+                <ScalarProperty Name="SES_SERVICE_LIFE" ColumnName="SES_SERVICE_LIFE" />
+                <ScalarProperty Name="LAST_TUNDISH_TEMPERATURE" ColumnName="LAST_TUNDISH_TEMPERATURE" />
+                <ScalarProperty Name="MAX_FLATNESS" ColumnName="MAX_FLATNESS" />
+                <ScalarProperty Name="STOPPER_BUILDUP" ColumnName="STOPPER_BUILDUP" />
+                <ScalarProperty Name="AVERAGE_AR_PRESSURE_TO_PLATE" ColumnName="AVERAGE_AR_PRESSURE_TO_PLATE" />
+                <ScalarProperty Name="AVERAGE_AR_PRESSURE_TO_STOPPER" ColumnName="AVERAGE_AR_PRESSURE_TO_STOPPER" />
+                <ScalarProperty Name="AVERAGE_AR_PRESSURE_TO_NOZZLE" ColumnName="AVERAGE_AR_PRESSURE_TO_NOZZLE" />
+                <ScalarProperty Name="AVERAGE_AR_FLOW_TO_PLATE" ColumnName="AVERAGE_AR_FLOW_TO_PLATE" />
+                <ScalarProperty Name="AVERAGE_AR_FLOW_TO_STOPPER" ColumnName="AVERAGE_AR_FLOW_TO_STOPPER" />
+                <ScalarProperty Name="AVERAGE_AR_FLOW_TO_NOZZLE" ColumnName="AVERAGE_AR_FLOW_TO_NOZZLE" />
+                <ScalarProperty Name="AVERAGE_STRAND_SPEED" ColumnName="AVERAGE_STRAND_SPEED" />
+                <ScalarProperty Name="MOULD_TAPER" ColumnName="MOULD_TAPER" />
+                <ScalarProperty Name="MANUALLY_GRADED_REASON" ColumnName="MANUALLY_GRADED_REASON" />
+                <ScalarProperty Name="MANUALLY_GRADED" ColumnName="MANUALLY_GRADED" />
+                <ScalarProperty Name="DOWNGRADE_REASON" ColumnName="DOWNGRADE_REASON" />
+                <ScalarProperty Name="MADE_TO_GRADE" ColumnName="MADE_TO_GRADE" />
+                <ScalarProperty Name="ACCUMETRIC_TEMPERATURE" ColumnName="ACCUMETRIC_TEMPERATURE" />
+                <ScalarProperty Name="METALLOGRAPHY" ColumnName="METALLOGRAPHY" />
+                <ScalarProperty Name="COMMENT_TEXT" ColumnName="COMMENT_TEXT" />
+                <ScalarProperty Name="THICKNESS_MADE" ColumnName="THICKNESS_MADE" />
+                <ScalarProperty Name="GRADE_MADE" ColumnName="GRADE_MADE" />
+                <ScalarProperty Name="GRADE_ORDERED" ColumnName="GRADE_ORDERED" />
+                <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+                <ScalarProperty Name="LENGTH_CHECKED" ColumnName="LENGTH_CHECKED" />
+                <ScalarProperty Name="LENGTH_MADE" ColumnName="LENGTH_MADE" />
+                <ScalarProperty Name="LENGTH_SYSTEM_USED" ColumnName="LENGTH_SYSTEM_USED" />
+                <ScalarProperty Name="SYSTEM_3_LENGTH" ColumnName="SYSTEM_3_LENGTH" />
+                <ScalarProperty Name="SYSTEM_2_LENGTH" ColumnName="SYSTEM_2_LENGTH" />
+                <ScalarProperty Name="SYSTEM_1_LENGTH" ColumnName="SYSTEM_1_LENGTH" />
+                <ScalarProperty Name="LAST_SEGMENT_TIMESTAMP_GMT" ColumnName="LAST_SEGMENT_TIMESTAMP_GMT" />
+                <ScalarProperty Name="LAST_SEGMENT_TIMESTAMP" ColumnName="LAST_SEGMENT_TIMESTAMP" />
+                <ScalarProperty Name="WIDTH_CHECKED_LAST_SEGMENT" ColumnName="WIDTH_CHECKED_LAST_SEGMENT" />
+                <ScalarProperty Name="WIDTH_MADE_LAST_SEGMENT" ColumnName="WIDTH_MADE_LAST_SEGMENT" />
+                <ScalarProperty Name="LAST_SEGMENT_NUMBER" ColumnName="LAST_SEGMENT_NUMBER" />
+                <ScalarProperty Name="FIRST_SEGMENT_TIMESTAMP_GMT" ColumnName="FIRST_SEGMENT_TIMESTAMP_GMT" />
+                <ScalarProperty Name="FIRST_SEGMENT_TIMESTAMP" ColumnName="FIRST_SEGMENT_TIMESTAMP" />
+                <ScalarProperty Name="WIDTH_CHECKED_FIRST_SEGMENT" ColumnName="WIDTH_CHECKED_FIRST_SEGMENT" />
+                <ScalarProperty Name="WIDTH_MADE_FIRST_SEGMENT" ColumnName="WIDTH_MADE_FIRST_SEGMENT" />
+                <ScalarProperty Name="FIRST_SEGMENT_NUMBER" ColumnName="FIRST_SEGMENT_NUMBER" />
+                <ScalarProperty Name="SLAB_POSITION" ColumnName="SLAB_POSITION" />
+                <ScalarProperty Name="ORDERED_SLAB_NUMBER" ColumnName="ORDERED_SLAB_NUMBER" />
+                <ScalarProperty Name="STRAND_NUMBER" ColumnName="STRAND_NUMBER" />
+                <ScalarProperty Name="MOULD_POWDER_NUMBER" ColumnName="MOULD_POWDER_NUMBER" />
+                <ScalarProperty Name="SES_NUMBER" ColumnName="SES_NUMBER" />
+                <ScalarProperty Name="SHROUD_NUMBER" ColumnName="SHROUD_NUMBER" />
+                <ScalarProperty Name="TUNDISH_TRIP_NUMBER" ColumnName="TUNDISH_TRIP_NUMBER" />
+                <ScalarProperty Name="CAST_HEAT_NUMBER" ColumnName="CAST_HEAT_NUMBER" />
+                <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+                <ScalarProperty Name="CONCAST_NUMBER" ColumnName="CONCAST_NUMBER" />
+                <ScalarProperty Name="CONCAST_NUMBER_SET" ColumnName="CONCAST_NUMBER_SET" />
+                <ScalarProperty Name="CAST_SLAB_NUMBER" ColumnName="CAST_SLAB_NUMBER" />
+                <ScalarProperty Name="SLAB_NUMBER_SET" ColumnName="SLAB_NUMBER_SET" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="CasterL3Model" ZoomLevel="66">
+        <EntityTypeShape EntityType="CasterLevel3Model.cast_slab_view" Width="1.5" PointX="0.75" PointY="0.75" Height="6.5227262369791656" IsExpanded="true" />
+        <EntityTypeShape EntityType="CasterLevel3Model.cct_grade_failures" Width="1.5" PointX="3.375" PointY="0.75" Height="2.4140429687499996" />
+        <EntityTypeShape EntityType="CasterLevel3Model.cct_length_failures" Width="1.5" PointX="3.375" PointY="4.75" Height="2.4140429687499996" />
+        <EntityTypeShape EntityType="CasterLevel3Model.cct_width_failures" Width="1.5" PointX="5.375" PointY="0.75" Height="2.4140429687499996" />
+        <EntityTypeShape EntityType="CasterLevel3Model.cast_slab" Width="1.5" PointX="5.375" PointY="4.75" Height="14.082703450520832" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

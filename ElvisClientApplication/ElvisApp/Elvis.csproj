@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <RootNamespace>Elvis</RootNamespace>
+    <AssemblyName>Elvis</AssemblyName>
+    <StartupObject>Elvis.Program</StartupObject>
+
+    <ApplicationIcon>Resources\Letter-L-blue.ico</ApplicationIcon>
+
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <!-- You have Properties\AssemblyInfo.cs -->
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+
+    <!-- Keep old style usings/nullable behavior for now -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <!-- Project references -->
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj" />
+    <ProjectReference Include="..\ElvisDataModel\ElvisDataModel.csproj" />
+  </ItemGroup>
+
+  <!-- Replace old Microsoft.ReportViewer with ReportViewerCore (local RDLC support on modern .NET) -->
+  <ItemGroup>
+    <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.31" />
+    <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.32" />
+  </ItemGroup>
+
+  <!-- Move old packages.config refs to PackageReference -->
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="5.2.0" />
+    <!--<PackageReference Include="NLog.Extended" Version="5.2.0" />-->
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    <PackageReference Include="WinForms.DataVisualization" Version="1.10.0" />
+  </ItemGroup>
+
+  <!-- Keep vendor/manual DLL references for now -->
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>Required Dlls\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+
+    <Reference Include="MLJSystems.Calendars">
+      <HintPath>Required Dlls\MLJSystems.Calendars.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+
+    <Reference Include="MLJSystems.Core">
+      <HintPath>Required Dlls\MLJSystems.Core.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+
+    <Reference Include="NPOI">
+      <HintPath>Required Dlls\NPOI.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+
+    <Reference Include="ShiftDateTime">
+      <HintPath>..\..\..\..\TeamPlanner\TeamPlanner\bin\ShiftDateTime.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Ensure RDLC files remain embedded like your old csproj -->
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Reports\RDLC\**\*.rdlc" />
+    <EmbeddedResource Include="Forms\Reports\OEE\*.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="packages.config" />
+  </ItemGroup>
+
+  <!-- Keep config files available -->
+  <ItemGroup>
+    <None Include="app.config" />
+    <Content Include="NLog.config" CopyToOutputDirectory="Always" />
+    <Content Include="Elvis Release Notes.txt" CopyToOutputDirectory="Always" />
+  </ItemGroup>
+
+</Project>

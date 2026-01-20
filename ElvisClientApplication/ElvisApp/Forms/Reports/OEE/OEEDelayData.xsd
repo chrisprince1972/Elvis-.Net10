@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OEEDelayData" targetNamespace="http://tempuri.org/OEEDelayData.xsd" xmlns:mstns="http://tempuri.org/OEEDelayData.xsd" xmlns="http://tempuri.org/OEEDelayData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection ConnectionStringObject="Data Source=PTSSELVISTEST;Initial Catalog=elvisdb;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="ptsselvistest.elvisdb.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TibOEEReportTableAdapter" GeneratorDataComponentClassName="TibOEEReportTableAdapter" Name="TibOEEReport" UserDataComponentName="TibOEEReportTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ptsselvistest.elvisdb.dbo" DbObjectName="elvisdb.ViewData.TibOEEReport" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TibIndex, UnitNumber, UnitShort, UnitGroup, UnitGroupText, HeatNumber, HNS, ProgramNumber, EventStart, EventEnd, TibDuration, TibStatus, TIBStatusDescription, DelayNumber, DelayStart, DelayEnd, DelayDuration, PlantArea, DelayReason1, DelayReason2, DelayReason3, DelayReason4, DelayClass, TIBClassText, Category, TIBCategoryText, Discipline, TIBDisText, Comment, TibDelayIndex, YearNumber, WeekNumber, DayNumber, Shift, Rota, UnitText, OEECategory, LossType, Owner, ReportingTextLevel1, ReportingTextLevel2, ObjectDescription, ObjectCode, DamageDescription, DamageCode, DeviationType, CauseText, Section, ExternalInternal, SupplierDownStream, NoExtraWork, FlocDescriptionL3, FlocNumberL3, FlocDescriptionL4, FlocNumberL4, FlocDescriptionL5, FlocNumberL5 FROM ViewData.TibOEEReport</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TibIndex" DataSetColumn="TibIndex" />
+              <Mapping SourceColumn="UnitNumber" DataSetColumn="UnitNumber" />
+              <Mapping SourceColumn="UnitShort" DataSetColumn="UnitShort" />
+              <Mapping SourceColumn="UnitGroup" DataSetColumn="UnitGroup" />
+              <Mapping SourceColumn="UnitGroupText" DataSetColumn="UnitGroupText" />
+              <Mapping SourceColumn="HeatNumber" DataSetColumn="HeatNumber" />
+              <Mapping SourceColumn="HNS" DataSetColumn="HNS" />
+              <Mapping SourceColumn="ProgramNumber" DataSetColumn="ProgramNumber" />
+              <Mapping SourceColumn="EventStart" DataSetColumn="EventStart" />
+              <Mapping SourceColumn="EventEnd" DataSetColumn="EventEnd" />
+              <Mapping SourceColumn="TibDuration" DataSetColumn="TibDuration" />
+              <Mapping SourceColumn="TibStatus" DataSetColumn="TibStatus" />
+              <Mapping SourceColumn="TIBStatusDescription" DataSetColumn="TIBStatusDescription" />
+              <Mapping SourceColumn="DelayNumber" DataSetColumn="DelayNumber" />
+              <Mapping SourceColumn="DelayStart" DataSetColumn="DelayStart" />
+              <Mapping SourceColumn="DelayEnd" DataSetColumn="DelayEnd" />
+              <Mapping SourceColumn="DelayDuration" DataSetColumn="DelayDuration" />
+              <Mapping SourceColumn="PlantArea" DataSetColumn="PlantArea" />
+              <Mapping SourceColumn="DelayReason1" DataSetColumn="DelayReason1" />
+              <Mapping SourceColumn="DelayReason2" DataSetColumn="DelayReason2" />
+              <Mapping SourceColumn="DelayReason3" DataSetColumn="DelayReason3" />
+              <Mapping SourceColumn="DelayReason4" DataSetColumn="DelayReason4" />
+              <Mapping SourceColumn="DelayClass" DataSetColumn="DelayClass" />
+              <Mapping SourceColumn="TIBClassText" DataSetColumn="TIBClassText" />
+              <Mapping SourceColumn="Category" DataSetColumn="Category" />
+              <Mapping SourceColumn="TIBCategoryText" DataSetColumn="TIBCategoryText" />
+              <Mapping SourceColumn="Discipline" DataSetColumn="Discipline" />
+              <Mapping SourceColumn="TIBDisText" DataSetColumn="TIBDisText" />
+              <Mapping SourceColumn="Comment" DataSetColumn="Comment" />
+              <Mapping SourceColumn="TibDelayIndex" DataSetColumn="TibDelayIndex" />
+              <Mapping SourceColumn="YearNumber" DataSetColumn="YearNumber" />
+              <Mapping SourceColumn="WeekNumber" DataSetColumn="WeekNumber" />
+              <Mapping SourceColumn="DayNumber" DataSetColumn="DayNumber" />
+              <Mapping SourceColumn="Shift" DataSetColumn="Shift" />
+              <Mapping SourceColumn="Rota" DataSetColumn="Rota" />
+              <Mapping SourceColumn="UnitText" DataSetColumn="UnitText" />
+              <Mapping SourceColumn="OEECategory" DataSetColumn="OEECategory" />
+              <Mapping SourceColumn="LossType" DataSetColumn="LossType" />
+              <Mapping SourceColumn="Owner" DataSetColumn="Owner" />
+              <Mapping SourceColumn="ReportingTextLevel1" DataSetColumn="ReportingTextLevel1" />
+              <Mapping SourceColumn="ReportingTextLevel2" DataSetColumn="ReportingTextLevel2" />
+              <Mapping SourceColumn="ObjectDescription" DataSetColumn="ObjectDescription" />
+              <Mapping SourceColumn="ObjectCode" DataSetColumn="ObjectCode" />
+              <Mapping SourceColumn="DamageDescription" DataSetColumn="DamageDescription" />
+              <Mapping SourceColumn="DamageCode" DataSetColumn="DamageCode" />
+              <Mapping SourceColumn="DeviationType" DataSetColumn="DeviationType" />
+              <Mapping SourceColumn="CauseText" DataSetColumn="CauseText" />
+              <Mapping SourceColumn="Section" DataSetColumn="Section" />
+              <Mapping SourceColumn="ExternalInternal" DataSetColumn="ExternalInternal" />
+              <Mapping SourceColumn="SupplierDownStream" DataSetColumn="SupplierDownStream" />
+              <Mapping SourceColumn="NoExtraWork" DataSetColumn="NoExtraWork" />
+              <Mapping SourceColumn="FlocDescriptionL3" DataSetColumn="FlocDescriptionL3" />
+              <Mapping SourceColumn="FlocNumberL3" DataSetColumn="FlocNumberL3" />
+              <Mapping SourceColumn="FlocDescriptionL4" DataSetColumn="FlocDescriptionL4" />
+              <Mapping SourceColumn="FlocNumberL4" DataSetColumn="FlocNumberL4" />
+              <Mapping SourceColumn="FlocDescriptionL5" DataSetColumn="FlocDescriptionL5" />
+              <Mapping SourceColumn="FlocNumberL5" DataSetColumn="FlocNumberL5" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OEEDelayData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="OEEDelayData" msprop:Generator_UserDSName="OEEDelayData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TibOEEReport" msprop:Generator_TableClassName="TibOEEReportDataTable" msprop:Generator_TableVarName="tableTibOEEReport" msprop:Generator_TablePropName="TibOEEReport" msprop:Generator_RowDeletingName="TibOEEReportRowDeleting" msprop:Generator_RowChangingName="TibOEEReportRowChanging" msprop:Generator_RowEvHandlerName="TibOEEReportRowChangeEventHandler" msprop:Generator_RowDeletedName="TibOEEReportRowDeleted" msprop:Generator_UserTableName="TibOEEReport" msprop:Generator_RowChangedName="TibOEEReportRowChanged" msprop:Generator_RowEvArgName="TibOEEReportRowChangeEvent" msprop:Generator_RowClassName="TibOEEReportRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TibIndex" msprop:Generator_ColumnVarNameInTable="columnTibIndex" msprop:Generator_ColumnPropNameInRow="TibIndex" msprop:Generator_ColumnPropNameInTable="TibIndexColumn" msprop:Generator_UserColumnName="TibIndex" type="xs:int" />
+              <xs:element name="UnitNumber" msprop:Generator_ColumnVarNameInTable="columnUnitNumber" msprop:Generator_ColumnPropNameInRow="UnitNumber" msprop:Generator_ColumnPropNameInTable="UnitNumberColumn" msprop:Generator_UserColumnName="UnitNumber" type="xs:int" />
+              <xs:element name="UnitShort" msprop:Generator_ColumnVarNameInTable="columnUnitShort" msprop:Generator_ColumnPropNameInRow="UnitShort" msprop:Generator_ColumnPropNameInTable="UnitShortColumn" msprop:Generator_UserColumnName="UnitShort" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitGroup" msprop:Generator_ColumnVarNameInTable="columnUnitGroup" msprop:Generator_ColumnPropNameInRow="UnitGroup" msprop:Generator_ColumnPropNameInTable="UnitGroupColumn" msprop:Generator_UserColumnName="UnitGroup" type="xs:int" minOccurs="0" />
+              <xs:element name="UnitGroupText" msprop:Generator_ColumnVarNameInTable="columnUnitGroupText" msprop:Generator_ColumnPropNameInRow="UnitGroupText" msprop:Generator_ColumnPropNameInTable="UnitGroupTextColumn" msprop:Generator_UserColumnName="UnitGroupText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HeatNumber" msprop:Generator_ColumnVarNameInTable="columnHeatNumber" msprop:Generator_ColumnPropNameInRow="HeatNumber" msprop:Generator_ColumnPropNameInTable="HeatNumberColumn" msprop:Generator_UserColumnName="HeatNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="HNS" msprop:Generator_ColumnVarNameInTable="columnHNS" msprop:Generator_ColumnPropNameInRow="HNS" msprop:Generator_ColumnPropNameInTable="HNSColumn" msprop:Generator_UserColumnName="HNS" type="xs:int" minOccurs="0" />
+              <xs:element name="ProgramNumber" msprop:Generator_ColumnVarNameInTable="columnProgramNumber" msprop:Generator_ColumnPropNameInRow="ProgramNumber" msprop:Generator_ColumnPropNameInTable="ProgramNumberColumn" msprop:Generator_UserColumnName="ProgramNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="EventStart" msprop:Generator_ColumnVarNameInTable="columnEventStart" msprop:Generator_ColumnPropNameInRow="EventStart" msprop:Generator_ColumnPropNameInTable="EventStartColumn" msprop:Generator_UserColumnName="EventStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="EventEnd" msprop:Generator_ColumnVarNameInTable="columnEventEnd" msprop:Generator_ColumnPropNameInRow="EventEnd" msprop:Generator_ColumnPropNameInTable="EventEndColumn" msprop:Generator_UserColumnName="EventEnd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TibDuration" msprop:Generator_ColumnVarNameInTable="columnTibDuration" msprop:Generator_ColumnPropNameInRow="TibDuration" msprop:Generator_ColumnPropNameInTable="TibDurationColumn" msprop:Generator_UserColumnName="TibDuration" type="xs:int" minOccurs="0" />
+              <xs:element name="TibStatus" msprop:Generator_ColumnVarNameInTable="columnTibStatus" msprop:Generator_ColumnPropNameInRow="TibStatus" msprop:Generator_ColumnPropNameInTable="TibStatusColumn" msprop:Generator_UserColumnName="TibStatus" type="xs:int" minOccurs="0" />
+              <xs:element name="TIBStatusDescription" msprop:Generator_ColumnVarNameInTable="columnTIBStatusDescription" msprop:Generator_ColumnPropNameInRow="TIBStatusDescription" msprop:Generator_ColumnPropNameInTable="TIBStatusDescriptionColumn" msprop:Generator_UserColumnName="TIBStatusDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DelayNumber" msprop:Generator_ColumnVarNameInTable="columnDelayNumber" msprop:Generator_ColumnPropNameInRow="DelayNumber" msprop:Generator_ColumnPropNameInTable="DelayNumberColumn" msprop:Generator_UserColumnName="DelayNumber" type="xs:int" />
+              <xs:element name="DelayStart" msprop:Generator_ColumnVarNameInTable="columnDelayStart" msprop:Generator_ColumnPropNameInRow="DelayStart" msprop:Generator_ColumnPropNameInTable="DelayStartColumn" msprop:Generator_UserColumnName="DelayStart" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DelayEnd" msprop:Generator_ColumnVarNameInTable="columnDelayEnd" msprop:Generator_ColumnPropNameInRow="DelayEnd" msprop:Generator_ColumnPropNameInTable="DelayEndColumn" msprop:Generator_UserColumnName="DelayEnd" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DelayDuration" msprop:Generator_ColumnVarNameInTable="columnDelayDuration" msprop:Generator_ColumnPropNameInRow="DelayDuration" msprop:Generator_ColumnPropNameInTable="DelayDurationColumn" msprop:Generator_UserColumnName="DelayDuration" type="xs:int" minOccurs="0" />
+              <xs:element name="PlantArea" msprop:Generator_ColumnVarNameInTable="columnPlantArea" msprop:Generator_ColumnPropNameInRow="PlantArea" msprop:Generator_ColumnPropNameInTable="PlantAreaColumn" msprop:Generator_UserColumnName="PlantArea" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DelayReason1" msprop:Generator_ColumnVarNameInTable="columnDelayReason1" msprop:Generator_ColumnPropNameInRow="DelayReason1" msprop:Generator_ColumnPropNameInTable="DelayReason1Column" msprop:Generator_UserColumnName="DelayReason1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DelayReason2" msprop:Generator_ColumnVarNameInTable="columnDelayReason2" msprop:Generator_ColumnPropNameInRow="DelayReason2" msprop:Generator_ColumnPropNameInTable="DelayReason2Column" msprop:Generator_UserColumnName="DelayReason2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DelayReason3" msprop:Generator_ColumnVarNameInTable="columnDelayReason3" msprop:Generator_ColumnPropNameInRow="DelayReason3" msprop:Generator_ColumnPropNameInTable="DelayReason3Column" msprop:Generator_UserColumnName="DelayReason3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DelayReason4" msprop:Generator_ColumnVarNameInTable="columnDelayReason4" msprop:Generator_ColumnPropNameInRow="DelayReason4" msprop:Generator_ColumnPropNameInTable="DelayReason4Column" msprop:Generator_UserColumnName="DelayReason4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DelayClass" msprop:Generator_ColumnVarNameInTable="columnDelayClass" msprop:Generator_ColumnPropNameInRow="DelayClass" msprop:Generator_ColumnPropNameInTable="DelayClassColumn" msprop:Generator_UserColumnName="DelayClass" type="xs:int" minOccurs="0" />
+              <xs:element name="TIBClassText" msprop:Generator_ColumnVarNameInTable="columnTIBClassText" msprop:Generator_ColumnPropNameInRow="TIBClassText" msprop:Generator_ColumnPropNameInTable="TIBClassTextColumn" msprop:Generator_UserColumnName="TIBClassText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Category" msprop:Generator_ColumnVarNameInTable="columnCategory" msprop:Generator_ColumnPropNameInRow="Category" msprop:Generator_ColumnPropNameInTable="CategoryColumn" msprop:Generator_UserColumnName="Category" type="xs:int" minOccurs="0" />
+              <xs:element name="TIBCategoryText" msprop:Generator_ColumnVarNameInTable="columnTIBCategoryText" msprop:Generator_ColumnPropNameInRow="TIBCategoryText" msprop:Generator_ColumnPropNameInTable="TIBCategoryTextColumn" msprop:Generator_UserColumnName="TIBCategoryText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Discipline" msprop:Generator_ColumnVarNameInTable="columnDiscipline" msprop:Generator_ColumnPropNameInRow="Discipline" msprop:Generator_ColumnPropNameInTable="DisciplineColumn" msprop:Generator_UserColumnName="Discipline" type="xs:int" minOccurs="0" />
+              <xs:element name="TIBDisText" msprop:Generator_ColumnVarNameInTable="columnTIBDisText" msprop:Generator_ColumnPropNameInRow="TIBDisText" msprop:Generator_ColumnPropNameInTable="TIBDisTextColumn" msprop:Generator_UserColumnName="TIBDisText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Comment" msprop:Generator_ColumnVarNameInTable="columnComment" msprop:Generator_ColumnPropNameInRow="Comment" msprop:Generator_ColumnPropNameInTable="CommentColumn" msprop:Generator_UserColumnName="Comment" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TibDelayIndex" msprop:Generator_ColumnVarNameInTable="columnTibDelayIndex" msprop:Generator_ColumnPropNameInRow="TibDelayIndex" msprop:Generator_ColumnPropNameInTable="TibDelayIndexColumn" msprop:Generator_UserColumnName="TibDelayIndex" type="xs:int" />
+              <xs:element name="YearNumber" msprop:Generator_ColumnVarNameInTable="columnYearNumber" msprop:Generator_ColumnPropNameInRow="YearNumber" msprop:Generator_ColumnPropNameInTable="YearNumberColumn" msprop:Generator_UserColumnName="YearNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="WeekNumber" msprop:Generator_ColumnVarNameInTable="columnWeekNumber" msprop:Generator_ColumnPropNameInRow="WeekNumber" msprop:Generator_ColumnPropNameInTable="WeekNumberColumn" msprop:Generator_UserColumnName="WeekNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="DayNumber" msprop:Generator_ColumnVarNameInTable="columnDayNumber" msprop:Generator_ColumnPropNameInRow="DayNumber" msprop:Generator_ColumnPropNameInTable="DayNumberColumn" msprop:Generator_UserColumnName="DayNumber" type="xs:int" minOccurs="0" />
+              <xs:element name="Shift" msprop:Generator_ColumnVarNameInTable="columnShift" msprop:Generator_ColumnPropNameInRow="Shift" msprop:Generator_ColumnPropNameInTable="ShiftColumn" msprop:Generator_UserColumnName="Shift" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Rota" msprop:Generator_ColumnVarNameInTable="columnRota" msprop:Generator_ColumnPropNameInRow="Rota" msprop:Generator_ColumnPropNameInTable="RotaColumn" msprop:Generator_UserColumnName="Rota" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="UnitText" msprop:Generator_ColumnVarNameInTable="columnUnitText" msprop:Generator_ColumnPropNameInRow="UnitText" msprop:Generator_ColumnPropNameInTable="UnitTextColumn" msprop:Generator_UserColumnName="UnitText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OEECategory" msprop:Generator_ColumnVarNameInTable="columnOEECategory" msprop:Generator_ColumnPropNameInRow="OEECategory" msprop:Generator_ColumnPropNameInTable="OEECategoryColumn" msprop:Generator_UserColumnName="OEECategory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LossType" msprop:Generator_ColumnVarNameInTable="columnLossType" msprop:Generator_ColumnPropNameInRow="LossType" msprop:Generator_ColumnPropNameInTable="LossTypeColumn" msprop:Generator_UserColumnName="LossType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Owner" msprop:Generator_ColumnVarNameInTable="columnOwner" msprop:Generator_ColumnPropNameInRow="Owner" msprop:Generator_ColumnPropNameInTable="OwnerColumn" msprop:Generator_UserColumnName="Owner" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReportingTextLevel1" msprop:Generator_ColumnVarNameInTable="columnReportingTextLevel1" msprop:Generator_ColumnPropNameInRow="ReportingTextLevel1" msprop:Generator_ColumnPropNameInTable="ReportingTextLevel1Column" msprop:Generator_UserColumnName="ReportingTextLevel1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ReportingTextLevel2" msprop:Generator_ColumnVarNameInTable="columnReportingTextLevel2" msprop:Generator_ColumnPropNameInRow="ReportingTextLevel2" msprop:Generator_ColumnPropNameInTable="ReportingTextLevel2Column" msprop:Generator_UserColumnName="ReportingTextLevel2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectDescription" msprop:Generator_ColumnVarNameInTable="columnObjectDescription" msprop:Generator_ColumnPropNameInRow="ObjectDescription" msprop:Generator_ColumnPropNameInTable="ObjectDescriptionColumn" msprop:Generator_UserColumnName="ObjectDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ObjectCode" msprop:Generator_ColumnVarNameInTable="columnObjectCode" msprop:Generator_ColumnPropNameInRow="ObjectCode" msprop:Generator_ColumnPropNameInTable="ObjectCodeColumn" msprop:Generator_UserColumnName="ObjectCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DamageDescription" msprop:Generator_ColumnVarNameInTable="columnDamageDescription" msprop:Generator_ColumnPropNameInRow="DamageDescription" msprop:Generator_ColumnPropNameInTable="DamageDescriptionColumn" msprop:Generator_UserColumnName="DamageDescription" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DamageCode" msprop:Generator_ColumnVarNameInTable="columnDamageCode" msprop:Generator_ColumnPropNameInRow="DamageCode" msprop:Generator_ColumnPropNameInTable="DamageCodeColumn" msprop:Generator_UserColumnName="DamageCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeviationType" msprop:Generator_ColumnVarNameInTable="columnDeviationType" msprop:Generator_ColumnPropNameInRow="DeviationType" msprop:Generator_ColumnPropNameInTable="DeviationTypeColumn" msprop:Generator_UserColumnName="DeviationType" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CauseText" msprop:Generator_ColumnVarNameInTable="columnCauseText" msprop:Generator_ColumnPropNameInRow="CauseText" msprop:Generator_ColumnPropNameInTable="CauseTextColumn" msprop:Generator_UserColumnName="CauseText" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Section" msprop:Generator_ColumnVarNameInTable="columnSection" msprop:Generator_ColumnPropNameInRow="Section" msprop:Generator_ColumnPropNameInTable="SectionColumn" msprop:Generator_UserColumnName="Section" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExternalInternal" msprop:Generator_ColumnVarNameInTable="columnExternalInternal" msprop:Generator_ColumnPropNameInRow="ExternalInternal" msprop:Generator_ColumnPropNameInTable="ExternalInternalColumn" msprop:Generator_UserColumnName="ExternalInternal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupplierDownStream" msprop:Generator_ColumnVarNameInTable="columnSupplierDownStream" msprop:Generator_ColumnPropNameInRow="SupplierDownStream" msprop:Generator_ColumnPropNameInTable="SupplierDownStreamColumn" msprop:Generator_UserColumnName="SupplierDownStream" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NoExtraWork" msprop:Generator_ColumnVarNameInTable="columnNoExtraWork" msprop:Generator_ColumnPropNameInRow="NoExtraWork" msprop:Generator_ColumnPropNameInTable="NoExtraWorkColumn" msprop:Generator_UserColumnName="NoExtraWork" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FlocDescriptionL3" msprop:Generator_ColumnVarNameInTable="columnFlocDescriptionL3" msprop:Generator_ColumnPropNameInRow="FlocDescriptionL3" msprop:Generator_ColumnPropNameInTable="FlocDescriptionL3Column" msprop:Generator_UserColumnName="FlocDescriptionL3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FlocNumberL3" msprop:Generator_ColumnVarNameInTable="columnFlocNumberL3" msprop:Generator_ColumnPropNameInRow="FlocNumberL3" msprop:Generator_ColumnPropNameInTable="FlocNumberL3Column" msprop:Generator_UserColumnName="FlocNumberL3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FlocDescriptionL4" msprop:Generator_ColumnVarNameInTable="columnFlocDescriptionL4" msprop:Generator_ColumnPropNameInRow="FlocDescriptionL4" msprop:Generator_ColumnPropNameInTable="FlocDescriptionL4Column" msprop:Generator_UserColumnName="FlocDescriptionL4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FlocNumberL4" msprop:Generator_ColumnVarNameInTable="columnFlocNumberL4" msprop:Generator_ColumnPropNameInRow="FlocNumberL4" msprop:Generator_ColumnPropNameInTable="FlocNumberL4Column" msprop:Generator_UserColumnName="FlocNumberL4" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FlocDescriptionL5" msprop:Generator_ColumnVarNameInTable="columnFlocDescriptionL5" msprop:Generator_ColumnPropNameInRow="FlocDescriptionL5" msprop:Generator_ColumnPropNameInTable="FlocDescriptionL5Column" msprop:Generator_UserColumnName="FlocDescriptionL5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FlocNumberL5" msprop:Generator_ColumnVarNameInTable="columnFlocNumberL5" msprop:Generator_ColumnPropNameInRow="FlocNumberL5" msprop:Generator_ColumnPropNameInTable="FlocNumberL5Column" msprop:Generator_UserColumnName="FlocNumberL5" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

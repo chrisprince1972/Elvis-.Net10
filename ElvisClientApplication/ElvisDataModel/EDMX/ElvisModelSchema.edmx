@@ -1,0 +1,1263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelSchemaEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ModelSchemaEntitiesStoreContainer">
+          <EntitySet Name="CbmDisplayAnalysis" EntityType="ModelSchemaEntities.Store.CbmDisplayAnalysis" store:Type="Tables" Schema="Model" />
+          <EntitySet Name="CbmDisplayMaterial" EntityType="ModelSchemaEntities.Store.CbmDisplayMaterial" store:Type="Tables" Schema="Model" />
+          <EntitySet Name="CbmMaterialReq" EntityType="ModelSchemaEntities.Store.CbmMaterialReq" store:Type="Tables" Schema="Model" />
+          <EntitySet Name="CbmMessage" EntityType="ModelSchemaEntities.Store.CbmMessage" store:Type="Tables" Schema="Model" />
+          <EntitySet Name="CbmResult" EntityType="ModelSchemaEntities.Store.CbmResult" store:Type="Tables" Schema="Model" />
+          <EntitySet Name="EbmDisplay" EntityType="ModelSchemaEntities.Store.EbmDisplay" store:Type="Tables" Schema="Model" />
+          <EntitySet Name="HmdsmResult" EntityType="ModelSchemaEntities.Store.HmdsmResult" store:Type="Tables" Schema="Model" />
+        </EntityContainer>
+        <EntityType Name="CbmDisplayAnalysis">
+          <Key>
+            <PropertyRef Name="IndexCbm" />
+          </Key>
+          <Property Name="IndexCbm" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HEAT_NUMBER_SET" Type="int" />
+          <Property Name="HEAT_NUMBER" Type="int" />
+          <Property Name="CbmRunNumber" Type="int" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="CBM_RUN_TIME" Type="datetime" />
+          <Property Name="CBM_RUN_TIME_GMT" Type="datetime" />
+          <Property Name="CALC_HM_TEMPERATURE" Type="real" />
+          <Property Name="CALC_HM_CARBON" Type="real" />
+          <Property Name="CALC_HM_SILICON" Type="real" />
+          <Property Name="CALC_HM_MANGANESE" Type="real" />
+          <Property Name="CALC_HM_PHOSPHORUS" Type="real" />
+          <Property Name="CALC_HM_SULPHUR" Type="real" />
+          <Property Name="CALC_HM_NITROGEN" Type="real" />
+          <Property Name="CALC_HM_WEIGHT" Type="real" />
+          <Property Name="CALC_HM_DIP_TIME" Type="datetime" />
+          <Property Name="HM_LADLE_TEMPERATURE" Type="real" />
+          <Property Name="HM_LADLE_CARBON" Type="real" />
+          <Property Name="HM_LADLE_SILICON" Type="real" />
+          <Property Name="HM_LADLE_MANGANESE" Type="real" />
+          <Property Name="HM_LADLE_PHOSPHORUS" Type="real" />
+          <Property Name="HM_LADLE_SULPHUR" Type="real" />
+          <Property Name="HM_LADLE_NITROGEN" Type="real" />
+          <Property Name="HM_LADLE_WEIGHT" Type="real" />
+          <Property Name="HM_LADLE_DIP_TIME" Type="datetime" />
+          <Property Name="DESULPH_TEMPERATURE" Type="real" />
+          <Property Name="DESULPH_CARBON" Type="real" />
+          <Property Name="DESULPH_SILICON" Type="real" />
+          <Property Name="DESULPH_MANGANESE" Type="real" />
+          <Property Name="DESULPH_PHOSPHORUS" Type="real" />
+          <Property Name="DESULPH_SULPHUR" Type="real" />
+          <Property Name="DESULPH_NITROGEN" Type="real" />
+          <Property Name="DESULPH_WEIGHT" Type="real" />
+          <Property Name="DESULPH_DIP_TIME" Type="datetime" />
+          <Property Name="RECYCLE_TEMPERATURE" Type="real" />
+          <Property Name="RECYCLE_CARBON" Type="real" />
+          <Property Name="RECYCLE_SILICON" Type="real" />
+          <Property Name="RECYCLE_MANGANESE" Type="real" />
+          <Property Name="RECYCLE_PHOSPHORUS" Type="real" />
+          <Property Name="RECYCLE_SULPHUR" Type="real" />
+          <Property Name="RECYCLE_NITROGEN" Type="real" />
+          <Property Name="RECYCLE_WEIGHT" Type="real" />
+          <Property Name="RECYCLE_DIP_TIME" Type="datetime" />
+          <Property Name="RECYCLE_HEAT_NUMBER" Type="int" />
+          <Property Name="INBLOW_AIM_TEMPERATURE" Type="real" />
+          <Property Name="INBLOW_AIM_CARBON" Type="real" />
+          <Property Name="INBLOW_AIM_SILICON" Type="real" />
+          <Property Name="INBLOW_AIM_MANGANESE" Type="real" />
+          <Property Name="INBLOW_AIM_PHOSPHORUS" Type="real" />
+          <Property Name="INBLOW_AIM_SULPHUR" Type="real" />
+          <Property Name="INBLOW_AIM_NITROGEN" Type="real" />
+          <Property Name="INBLOW_AIM_WEIGHT" Type="real" />
+          <Property Name="INBLOW_AIM_DIP_TIME" Type="datetime" />
+          <Property Name="INBLOW_ACTUAL_TEMPERATURE" Type="real" />
+          <Property Name="INBLOW_ACTUAL_CARBON" Type="real" />
+          <Property Name="INBLOW_ACTUAL_SILICON" Type="real" />
+          <Property Name="INBLOW_ACTUAL_MANGANESE" Type="real" />
+          <Property Name="INBLOW_ACTUAL_PHOSPHORUS" Type="real" />
+          <Property Name="INBLOW_ACTUAL_SULPHUR" Type="real" />
+          <Property Name="INBLOW_ACTUAL_NITROGEN" Type="real" />
+          <Property Name="INBLOW_ACTUAL_WEIGHT" Type="real" />
+          <Property Name="INBLOW_ACTUAL_DIP_TIME" Type="datetime" />
+          <Property Name="ENDBLOW_AIM_TEMPERATURE" Type="real" />
+          <Property Name="ENDBLOW_AIM_CARBON" Type="real" />
+          <Property Name="ENDBLOW_AIM_SILICON" Type="real" />
+          <Property Name="ENDBLOW_AIM_MANGANESE" Type="real" />
+          <Property Name="ENDBLOW_AIM_PHOSPHORUS" Type="real" />
+          <Property Name="ENDBLOW_AIM_SULPHUR" Type="real" />
+          <Property Name="ENDBLOW_AIM_NITROGEN" Type="real" />
+          <Property Name="ENDBLOW_AIM_WEIGHT" Type="real" />
+          <Property Name="ENDBLOW_AIM_DIP_TIME" Type="datetime" />
+          <Property Name="ENDBLOW_ACTUAL_TEMPERATURE" Type="real" />
+          <Property Name="ENDBLOW_ACTUAL_CARBON" Type="real" />
+          <Property Name="ENDBLOW_ACTUAL_SILICON" Type="real" />
+          <Property Name="ENDBLOW_ACTUAL_MANGANESE" Type="real" />
+          <Property Name="ENDBLOW_ACTUAL_PHOSPHORUS" Type="real" />
+          <Property Name="ENDBLOW_ACTUAL_SULPHUR" Type="real" />
+          <Property Name="ENDBLOW_ACTUAL_NITROGEN" Type="real" />
+          <Property Name="ENDBLOW_ACTUAL_WEIGHT" Type="real" />
+          <Property Name="ENDBLOW_ACTUAL_DIP_TIME" Type="datetime" />
+          <Property Name="STEEL_CALC_TEMPERATURE" Type="real" />
+          <Property Name="STEEL_CALC_CARBON" Type="real" />
+          <Property Name="STEEL_CALC_SILICON" Type="real" />
+          <Property Name="STEEL_CALC_MANGANESE" Type="real" />
+          <Property Name="STEEL_CALC_PHOSPHORUS" Type="real" />
+          <Property Name="STEEL_CALC_SULPHUR" Type="real" />
+          <Property Name="STEEL_CALC_NITROGEN" Type="real" />
+          <Property Name="STEEL_CALC_WEIGHT" Type="real" />
+          <Property Name="STEEL_CALC_DIP_TIME" Type="datetime" />
+          <Property Name="SLAG_CALC_FE" Type="real" />
+          <Property Name="SLAG_CALC_CAO" Type="real" />
+          <Property Name="SLAG_CALC_SIO2" Type="real" />
+          <Property Name="SLAG_CALC_MGO" Type="real" />
+          <Property Name="SLAG_CALC_VR" Type="real" />
+          <Property Name="SLAG_CALC_P2O5" Type="real" />
+          <Property Name="SLAG_CALC_MNO" Type="real" />
+          <Property Name="SLAG_CALC_WEIGHT" Type="real" />
+          <Property Name="SLAG_ACTUAL_FE" Type="real" />
+          <Property Name="SLAG_ACTUAL_CAO" Type="real" />
+          <Property Name="SLAG_ACTUAL_SIO2" Type="real" />
+          <Property Name="SLAG_ACTUAL_MGO" Type="real" />
+          <Property Name="SLAG_ACTUAL_VR" Type="real" />
+          <Property Name="SLAG_ACTUAL_P2O5" Type="real" />
+          <Property Name="SLAG_ACTUAL_MNO" Type="real" />
+          <Property Name="SLAG_ACTUAL_WEIGHT" Type="real" />
+        </EntityType>
+        <EntityType Name="CbmDisplayMaterial">
+          <Key>
+            <PropertyRef Name="IndexCbm" />
+          </Key>
+          <Property Name="IndexCbm" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HEAT_NUMBER_SET" Type="int" />
+          <Property Name="HEAT_NUMBER" Type="int" />
+          <Property Name="CbmRunNumber" Type="int" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="CBM_RUN_TIME" Type="datetime" />
+          <Property Name="CBM_RUN_TIME_GMT" Type="datetime" />
+          <Property Name="OXYGEN_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="OXYGEN_CALCULATED" Type="real" />
+          <Property Name="OXYGEN_CONSTRAINED" Type="real" />
+          <Property Name="OXYGEN_PREPARED" Type="real" />
+          <Property Name="OXYGEN_ACTUAL" Type="real" />
+          <Property Name="HM_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="HM_CALCULATED" Type="real" />
+          <Property Name="HM_CONSTRAINED" Type="real" />
+          <Property Name="HM_PREPARED" Type="real" />
+          <Property Name="HM_ACTUAL" Type="real" />
+          <Property Name="SCRAP_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="SCRAP_CALCULATED" Type="real" />
+          <Property Name="SCRAP_CONSTRAINED" Type="real" />
+          <Property Name="SCRAP_PREPARED" Type="real" />
+          <Property Name="SCRAP_ACTUAL" Type="real" />
+          <Property Name="HM_RATIO_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="HM_RATIO_CALCULATED" Type="real" />
+          <Property Name="HM_RATIO_CONSTRAINED" Type="real" />
+          <Property Name="HM_RATIO_PREPARED" Type="real" />
+          <Property Name="HM_RATIO_ACTUAL" Type="real" />
+          <Property Name="RECYCLE_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="RECYCLE_CALCULATED" Type="real" />
+          <Property Name="RECYCLE_CONSTRAINED" Type="real" />
+          <Property Name="RECYCLE_PREPARED" Type="real" />
+          <Property Name="RECYCLE_ACTUAL" Type="real" />
+          <Property Name="CHB_MAT_1_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="CHB_MAT_1_CALCULATED" Type="real" />
+          <Property Name="CHB_MAT_1_CONSTRAINED" Type="real" />
+          <Property Name="CHB_MAT_1_PREPARED" Type="real" />
+          <Property Name="CHB_MAT_1_ACTUAL" Type="real" />
+          <Property Name="CHB_MAT_2_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="CHB_MAT_2_CALCULATED" Type="real" />
+          <Property Name="CHB_MAT_2_CONSTRAINED" Type="real" />
+          <Property Name="CHB_MAT_2_PREPARED" Type="real" />
+          <Property Name="CHB_MAT_2_ACTUAL" Type="real" />
+          <Property Name="CHB_MAT_3_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="CHB_MAT_3_CALCULATED" Type="real" />
+          <Property Name="CHB_MAT_3_CONSTRAINED" Type="real" />
+          <Property Name="CHB_MAT_3_PREPARED" Type="real" />
+          <Property Name="CHB_MAT_3_ACTUAL" Type="real" />
+          <Property Name="CHB_MAT_4_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="CHB_MAT_4_CALCULATED" Type="real" />
+          <Property Name="CHB_MAT_4_CONSTRAINED" Type="real" />
+          <Property Name="CHB_MAT_4_PREPARED" Type="real" />
+          <Property Name="CHB_MAT_4_ACTUAL" Type="real" />
+          <Property Name="CHB_MAT_5_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="CHB_MAT_5_CALCULATED" Type="real" />
+          <Property Name="CHB_MAT_5_CONSTRAINED" Type="real" />
+          <Property Name="CHB_MAT_5_PREPARED" Type="real" />
+          <Property Name="CHB_MAT_5_ACTUAL" Type="real" />
+          <Property Name="CHB_MAT_6_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="CHB_MAT_6_CALCULATED" Type="real" />
+          <Property Name="CHB_MAT_6_CONSTRAINED" Type="real" />
+          <Property Name="CHB_MAT_6_PREPARED" Type="real" />
+          <Property Name="CHB_MAT_6_ACTUAL" Type="real" />
+          <Property Name="TF_MAT_1_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="TF_MAT_1_CALCULATED" Type="real" />
+          <Property Name="TF_MAT_1_CONSTRAINED" Type="real" />
+          <Property Name="TF_MAT_1_PREPARED" Type="real" />
+          <Property Name="TF_MAT_1_ACTUAL" Type="real" />
+          <Property Name="TF_MAT_2_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="TF_MAT_2_CALCULATED" Type="real" />
+          <Property Name="TF_MAT_2_CONSTRAINED" Type="real" />
+          <Property Name="TF_MAT_2_PREPARED" Type="real" />
+          <Property Name="TF_MAT_2_ACTUAL" Type="real" />
+          <Property Name="MAN_MAT_1_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="MAN_MAT_1_CALCULATED" Type="real" />
+          <Property Name="MAN_MAT_1_CONSTRAINED" Type="real" />
+          <Property Name="MAN_MAT_1_PREPARED" Type="real" />
+          <Property Name="MAN_MAT_1_ACTUAL" Type="real" />
+          <Property Name="MAN_MAT_2_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="MAN_MAT_2_CALCULATED" Type="real" />
+          <Property Name="MAN_MAT_2_CONSTRAINED" Type="real" />
+          <Property Name="MAN_MAT_2_PREPARED" Type="real" />
+          <Property Name="MAN_MAT_2_ACTUAL" Type="real" />
+          <Property Name="MAN_MAT_3_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="MAN_MAT_3_CALCULATED" Type="real" />
+          <Property Name="MAN_MAT_3_CONSTRAINED" Type="real" />
+          <Property Name="MAN_MAT_3_PREPARED" Type="real" />
+          <Property Name="MAN_MAT_3_ACTUAL" Type="real" />
+          <Property Name="MAN_MAT_4_DESC_TEXT" Type="nvarchar" MaxLength="15" />
+          <Property Name="MAN_MAT_4_CALCULATED" Type="real" />
+          <Property Name="MAN_MAT_4_CONSTRAINED" Type="real" />
+          <Property Name="MAN_MAT_4_PREPARED" Type="real" />
+          <Property Name="MAN_MAT_4_ACTUAL" Type="real" />
+        </EntityType>
+        <EntityType Name="CbmMaterialReq">
+          <Key>
+            <PropertyRef Name="IndexCbm" />
+          </Key>
+          <Property Name="IndexCbm" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HEAT_NUMBER_SET" Type="int" />
+          <Property Name="HEAT_NUMBER" Type="int" />
+          <Property Name="CbmRunNumber" Type="int" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="MATERIAL_TYPE" Type="int" />
+          <Property Name="MATERIAL_DESCRIPTOR" Type="nvarchar" MaxLength="15" />
+          <Property Name="RUN_TIME" Type="datetime" />
+          <Property Name="RUN_TIME_GMT" Type="datetime" />
+          <Property Name="QUANTITY" Type="real" />
+          <Property Name="CONSTRAINED" Type="int" />
+          <Property Name="NUMBER" Type="smallint" />
+        </EntityType>
+        <EntityType Name="CbmMessage">
+          <Key>
+            <PropertyRef Name="IndexCbm" />
+          </Key>
+          <Property Name="IndexCbm" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HEAT_NUMBER_SET" Type="int" />
+          <Property Name="HEAT_NUMBER" Type="int" />
+          <Property Name="CbmRunNumber" Type="int" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="CBM_RUN_TIME_STAMP" Type="datetime" />
+          <Property Name="CBM_RUN_TIME_STAMP_GMT" Type="datetime" />
+          <Property Name="MESSAGE_NUMBER" Type="int" />
+          <Property Name="MESSAGE_TYPE" Type="int" />
+          <Property Name="MESSAGE_TEXT" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="CbmResult">
+          <Key>
+            <PropertyRef Name="IndexCbm" />
+          </Key>
+          <Property Name="IndexCbm" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HEAT_NUMBER_SET" Type="int" />
+          <Property Name="HEAT_NUMBER" Type="int" />
+          <Property Name="CbmRunNumber" Type="int" />
+          <Property Name="TimeStamp" Type="datetime" />
+          <Property Name="RUN_TIME" Type="datetime" />
+          <Property Name="RUN_TIME_GMT" Type="datetime" />
+          <Property Name="HEAT_STATUS" Type="int" />
+          <Property Name="RECYCLED_STEEL_WEIGHT" Type="real" />
+          <Property Name="PREDICTED_TAP_WEIGHT" Type="real" />
+          <Property Name="PREDICTED_SLAG_WEIGHT" Type="real" />
+          <Property Name="PREDICTED_END_BLOW_TEMP" Type="smallint" />
+          <Property Name="PREDICTED_OXYGEN" Type="smallint" />
+          <Property Name="COMMIT_TIME" Type="datetime" />
+          <Property Name="COMMIT_TIME_GMT" Type="datetime" />
+          <Property Name="COMMIT_OPERATOR_ID" Type="nvarchar" MaxLength="30" />
+          <Property Name="ERROR_MESSAGE_LINE_1" Type="nvarchar" MaxLength="65" />
+          <Property Name="ERROR_MESSAGE_LINE_2" Type="nvarchar" MaxLength="65" />
+          <Property Name="ERROR_MESSAGE_LINE_3" Type="nvarchar" MaxLength="65" />
+          <Property Name="HM_LADLE_NUMBER" Type="smallint" />
+          <Property Name="HM_CARBON" Type="real" />
+          <Property Name="HM_SILICON" Type="real" />
+          <Property Name="HM_MANGANESE" Type="real" />
+          <Property Name="HM_PHOSPHORUS" Type="real" />
+          <Property Name="HM_SULPHUR" Type="real" />
+          <Property Name="HM_NITROGEN" Type="real" />
+          <Property Name="HM_TEMPERATURE" Type="real" />
+          <Property Name="PREDICTED_TAP_CARBON" Type="real" />
+          <Property Name="PREDICTED_TAP_MANGANESE" Type="real" />
+          <Property Name="PREDICTED_TAP_PHOSPHORUS" Type="real" />
+          <Property Name="PREDICTED_TAP_SULPHUR" Type="real" />
+          <Property Name="PREDICTED_TAP_NITROGEN" Type="real" />
+          <Property Name="PREDICTED_SLAG_FE" Type="real" />
+          <Property Name="PREDICTED_SLAG_CAO" Type="real" />
+          <Property Name="PREDICTED_SLAG_SIO2" Type="real" />
+          <Property Name="PREDICTED_SLAG_AL2O3" Type="real" />
+          <Property Name="PREDICTED_SLAG_MGO" Type="real" />
+          <Property Name="PREDICTED_SLAG_P2O5" Type="real" />
+          <Property Name="PREDICTED_SLAG_S" Type="real" />
+          <Property Name="PREDICTED_SLAG_MNO" Type="real" />
+          <Property Name="PREDICTED_SLAG_FEO" Type="real" />
+          <Property Name="PREDICTED_SLAG_TIO2" Type="real" />
+          <Property Name="NUMBER" Type="smallint" />
+          <Property Name="CONVERTER" Type="smallint" />
+          <Property Name="RUN_MODE" Type="smallint" />
+        </EntityType>
+        <EntityType Name="EbmDisplay">
+          <Key>
+            <PropertyRef Name="EbmDisplayID" />
+          </Key>
+          <Property Name="EbmDisplayID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Timestamp" Type="datetime" Nullable="false" />
+          <Property Name="UnitID" Type="int" Nullable="false" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="ProgramNumber" Type="int" />
+          <Property Name="OxygenCbModel" Type="real" />
+          <Property Name="OxygenAtInBlow" Type="real" />
+          <Property Name="OxygenEbModel" Type="real" />
+          <Property Name="OxygenAtPostBlow" Type="real" />
+          <Property Name="OxygenVolumeToCharge" Type="real" />
+          <Property Name="OreCbModel" Type="real" />
+          <Property Name="OreAtInBlow" Type="real" />
+          <Property Name="OreEbModel" Type="real" />
+          <Property Name="OreAtPostBlow" Type="real" />
+          <Property Name="AimTemperature" Type="real" />
+          <Property Name="InblowTemperature" Type="real" />
+          <Property Name="InblowTemperatureQC" Type="char" MaxLength="1" />
+          <Property Name="AimCarbon" Type="real" />
+          <Property Name="InblowCarbon" Type="real" />
+          <Property Name="InblowCarbonQC" Type="char" MaxLength="1" />
+          <Property Name="Pb1Temperature" Type="real" />
+          <Property Name="Pb1TemperatureQC" Type="char" MaxLength="1" />
+          <Property Name="Pb1OxyActivity" Type="real" />
+          <Property Name="Pb1OxyActivityQC" Type="char" MaxLength="1" />
+          <Property Name="Pb1CalculatedCarbon" Type="real" />
+          <Property Name="Pb1ImmersionDepth" Type="real" />
+          <Property Name="Pb1ImmersionDepthQC" Type="char" MaxLength="1" />
+          <Property Name="Pb1BathHeight" Type="real" />
+          <Property Name="Pb2Temperature" Type="real" />
+          <Property Name="Pb2TemperatureQC" Type="char" MaxLength="1" />
+          <Property Name="Pb2OxyActivity" Type="real" />
+          <Property Name="Pb2OxyActivityQC" Type="char" MaxLength="1" />
+          <Property Name="Pb2CalculatedCarbon" Type="real" />
+          <Property Name="Pb2ImmersionDepth" Type="real" />
+          <Property Name="Pb2ImmersionDepthQC" Type="char" MaxLength="1" />
+          <Property Name="Pb2BathHeight" Type="real" />
+          <Property Name="OreAlarm" Type="int" />
+          <Property Name="LimeAlarm" Type="int" />
+          <Property Name="ScrapAlarm" Type="int" />
+          <Property Name="PhosphorusAlarm" Type="int" />
+          <Property Name="TsoRequired" Type="int" />
+          <Property Name="EstOxyActivity" Type="real" />
+          <Property Name="EstPbCarbon" Type="real" />
+          <Property Name="SlspOxyActivity" Type="real" />
+          <Property Name="SlspOxyActivityQC" Type="char" MaxLength="1" />
+          <Property Name="SlspDolofluxWt" Type="real" />
+          <Property Name="ReblowOxygen" Type="real" />
+          <Property Name="CoolbackOre" Type="real" />
+          <Property Name="DeltaTemperature" Type="real" />
+          <Property Name="ReblowRequired" Type="int" />
+          <Property Name="LadleAimTemperature" Type="real" />
+          <Property Name="LadleAimCarbon" Type="real" />
+          <Property Name="LadleActualTemperature" Type="real" />
+          <Property Name="LadleActualCarbon" Type="real" />
+          <Property Name="HmCarbon" Type="real" />
+          <Property Name="HmSilicon" Type="real" />
+          <Property Name="HmSulphur" Type="real" />
+          <Property Name="HmPhosphorus" Type="real" />
+          <Property Name="HmManganese" Type="real" />
+          <Property Name="HmNitrogen" Type="real" />
+          <Property Name="IbCarbon" Type="real" />
+          <Property Name="IbSilicon" Type="real" />
+          <Property Name="IbSulphur" Type="real" />
+          <Property Name="IbPhosphorus" Type="real" />
+          <Property Name="IbManganese" Type="real" />
+          <Property Name="IbNitrogen" Type="real" />
+          <Property Name="Pb1Carbon" Type="real" />
+          <Property Name="Pb1Silicon" Type="real" />
+          <Property Name="Pb1Sulphur" Type="real" />
+          <Property Name="Pb1Phosphorus" Type="real" />
+          <Property Name="Pb1Manganese" Type="real" />
+          <Property Name="Pb1Nitrogen" Type="real" />
+          <Property Name="QtCarbon" Type="real" />
+          <Property Name="QtSilicon" Type="real" />
+          <Property Name="QtSulphur" Type="real" />
+          <Property Name="QtPhosphorus" Type="real" />
+          <Property Name="QtManganese" Type="real" />
+          <Property Name="QtNitrogen" Type="real" />
+          <Property Name="TundishCarbon" Type="real" />
+          <Property Name="TundishSilicon" Type="real" />
+          <Property Name="TundishSulphur" Type="real" />
+          <Property Name="TundishPhosphorus" Type="real" />
+          <Property Name="TundishManganese" Type="real" />
+          <Property Name="TundishNitrogen" Type="real" />
+          <Property Name="RunoutTimeMins" Type="int" />
+          <Property Name="RunoutTimeSecs" Type="int" />
+          <Property Name="ErrorText" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="HmdsmResult">
+          <Key>
+            <PropertyRef Name="HmdsmResultID" />
+          </Key>
+          <Property Name="HmdsmResultID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="HeatNumber" Type="int" Nullable="false" />
+          <Property Name="HNS" Type="int" Nullable="false" />
+          <Property Name="UnitID" Type="int" Nullable="false" />
+          <Property Name="HMLadleNumber" Type="int" Nullable="false" />
+          <Property Name="TreatmentStage" Type="int" />
+          <Property Name="HmdsmRunTimeStamp" Type="datetime" Nullable="false" />
+          <Property Name="HmdsmRunTimeStampGMT" Type="datetime" Nullable="false" />
+          <Property Name="HmdsmTreatmentTypeID" Type="int" Nullable="false" />
+          <Property Name="TreatmentTime" Type="int" />
+          <Property Name="TotalMgWeight" Type="real" />
+          <Property Name="TotalLimeWeight" Type="real" />
+          <Property Name="HMWeightLoss" Type="real" />
+          <Property Name="HMTemperatureLoss" Type="real" />
+          <Property Name="StartHMSulphur" Type="real" />
+          <Property Name="AimHMSulpur" Type="real" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModelSchema" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ModelSchemaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CbmDisplayAnalysis1" EntityType="ModelSchema.CbmDisplayAnalysis" />
+          <EntitySet Name="CbmDisplayMaterials" EntityType="ModelSchema.CbmDisplayMaterial" />
+          <EntitySet Name="CbmMaterialReqs" EntityType="ModelSchema.CbmMaterialReq" />
+          <EntitySet Name="CbmMessages" EntityType="ModelSchema.CbmMessage" />
+          <EntitySet Name="CbmResults" EntityType="ModelSchema.CbmResult" />
+          <EntitySet Name="EbmDisplays" EntityType="ModelSchema.EbmDisplay" />
+          <EntitySet Name="HmdsmResults" EntityType="ModelSchema.HmdsmResult" />
+        </EntityContainer>
+        <EntityType Name="CbmDisplayAnalysis">
+          <Key>
+            <PropertyRef Name="IndexCbm" />
+          </Key>
+          <Property Name="IndexCbm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HEAT_NUMBER_SET" Type="Int32" />
+          <Property Name="HEAT_NUMBER" Type="Int32" />
+          <Property Name="TimeStamp" Type="DateTime" />
+          <Property Name="CBM_RUN_TIME" Type="DateTime" />
+          <Property Name="CBM_RUN_TIME_GMT" Type="DateTime" />
+          <Property Name="CALC_HM_TEMPERATURE" Type="Single" />
+          <Property Name="CALC_HM_CARBON" Type="Single" />
+          <Property Name="CALC_HM_SILICON" Type="Single" />
+          <Property Name="CALC_HM_MANGANESE" Type="Single" />
+          <Property Name="CALC_HM_PHOSPHORUS" Type="Single" />
+          <Property Name="CALC_HM_SULPHUR" Type="Single" />
+          <Property Name="CALC_HM_NITROGEN" Type="Single" />
+          <Property Name="CALC_HM_WEIGHT" Type="Single" />
+          <Property Name="CALC_HM_DIP_TIME" Type="DateTime" />
+          <Property Name="HM_LADLE_TEMPERATURE" Type="Single" />
+          <Property Name="HM_LADLE_CARBON" Type="Single" />
+          <Property Name="HM_LADLE_SILICON" Type="Single" />
+          <Property Name="HM_LADLE_MANGANESE" Type="Single" />
+          <Property Name="HM_LADLE_PHOSPHORUS" Type="Single" />
+          <Property Name="HM_LADLE_SULPHUR" Type="Single" />
+          <Property Name="HM_LADLE_NITROGEN" Type="Single" />
+          <Property Name="HM_LADLE_WEIGHT" Type="Single" />
+          <Property Name="HM_LADLE_DIP_TIME" Type="DateTime" />
+          <Property Name="DESULPH_TEMPERATURE" Type="Single" />
+          <Property Name="DESULPH_CARBON" Type="Single" />
+          <Property Name="DESULPH_SILICON" Type="Single" />
+          <Property Name="DESULPH_MANGANESE" Type="Single" />
+          <Property Name="DESULPH_PHOSPHORUS" Type="Single" />
+          <Property Name="DESULPH_SULPHUR" Type="Single" />
+          <Property Name="DESULPH_NITROGEN" Type="Single" />
+          <Property Name="DESULPH_WEIGHT" Type="Single" />
+          <Property Name="DESULPH_DIP_TIME" Type="DateTime" />
+          <Property Name="RECYCLE_TEMPERATURE" Type="Single" />
+          <Property Name="RECYCLE_CARBON" Type="Single" />
+          <Property Name="RECYCLE_SILICON" Type="Single" />
+          <Property Name="RECYCLE_MANGANESE" Type="Single" />
+          <Property Name="RECYCLE_PHOSPHORUS" Type="Single" />
+          <Property Name="RECYCLE_SULPHUR" Type="Single" />
+          <Property Name="RECYCLE_NITROGEN" Type="Single" />
+          <Property Name="RECYCLE_WEIGHT" Type="Single" />
+          <Property Name="RECYCLE_DIP_TIME" Type="DateTime" />
+          <Property Name="INBLOW_AIM_TEMPERATURE" Type="Single" />
+          <Property Name="INBLOW_AIM_CARBON" Type="Single" />
+          <Property Name="INBLOW_AIM_SILICON" Type="Single" />
+          <Property Name="INBLOW_AIM_MANGANESE" Type="Single" />
+          <Property Name="INBLOW_AIM_PHOSPHORUS" Type="Single" />
+          <Property Name="INBLOW_AIM_SULPHUR" Type="Single" />
+          <Property Name="INBLOW_AIM_NITROGEN" Type="Single" />
+          <Property Name="INBLOW_AIM_WEIGHT" Type="Single" />
+          <Property Name="INBLOW_AIM_DIP_TIME" Type="DateTime" />
+          <Property Name="INBLOW_ACTUAL_TEMPERATURE" Type="Single" />
+          <Property Name="INBLOW_ACTUAL_CARBON" Type="Single" />
+          <Property Name="INBLOW_ACTUAL_SILICON" Type="Single" />
+          <Property Name="INBLOW_ACTUAL_MANGANESE" Type="Single" />
+          <Property Name="INBLOW_ACTUAL_PHOSPHORUS" Type="Single" />
+          <Property Name="INBLOW_ACTUAL_SULPHUR" Type="Single" />
+          <Property Name="INBLOW_ACTUAL_NITROGEN" Type="Single" />
+          <Property Name="INBLOW_ACTUAL_WEIGHT" Type="Single" />
+          <Property Name="INBLOW_ACTUAL_DIP_TIME" Type="DateTime" />
+          <Property Name="ENDBLOW_AIM_TEMPERATURE" Type="Single" />
+          <Property Name="ENDBLOW_AIM_CARBON" Type="Single" />
+          <Property Name="ENDBLOW_AIM_SILICON" Type="Single" />
+          <Property Name="ENDBLOW_AIM_MANGANESE" Type="Single" />
+          <Property Name="ENDBLOW_AIM_PHOSPHORUS" Type="Single" />
+          <Property Name="ENDBLOW_AIM_SULPHUR" Type="Single" />
+          <Property Name="ENDBLOW_AIM_NITROGEN" Type="Single" />
+          <Property Name="ENDBLOW_AIM_WEIGHT" Type="Single" />
+          <Property Name="ENDBLOW_AIM_DIP_TIME" Type="DateTime" />
+          <Property Name="ENDBLOW_ACTUAL_TEMPERATURE" Type="Single" />
+          <Property Name="ENDBLOW_ACTUAL_CARBON" Type="Single" />
+          <Property Name="ENDBLOW_ACTUAL_SILICON" Type="Single" />
+          <Property Name="ENDBLOW_ACTUAL_MANGANESE" Type="Single" />
+          <Property Name="ENDBLOW_ACTUAL_PHOSPHORUS" Type="Single" />
+          <Property Name="ENDBLOW_ACTUAL_SULPHUR" Type="Single" />
+          <Property Name="ENDBLOW_ACTUAL_NITROGEN" Type="Single" />
+          <Property Name="ENDBLOW_ACTUAL_WEIGHT" Type="Single" />
+          <Property Name="ENDBLOW_ACTUAL_DIP_TIME" Type="DateTime" />
+          <Property Name="STEEL_CALC_TEMPERATURE" Type="Single" />
+          <Property Name="STEEL_CALC_CARBON" Type="Single" />
+          <Property Name="STEEL_CALC_SILICON" Type="Single" />
+          <Property Name="STEEL_CALC_MANGANESE" Type="Single" />
+          <Property Name="STEEL_CALC_PHOSPHORUS" Type="Single" />
+          <Property Name="STEEL_CALC_SULPHUR" Type="Single" />
+          <Property Name="STEEL_CALC_NITROGEN" Type="Single" />
+          <Property Name="STEEL_CALC_WEIGHT" Type="Single" />
+          <Property Name="STEEL_CALC_DIP_TIME" Type="DateTime" />
+          <Property Name="SLAG_CALC_FE" Type="Single" />
+          <Property Name="SLAG_CALC_CAO" Type="Single" />
+          <Property Name="SLAG_CALC_SIO2" Type="Single" />
+          <Property Name="SLAG_CALC_MGO" Type="Single" />
+          <Property Name="SLAG_CALC_VR" Type="Single" />
+          <Property Name="SLAG_CALC_P2O5" Type="Single" />
+          <Property Name="SLAG_CALC_MNO" Type="Single" />
+          <Property Name="SLAG_CALC_WEIGHT" Type="Single" />
+          <Property Name="SLAG_ACTUAL_FE" Type="Single" />
+          <Property Name="SLAG_ACTUAL_CAO" Type="Single" />
+          <Property Name="SLAG_ACTUAL_SIO2" Type="Single" />
+          <Property Name="SLAG_ACTUAL_MGO" Type="Single" />
+          <Property Name="SLAG_ACTUAL_VR" Type="Single" />
+          <Property Name="SLAG_ACTUAL_P2O5" Type="Single" />
+          <Property Name="SLAG_ACTUAL_MNO" Type="Single" />
+          <Property Name="SLAG_ACTUAL_WEIGHT" Type="Single" />
+          <Property Type="Int32" Name="CbmRunNumber" />
+          <Property Type="Int32" Name="RECYCLE_HEAT_NUMBER" />
+        </EntityType>
+        <EntityType Name="CbmDisplayMaterial">
+          <Key>
+            <PropertyRef Name="IndexCbm" />
+          </Key>
+          <Property Name="IndexCbm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HEAT_NUMBER_SET" Type="Int32" />
+          <Property Name="HEAT_NUMBER" Type="Int32" />
+          <Property Name="TimeStamp" Type="DateTime" />
+          <Property Name="CBM_RUN_TIME" Type="DateTime" />
+          <Property Name="CBM_RUN_TIME_GMT" Type="DateTime" />
+          <Property Name="OXYGEN_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="OXYGEN_CALCULATED" Type="Single" />
+          <Property Name="OXYGEN_CONSTRAINED" Type="Single" />
+          <Property Name="OXYGEN_PREPARED" Type="Single" />
+          <Property Name="OXYGEN_ACTUAL" Type="Single" />
+          <Property Name="HM_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="HM_CALCULATED" Type="Single" />
+          <Property Name="HM_CONSTRAINED" Type="Single" />
+          <Property Name="HM_PREPARED" Type="Single" />
+          <Property Name="HM_ACTUAL" Type="Single" />
+          <Property Name="SCRAP_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="SCRAP_CALCULATED" Type="Single" />
+          <Property Name="SCRAP_CONSTRAINED" Type="Single" />
+          <Property Name="SCRAP_PREPARED" Type="Single" />
+          <Property Name="SCRAP_ACTUAL" Type="Single" />
+          <Property Name="HM_RATIO_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="HM_RATIO_CALCULATED" Type="Single" />
+          <Property Name="HM_RATIO_CONSTRAINED" Type="Single" />
+          <Property Name="HM_RATIO_PREPARED" Type="Single" />
+          <Property Name="HM_RATIO_ACTUAL" Type="Single" />
+          <Property Name="RECYCLE_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="RECYCLE_CALCULATED" Type="Single" />
+          <Property Name="RECYCLE_CONSTRAINED" Type="Single" />
+          <Property Name="RECYCLE_PREPARED" Type="Single" />
+          <Property Name="RECYCLE_ACTUAL" Type="Single" />
+          <Property Name="CHB_MAT_1_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CHB_MAT_1_CALCULATED" Type="Single" />
+          <Property Name="CHB_MAT_1_CONSTRAINED" Type="Single" />
+          <Property Name="CHB_MAT_1_PREPARED" Type="Single" />
+          <Property Name="CHB_MAT_1_ACTUAL" Type="Single" />
+          <Property Name="CHB_MAT_2_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CHB_MAT_2_CALCULATED" Type="Single" />
+          <Property Name="CHB_MAT_2_CONSTRAINED" Type="Single" />
+          <Property Name="CHB_MAT_2_PREPARED" Type="Single" />
+          <Property Name="CHB_MAT_2_ACTUAL" Type="Single" />
+          <Property Name="CHB_MAT_3_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CHB_MAT_3_CALCULATED" Type="Single" />
+          <Property Name="CHB_MAT_3_CONSTRAINED" Type="Single" />
+          <Property Name="CHB_MAT_3_PREPARED" Type="Single" />
+          <Property Name="CHB_MAT_3_ACTUAL" Type="Single" />
+          <Property Name="CHB_MAT_4_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CHB_MAT_4_CALCULATED" Type="Single" />
+          <Property Name="CHB_MAT_4_CONSTRAINED" Type="Single" />
+          <Property Name="CHB_MAT_4_PREPARED" Type="Single" />
+          <Property Name="CHB_MAT_4_ACTUAL" Type="Single" />
+          <Property Name="CHB_MAT_5_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CHB_MAT_5_CALCULATED" Type="Single" />
+          <Property Name="CHB_MAT_5_CONSTRAINED" Type="Single" />
+          <Property Name="CHB_MAT_5_PREPARED" Type="Single" />
+          <Property Name="CHB_MAT_5_ACTUAL" Type="Single" />
+          <Property Name="CHB_MAT_6_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="CHB_MAT_6_CALCULATED" Type="Single" />
+          <Property Name="CHB_MAT_6_CONSTRAINED" Type="Single" />
+          <Property Name="CHB_MAT_6_PREPARED" Type="Single" />
+          <Property Name="CHB_MAT_6_ACTUAL" Type="Single" />
+          <Property Name="TF_MAT_1_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="TF_MAT_1_CALCULATED" Type="Single" />
+          <Property Name="TF_MAT_1_CONSTRAINED" Type="Single" />
+          <Property Name="TF_MAT_1_PREPARED" Type="Single" />
+          <Property Name="TF_MAT_1_ACTUAL" Type="Single" />
+          <Property Name="TF_MAT_2_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="TF_MAT_2_CALCULATED" Type="Single" />
+          <Property Name="TF_MAT_2_CONSTRAINED" Type="Single" />
+          <Property Name="TF_MAT_2_PREPARED" Type="Single" />
+          <Property Name="TF_MAT_2_ACTUAL" Type="Single" />
+          <Property Name="MAN_MAT_1_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="MAN_MAT_1_CALCULATED" Type="Single" />
+          <Property Name="MAN_MAT_1_CONSTRAINED" Type="Single" />
+          <Property Name="MAN_MAT_1_PREPARED" Type="Single" />
+          <Property Name="MAN_MAT_1_ACTUAL" Type="Single" />
+          <Property Name="MAN_MAT_2_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="MAN_MAT_2_CALCULATED" Type="Single" />
+          <Property Name="MAN_MAT_2_CONSTRAINED" Type="Single" />
+          <Property Name="MAN_MAT_2_PREPARED" Type="Single" />
+          <Property Name="MAN_MAT_2_ACTUAL" Type="Single" />
+          <Property Name="MAN_MAT_3_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="MAN_MAT_3_CALCULATED" Type="Single" />
+          <Property Name="MAN_MAT_3_CONSTRAINED" Type="Single" />
+          <Property Name="MAN_MAT_3_PREPARED" Type="Single" />
+          <Property Name="MAN_MAT_3_ACTUAL" Type="Single" />
+          <Property Name="MAN_MAT_4_DESC_TEXT" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="MAN_MAT_4_CALCULATED" Type="Single" />
+          <Property Name="MAN_MAT_4_CONSTRAINED" Type="Single" />
+          <Property Name="MAN_MAT_4_PREPARED" Type="Single" />
+          <Property Name="MAN_MAT_4_ACTUAL" Type="Single" />
+          <Property Type="Int32" Name="CbmRunNumber" />
+        </EntityType>
+        <EntityType Name="CbmMaterialReq">
+          <Key>
+            <PropertyRef Name="IndexCbm" />
+          </Key>
+          <Property Name="IndexCbm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HEAT_NUMBER_SET" Type="Int32" />
+          <Property Name="HEAT_NUMBER" Type="Int32" />
+          <Property Name="TimeStamp" Type="DateTime" />
+          <Property Name="MATERIAL_TYPE" Type="Int32" />
+          <Property Name="MATERIAL_DESCRIPTOR" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="RUN_TIME" Type="DateTime" />
+          <Property Name="RUN_TIME_GMT" Type="DateTime" />
+          <Property Name="QUANTITY" Type="Single" />
+          <Property Name="CONSTRAINED" Type="Int32" />
+          <Property Name="NUMBER" Type="Int16" />
+          <Property Type="Int32" Name="CbmRunNumber" />
+        </EntityType>
+        <EntityType Name="CbmMessage">
+          <Key>
+            <PropertyRef Name="IndexCbm" />
+          </Key>
+          <Property Name="IndexCbm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HEAT_NUMBER_SET" Type="Int32" />
+          <Property Name="HEAT_NUMBER" Type="Int32" />
+          <Property Name="TimeStamp" Type="DateTime" />
+          <Property Name="CBM_RUN_TIME_STAMP" Type="DateTime" />
+          <Property Name="CBM_RUN_TIME_STAMP_GMT" Type="DateTime" />
+          <Property Name="MESSAGE_NUMBER" Type="Int32" />
+          <Property Name="MESSAGE_TYPE" Type="Int32" />
+          <Property Name="MESSAGE_TEXT" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+          <Property Type="Int32" Name="CbmRunNumber" />
+        </EntityType>
+        <EntityType Name="CbmResult">
+          <Key>
+            <PropertyRef Name="IndexCbm" />
+          </Key>
+          <Property Name="IndexCbm" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HEAT_NUMBER_SET" Type="Int32" />
+          <Property Name="HEAT_NUMBER" Type="Int32" />
+          <Property Name="TimeStamp" Type="DateTime" />
+          <Property Name="RUN_TIME" Type="DateTime" />
+          <Property Name="RUN_TIME_GMT" Type="DateTime" />
+          <Property Name="HEAT_STATUS" Type="Int32" />
+          <Property Name="RECYCLED_STEEL_WEIGHT" Type="Single" />
+          <Property Name="PREDICTED_TAP_WEIGHT" Type="Single" />
+          <Property Name="PREDICTED_SLAG_WEIGHT" Type="Single" />
+          <Property Name="PREDICTED_END_BLOW_TEMP" Type="Int16" />
+          <Property Name="PREDICTED_OXYGEN" Type="Int16" />
+          <Property Name="COMMIT_TIME" Type="DateTime" />
+          <Property Name="COMMIT_TIME_GMT" Type="DateTime" />
+          <Property Name="COMMIT_OPERATOR_ID" Type="String" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ERROR_MESSAGE_LINE_1" Type="String" MaxLength="65" Unicode="true" FixedLength="false" />
+          <Property Name="ERROR_MESSAGE_LINE_2" Type="String" MaxLength="65" Unicode="true" FixedLength="false" />
+          <Property Name="ERROR_MESSAGE_LINE_3" Type="String" MaxLength="65" Unicode="true" FixedLength="false" />
+          <Property Name="HM_LADLE_NUMBER" Type="Int16" />
+          <Property Name="HM_CARBON" Type="Single" />
+          <Property Name="HM_SILICON" Type="Single" />
+          <Property Name="HM_MANGANESE" Type="Single" />
+          <Property Name="HM_PHOSPHORUS" Type="Single" />
+          <Property Name="HM_SULPHUR" Type="Single" />
+          <Property Name="HM_NITROGEN" Type="Single" />
+          <Property Name="HM_TEMPERATURE" Type="Single" />
+          <Property Name="PREDICTED_TAP_CARBON" Type="Single" />
+          <Property Name="PREDICTED_TAP_MANGANESE" Type="Single" />
+          <Property Name="PREDICTED_TAP_PHOSPHORUS" Type="Single" />
+          <Property Name="PREDICTED_TAP_SULPHUR" Type="Single" />
+          <Property Name="PREDICTED_TAP_NITROGEN" Type="Single" />
+          <Property Name="PREDICTED_SLAG_FE" Type="Single" />
+          <Property Name="PREDICTED_SLAG_CAO" Type="Single" />
+          <Property Name="PREDICTED_SLAG_SIO2" Type="Single" />
+          <Property Name="PREDICTED_SLAG_AL2O3" Type="Single" />
+          <Property Name="PREDICTED_SLAG_MGO" Type="Single" />
+          <Property Name="PREDICTED_SLAG_P2O5" Type="Single" />
+          <Property Name="PREDICTED_SLAG_S" Type="Single" />
+          <Property Name="PREDICTED_SLAG_MNO" Type="Single" />
+          <Property Name="PREDICTED_SLAG_FEO" Type="Single" />
+          <Property Name="PREDICTED_SLAG_TIO2" Type="Single" />
+          <Property Name="NUMBER" Type="Int16" />
+          <Property Name="CONVERTER" Type="Int16" />
+          <Property Name="RUN_MODE" Type="Int16" />
+          <Property Type="Int32" Name="CbmRunNumber" />
+        </EntityType>
+        <EntityType Name="EbmDisplay">
+          <Key>
+            <PropertyRef Name="EbmDisplayID" />
+          </Key>
+          <Property Type="Int32" Name="EbmDisplayID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="DateTime" Name="Timestamp" Nullable="false" />
+          <Property Type="Int32" Name="UnitID" Nullable="false" />
+          <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+          <Property Type="Int32" Name="HNS" Nullable="false" />
+          <Property Type="Int32" Name="ProgramNumber" />
+          <Property Type="Single" Name="OxygenCbModel" />
+          <Property Type="Single" Name="OxygenAtInBlow" />
+          <Property Type="Single" Name="OxygenEbModel" />
+          <Property Type="Single" Name="OxygenAtPostBlow" />
+          <Property Type="Single" Name="OxygenVolumeToCharge" />
+          <Property Type="Single" Name="OreCbModel" />
+          <Property Type="Single" Name="OreAtInBlow" />
+          <Property Type="Single" Name="OreEbModel" />
+          <Property Type="Single" Name="OreAtPostBlow" />
+          <Property Type="Single" Name="AimTemperature" />
+          <Property Type="Single" Name="InblowTemperature" />
+          <Property Type="String" Name="InblowTemperatureQC" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Single" Name="AimCarbon" />
+          <Property Type="Single" Name="InblowCarbon" />
+          <Property Type="String" Name="InblowCarbonQC" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Single" Name="Pb1Temperature" />
+          <Property Type="String" Name="Pb1TemperatureQC" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Single" Name="Pb1OxyActivity" />
+          <Property Type="String" Name="Pb1OxyActivityQC" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Single" Name="Pb1CalculatedCarbon" />
+          <Property Type="Single" Name="Pb1ImmersionDepth" />
+          <Property Type="String" Name="Pb1ImmersionDepthQC" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Single" Name="Pb1BathHeight" />
+          <Property Type="Single" Name="Pb2Temperature" />
+          <Property Type="String" Name="Pb2TemperatureQC" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Single" Name="Pb2OxyActivity" />
+          <Property Type="String" Name="Pb2OxyActivityQC" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Single" Name="Pb2CalculatedCarbon" />
+          <Property Type="Single" Name="Pb2ImmersionDepth" />
+          <Property Type="String" Name="Pb2ImmersionDepthQC" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Single" Name="Pb2BathHeight" />
+          <Property Type="Int32" Name="OreAlarm" />
+          <Property Type="Int32" Name="LimeAlarm" />
+          <Property Type="Int32" Name="ScrapAlarm" />
+          <Property Type="Int32" Name="PhosphorusAlarm" />
+          <Property Type="Int32" Name="TsoRequired" />
+          <Property Type="Single" Name="EstOxyActivity" />
+          <Property Type="Single" Name="EstPbCarbon" />
+          <Property Type="Single" Name="SlspOxyActivity" />
+          <Property Type="String" Name="SlspOxyActivityQC" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Type="Single" Name="SlspDolofluxWt" />
+          <Property Type="Single" Name="ReblowOxygen" />
+          <Property Type="Single" Name="CoolbackOre" />
+          <Property Type="Single" Name="DeltaTemperature" />
+          <Property Type="Int32" Name="ReblowRequired" />
+          <Property Type="Single" Name="LadleAimTemperature" />
+          <Property Type="Single" Name="LadleAimCarbon" />
+          <Property Type="Single" Name="LadleActualTemperature" />
+          <Property Type="Single" Name="LadleActualCarbon" />
+          <Property Type="Single" Name="HmCarbon" />
+          <Property Type="Single" Name="HmSilicon" />
+          <Property Type="Single" Name="HmSulphur" />
+          <Property Type="Single" Name="HmPhosphorus" />
+          <Property Type="Single" Name="HmManganese" />
+          <Property Type="Single" Name="HmNitrogen" />
+          <Property Type="Single" Name="IbCarbon" />
+          <Property Type="Single" Name="IbSilicon" />
+          <Property Type="Single" Name="IbSulphur" />
+          <Property Type="Single" Name="IbPhosphorus" />
+          <Property Type="Single" Name="IbManganese" />
+          <Property Type="Single" Name="IbNitrogen" />
+          <Property Type="Single" Name="Pb1Carbon" />
+          <Property Type="Single" Name="Pb1Silicon" />
+          <Property Type="Single" Name="Pb1Sulphur" />
+          <Property Type="Single" Name="Pb1Phosphorus" />
+          <Property Type="Single" Name="Pb1Manganese" />
+          <Property Type="Single" Name="Pb1Nitrogen" />
+          <Property Type="Single" Name="QtCarbon" />
+          <Property Type="Single" Name="QtSilicon" />
+          <Property Type="Single" Name="QtSulphur" />
+          <Property Type="Single" Name="QtPhosphorus" />
+          <Property Type="Single" Name="QtManganese" />
+          <Property Type="Single" Name="QtNitrogen" />
+          <Property Type="Single" Name="TundishCarbon" />
+          <Property Type="Single" Name="TundishSilicon" />
+          <Property Type="Single" Name="TundishSulphur" />
+          <Property Type="Single" Name="TundishPhosphorus" />
+          <Property Type="Single" Name="TundishManganese" />
+          <Property Type="Single" Name="TundishNitrogen" />
+          <Property Type="Int32" Name="RunoutTimeMins" />
+          <Property Type="Int32" Name="RunoutTimeSecs" />
+          <Property Type="String" Name="ErrorText" MaxLength="40" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="HmdsmResult">
+          <Key>
+            <PropertyRef Name="HmdsmResultID" />
+          </Key>
+          <Property Type="Int64" Name="HmdsmResultID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+          <Property Type="Int32" Name="HNS" Nullable="false" />
+          <Property Type="Int32" Name="UnitID" Nullable="false" />
+          <Property Type="Int32" Name="HMLadleNumber" Nullable="false" />
+          <Property Type="Int32" Name="TreatmentStage" />
+          <Property Type="DateTime" Name="HmdsmRunTimeStamp" Nullable="false" />
+          <Property Type="DateTime" Name="HmdsmRunTimeStampGMT" Nullable="false" />
+          <Property Type="Int32" Name="HmdsmTreatmentTypeID" Nullable="false" />
+          <Property Type="Int32" Name="TreatmentTime" />
+          <Property Type="Single" Name="TotalMgWeight" />
+          <Property Type="Single" Name="TotalLimeWeight" />
+          <Property Type="Single" Name="HMWeightLoss" />
+          <Property Type="Single" Name="HMTemperatureLoss" />
+          <Property Type="Single" Name="StartHMSulphur" />
+          <Property Type="Single" Name="AimHMSulpur" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelSchemaEntitiesStoreContainer" CdmEntityContainer="ModelSchemaEntities">
+          <EntitySetMapping Name="CbmDisplayAnalysis1"><EntityTypeMapping TypeName="ModelSchema.CbmDisplayAnalysis"><MappingFragment StoreEntitySet="CbmDisplayAnalysis">
+            <ScalarProperty Name="RECYCLE_HEAT_NUMBER" ColumnName="RECYCLE_HEAT_NUMBER" />
+                <ScalarProperty Name="CbmRunNumber" ColumnName="CbmRunNumber" />
+                <ScalarProperty Name="IndexCbm" ColumnName="IndexCbm" />
+            <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+            <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+            <ScalarProperty Name="CBM_RUN_TIME" ColumnName="CBM_RUN_TIME" />
+            <ScalarProperty Name="CBM_RUN_TIME_GMT" ColumnName="CBM_RUN_TIME_GMT" />
+            <ScalarProperty Name="CALC_HM_TEMPERATURE" ColumnName="CALC_HM_TEMPERATURE" />
+            <ScalarProperty Name="CALC_HM_CARBON" ColumnName="CALC_HM_CARBON" />
+            <ScalarProperty Name="CALC_HM_SILICON" ColumnName="CALC_HM_SILICON" />
+            <ScalarProperty Name="CALC_HM_MANGANESE" ColumnName="CALC_HM_MANGANESE" />
+            <ScalarProperty Name="CALC_HM_PHOSPHORUS" ColumnName="CALC_HM_PHOSPHORUS" />
+            <ScalarProperty Name="CALC_HM_SULPHUR" ColumnName="CALC_HM_SULPHUR" />
+            <ScalarProperty Name="CALC_HM_NITROGEN" ColumnName="CALC_HM_NITROGEN" />
+            <ScalarProperty Name="CALC_HM_WEIGHT" ColumnName="CALC_HM_WEIGHT" />
+            <ScalarProperty Name="CALC_HM_DIP_TIME" ColumnName="CALC_HM_DIP_TIME" />
+            <ScalarProperty Name="HM_LADLE_TEMPERATURE" ColumnName="HM_LADLE_TEMPERATURE" />
+            <ScalarProperty Name="HM_LADLE_CARBON" ColumnName="HM_LADLE_CARBON" />
+            <ScalarProperty Name="HM_LADLE_SILICON" ColumnName="HM_LADLE_SILICON" />
+            <ScalarProperty Name="HM_LADLE_MANGANESE" ColumnName="HM_LADLE_MANGANESE" />
+            <ScalarProperty Name="HM_LADLE_PHOSPHORUS" ColumnName="HM_LADLE_PHOSPHORUS" />
+            <ScalarProperty Name="HM_LADLE_SULPHUR" ColumnName="HM_LADLE_SULPHUR" />
+            <ScalarProperty Name="HM_LADLE_NITROGEN" ColumnName="HM_LADLE_NITROGEN" />
+            <ScalarProperty Name="HM_LADLE_WEIGHT" ColumnName="HM_LADLE_WEIGHT" />
+            <ScalarProperty Name="HM_LADLE_DIP_TIME" ColumnName="HM_LADLE_DIP_TIME" />
+            <ScalarProperty Name="DESULPH_TEMPERATURE" ColumnName="DESULPH_TEMPERATURE" />
+            <ScalarProperty Name="DESULPH_CARBON" ColumnName="DESULPH_CARBON" />
+            <ScalarProperty Name="DESULPH_SILICON" ColumnName="DESULPH_SILICON" />
+            <ScalarProperty Name="DESULPH_MANGANESE" ColumnName="DESULPH_MANGANESE" />
+            <ScalarProperty Name="DESULPH_PHOSPHORUS" ColumnName="DESULPH_PHOSPHORUS" />
+            <ScalarProperty Name="DESULPH_SULPHUR" ColumnName="DESULPH_SULPHUR" />
+            <ScalarProperty Name="DESULPH_NITROGEN" ColumnName="DESULPH_NITROGEN" />
+            <ScalarProperty Name="DESULPH_WEIGHT" ColumnName="DESULPH_WEIGHT" />
+            <ScalarProperty Name="DESULPH_DIP_TIME" ColumnName="DESULPH_DIP_TIME" />
+            <ScalarProperty Name="RECYCLE_TEMPERATURE" ColumnName="RECYCLE_TEMPERATURE" />
+            <ScalarProperty Name="RECYCLE_CARBON" ColumnName="RECYCLE_CARBON" />
+            <ScalarProperty Name="RECYCLE_SILICON" ColumnName="RECYCLE_SILICON" />
+            <ScalarProperty Name="RECYCLE_MANGANESE" ColumnName="RECYCLE_MANGANESE" />
+            <ScalarProperty Name="RECYCLE_PHOSPHORUS" ColumnName="RECYCLE_PHOSPHORUS" />
+            <ScalarProperty Name="RECYCLE_SULPHUR" ColumnName="RECYCLE_SULPHUR" />
+            <ScalarProperty Name="RECYCLE_NITROGEN" ColumnName="RECYCLE_NITROGEN" />
+            <ScalarProperty Name="RECYCLE_WEIGHT" ColumnName="RECYCLE_WEIGHT" />
+            <ScalarProperty Name="RECYCLE_DIP_TIME" ColumnName="RECYCLE_DIP_TIME" />
+            <ScalarProperty Name="INBLOW_AIM_TEMPERATURE" ColumnName="INBLOW_AIM_TEMPERATURE" />
+            <ScalarProperty Name="INBLOW_AIM_CARBON" ColumnName="INBLOW_AIM_CARBON" />
+            <ScalarProperty Name="INBLOW_AIM_SILICON" ColumnName="INBLOW_AIM_SILICON" />
+            <ScalarProperty Name="INBLOW_AIM_MANGANESE" ColumnName="INBLOW_AIM_MANGANESE" />
+            <ScalarProperty Name="INBLOW_AIM_PHOSPHORUS" ColumnName="INBLOW_AIM_PHOSPHORUS" />
+            <ScalarProperty Name="INBLOW_AIM_SULPHUR" ColumnName="INBLOW_AIM_SULPHUR" />
+            <ScalarProperty Name="INBLOW_AIM_NITROGEN" ColumnName="INBLOW_AIM_NITROGEN" />
+            <ScalarProperty Name="INBLOW_AIM_WEIGHT" ColumnName="INBLOW_AIM_WEIGHT" />
+            <ScalarProperty Name="INBLOW_AIM_DIP_TIME" ColumnName="INBLOW_AIM_DIP_TIME" />
+            <ScalarProperty Name="INBLOW_ACTUAL_TEMPERATURE" ColumnName="INBLOW_ACTUAL_TEMPERATURE" />
+            <ScalarProperty Name="INBLOW_ACTUAL_CARBON" ColumnName="INBLOW_ACTUAL_CARBON" />
+            <ScalarProperty Name="INBLOW_ACTUAL_SILICON" ColumnName="INBLOW_ACTUAL_SILICON" />
+            <ScalarProperty Name="INBLOW_ACTUAL_MANGANESE" ColumnName="INBLOW_ACTUAL_MANGANESE" />
+            <ScalarProperty Name="INBLOW_ACTUAL_PHOSPHORUS" ColumnName="INBLOW_ACTUAL_PHOSPHORUS" />
+            <ScalarProperty Name="INBLOW_ACTUAL_SULPHUR" ColumnName="INBLOW_ACTUAL_SULPHUR" />
+            <ScalarProperty Name="INBLOW_ACTUAL_NITROGEN" ColumnName="INBLOW_ACTUAL_NITROGEN" />
+            <ScalarProperty Name="INBLOW_ACTUAL_WEIGHT" ColumnName="INBLOW_ACTUAL_WEIGHT" />
+            <ScalarProperty Name="INBLOW_ACTUAL_DIP_TIME" ColumnName="INBLOW_ACTUAL_DIP_TIME" />
+            <ScalarProperty Name="ENDBLOW_AIM_TEMPERATURE" ColumnName="ENDBLOW_AIM_TEMPERATURE" />
+            <ScalarProperty Name="ENDBLOW_AIM_CARBON" ColumnName="ENDBLOW_AIM_CARBON" />
+            <ScalarProperty Name="ENDBLOW_AIM_SILICON" ColumnName="ENDBLOW_AIM_SILICON" />
+            <ScalarProperty Name="ENDBLOW_AIM_MANGANESE" ColumnName="ENDBLOW_AIM_MANGANESE" />
+            <ScalarProperty Name="ENDBLOW_AIM_PHOSPHORUS" ColumnName="ENDBLOW_AIM_PHOSPHORUS" />
+            <ScalarProperty Name="ENDBLOW_AIM_SULPHUR" ColumnName="ENDBLOW_AIM_SULPHUR" />
+            <ScalarProperty Name="ENDBLOW_AIM_NITROGEN" ColumnName="ENDBLOW_AIM_NITROGEN" />
+            <ScalarProperty Name="ENDBLOW_AIM_WEIGHT" ColumnName="ENDBLOW_AIM_WEIGHT" />
+            <ScalarProperty Name="ENDBLOW_AIM_DIP_TIME" ColumnName="ENDBLOW_AIM_DIP_TIME" />
+            <ScalarProperty Name="ENDBLOW_ACTUAL_TEMPERATURE" ColumnName="ENDBLOW_ACTUAL_TEMPERATURE" />
+            <ScalarProperty Name="ENDBLOW_ACTUAL_CARBON" ColumnName="ENDBLOW_ACTUAL_CARBON" />
+            <ScalarProperty Name="ENDBLOW_ACTUAL_SILICON" ColumnName="ENDBLOW_ACTUAL_SILICON" />
+            <ScalarProperty Name="ENDBLOW_ACTUAL_MANGANESE" ColumnName="ENDBLOW_ACTUAL_MANGANESE" />
+            <ScalarProperty Name="ENDBLOW_ACTUAL_PHOSPHORUS" ColumnName="ENDBLOW_ACTUAL_PHOSPHORUS" />
+            <ScalarProperty Name="ENDBLOW_ACTUAL_SULPHUR" ColumnName="ENDBLOW_ACTUAL_SULPHUR" />
+            <ScalarProperty Name="ENDBLOW_ACTUAL_NITROGEN" ColumnName="ENDBLOW_ACTUAL_NITROGEN" />
+            <ScalarProperty Name="ENDBLOW_ACTUAL_WEIGHT" ColumnName="ENDBLOW_ACTUAL_WEIGHT" />
+            <ScalarProperty Name="ENDBLOW_ACTUAL_DIP_TIME" ColumnName="ENDBLOW_ACTUAL_DIP_TIME" />
+            <ScalarProperty Name="STEEL_CALC_TEMPERATURE" ColumnName="STEEL_CALC_TEMPERATURE" />
+            <ScalarProperty Name="STEEL_CALC_CARBON" ColumnName="STEEL_CALC_CARBON" />
+            <ScalarProperty Name="STEEL_CALC_SILICON" ColumnName="STEEL_CALC_SILICON" />
+            <ScalarProperty Name="STEEL_CALC_MANGANESE" ColumnName="STEEL_CALC_MANGANESE" />
+            <ScalarProperty Name="STEEL_CALC_PHOSPHORUS" ColumnName="STEEL_CALC_PHOSPHORUS" />
+            <ScalarProperty Name="STEEL_CALC_SULPHUR" ColumnName="STEEL_CALC_SULPHUR" />
+            <ScalarProperty Name="STEEL_CALC_NITROGEN" ColumnName="STEEL_CALC_NITROGEN" />
+            <ScalarProperty Name="STEEL_CALC_WEIGHT" ColumnName="STEEL_CALC_WEIGHT" />
+            <ScalarProperty Name="STEEL_CALC_DIP_TIME" ColumnName="STEEL_CALC_DIP_TIME" />
+            <ScalarProperty Name="SLAG_CALC_FE" ColumnName="SLAG_CALC_FE" />
+            <ScalarProperty Name="SLAG_CALC_CAO" ColumnName="SLAG_CALC_CAO" />
+            <ScalarProperty Name="SLAG_CALC_SIO2" ColumnName="SLAG_CALC_SIO2" />
+            <ScalarProperty Name="SLAG_CALC_MGO" ColumnName="SLAG_CALC_MGO" />
+            <ScalarProperty Name="SLAG_CALC_VR" ColumnName="SLAG_CALC_VR" />
+            <ScalarProperty Name="SLAG_CALC_P2O5" ColumnName="SLAG_CALC_P2O5" />
+            <ScalarProperty Name="SLAG_CALC_MNO" ColumnName="SLAG_CALC_MNO" />
+            <ScalarProperty Name="SLAG_CALC_WEIGHT" ColumnName="SLAG_CALC_WEIGHT" />
+            <ScalarProperty Name="SLAG_ACTUAL_FE" ColumnName="SLAG_ACTUAL_FE" />
+            <ScalarProperty Name="SLAG_ACTUAL_CAO" ColumnName="SLAG_ACTUAL_CAO" />
+            <ScalarProperty Name="SLAG_ACTUAL_SIO2" ColumnName="SLAG_ACTUAL_SIO2" />
+            <ScalarProperty Name="SLAG_ACTUAL_MGO" ColumnName="SLAG_ACTUAL_MGO" />
+            <ScalarProperty Name="SLAG_ACTUAL_VR" ColumnName="SLAG_ACTUAL_VR" />
+            <ScalarProperty Name="SLAG_ACTUAL_P2O5" ColumnName="SLAG_ACTUAL_P2O5" />
+            <ScalarProperty Name="SLAG_ACTUAL_MNO" ColumnName="SLAG_ACTUAL_MNO" />
+            <ScalarProperty Name="SLAG_ACTUAL_WEIGHT" ColumnName="SLAG_ACTUAL_WEIGHT" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CbmDisplayMaterials"><EntityTypeMapping TypeName="ModelSchema.CbmDisplayMaterial"><MappingFragment StoreEntitySet="CbmDisplayMaterial">
+            <ScalarProperty Name="CbmRunNumber" ColumnName="CbmRunNumber" />
+                <ScalarProperty Name="IndexCbm" ColumnName="IndexCbm" />
+            <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+            <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+            <ScalarProperty Name="CBM_RUN_TIME" ColumnName="CBM_RUN_TIME" />
+            <ScalarProperty Name="CBM_RUN_TIME_GMT" ColumnName="CBM_RUN_TIME_GMT" />
+            <ScalarProperty Name="OXYGEN_DESC_TEXT" ColumnName="OXYGEN_DESC_TEXT" />
+            <ScalarProperty Name="OXYGEN_CALCULATED" ColumnName="OXYGEN_CALCULATED" />
+            <ScalarProperty Name="OXYGEN_CONSTRAINED" ColumnName="OXYGEN_CONSTRAINED" />
+            <ScalarProperty Name="OXYGEN_PREPARED" ColumnName="OXYGEN_PREPARED" />
+            <ScalarProperty Name="OXYGEN_ACTUAL" ColumnName="OXYGEN_ACTUAL" />
+            <ScalarProperty Name="HM_DESC_TEXT" ColumnName="HM_DESC_TEXT" />
+            <ScalarProperty Name="HM_CALCULATED" ColumnName="HM_CALCULATED" />
+            <ScalarProperty Name="HM_CONSTRAINED" ColumnName="HM_CONSTRAINED" />
+            <ScalarProperty Name="HM_PREPARED" ColumnName="HM_PREPARED" />
+            <ScalarProperty Name="HM_ACTUAL" ColumnName="HM_ACTUAL" />
+            <ScalarProperty Name="SCRAP_DESC_TEXT" ColumnName="SCRAP_DESC_TEXT" />
+            <ScalarProperty Name="SCRAP_CALCULATED" ColumnName="SCRAP_CALCULATED" />
+            <ScalarProperty Name="SCRAP_CONSTRAINED" ColumnName="SCRAP_CONSTRAINED" />
+            <ScalarProperty Name="SCRAP_PREPARED" ColumnName="SCRAP_PREPARED" />
+            <ScalarProperty Name="SCRAP_ACTUAL" ColumnName="SCRAP_ACTUAL" />
+            <ScalarProperty Name="HM_RATIO_DESC_TEXT" ColumnName="HM_RATIO_DESC_TEXT" />
+            <ScalarProperty Name="HM_RATIO_CALCULATED" ColumnName="HM_RATIO_CALCULATED" />
+            <ScalarProperty Name="HM_RATIO_CONSTRAINED" ColumnName="HM_RATIO_CONSTRAINED" />
+            <ScalarProperty Name="HM_RATIO_PREPARED" ColumnName="HM_RATIO_PREPARED" />
+            <ScalarProperty Name="HM_RATIO_ACTUAL" ColumnName="HM_RATIO_ACTUAL" />
+            <ScalarProperty Name="RECYCLE_DESC_TEXT" ColumnName="RECYCLE_DESC_TEXT" />
+            <ScalarProperty Name="RECYCLE_CALCULATED" ColumnName="RECYCLE_CALCULATED" />
+            <ScalarProperty Name="RECYCLE_CONSTRAINED" ColumnName="RECYCLE_CONSTRAINED" />
+            <ScalarProperty Name="RECYCLE_PREPARED" ColumnName="RECYCLE_PREPARED" />
+            <ScalarProperty Name="RECYCLE_ACTUAL" ColumnName="RECYCLE_ACTUAL" />
+            <ScalarProperty Name="CHB_MAT_1_DESC_TEXT" ColumnName="CHB_MAT_1_DESC_TEXT" />
+            <ScalarProperty Name="CHB_MAT_1_CALCULATED" ColumnName="CHB_MAT_1_CALCULATED" />
+            <ScalarProperty Name="CHB_MAT_1_CONSTRAINED" ColumnName="CHB_MAT_1_CONSTRAINED" />
+            <ScalarProperty Name="CHB_MAT_1_PREPARED" ColumnName="CHB_MAT_1_PREPARED" />
+            <ScalarProperty Name="CHB_MAT_1_ACTUAL" ColumnName="CHB_MAT_1_ACTUAL" />
+            <ScalarProperty Name="CHB_MAT_2_DESC_TEXT" ColumnName="CHB_MAT_2_DESC_TEXT" />
+            <ScalarProperty Name="CHB_MAT_2_CALCULATED" ColumnName="CHB_MAT_2_CALCULATED" />
+            <ScalarProperty Name="CHB_MAT_2_CONSTRAINED" ColumnName="CHB_MAT_2_CONSTRAINED" />
+            <ScalarProperty Name="CHB_MAT_2_PREPARED" ColumnName="CHB_MAT_2_PREPARED" />
+            <ScalarProperty Name="CHB_MAT_2_ACTUAL" ColumnName="CHB_MAT_2_ACTUAL" />
+            <ScalarProperty Name="CHB_MAT_3_DESC_TEXT" ColumnName="CHB_MAT_3_DESC_TEXT" />
+            <ScalarProperty Name="CHB_MAT_3_CALCULATED" ColumnName="CHB_MAT_3_CALCULATED" />
+            <ScalarProperty Name="CHB_MAT_3_CONSTRAINED" ColumnName="CHB_MAT_3_CONSTRAINED" />
+            <ScalarProperty Name="CHB_MAT_3_PREPARED" ColumnName="CHB_MAT_3_PREPARED" />
+            <ScalarProperty Name="CHB_MAT_3_ACTUAL" ColumnName="CHB_MAT_3_ACTUAL" />
+            <ScalarProperty Name="CHB_MAT_4_DESC_TEXT" ColumnName="CHB_MAT_4_DESC_TEXT" />
+            <ScalarProperty Name="CHB_MAT_4_CALCULATED" ColumnName="CHB_MAT_4_CALCULATED" />
+            <ScalarProperty Name="CHB_MAT_4_CONSTRAINED" ColumnName="CHB_MAT_4_CONSTRAINED" />
+            <ScalarProperty Name="CHB_MAT_4_PREPARED" ColumnName="CHB_MAT_4_PREPARED" />
+            <ScalarProperty Name="CHB_MAT_4_ACTUAL" ColumnName="CHB_MAT_4_ACTUAL" />
+            <ScalarProperty Name="CHB_MAT_5_DESC_TEXT" ColumnName="CHB_MAT_5_DESC_TEXT" />
+            <ScalarProperty Name="CHB_MAT_5_CALCULATED" ColumnName="CHB_MAT_5_CALCULATED" />
+            <ScalarProperty Name="CHB_MAT_5_CONSTRAINED" ColumnName="CHB_MAT_5_CONSTRAINED" />
+            <ScalarProperty Name="CHB_MAT_5_PREPARED" ColumnName="CHB_MAT_5_PREPARED" />
+            <ScalarProperty Name="CHB_MAT_5_ACTUAL" ColumnName="CHB_MAT_5_ACTUAL" />
+            <ScalarProperty Name="CHB_MAT_6_DESC_TEXT" ColumnName="CHB_MAT_6_DESC_TEXT" />
+            <ScalarProperty Name="CHB_MAT_6_CALCULATED" ColumnName="CHB_MAT_6_CALCULATED" />
+            <ScalarProperty Name="CHB_MAT_6_CONSTRAINED" ColumnName="CHB_MAT_6_CONSTRAINED" />
+            <ScalarProperty Name="CHB_MAT_6_PREPARED" ColumnName="CHB_MAT_6_PREPARED" />
+            <ScalarProperty Name="CHB_MAT_6_ACTUAL" ColumnName="CHB_MAT_6_ACTUAL" />
+            <ScalarProperty Name="TF_MAT_1_DESC_TEXT" ColumnName="TF_MAT_1_DESC_TEXT" />
+            <ScalarProperty Name="TF_MAT_1_CALCULATED" ColumnName="TF_MAT_1_CALCULATED" />
+            <ScalarProperty Name="TF_MAT_1_CONSTRAINED" ColumnName="TF_MAT_1_CONSTRAINED" />
+            <ScalarProperty Name="TF_MAT_1_PREPARED" ColumnName="TF_MAT_1_PREPARED" />
+            <ScalarProperty Name="TF_MAT_1_ACTUAL" ColumnName="TF_MAT_1_ACTUAL" />
+            <ScalarProperty Name="TF_MAT_2_DESC_TEXT" ColumnName="TF_MAT_2_DESC_TEXT" />
+            <ScalarProperty Name="TF_MAT_2_CALCULATED" ColumnName="TF_MAT_2_CALCULATED" />
+            <ScalarProperty Name="TF_MAT_2_CONSTRAINED" ColumnName="TF_MAT_2_CONSTRAINED" />
+            <ScalarProperty Name="TF_MAT_2_PREPARED" ColumnName="TF_MAT_2_PREPARED" />
+            <ScalarProperty Name="TF_MAT_2_ACTUAL" ColumnName="TF_MAT_2_ACTUAL" />
+            <ScalarProperty Name="MAN_MAT_1_DESC_TEXT" ColumnName="MAN_MAT_1_DESC_TEXT" />
+            <ScalarProperty Name="MAN_MAT_1_CALCULATED" ColumnName="MAN_MAT_1_CALCULATED" />
+            <ScalarProperty Name="MAN_MAT_1_CONSTRAINED" ColumnName="MAN_MAT_1_CONSTRAINED" />
+            <ScalarProperty Name="MAN_MAT_1_PREPARED" ColumnName="MAN_MAT_1_PREPARED" />
+            <ScalarProperty Name="MAN_MAT_1_ACTUAL" ColumnName="MAN_MAT_1_ACTUAL" />
+            <ScalarProperty Name="MAN_MAT_2_DESC_TEXT" ColumnName="MAN_MAT_2_DESC_TEXT" />
+            <ScalarProperty Name="MAN_MAT_2_CALCULATED" ColumnName="MAN_MAT_2_CALCULATED" />
+            <ScalarProperty Name="MAN_MAT_2_CONSTRAINED" ColumnName="MAN_MAT_2_CONSTRAINED" />
+            <ScalarProperty Name="MAN_MAT_2_PREPARED" ColumnName="MAN_MAT_2_PREPARED" />
+            <ScalarProperty Name="MAN_MAT_2_ACTUAL" ColumnName="MAN_MAT_2_ACTUAL" />
+            <ScalarProperty Name="MAN_MAT_3_DESC_TEXT" ColumnName="MAN_MAT_3_DESC_TEXT" />
+            <ScalarProperty Name="MAN_MAT_3_CALCULATED" ColumnName="MAN_MAT_3_CALCULATED" />
+            <ScalarProperty Name="MAN_MAT_3_CONSTRAINED" ColumnName="MAN_MAT_3_CONSTRAINED" />
+            <ScalarProperty Name="MAN_MAT_3_PREPARED" ColumnName="MAN_MAT_3_PREPARED" />
+            <ScalarProperty Name="MAN_MAT_3_ACTUAL" ColumnName="MAN_MAT_3_ACTUAL" />
+            <ScalarProperty Name="MAN_MAT_4_DESC_TEXT" ColumnName="MAN_MAT_4_DESC_TEXT" />
+            <ScalarProperty Name="MAN_MAT_4_CALCULATED" ColumnName="MAN_MAT_4_CALCULATED" />
+            <ScalarProperty Name="MAN_MAT_4_CONSTRAINED" ColumnName="MAN_MAT_4_CONSTRAINED" />
+            <ScalarProperty Name="MAN_MAT_4_PREPARED" ColumnName="MAN_MAT_4_PREPARED" />
+            <ScalarProperty Name="MAN_MAT_4_ACTUAL" ColumnName="MAN_MAT_4_ACTUAL" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CbmMaterialReqs"><EntityTypeMapping TypeName="ModelSchema.CbmMaterialReq"><MappingFragment StoreEntitySet="CbmMaterialReq">
+            <ScalarProperty Name="CbmRunNumber" ColumnName="CbmRunNumber" />
+                <ScalarProperty Name="IndexCbm" ColumnName="IndexCbm" />
+            <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+            <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+            <ScalarProperty Name="MATERIAL_TYPE" ColumnName="MATERIAL_TYPE" />
+            <ScalarProperty Name="MATERIAL_DESCRIPTOR" ColumnName="MATERIAL_DESCRIPTOR" />
+            <ScalarProperty Name="RUN_TIME" ColumnName="RUN_TIME" />
+            <ScalarProperty Name="RUN_TIME_GMT" ColumnName="RUN_TIME_GMT" />
+            <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+            <ScalarProperty Name="CONSTRAINED" ColumnName="CONSTRAINED" />
+            <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CbmMessages"><EntityTypeMapping TypeName="ModelSchema.CbmMessage"><MappingFragment StoreEntitySet="CbmMessage">
+            <ScalarProperty Name="CbmRunNumber" ColumnName="CbmRunNumber" />
+                <ScalarProperty Name="IndexCbm" ColumnName="IndexCbm" />
+            <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+            <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+            <ScalarProperty Name="CBM_RUN_TIME_STAMP" ColumnName="CBM_RUN_TIME_STAMP" />
+            <ScalarProperty Name="CBM_RUN_TIME_STAMP_GMT" ColumnName="CBM_RUN_TIME_STAMP_GMT" />
+            <ScalarProperty Name="MESSAGE_NUMBER" ColumnName="MESSAGE_NUMBER" />
+            <ScalarProperty Name="MESSAGE_TYPE" ColumnName="MESSAGE_TYPE" />
+            <ScalarProperty Name="MESSAGE_TEXT" ColumnName="MESSAGE_TEXT" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="CbmResults"><EntityTypeMapping TypeName="ModelSchema.CbmResult"><MappingFragment StoreEntitySet="CbmResult">
+            <ScalarProperty Name="CbmRunNumber" ColumnName="CbmRunNumber" />
+                <ScalarProperty Name="IndexCbm" ColumnName="IndexCbm" />
+            <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+            <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+            <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+            <ScalarProperty Name="RUN_TIME" ColumnName="RUN_TIME" />
+            <ScalarProperty Name="RUN_TIME_GMT" ColumnName="RUN_TIME_GMT" />
+            <ScalarProperty Name="HEAT_STATUS" ColumnName="HEAT_STATUS" />
+            <ScalarProperty Name="RECYCLED_STEEL_WEIGHT" ColumnName="RECYCLED_STEEL_WEIGHT" />
+            <ScalarProperty Name="PREDICTED_TAP_WEIGHT" ColumnName="PREDICTED_TAP_WEIGHT" />
+            <ScalarProperty Name="PREDICTED_SLAG_WEIGHT" ColumnName="PREDICTED_SLAG_WEIGHT" />
+            <ScalarProperty Name="PREDICTED_END_BLOW_TEMP" ColumnName="PREDICTED_END_BLOW_TEMP" />
+            <ScalarProperty Name="PREDICTED_OXYGEN" ColumnName="PREDICTED_OXYGEN" />
+            <ScalarProperty Name="COMMIT_TIME" ColumnName="COMMIT_TIME" />
+            <ScalarProperty Name="COMMIT_TIME_GMT" ColumnName="COMMIT_TIME_GMT" />
+            <ScalarProperty Name="COMMIT_OPERATOR_ID" ColumnName="COMMIT_OPERATOR_ID" />
+            <ScalarProperty Name="ERROR_MESSAGE_LINE_1" ColumnName="ERROR_MESSAGE_LINE_1" />
+            <ScalarProperty Name="ERROR_MESSAGE_LINE_2" ColumnName="ERROR_MESSAGE_LINE_2" />
+            <ScalarProperty Name="ERROR_MESSAGE_LINE_3" ColumnName="ERROR_MESSAGE_LINE_3" />
+            <ScalarProperty Name="HM_LADLE_NUMBER" ColumnName="HM_LADLE_NUMBER" />
+            <ScalarProperty Name="HM_CARBON" ColumnName="HM_CARBON" />
+            <ScalarProperty Name="HM_SILICON" ColumnName="HM_SILICON" />
+            <ScalarProperty Name="HM_MANGANESE" ColumnName="HM_MANGANESE" />
+            <ScalarProperty Name="HM_PHOSPHORUS" ColumnName="HM_PHOSPHORUS" />
+            <ScalarProperty Name="HM_SULPHUR" ColumnName="HM_SULPHUR" />
+            <ScalarProperty Name="HM_NITROGEN" ColumnName="HM_NITROGEN" />
+            <ScalarProperty Name="HM_TEMPERATURE" ColumnName="HM_TEMPERATURE" />
+            <ScalarProperty Name="PREDICTED_TAP_CARBON" ColumnName="PREDICTED_TAP_CARBON" />
+            <ScalarProperty Name="PREDICTED_TAP_MANGANESE" ColumnName="PREDICTED_TAP_MANGANESE" />
+            <ScalarProperty Name="PREDICTED_TAP_PHOSPHORUS" ColumnName="PREDICTED_TAP_PHOSPHORUS" />
+            <ScalarProperty Name="PREDICTED_TAP_SULPHUR" ColumnName="PREDICTED_TAP_SULPHUR" />
+            <ScalarProperty Name="PREDICTED_TAP_NITROGEN" ColumnName="PREDICTED_TAP_NITROGEN" />
+            <ScalarProperty Name="PREDICTED_SLAG_FE" ColumnName="PREDICTED_SLAG_FE" />
+            <ScalarProperty Name="PREDICTED_SLAG_CAO" ColumnName="PREDICTED_SLAG_CAO" />
+            <ScalarProperty Name="PREDICTED_SLAG_SIO2" ColumnName="PREDICTED_SLAG_SIO2" />
+            <ScalarProperty Name="PREDICTED_SLAG_AL2O3" ColumnName="PREDICTED_SLAG_AL2O3" />
+            <ScalarProperty Name="PREDICTED_SLAG_MGO" ColumnName="PREDICTED_SLAG_MGO" />
+            <ScalarProperty Name="PREDICTED_SLAG_P2O5" ColumnName="PREDICTED_SLAG_P2O5" />
+            <ScalarProperty Name="PREDICTED_SLAG_S" ColumnName="PREDICTED_SLAG_S" />
+            <ScalarProperty Name="PREDICTED_SLAG_MNO" ColumnName="PREDICTED_SLAG_MNO" />
+            <ScalarProperty Name="PREDICTED_SLAG_FEO" ColumnName="PREDICTED_SLAG_FEO" />
+            <ScalarProperty Name="PREDICTED_SLAG_TIO2" ColumnName="PREDICTED_SLAG_TIO2" />
+            <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+            <ScalarProperty Name="CONVERTER" ColumnName="CONVERTER" />
+            <ScalarProperty Name="RUN_MODE" ColumnName="RUN_MODE" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="EbmDisplays">
+            <EntityTypeMapping TypeName="ModelSchema.EbmDisplay">
+              <MappingFragment StoreEntitySet="EbmDisplay">
+                <ScalarProperty Name="ErrorText" ColumnName="ErrorText" />
+                <ScalarProperty Name="RunoutTimeSecs" ColumnName="RunoutTimeSecs" />
+                <ScalarProperty Name="RunoutTimeMins" ColumnName="RunoutTimeMins" />
+                <ScalarProperty Name="TundishNitrogen" ColumnName="TundishNitrogen" />
+                <ScalarProperty Name="TundishManganese" ColumnName="TundishManganese" />
+                <ScalarProperty Name="TundishPhosphorus" ColumnName="TundishPhosphorus" />
+                <ScalarProperty Name="TundishSulphur" ColumnName="TundishSulphur" />
+                <ScalarProperty Name="TundishSilicon" ColumnName="TundishSilicon" />
+                <ScalarProperty Name="TundishCarbon" ColumnName="TundishCarbon" />
+                <ScalarProperty Name="QtNitrogen" ColumnName="QtNitrogen" />
+                <ScalarProperty Name="QtManganese" ColumnName="QtManganese" />
+                <ScalarProperty Name="QtPhosphorus" ColumnName="QtPhosphorus" />
+                <ScalarProperty Name="QtSulphur" ColumnName="QtSulphur" />
+                <ScalarProperty Name="QtSilicon" ColumnName="QtSilicon" />
+                <ScalarProperty Name="QtCarbon" ColumnName="QtCarbon" />
+                <ScalarProperty Name="Pb1Nitrogen" ColumnName="Pb1Nitrogen" />
+                <ScalarProperty Name="Pb1Manganese" ColumnName="Pb1Manganese" />
+                <ScalarProperty Name="Pb1Phosphorus" ColumnName="Pb1Phosphorus" />
+                <ScalarProperty Name="Pb1Sulphur" ColumnName="Pb1Sulphur" />
+                <ScalarProperty Name="Pb1Silicon" ColumnName="Pb1Silicon" />
+                <ScalarProperty Name="Pb1Carbon" ColumnName="Pb1Carbon" />
+                <ScalarProperty Name="IbNitrogen" ColumnName="IbNitrogen" />
+                <ScalarProperty Name="IbManganese" ColumnName="IbManganese" />
+                <ScalarProperty Name="IbPhosphorus" ColumnName="IbPhosphorus" />
+                <ScalarProperty Name="IbSulphur" ColumnName="IbSulphur" />
+                <ScalarProperty Name="IbSilicon" ColumnName="IbSilicon" />
+                <ScalarProperty Name="IbCarbon" ColumnName="IbCarbon" />
+                <ScalarProperty Name="HmNitrogen" ColumnName="HmNitrogen" />
+                <ScalarProperty Name="HmManganese" ColumnName="HmManganese" />
+                <ScalarProperty Name="HmPhosphorus" ColumnName="HmPhosphorus" />
+                <ScalarProperty Name="HmSulphur" ColumnName="HmSulphur" />
+                <ScalarProperty Name="HmSilicon" ColumnName="HmSilicon" />
+                <ScalarProperty Name="HmCarbon" ColumnName="HmCarbon" />
+                <ScalarProperty Name="LadleActualCarbon" ColumnName="LadleActualCarbon" />
+                <ScalarProperty Name="LadleActualTemperature" ColumnName="LadleActualTemperature" />
+                <ScalarProperty Name="LadleAimCarbon" ColumnName="LadleAimCarbon" />
+                <ScalarProperty Name="LadleAimTemperature" ColumnName="LadleAimTemperature" />
+                <ScalarProperty Name="ReblowRequired" ColumnName="ReblowRequired" />
+                <ScalarProperty Name="DeltaTemperature" ColumnName="DeltaTemperature" />
+                <ScalarProperty Name="CoolbackOre" ColumnName="CoolbackOre" />
+                <ScalarProperty Name="ReblowOxygen" ColumnName="ReblowOxygen" />
+                <ScalarProperty Name="SlspDolofluxWt" ColumnName="SlspDolofluxWt" />
+                <ScalarProperty Name="SlspOxyActivityQC" ColumnName="SlspOxyActivityQC" />
+                <ScalarProperty Name="SlspOxyActivity" ColumnName="SlspOxyActivity" />
+                <ScalarProperty Name="EstPbCarbon" ColumnName="EstPbCarbon" />
+                <ScalarProperty Name="EstOxyActivity" ColumnName="EstOxyActivity" />
+                <ScalarProperty Name="TsoRequired" ColumnName="TsoRequired" />
+                <ScalarProperty Name="PhosphorusAlarm" ColumnName="PhosphorusAlarm" />
+                <ScalarProperty Name="ScrapAlarm" ColumnName="ScrapAlarm" />
+                <ScalarProperty Name="LimeAlarm" ColumnName="LimeAlarm" />
+                <ScalarProperty Name="OreAlarm" ColumnName="OreAlarm" />
+                <ScalarProperty Name="Pb2BathHeight" ColumnName="Pb2BathHeight" />
+                <ScalarProperty Name="Pb2ImmersionDepthQC" ColumnName="Pb2ImmersionDepthQC" />
+                <ScalarProperty Name="Pb2ImmersionDepth" ColumnName="Pb2ImmersionDepth" />
+                <ScalarProperty Name="Pb2CalculatedCarbon" ColumnName="Pb2CalculatedCarbon" />
+                <ScalarProperty Name="Pb2OxyActivityQC" ColumnName="Pb2OxyActivityQC" />
+                <ScalarProperty Name="Pb2OxyActivity" ColumnName="Pb2OxyActivity" />
+                <ScalarProperty Name="Pb2TemperatureQC" ColumnName="Pb2TemperatureQC" />
+                <ScalarProperty Name="Pb2Temperature" ColumnName="Pb2Temperature" />
+                <ScalarProperty Name="Pb1BathHeight" ColumnName="Pb1BathHeight" />
+                <ScalarProperty Name="Pb1ImmersionDepthQC" ColumnName="Pb1ImmersionDepthQC" />
+                <ScalarProperty Name="Pb1ImmersionDepth" ColumnName="Pb1ImmersionDepth" />
+                <ScalarProperty Name="Pb1CalculatedCarbon" ColumnName="Pb1CalculatedCarbon" />
+                <ScalarProperty Name="Pb1OxyActivityQC" ColumnName="Pb1OxyActivityQC" />
+                <ScalarProperty Name="Pb1OxyActivity" ColumnName="Pb1OxyActivity" />
+                <ScalarProperty Name="Pb1TemperatureQC" ColumnName="Pb1TemperatureQC" />
+                <ScalarProperty Name="Pb1Temperature" ColumnName="Pb1Temperature" />
+                <ScalarProperty Name="InblowCarbonQC" ColumnName="InblowCarbonQC" />
+                <ScalarProperty Name="InblowCarbon" ColumnName="InblowCarbon" />
+                <ScalarProperty Name="AimCarbon" ColumnName="AimCarbon" />
+                <ScalarProperty Name="InblowTemperatureQC" ColumnName="InblowTemperatureQC" />
+                <ScalarProperty Name="InblowTemperature" ColumnName="InblowTemperature" />
+                <ScalarProperty Name="AimTemperature" ColumnName="AimTemperature" />
+                <ScalarProperty Name="OreAtPostBlow" ColumnName="OreAtPostBlow" />
+                <ScalarProperty Name="OreEbModel" ColumnName="OreEbModel" />
+                <ScalarProperty Name="OreAtInBlow" ColumnName="OreAtInBlow" />
+                <ScalarProperty Name="OreCbModel" ColumnName="OreCbModel" />
+                <ScalarProperty Name="OxygenVolumeToCharge" ColumnName="OxygenVolumeToCharge" />
+                <ScalarProperty Name="OxygenAtPostBlow" ColumnName="OxygenAtPostBlow" />
+                <ScalarProperty Name="OxygenEbModel" ColumnName="OxygenEbModel" />
+                <ScalarProperty Name="OxygenAtInBlow" ColumnName="OxygenAtInBlow" />
+                <ScalarProperty Name="OxygenCbModel" ColumnName="OxygenCbModel" />
+                <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+                <ScalarProperty Name="HNS" ColumnName="HNS" />
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+                <ScalarProperty Name="EbmDisplayID" ColumnName="EbmDisplayID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HmdsmResults">
+            <EntityTypeMapping TypeName="ModelSchema.HmdsmResult">
+              <MappingFragment StoreEntitySet="HmdsmResult">
+                <ScalarProperty Name="AimHMSulpur" ColumnName="AimHMSulpur" />
+                <ScalarProperty Name="StartHMSulphur" ColumnName="StartHMSulphur" />
+                <ScalarProperty Name="HMTemperatureLoss" ColumnName="HMTemperatureLoss" />
+                <ScalarProperty Name="HMWeightLoss" ColumnName="HMWeightLoss" />
+                <ScalarProperty Name="TotalLimeWeight" ColumnName="TotalLimeWeight" />
+                <ScalarProperty Name="TotalMgWeight" ColumnName="TotalMgWeight" />
+                <ScalarProperty Name="TreatmentTime" ColumnName="TreatmentTime" />
+                <ScalarProperty Name="HmdsmTreatmentTypeID" ColumnName="HmdsmTreatmentTypeID" />
+                <ScalarProperty Name="HmdsmRunTimeStampGMT" ColumnName="HmdsmRunTimeStampGMT" />
+                <ScalarProperty Name="HmdsmRunTimeStamp" ColumnName="HmdsmRunTimeStamp" />
+                <ScalarProperty Name="TreatmentStage" ColumnName="TreatmentStage" />
+                <ScalarProperty Name="HMLadleNumber" ColumnName="HMLadleNumber" />
+                <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+                <ScalarProperty Name="HNS" ColumnName="HNS" />
+                <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+                <ScalarProperty Name="HmdsmResultID" ColumnName="HmdsmResultID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ModelSchema" ZoomLevel="63">
+        <EntityTypeShape EntityType="ModelSchema.CbmDisplayAnalysis" Width="1.625" PointX="0.75" PointY="0.75" Height="17.862692057291667" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelSchema.CbmDisplayMaterial" Width="1.75" PointX="2.75" PointY="0.75" Height="15.890524088541667" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelSchema.CbmMaterialReq" Width="1.75" PointX="4.75" PointY="0.75" Height="2.7427376302083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelSchema.CbmMessage" Width="1.75" PointX="4.75" PointY="4.75" Height="2.4140429687499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelSchema.CbmResult" Width="1.75" PointX="6.75" PointY="0.75" Height="8.350546875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ModelSchema.EbmDisplay" Width="1.5" PointX="9.375" PointY="0.75" Height="15.397482096354167" />
+        <EntityTypeShape EntityType="ModelSchema.HmdsmResult" Width="1.5" PointX="5.375" PointY="10.75" Height="3.5644742838541674" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,106 @@
+﻿namespace Elvis.Forms
+{
+    partial class HeatScheduler
+    {
+        /// <summary> 
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+        private MLJSystems.Calendars.ResourceScheduler scheduler;
+
+        /// <summary> 
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (this.components != null))
+            {
+                this.components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Component Designer generated code
+
+        /// <summary> 
+        /// Required method for Designer support - do not modify 
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            MLJSystems.Calendars.Resource resource1 = new MLJSystems.Calendars.Resource();
+            this.scheduler = new MLJSystems.Calendars.ResourceScheduler();
+            this.SuspendLayout();
+            // 
+            // scheduler
+            // 
+            this.scheduler.AllowDrop = false;
+            this.scheduler.AppointmentBoxStyle = MLJSystems.Calendars.AppointmentBoxStyle.SmallBox;
+            this.scheduler.AvailableResolutions = MLJSystems.Calendars.HoursResolutions.One;
+            this.scheduler.BehaviorsOptions = MLJSystems.Calendars.BehaviorOptions.DenyResourceChange;
+            this.scheduler.CalendarVersion = 1;
+            this.scheduler.CellWidth = 30;
+            this.scheduler.ConnectorStyle = MLJSystems.Calendars.ConnectorStyle.DashLine;
+            this.scheduler.DateFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scheduler.DatesLabelColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.scheduler.DatesLabelColorSecond = System.Drawing.Color.White;
+            this.scheduler.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scheduler.FirstDateTime = new System.DateTime(2013, 8, 1, 0, 0, 0, 0);
+            this.scheduler.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.scheduler.FreeDay = MLJSystems.Calendars.FreeDays.None;
+            this.scheduler.FreeHourColor = System.Drawing.SystemColors.Control;
+            this.scheduler.HeaderStyle = MLJSystems.Calendars.ResourceSchedulerHeaderStyle.Ruler;
+            this.scheduler.HoursResolution = MLJSystems.Calendars.HoursResolutions.One;
+            this.scheduler.ImageAlign = MLJSystems.Calendars.ImageHAlign.Left;
+            this.scheduler.LineColor = System.Drawing.Color.Black;
+            this.scheduler.Location = new System.Drawing.Point(0, 0);
+            this.scheduler.Name = "scheduler";
+            resource1.SubItems.Add(new MLJSystems.Calendars.ResourceItem(""));
+            resource1.SubItems.Add(new MLJSystems.Calendars.ResourceItem(""));
+            resource1.SubItems.Add(new MLJSystems.Calendars.ResourceItem(""));
+            this.scheduler.Resources.Add(resource1);
+            this.scheduler.ResourcesLabelColor = System.Drawing.Color.White;
+            this.scheduler.ResourcesLabelColorSecond = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.scheduler.RowHeight = 23;
+            this.scheduler.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.scheduler.SelectedAppointmentColor = System.Drawing.Color.Yellow;
+            this.scheduler.ShowVerticalGridLine = false;
+            this.scheduler.Size = new System.Drawing.Size(875, 606);
+            this.scheduler.TabIndex = 4;
+            this.scheduler.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.scheduler.TodayMarkerColor = System.Drawing.Color.OrangeRed;
+            this.scheduler.TodayTimelineVisible = true;
+            this.scheduler.WeekRule = System.Globalization.CalendarWeekRule.FirstDay;
+            this.scheduler.WorkHourBegin = System.TimeSpan.Parse("00:00:00");
+            this.scheduler.WorkHourColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.scheduler.WorkHourColorSecond = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.scheduler.WorkHourEnd = System.TimeSpan.Parse("24.00:00:00");
+            this.scheduler.FirstDateTimeChanged += new System.EventHandler(this.HeatScheduler_FirstDateTimeChanged);
+            this.scheduler.AppointmentClick += new System.EventHandler<MLJSystems.Calendars.AppointmentClickEventArgs>(this.HeatScheduler_AppointmentClick);
+            this.scheduler.PaintAppointment += new MLJSystems.Calendars.PaintAppointmentEventHandler(this.HeatScheduler_PaintAppointment);
+            this.scheduler.Click += new System.EventHandler(this.HeatScheduler_Click);
+            this.scheduler.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.HeatScheduler_MouseDoubleClick);
+            this.scheduler.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HeatScheduler_MouseMove);
+            // 
+            // HeatScheduler
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.scheduler);
+            this.DoubleBuffered = true;
+            this.Name = "HeatScheduler";
+            this.Size = new System.Drawing.Size(875, 606);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        
+
+
+
+
+    }
+}
