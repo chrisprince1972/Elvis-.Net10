@@ -33,16 +33,16 @@ namespace Elvis.Forms
         #region Constructor
         public SplashScreen(MainForm mainForm)
         {
-            InitializeComponent();
-            this.main = mainForm;
-            this.main.SkipSplash = false;
-            lblVersion.Text += HelperFunctions.GetVersionNumber();
-            lblCopyright.Text = "© Tata Steel " + DateTime.Now.Year;
+            //InitializeComponent();
+            //this.main = mainForm;
+            //this.main.SkipSplash = false;
+            //lblVersion.Text += HelperFunctions.GetVersionNumber();
+            //lblCopyright.Text = "© Tata Steel " + DateTime.Now.Year;
 
-            if (Debugger.IsAttached)
-            {
-                btnSkip.Visible = true;
-            }
+            //if (Debugger.IsAttached)
+            //{
+            //    btnSkip.Visible = true;
+            //}
 
             //rectangleShape3.Enabled = false;
             //rectangleShape1.Enabled = false;

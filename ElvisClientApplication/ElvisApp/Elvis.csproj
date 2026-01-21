@@ -29,6 +29,8 @@
 
   <!-- Replace old Microsoft.ReportViewer with ReportViewerCore (local RDLC support on modern .NET) -->
   <ItemGroup>
+    <PackageReference Include="MLJSystems.Calendars" Version="1.0.0" />
+    <PackageReference Include="MLJSystems.Core" Version="1.0.0" />
     <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.31" />
     <PackageReference Include="ReportViewerCore.NETCore" Version="15.1.32" />
   </ItemGroup>
@@ -45,16 +47,6 @@
   <ItemGroup>
     <Reference Include="DocumentFormat.OpenXml">
       <HintPath>Required Dlls\DocumentFormat.OpenXml.dll</HintPath>
-      <Private>true</Private>
-    </Reference>
-
-    <Reference Include="MLJSystems.Calendars">
-      <HintPath>Required Dlls\MLJSystems.Calendars.dll</HintPath>
-      <Private>true</Private>
-    </Reference>
-
-    <Reference Include="MLJSystems.Core">
-      <HintPath>Required Dlls\MLJSystems.Core.dll</HintPath>
       <Private>true</Private>
     </Reference>
 
