@@ -9,10 +9,22 @@ namespace Elvis.Forms.General
 {
     public partial class ServerStatus : UserControl
     {
-        private List<string> servers = new List<string>()
+        // NOTE:
+        // Ping checks HOST reachability, not SQL Server instance.
+        // So use "CPLAPTOP" (or "localhost"), not "CPLAPTOP\\MSSQLSERVER01".
+
+        // Legacy servers are kept commented (not deleted).
+        private readonly List<string> servers = new List<string>()
         {
-            "PTCCL3SQL.porttalbot.pcswales.corusgroup.com",         //Main Server
-            "PTSSELVISTEST.porttalbot.pcswales.corusgroup.com",     //Test Server
+            // Legacy:
+            // "PTCCL3SQL.porttalbot.pcswales.corusgroup.com",         //Main Server
+            // "PTSSELVISTEST.porttalbot.pcswales.corusgroup.com",     //Test Server
+
+            // Local replacements:
+            "CPLAPTOP",   //Main Server (local host)
+            "localhost",  //Test Server (local host)
+
+            // Leave these as-is if you still want to show status for them:
             "PTPCSQLCLUSTER.porttalbot.pcswales.corusgroup.com",    //Miscast Server
             "PTCCINSQL.porttalbot.pcswales.corusgroup.com",         //Caster Data Server
             "PS_PI.porttalbot.pcswales.corusgroup.com",             //PI Server
@@ -24,18 +36,11 @@ namespace Elvis.Forms.General
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Button Refresh Event Handler.
-        /// </summary>
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             PingServers();
         }
 
-        /// <summary>
-        /// Runs the ping commands on the servers and 
-        /// colours the Panels depending on success.
-        /// </summary>
         public void PingServers()
         {
             foreach (string server in servers)
@@ -45,19 +50,22 @@ namespace Elvis.Forms.General
             }
         }
 
-        /// <summary>
-        /// Finds the Panel to Colour by Server Name.
-        /// </summary>
-        /// <param name="server">The Name of the server.</param>
-        /// <returns>The Panel associated with that server.</returns>
         private Panel GetPanelByServerName(string server)
         {
             switch (server)
             {
-                case "PTCCL3SQL.porttalbot.pcswales.corusgroup.com":
-                    return pnlPTCCL3SQL;
-                case "PTSSELVISTEST.porttalbot.pcswales.corusgroup.com":
-                    return pnlPTSSELVISTEST;
+                // Legacy mappings (kept):
+                // case "PTCCL3SQL.porttalbot.pcswales.corusgroup.com":
+                //     return pnlPTCCL3SQL;
+                // case "PTSSELVISTEST.porttalbot.pcswales.corusgroup.com":
+                //     return pnlPTSSELVISTEST;
+
+                // Local replacements map onto the existing panels:
+                case "CPLAPTOP":
+                    return pnlPTCCL3SQL;      // reuse "Main Server" panel
+                case "localhost":
+                    return pnlPTSSELVISTEST;  // reuse "Test Server" panel
+
                 case "PTPCSQLCLUSTER.porttalbot.pcswales.corusgroup.com":
                     return pnlPTPCSQLCLUSTER;
                 case "PTCCINSQL.porttalbot.pcswales.corusgroup.com":
@@ -71,10 +79,6 @@ namespace Elvis.Forms.General
             }
         }
 
-        /// <summary>
-        /// Checks the status and colours a 
-        /// panel depending on the result.
-        /// </summary>
         private void ColourServer(IPStatus iPStatus, Panel pnlToColour)
         {
             if (pnlToColour != null)
@@ -82,11 +86,11 @@ namespace Elvis.Forms.General
                 if (iPStatus != IPStatus.Unknown)
                 {
                     pnlToColour.ForeColor = Color.Black;
-                    pnlToColour.BackColor = ColorTranslator.FromHtml("#26F43E");//Green
+                    pnlToColour.BackColor = ColorTranslator.FromHtml("#26F43E"); // Green
                     return;
                 }
                 pnlToColour.ForeColor = Color.White;
-                pnlToColour.BackColor = ColorTranslator.FromHtml("#e12301");//Red
+                pnlToColour.BackColor = ColorTranslator.FromHtml("#e12301"); // Red
             }
         }
     }
