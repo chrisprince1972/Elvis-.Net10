@@ -3166,9 +3166,12 @@ namespace Elvis.Forms.Reports.OEE.OEEDelayDataTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "Data Source=PTSSELVISTEST;Initial Catalog=elvisdb;Integrated Security=True";
+            // legacy:
+            // this._connection.ConnectionString = "Data Source=PTSSELVISTEST;Initial Catalog=elvisdb;Integrated Security=True";
+
+            this._connection.ConnectionString = @"Data Source=CPLAPTOP\MSSQLSERVER01;Initial Catalog=ElvisDB;Integrated Security=True";
         }
-        
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         private void InitCommandCollection() {

@@ -4,8 +4,8 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection ConnectionStringObject="Data Source=PTSSELVISTEST;Initial Catalog=elvisdb;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="ptsselvistest.elvisdb.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
-        </Connections>
+			<Connection ConnectionStringObject="Data Source=CPLAPTOP\MSSQLSERVER01;Initial Catalog=ElvisDB;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="ptsselvistest.elvisdb.dbo" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+		</Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TibOEEReportTableAdapter" GeneratorDataComponentClassName="TibOEEReportTableAdapter" Name="TibOEEReport" UserDataComponentName="TibOEEReportTableAdapter">
             <MainSource>
