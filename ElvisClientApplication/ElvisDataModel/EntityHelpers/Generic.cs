@@ -19,7 +19,10 @@ namespace ElvisDataModel
             /// <returns></returns>
             public static List<TEntity> GetAll<TEntity>() where TEntity : EntityObject
             {
-                using (ElvisDBEntities ctx = new ElvisDBEntities())
+                // legacy (default ctor uses named connection string from config):
+                // using (ElvisDBEntities ctx = new ElvisDBEntities())
+
+                using (ElvisDBEntities ctx = new ElvisDBEntities(EntityHelper.ElvisDBSettings.ConnectionString))
                 {
                     List<TEntity> query = ctx.CreateObjectSet<TEntity>().ToList();
                     return query;
@@ -28,7 +31,10 @@ namespace ElvisDataModel
 
             public static List<TEntity> Find<TEntity>(Func<TEntity, bool> predicate) where TEntity : EntityObject
             {
-                using (ElvisDBEntities ctx = new ElvisDBEntities())
+                // legacy (default ctor uses named connection string from config):
+                // using (ElvisDBEntities ctx = new ElvisDBEntities())
+
+                using (ElvisDBEntities ctx = new ElvisDBEntities(EntityHelper.ElvisDBSettings.ConnectionString))
                 {
                     List<TEntity> query = ctx.CreateObjectSet<TEntity>().Where(predicate).ToList();
                     return query;
@@ -37,7 +43,10 @@ namespace ElvisDataModel
 
             public static TEntity GetFirstOrDefault<TEntity>(Func<TEntity, bool> predicate) where TEntity : EntityObject
             {
-                using (ElvisDBEntities ctx = new ElvisDBEntities())
+                // legacy (default ctor uses named connection string from config):
+                // using (ElvisDBEntities ctx = new ElvisDBEntities())
+
+                using (ElvisDBEntities ctx = new ElvisDBEntities(EntityHelper.ElvisDBSettings.ConnectionString))
                 {
                     TEntity query = ctx.CreateObjectSet<TEntity>().Where(predicate).FirstOrDefault();
                     return query;
@@ -46,7 +55,10 @@ namespace ElvisDataModel
 
             public static int GetCount<TEntity>(Func<TEntity, bool> predicate) where TEntity : EntityObject
             {
-                using (ElvisDBEntities ctx = new ElvisDBEntities())
+                // legacy (default ctor uses named connection string from config):
+                // using (ElvisDBEntities ctx = new ElvisDBEntities())
+
+                using (ElvisDBEntities ctx = new ElvisDBEntities(EntityHelper.ElvisDBSettings.ConnectionString))
                 {
                     int query = ctx.CreateObjectSet<TEntity>().Where(predicate).Count();
                     return query;
@@ -55,14 +67,15 @@ namespace ElvisDataModel
 
             public static int GetCount<TEntity>() where TEntity : EntityObject
             {
-                using (ElvisDBEntities ctx = new ElvisDBEntities())
+                // legacy (default ctor uses named connection string from config):
+                // using (ElvisDBEntities ctx = new ElvisDBEntities())
+
+                using (ElvisDBEntities ctx = new ElvisDBEntities(EntityHelper.ElvisDBSettings.ConnectionString))
                 {
                     int query = ctx.CreateObjectSet<TEntity>().Count();
                     return query;
                 }
             }
-
-
         }
     }
 }

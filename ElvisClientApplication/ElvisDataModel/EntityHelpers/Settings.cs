@@ -58,7 +58,7 @@ namespace ElvisDataModel
             {
                 // Specify the provider name, server and database.
                 string providerName = "System.Data.SqlClient";
-                string serverName = "PTSSELVISTEST.porttalbot.pcswales.corusgroup.com";
+                string serverName = @"CPLAPTOP\MSSQLSERVER01";
                 string databaseName = "elvisdb";
 
                 // Initialize the connection string builder for the
@@ -69,9 +69,9 @@ namespace ElvisDataModel
                 // Set the properties for the data source.
                 sqlBuilder.DataSource = serverName;
                 sqlBuilder.InitialCatalog = databaseName;
-                sqlBuilder.UserID = "ElvisClient";
-                sqlBuilder.Password = "clientpwd";
-                sqlBuilder.IntegratedSecurity = false;
+                //sqlBuilder.UserID = "ElvisClient";
+                //sqlBuilder.Password = "clientpwd";
+                sqlBuilder.IntegratedSecurity = true;
 
                 // Build the SqlConnection connection string.
                 string providerString = sqlBuilder.ToString();
@@ -95,7 +95,7 @@ namespace ElvisDataModel
             {
                 // Specify the provider name, server and database.
                 string providerName = "System.Data.SqlClient";
-                string serverName = "PTCCL3SQL.porttalbot.pcswales.corusgroup.com";
+                string serverName = @"CPLAPTOP\MSSQLSERVER01";
                 string databaseName = "ElvisDB";
 
                 // Initialize the connection string builder for the
@@ -106,9 +106,9 @@ namespace ElvisDataModel
                 // Set the properties for the data source.
                 sqlBuilder.DataSource = serverName;
                 sqlBuilder.InitialCatalog = databaseName;
-                sqlBuilder.UserID = "ElvisClient";
-                sqlBuilder.Password = "clientpwd";
-                sqlBuilder.IntegratedSecurity = false;
+                //sqlBuilder.UserID = "ElvisClient";
+                //sqlBuilder.Password = "clientpwd";
+                sqlBuilder.IntegratedSecurity = true;
 
                 // Build the SqlConnection connection string.
                 string providerString = sqlBuilder.ToString();
