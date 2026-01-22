@@ -7,6 +7,19 @@ namespace ElvisDataModel
 {
     public static partial class EntityHelper
     {
+        // IMPORTANT:
+        // EventSchemaEntities expects an *Entity Framework entity connection string* (metadata=...csdl|ssdl|msl).
+        // Passing ElvisDBSettings.ConnectionString (provider/SqlConnection string) causes:
+        // "A minimum of one .ssdl artifact must be supplied."
+        private static EventSchemaEntities CreateEventSchemaContext()
+        {
+            // legacy (do not delete):
+            // return new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString);
+
+            // Use config-backed entity connection string (metadata=...) via the parameterless ctor.
+            return new EventSchemaEntities();
+        }
+
         #region Additions Table Functions
         public static class Additions
         {
@@ -19,7 +32,7 @@ namespace ElvisDataModel
             public static List<ElvisDataModel.EDMX.Addition> GetByHeatNumber(
                 int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.Additions
                         .Where(s =>
@@ -44,7 +57,7 @@ namespace ElvisDataModel
             public static List<EDMX.Analysis> GetByHeat(
                 int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.Analyses
                         .Where(s =>
@@ -65,12 +78,12 @@ namespace ElvisDataModel
             public static EDMX.Analysis GetByHeatAndMaterialCode(
                 int heatNumber, int heatNumberSet, int materialCode)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.Analyses
-                        .Where(s => 
-                            s.HNS == heatNumberSet && 
-                            s.HeatNumber == heatNumber && 
+                        .Where(s =>
+                            s.HNS == heatNumberSet &&
+                            s.HeatNumber == heatNumber &&
                             s.MaterialCode == materialCode)
                         .OrderByDescending(s => s.TimeCreated)
                         .FirstOrDefault();
@@ -88,7 +101,7 @@ namespace ElvisDataModel
             /// <returns>List of CoordLink Objects</returns>
             public static List<ElvisDataModel.EDMX.CoordLink> GetAll()
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.CoordLinks.OrderBy(c => c.HEAT_NUMBER).ToList();
                 }
@@ -106,7 +119,7 @@ namespace ElvisDataModel
             /// <returns>List of CoordLinkFull Objects</returns>
             public static List<ElvisDataModel.EDMX.CoordLinkFull> GetByHeat(int heatNo, int heatNoSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.CoordLinkFulls
                             .Where(c =>
@@ -123,7 +136,7 @@ namespace ElvisDataModel
             /// <returns>List of CoordLinkFull Objects.</returns>
             public static List<ElvisDataModel.EDMX.CoordLinkFull> GetLastXDays(int xDays)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     DateTime dtXDaysAgo = DateTime.Now.AddDays(-xDays);
                     return ctx.CoordLinkFulls
@@ -147,7 +160,7 @@ namespace ElvisDataModel
                 int heatNumber,
                 int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.CoordLocks.FirstOrDefault(c =>
                                 c.HEAT_NUMBER == heatNumber &&
@@ -171,7 +184,7 @@ namespace ElvisDataModel
                 int heatNumber,
                 int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.DesulphSkimPercentages
                         .Where(c =>
@@ -186,7 +199,6 @@ namespace ElvisDataModel
         #region DipResult Table Functions
         public static class DipResult
         {
-
             public enum DipType : int
             {
                 Temperature = 1,
@@ -210,11 +222,11 @@ namespace ElvisDataModel
             /// <returns>A list of dip result objects.</returns>
             public static List<EDMX.DipResult> GetByHeat(int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.DipResults
-                        .Where(dr => 
-                            dr.HNS == heatNumberSet && 
+                        .Where(dr =>
+                            dr.HNS == heatNumberSet &&
                             dr.HeatNumber == heatNumber)
                         .ToList();
                 }
@@ -227,10 +239,10 @@ namespace ElvisDataModel
             /// <param name="heatNumber">The heat number.</param>
             /// <param name="dipTypes">List of the enum of the dip types to return.</param>
             /// <returns>A list of dip result objects.</returns>
-            public static List<EDMX.DipResult> GetByHeatDipTypeList(int heatNumber, 
+            public static List<EDMX.DipResult> GetByHeatDipTypeList(int heatNumber,
                 int heatNumberSet, List<DipType> dipTypes)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     List<int> dipTypesAsInt = new List<int>();
 
@@ -238,8 +250,8 @@ namespace ElvisDataModel
 
                     return ctx.DipResults
                         .Where(r =>
-                            r.HNS == heatNumberSet && 
-                            r.HeatNumber == heatNumber && 
+                            r.HNS == heatNumberSet &&
+                            r.HeatNumber == heatNumber &&
                             dipTypesAsInt.Contains(r.DipType))
                         .OrderBy(r => r.TimeStampGMT)
                         .ToList();
@@ -255,14 +267,14 @@ namespace ElvisDataModel
             /// <returns>The temperature of a dip for a heat.</returns>
             public static float? GetHeatsTemperatureByDipType(int heatNumber, int heatNumberSet, DipType dipType)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     float? returnValue = null;
 
                     EDMX.DipResult record = ctx.DipResults
                         .Where(r =>
                             r.HNS == heatNumberSet &&
-                            r.HeatNumber == heatNumber && 
+                            r.HeatNumber == heatNumber &&
                             r.DipType == (int)dipType)
                         .FirstOrDefault();
 
@@ -288,12 +300,12 @@ namespace ElvisDataModel
             /// <returns>A HeatAimAnalysi object.</returns>
             public static EDMX.HeatAimAnalysi GetByHeat(int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.HeatAimAnalysis
                         .FirstOrDefault(g =>
                             g.HeatNumber == heatNumber &&
-                            g.HNS == heatNumberSet && 
+                            g.HNS == heatNumberSet &&
                             g.Type == 0 &&       //0 is AIM
                             g.UnitNumber == 99); //99 is CASTER
                 }
@@ -312,10 +324,10 @@ namespace ElvisDataModel
             /// <returns>A HeatAimGrades object.</returns>
             public static EDMX.HeatAimGeneral GetByHeat(int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.HeatAimGenerals
-                        .FirstOrDefault(g => 
+                        .FirstOrDefault(g =>
                             g.HeatNumber == heatNumber &&
                             g.HNS == heatNumberSet
                         );
@@ -337,7 +349,7 @@ namespace ElvisDataModel
                 int heatNumber,
                 int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.HeatAimGrades
                         .Where(g =>
@@ -362,7 +374,7 @@ namespace ElvisDataModel
                 int heatNumber,
                 int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.HeatLogs
                         .Where(t =>
@@ -373,18 +385,11 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets a list of heat log entries related to that Heat and Unit
-            /// </summary>
-            /// <param name="heatNumber">Heat Number</param>
-            /// <param name="heatNumberSet">Heat Number Set</param>
-            /// <param name="unitNumber">Unit Number</param>
-            /// <returns>List of HeatLog Objects</returns>
             public static List<EDMX.HeatLog> GetByHeatAndUnit(int heatNumber,
                 int heatNumberSet,
                 int unitNumber)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.HeatLogs
                         .Where(t =>
@@ -396,17 +401,10 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets a list of heat log entries related to that Heat for either of the desulphurisation units.
-            /// Function will return 2 sets of logs if heat visited both of the desulphurisation unit.  However, it will return null if not but this should be a rare case.
-            /// </summary>
-            /// <param name="heatNumberSet">Heat Number Set</param>
-            /// <param name="heatNumber">Heat Number</param>
-            /// <returns>Null or a list of HeatLog Objects</returns>
             public static List<EDMX.HeatLog> GetByHeatForDesulphPour(int heatNumber,
                 int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.HeatLogs
                         .Where(t =>
@@ -418,16 +416,10 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Get Start Tap Time by Heat
-            /// </summary>
-            /// <param name="heatNumber">Heat Number</param>
-            /// <param name="heatNumberSet">Heat Number Set</param>
-            /// <returns>DateTime containing the start tap time for that heat.</returns>
             public static DateTime? GetTapTimeByHeat(int heatNumber,
                 int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     ElvisDataModel.EDMX.HeatLog hl = ctx.HeatLogs
                         .FirstOrDefault(t =>
@@ -442,17 +434,11 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets a list of heat logs by heat for the vessels.
-            /// </summary>
-            /// <param name="heatNumber">Heat Number</param>
-            /// <param name="heatNumberSet">Heat Number Set</param>
-            /// <returns>List of HeatLog Objects</returns>
             public static List<ElvisDataModel.EDMX.HeatLog> GetByHeatForVessels(
                 int heatNumber,
                 int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.HeatLogs
                         .Where(t =>
@@ -469,15 +455,9 @@ namespace ElvisDataModel
         #region HM Stocks Table Functions
         public static class HMStocks
         {
-            /// <summary>
-            /// Returns HM Stocks for the given period.
-            /// </summary>
-            /// <param name="startDate">The start of the period</param>
-            /// <param name="endDate">The end of the period</param>
-            /// <returns>A collection of HM_STOCK instances</returns>
             public static List<HM_Stocks> GetHMStocksForPeriod(DateTime startDate, DateTime endDate)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.HM_Stocks
                         .Where(h => h.DATE >= startDate && h.DATE <= endDate)
@@ -490,19 +470,10 @@ namespace ElvisDataModel
         #region LastProgramNumber View Functions
         public static class LastProgramNumber
         {
-            /// <summary>
-            /// VIEW - LastProgramNumber
-            /// Gets a list of last program numbers associated with heats
-            /// between two dates given.
-            /// </summary>
-            /// <param name="dateFrom">The Date From</param>
-            /// <param name="dateTo">The Date To</param>
-            /// <returns>A list of LastProgramNumber objects.</returns>
             public static List<EDMX.LastProgramNumber> GetByDateRange(DateTime dateFrom, DateTime dateTo)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
-                    //Need to modify the dates slightly to ensure we populate the whole scheduler.
                     dateFrom = dateFrom.AddHours(-12);
                     dateTo = dateTo.AddHours(13);
                     return ctx.LastProgramNumbers
@@ -517,41 +488,26 @@ namespace ElvisDataModel
         #region ManInputDay Table Functions
         public static class ManInputDay
         {
-            /// <summary>
-            /// Gets ManInputDay records by a date.
-            /// </summary>
-            /// <param name="date">The DateTime to get.</param>
-            /// <returns>List of ManInputDay Objects.</returns>
             public static EDMX.ManInputDay GetByDate(DateTime date)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.ManInputDays.FirstOrDefault(m => m.DayDate == date);
                 }
             }
 
-            /// <summary>
-            /// Inserts new ManInputDay record into the database. 
-            /// </summary>
-            /// <param name="manInput">The ManInputDay to insert.</param>
-            /// <returns>String containing any errors.</returns>
             public static void InsertNew(EDMX.ManInputDay manInput)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     ctx.AddToManInputDays(manInput);
                     ctx.SaveChanges();
                 }
             }
 
-            /// <summary>
-            /// Updates existing ManInputDay record in the database. 
-            /// </summary>
-            /// <param name="manInput">The ManInputDay to insert.</param>
-            /// <returns>String containing any errors.</returns>
             public static string UpdateExisting(EDMX.ManInputDay manInputNewValues)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     EDMX.ManInputDay manInput = ctx.ManInputDays.FirstOrDefault(t =>
                         t.DayDate == manInputNewValues.DayDate);
@@ -569,14 +525,10 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets the last 7 days worth of records.
-            /// </summary>
-            /// <returns>A list of ManInputDay objects.</returns>
             public static List<EDMX.ManInputDay> GetLast7Days()
             {
                 DateTime date = DateTime.Now.AddDays(-7);
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.ManInputDays
                         .Where(m => m.DayDate >= date)
@@ -585,14 +537,9 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets the ManInputDay record by index.
-            /// </summary>
-            /// <param name="dayDateIndex">The index to search for.</param>
-            /// <returns>A ManInputDay object.</returns>
             public static EDMX.ManInputDay GetByIndex(int dayDateIndex)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.ManInputDays.FirstOrDefault(d => d.DayDateIndex == dayDateIndex);
                 }
@@ -603,13 +550,9 @@ namespace ElvisDataModel
         #region ProgramHistory Table Functions
         public static class ProgramHistory
         {
-            /// <summary>
-            /// Gets Program History data for the last X days.
-            /// </summary>
-            /// <returns>List of ProgramHistory Objects.</returns>
             public static List<ElvisDataModel.EDMX.ProgramHistory> GetLastXDays(int xDays)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     DateTime dtXDaysAgo = DateTime.Now.AddDays(-xDays);
                     return ctx.ProgramHistories
@@ -623,15 +566,9 @@ namespace ElvisDataModel
         #region ScrapBoxLoad Events Table Functions
         public static class ScrapBoxLoad
         {
-            /// <summary>
-            /// Returns ScrapBoxLoad for the given heat number set and heat number.
-            /// </summary>
-            /// <param name="heatNumberSet">The heat number set.</param>
-            /// <param name="heatNumber">The heat numbe</param>
-            /// <returns>A list of ScrapBoxLoad objects.</returns>
             public static EDMX.ScrapBoxLoad GetByHeatNumber(int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.ScrapBoxLoads
                         .FirstOrDefault(s =>
@@ -646,15 +583,9 @@ namespace ElvisDataModel
         #region ScrapBoxStatusEvent Events Table Functions
         public static class ScrapBoxStatusEvent
         {
-            /// <summary>
-            /// Returns ScrapBoxStatusEvent for the given heat number set and heat number.
-            /// </summary>
-            /// <param name="heatNumberSet">The heat number set.</param>
-            /// <param name="heatNumber">The heat numbe</param>
-            /// <returns>A list of ScrapBoxStatusEvent objects.</returns>
             public static List<EDMX.ScrapBoxStatusEvent> GetByHeatNumber(int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.ScrapBoxStatusEvents
                         .Where(s =>
@@ -670,33 +601,22 @@ namespace ElvisDataModel
         #region ScrapDemand Table Functions
         public static class ScrapDemand
         {
-            /// <summary>
-            /// Gets a list of the latest ScrapDemand records per heat.
-            /// </summary>
-            /// <param name="heatNumberSet">The heat number set.</param>
-            /// <param name="heatNumber">The heat number.</param>
-            /// <returns>A list of ScrapDemand objects.</returns>
             public static List<EDMX.ScrapDemand> GetByHeatNumber(int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
-                    //Get whole list of demands
                     List<EDMX.ScrapDemand> demands = ctx.ScrapDemands
                         .Where(s =>
                             s.HNS == heatNumberSet &&
                             s.HeatNumber == heatNumber)
                         .ToList();
+
                     if (demands != null && demands.Count > 0)
                     {
-                        //Needs to get the latest DateTime value for timestamp
-                        //so that we can filter the correct records.
-                        DateTime dtLatest = demands
-                            .Max(s => s.TimeStamp);
+                        DateTime dtLatest = demands.Max(s => s.TimeStamp);
 
-                        //Return only the latest records.
                         return demands
-                            .Where(s =>
-                                s.TimeStamp == dtLatest)
+                            .Where(s => s.TimeStamp == dtLatest)
                             .ToList();
                     }
                     return new List<EDMX.ScrapDemand>();
@@ -708,13 +628,9 @@ namespace ElvisDataModel
         #region TapWeights Table Functions
         public static class TapWeights
         {
-            /// <summary>
-            /// Gets Tap Weights data for the last X days.
-            /// </summary>
-            /// <returns>List of TapWeight Objects.</returns>
             public static List<EDMX.TapWeight> GetLastXDays(int xDays)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     DateTime dtXDaysAgo = DateTime.Now.AddDays(-xDays);
                     return ctx.TapWeights
@@ -723,17 +639,10 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets a list of Tap Weights between two dates given.
-            /// </summary>
-            /// <param name="dateFrom">The Date From</param>
-            /// <param name="dateTo">The Date To</param>
-            /// <returns>A list of TapWeight objects.</returns>
             public static List<EDMX.TapWeight> GetByDateRange(DateTime dateFrom, DateTime dateTo)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
-                    //Need to modify the dates slightly to ensure we populate the whole scheduler.
                     dateFrom = dateFrom.AddHours(-12);
                     dateTo = dateTo.AddHours(13);
                     return ctx.TapWeights
@@ -748,15 +657,9 @@ namespace ElvisDataModel
         #region Torpedo Table Functions
         public static class Torpedo
         {
-            /// <summary>
-            /// Gets torpedos by heat numbers.
-            /// </summary>
-            /// <param name="heatNumberSet">The heat number set.</param>
-            /// <param name="heatNumber">The heat number.</param>
-            /// <returns>A list of Torpedo objects.</returns>
             public static List<EDMX.Torpedo> GetByHeat(int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.Torpedoes
                         .Where(t =>
@@ -767,15 +670,9 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets the total poured weight for the entire heat.
-            /// </summary>
-            /// <param name="heatNumberSet">The heat number set.</param>
-            /// <param name="heatNumber">The heat number.</param>
-            /// <returns>Nullable float containing the sum total of the poured weight for the heat.</returns>
             public static float? GetTotalPouredWeightOfHeat(int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.Torpedoes
                         .Where(t =>
@@ -790,29 +687,18 @@ namespace ElvisDataModel
         #region TIBDelays
         public static class TIBDelays
         {
-            /// <summary>
-            /// Gets a specific Tib Delay from the Database by TibDelayIndex
-            /// </summary>
-            /// <param name="tibDelayIndex">The Tib Delay Index associated with the delay.</param>
-            /// <returns>A TIBDelay Database Object.</returns>
             public static TIBDelay GetSingle(int tibDelayIndex)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.TIBDelays.FirstOrDefault(t =>
                         t.TibDelayIndex == tibDelayIndex);
                 }
             }
 
-            /// <summary>
-            /// Gets a specific Tib Delay from the Database by TibIndex and DelayNo.
-            /// </summary>
-            /// <param name="tibIndex">The Tib Index associated with the delay.</param>
-            /// <param name="delayNo">The delay number associated with the delay.</param>
-            /// <returns>A TIBDelay Database Object.</returns>
             public static TIBDelay GetSingle(int tibIndex, int delayNo)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.TIBDelays.FirstOrDefault(t =>
                         t.TibIndex == tibIndex &&
@@ -820,13 +706,9 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets a List of Tib Delays from the Database for the last X days.
-            /// </summary>
-            /// <returns>List of TIBDelays of the last X days.</returns>
             public static List<TIBDelay> GetLastXDays(int xDays)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     DateTime dtXDaysAgo = DateTime.Now.AddDays(-xDays);
                     return ctx.TIBDelays
@@ -836,17 +718,10 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets the Tib Delays between two dates.
-            /// </summary>
-            /// <param name="dateFrom">The Date to start from.</param>
-            /// <param name="dateTo">The end date.</param>
-            /// <returns>A list of Tib Events.</returns>
             public static List<TIBDelay> GetByDateRange(DateTime dateFrom, DateTime dateTo)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
-                    //Need to modify the dates slightly to ensure we populate the whole scheduler.
                     dateFrom = dateFrom.AddHours(-12);
                     dateTo = dateTo.AddHours(13);
                     return ctx.TIBDelays.Where(d =>
@@ -857,13 +732,9 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets a List of Tib Delays from the Database for a specific tib event.
-            /// </summary>
-            /// <returns>List of TIBDelays.</returns>
             public static List<TIBDelay> GetByTibEventIndex(int tibIndex)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.TIBDelays
                         .Where(t => t.TibIndex == tibIndex)
@@ -872,26 +743,18 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Add new Tib Delay to the Database.
-            /// </summary>
             public static void AddNew(TIBDelay tibDelayToAdd)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     ctx.AddToTIBDelays(tibDelayToAdd);
                     ctx.SaveChanges();
                 }
             }
 
-            /// <summary>
-            /// Edit existing Tib Delay in the database.
-            /// </summary>
-            /// <param name="tibDelayNewValues">The new values to be updating in database.</param>
-            /// <returns>Boolean stating success or failure.</returns>
             public static bool EditExisting(TIBDelay tibDelayNewValues)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     TIBDelay tibDelay = ctx.TIBDelays.FirstOrDefault(t =>
                         t.TibIndex == tibDelayNewValues.TibIndex &&
@@ -914,7 +777,6 @@ namespace ElvisDataModel
                         tibDelay.Comment = tibDelayNewValues.Comment;
                         tibDelay.UserName = tibDelayNewValues.UserName;
                         tibDelay.MachineName = tibDelayNewValues.MachineName;
-                        //2015-08-10 Les added in missing fields so that the entire record is updated
                         tibDelay.OEECategory = tibDelayNewValues.OEECategory;
                         tibDelay.LossType = tibDelayNewValues.LossType;
                         tibDelay.Owner = tibDelayNewValues.Owner;
@@ -943,28 +805,17 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Edits the order of delays.
-            /// Move the delay up or down 1 index in the list.
-            /// </summary>
-            /// <param name="tibIndex">The Tib Index (Event Index) of the Delay.</param>
-            /// <param name="oldDelayNo">The delay number to change.</param>
-            /// <param name="moveUp">If true, moves the record up (decreasing the delay number by 1),
-            ///     if false moves it down (increasing the delay number by 1).</param>
-            /// <returns>True for success, false for failure.</returns>
             public static void ChangeOrder(int tibIndex, int oldDelayNo, bool moveUp)
             {
                 int newDelayNo = oldDelayNo;
 
-                if (moveUp)//Up in the order
+                if (moveUp)
                     newDelayNo--;
-                else//Down in the order
+                else
                     newDelayNo++;
 
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
-                    //Generates a temp value to store the delay in until a save can be done
-                    //Max delayNumber for that event + 1
                     int tempDelayNo = ctx.TIBDelays.OrderByDescending(t =>
                         t.DelayNumber)
                             .FirstOrDefault(t =>
@@ -976,9 +827,8 @@ namespace ElvisDataModel
 
                     if (tibDelay != null)
                     {
-                        //Change delay Number to a temporary value
                         tibDelay.DelayNumber = tempDelayNo;
-                        ctx.SaveChanges();//Need to save changes so they take affect immediately.
+                        ctx.SaveChanges();
 
                         TIBDelay moveTibDelay = ctx.TIBDelays.FirstOrDefault(t =>
                             t.TibIndex == tibIndex &&
@@ -987,9 +837,7 @@ namespace ElvisDataModel
                         if (moveTibDelay != null)
                         {
                             if (moveUp)
-                            {//Move up is different to move down when it comes to start/end times
-                                //Store Start/End Times ready for swap
-                                //New end times need to be calculated
+                            {
                                 DateTime? start = moveTibDelay.DelayStart;
                                 DateTime? end = start.Value.AddMinutes(
                                     Convert.ToInt16(tibDelay.DelayDuration));
@@ -1001,10 +849,8 @@ namespace ElvisDataModel
                                 tibDelay.DelayStart = start;
                                 tibDelay.DelayEnd = end;
                             }
-                            else //Opposite of above
+                            else
                             {
-                                //Store Start/End Times ready for swap
-                                //New end times need to be calculated
                                 DateTime? start = tibDelay.DelayStart;
                                 DateTime? end = start.Value.AddMinutes(
                                     Convert.ToInt16(moveTibDelay.DelayDuration));
@@ -1025,23 +871,16 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Deletes the specified tib delay from the database.
-            /// Corrects all the remaining start times associated with that event.
-            /// </summary>
-            /// <param name="tibDelay">The tib delay to delete.</param>
-            /// <param name="tibEventStart">Start of the associated tib event.</param>
-            /// <returns>True if success, false if failed.</returns>
             public static void DeleteRecord(TIBDelay tibDelay, DateTime tibEventStart)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     TIBDelay delayToDelete = ctx.TIBDelays.FirstOrDefault(t =>
                         t.TibDelayIndex == tibDelay.TibDelayIndex);
 
                     if (delayToDelete != null)
                     {
-                        ctx.TIBDelays.DeleteObject(delayToDelete);//Deletes the delay
+                        ctx.TIBDelays.DeleteObject(delayToDelete);
                         ctx.SaveChanges();
 
                         List<TIBDelay> delaysToMod = ctx.TIBDelays
@@ -1049,7 +888,6 @@ namespace ElvisDataModel
                             .OrderBy(t => t.DelayNumber)
                             .ToList();
 
-                        //Loops through remaining delays correcting the DelayNumbers + Start/Ends
                         int delayNumber = 1;
                         DateTime delayStart = tibEventStart;
                         foreach (TIBDelay delay in delaysToMod)
@@ -1059,8 +897,8 @@ namespace ElvisDataModel
                             delay.DelayEnd = delayStart.AddMinutes(
                                 Convert.ToInt16(delay.DelayDuration));
 
-                            delayStart = delay.DelayEnd.Value;//Set next start time for delay
-                            delayNumber++;//increase delay number for each record
+                            delayStart = delay.DelayEnd.Value;
+                            delayNumber++;
                         }
                         ctx.SaveChanges();
                     }
@@ -1072,14 +910,9 @@ namespace ElvisDataModel
         #region TIBDelaysView View Functions
         public static class TIBDelaysView
         {
-            /// <summary>
-            /// VIEW - Gets the Tib delays view from the database by Tib Event
-            /// (using tib event PK - tibIndex).
-            /// </summary>
-            /// <returns>List of TIBDelaysView.</returns>
             public static List<ElvisDataModel.EDMX.TIBDelaysView> GetByTibEvent(int tibIndex)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.TIBDelaysViews
                         .Where(t => t.TibIndex == tibIndex)
@@ -1088,15 +921,9 @@ namespace ElvisDataModel
                 }
             }
 
-
-            /// <summary>
-            /// VIEW - Gets the TIB delay view from the database by TIB delay index.
-            /// </summary>
-            /// <param name="index">TIB Delay Index to retrive.</param>
-            /// <returns>Single TIBDelaysView.</returns>
             public static ElvisDataModel.EDMX.TIBDelaysView GetByTibDelayIndex(int index)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx
                         .TIBDelaysViews
@@ -1109,13 +936,9 @@ namespace ElvisDataModel
         #region TIBEvents Table Functions
         public static class TIBEvents
         {
-            /// <summary>
-            /// Gets a List of Tib Events from the Database for the last X days.
-            /// </summary>
-            /// <returns>List of TIBEvents.</returns>
             public static List<TIBEvent> GetLastXDays(int xDays)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     DateTime dtXDaysAgo = DateTime.Now.AddDays(-xDays);
                     return ctx.TIBEvents
@@ -1125,28 +948,18 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets a specific Tib Event from the Database using the Tib Index
-            /// </summary>
-            /// <param name="tibIndex">The Tib Index.</param>
-            /// <returns>Single TIBEvent database object.</returns>
             public static TIBEvent GetSingle(int tibIndex)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.TIBEvents.FirstOrDefault(t =>
                                     t.TibIndex == tibIndex);
                 }
             }
 
-            /// <summary>
-            /// Works out how long an event is.  If it hasn't ended return duration from start until now.
-            /// </summary>
-            /// <param name="tibIndex">The Tib Index.</param>
-            /// <returns>Duration of the event.</returns>
             public static int? GetLengthInMinutes(int tibIndex)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     TIBEvent tibEvent
                         = ctx
@@ -1177,14 +990,9 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets the text for the unit number associated with the TIB index.
-            /// </summary>
-            /// <param name="tibIndex">The Tib Index.</param>
-            /// <returns>TIBEvent's unit text.</returns>
             public static string GetUnitText(int tibIndex)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     TIBEvent tibEvent
                         = ctx
@@ -1204,17 +1012,10 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets the Tib events between two dates.
-            /// </summary>
-            /// <param name="dateFrom">The Date to start from.</param>
-            /// <param name="dateTo">The end date.</param>
-            /// <returns>A list of Tib Events.</returns>
             public static List<TIBEvent> GetByDateRange(DateTime dateFrom, DateTime dateTo)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
-                    //Need to modify the dates slightly to ensure we populate the whole scheduler.
                     dateFrom = dateFrom.AddHours(-12);
                     dateTo = dateTo.AddHours(13);
                     return ctx.TIBEvents.Where(d =>
@@ -1225,47 +1026,29 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets the Tib events for a heat.
-            /// </summary>
-            /// <param name="heatNumberSet">The heat number set to get the data from.</param>
-            /// <param name="heatNumber">The heat number to get the data from.</param>
-            /// <returns>A list of Tib Events for the heat number specified.</returns>
             public static List<TIBEvent> GetByHeat(int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.TIBEvents.Where(r =>
-                            r.HNS == heatNumberSet && 
+                            r.HNS == heatNumberSet &&
                             r.HeatNumber == heatNumber)
                         .ToList();
                 }
             }
 
-            /// <summary>
-            /// Gets the next event for a given unit
-            /// </summary>
-            /// <param name="tibIndex">The Tib index for the 'current' event (i.e. we want the next event for the unit after this one)</param>
-            /// <param name="unitNumber">The unit number for which the next event must be found</param>
-            /// <returns></returns>
             public static TIBEvent GetNextEventForUnit(int tibIndex, int unitNumber)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.TIBEvents.FirstOrDefault(e => e.UnitNumber == unitNumber
                         && e.TibIndex > tibIndex);
                 }
             }
 
-            /// <summary>
-            /// Gets the next event for a given unit group
-            /// </summary>
-            /// <param name="tibIndex">The Tib index for the 'current' event (i.e. we want the next event for the unit group after this one)</param>
-            /// <param name="unitGroupNumber">The unit group number for which the next event must be found</param>
-            /// <returns></returns>
             public static TIBEvent GetNextEventForUnitGroup(int tibIndex, int unitGroupNumber)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.TIBEvents.FirstOrDefault(e => e.UnitNumber == unitGroupNumber
                         && e.TibIndex > tibIndex);
@@ -1274,9 +1057,8 @@ namespace ElvisDataModel
 
             public static List<TIBEvent> GetByDateRangeForUnit(DateTime dateFrom, DateTime dateTo, int unitNumber)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
-                    //Need to modify the dates slightly to ensure we populate the whole scheduler.
                     dateFrom = dateFrom.AddHours(-12);
                     dateTo = dateTo.AddHours(13);
                     return ctx.TIBEvents.Where(d => d.UnitNumber == unitNumber
@@ -1289,9 +1071,8 @@ namespace ElvisDataModel
 
             public static List<TIBEvent> GetByDateRangeForUnitGroup(DateTime dateFrom, DateTime dateTo, int unitGroupNumber)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
-                    //Need to modify the dates slightly to ensure we populate the whole scheduler.
                     dateFrom = dateFrom.AddHours(-12);
                     dateTo = dateTo.AddHours(13);
                     return ctx.TIBEvents.Where(d => d.UnitGroup == unitGroupNumber
@@ -1307,14 +1088,9 @@ namespace ElvisDataModel
         #region Tracking Table Functions
         public static class Tracking
         {
-            /// <summary>
-            /// Gets a single record associated with that heat for a casting event 
-            /// e.g. tracking record with unit number 11, 12 or 13 per heat.
-            /// </summary>
-            /// <returns>A single tracking record.</returns>
             public static ElvisDataModel.EDMX.Tracking GetSingleCasterEvent(int heatNumber, int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.Trackings.FirstOrDefault(t =>
                             t.HeatNumber == heatNumber &&
@@ -1328,13 +1104,9 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets Tracking Data for the last X days.
-            /// </summary>
-            /// <returns>List of Tracking Objects.</returns>
             public static List<ElvisDataModel.EDMX.Tracking> GetLastXDays(int xDays)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     DateTime dtXDaysAgo = DateTime.Now.AddDays(-xDays);
                     return ctx.Trackings
@@ -1344,28 +1116,18 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets the latest Heat Number Set from the database.
-            /// </summary>
-            /// <returns>An Int representing the latest HNS.</returns>
             public static int GetLatestHNS()
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.Trackings.FirstOrDefault(
                         t => t.HNS == ElvisDbFunctions.GetHNS()).HNS;
                 }
             }
 
-            /// <summary>
-            /// Gets the latest Heat Number Set from the database using a Heat Number.
-            /// </summary>
-            /// <param name="heatNumber">The heatnumber you wish to 
-            ///     get the latest HNS for.</param>
-            /// <returns>An Int representing the latest HNS.</returns>
             public static int GetHNSFromHeatNumber(int heatNumber)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     ElvisDataModel.EDMX.Tracking eventData = ctx.Trackings
                         .OrderByDescending(t => t.TrackIndex)
@@ -1383,17 +1145,11 @@ namespace ElvisDataModel
         #region Treatment Tracking Table Functions
         public static class TreatmentTracking
         {
-            /// <summary>
-            /// Gets the Treatment Tracking events between two dates.
-            /// </summary>
-            /// <param name="dateFrom">The Date to start from.</param>
-            /// <param name="dateTo">The end date.</param>
-            /// <returns>A list of TreatmentTracking Events.</returns>
             public static List<ElvisDataModel.EDMX.TreatmentTracking> GetByDateRange(
                 DateTime dateFrom,
                 DateTime dateTo)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.TreatmentTrackings
                         .Where(t =>
@@ -1403,17 +1159,11 @@ namespace ElvisDataModel
                 }
             }
 
-            /// <summary>
-            /// Gets the Treatment Tracking events by Heat Number
-            /// </summary>
-            /// <param name="heatNumber">The Heat Number.</param>
-            /// <param name="heatNumberSet">The Heat Number Set.</param>
-            /// <returns>A list of TreatmentTracking Events.</returns>
             public static List<ElvisDataModel.EDMX.TreatmentTracking> GetByHeatNumber(
                 int heatNumber,
                 int heatNumberSet)
             {
-                using (EventSchemaEntities ctx = new EventSchemaEntities(EntityHelper.ElvisDBSettings.ConnectionString))
+                using (EventSchemaEntities ctx = CreateEventSchemaContext())
                 {
                     return ctx.TreatmentTrackings
                         .Where(t =>
