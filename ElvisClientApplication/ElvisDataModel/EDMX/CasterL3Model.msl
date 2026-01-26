@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CasterLevel3ModelStoreContainer" CdmEntityContainer="CasterLevel3Entities">
+    <EntitySetMapping Name="cast_slab_view">
+      <EntityTypeMapping TypeName="CasterLevel3Model.cast_slab_view">
+        <MappingFragment StoreEntitySet="cast_slab_view">
+          <ScalarProperty Name="SLAB_NUMBER_SET" ColumnName="SLAB_NUMBER_SET" />
+          <ScalarProperty Name="CAST_SLAB_NUMBER" ColumnName="CAST_SLAB_NUMBER" />
+          <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+          <ScalarProperty Name="CAST_HEAT_NUMBER" ColumnName="CAST_HEAT_NUMBER" />
+          <ScalarProperty Name="STRAND_NUMBER" ColumnName="STRAND_NUMBER" />
+          <ScalarProperty Name="ORDERED_SLAB_NUMBER" ColumnName="ORDERED_SLAB_NUMBER" />
+          <ScalarProperty Name="SLAB_POSITION" ColumnName="SLAB_POSITION" />
+          <ScalarProperty Name="FIRST_SEGMENT_NUMBER" ColumnName="FIRST_SEGMENT_NUMBER" />
+          <ScalarProperty Name="WIDTH_MADE_FIRST_SEGMENT" ColumnName="WIDTH_MADE_FIRST_SEGMENT" />
+          <ScalarProperty Name="FIRST_SEGMENT_TIMESTAMP" ColumnName="FIRST_SEGMENT_TIMESTAMP" />
+          <ScalarProperty Name="FIRST_SEGMENT_TIMESTAMP_GMT" ColumnName="FIRST_SEGMENT_TIMESTAMP_GMT" />
+          <ScalarProperty Name="LAST_SEGMENT_NUMBER" ColumnName="LAST_SEGMENT_NUMBER" />
+          <ScalarProperty Name="WIDTH_MADE_LAST_SEGMENT" ColumnName="WIDTH_MADE_LAST_SEGMENT" />
+          <ScalarProperty Name="LAST_SEGMENT_TIMESTAMP" ColumnName="LAST_SEGMENT_TIMESTAMP" />
+          <ScalarProperty Name="LAST_SEGMENT_TIMESTAMP_GMT" ColumnName="LAST_SEGMENT_TIMESTAMP_GMT" />
+          <ScalarProperty Name="LENGTH_MADE" ColumnName="LENGTH_MADE" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="GRADE_ORDERED" ColumnName="GRADE_ORDERED" />
+          <ScalarProperty Name="GRADE_MADE" ColumnName="GRADE_MADE" />
+          <ScalarProperty Name="THICKNESS_MADE" ColumnName="THICKNESS_MADE" />
+          <ScalarProperty Name="COMMENT_TEXT" ColumnName="COMMENT_TEXT" />
+          <ScalarProperty Name="MADE_TO_GRADE" ColumnName="MADE_TO_GRADE" />
+          <ScalarProperty Name="DOWNGRADE_REASON" ColumnName="DOWNGRADE_REASON" />
+          <ScalarProperty Name="MANUALLY_GRADED" ColumnName="MANUALLY_GRADED" />
+          <ScalarProperty Name="MANUALLY_GRADED_REASON" ColumnName="MANUALLY_GRADED_REASON" />
+          <ScalarProperty Name="ROTA" ColumnName="ROTA" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="DAY_NO" ColumnName="DAY_NO" />
+          <ScalarProperty Name="WEEK_NO" ColumnName="WEEK_NO" />
+          <ScalarProperty Name="YEAR_NO" ColumnName="YEAR_NO" />
+          <ScalarProperty Name="SLAB_CUT_TIMESTAMP" ColumnName="SLAB_CUT_TIMESTAMP" />
+          <ScalarProperty Name="SLAB_CUT_TIMESTAMP_GMT" ColumnName="SLAB_CUT_TIMESTAMP_GMT" />
+          <ScalarProperty Name="CASTER" ColumnName="CASTER" />
+          <ScalarProperty Name="MANUAL_INSERT" ColumnName="MANUAL_INSERT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cct_grade_failures">
+      <EntityTypeMapping TypeName="CasterLevel3Model.cct_grade_failures">
+        <MappingFragment StoreEntitySet="cct_grade_failures">
+          <ScalarProperty Name="RFT_FAILURE" ColumnName="RFT_FAILURE" />
+          <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+          <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="REASON_3" ColumnName="REASON_3" />
+          <ScalarProperty Name="REASON_2" ColumnName="REASON_2" />
+          <ScalarProperty Name="REASON_1" ColumnName="REASON_1" />
+          <ScalarProperty Name="SLAB_NUMBER" ColumnName="SLAB_NUMBER" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cct_length_failures">
+      <EntityTypeMapping TypeName="CasterLevel3Model.cct_length_failures">
+        <MappingFragment StoreEntitySet="cct_length_failures">
+          <ScalarProperty Name="RFT_FAILURE" ColumnName="RFT_FAILURE" />
+          <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+          <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="REASON_3" ColumnName="REASON_3" />
+          <ScalarProperty Name="REASON_2" ColumnName="REASON_2" />
+          <ScalarProperty Name="REASON_1" ColumnName="REASON_1" />
+          <ScalarProperty Name="SLAB_NUMBER" ColumnName="SLAB_NUMBER" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cct_width_failures">
+      <EntityTypeMapping TypeName="CasterLevel3Model.cct_width_failures">
+        <MappingFragment StoreEntitySet="cct_width_failures">
+          <ScalarProperty Name="RFT_FAILURE" ColumnName="RFT_FAILURE" />
+          <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+          <ScalarProperty Name="CREATED" ColumnName="CREATED" />
+          <ScalarProperty Name="COMMENT" ColumnName="COMMENT" />
+          <ScalarProperty Name="REASON_3" ColumnName="REASON_3" />
+          <ScalarProperty Name="REASON_2" ColumnName="REASON_2" />
+          <ScalarProperty Name="REASON_1" ColumnName="REASON_1" />
+          <ScalarProperty Name="SLAB_NUMBER" ColumnName="SLAB_NUMBER" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cast_slab">
+      <EntityTypeMapping TypeName="CasterLevel3Model.cast_slab">
+        <MappingFragment StoreEntitySet="cast_slab">
+          <ScalarProperty Name="MANUAL_INSERT" ColumnName="MANUAL_INSERT" />
+          <ScalarProperty Name="CASTER" ColumnName="CASTER" />
+          <ScalarProperty Name="SLAB_CUT_TIMESTAMP_GMT" ColumnName="SLAB_CUT_TIMESTAMP_GMT" />
+          <ScalarProperty Name="SLAB_CUT_TIMESTAMP" ColumnName="SLAB_CUT_TIMESTAMP" />
+          <ScalarProperty Name="YEAR_NO" ColumnName="YEAR_NO" />
+          <ScalarProperty Name="WEEK_NO" ColumnName="WEEK_NO" />
+          <ScalarProperty Name="DAY_NO" ColumnName="DAY_NO" />
+          <ScalarProperty Name="SHIFT_NO" ColumnName="SHIFT_NO" />
+          <ScalarProperty Name="ROTA" ColumnName="ROTA" />
+          <ScalarProperty Name="QUALITY_CODE" ColumnName="QUALITY_CODE" />
+          <ScalarProperty Name="DOWNGRADE_FOR_MOULD_LEVEL" ColumnName="DOWNGRADE_FOR_MOULD_LEVEL" />
+          <ScalarProperty Name="DOWNGRADE_FOR_CASTING_SPEED" ColumnName="DOWNGRADE_FOR_CASTING_SPEED" />
+          <ScalarProperty Name="DOWNGRADE_FOR_TEMPERATURE" ColumnName="DOWNGRADE_FOR_TEMPERATURE" />
+          <ScalarProperty Name="MOULD_LEVEL_CONTROL_AUTO" ColumnName="MOULD_LEVEL_CONTROL_AUTO" />
+          <ScalarProperty Name="SURGE_SIZE" ColumnName="SURGE_SIZE" />
+          <ScalarProperty Name="MTM_ALARM" ColumnName="MTM_ALARM" />
+          <ScalarProperty Name="STREAM_UNSHROUDED" ColumnName="STREAM_UNSHROUDED" />
+          <ScalarProperty Name="TUBE_CHANGE" ColumnName="TUBE_CHANGE" />
+          <ScalarProperty Name="FLUSH" ColumnName="FLUSH" />
+          <ScalarProperty Name="SPEED_CHANGE" ColumnName="SPEED_CHANGE" />
+          <ScalarProperty Name="MOULD_THERM_VAR_BTM_N" ColumnName="MOULD_THERM_VAR_BTM_N" />
+          <ScalarProperty Name="MOULD_THERM_VAR_BTM_MID" ColumnName="MOULD_THERM_VAR_BTM_MID" />
+          <ScalarProperty Name="MOULD_THERM_VAR_BTM_S" ColumnName="MOULD_THERM_VAR_BTM_S" />
+          <ScalarProperty Name="MOULD_THERM_VAR_TOP_N" ColumnName="MOULD_THERM_VAR_TOP_N" />
+          <ScalarProperty Name="MOULD_THERM_VAR_TOP_MID" ColumnName="MOULD_THERM_VAR_TOP_MID" />
+          <ScalarProperty Name="MOULD_THERM_VAR_TOP_S" ColumnName="MOULD_THERM_VAR_TOP_S" />
+          <ScalarProperty Name="SPRAY_WATER_MODE" ColumnName="SPRAY_WATER_MODE" />
+          <ScalarProperty Name="SPRAY_WATER_PATTERN" ColumnName="SPRAY_WATER_PATTERN" />
+          <ScalarProperty Name="SES_SERVICE_LIFE" ColumnName="SES_SERVICE_LIFE" />
+          <ScalarProperty Name="LAST_TUNDISH_TEMPERATURE" ColumnName="LAST_TUNDISH_TEMPERATURE" />
+          <ScalarProperty Name="MAX_FLATNESS" ColumnName="MAX_FLATNESS" />
+          <ScalarProperty Name="STOPPER_BUILDUP" ColumnName="STOPPER_BUILDUP" />
+          <ScalarProperty Name="AVERAGE_AR_PRESSURE_TO_PLATE" ColumnName="AVERAGE_AR_PRESSURE_TO_PLATE" />
+          <ScalarProperty Name="AVERAGE_AR_PRESSURE_TO_STOPPER" ColumnName="AVERAGE_AR_PRESSURE_TO_STOPPER" />
+          <ScalarProperty Name="AVERAGE_AR_PRESSURE_TO_NOZZLE" ColumnName="AVERAGE_AR_PRESSURE_TO_NOZZLE" />
+          <ScalarProperty Name="AVERAGE_AR_FLOW_TO_PLATE" ColumnName="AVERAGE_AR_FLOW_TO_PLATE" />
+          <ScalarProperty Name="AVERAGE_AR_FLOW_TO_STOPPER" ColumnName="AVERAGE_AR_FLOW_TO_STOPPER" />
+          <ScalarProperty Name="AVERAGE_AR_FLOW_TO_NOZZLE" ColumnName="AVERAGE_AR_FLOW_TO_NOZZLE" />
+          <ScalarProperty Name="AVERAGE_STRAND_SPEED" ColumnName="AVERAGE_STRAND_SPEED" />
+          <ScalarProperty Name="MOULD_TAPER" ColumnName="MOULD_TAPER" />
+          <ScalarProperty Name="MANUALLY_GRADED_REASON" ColumnName="MANUALLY_GRADED_REASON" />
+          <ScalarProperty Name="MANUALLY_GRADED" ColumnName="MANUALLY_GRADED" />
+          <ScalarProperty Name="DOWNGRADE_REASON" ColumnName="DOWNGRADE_REASON" />
+          <ScalarProperty Name="MADE_TO_GRADE" ColumnName="MADE_TO_GRADE" />
+          <ScalarProperty Name="ACCUMETRIC_TEMPERATURE" ColumnName="ACCUMETRIC_TEMPERATURE" />
+          <ScalarProperty Name="METALLOGRAPHY" ColumnName="METALLOGRAPHY" />
+          <ScalarProperty Name="COMMENT_TEXT" ColumnName="COMMENT_TEXT" />
+          <ScalarProperty Name="THICKNESS_MADE" ColumnName="THICKNESS_MADE" />
+          <ScalarProperty Name="GRADE_MADE" ColumnName="GRADE_MADE" />
+          <ScalarProperty Name="GRADE_ORDERED" ColumnName="GRADE_ORDERED" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="LENGTH_CHECKED" ColumnName="LENGTH_CHECKED" />
+          <ScalarProperty Name="LENGTH_MADE" ColumnName="LENGTH_MADE" />
+          <ScalarProperty Name="LENGTH_SYSTEM_USED" ColumnName="LENGTH_SYSTEM_USED" />
+          <ScalarProperty Name="SYSTEM_3_LENGTH" ColumnName="SYSTEM_3_LENGTH" />
+          <ScalarProperty Name="SYSTEM_2_LENGTH" ColumnName="SYSTEM_2_LENGTH" />
+          <ScalarProperty Name="SYSTEM_1_LENGTH" ColumnName="SYSTEM_1_LENGTH" />
+          <ScalarProperty Name="LAST_SEGMENT_TIMESTAMP_GMT" ColumnName="LAST_SEGMENT_TIMESTAMP_GMT" />
+          <ScalarProperty Name="LAST_SEGMENT_TIMESTAMP" ColumnName="LAST_SEGMENT_TIMESTAMP" />
+          <ScalarProperty Name="WIDTH_CHECKED_LAST_SEGMENT" ColumnName="WIDTH_CHECKED_LAST_SEGMENT" />
+          <ScalarProperty Name="WIDTH_MADE_LAST_SEGMENT" ColumnName="WIDTH_MADE_LAST_SEGMENT" />
+          <ScalarProperty Name="LAST_SEGMENT_NUMBER" ColumnName="LAST_SEGMENT_NUMBER" />
+          <ScalarProperty Name="FIRST_SEGMENT_TIMESTAMP_GMT" ColumnName="FIRST_SEGMENT_TIMESTAMP_GMT" />
+          <ScalarProperty Name="FIRST_SEGMENT_TIMESTAMP" ColumnName="FIRST_SEGMENT_TIMESTAMP" />
+          <ScalarProperty Name="WIDTH_CHECKED_FIRST_SEGMENT" ColumnName="WIDTH_CHECKED_FIRST_SEGMENT" />
+          <ScalarProperty Name="WIDTH_MADE_FIRST_SEGMENT" ColumnName="WIDTH_MADE_FIRST_SEGMENT" />
+          <ScalarProperty Name="FIRST_SEGMENT_NUMBER" ColumnName="FIRST_SEGMENT_NUMBER" />
+          <ScalarProperty Name="SLAB_POSITION" ColumnName="SLAB_POSITION" />
+          <ScalarProperty Name="ORDERED_SLAB_NUMBER" ColumnName="ORDERED_SLAB_NUMBER" />
+          <ScalarProperty Name="STRAND_NUMBER" ColumnName="STRAND_NUMBER" />
+          <ScalarProperty Name="MOULD_POWDER_NUMBER" ColumnName="MOULD_POWDER_NUMBER" />
+          <ScalarProperty Name="SES_NUMBER" ColumnName="SES_NUMBER" />
+          <ScalarProperty Name="SHROUD_NUMBER" ColumnName="SHROUD_NUMBER" />
+          <ScalarProperty Name="TUNDISH_TRIP_NUMBER" ColumnName="TUNDISH_TRIP_NUMBER" />
+          <ScalarProperty Name="CAST_HEAT_NUMBER" ColumnName="CAST_HEAT_NUMBER" />
+          <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+          <ScalarProperty Name="CONCAST_NUMBER" ColumnName="CONCAST_NUMBER" />
+          <ScalarProperty Name="CONCAST_NUMBER_SET" ColumnName="CONCAST_NUMBER_SET" />
+          <ScalarProperty Name="CAST_SLAB_NUMBER" ColumnName="CAST_SLAB_NUMBER" />
+          <ScalarProperty Name="SLAB_NUMBER_SET" ColumnName="SLAB_NUMBER_SET" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

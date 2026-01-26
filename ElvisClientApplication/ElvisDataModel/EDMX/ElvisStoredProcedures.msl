@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ElvisDBModelStoreContainer" CdmEntityContainer="ElvisDBEntities">
+    <FunctionImportMapping FunctionImportName="GetDailyActualCasterHeats" FunctionName="ElvisDBModel.Store.GetDailyActualCasterHeats">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ElvisDBModel.CastersProductionItem">
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="Grade1" ColumnName="Grade1" />
+          <ScalarProperty Name="ActualCaster" ColumnName="ActualCaster" />
+          <ScalarProperty Name="CasterNumber" ColumnName="CasterNumber" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetDailyPlannedCasterHeats" FunctionName="ElvisDBModel.Store.GetDailyPlannedCasterHeats">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ElvisDBModel.CastersScheduleItem">
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="Grade1" ColumnName="Grade1" />
+          <ScalarProperty Name="PlannedCaster" ColumnName="PlannedCaster" />
+          <ScalarProperty Name="CasterNumber" ColumnName="CasterNumber" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="PlannedStartDate" ColumnName="PlannedStartDate" />
+          <ScalarProperty Name="PlannedEndDate" ColumnName="PlannedEndDate" />
+          <ScalarProperty Name="PlannedChargeTime" ColumnName="PlannedChargeTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCasterTotalsByShiftForDay" FunctionName="ElvisDBModel.Store.GetCasterTotalsByShiftForDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ElvisDBModel.CasterTotalsByShiftForDay">
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="CC1" ColumnName="CC1" />
+          <ScalarProperty Name="CC2" ColumnName="CC2" />
+          <ScalarProperty Name="CC3" ColumnName="CC3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetCasterTotalsByShiftForWeek" FunctionName="ElvisDBModel.Store.GetCasterTotalsByShiftForWeek">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ElvisDBModel.CasterTotalsByShiftForWeek">
+          <ScalarProperty Name="TataDay" ColumnName="TataDay" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="CC1" ColumnName="CC1" />
+          <ScalarProperty Name="CC2" ColumnName="CC2" />
+          <ScalarProperty Name="CC3" ColumnName="CC3" />
+          <ScalarProperty Name="ShiftDate" ColumnName="ShiftDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetDayShiftPlanByCaster" FunctionName="ElvisDBModel.Store.GetDayShiftPlanByCaster">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ElvisDBModel.CasterTotalsByShiftForDay">
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="CC1" ColumnName="CC1" />
+          <ScalarProperty Name="CC2" ColumnName="CC2" />
+          <ScalarProperty Name="CC3" ColumnName="CC3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetNightShiftPlanByCaster" FunctionName="ElvisDBModel.Store.GetNightShiftPlanByCaster">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ElvisDBModel.CasterTotalsByShiftForDay">
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="CC1" ColumnName="CC1" />
+          <ScalarProperty Name="CC2" ColumnName="CC2" />
+          <ScalarProperty Name="CC3" ColumnName="CC3" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetDayShiftPlan" FunctionName="ElvisDBModel.Store.GetDayShiftPlan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ElvisDBModel.ShiftStartHeatPlanItem">
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HeatNumberSet" ColumnName="HeatNumberSet" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="VesselNumber" ColumnName="VesselNumber" />
+          <ScalarProperty Name="CasterNumber" ColumnName="CasterNumber" />
+          <ScalarProperty Name="PlannedEndCastTime" ColumnName="PlannedEndCastTime" />
+          <ScalarProperty Name="PlannedStartCastTime" ColumnName="PlannedStartCastTime" />
+          <ScalarProperty Name="CombinedWidth" ColumnName="CombinedWidth" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetNightShiftPlan" FunctionName="ElvisDBModel.Store.GetNightShiftPlan">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ElvisDBModel.ShiftStartHeatPlanItem">
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HeatNumberSet" ColumnName="HeatNumberSet" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="VesselNumber" ColumnName="VesselNumber" />
+          <ScalarProperty Name="CasterNumber" ColumnName="CasterNumber" />
+          <ScalarProperty Name="PlannedEndCastTime" ColumnName="PlannedEndCastTime" />
+          <ScalarProperty Name="PlannedStartCastTime" ColumnName="PlannedStartCastTime" />
+          <ScalarProperty Name="CombinedWidth" ColumnName="CombinedWidth" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="UpdateTime" ColumnName="UpdateTime" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetTodayDate" FunctionName="ElvisDBModel.Store.TodayDate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ElvisDBModel.TodayDate">
+          <ScalarProperty Name="CurrentYear" ColumnName="CurrentYear" />
+          <ScalarProperty Name="CurrentWeek" ColumnName="CurrentWeek" />
+          <ScalarProperty Name="CurrentDay" ColumnName="CurrentDay" />
+          <ScalarProperty Name="CurrentRota" ColumnName="CurrentRota" />
+          <ScalarProperty Name="StartDay" ColumnName="StartDay" />
+          <ScalarProperty Name="StartShift" ColumnName="StartShift" />
+          <ScalarProperty Name="CurrentShift" ColumnName="CurrentShift" />
+          <ScalarProperty Name="CurrentShiftNumber" ColumnName="CurrentShiftNumber" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetParameter" FunctionName="ElvisDBModel.Store.GetParameter" />
+    <FunctionImportMapping FunctionImportName="SetParameter" FunctionName="ElvisDBModel.Store.SetParameter" />
+    <FunctionImportMapping FunctionImportName="GetDailyActualCasterHeats7AM" FunctionName="ElvisDBModel.Store.GetDailyActualCasterHeats7AM">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ElvisDBModel.CastersProductionItem">
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="Grade1" ColumnName="Grade1" />
+          <ScalarProperty Name="ActualCaster" ColumnName="ActualCaster" />
+          <ScalarProperty Name="CasterNumber" ColumnName="CasterNumber" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

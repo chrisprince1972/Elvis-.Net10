@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ConfigSchemaEntitiesStoreContainer" CdmEntityContainer="ConfigSchemaEntities">
+    <EntitySetMapping Name="AimUnits">
+      <EntityTypeMapping TypeName="ConfigSchema.AimUnit">
+        <MappingFragment StoreEntitySet="AimUnits">
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DateLookups">
+      <EntityTypeMapping TypeName="ConfigSchema.DateLookup">
+        <MappingFragment StoreEntitySet="DateLookup">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="WeekNumber" ColumnName="WeekNumber" />
+          <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+          <ScalarProperty Name="DayRota" ColumnName="DayRota" />
+          <ScalarProperty Name="NightRota" ColumnName="NightRota" />
+          <ScalarProperty Name="TataYear" ColumnName="TataYear" />
+          <ScalarProperty Name="TataWeek" ColumnName="TataWeek" />
+          <ScalarProperty Name="StartDay" ColumnName="StartDay" />
+          <ScalarProperty Name="StartNight" ColumnName="StartNight" />
+          <ScalarProperty Name="EndNight" ColumnName="EndNight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DipTypes">
+      <EntityTypeMapping TypeName="ConfigSchema.DipType">
+        <MappingFragment StoreEntitySet="DipTypes">
+          <ScalarProperty Name="DipTypeNumber" ColumnName="DipTypeNumber" />
+          <ScalarProperty Name="DipTypeText" ColumnName="DipTypeText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logs">
+      <EntityTypeMapping TypeName="ConfigSchema.Log">
+        <MappingFragment StoreEntitySet="Logs">
+          <ScalarProperty Name="LogID" ColumnName="LogID" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="LogLevel" ColumnName="LogLevel" />
+          <ScalarProperty Name="Logger" ColumnName="Logger" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Exception" ColumnName="Exception" />
+          <ScalarProperty Name="StackTrace" ColumnName="StackTrace" />
+          <ScalarProperty Name="CallSite" ColumnName="CallSite" />
+          <ScalarProperty Name="Thread" ColumnName="Thread" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MessageTypes">
+      <EntityTypeMapping TypeName="ConfigSchema.MessageType">
+        <MappingFragment StoreEntitySet="MessageTypes">
+          <ScalarProperty Name="MessageType1" ColumnName="MessageType" />
+          <ScalarProperty Name="MessageTypeShort" ColumnName="MessageTypeShort" />
+          <ScalarProperty Name="MessageTypeText" ColumnName="MessageTypeText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Parameters">
+      <EntityTypeMapping TypeName="ConfigSchema.Parameter">
+        <MappingFragment StoreEntitySet="Parameters">
+          <ScalarProperty Name="ParIndexNumber" ColumnName="ParIndexNumber" />
+          <ScalarProperty Name="ParValue" ColumnName="ParValue" />
+          <ScalarProperty Name="ParDescription" ColumnName="ParDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StdTimes">
+      <EntityTypeMapping TypeName="ConfigSchema.StdTime">
+        <MappingFragment StoreEntitySet="StdTimes">
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="CycleTime" ColumnName="CycleTime" />
+          <ScalarProperty Name="LeadTime" ColumnName="LeadTime" />
+          <ScalarProperty Name="LagTime" ColumnName="LagTime" />
+          <ScalarProperty Name="ExtraCycleTime" ColumnName="ExtraCycleTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIB2Reasons">
+      <EntityTypeMapping TypeName="ConfigSchema.TIB2Reasons">
+        <MappingFragment StoreEntitySet="TIB2Reasons">
+          <ScalarProperty Name="ReasonIndex" ColumnName="ReasonIndex" />
+          <ScalarProperty Name="DelayIndex" ColumnName="DelayIndex" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+          <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+          <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+          <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+          <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+          <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="OEECategory" ColumnName="OEECategory" />
+          <ScalarProperty Name="LossType" ColumnName="LossType" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="ReportingTextLevel1" ColumnName="ReportingTextLevel1" />
+          <ScalarProperty Name="ReportingTextLevel2" ColumnName="ReportingTextLevel2" />
+          <ScalarProperty Name="ObjectDescription" ColumnName="ObjectDescription" />
+          <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+          <ScalarProperty Name="DamageDescription" ColumnName="DamageDescription" />
+          <ScalarProperty Name="DamageCode" ColumnName="DamageCode" />
+          <ScalarProperty Name="DeviationType" ColumnName="DeviationType" />
+          <ScalarProperty Name="CauseText" ColumnName="CauseText" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="ExternalInternal" ColumnName="ExternalInternal" />
+          <ScalarProperty Name="SupplierDownStream" ColumnName="SupplierDownStream" />
+          <ScalarProperty Name="NoExtraWork" ColumnName="NoExtraWork" />
+          <ScalarProperty Name="FlocDescriptionL3" ColumnName="FlocDescriptionL3" />
+          <ScalarProperty Name="FlocNumberL3" ColumnName="FlocNumberL3" />
+          <ScalarProperty Name="FlocDescriptionL4" ColumnName="FlocDescriptionL4" />
+          <ScalarProperty Name="FlocNumberL4" ColumnName="FlocNumberL4" />
+          <ScalarProperty Name="FlocDescriptionL5" ColumnName="FlocDescriptionL5" />
+          <ScalarProperty Name="FlocNumberL5" ColumnName="FlocNumberL5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TibCategoryLookUps">
+      <EntityTypeMapping TypeName="ConfigSchema.TibCategoryLookUp">
+        <MappingFragment StoreEntitySet="TibCategoryLookUp">
+          <ScalarProperty Name="TIBCategoryIndex" ColumnName="TIBCategoryIndex" />
+          <ScalarProperty Name="TIBCategoryText" ColumnName="TIBCategoryText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TibClassLookUps">
+      <EntityTypeMapping TypeName="ConfigSchema.TibClassLookUp">
+        <MappingFragment StoreEntitySet="TibClassLookUp">
+          <ScalarProperty Name="TIBClassIndex" ColumnName="TIBClassIndex" />
+          <ScalarProperty Name="TIBClassText" ColumnName="TIBClassText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TibDisciplineLookUps">
+      <EntityTypeMapping TypeName="ConfigSchema.TibDisciplineLookUp">
+        <MappingFragment StoreEntitySet="TibDisciplineLookUp">
+          <ScalarProperty Name="TIBDisIndex" ColumnName="TIBDisIndex" />
+          <ScalarProperty Name="TIBDisText" ColumnName="TIBDisText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIBReasons">
+      <EntityTypeMapping TypeName="ConfigSchema.TIBReason">
+        <MappingFragment StoreEntitySet="TIBReasons">
+          <ScalarProperty Name="ReasonIndex" ColumnName="ReasonIndex" />
+          <ScalarProperty Name="DelayIndex" ColumnName="DelayIndex" />
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+          <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+          <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+          <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+          <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+          <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="OEECategory" ColumnName="OEECategory" />
+          <ScalarProperty Name="LossType" ColumnName="LossType" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="ReportingTextLevel1" ColumnName="ReportingTextLevel1" />
+          <ScalarProperty Name="ReportingTextLevel2" ColumnName="ReportingTextLevel2" />
+          <ScalarProperty Name="ObjectDescription" ColumnName="ObjectDescription" />
+          <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+          <ScalarProperty Name="DamageDescription" ColumnName="DamageDescription" />
+          <ScalarProperty Name="DamageCode" ColumnName="DamageCode" />
+          <ScalarProperty Name="DeviationType" ColumnName="DeviationType" />
+          <ScalarProperty Name="CauseText" ColumnName="CauseText" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="ExternalInternal" ColumnName="ExternalInternal" />
+          <ScalarProperty Name="SupplierDownStream" ColumnName="SupplierDownStream" />
+          <ScalarProperty Name="NoExtraWork" ColumnName="NoExtraWork" />
+          <ScalarProperty Name="FlocDescriptionL3" ColumnName="FlocDescriptionL3" />
+          <ScalarProperty Name="FlocNumberL3" ColumnName="FlocNumberL3" />
+          <ScalarProperty Name="FlocDescriptionL4" ColumnName="FlocDescriptionL4" />
+          <ScalarProperty Name="FlocNumberL4" ColumnName="FlocNumberL4" />
+          <ScalarProperty Name="FlocDescriptionL5" ColumnName="FlocDescriptionL5" />
+          <ScalarProperty Name="FlocNumberL5" ColumnName="FlocNumberL5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIBStates">
+      <EntityTypeMapping TypeName="ConfigSchema.TIBState">
+        <MappingFragment StoreEntitySet="TIBStates">
+          <ScalarProperty Name="TIBStatus" ColumnName="TIBStatus" />
+          <ScalarProperty Name="TIBStatusDescription" ColumnName="TIBStatusDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Treatments">
+      <EntityTypeMapping TypeName="ConfigSchema.Treatment">
+        <MappingFragment StoreEntitySet="Treatments">
+          <ScalarProperty Name="TreatmentNumber" ColumnName="TreatmentNumber" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="TreatmentText" ColumnName="TreatmentText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Units">
+      <EntityTypeMapping TypeName="ConfigSchema.Unit">
+        <MappingFragment StoreEntitySet="Units">
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="UnitGroupText" ColumnName="UnitGroupText" />
+          <ScalarProperty Name="UnitGroupNumber" ColumnName="UnitGroupNumber" />
+          <ScalarProperty Name="UnitGroupSort" ColumnName="UnitGroupSort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScrapEventTypes">
+      <EntityTypeMapping TypeName="ConfigSchema.ScrapEventType">
+        <MappingFragment StoreEntitySet="ScrapEventTypes">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ScrapEventTypeID" ColumnName="ScrapEventTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScrapTypes">
+      <EntityTypeMapping TypeName="ConfigSchema.ScrapType">
+        <MappingFragment StoreEntitySet="ScrapTypes">
+          <ScalarProperty Name="FullDescription" ColumnName="FullDescription" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="ScrapTypeID" ColumnName="ScrapTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScrapBoxTypes">
+      <EntityTypeMapping TypeName="ConfigSchema.ScrapBoxType">
+        <MappingFragment StoreEntitySet="ScrapBoxTypes">
+          <ScalarProperty Name="IsUsed" ColumnName="IsUsed" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ScrapBoxTypeID" ColumnName="ScrapBoxTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CasterTags">
+      <EntityTypeMapping TypeName="ConfigSchema.CasterTag">
+        <MappingFragment StoreEntitySet="CasterTags">
+          <ScalarProperty Name="Show" ColumnName="Show" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="TagName" ColumnName="TagName" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="CasterTagID" ColumnName="CasterTagID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HmdsmTreatmentTypes">
+      <EntityTypeMapping TypeName="ConfigSchema.HmdsmTreatmentType">
+        <MappingFragment StoreEntitySet="HmdsmTreatmentTypes">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HmdsmTreatmentTypeID" ColumnName="HmdsmTreatmentTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChartAreas">
+      <EntityTypeMapping TypeName="ConfigSchema.ChartArea">
+        <MappingFragment StoreEntitySet="ChartAreas">
+          <ScalarProperty Name="PositionY" ColumnName="PositionY" />
+          <ScalarProperty Name="PositionWidth" ColumnName="PositionWidth" />
+          <ScalarProperty Name="PositionHeight" ColumnName="PositionHeight" />
+          <ScalarProperty Name="PositionAuto" ColumnName="PositionAuto" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ChartID" ColumnName="ChartID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChartAxis">
+      <EntityTypeMapping TypeName="ConfigSchema.ChartAxi">
+        <MappingFragment StoreEntitySet="ChartAxis">
+          <ScalarProperty Name="LabelStyleIntervalType" ColumnName="LabelStyleIntervalType" />
+          <ScalarProperty Name="LabelStyleInterval" ColumnName="LabelStyleInterval" />
+          <ScalarProperty Name="LabelStyleForeColorHighContrast" ColumnName="LabelStyleForeColorHighContrast" />
+          <ScalarProperty Name="LabelStyleForeColor" ColumnName="LabelStyleForeColor" />
+          <ScalarProperty Name="MajorTickMarkLineColorHighContrast" ColumnName="MajorTickMarkLineColorHighContrast" />
+          <ScalarProperty Name="MajorTickMarkLineColor" ColumnName="MajorTickMarkLineColor" />
+          <ScalarProperty Name="LineColorHighContrast" ColumnName="LineColorHighContrast" />
+          <ScalarProperty Name="LineColor" ColumnName="LineColor" />
+          <ScalarProperty Name="TitleForeColorHighContrast" ColumnName="TitleForeColorHighContrast" />
+          <ScalarProperty Name="TitleForeColor" ColumnName="TitleForeColor" />
+          <ScalarProperty Name="MajorGridLineColorHighContrast" ColumnName="MajorGridLineColorHighContrast" />
+          <ScalarProperty Name="LabelStyleFormat" ColumnName="LabelStyleFormat" />
+          <ScalarProperty Name="Interval" ColumnName="Interval" />
+          <ScalarProperty Name="ChartAreasID" ColumnName="ChartAreasID" />
+          <ScalarProperty Name="MajorGridLineDashStyle" ColumnName="MajorGridLineDashStyle" />
+          <ScalarProperty Name="MajorGridLineColor" ColumnName="MajorGridLineColor" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="IntervalType" ColumnName="IntervalType" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="AxisType" ColumnName="AxisType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChartDataLocations">
+      <EntityTypeMapping TypeName="ConfigSchema.ChartDataLocation">
+        <MappingFragment StoreEntitySet="ChartDataLocations">
+          <ScalarProperty Name="RetrievalDataMethodID" ColumnName="RetrievalDataMethodID" />
+          <ScalarProperty Name="Scale" ColumnName="Scale" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="ReferenceId" ColumnName="ReferenceId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChartsConfigurations">
+      <EntityTypeMapping TypeName="ConfigSchema.ChartsConfiguration">
+        <MappingFragment StoreEntitySet="ChartsConfiguration">
+          <ScalarProperty Name="ChartSeriesSetID" ColumnName="ChartSeriesSetID" />
+          <ScalarProperty Name="ForeColourHighContrast" ColumnName="ForeColourHighContrast" />
+          <ScalarProperty Name="ForeColour" ColumnName="ForeColour" />
+          <ScalarProperty Name="BackColourHighContrast" ColumnName="BackColourHighContrast" />
+          <ScalarProperty Name="BackColour" ColumnName="BackColour" />
+          <ScalarProperty Name="ChartName" ColumnName="ChartName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChartSeriesSets">
+      <EntityTypeMapping TypeName="ConfigSchema.ChartSeriesSet">
+        <MappingFragment StoreEntitySet="ChartSeriesSet">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChartSeries">
+      <EntityTypeMapping TypeName="ConfigSchema.ChartSery">
+        <MappingFragment StoreEntitySet="ChartSeries">
+          <ScalarProperty Name="SeriesGroup" ColumnName="SeriesGroup" />
+          <ScalarProperty Name="ColourHighContrast" ColumnName="ColourHighContrast" />
+          <ScalarProperty Name="ChartAreasID" ColumnName="ChartAreasID" />
+          <ScalarProperty Name="VisableByDefault" ColumnName="VisableByDefault" />
+          <ScalarProperty Name="ChartDataLocationsID" ColumnName="ChartDataLocationsID" />
+          <ScalarProperty Name="Colour" ColumnName="Colour" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ChartSeriesSetID" ColumnName="ChartSeriesSetID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OpPractices">
+      <EntityTypeMapping TypeName="ConfigSchema.OpPractice">
+        <MappingFragment StoreEntitySet="OpPractice">
+          <ScalarProperty Name="StdHeats" ColumnName="StdHeats" />
+          <ScalarProperty Name="OpPracticeText" ColumnName="OpPracticeText" />
+          <ScalarProperty Name="OpPracticeIndex" ColumnName="OpPracticeIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThreatLocations">
+      <EntityTypeMapping TypeName="ConfigSchema.ThreatLocation">
+        <MappingFragment StoreEntitySet="ThreatLocation">
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+          <ScalarProperty Name="ThreatLocationId" ColumnName="ThreatLocationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThreatTimeScales">
+      <EntityTypeMapping TypeName="ConfigSchema.ThreatTimeScale">
+        <MappingFragment StoreEntitySet="ThreatTimeScale">
+          <ScalarProperty Name="TimeScaleName" ColumnName="TimeScaleName" />
+          <ScalarProperty Name="ThreatTimeScaleId" ColumnName="ThreatTimeScaleId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMCModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CMCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SprayConfigs" EntityType="CMCModel.SprayConfig" />
+    <EntitySet Name="TestDetails" EntityType="CMCModel.TestDetail" />
+    <EntitySet Name="TestIndexes" EntityType="CMCModel.TestIndex" />
+    <AssociationSet Name="TestDetail_fk" Association="CMCModel.TestDetail_fk">
+      <End Role="TestIndex" EntitySet="TestIndexes" />
+      <End Role="TestDetail" EntitySet="TestDetails" />
+    </AssociationSet>
+    <FunctionImport Name="GetStrandDetail" ReturnType="Collection(CMCModel.GetStrandDetail_Result)">
+      <Parameter Name="Caster" Mode="In" Type="Int32" />
+      <Parameter Name="Strand" Mode="In" Type="Int32" />
+      <Parameter Name="TestDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="Assessments" EntityType="CMCModel.Assessment" />
+    <EntitySet Name="Requests" EntityType="CMCModel.Request" />
+    <AssociationSet Name="Assessment_fk" Association="CMCModel.Assessment_fk">
+      <End Role="Request" EntitySet="Requests" />
+      <End Role="Assessment" EntitySet="Assessments" />
+    </AssociationSet>
+    <FunctionImport Name="GetSegmentSnapshotDetails" ReturnType="Collection(CMCModel.GetSegmentSnapshotDetails_Result)">
+      <Parameter Name="Caster" Mode="In" Type="Int32" />
+      <Parameter Name="Strand" Mode="In" Type="Int32" />
+      <Parameter Name="SnapshotDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <FunctionImport Name="GetSarcladDetail" ReturnType="Collection(CMCModel.GetSarcladDetail_Result)">
+      <Parameter Name="Caster" Mode="In" Type="Int32" />
+      <Parameter Name="Strand" Mode="In" Type="Int32" />
+      <Parameter Name="TestDate" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="SarcladTestDetails" EntityType="CMCModel.SarcladTestDetail" />
+    <FunctionImport Name="GetSPStrandAssessment" ReturnType="Collection(CMCModel.GetSPStrandAssessment_Result)">
+      <Parameter Name="Caster" Mode="In" Type="Int32" />
+      <Parameter Name="Strand" Mode="In" Type="Int32" />
+      <Parameter Name="DateCast" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="SegmentSnapshotDetails" EntityType="CMCModel.SegmentSnapshotDetail" />
+    <EntitySet Name="SegmentSnapShotIndexes" EntityType="CMCModel.SegmentSnapShotIndex" />
+    <AssociationSet Name="SegmentSnapshotDetails_fk" Association="CMCModel.SegmentSnapshotDetails_fk">
+      <End Role="SegmentSnapShotIndex" EntitySet="SegmentSnapShotIndexes" />
+      <End Role="SegmentSnapshotDetail" EntitySet="SegmentSnapshotDetails" />
+    </AssociationSet>
+    <EntitySet Name="UnitChanges" EntityType="CMCModel.UnitChange" />
+    <EntitySet Name="StrandConfigs" EntityType="CMCModel.StrandConfig" />
+    <FunctionImport Name="GetStrandSegmentConfig" ReturnType="Collection(CMCModel.GetStrandSegmentConfig_Result)">
+      <Parameter Name="Caster" Mode="In" Type="Int32" />
+      <Parameter Name="Strand" Mode="In" Type="Int32" />
+      <Parameter Name="SnapShotDate" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="StrandAssessments" EntityType="CMCModel.StrandAssessment" />
+    <EntitySet Name="SarcladTestIndexes" EntityType="CMCModel.SarcladTestIndex" />
+    <AssociationSet Name="SarcladTestDetail_fk" Association="CMCModel.SarcladTestDetail_fk">
+      <End Role="SarcladTestIndex" EntitySet="SarcladTestIndexes" />
+      <End Role="SarcladTestDetail" EntitySet="SarcladTestDetails" />
+    </AssociationSet>
+    <EntitySet Name="UnitChangeLogs" EntityType="CMCModel.UnitChangeLog" />
+    <EntitySet Name="Lookups" EntityType="CMCModel.Lookup" />
+    <FunctionImport Name="GetSulphutPrintDetails" ReturnType="Collection(CMCModel.GetSulphutPrintDetails_Result)">
+      <Parameter Name="Caster" Mode="In" Type="Int32" />
+      <Parameter Name="Strand" Mode="In" Type="Int32" />
+      <Parameter Name="DateCast" Mode="In" Type="DateTime" />
+      <Parameter Name="fieldName" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="SprayConfig">
+    <Key>
+      <PropertyRef Name="SprayIndex" />
+    </Key>
+    <Property Name="SprayIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Caster" Type="Int32" />
+    <Property Name="Position" Type="Int32" />
+    <Property Name="AreaDescription" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="ZoneDescription" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TestDetail">
+    <Key>
+      <PropertyRef Name="WaterTestIndex" />
+      <PropertyRef Name="Position" />
+    </Key>
+    <Property Name="WaterTestIndex" Type="Int32" Nullable="false" />
+    <Property Name="Position" Type="Int32" Nullable="false" />
+    <Property Name="TargetFlow" Type="Single" />
+    <Property Name="ActualFlow" Type="Single" />
+    <Property Name="Status" Type="Int32" />
+    <NavigationProperty Name="TestIndex" Relationship="CMCModel.TestDetail_fk" FromRole="TestDetail" ToRole="TestIndex" />
+  </EntityType>
+  <EntityType Name="TestIndex">
+    <Key>
+      <PropertyRef Name="WaterTestIndex" />
+    </Key>
+    <Property Name="WaterTestIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Caster" Type="Int32" />
+    <Property Name="Strand" Type="Int32" />
+    <Property Name="TestDate" Type="DateTime" Precision="3" />
+    <Property Name="Speed" Type="Single" />
+    <Property Name="Practice" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="TestDetails" Relationship="CMCModel.TestDetail_fk" FromRole="TestIndex" ToRole="TestDetail" />
+  </EntityType>
+  <Association Name="TestDetail_fk">
+    <End Role="TestIndex" Type="CMCModel.TestIndex" Multiplicity="1" />
+    <End Role="TestDetail" Type="CMCModel.TestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestIndex">
+        <PropertyRef Name="WaterTestIndex" />
+      </Principal>
+      <Dependent Role="TestDetail">
+        <PropertyRef Name="WaterTestIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetStrandDetail_Result">
+    <Property Type="Int32" Name="Caster" Nullable="true" />
+    <Property Type="Int32" Name="Strand" Nullable="true" />
+    <Property Type="Int32" Name="Position" Nullable="false" />
+    <Property Type="String" Name="AreaDescription" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="ZoneDescription" Nullable="true" MaxLength="15" />
+    <Property Type="Single" Name="ActualFlow" Nullable="true" />
+    <Property Type="Single" Name="TargetFlow" Nullable="true" />
+    <Property Type="Int32" Name="Status" Nullable="true" />
+    <Property Type="DateTime" Name="TestDate" Nullable="true" Precision="23" />
+    <Property Type="Single" Name="Speed" Nullable="true" />
+    <Property Type="String" Name="Practice" Nullable="true" MaxLength="15" />
+  </ComplexType>
+  <EntityType Name="Assessment">
+    <Key>
+      <PropertyRef Name="SPAssessIndex" />
+    </Key>
+    <Property Name="SPAssessIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SpIndex" Type="Int32" />
+    <Property Name="FSP" Type="Single" />
+    <Property Name="CLTechnical" Type="Single" />
+    <Property Name="CLReported" Type="Int32" />
+    <Property Name="CLLocation" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="OffCornerCrack" Type="Int32" />
+    <Property Name="HalfwayRadialStreak" Type="Int32" />
+    <Property Name="EdgeCrack" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="TriplePointCrack" Type="Int32" />
+    <Property Name="SpeedRestrictions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="SlittingICRestrictions" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FurtherComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="IC1" Type="Int32" />
+    <Property Name="IC2" Type="Int32" />
+    <Property Name="IC3" Type="Int32" />
+    <Property Name="IC4" Type="Int32" />
+    <Property Name="IC5" Type="Int32" />
+    <Property Name="IC6" Type="Int32" />
+    <Property Name="IC7" Type="Int32" />
+    <Property Name="IC8" Type="Int32" />
+    <Property Name="IC9" Type="Int32" />
+    <Property Name="IC10" Type="Int32" />
+    <Property Name="IC11" Type="Int32" />
+    <Property Name="IC12" Type="Int32" />
+    <Property Name="IC13" Type="Int32" />
+    <Property Name="IC14" Type="Int32" />
+    <Property Name="IC15" Type="Int32" />
+    <Property Name="IC16" Type="Int32" />
+    <NavigationProperty Name="Request" Relationship="CMCModel.Assessment_fk" FromRole="Assessment" ToRole="Request" />
+  </EntityType>
+  <EntityType Name="Request">
+    <Key>
+      <PropertyRef Name="SPIndex" />
+    </Key>
+    <Property Name="SPIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" />
+    <Property Name="HNS" Type="Int32" />
+    <Property Name="SlabNumber" Type="Int32" />
+    <Property Name="Caster" Type="Int32" />
+    <Property Name="StrandNumber" Type="Int32" />
+    <Property Name="DateCast" Type="DateTime" Precision="3" />
+    <Property Name="DateNominated" Type="DateTime" Precision="3" />
+    <Property Name="SlabGrade" Type="Int32" />
+    <Property Name="SlabWidth" Type="Int32" />
+    <Property Name="CastSpeed" Type="Single" />
+    <Property Name="Carbon" Type="Single" />
+    <Property Name="Sulphur" Type="Single" />
+    <Property Name="Phos" Type="Single" />
+    <Property Name="Mn" Type="Single" />
+    <Property Name="MnSRatio" Type="Single" />
+    <Property Name="SPAssessed" Type="Int32" />
+    <Property Name="SnapShotIndex" Type="Int32" />
+    <NavigationProperty Name="Assessments" Relationship="CMCModel.Assessment_fk" FromRole="Request" ToRole="Assessment" />
+  </EntityType>
+  <Association Name="Assessment_fk">
+    <End Type="CMCModel.Request" Role="Request" Multiplicity="0..1" />
+    <End Type="CMCModel.Assessment" Role="Assessment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Request">
+        <PropertyRef Name="SPIndex" />
+      </Principal>
+      <Dependent Role="Assessment">
+        <PropertyRef Name="SpIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="GetSegmentSnapshotDetails_Result">
+    <Property Type="Int32" Name="SnapShotIndex" Nullable="false" />
+    <Property Type="Int32" Name="Caster" Nullable="true" />
+    <Property Type="Int32" Name="Strand" Nullable="true" />
+    <Property Type="DateTime" Name="SnapShotDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="DateInstall" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="DaysInService" Nullable="true" />
+    <Property Type="Single" Name="TonnesCast" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="GetSarcladDetail_Result">
+    <Property Type="DateTime" Name="TestDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="Position" Nullable="false" />
+    <Property Type="Decimal" Name="RollGap" Nullable="true" />
+    <Property Type="Decimal" Name="BackFace" Nullable="true" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="15" />
+  </ComplexType>
+  <EntityType Name="SarcladTestDetail">
+    <Key>
+      <PropertyRef Name="TestIndex" />
+      <PropertyRef Name="Position" />
+    </Key>
+    <Property Name="TestIndex" Type="Int32" Nullable="false" />
+    <Property Name="Position" Type="Int32" Nullable="false" />
+    <Property Name="RollGap" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="BackFace" Type="Decimal" Precision="4" Scale="2" />
+    <NavigationProperty Name="SarcladTestIndex" Relationship="CMCModel.SarcladTestDetail_fk" FromRole="SarcladTestDetail" ToRole="SarcladTestIndex" />
+  </EntityType>
+  <ComplexType Name="GetSPStrandAssessment_Result">
+    <Property Type="Int32" Name="Caster" Nullable="true" />
+    <Property Type="Int32" Name="StrandNumber" Nullable="true" />
+    <Property Type="DateTime" Name="DateCast" Nullable="true" Precision="23" />
+    <Property Type="String" Name="SpeedRestrictions" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="SlittingICRestrictions" Nullable="true" MaxLength="Max" />
+    <Property Type="String" Name="FurtherComments" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <EntityType Name="SegmentSnapshotDetail">
+    <Key>
+      <PropertyRef Name="SegmentSnapShotIndex" />
+    </Key>
+    <Property Name="SegmentSnapShotIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SnapShotIndex" Type="Int32" />
+    <Property Name="StrandPosition" Type="Int32" />
+    <Property Name="SegmentName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DateInstall" Type="DateTime" Precision="3" />
+    <Property Name="DaysInService" Type="Int32" />
+    <Property Name="TonnesCast" Type="Single" />
+    <Property Name="SnapshotSource" Type="Int32" />
+    <NavigationProperty Name="SegmentSnapShotIndex1" Relationship="CMCModel.SegmentSnapshotDetails_fk" FromRole="SegmentSnapshotDetail" ToRole="SegmentSnapShotIndex" />
+  </EntityType>
+  <EntityType Name="SegmentSnapShotIndex">
+    <Key>
+      <PropertyRef Name="SnapShotIndex" />
+    </Key>
+    <Property Name="SnapShotIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Caster" Type="Int32" />
+    <Property Name="Strand" Type="Int32" />
+    <Property Name="SnapShotDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SegmentSnapshotDetails" Relationship="CMCModel.SegmentSnapshotDetails_fk" FromRole="SegmentSnapShotIndex" ToRole="SegmentSnapshotDetail" />
+  </EntityType>
+  <Association Name="SegmentSnapshotDetails_fk">
+    <End Type="CMCModel.SegmentSnapShotIndex" Role="SegmentSnapShotIndex" Multiplicity="0..1" />
+    <End Type="CMCModel.SegmentSnapshotDetail" Role="SegmentSnapshotDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SegmentSnapShotIndex">
+        <PropertyRef Name="SnapShotIndex" />
+      </Principal>
+      <Dependent Role="SegmentSnapshotDetail">
+        <PropertyRef Name="SnapShotIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UnitChange">
+    <Key>
+      <PropertyRef Name="ChangeIndex" />
+    </Key>
+    <Property Name="ChangeIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChangeDatestamp" Type="DateTime" Precision="3" />
+    <Property Name="Caster" Type="Int32" />
+    <Property Name="Strand" Type="Int32" />
+    <Property Name="SegmentToRemove" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SegmentToInstall" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Priority" Type="Int32" />
+    <Property Name="ChangeReason" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ChangeDuration" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="StrandPosition" Type="Int32" />
+  </EntityType>
+  <EntityType Name="StrandConfig">
+    <Key>
+      <PropertyRef Name="Caster" />
+      <PropertyRef Name="StrandPosition" />
+    </Key>
+    <Property Name="Caster" Type="Int32" Nullable="false" />
+    <Property Name="StrandPosition" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PlannedTonnage" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="NeedsReplacingTonnage" Type="Decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <ComplexType Name="GetStrandSegmentConfig_Result">
+    <Property Type="Int32" Name="SnapShotIndex" Nullable="true" />
+    <Property Type="String" Name="SegmentName" Nullable="true" MaxLength="30" />
+    <Property Type="Int32" Name="StrandPosition" Nullable="true" />
+    <Property Type="Int32" Name="DaysInService" Nullable="true" />
+    <Property Type="Single" Name="TonnesCast" Nullable="true" />
+    <Property Type="DateTime" Name="DateInstall" Nullable="true" Precision="23" />
+    <Property Type="Decimal" Name="PlannedTonnage" Nullable="true" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="NeedsReplacingTonnage" Nullable="true" Precision="18" Scale="4" />
+  </ComplexType>
+  <EntityType Name="StrandAssessment">
+    <Key>
+      <PropertyRef Name="Index" />
+    </Key>
+    <Property Name="Index" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Caster" Type="Int32" />
+    <Property Name="Strand" Type="Int32" />
+    <Property Name="AssessmentDate" Type="DateTime" Precision="3" />
+    <Property Name="InternalCritical" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="Slitting" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="CastingSpeed" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SarcladTestIndex">
+    <Key>
+      <PropertyRef Name="TestIndex" />
+    </Key>
+    <Property Name="TestIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Caster" Type="Int32" />
+    <Property Name="Strand" Type="Int32" />
+    <Property Name="TestDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="SarcladTestDetails" Relationship="CMCModel.SarcladTestDetail_fk" FromRole="SarcladTestIndex" ToRole="SarcladTestDetail" />
+  </EntityType>
+  <Association Name="SarcladTestDetail_fk">
+    <End Type="CMCModel.SarcladTestIndex" Role="SarcladTestIndex" Multiplicity="1" />
+    <End Type="CMCModel.SarcladTestDetail" Role="SarcladTestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SarcladTestIndex">
+        <PropertyRef Name="TestIndex" />
+      </Principal>
+      <Dependent Role="SarcladTestDetail">
+        <PropertyRef Name="TestIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="UnitChangeLog">
+    <Key>
+      <PropertyRef Name="ChangeLogIndex" />
+    </Key>
+    <Property Name="ChangeLogIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ChangeIndex" Type="Int32" />
+    <Property Name="ChangeDatestamp" Type="DateTime" Precision="3" />
+    <Property Name="Caster" Type="Int32" />
+    <Property Name="Strand" Type="Int32" />
+    <Property Name="SegmentToRemove" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SegmentToInstall" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Priority" Type="Int32" />
+    <Property Name="ChangeReason" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Lookup">
+    <Key>
+      <PropertyRef Name="LookupIndex" />
+    </Key>
+    <Property Name="LookupIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Caster" Type="Int32" Nullable="false" />
+    <Property Name="Strand" Type="Int32" Nullable="false" />
+    <Property Name="GreenLookup" Type="Single" />
+    <Property Name="RedLookup" Type="Single" />
+    <Property Name="Field" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <ComplexType Name="GetSulphutPrintDetails_Result">
+    <Property Type="Int32" Name="SPIndex" Nullable="false" />
+    <Property Type="Int32" Name="SlabNumber" Nullable="true" />
+    <Property Type="Int32" Name="Caster" Nullable="true" />
+    <Property Type="Int32" Name="StrandNumber" Nullable="true" />
+    <Property Type="DateTime" Name="DateCast" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="SlabGrade" Nullable="true" />
+    <Property Type="Int32" Name="SlabWidth" Nullable="true" />
+    <Property Type="Single" Name="CastSpeed" Nullable="true" />
+    <Property Type="Int32" Name="IC1" Nullable="true" />
+    <Property Type="Int32" Name="IC2" Nullable="true" />
+    <Property Type="Int32" Name="IC3" Nullable="true" />
+    <Property Type="Int32" Name="IC4" Nullable="true" />
+    <Property Type="Int32" Name="IC5" Nullable="true" />
+    <Property Type="Int32" Name="IC6" Nullable="true" />
+    <Property Type="Int32" Name="IC7" Nullable="true" />
+    <Property Type="Int32" Name="IC8" Nullable="true" />
+    <Property Type="Int32" Name="IC9" Nullable="true" />
+    <Property Type="Int32" Name="IC10" Nullable="true" />
+    <Property Type="Int32" Name="IC11" Nullable="true" />
+    <Property Type="Int32" Name="IC12" Nullable="true" />
+    <Property Type="Int32" Name="IC13" Nullable="true" />
+    <Property Type="Int32" Name="IC14" Nullable="true" />
+    <Property Type="Int32" Name="IC15" Nullable="true" />
+    <Property Type="Int32" Name="IC16" Nullable="true" />
+    <Property Type="Int32" Name="CLReported" Nullable="true" />
+    <Property Type="String" Name="CLLocation" Nullable="true" MaxLength="30" />
+    <Property Type="Single" Name="GreenLookup" Nullable="true" />
+    <Property Type="Single" Name="RedLookup" Nullable="true" />
+  </ComplexType>
+</Schema>

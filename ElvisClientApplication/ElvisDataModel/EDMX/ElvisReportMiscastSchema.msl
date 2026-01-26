@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MiscastReportSchemaStoreContainer" CdmEntityContainer="ReportMiscastSchemaEntities">
+    <EntitySetMapping Name="MiscastActions">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastAction">
+        <MappingFragment StoreEntitySet="MiscastActions">
+          <ScalarProperty Name="MiscastActionID" ColumnName="MiscastActionID" />
+          <ScalarProperty Name="MiscastID" ColumnName="MiscastID" />
+          <ScalarProperty Name="ActionText" ColumnName="ActionText" />
+          <ScalarProperty Name="ActionOwnerID" ColumnName="ActionOwnerID" />
+          <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+          <ScalarProperty Name="ActionState" ColumnName="ActionState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastAreaResponsibles">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastAreaResponsible">
+        <MappingFragment StoreEntitySet="MiscastAreaResponsible">
+          <ScalarProperty Name="AreaResponsibleID" ColumnName="AreaResponsibleID" />
+          <ScalarProperty Name="AreaResponsible" ColumnName="AreaResponsible" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+          <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastFailureModes">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastFailureMode">
+        <MappingFragment StoreEntitySet="MiscastFailureMode">
+          <ScalarProperty Name="FailureModeID" ColumnName="FailureModeID" />
+          <ScalarProperty Name="FailureMode" ColumnName="FailureMode" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+          <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastInvestigations">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastInvestigation">
+        <MappingFragment StoreEntitySet="MiscastInvestigation">
+          <ScalarProperty Name="InvestigationID" ColumnName="InvestigationID" />
+          <ScalarProperty Name="MiscastID" ColumnName="MiscastID" />
+          <ScalarProperty Name="InvestigationNumber" ColumnName="InvestigationNumber" />
+          <ScalarProperty Name="AreaResponsibleID" ColumnName="AreaResponsibleID" />
+          <ScalarProperty Name="Investigator" ColumnName="Investigator" />
+          <ScalarProperty Name="ProblemStatement" ColumnName="ProblemStatement" />
+          <ScalarProperty Name="RootCause" ColumnName="RootCause" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastOwners">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastOwner">
+        <MappingFragment StoreEntitySet="MiscastOwners">
+          <ScalarProperty Name="IsTechnical" ColumnName="IsTechnical" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="MiscastOwnerID" ColumnName="MiscastOwnerID" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+          <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastRootCauses">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastRootCause">
+        <MappingFragment StoreEntitySet="MiscastRootCause">
+          <ScalarProperty Name="RootCauseID" ColumnName="RootCauseID" />
+          <ScalarProperty Name="RootCause" ColumnName="RootCause" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+          <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastRotas">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastRota">
+        <MappingFragment StoreEntitySet="MiscastRota">
+          <ScalarProperty Name="RotaID" ColumnName="RotaID" />
+          <ScalarProperty Name="Rota" ColumnName="Rota" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+          <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastTypes">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastType">
+        <MappingFragment StoreEntitySet="MiscastType">
+          <ScalarProperty Name="ShortType" ColumnName="ShortType" />
+          <ScalarProperty Name="MiscastTypeID" ColumnName="MiscastTypeID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+          <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastUnits">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastUnit">
+        <MappingFragment StoreEntitySet="MiscastUnit">
+          <ScalarProperty Name="MiscastAreaResponsibleID" ColumnName="MiscastAreaResponsibleID" />
+          <ScalarProperty Name="MiscastUnitID" ColumnName="MiscastUnitID" />
+          <ScalarProperty Name="MiscastUnit1" ColumnName="MiscastUnit" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+          <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastWhies">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastWhy">
+        <MappingFragment StoreEntitySet="MiscastWhy">
+          <ScalarProperty Name="WhyID" ColumnName="WhyID" />
+          <ScalarProperty Name="InvestigationID" ColumnName="InvestigationID" />
+          <ScalarProperty Name="WhyText" ColumnName="WhyText" />
+          <ScalarProperty Name="SortNumber" ColumnName="SortNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastFunctions">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastFunction">
+        <MappingFragment StoreEntitySet="MiscastFunction">
+          <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+          <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="TrioFunction" ColumnName="TrioFunction" />
+          <ScalarProperty Name="FunctionID" ColumnName="FunctionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastStatus">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastStatu">
+        <MappingFragment StoreEntitySet="MiscastStatus">
+          <ScalarProperty Name="ChartForeColourHex" ColumnName="ChartForeColourHex" />
+          <ScalarProperty Name="ChartColourHex" ColumnName="ChartColourHex" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="MiscastStatusID" ColumnName="MiscastStatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastReportViews">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastReportView">
+        <MappingFragment StoreEntitySet="MiscastReportView">
+          <ScalarProperty Name="HeatNumberSet" ColumnName="HeatNumberSet" />
+          <ScalarProperty Name="RootCauseID" ColumnName="RootCauseID" />
+          <ScalarProperty Name="MiscastRotaID" ColumnName="MiscastRotaID" />
+          <ScalarProperty Name="MiscastFailureModeID" ColumnName="MiscastFailureModeID" />
+          <ScalarProperty Name="MiscastUnitID" ColumnName="MiscastUnitID" />
+          <ScalarProperty Name="MiscastStatusID" ColumnName="MiscastStatusID" />
+          <ScalarProperty Name="MiscastTypeID" ColumnName="MiscastTypeID" />
+          <ScalarProperty Name="MiscastFunctionID" ColumnName="MiscastFunctionID" />
+          <ScalarProperty Name="MiscastAreaResponsibleID" ColumnName="MiscastAreaResponsibleID" />
+          <ScalarProperty Name="RootCause" ColumnName="RootCause" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="MiscastUnit" ColumnName="MiscastUnit" />
+          <ScalarProperty Name="AreaResponsible" ColumnName="AreaResponsible" />
+          <ScalarProperty Name="Rota" ColumnName="Rota" />
+          <ScalarProperty Name="FailureMode" ColumnName="FailureMode" />
+          <ScalarProperty Name="OrderedGrade" ColumnName="OrderedGrade" />
+          <ScalarProperty Name="TapTime" ColumnName="TapTime" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="MiscastID" ColumnName="MiscastID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastActionsReportViews">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastActionsReportView">
+        <MappingFragment StoreEntitySet="MiscastActionsReportView">
+          <ScalarProperty Name="OrderedGrade" ColumnName="OrderedGrade" />
+          <ScalarProperty Name="MiscastStatusID" ColumnName="MiscastStatusID" />
+          <ScalarProperty Name="RootCauseID" ColumnName="RootCauseID" />
+          <ScalarProperty Name="MiscastFunctionID" ColumnName="MiscastFunctionID" />
+          <ScalarProperty Name="MiscastUnitID" ColumnName="MiscastUnitID" />
+          <ScalarProperty Name="MiscastRotaID" ColumnName="MiscastRotaID" />
+          <ScalarProperty Name="MiscastTypeID" ColumnName="MiscastTypeID" />
+          <ScalarProperty Name="MiscastFailureModeID" ColumnName="MiscastFailureModeID" />
+          <ScalarProperty Name="MiscastAreaResponsibleID" ColumnName="MiscastAreaResponsibleID" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="ActionState" ColumnName="ActionState" />
+          <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+          <ScalarProperty Name="ActionOwnerID" ColumnName="ActionOwnerID" />
+          <ScalarProperty Name="ActionText" ColumnName="ActionText" />
+          <ScalarProperty Name="MiscastID" ColumnName="MiscastID" />
+          <ScalarProperty Name="MiscastActionID" ColumnName="MiscastActionID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LookupStandardPracticeFolloweds">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.LookupStandardPracticeFollowed">
+        <MappingFragment StoreEntitySet="LookupStandardPracticeFollowed">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiscastMains">
+      <EntityTypeMapping TypeName="ReportMiscastSchema.MiscastMain">
+        <MappingFragment StoreEntitySet="MiscastMain">
+          <ScalarProperty Name="StandardPracticeFollowedID" ColumnName="StandardPracticeFollowedID" />
+          <ScalarProperty Name="InstallationGoodCondition" ColumnName="InstallationGoodCondition" />
+          <ScalarProperty Name="MiscastStatusID" ColumnName="MiscastStatusID" />
+          <ScalarProperty Name="TapTime" ColumnName="TapTime" />
+          <ScalarProperty Name="LastEdit" ColumnName="LastEdit" />
+          <ScalarProperty Name="DateRaised" ColumnName="DateRaised" />
+          <ScalarProperty Name="TechComplete" ColumnName="TechComplete" />
+          <ScalarProperty Name="RootCauseID" ColumnName="RootCauseID" />
+          <ScalarProperty Name="TechNameID" ColumnName="TechNameID" />
+          <ScalarProperty Name="TechComments" ColumnName="TechComments" />
+          <ScalarProperty Name="ShiftComplete" ColumnName="ShiftComplete" />
+          <ScalarProperty Name="ShiftName" ColumnName="ShiftName" />
+          <ScalarProperty Name="ShiftComments" ColumnName="ShiftComments" />
+          <ScalarProperty Name="ContainmentAction" ColumnName="ContainmentAction" />
+          <ScalarProperty Name="ProblemStatementName" ColumnName="ProblemStatementName" />
+          <ScalarProperty Name="ProblemStatement" ColumnName="ProblemStatement" />
+          <ScalarProperty Name="MiscastFunctionID" ColumnName="MiscastFunctionID" />
+          <ScalarProperty Name="MiscastUnitID" ColumnName="MiscastUnitID" />
+          <ScalarProperty Name="MiscastAreaResponsibleID" ColumnName="MiscastAreaResponsibleID" />
+          <ScalarProperty Name="MiscastFailureModeID" ColumnName="MiscastFailureModeID" />
+          <ScalarProperty Name="MiscastTypeID" ColumnName="MiscastTypeID" />
+          <ScalarProperty Name="MiscastRotaID" ColumnName="MiscastRotaID" />
+          <ScalarProperty Name="HotConnect" ColumnName="HotConnect" />
+          <ScalarProperty Name="MadeGrade" ColumnName="MadeGrade" />
+          <ScalarProperty Name="OrderedGrade" ColumnName="OrderedGrade" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HeatNumberSet" ColumnName="HeatNumberSet" />
+          <ScalarProperty Name="MiscastID" ColumnName="MiscastID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SpecsSchemaEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="SpecsSchemaEntitiesStoreContainer">
+    <EntitySet Name="ELEMENT_TAG" EntityType="SpecsSchemaEntities.Store.ELEMENT_TAG" store:Type="Tables" Schema="Specs" />
+    <EntitySet Name="GRADE" EntityType="SpecsSchemaEntities.Store.GRADE" store:Type="Tables" Schema="Specs" />
+    <EntitySet Name="GRADE_ADDITION" EntityType="SpecsSchemaEntities.Store.GRADE_ADDITION" store:Type="Tables" Schema="Specs" />
+    <EntitySet Name="GRADE_ANALYSIS" EntityType="SpecsSchemaEntities.Store.GRADE_ANALYSIS" store:Type="Tables" Schema="Specs" />
+    <EntitySet Name="GRADE_INSTRUCTIONS" EntityType="SpecsSchemaEntities.Store.GRADE_INSTRUCTIONS" store:Type="Tables" Schema="Specs" />
+    <EntitySet Name="GRADE_TEMPERATURE" EntityType="SpecsSchemaEntities.Store.GRADE_TEMPERATURE" store:Type="Tables" Schema="Specs" />
+    <EntitySet Name="GRADE_TREATMENT" EntityType="SpecsSchemaEntities.Store.GRADE_TREATMENT" store:Type="Tables" Schema="Specs" />
+    <EntitySet Name="GradeChangeLog" EntityType="SpecsSchemaEntities.Store.GradeChangeLog" store:Type="Tables" Schema="Specs" />
+    <EntitySet Name="TREATMENT" EntityType="SpecsSchemaEntities.Store.TREATMENT" store:Type="Tables" Schema="Specs" />
+    <EntitySet Name="UNIT" EntityType="SpecsSchemaEntities.Store.UNIT" store:Type="Tables" Schema="Specs" />
+    <EntitySet Name="UNIT_TREATMENT" EntityType="SpecsSchemaEntities.Store.UNIT_TREATMENT" store:Type="Tables" Schema="Specs" />
+    <AssociationSet Name="GRADE_ADDITION_fk" Association="SpecsSchemaEntities.Store.GRADE_ADDITION_fk">
+      <End Role="UNIT" EntitySet="UNIT" />
+      <End Role="GRADE_ADDITION" EntitySet="GRADE_ADDITION" />
+    </AssociationSet>
+    <AssociationSet Name="GRADE_ANALYSIS_fk" Association="SpecsSchemaEntities.Store.GRADE_ANALYSIS_fk">
+      <End Role="UNIT" EntitySet="UNIT" />
+      <End Role="GRADE_ANALYSIS" EntitySet="GRADE_ANALYSIS" />
+    </AssociationSet>
+    <AssociationSet Name="GRADE_INSTRUCTIONS_fk" Association="SpecsSchemaEntities.Store.GRADE_INSTRUCTIONS_fk">
+      <End Role="UNIT" EntitySet="UNIT" />
+      <End Role="GRADE_INSTRUCTIONS" EntitySet="GRADE_INSTRUCTIONS" />
+    </AssociationSet>
+    <AssociationSet Name="GRADE_TEMPERATURE_fk" Association="SpecsSchemaEntities.Store.GRADE_TEMPERATURE_fk">
+      <End Role="UNIT" EntitySet="UNIT" />
+      <End Role="GRADE_TEMPERATURE" EntitySet="GRADE_TEMPERATURE" />
+    </AssociationSet>
+    <AssociationSet Name="GRADE_TREATMENT_fk" Association="SpecsSchemaEntities.Store.GRADE_TREATMENT_fk">
+      <End Role="UNIT" EntitySet="UNIT" />
+      <End Role="GRADE_TREATMENT" EntitySet="GRADE_TREATMENT" />
+    </AssociationSet>
+    <AssociationSet Name="GRADE_TREATMENT_fk2" Association="SpecsSchemaEntities.Store.GRADE_TREATMENT_fk2">
+      <End Role="TREATMENT" EntitySet="TREATMENT" />
+      <End Role="GRADE_TREATMENT" EntitySet="GRADE_TREATMENT" />
+    </AssociationSet>
+    <AssociationSet Name="UNIT_TREATMENT_fk" Association="SpecsSchemaEntities.Store.UNIT_TREATMENT_fk">
+      <End Role="UNIT" EntitySet="UNIT" />
+      <End Role="UNIT_TREATMENT" EntitySet="UNIT_TREATMENT" />
+    </AssociationSet>
+    <AssociationSet Name="UNIT_TREATMENT_fk2" Association="SpecsSchemaEntities.Store.UNIT_TREATMENT_fk2">
+      <End Role="TREATMENT" EntitySet="TREATMENT" />
+      <End Role="UNIT_TREATMENT" EntitySet="UNIT_TREATMENT" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ELEMENT_TAG">
+    <Key>
+      <PropertyRef Name="ELEMENT_TAG" />
+    </Key>
+    <Property Name="ELEMENT_TAG" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="ELEMENT_INDEX" Type="int" />
+    <Property Name="ELEMENT_DESC" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="GRADE">
+    <Key>
+      <PropertyRef Name="GRADE_NUMBER" />
+    </Key>
+    <Property Name="GRADE_NUMBER" Type="smallint" Nullable="false" />
+    <Property Name="PRIORITY" Type="smallint" />
+    <Property Name="STEEL_TYPE" Type="smallint" />
+    <Property Name="SCRAP_MIX" Type="smallint" />
+    <Property Name="BAP_CODE" Type="smallint" />
+    <Property Name="LANCE_PRACTICE" Type="smallint" />
+    <Property Name="END_BLOW_PRACTICE" Type="smallint" />
+    <Property Name="HMDS_TREATMENT_CODE" Type="smallint" />
+    <Property Name="HMDS_SKIM_CODE" Type="smallint" />
+    <Property Name="FLUX_PRACTICE" Type="smallint" />
+    <Property Name="PRECHARGE_PRACTICE" Type="smallint" />
+    <Property Name="TAP_WEIGHT" Type="real" />
+    <Property Name="MAX_HM_SULPHUR_TREATED" Type="real" />
+    <Property Name="MAX_HM_SULPHUR_NOT_TREATED" Type="real" />
+    <Property Name="ENDBLOW_TEMPERATURE" Type="real" />
+    <Property Name="LADLE_TEMPERATURE" Type="real" />
+    <Property Name="LIQUIDUS_TEMPERATURE" Type="real" />
+    <Property Name="LIQUIDUS_CORRECTION" Type="real" />
+    <Property Name="REQUIRED_SUPERHEAT" Type="real" />
+    <Property Name="TIME_AND_DATE_CREATED" Type="datetime" />
+    <Property Name="TIME_AND_DATE_UPDATED" Type="datetime" />
+    <Property Name="VERSION_NUMBER" Type="smallint" />
+    <Property Name="GRADE_DESC" Type="nvarchar" MaxLength="80" />
+    <Property Name="QUART_DESC" Type="nvarchar" MaxLength="80" />
+    <Property Name="REQ_NEW_PLATE" Type="nvarchar" MaxLength="10" />
+    <Property Name="REQ_NEW_NOZZLE" Type="nvarchar" MaxLength="10" />
+    <Property Name="REQ_HMSI_EQUIV_08" Type="nvarchar" MaxLength="10" />
+    <Property Name="UP_ON_METAL" Type="nvarchar" MaxLength="10" />
+    <Property Name="X_HEAT" Type="nvarchar" MaxLength="10" />
+    <Property Name="STEEL_GRADE_GROUP" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="GRADE_ADDITION">
+    <Key>
+      <PropertyRef Name="GRADE_NUMBER" />
+      <PropertyRef Name="UNIT" />
+      <PropertyRef Name="MATERIAL_REFERENCE_NUMBER" />
+    </Key>
+    <Property Name="GRADE_NUMBER" Type="smallint" Nullable="false" />
+    <Property Name="UNIT" Type="smallint" Nullable="false" />
+    <Property Name="MATERIAL_REFERENCE_NUMBER" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="MATERIAL_CHARGE_REQUIRED" Type="real" />
+  </EntityType>
+  <EntityType Name="GRADE_ANALYSIS">
+    <Key>
+      <PropertyRef Name="GRADE_NUMBER" />
+      <PropertyRef Name="UNIT" />
+      <PropertyRef Name="ELEMENT_TAG" />
+    </Key>
+    <Property Name="GRADE_NUMBER" Type="smallint" Nullable="false" />
+    <Property Name="UNIT" Type="smallint" Nullable="false" />
+    <Property Name="ELEMENT_TAG" Type="nvarchar" Nullable="false" MaxLength="12" />
+    <Property Name="MAXIMUM" Type="real" />
+    <Property Name="MINIMUM" Type="real" />
+    <Property Name="AIM" Type="real" />
+  </EntityType>
+  <EntityType Name="GRADE_INSTRUCTIONS">
+    <Key>
+      <PropertyRef Name="GRADE_NUMBER" />
+      <PropertyRef Name="UNIT" />
+      <PropertyRef Name="LINE_NUMBER" />
+    </Key>
+    <Property Name="GRADE_NUMBER" Type="smallint" Nullable="false" />
+    <Property Name="UNIT" Type="smallint" Nullable="false" />
+    <Property Name="LINE_NUMBER" Type="smallint" Nullable="false" />
+    <Property Name="INSTRUCTION_TEXT" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="GRADE_TEMPERATURE">
+    <Key>
+      <PropertyRef Name="GRADE_NUMBER" />
+      <PropertyRef Name="UNIT" />
+    </Key>
+    <Property Name="GRADE_NUMBER" Type="smallint" Nullable="false" />
+    <Property Name="UNIT" Type="smallint" Nullable="false" />
+    <Property Name="MAXIMUM" Type="real" />
+    <Property Name="MINIMUM" Type="real" />
+    <Property Name="AIM" Type="real" />
+  </EntityType>
+  <EntityType Name="GRADE_TREATMENT">
+    <Key>
+      <PropertyRef Name="GRADE_NUMBER" />
+      <PropertyRef Name="UNIT" />
+      <PropertyRef Name="STEP" />
+    </Key>
+    <Property Name="GRADE_NUMBER" Type="smallint" Nullable="false" />
+    <Property Name="UNIT" Type="smallint" Nullable="false" />
+    <Property Name="STEP" Type="smallint" Nullable="false" />
+    <Property Name="TREATMENT" Type="smallint" />
+  </EntityType>
+  <EntityType Name="GradeChangeLog">
+    <Key>
+      <PropertyRef Name="GradeChangeIndex" />
+    </Key>
+    <Property Name="GradeChangeIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GradeNumber" Type="int" />
+    <Property Name="ChangeTimeStamp" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="TREATMENT">
+    <Key>
+      <PropertyRef Name="TREATMENT" />
+    </Key>
+    <Property Name="TREATMENT" Type="smallint" Nullable="false" />
+    <Property Name="TREATMENT_DESC" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="UNIT">
+    <Key>
+      <PropertyRef Name="UNIT" />
+    </Key>
+    <Property Name="UNIT" Type="smallint" Nullable="false" />
+    <Property Name="UNIT_DESC" Type="nvarchar" MaxLength="80" />
+    <Property Name="UNIT_ORDER" Type="int" />
+  </EntityType>
+  <EntityType Name="UNIT_TREATMENT">
+    <Key>
+      <PropertyRef Name="UNIT" />
+      <PropertyRef Name="TREATMENT" />
+    </Key>
+    <Property Name="UNIT" Type="smallint" Nullable="false" />
+    <Property Name="TREATMENT" Type="smallint" Nullable="false" />
+    <Property Name="TREATMENT_TIME" Type="int" />
+  </EntityType>
+  <Association Name="GRADE_ADDITION_fk">
+    <End Role="UNIT" Type="SpecsSchemaEntities.Store.UNIT" Multiplicity="1" />
+    <End Role="GRADE_ADDITION" Type="SpecsSchemaEntities.Store.GRADE_ADDITION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIT">
+        <PropertyRef Name="UNIT" />
+      </Principal>
+      <Dependent Role="GRADE_ADDITION">
+        <PropertyRef Name="UNIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRADE_ANALYSIS_fk">
+    <End Role="UNIT" Type="SpecsSchemaEntities.Store.UNIT" Multiplicity="1" />
+    <End Role="GRADE_ANALYSIS" Type="SpecsSchemaEntities.Store.GRADE_ANALYSIS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIT">
+        <PropertyRef Name="UNIT" />
+      </Principal>
+      <Dependent Role="GRADE_ANALYSIS">
+        <PropertyRef Name="UNIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRADE_INSTRUCTIONS_fk">
+    <End Role="UNIT" Type="SpecsSchemaEntities.Store.UNIT" Multiplicity="1" />
+    <End Role="GRADE_INSTRUCTIONS" Type="SpecsSchemaEntities.Store.GRADE_INSTRUCTIONS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIT">
+        <PropertyRef Name="UNIT" />
+      </Principal>
+      <Dependent Role="GRADE_INSTRUCTIONS">
+        <PropertyRef Name="UNIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRADE_TEMPERATURE_fk">
+    <End Role="UNIT" Type="SpecsSchemaEntities.Store.UNIT" Multiplicity="1" />
+    <End Role="GRADE_TEMPERATURE" Type="SpecsSchemaEntities.Store.GRADE_TEMPERATURE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIT">
+        <PropertyRef Name="UNIT" />
+      </Principal>
+      <Dependent Role="GRADE_TEMPERATURE">
+        <PropertyRef Name="UNIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRADE_TREATMENT_fk">
+    <End Role="UNIT" Type="SpecsSchemaEntities.Store.UNIT" Multiplicity="1" />
+    <End Role="GRADE_TREATMENT" Type="SpecsSchemaEntities.Store.GRADE_TREATMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIT">
+        <PropertyRef Name="UNIT" />
+      </Principal>
+      <Dependent Role="GRADE_TREATMENT">
+        <PropertyRef Name="UNIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GRADE_TREATMENT_fk2">
+    <End Role="TREATMENT" Type="SpecsSchemaEntities.Store.TREATMENT" Multiplicity="0..1" />
+    <End Role="GRADE_TREATMENT" Type="SpecsSchemaEntities.Store.GRADE_TREATMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TREATMENT">
+        <PropertyRef Name="TREATMENT" />
+      </Principal>
+      <Dependent Role="GRADE_TREATMENT">
+        <PropertyRef Name="TREATMENT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UNIT_TREATMENT_fk">
+    <End Role="UNIT" Type="SpecsSchemaEntities.Store.UNIT" Multiplicity="1" />
+    <End Role="UNIT_TREATMENT" Type="SpecsSchemaEntities.Store.UNIT_TREATMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIT">
+        <PropertyRef Name="UNIT" />
+      </Principal>
+      <Dependent Role="UNIT_TREATMENT">
+        <PropertyRef Name="UNIT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="UNIT_TREATMENT_fk2">
+    <End Role="TREATMENT" Type="SpecsSchemaEntities.Store.TREATMENT" Multiplicity="1" />
+    <End Role="UNIT_TREATMENT" Type="SpecsSchemaEntities.Store.UNIT_TREATMENT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TREATMENT">
+        <PropertyRef Name="TREATMENT" />
+      </Principal>
+      <Dependent Role="UNIT_TREATMENT">
+        <PropertyRef Name="TREATMENT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

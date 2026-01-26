@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CMCModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="StrandAssessment">
+    <Key>
+      <PropertyRef Name="Index" />
+    </Key>
+    <Property Name="Index" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caster" Type="int" />
+    <Property Name="Strand" Type="int" />
+    <Property Name="AssessmentDate" Type="datetime" />
+    <Property Name="InternalCritical" Type="varchar" MaxLength="3" />
+    <Property Name="Slitting" Type="varchar" MaxLength="3" />
+    <Property Name="CastingSpeed" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="Comment" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="UnitChange">
+    <Key>
+      <PropertyRef Name="ChangeIndex" />
+    </Key>
+    <Property Name="ChangeIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChangeDatestamp" Type="datetime" />
+    <Property Name="Caster" Type="int" />
+    <Property Name="Strand" Type="int" />
+    <Property Name="SegmentToRemove" Type="varchar" MaxLength="30" />
+    <Property Name="SegmentToInstall" Type="varchar" MaxLength="30" />
+    <Property Name="Priority" Type="int" />
+    <Property Name="ChangeReason" Type="varchar" MaxLength="150" />
+    <Property Name="ChangeDuration" Type="varchar" MaxLength="10" />
+    <Property Name="StrandPosition" Type="int" />
+  </EntityType>
+  <EntityType Name="UnitChangeLog">
+    <Key>
+      <PropertyRef Name="ChangeLogIndex" />
+    </Key>
+    <Property Name="ChangeLogIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChangeIndex" Type="int" />
+    <Property Name="ChangeDatestamp" Type="datetime" />
+    <Property Name="Caster" Type="int" />
+    <Property Name="Strand" Type="int" />
+    <Property Name="SegmentToRemove" Type="varchar" MaxLength="30" />
+    <Property Name="SegmentToInstall" Type="varchar" MaxLength="30" />
+    <Property Name="Priority" Type="int" />
+    <Property Name="ChangeReason" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="SarcladTestDetail">
+    <Key>
+      <PropertyRef Name="TestIndex" />
+      <PropertyRef Name="Position" />
+    </Key>
+    <Property Name="TestIndex" Type="int" Nullable="false" />
+    <Property Name="Position" Type="int" Nullable="false" />
+    <Property Name="RollGap" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="BackFace" Type="decimal" Precision="4" Scale="2" />
+  </EntityType>
+  <EntityType Name="SarcladTestIndex">
+    <Key>
+      <PropertyRef Name="TestIndex" />
+    </Key>
+    <Property Name="TestIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caster" Type="int" />
+    <Property Name="Strand" Type="int" />
+    <Property Name="TestDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Lookups">
+    <Key>
+      <PropertyRef Name="LookupIndex" />
+    </Key>
+    <Property Name="LookupIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caster" Type="int" Nullable="false" />
+    <Property Name="Strand" Type="int" Nullable="false" />
+    <Property Name="GreenLookup" Type="real" />
+    <Property Name="RedLookup" Type="real" />
+    <Property Name="Field" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SegmentSnapshotDetails">
+    <Key>
+      <PropertyRef Name="SegmentSnapShotIndex" />
+    </Key>
+    <Property Name="SegmentSnapShotIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SnapShotIndex" Type="int" />
+    <Property Name="StrandPosition" Type="int" />
+    <Property Name="SegmentName" Type="varchar" MaxLength="30" />
+    <Property Name="DateInstall" Type="datetime" />
+    <Property Name="DaysInService" Type="int" />
+    <Property Name="TonnesCast" Type="real" />
+    <Property Name="SnapshotSource" Type="int" />
+  </EntityType>
+  <EntityType Name="SegmentSnapShotIndex">
+    <Key>
+      <PropertyRef Name="SnapShotIndex" />
+    </Key>
+    <Property Name="SnapShotIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caster" Type="int" />
+    <Property Name="Strand" Type="int" />
+    <Property Name="SnapShotDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="StrandConfig">
+    <Key>
+      <PropertyRef Name="Caster" />
+      <PropertyRef Name="StrandPosition" />
+    </Key>
+    <Property Name="Caster" Type="int" Nullable="false" />
+    <Property Name="StrandPosition" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="15" />
+    <Property Name="PlannedTonnage" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="NeedsReplacingTonnage" Type="decimal" Precision="18" Scale="4" />
+  </EntityType>
+  <EntityType Name="Assessment">
+    <Key>
+      <PropertyRef Name="SPAssessIndex" />
+    </Key>
+    <Property Name="SPAssessIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SpIndex" Type="int" />
+    <Property Name="FSP" Type="real" />
+    <Property Name="CLTechnical" Type="real" />
+    <Property Name="CLReported" Type="int" />
+    <Property Name="CLLocation" Type="varchar" MaxLength="30" />
+    <Property Name="OffCornerCrack" Type="int" />
+    <Property Name="HalfwayRadialStreak" Type="int" />
+    <Property Name="EdgeCrack" Type="varchar" MaxLength="10" />
+    <Property Name="TriplePointCrack" Type="int" />
+    <Property Name="SpeedRestrictions" Type="text" />
+    <Property Name="SlittingICRestrictions" Type="text" />
+    <Property Name="FurtherComments" Type="text" />
+    <Property Name="IC1" Type="int" />
+    <Property Name="IC2" Type="int" />
+    <Property Name="IC3" Type="int" />
+    <Property Name="IC4" Type="int" />
+    <Property Name="IC5" Type="int" />
+    <Property Name="IC6" Type="int" />
+    <Property Name="IC7" Type="int" />
+    <Property Name="IC8" Type="int" />
+    <Property Name="IC9" Type="int" />
+    <Property Name="IC10" Type="int" />
+    <Property Name="IC11" Type="int" />
+    <Property Name="IC12" Type="int" />
+    <Property Name="IC13" Type="int" />
+    <Property Name="IC14" Type="int" />
+    <Property Name="IC15" Type="int" />
+    <Property Name="IC16" Type="int" />
+  </EntityType>
+  <EntityType Name="Requests">
+    <Key>
+      <PropertyRef Name="SPIndex" />
+    </Key>
+    <Property Name="SPIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="HNS" Type="int" />
+    <Property Name="SlabNumber" Type="int" />
+    <Property Name="Caster" Type="int" />
+    <Property Name="StrandNumber" Type="int" />
+    <Property Name="DateCast" Type="datetime" />
+    <Property Name="DateNominated" Type="datetime" />
+    <Property Name="SlabGrade" Type="int" />
+    <Property Name="SlabWidth" Type="int" />
+    <Property Name="CastSpeed" Type="real" />
+    <Property Name="Carbon" Type="real" />
+    <Property Name="Sulphur" Type="real" />
+    <Property Name="Phos" Type="real" />
+    <Property Name="Mn" Type="real" />
+    <Property Name="MnSRatio" Type="real" />
+    <Property Name="SPAssessed" Type="int" />
+    <Property Name="SnapShotIndex" Type="int" />
+  </EntityType>
+  <EntityType Name="SprayConfig">
+    <Key>
+      <PropertyRef Name="SprayIndex" />
+    </Key>
+    <Property Name="SprayIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caster" Type="int" />
+    <Property Name="Position" Type="int" />
+    <Property Name="AreaDescription" Type="varchar" MaxLength="15" />
+    <Property Name="ZoneDescription" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="TestDetail">
+    <Key>
+      <PropertyRef Name="WaterTestIndex" />
+      <PropertyRef Name="Position" />
+    </Key>
+    <Property Name="WaterTestIndex" Type="int" Nullable="false" />
+    <Property Name="Position" Type="int" Nullable="false" />
+    <Property Name="TargetFlow" Type="real" />
+    <Property Name="ActualFlow" Type="real" />
+    <Property Name="Status" Type="int" />
+  </EntityType>
+  <EntityType Name="TestIndex">
+    <Key>
+      <PropertyRef Name="WaterTestIndex" />
+    </Key>
+    <Property Name="WaterTestIndex" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Caster" Type="int" />
+    <Property Name="Strand" Type="int" />
+    <Property Name="TestDate" Type="datetime" />
+    <Property Name="Speed" Type="real" />
+    <Property Name="Practice" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <Association Name="Assessment_fk">
+    <End Role="Requests" Type="Self.Requests" Multiplicity="0..1" />
+    <End Role="Assessment" Type="Self.Assessment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Requests">
+        <PropertyRef Name="SPIndex" />
+      </Principal>
+      <Dependent Role="Assessment">
+        <PropertyRef Name="SpIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SarcladTestDetail_fk">
+    <End Role="SarcladTestIndex" Type="Self.SarcladTestIndex" Multiplicity="1" />
+    <End Role="SarcladTestDetail" Type="Self.SarcladTestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SarcladTestIndex">
+        <PropertyRef Name="TestIndex" />
+      </Principal>
+      <Dependent Role="SarcladTestDetail">
+        <PropertyRef Name="TestIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SegmentSnapshotDetails_fk">
+    <End Role="SegmentSnapShotIndex" Type="Self.SegmentSnapShotIndex" Multiplicity="0..1" />
+    <End Role="SegmentSnapshotDetails" Type="Self.SegmentSnapshotDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SegmentSnapShotIndex">
+        <PropertyRef Name="SnapShotIndex" />
+      </Principal>
+      <Dependent Role="SegmentSnapshotDetails">
+        <PropertyRef Name="SnapShotIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TestDetail_fk">
+    <End Role="TestIndex" Type="Self.TestIndex" Multiplicity="1" />
+    <End Role="TestDetail" Type="Self.TestDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TestIndex">
+        <PropertyRef Name="WaterTestIndex" />
+      </Principal>
+      <Dependent Role="TestDetail">
+        <PropertyRef Name="WaterTestIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="GetSarcladDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CMC">
+    <Parameter Name="Caster" Type="int" Mode="In" />
+    <Parameter Name="Strand" Type="int" Mode="In" />
+    <Parameter Name="TestDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetSegmentSnapshotDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CMC">
+    <Parameter Name="Caster" Type="int" Mode="In" />
+    <Parameter Name="Strand" Type="int" Mode="In" />
+    <Parameter Name="SnapshotDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetSPStrandAssessment" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CMC">
+    <Parameter Name="Caster" Type="int" Mode="In" />
+    <Parameter Name="Strand" Type="int" Mode="In" />
+    <Parameter Name="DateCast" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetStrandDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CMC">
+    <Parameter Name="Caster" Type="int" Mode="In" />
+    <Parameter Name="Strand" Type="int" Mode="In" />
+    <Parameter Name="TestDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetStrandSegmentConfig" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CMC">
+    <Parameter Name="Caster" Type="int" Mode="In" />
+    <Parameter Name="Strand" Type="int" Mode="In" />
+    <Parameter Name="SnapShotDate" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="GetSulphutPrintDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="CMC">
+    <Parameter Name="Caster" Type="int" Mode="In" />
+    <Parameter Name="Strand" Type="int" Mode="In" />
+    <Parameter Name="DateCast" Type="datetime" Mode="In" />
+    <Parameter Name="fieldName" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="CMCModelStoreContainer">
+    <EntitySet Name="StrandAssessment" EntityType="Self.StrandAssessment" Schema="CMC" store:Type="Tables" />
+    <EntitySet Name="UnitChange" EntityType="Self.UnitChange" Schema="Planning" store:Type="Tables" />
+    <EntitySet Name="UnitChangeLog" EntityType="Self.UnitChangeLog" Schema="Planning" store:Type="Tables" />
+    <EntitySet Name="SarcladTestDetail" EntityType="Self.SarcladTestDetail" Schema="Sarclad" store:Type="Tables" />
+    <EntitySet Name="SarcladTestIndex" EntityType="Self.SarcladTestIndex" Schema="Sarclad" store:Type="Tables" />
+    <EntitySet Name="Lookups" EntityType="Self.Lookups" Schema="Segment" store:Type="Tables" />
+    <EntitySet Name="SegmentSnapshotDetails" EntityType="Self.SegmentSnapshotDetails" Schema="Segment" store:Type="Tables" />
+    <EntitySet Name="SegmentSnapShotIndex" EntityType="Self.SegmentSnapShotIndex" Schema="Segment" store:Type="Tables" />
+    <EntitySet Name="StrandConfig" EntityType="Self.StrandConfig" Schema="Segment" store:Type="Tables" />
+    <EntitySet Name="Assessment" EntityType="Self.Assessment" Schema="SPrint" store:Type="Tables" />
+    <EntitySet Name="Requests" EntityType="Self.Requests" Schema="SPrint" store:Type="Tables" />
+    <EntitySet Name="SprayConfig" EntityType="Self.SprayConfig" Schema="Water" store:Type="Tables" />
+    <EntitySet Name="TestDetail" EntityType="Self.TestDetail" Schema="Water" store:Type="Tables" />
+    <EntitySet Name="TestIndex" EntityType="Self.TestIndex" Schema="Water" store:Type="Tables" />
+    <AssociationSet Name="Assessment_fk" Association="Self.Assessment_fk">
+      <End Role="Requests" EntitySet="Requests" />
+      <End Role="Assessment" EntitySet="Assessment" />
+    </AssociationSet>
+    <AssociationSet Name="SarcladTestDetail_fk" Association="Self.SarcladTestDetail_fk">
+      <End Role="SarcladTestIndex" EntitySet="SarcladTestIndex" />
+      <End Role="SarcladTestDetail" EntitySet="SarcladTestDetail" />
+    </AssociationSet>
+    <AssociationSet Name="SegmentSnapshotDetails_fk" Association="Self.SegmentSnapshotDetails_fk">
+      <End Role="SegmentSnapShotIndex" EntitySet="SegmentSnapShotIndex" />
+      <End Role="SegmentSnapshotDetails" EntitySet="SegmentSnapshotDetails" />
+    </AssociationSet>
+    <AssociationSet Name="TestDetail_fk" Association="Self.TestDetail_fk">
+      <End Role="TestIndex" EntitySet="TestIndex" />
+      <End Role="TestDetail" EntitySet="TestDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

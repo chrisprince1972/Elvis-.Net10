@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ElvisDBModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ElvisDBModelStoreContainer" />
+  <Function Name="GetCasterTotalsByShiftForDay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+    <Parameter Name="shiftStartDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetCasterTotalsByShiftForWeek" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+    <Parameter Name="productionDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetDailyActualCasterHeats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+    <Parameter Name="scheduleDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetDailyActualCasterHeats7AM" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+    <Parameter Name="scheduleDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetDailyPlannedCasterHeats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+    <Parameter Name="scheduleDate" Type="datetime" Mode="In" />
+    <Parameter Name="startHour" Type="int" Mode="In" />
+    <Parameter Name="planHour" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetDayShiftPlan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+    <Parameter Name="productionDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetDayShiftPlanByCaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+    <Parameter Name="productionDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetNightShiftPlan" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+    <Parameter Name="productionDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetNightShiftPlanByCaster" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Client">
+    <Parameter Name="productionDate" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="GetHNS" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Config" />
+  <Function Name="GetParameter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Config">
+    <Parameter Name="i" Type="int" Mode="In" />
+  </Function>
+  <Function Name="GetRota" ReturnType="varchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="Config">
+    <Parameter Name="t" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="SetParameter" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Config">
+    <Parameter Name="i" Type="int" Mode="In" />
+    <Parameter Name="v" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="TodayDate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="Config" />
+</Schema>

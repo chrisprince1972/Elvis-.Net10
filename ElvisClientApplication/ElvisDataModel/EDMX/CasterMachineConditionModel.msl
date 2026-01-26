@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CMCModelStoreContainer" CdmEntityContainer="CMCEntities">
+    <EntitySetMapping Name="SprayConfigs">
+      <EntityTypeMapping TypeName="CMCModel.SprayConfig">
+        <MappingFragment StoreEntitySet="SprayConfig">
+          <ScalarProperty Name="SprayIndex" ColumnName="SprayIndex" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="AreaDescription" ColumnName="AreaDescription" />
+          <ScalarProperty Name="ZoneDescription" ColumnName="ZoneDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestDetails">
+      <EntityTypeMapping TypeName="CMCModel.TestDetail">
+        <MappingFragment StoreEntitySet="TestDetail">
+          <ScalarProperty Name="WaterTestIndex" ColumnName="WaterTestIndex" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="TargetFlow" ColumnName="TargetFlow" />
+          <ScalarProperty Name="ActualFlow" ColumnName="ActualFlow" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestIndexes">
+      <EntityTypeMapping TypeName="CMCModel.TestIndex">
+        <MappingFragment StoreEntitySet="TestIndex">
+          <ScalarProperty Name="WaterTestIndex" ColumnName="WaterTestIndex" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="Strand" ColumnName="Strand" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="Practice" ColumnName="Practice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetStrandDetail" FunctionName="CMCModel.Store.GetStrandDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CMCModel.GetStrandDetail_Result">
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="Strand" ColumnName="Strand" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="AreaDescription" ColumnName="AreaDescription" />
+          <ScalarProperty Name="ZoneDescription" ColumnName="ZoneDescription" />
+          <ScalarProperty Name="ActualFlow" ColumnName="ActualFlow" />
+          <ScalarProperty Name="TargetFlow" ColumnName="TargetFlow" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="Speed" ColumnName="Speed" />
+          <ScalarProperty Name="Practice" ColumnName="Practice" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="Assessments">
+      <EntityTypeMapping TypeName="CMCModel.Assessment">
+        <MappingFragment StoreEntitySet="Assessment">
+          <ScalarProperty Name="IC16" ColumnName="IC16" />
+          <ScalarProperty Name="IC15" ColumnName="IC15" />
+          <ScalarProperty Name="IC14" ColumnName="IC14" />
+          <ScalarProperty Name="IC13" ColumnName="IC13" />
+          <ScalarProperty Name="IC12" ColumnName="IC12" />
+          <ScalarProperty Name="IC11" ColumnName="IC11" />
+          <ScalarProperty Name="IC10" ColumnName="IC10" />
+          <ScalarProperty Name="IC9" ColumnName="IC9" />
+          <ScalarProperty Name="IC8" ColumnName="IC8" />
+          <ScalarProperty Name="IC7" ColumnName="IC7" />
+          <ScalarProperty Name="IC6" ColumnName="IC6" />
+          <ScalarProperty Name="IC5" ColumnName="IC5" />
+          <ScalarProperty Name="IC4" ColumnName="IC4" />
+          <ScalarProperty Name="IC3" ColumnName="IC3" />
+          <ScalarProperty Name="IC2" ColumnName="IC2" />
+          <ScalarProperty Name="IC1" ColumnName="IC1" />
+          <ScalarProperty Name="FurtherComments" ColumnName="FurtherComments" />
+          <ScalarProperty Name="SlittingICRestrictions" ColumnName="SlittingICRestrictions" />
+          <ScalarProperty Name="SpeedRestrictions" ColumnName="SpeedRestrictions" />
+          <ScalarProperty Name="TriplePointCrack" ColumnName="TriplePointCrack" />
+          <ScalarProperty Name="EdgeCrack" ColumnName="EdgeCrack" />
+          <ScalarProperty Name="HalfwayRadialStreak" ColumnName="HalfwayRadialStreak" />
+          <ScalarProperty Name="OffCornerCrack" ColumnName="OffCornerCrack" />
+          <ScalarProperty Name="CLLocation" ColumnName="CLLocation" />
+          <ScalarProperty Name="CLReported" ColumnName="CLReported" />
+          <ScalarProperty Name="CLTechnical" ColumnName="CLTechnical" />
+          <ScalarProperty Name="FSP" ColumnName="FSP" />
+          <ScalarProperty Name="SpIndex" ColumnName="SpIndex" />
+          <ScalarProperty Name="SPAssessIndex" ColumnName="SPAssessIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Requests">
+      <EntityTypeMapping TypeName="CMCModel.Request">
+        <MappingFragment StoreEntitySet="Requests">
+          <ScalarProperty Name="SnapShotIndex" ColumnName="SnapShotIndex" />
+          <ScalarProperty Name="SPAssessed" ColumnName="SPAssessed" />
+          <ScalarProperty Name="MnSRatio" ColumnName="MnSRatio" />
+          <ScalarProperty Name="Mn" ColumnName="Mn" />
+          <ScalarProperty Name="Phos" ColumnName="Phos" />
+          <ScalarProperty Name="Sulphur" ColumnName="Sulphur" />
+          <ScalarProperty Name="Carbon" ColumnName="Carbon" />
+          <ScalarProperty Name="CastSpeed" ColumnName="CastSpeed" />
+          <ScalarProperty Name="SlabWidth" ColumnName="SlabWidth" />
+          <ScalarProperty Name="SlabGrade" ColumnName="SlabGrade" />
+          <ScalarProperty Name="DateNominated" ColumnName="DateNominated" />
+          <ScalarProperty Name="DateCast" ColumnName="DateCast" />
+          <ScalarProperty Name="StrandNumber" ColumnName="StrandNumber" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="SlabNumber" ColumnName="SlabNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="SPIndex" ColumnName="SPIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetSegmentSnapshotDetails" FunctionName="CMCModel.Store.GetSegmentSnapshotDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CMCModel.GetSegmentSnapshotDetails_Result">
+          <ScalarProperty Name="SnapShotIndex" ColumnName="SnapShotIndex" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="Strand" ColumnName="Strand" />
+          <ScalarProperty Name="SnapShotDate" ColumnName="SnapShotDate" />
+          <ScalarProperty Name="DateInstall" ColumnName="DateInstall" />
+          <ScalarProperty Name="DaysInService" ColumnName="DaysInService" />
+          <ScalarProperty Name="TonnesCast" ColumnName="TonnesCast" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetSarcladDetail" FunctionName="CMCModel.Store.GetSarcladDetail">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CMCModel.GetSarcladDetail_Result">
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="RollGap" ColumnName="RollGap" />
+          <ScalarProperty Name="BackFace" ColumnName="BackFace" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SarcladTestDetails">
+      <EntityTypeMapping TypeName="CMCModel.SarcladTestDetail">
+        <MappingFragment StoreEntitySet="SarcladTestDetail">
+          <ScalarProperty Name="BackFace" ColumnName="BackFace" />
+          <ScalarProperty Name="RollGap" ColumnName="RollGap" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="TestIndex" ColumnName="TestIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetSPStrandAssessment" FunctionName="CMCModel.Store.GetSPStrandAssessment">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CMCModel.GetSPStrandAssessment_Result">
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="StrandNumber" ColumnName="StrandNumber" />
+          <ScalarProperty Name="DateCast" ColumnName="DateCast" />
+          <ScalarProperty Name="SpeedRestrictions" ColumnName="SpeedRestrictions" />
+          <ScalarProperty Name="SlittingICRestrictions" ColumnName="SlittingICRestrictions" />
+          <ScalarProperty Name="FurtherComments" ColumnName="FurtherComments" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="SegmentSnapshotDetails">
+      <EntityTypeMapping TypeName="CMCModel.SegmentSnapshotDetail">
+        <MappingFragment StoreEntitySet="SegmentSnapshotDetails">
+          <ScalarProperty Name="SnapshotSource" ColumnName="SnapshotSource" />
+          <ScalarProperty Name="TonnesCast" ColumnName="TonnesCast" />
+          <ScalarProperty Name="DaysInService" ColumnName="DaysInService" />
+          <ScalarProperty Name="DateInstall" ColumnName="DateInstall" />
+          <ScalarProperty Name="SegmentName" ColumnName="SegmentName" />
+          <ScalarProperty Name="StrandPosition" ColumnName="StrandPosition" />
+          <ScalarProperty Name="SnapShotIndex" ColumnName="SnapShotIndex" />
+          <ScalarProperty Name="SegmentSnapShotIndex" ColumnName="SegmentSnapShotIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SegmentSnapShotIndexes">
+      <EntityTypeMapping TypeName="CMCModel.SegmentSnapShotIndex">
+        <MappingFragment StoreEntitySet="SegmentSnapShotIndex">
+          <ScalarProperty Name="SnapShotDate" ColumnName="SnapShotDate" />
+          <ScalarProperty Name="Strand" ColumnName="Strand" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="SnapShotIndex" ColumnName="SnapShotIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnitChanges">
+      <EntityTypeMapping TypeName="CMCModel.UnitChange">
+        <MappingFragment StoreEntitySet="UnitChange">
+          <ScalarProperty Name="StrandPosition" ColumnName="StrandPosition" />
+          <ScalarProperty Name="ChangeDuration" ColumnName="ChangeDuration" />
+          <ScalarProperty Name="ChangeReason" ColumnName="ChangeReason" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="SegmentToInstall" ColumnName="SegmentToInstall" />
+          <ScalarProperty Name="SegmentToRemove" ColumnName="SegmentToRemove" />
+          <ScalarProperty Name="Strand" ColumnName="Strand" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="ChangeDatestamp" ColumnName="ChangeDatestamp" />
+          <ScalarProperty Name="ChangeIndex" ColumnName="ChangeIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StrandConfigs">
+      <EntityTypeMapping TypeName="CMCModel.StrandConfig">
+        <MappingFragment StoreEntitySet="StrandConfig">
+          <ScalarProperty Name="NeedsReplacingTonnage" ColumnName="NeedsReplacingTonnage" />
+          <ScalarProperty Name="PlannedTonnage" ColumnName="PlannedTonnage" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StrandPosition" ColumnName="StrandPosition" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetStrandSegmentConfig" FunctionName="CMCModel.Store.GetStrandSegmentConfig">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CMCModel.GetStrandSegmentConfig_Result">
+          <ScalarProperty Name="SnapShotIndex" ColumnName="SnapShotIndex" />
+          <ScalarProperty Name="SegmentName" ColumnName="SegmentName" />
+          <ScalarProperty Name="StrandPosition" ColumnName="StrandPosition" />
+          <ScalarProperty Name="DaysInService" ColumnName="DaysInService" />
+          <ScalarProperty Name="TonnesCast" ColumnName="TonnesCast" />
+          <ScalarProperty Name="DateInstall" ColumnName="DateInstall" />
+          <ScalarProperty Name="PlannedTonnage" ColumnName="PlannedTonnage" />
+          <ScalarProperty Name="NeedsReplacingTonnage" ColumnName="NeedsReplacingTonnage" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="StrandAssessments">
+      <EntityTypeMapping TypeName="CMCModel.StrandAssessment">
+        <MappingFragment StoreEntitySet="StrandAssessment">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="CastingSpeed" ColumnName="CastingSpeed" />
+          <ScalarProperty Name="Slitting" ColumnName="Slitting" />
+          <ScalarProperty Name="InternalCritical" ColumnName="InternalCritical" />
+          <ScalarProperty Name="AssessmentDate" ColumnName="AssessmentDate" />
+          <ScalarProperty Name="Strand" ColumnName="Strand" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="Index" ColumnName="Index" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SarcladTestIndexes">
+      <EntityTypeMapping TypeName="CMCModel.SarcladTestIndex">
+        <MappingFragment StoreEntitySet="SarcladTestIndex">
+          <ScalarProperty Name="TestDate" ColumnName="TestDate" />
+          <ScalarProperty Name="Strand" ColumnName="Strand" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="TestIndex" ColumnName="TestIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnitChangeLogs">
+      <EntityTypeMapping TypeName="CMCModel.UnitChangeLog">
+        <MappingFragment StoreEntitySet="UnitChangeLog">
+          <ScalarProperty Name="ChangeReason" ColumnName="ChangeReason" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="SegmentToInstall" ColumnName="SegmentToInstall" />
+          <ScalarProperty Name="SegmentToRemove" ColumnName="SegmentToRemove" />
+          <ScalarProperty Name="Strand" ColumnName="Strand" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="ChangeDatestamp" ColumnName="ChangeDatestamp" />
+          <ScalarProperty Name="ChangeIndex" ColumnName="ChangeIndex" />
+          <ScalarProperty Name="ChangeLogIndex" ColumnName="ChangeLogIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lookups">
+      <EntityTypeMapping TypeName="CMCModel.Lookup">
+        <MappingFragment StoreEntitySet="Lookups">
+          <ScalarProperty Name="Field" ColumnName="Field" />
+          <ScalarProperty Name="RedLookup" ColumnName="RedLookup" />
+          <ScalarProperty Name="GreenLookup" ColumnName="GreenLookup" />
+          <ScalarProperty Name="Strand" ColumnName="Strand" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="LookupIndex" ColumnName="LookupIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="GetSulphutPrintDetails" FunctionName="CMCModel.Store.GetSulphutPrintDetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CMCModel.GetSulphutPrintDetails_Result">
+          <ScalarProperty Name="SPIndex" ColumnName="SPIndex" />
+          <ScalarProperty Name="SlabNumber" ColumnName="SlabNumber" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="StrandNumber" ColumnName="StrandNumber" />
+          <ScalarProperty Name="DateCast" ColumnName="DateCast" />
+          <ScalarProperty Name="SlabGrade" ColumnName="SlabGrade" />
+          <ScalarProperty Name="SlabWidth" ColumnName="SlabWidth" />
+          <ScalarProperty Name="CastSpeed" ColumnName="CastSpeed" />
+          <ScalarProperty Name="IC1" ColumnName="IC1" />
+          <ScalarProperty Name="IC2" ColumnName="IC2" />
+          <ScalarProperty Name="IC3" ColumnName="IC3" />
+          <ScalarProperty Name="IC4" ColumnName="IC4" />
+          <ScalarProperty Name="IC5" ColumnName="IC5" />
+          <ScalarProperty Name="IC6" ColumnName="IC6" />
+          <ScalarProperty Name="IC7" ColumnName="IC7" />
+          <ScalarProperty Name="IC8" ColumnName="IC8" />
+          <ScalarProperty Name="IC9" ColumnName="IC9" />
+          <ScalarProperty Name="IC10" ColumnName="IC10" />
+          <ScalarProperty Name="IC11" ColumnName="IC11" />
+          <ScalarProperty Name="IC12" ColumnName="IC12" />
+          <ScalarProperty Name="IC13" ColumnName="IC13" />
+          <ScalarProperty Name="IC14" ColumnName="IC14" />
+          <ScalarProperty Name="IC15" ColumnName="IC15" />
+          <ScalarProperty Name="IC16" ColumnName="IC16" />
+          <ScalarProperty Name="CLReported" ColumnName="CLReported" />
+          <ScalarProperty Name="CLLocation" ColumnName="CLLocation" />
+          <ScalarProperty Name="GreenLookup" ColumnName="GreenLookup" />
+          <ScalarProperty Name="RedLookup" ColumnName="RedLookup" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EventSchema" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="EventSchemaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Additions" EntityType="EventSchema.Addition" />
+    <EntitySet Name="Analyses" EntityType="EventSchema.Analysis" />
+    <EntitySet Name="CoordFixes" EntityType="EventSchema.CoordFix" />
+    <EntitySet Name="CoordLinkFulls" EntityType="EventSchema.CoordLinkFull" />
+    <EntitySet Name="CoordLocks" EntityType="EventSchema.CoordLock" />
+    <EntitySet Name="DipResults" EntityType="EventSchema.DipResult" />
+    <EntitySet Name="EventLists" EntityType="EventSchema.EventList" />
+    <EntitySet Name="HeatAimAnalysis" EntityType="EventSchema.HeatAimAnalysi" />
+    <EntitySet Name="HeatAimGenerals" EntityType="EventSchema.HeatAimGeneral" />
+    <EntitySet Name="HeatAimGrades" EntityType="EventSchema.HeatAimGrade" />
+    <EntitySet Name="HeatAimTemperatures" EntityType="EventSchema.HeatAimTemperature" />
+    <EntitySet Name="HeatDates" EntityType="EventSchema.HeatDate" />
+    <EntitySet Name="HeatLogs" EntityType="EventSchema.HeatLog" />
+    <EntitySet Name="HM_Stocks" EntityType="EventSchema.HM_Stocks" />
+    <EntitySet Name="NonMetalAnalysis" EntityType="EventSchema.NonMetalAnalysi" />
+    <EntitySet Name="ProgramHistories" EntityType="EventSchema.ProgramHistory" />
+    <EntitySet Name="TIBDelays" EntityType="EventSchema.TIBDelay" />
+    <EntitySet Name="TIBEvents" EntityType="EventSchema.TIBEvent" />
+    <EntitySet Name="Trackings" EntityType="EventSchema.Tracking" />
+    <EntitySet Name="TreatmentTrackings" EntityType="EventSchema.TreatmentTracking" />
+    <EntitySet Name="Weights" EntityType="EventSchema.Weight" />
+    <EntitySet Name="LastProgramNumbers" EntityType="EventSchema.LastProgramNumber" />
+    <EntitySet Name="CoordLinks" EntityType="EventSchema.CoordLink" />
+    <EntitySet Name="ScrapBoxLoads" EntityType="EventSchema.ScrapBoxLoad" />
+    <EntitySet Name="ScrapBoxStatusEvents" EntityType="EventSchema.ScrapBoxStatusEvent" />
+    <EntitySet Name="ScrapDemands" EntityType="EventSchema.ScrapDemand" />
+    <EntitySet Name="TapWeights" EntityType="EventSchema.TapWeight" />
+    <EntitySet Name="Torpedoes" EntityType="EventSchema.Torpedo" />
+    <EntitySet Name="ManInputDays" EntityType="EventSchema.ManInputDay" />
+    <EntitySet Name="TIBDelaysViews" EntityType="EventSchema.TIBDelaysView" />
+    <EntitySet Name="DesulphSkimPercentages" EntityType="EventSchema.DesulphSkimPercentage" />
+  </EntityContainer>
+  <EntityType Name="Addition">
+    <Key>
+      <PropertyRef Name="AddIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AddIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TimeStampGMT" Type="DateTime" />
+    <Property Name="Material" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="RequestWeight" Type="Single" />
+    <Property Name="AddedWeight" Type="Single" />
+    <Property Name="TimeCreated" Type="DateTime" />
+    <Property Name="PointOfCharge" Type="Int32" />
+    <Property Name="Initiator" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="InitiatorType" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Analysis">
+    <Key>
+      <PropertyRef Name="AnalysisIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AnalysisIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="UnitNumber" Type="Int32" />
+    <Property Name="TimeStamp" Type="DateTime" />
+    <Property Name="TimeStampGMT" Type="DateTime" />
+    <Property Name="SampleType" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="MaterialCode" Type="Int32" />
+    <Property Name="LocationCode" Type="Int32" />
+    <Property Name="SubSampleNumber" Type="Int32" />
+    <Property Name="C" Type="Single" />
+    <Property Name="Si" Type="Single" />
+    <Property Name="S" Type="Single" />
+    <Property Name="P" Type="Single" />
+    <Property Name="Mn" Type="Single" />
+    <Property Name="Ni" Type="Single" />
+    <Property Name="Cu" Type="Single" />
+    <Property Name="Sn" Type="Single" />
+    <Property Name="Cr" Type="Single" />
+    <Property Name="As" Type="Single" />
+    <Property Name="Mo" Type="Single" />
+    <Property Name="N2" Type="Single" />
+    <Property Name="AlT" Type="Single" />
+    <Property Name="AlS" Type="Single" />
+    <Property Name="Ti" Type="Single" />
+    <Property Name="B" Type="Single" />
+    <Property Name="Ca" Type="Single" />
+    <Property Name="Ce" Type="Single" />
+    <Property Name="Co" Type="Single" />
+    <Property Name="Nb" Type="Single" />
+    <Property Name="V" Type="Single" />
+    <Property Name="CEV1" Type="Single" />
+    <Property Name="CEV2" Type="Single" />
+    <Property Name="CEV3" Type="Single" />
+    <Property Name="FreeC1" Type="Single" />
+    <Property Name="FreeC2" Type="Single" />
+    <Property Name="XSTi1" Type="Single" />
+    <Property Name="XSTi2" Type="Single" />
+    <Property Name="XSTi3" Type="Single" />
+    <Property Name="AlN2" Type="Single" />
+    <Property Name="CuP" Type="Single" />
+    <Property Name="BN2" Type="Single" />
+    <Property Name="SP" Type="Single" />
+    <Property Name="CUNiCrMoSn" Type="Single" />
+    <Property Name="CrEq" Type="Single" />
+    <Property Name="SiForm" Type="Single" />
+    <Property Name="MnS" Type="Single" />
+    <Property Name="MnSi" Type="Single" />
+    <Property Name="FreeC3" Type="Single" />
+    <Property Name="Fe" Type="Single" />
+    <Property Name="Liquidus" Type="Single" />
+    <Property Name="ForDebugging" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="TimeCreated" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="CoordFix">
+    <Key>
+      <PropertyRef Name="FixDate" />
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="FixDate" Type="DateTime" Nullable="false" />
+    <Property Name="HEAT_NUMBER" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" />
+    <Property Name="TimeStampGMT" Type="DateTime" />
+    <Property Name="PROGRAM_NUMBER" Type="Int16" />
+    <Property Name="GRADE_1" Type="Int16" />
+    <Property Name="GRADE_2" Type="Int16" />
+    <Property Name="VESSEL_NUMBER" Type="Int16" />
+    <Property Name="STEEL_LADLE_NUMBER" Type="Int16" />
+    <Property Name="SS_UNIT" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="CASTER_NUMBER" Type="Int16" />
+    <Property Name="PLANNED_POUR_TIME" Type="DateTime" />
+    <Property Name="PLANNED_END_DESULPH_TIME" Type="DateTime" />
+    <Property Name="PLANNED_CHARGE_TIME" Type="DateTime" />
+    <Property Name="PLANNED_TAP_TIME" Type="DateTime" />
+    <Property Name="ACTUAL_TAP_TIME" Type="DateTime" />
+    <Property Name="PLANNED_END_SS_TIME" Type="DateTime" />
+    <Property Name="PLANNED_DWELL_TIME" Type="Int16" />
+    <Property Name="PLANNED_START_CAST_TIME" Type="DateTime" />
+    <Property Name="PLANNED_END_CAST_TIME" Type="DateTime" />
+    <Property Name="COMBINED_WIDTH" Type="Int16" />
+    <Property Name="CAST_DURATION" Type="Int16" />
+    <Property Name="CASTING_RATE" Type="Double" />
+    <Property Name="CASTING_SPEED" Type="Double" />
+    <Property Name="COMMENTS" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="UPDATE_TIME" Type="DateTime" />
+    <Property Name="LADLE_AIM_TEMP" Type="Double" />
+    <Property Name="Release_Temperature" Type="Single" />
+    <Property Name="Aim_Ladle_Temperature" Type="Single" />
+  </EntityType>
+  <EntityType Name="CoordLinkFull">
+    <Key>
+      <PropertyRef Name="ScheduleIndex" />
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="ScheduleIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HEAT_NUMBER" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" />
+    <Property Name="TimeStampGMT" Type="DateTime" />
+    <Property Name="PROGRAM_NUMBER" Type="Int16" />
+    <Property Name="GRADE_1" Type="Int16" />
+    <Property Name="GRADE_2" Type="Int16" />
+    <Property Name="VESSEL_NUMBER" Type="Int16" />
+    <Property Name="STEEL_LADLE_NUMBER" Type="Int16" />
+    <Property Name="SS_UNIT" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="CASTER_NUMBER" Type="Int16" />
+    <Property Name="PLANNED_POUR_TIME" Type="DateTime" />
+    <Property Name="PLANNED_END_DESULPH_TIME" Type="DateTime" />
+    <Property Name="PLANNED_CHARGE_TIME" Type="DateTime" />
+    <Property Name="PLANNED_TAP_TIME" Type="DateTime" />
+    <Property Name="ACTUAL_TAP_TIME" Type="DateTime" />
+    <Property Name="PLANNED_END_SS_TIME" Type="DateTime" />
+    <Property Name="PLANNED_DWELL_TIME" Type="Int16" />
+    <Property Name="PLANNED_START_CAST_TIME" Type="DateTime" />
+    <Property Name="PLANNED_END_CAST_TIME" Type="DateTime" />
+    <Property Name="COMBINED_WIDTH" Type="Int16" />
+    <Property Name="CAST_DURATION" Type="Int16" />
+    <Property Name="CASTING_RATE" Type="Double" />
+    <Property Name="CASTING_SPEED" Type="Double" />
+    <Property Name="COMMENTS" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="UPDATE_TIME" Type="DateTime" />
+    <Property Name="LADLE_AIM_TEMP" Type="Double" />
+    <Property Name="Release_Temperature" Type="Single" />
+    <Property Name="Aim_Ladle_Temperature" Type="Single" />
+  </EntityType>
+  <EntityType Name="CoordLock">
+    <Key>
+      <PropertyRef Name="ScheduleIndex" />
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="ScheduleIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HEAT_NUMBER" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" />
+    <Property Name="TimeStampGMT" Type="DateTime" />
+    <Property Name="PROGRAM_NUMBER" Type="Int16" />
+    <Property Name="GRADE_1" Type="Int16" />
+    <Property Name="GRADE_2" Type="Int16" />
+    <Property Name="VESSEL_NUMBER" Type="Int16" />
+    <Property Name="STEEL_LADLE_NUMBER" Type="Int16" />
+    <Property Name="SS_UNIT" Type="String" MaxLength="10" Unicode="true" FixedLength="false" />
+    <Property Name="CASTER_NUMBER" Type="Int16" />
+    <Property Name="PLANNED_POUR_TIME" Type="DateTime" />
+    <Property Name="PLANNED_END_DESULPH_TIME" Type="DateTime" />
+    <Property Name="PLANNED_CHARGE_TIME" Type="DateTime" />
+    <Property Name="PLANNED_TAP_TIME" Type="DateTime" />
+    <Property Name="ACTUAL_TAP_TIME" Type="DateTime" />
+    <Property Name="PLANNED_END_SS_TIME" Type="DateTime" />
+    <Property Name="PLANNED_DWELL_TIME" Type="Int16" />
+    <Property Name="PLANNED_START_CAST_TIME" Type="DateTime" />
+    <Property Name="PLANNED_END_CAST_TIME" Type="DateTime" />
+    <Property Name="COMBINED_WIDTH" Type="Int16" />
+    <Property Name="CAST_DURATION" Type="Int16" />
+    <Property Name="CASTING_RATE" Type="Double" />
+    <Property Name="CASTING_SPEED" Type="Double" />
+    <Property Name="COMMENTS" Type="String" MaxLength="80" Unicode="true" FixedLength="false" />
+    <Property Name="UPDATE_TIME" Type="DateTime" />
+    <Property Name="LADLE_AIM_TEMP" Type="Double" />
+    <Property Name="Release_Temperature" Type="Single" />
+    <Property Name="Aim_Ladle_Temperature" Type="Single" />
+  </EntityType>
+  <EntityType Name="DipResult">
+    <Key>
+      <PropertyRef Name="DipIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="DipIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+    <Property Name="DipType" Type="Int32" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TimeStampGMT" Type="DateTime" />
+    <Property Name="Temperature" Type="Single" />
+    <Property Name="S" Type="Single" />
+    <Property Name="O2" Type="Single" />
+    <Property Name="Al" Type="Single" />
+    <Property Name="EMF" Type="Single" />
+    <Property Name="Carbon" Type="Single" />
+    <Property Name="TimeCreated" Type="DateTime" />
+    <Property Name="Hydrogen" Type="Single" />
+  </EntityType>
+  <EntityType Name="EventList">
+    <Key>
+      <PropertyRef Name="ListIndex" />
+    </Key>
+    <Property Name="ListIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" />
+    <Property Name="Unit" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TimeStamp" Type="DateTime" />
+    <Property Name="EventType" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="HeatAimAnalysi">
+    <Key>
+      <PropertyRef Name="AimAnalysisIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AimAnalysisIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="ProgramNumber" Type="Int32" />
+    <Property Name="UnitNumber" Type="Int32" />
+    <Property Name="TimeStamp" Type="DateTime" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="C" Type="Single" />
+    <Property Name="Si" Type="Single" />
+    <Property Name="S" Type="Single" />
+    <Property Name="P" Type="Single" />
+    <Property Name="Mn" Type="Single" />
+    <Property Name="Ni" Type="Single" />
+    <Property Name="Cu" Type="Single" />
+    <Property Name="Sn" Type="Single" />
+    <Property Name="Cr" Type="Single" />
+    <Property Name="As" Type="Single" />
+    <Property Name="Mo" Type="Single" />
+    <Property Name="N2" Type="Single" />
+    <Property Name="AlT" Type="Single" />
+    <Property Name="AlS" Type="Single" />
+    <Property Name="Ti" Type="Single" />
+    <Property Name="B" Type="Single" />
+    <Property Name="Ca" Type="Single" />
+    <Property Name="Ce" Type="Single" />
+    <Property Name="Co" Type="Single" />
+    <Property Name="Nb" Type="Single" />
+    <Property Name="V" Type="Single" />
+    <Property Name="CEV1" Type="Single" />
+    <Property Name="CEV2" Type="Single" />
+    <Property Name="CEV3" Type="Single" />
+    <Property Name="FreeC1" Type="Single" />
+    <Property Name="FreeC2" Type="Single" />
+    <Property Name="XSTi1" Type="Single" />
+    <Property Name="XSTi2" Type="Single" />
+    <Property Name="XSTi3" Type="Single" />
+    <Property Name="AlN2" Type="Single" />
+    <Property Name="CuP" Type="Single" />
+    <Property Name="BN2" Type="Single" />
+    <Property Name="SP" Type="Single" />
+    <Property Name="CUNiCrMoSn" Type="Single" />
+    <Property Name="CrEq" Type="Single" />
+    <Property Name="SiForm" Type="Single" />
+    <Property Name="MnS" Type="Single" />
+    <Property Name="MnSi" Type="Single" />
+    <Property Name="FreeC3" Type="Single" />
+    <Property Name="VersionNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HeatAimGeneral">
+    <Key>
+      <PropertyRef Name="AimGenIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AimGenIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="ProgramNumber" Type="Int32" Nullable="false" />
+    <Property Name="CastingTime" Type="Int32" />
+    <Property Name="LiquidusTemperature" Type="Int32" />
+    <Property Name="MaxHMSTreated" Type="Single" />
+    <Property Name="MaxHMSNotTreated" Type="Single" />
+    <Property Name="MaxHMSReTreatReq" Type="Single" />
+    <Property Name="ScrapMix" Type="Int32" />
+    <Property Name="BapCode" Type="Int32" />
+    <Property Name="HMDSTreatmentCode" Type="Int32" />
+    <Property Name="TimeStamp" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="HeatAimGrade">
+    <Key>
+      <PropertyRef Name="AimGradeIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AimGradeIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="ProgramNumber" Type="Int32" />
+    <Property Name="TimeStamp" Type="DateTime" />
+    <Property Name="Grade" Type="Int32" />
+    <Property Name="VersionNumber" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HeatAimTemperature">
+    <Key>
+      <PropertyRef Name="AimTempIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AimTempIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="ProgramNumber" Type="Int32" />
+    <Property Name="UnitNumber" Type="Int32" />
+    <Property Name="TemperatureType" Type="Int32" />
+    <Property Name="Temperature" Type="Int32" />
+  </EntityType>
+  <EntityType Name="HeatDate">
+    <Key>
+      <PropertyRef Name="HeatDateIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="HeatDateIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="TapYear" Type="Int32" />
+    <Property Name="TapWeek" Type="Int32" />
+    <Property Name="TapDay" Type="Int32" />
+    <Property Name="TapShift" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TapRota" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CastYear" Type="Int32" />
+    <Property Name="CastWeek" Type="Int32" />
+    <Property Name="CastDay" Type="Int32" />
+    <Property Name="CastShift" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="CastRota" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="HeatLog">
+    <Key>
+      <PropertyRef Name="ListIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="ListIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="Unit" Type="Int32" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" />
+    <Property Name="EventType" Type="String" MaxLength="1024" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="HM_Stocks">
+    <Key>
+      <PropertyRef Name="HMIndex" />
+    </Key>
+    <Property Name="DATE" Type="DateTime" Nullable="false" />
+    <Property Name="HM_LEVEL" Type="Int32" />
+    <Property Name="BF_OUTPUT" Type="Single" />
+    <Property Name="CASTER_OUTPUT" Type="Single" />
+    <Property Name="cc1_output" Type="Single" />
+    <Property Name="cc2_output" Type="Single" />
+    <Property Name="cc3_output" Type="Single" />
+    <Property Name="BF4_OUTPUT" Type="Single" />
+    <Property Name="BF5_OUTPUT" Type="Single" />
+    <Property Name="HMIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Single" Name="O2Spill" />
+  </EntityType>
+  <EntityType Name="NonMetalAnalysi">
+    <Key>
+      <PropertyRef Name="NMAnalysisIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="NMAnalysisIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="UnitNumber" Type="Int32" />
+    <Property Name="TimeStamp" Type="DateTime" />
+    <Property Name="TimeStampGMT" Type="DateTime" />
+    <Property Name="SampleType" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="MaterialCode" Type="Int32" />
+    <Property Name="LocationCode" Type="Int32" />
+    <Property Name="SubSampleNumber" Type="Int32" />
+    <Property Name="C" Type="Single" />
+    <Property Name="FeO" Type="Single" />
+    <Property Name="TFe" Type="Single" />
+    <Property Name="CaO" Type="Single" />
+    <Property Name="SiO2" Type="Single" />
+    <Property Name="Al2O3" Type="Single" />
+    <Property Name="MgO" Type="Single" />
+    <Property Name="MnO" Type="Single" />
+    <Property Name="P2O5" Type="Single" />
+    <Property Name="S" Type="Single" />
+    <Property Name="VR" Type="Single" />
+    <Property Name="K2O" Type="Single" />
+    <Property Name="Na2O" Type="Single" />
+    <Property Name="Cr2O3" Type="Single" />
+    <Property Name="TiO2" Type="Single" />
+    <Property Name="V2O5" Type="Single" />
+    <Property Name="Fe2O3" Type="Single" />
+    <Property Name="P" Type="Single" />
+    <Property Name="Mn" Type="Single" />
+    <Property Name="Liquidus" Type="Single" />
+    <Property Name="ForDebugging" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="TimeCreated" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="ProgramHistory">
+    <Key>
+      <PropertyRef Name="ProgramIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="ProgramIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="UnitNumber" Type="Int32" />
+    <Property Name="ProgramNumber" Type="Int32" />
+    <Property Name="TimeCreated" Type="DateTime" />
+    <Property Name="TargetGrade" Type="Int32" />
+  </EntityType>
+  <EntityType Name="TIBDelay">
+    <Key>
+      <PropertyRef Name="TibDelayIndex" />
+    </Key>
+    <Property Name="TibDelayIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TibIndex" Type="Int32" Nullable="false" />
+    <Property Name="DelayNumber" Type="Int32" Nullable="false" />
+    <Property Name="DelayStart" Type="DateTime" />
+    <Property Name="DelayEnd" Type="DateTime" />
+    <Property Name="DelayDuration" Type="Int32" />
+    <Property Name="PlantArea" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="DelayReason1" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="DelayReason2" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="DelayReason3" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="DelayReason4" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="UnitGroup" Type="Int32" />
+    <Property Name="DelayClass" Type="Int32" />
+    <Property Name="Category" Type="Int32" />
+    <Property Name="Discipline" Type="Int32" />
+    <Property Name="Comment" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="UserName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="MachineName" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="OEECategory" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="LossType" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="Owner" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ReportingTextLevel1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ReportingTextLevel2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="ObjectDescription" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ObjectCode" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="DamageDescription" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="DamageCode" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="DeviationType" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="CauseText" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="Section" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="ExternalInternal" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="SupplierDownStream" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="NoExtraWork" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FlocDescriptionL3" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FlocNumberL3" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FlocDescriptionL4" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FlocNumberL4" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FlocDescriptionL5" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="FlocNumberL5" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TIBEvent">
+    <Key>
+      <PropertyRef Name="TibIndex" />
+      <PropertyRef Name="UnitNumber" />
+    </Key>
+    <Property Name="TibIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+    <Property Name="HeatNumber" Type="Int32" />
+    <Property Name="HNS" Type="Int32" />
+    <Property Name="ProgramNumber" Type="Int32" />
+    <Property Name="TimeStampStart" Type="DateTime" />
+    <Property Name="TimeStampStartGMT" Type="DateTime" />
+    <Property Name="TimeStampEnd" Type="DateTime" />
+    <Property Name="TimeStampEndGMT" Type="DateTime" />
+    <Property Name="EventStart" Type="DateTime" />
+    <Property Name="EventEnd" Type="DateTime" />
+    <Property Name="TibStatus" Type="Int32" />
+    <Property Name="TibDuration" Type="Int32" />
+    <Property Name="ReportNumber" Type="Int32" />
+    <Property Name="TrackIndex" Type="Int32" />
+    <Property Name="UnitGroup" Type="Int32" />
+    <Property Name="YearNumber" Type="Int32" />
+    <Property Name="WeekNumber" Type="Int32" />
+    <Property Name="DayNumber" Type="Int32" />
+    <Property Name="Shift" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Rota" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Tracking">
+    <Key>
+      <PropertyRef Name="TrackIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="TrackIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+    <Property Name="TimeStampStart" Type="DateTime" Nullable="false" />
+    <Property Name="TimeStampEnd" Type="DateTime" />
+    <Property Name="TimeStampStartGMT" Type="DateTime" />
+    <Property Name="TimeStampEndGMT" Type="DateTime" />
+    <Property Name="UnitTableIndex" Type="Int32" />
+    <Property Name="TimeCreated" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="TreatmentTracking">
+    <Key>
+      <PropertyRef Name="TreatmentIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="TreatmentIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+    <Property Name="TreatmentNumber" Type="Int32" Nullable="false" />
+    <Property Name="TimeStampStart" Type="DateTime" />
+    <Property Name="TimeStampEnd" Type="DateTime" />
+    <Property Name="TimeStampStartGMT" Type="DateTime" />
+    <Property Name="TimeStampEndGMT" Type="DateTime" />
+    <Property Name="UnitTableIndex" Type="Int32" />
+    <Property Name="TimeCreated" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="Weight">
+    <Key>
+      <PropertyRef Name="WeightIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="WeightIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="Int32" Nullable="false" />
+    <Property Name="HNS" Type="Int32" Nullable="false" />
+    <Property Name="UnitNumber" Type="Int32" Nullable="false" />
+    <Property Name="TimeStamp" Type="DateTime" Nullable="false" />
+    <Property Name="TimeStampGMT" Type="DateTime" />
+    <Property Name="Weight1" Type="Single" />
+    <Property Name="TimeCreated" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="LastProgramNumber">
+    <Key>
+      <PropertyRef Name="ProgramIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Type="Int32" Name="ProgramIndex" Nullable="false" />
+    <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+    <Property Type="Int32" Name="HNS" Nullable="false" />
+    <Property Type="Int32" Name="UnitNumber" />
+    <Property Type="Int32" Name="ProgramNumber" />
+    <Property Type="DateTime" Name="TimeCreated" />
+    <Property Type="Int32" Name="TargetGrade" />
+  </EntityType>
+  <EntityType Name="CoordLink">
+    <Key>
+      <PropertyRef Name="ScheduleIndex" />
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Type="Int32" Name="ScheduleIndex" Nullable="false" />
+    <Property Type="Int32" Name="HEAT_NUMBER" Nullable="false" />
+    <Property Type="Int32" Name="HNS" Nullable="false" />
+    <Property Type="DateTime" Name="TimeStamp" />
+    <Property Type="DateTime" Name="TimeStampGMT" />
+    <Property Type="Int16" Name="PROGRAM_NUMBER" />
+    <Property Type="Int16" Name="GRADE_1" />
+    <Property Type="Int16" Name="GRADE_2" />
+    <Property Type="Int16" Name="VESSEL_NUMBER" />
+    <Property Type="Int16" Name="STEEL_LADLE_NUMBER" />
+    <Property Type="String" Name="SS_UNIT" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="Int16" Name="CASTER_NUMBER" />
+    <Property Type="DateTime" Name="PLANNED_POUR_TIME" />
+    <Property Type="DateTime" Name="PLANNED_END_DESULPH_TIME" />
+    <Property Type="DateTime" Name="PLANNED_CHARGE_TIME" />
+    <Property Type="DateTime" Name="PLANNED_TAP_TIME" />
+    <Property Type="DateTime" Name="ACTUAL_TAP_TIME" />
+    <Property Type="DateTime" Name="PLANNED_END_SS_TIME" />
+    <Property Type="Int16" Name="PLANNED_DWELL_TIME" />
+    <Property Type="DateTime" Name="PLANNED_START_CAST_TIME" />
+    <Property Type="DateTime" Name="PLANNED_END_CAST_TIME" />
+    <Property Type="Int16" Name="COMBINED_WIDTH" />
+    <Property Type="Int16" Name="CAST_DURATION" />
+    <Property Type="Double" Name="CASTING_RATE" />
+    <Property Type="Double" Name="CASTING_SPEED" />
+    <Property Type="String" Name="COMMENTS" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="UPDATE_TIME" />
+    <Property Type="Double" Name="LADLE_AIM_TEMP" />
+    <Property Type="Single" Name="Release_Temperature" />
+    <Property Type="Single" Name="Aim_Ladle_Temperature" />
+    <Property Type="Int32" Name="QACastingTime" />
+    <Property Type="Int32" Name="HotConnectFlag" />
+  </EntityType>
+  <EntityType Name="ScrapBoxLoad">
+    <Key>
+      <PropertyRef Name="ScrapBoxLoadID" />
+    </Key>
+    <Property Type="Int32" Name="ScrapBoxLoadID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+    <Property Type="Int32" Name="HNS" Nullable="false" />
+    <Property Type="DateTime" Name="ScrapBoxLoadTimeStamp" Nullable="false" />
+    <Property Type="DateTime" Name="ScrapBoxLoadTimeStampGMT" Nullable="false" />
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+    <Property Type="Single" Name="TotalScrapLoadedWeight" Nullable="false" />
+    <Property Type="Int32" Name="ScrapBoxTypeID" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ScrapBoxStatusEvent">
+    <Key>
+      <PropertyRef Name="ScrapBoxStatusEventID" />
+    </Key>
+    <Property Type="Int32" Name="ScrapBoxStatusEventID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="ScrapEventTimeStamp" />
+    <Property Type="DateTime" Name="ScrapEventTimeStampGMT" />
+    <Property Type="Int32" Name="HeatNumber" />
+    <Property Type="Int32" Name="HNS" Nullable="false" />
+    <Property Type="Int32" Name="ScrapEventTypeID" Nullable="false" />
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ScrapDemand">
+    <Key>
+      <PropertyRef Name="ScrapDemandID" />
+    </Key>
+    <Property Type="Int32" Name="ScrapDemandID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+    <Property Type="Int32" Name="HNS" Nullable="false" />
+    <Property Type="DateTime" Name="TimeStamp" Nullable="false" />
+    <Property Type="String" Name="MaterialCode" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="DemandWeight" />
+  </EntityType>
+  <EntityType Name="TapWeight">
+    <Key>
+      <PropertyRef Name="TapWeightID" />
+    </Key>
+    <Property Type="Int32" Name="TapWeightID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+    <Property Type="Int32" Name="HNS" Nullable="false" />
+    <Property Type="Int32" Name="UnitID" Nullable="false" />
+    <Property Type="DateTime" Name="EventTime" />
+    <Property Type="DateTime" Name="EventTimeGMT" />
+    <Property Type="Int32" Name="LadleNumber" />
+    <Property Type="Single" Name="TapWeight1" />
+    <Property Type="Single" Name="TapTemperature" />
+  </EntityType>
+  <EntityType Name="Torpedo">
+    <Key>
+      <PropertyRef Name="TorpedoID" />
+    </Key>
+    <Property Type="Int64" Name="TorpedoID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="HNS" Nullable="false" />
+    <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+    <Property Type="Int32" Name="UnitID" />
+    <Property Type="Int32" Name="TorpedoNumber" Nullable="false" />
+    <Property Type="Int16" Name="HMLadleNumber" />
+    <Property Type="Int32" Name="FirstCastIn" />
+    <Property Type="DateTime" Name="StartBfPourTime" />
+    <Property Type="DateTime" Name="StartBfPourTimeGMT" />
+    <Property Type="Int16" Name="BfNumber" />
+    <Property Type="Int16" Name="NumberOfCastsInTorpedo" />
+    <Property Type="Single" Name="IronC" />
+    <Property Type="Single" Name="IronSi" />
+    <Property Type="Single" Name="IronS" />
+    <Property Type="Single" Name="IronP" />
+    <Property Type="Single" Name="IronMn" />
+    <Property Type="Single" Name="IronTi" />
+    <Property Type="Single" Name="IronN2" />
+    <Property Type="Single" Name="RunnerTemperature" />
+    <Property Type="Single" Name="EstimatedWeight" />
+    <Property Type="Single" Name="TheoreticalEmptyWeight" />
+    <Property Type="Int32" Name="HMPourStation" />
+    <Property Type="DateTime" Name="PourStationTime" />
+    <Property Type="DateTime" Name="PourStationTimeGMT" />
+    <Property Type="DateTime" Name="TimePluggedIn" />
+    <Property Type="DateTime" Name="TimePluggedInGMT" />
+    <Property Type="DateTime" Name="TimeUnplugged" />
+    <Property Type="DateTime" Name="TimeUnpluggedGMT" />
+    <Property Type="Single" Name="TotalPouredWeight" />
+  </EntityType>
+  <EntityType Name="ManInputDay">
+    <Key>
+      <PropertyRef Name="DayDateIndex" />
+    </Key>
+    <Property Type="Int32" Name="DayDateIndex" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="DayDate" Nullable="false" />
+    <Property Type="Single" Name="BFOutput" />
+    <Property Type="Int32" Name="OPPracticeIndex" />
+  </EntityType>
+  <EntityType Name="TIBDelaysView">
+    <Key>
+      <PropertyRef Name="TibIndex" />
+      <PropertyRef Name="DelayNumber" />
+      <PropertyRef Name="TibDelayIndex" />
+    </Key>
+    <Property Type="Int32" Name="TibIndex" Nullable="false" />
+    <Property Type="Int32" Name="DelayNumber" Nullable="false" />
+    <Property Type="DateTime" Name="DelayStart" />
+    <Property Type="DateTime" Name="DelayEnd" />
+    <Property Type="Int32" Name="DelayDuration" />
+    <Property Type="String" Name="PlantArea" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DelayReason1" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DelayReason2" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DelayReason3" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DelayReason4" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="UnitGroup" />
+    <Property Type="Int32" Name="DelayClass" />
+    <Property Type="Int32" Name="Category" />
+    <Property Type="Int32" Name="Discipline" />
+    <Property Type="String" Name="Comment" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIBClassText" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TIBDisText" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="TibDelayIndex" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DesulphSkimPercentage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="StationNumber" Nullable="false" />
+    <Property Type="DateTime" Name="DateTimeStamp" Nullable="false" />
+    <Property Type="Int32" Name="HeatNumber" Nullable="false" />
+    <Property Type="Double" Name="SkimPercentage" Nullable="false" />
+    <Property Type="Int32" Name="UnitNumber" annotation:StoreGeneratedPattern="Computed" />
+    <Property Type="Int32" Name="HNS" />
+  </EntityType>
+</Schema>

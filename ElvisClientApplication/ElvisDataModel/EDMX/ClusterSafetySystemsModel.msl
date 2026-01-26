@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WW_SafetySystemsModelStoreContainer" CdmEntityContainer="ClusterWW_SafetySystemsModel">
+    <EntitySetMapping Name="SAS_NM_DataWithDateAndTimeJoinedForElvis">
+      <EntityTypeMapping TypeName="WW_SafetySystemsModel.SAS_NM_DataWithDateAndTimeJoinedForElvis">
+        <MappingFragment StoreEntitySet="SAS_NM_DataWithDateAndTimeJoinedForElvis">
+          <ScalarProperty Name="MPriority" ColumnName="MPriority" />
+          <ScalarProperty Name="NoteNumber" ColumnName="NoteNumber" />
+          <ScalarProperty Name="NoteYesNo" ColumnName="NoteYesNo" />
+          <ScalarProperty Name="Contained" ColumnName="Contained" />
+          <ScalarProperty Name="report_type" ColumnName="report_type" />
+          <ScalarProperty Name="Nearmiss_type" ColumnName="Nearmiss_type" />
+          <ScalarProperty Name="Closed_by_id" ColumnName="Closed_by_id" />
+          <ScalarProperty Name="Priority" ColumnName="Priority" />
+          <ScalarProperty Name="Closed_by_name" ColumnName="Closed_by_name" />
+          <ScalarProperty Name="works_area_id" ColumnName="works_area_id" />
+          <ScalarProperty Name="ROTA" ColumnName="ROTA" />
+          <ScalarProperty Name="OWNER" ColumnName="OWNER" />
+          <ScalarProperty Name="closure_date" ColumnName="closure_date" />
+          <ScalarProperty Name="SEVERITY" ColumnName="SEVERITY" />
+          <ScalarProperty Name="sectionmanagersname" ColumnName="sectionmanagersname" />
+          <ScalarProperty Name="works_area" ColumnName="works_area" />
+          <ScalarProperty Name="Employer" ColumnName="Employer" />
+          <ScalarProperty Name="PersonToldOfRecommendation" ColumnName="PersonToldOfRecommendation" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="SectionManagersComments" ColumnName="SectionManagersComments" />
+          <ScalarProperty Name="SafetyRepsName" ColumnName="SafetyRepsName" />
+          <ScalarProperty Name="SafetyRepsComments" ColumnName="SafetyRepsComments" />
+          <ScalarProperty Name="SupervisorsName" ColumnName="SupervisorsName" />
+          <ScalarProperty Name="InitialActionTaken" ColumnName="InitialActionTaken" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="SiteInspected" ColumnName="SiteInspected" />
+          <ScalarProperty Name="TimeInspected" ColumnName="TimeInspected" />
+          <ScalarProperty Name="DamageToPlant" ColumnName="DamageToPlant" />
+          <ScalarProperty Name="PossibleInjury" ColumnName="PossibleInjury" />
+          <ScalarProperty Name="DescriptionOfAccident" ColumnName="DescriptionOfAccident" />
+          <ScalarProperty Name="InitiatorsName" ColumnName="InitiatorsName" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAS_NM_Actions">
+      <EntityTypeMapping TypeName="WW_SafetySystemsModel.SAS_NM_Actions">
+        <MappingFragment StoreEntitySet="SAS_NM_Actions">
+          <ScalarProperty Name="ACTION_NOTIFICATION" ColumnName="ACTION_NOTIFICATION" />
+          <ScalarProperty Name="ACTION_TARGET" ColumnName="ACTION_TARGET" />
+          <ScalarProperty Name="ACTION_COMPLETE" ColumnName="ACTION_COMPLETE" />
+          <ScalarProperty Name="ACTION_STATUS" ColumnName="ACTION_STATUS" />
+          <ScalarProperty Name="ACTION_OWNER" ColumnName="ACTION_OWNER" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="NM_INDEX" ColumnName="NM_INDEX" />
+          <ScalarProperty Name="ACTION_INDEX" ColumnName="ACTION_INDEX" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SAS_NM_DataForElvis">
+      <EntityTypeMapping TypeName="WW_SafetySystemsModel.SAS_NM_DataForElvis">
+        <MappingFragment StoreEntitySet="SAS_NM_DataForElvis">
+          <ScalarProperty Name="ownerSectionManagersComments" ColumnName="ownerSectionManagersComments" />
+          <ScalarProperty Name="ownerPriority" ColumnName="ownerPriority" />
+          <ScalarProperty Name="ownerPersonToldOfRecomendation" ColumnName="ownerPersonToldOfRecomendation" />
+          <ScalarProperty Name="ownerName" ColumnName="ownerName" />
+          <ScalarProperty Name="repComments" ColumnName="repComments" />
+          <ScalarProperty Name="repName" ColumnName="repName" />
+          <ScalarProperty Name="managerComments" ColumnName="managerComments" />
+          <ScalarProperty Name="managerInitialActionTaken" ColumnName="managerInitialActionTaken" />
+          <ScalarProperty Name="managerContained" ColumnName="managerContained" />
+          <ScalarProperty Name="managerPriority" ColumnName="managerPriority" />
+          <ScalarProperty Name="managerSeverityCatagory" ColumnName="managerSeverityCatagory" />
+          <ScalarProperty Name="managerSiteInspected" ColumnName="managerSiteInspected" />
+          <ScalarProperty Name="managerName" ColumnName="managerName" />
+          <ScalarProperty Name="initiatorDescriptionOfIncident" ColumnName="initiatorDescriptionOfIncident" />
+          <ScalarProperty Name="initiatorSapNotification" ColumnName="initiatorSapNotification" />
+          <ScalarProperty Name="initiatorReportType" ColumnName="initiatorReportType" />
+          <ScalarProperty Name="initiatorDateAndTime" ColumnName="initiatorDateAndTime" />
+          <ScalarProperty Name="initiatorEmployerAndRota" ColumnName="initiatorEmployerAndRota" />
+          <ScalarProperty Name="initiatorType" ColumnName="initiatorType" />
+          <ScalarProperty Name="initiatorLocation" ColumnName="initiatorLocation" />
+          <ScalarProperty Name="initiatorTrioAllocation" ColumnName="initiatorTrioAllocation" />
+          <ScalarProperty Name="initiatorName" ColumnName="initiatorName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

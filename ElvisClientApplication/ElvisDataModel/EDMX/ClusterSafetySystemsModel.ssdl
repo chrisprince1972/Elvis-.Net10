@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WW_SafetySystemsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="WW_SafetySystemsModelStoreContainer">
+    <EntitySet Name="SAS_NM_Actions" EntityType="WW_SafetySystemsModel.Store.SAS_NM_Actions" store:Type="Tables" Schema="SourceData" />
+    <EntitySet Name="SAS_NM_DataForElvis" EntityType="WW_SafetySystemsModel.Store.SAS_NM_DataForElvis" store:Type="Views" store:Schema="dbo" store:Name="SAS_NM_DataForElvis">
+      <DefiningQuery>SELECT 
+      [SAS_NM_DataForElvis].[ID] AS [ID], 
+      [SAS_NM_DataForElvis].[initiatorName] AS [initiatorName], 
+      [SAS_NM_DataForElvis].[initiatorTrioAllocation] AS [initiatorTrioAllocation], 
+      [SAS_NM_DataForElvis].[initiatorLocation] AS [initiatorLocation], 
+      [SAS_NM_DataForElvis].[initiatorType] AS [initiatorType], 
+      [SAS_NM_DataForElvis].[initiatorEmployerAndRota] AS [initiatorEmployerAndRota], 
+      [SAS_NM_DataForElvis].[initiatorDateAndTime] AS [initiatorDateAndTime], 
+      [SAS_NM_DataForElvis].[initiatorReportType] AS [initiatorReportType], 
+      [SAS_NM_DataForElvis].[initiatorSapNotification] AS [initiatorSapNotification], 
+      [SAS_NM_DataForElvis].[initiatorDescriptionOfIncident] AS [initiatorDescriptionOfIncident], 
+      [SAS_NM_DataForElvis].[managerName] AS [managerName], 
+      [SAS_NM_DataForElvis].[managerSiteInspected] AS [managerSiteInspected], 
+      [SAS_NM_DataForElvis].[managerSeverityCatagory] AS [managerSeverityCatagory], 
+      [SAS_NM_DataForElvis].[managerPriority] AS [managerPriority], 
+      [SAS_NM_DataForElvis].[managerContained] AS [managerContained], 
+      [SAS_NM_DataForElvis].[managerInitialActionTaken] AS [managerInitialActionTaken], 
+      [SAS_NM_DataForElvis].[managerComments] AS [managerComments], 
+      [SAS_NM_DataForElvis].[repName] AS [repName], 
+      [SAS_NM_DataForElvis].[repComments] AS [repComments], 
+      [SAS_NM_DataForElvis].[ownerName] AS [ownerName], 
+      [SAS_NM_DataForElvis].[ownerPersonToldOfRecomendation] AS [ownerPersonToldOfRecomendation], 
+      [SAS_NM_DataForElvis].[ownerPriority] AS [ownerPriority], 
+      [SAS_NM_DataForElvis].[ownerSectionManagersComments] AS [ownerSectionManagersComments]
+      FROM [dbo].[SAS_NM_DataForElvis] AS [SAS_NM_DataForElvis]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SAS_NM_DataWithDateAndTimeJoinedForElvis" EntityType="WW_SafetySystemsModel.Store.SAS_NM_DataWithDateAndTimeJoinedForElvis" store:Type="Views" store:Schema="dbo" store:Name="SAS_NM_DataWithDateAndTimeJoinedForElvis">
+      <DefiningQuery>SELECT 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[ID] AS [ID], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[Date] AS [Date], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[Location] AS [Location], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[InitiatorsName] AS [InitiatorsName], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[DescriptionOfAccident] AS [DescriptionOfAccident], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[PossibleInjury] AS [PossibleInjury], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[DamageToPlant] AS [DamageToPlant], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[TimeInspected] AS [TimeInspected], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[SiteInspected] AS [SiteInspected], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[Comments] AS [Comments], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[InitialActionTaken] AS [InitialActionTaken], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[SupervisorsName] AS [SupervisorsName], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[SafetyRepsComments] AS [SafetyRepsComments], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[SafetyRepsName] AS [SafetyRepsName], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[SectionManagersComments] AS [SectionManagersComments], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[status] AS [status], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[PersonToldOfRecommendation] AS [PersonToldOfRecommendation], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[Employer] AS [Employer], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[works_area] AS [works_area], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[sectionmanagersname] AS [sectionmanagersname], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[SEVERITY] AS [SEVERITY], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[closure_date] AS [closure_date], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[OWNER] AS [OWNER], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[ROTA] AS [ROTA], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[works_area_id] AS [works_area_id], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[Closed_by_name] AS [Closed_by_name], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[Priority] AS [Priority], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[Closed_by_id] AS [Closed_by_id], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[Nearmiss_type] AS [Nearmiss_type], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[report_type] AS [report_type], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[Contained] AS [Contained], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[NoteYesNo] AS [NoteYesNo], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[NoteNumber] AS [NoteNumber], 
+      [SAS_NM_DataWithDateAndTimeJoinedForElvis].[MPriority] AS [MPriority]
+      FROM [dbo].[SAS_NM_DataWithDateAndTimeJoinedForElvis] AS [SAS_NM_DataWithDateAndTimeJoinedForElvis]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="SAS_NM_Actions">
+    <Key>
+      <PropertyRef Name="ACTION_INDEX" />
+    </Key>
+    <Property Name="ACTION_INDEX" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="NM_INDEX" Type="int" />
+    <Property Name="ACTION" Type="varchar" MaxLength="2048" />
+    <Property Name="ACTION_OWNER" Type="varchar" MaxLength="50" />
+    <Property Name="ACTION_STATUS" Type="int" />
+    <Property Name="ACTION_COMPLETE" Type="smalldatetime" />
+    <Property Name="ACTION_TARGET" Type="smalldatetime" />
+    <Property Name="ACTION_NOTIFICATION" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'WW_SafetySystems.dbo.SAS_NM_DataForElvis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="SAS_NM_DataForElvis">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="managerSeverityCatagory" />
+      <PropertyRef Name="managerPriority" />
+      <PropertyRef Name="managerContained" />
+      <PropertyRef Name="ownerPersonToldOfRecomendation" />
+      <PropertyRef Name="ownerPriority" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="initiatorName" Type="varchar" MaxLength="50" />
+    <Property Name="initiatorTrioAllocation" Type="varchar" MaxLength="103" />
+    <Property Name="initiatorLocation" Type="varchar" MaxLength="103" />
+    <Property Name="initiatorType" Type="varchar" MaxLength="50" />
+    <Property Name="initiatorEmployerAndRota" Type="varchar" MaxLength="63" />
+    <Property Name="initiatorDateAndTime" Type="datetime" />
+    <Property Name="initiatorReportType" Type="varchar" MaxLength="18" />
+    <Property Name="initiatorSapNotification" Type="varchar" MaxLength="62" />
+    <Property Name="initiatorDescriptionOfIncident" Type="text" />
+    <Property Name="managerName" Type="varchar" MaxLength="50" />
+    <Property Name="managerSiteInspected" Type="varchar" MaxLength="13" />
+    <Property Name="managerSeverityCatagory" Type="varchar" Nullable="false" MaxLength="18" />
+    <Property Name="managerPriority" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="managerContained" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="managerInitialActionTaken" Type="text" />
+    <Property Name="managerComments" Type="text" />
+    <Property Name="repName" Type="varchar" MaxLength="50" />
+    <Property Name="repComments" Type="text" />
+    <Property Name="ownerName" Type="varchar" MaxLength="50" />
+    <Property Name="ownerPersonToldOfRecomendation" Type="varchar" Nullable="false" MaxLength="3" />
+    <Property Name="ownerPriority" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="ownerSectionManagersComments" Type="text" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'WW_SafetySystems.dbo.SAS_NM_DataWithDateAndTimeJoinedForElvis' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="SAS_NM_DataWithDateAndTimeJoinedForElvis">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="PossibleInjury" />
+      <PropertyRef Name="DamageToPlant" />
+      <PropertyRef Name="SiteInspected" />
+      <PropertyRef Name="PersonToldOfRecommendation" />
+      <PropertyRef Name="Contained" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="InitiatorsName" Type="varchar" MaxLength="50" />
+    <Property Name="DescriptionOfAccident" Type="text" />
+    <Property Name="PossibleInjury" Type="bit" Nullable="false" />
+    <Property Name="DamageToPlant" Type="bit" Nullable="false" />
+    <Property Name="TimeInspected" Type="datetime" />
+    <Property Name="SiteInspected" Type="bit" Nullable="false" />
+    <Property Name="Comments" Type="text" />
+    <Property Name="InitialActionTaken" Type="text" />
+    <Property Name="SupervisorsName" Type="varchar" MaxLength="50" />
+    <Property Name="SafetyRepsComments" Type="text" />
+    <Property Name="SafetyRepsName" Type="varchar" MaxLength="50" />
+    <Property Name="SectionManagersComments" Type="text" />
+    <Property Name="status" Type="tinyint" />
+    <Property Name="PersonToldOfRecommendation" Type="bit" Nullable="false" />
+    <Property Name="Employer" Type="varchar" MaxLength="50" />
+    <Property Name="works_area" Type="varchar" MaxLength="50" />
+    <Property Name="sectionmanagersname" Type="varchar" MaxLength="50" />
+    <Property Name="SEVERITY" Type="int" />
+    <Property Name="closure_date" Type="smalldatetime" />
+    <Property Name="OWNER" Type="varchar" MaxLength="50" />
+    <Property Name="ROTA" Type="varchar" MaxLength="10" />
+    <Property Name="works_area_id" Type="int" />
+    <Property Name="Closed_by_name" Type="varchar" MaxLength="50" />
+    <Property Name="Priority" Type="tinyint" />
+    <Property Name="Closed_by_id" Type="varchar" MaxLength="50" />
+    <Property Name="Nearmiss_type" Type="varchar" MaxLength="50" />
+    <Property Name="report_type" Type="int" />
+    <Property Name="Contained" Type="bit" Nullable="false" />
+    <Property Name="NoteYesNo" Type="varchar" MaxLength="10" />
+    <Property Name="NoteNumber" Type="varchar" MaxLength="30" />
+    <Property Name="MPriority" Type="tinyint" />
+  </EntityType>
+</Schema>

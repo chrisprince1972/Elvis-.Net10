@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OasisSchema" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="OasisSchemaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="RFTDatas" EntityType="OasisSchema.RFTData" />
+    <EntitySet Name="SlabStocks" EntityType="OasisSchema.SlabStock" />
+    <EntitySet Name="HotConnects" EntityType="OasisSchema.HotConnect" />
+  </EntityContainer>
+  <EntityType Name="RFTData">
+    <Key>
+      <PropertyRef Name="RFTIndex" />
+    </Key>
+    <Property Name="RFTIndex" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RFTDate" Type="DateTime" />
+    <Property Name="SlabsMade" Type="Int32" />
+    <Property Name="SlabsMadeSchedule" Type="Int32" />
+    <Property Name="ShedGradeOk" Type="Int32" />
+    <Property Name="ShedWidthOk" Type="Int32" />
+    <Property Name="ShedLengthOk" Type="Int32" />
+    <Property Name="SlabsRFT" Type="Int32" />
+    <Property Name="SlabsAppliedTGrade" Type="Int32" />
+    <Property Name="TonnesMade" Type="Single" />
+    <Property Name="TonnesMadeSchedule" Type="Single" />
+    <Property Name="TonnesGradeOk" Type="Single" />
+    <Property Name="TonnesWidthOk" Type="Single" />
+    <Property Name="TonnesLengthOk" Type="Single" />
+    <Property Name="TonnesRFT" Type="Single" />
+    <Property Name="TonnesAppliedTGrade" Type="Single" />
+    <Property Name="CC1SlabsMade" Type="Int32" />
+    <Property Name="CC1SlabsMadeSchedule" Type="Int32" />
+    <Property Name="CC1ShedGradeOk" Type="Int32" />
+    <Property Name="CC1ShedWidthOk" Type="Int32" />
+    <Property Name="CC1ShedLengthOk" Type="Int32" />
+    <Property Name="CC1SlabsRFT" Type="Int32" />
+    <Property Name="CC1SlabsAppliedTGrade" Type="Int32" />
+    <Property Name="CC1TonnesMade" Type="Single" />
+    <Property Name="CC1TonnesMadeSchedule" Type="Single" />
+    <Property Name="CC1TonnesGradeOk" Type="Single" />
+    <Property Name="CC1TonnesWidthOk" Type="Single" />
+    <Property Name="CC1TonnesLengthOk" Type="Single" />
+    <Property Name="CC1TonnesRFT" Type="Single" />
+    <Property Name="CC1TonnesAppliedTGrade" Type="Single" />
+    <Property Name="CC2SlabsMade" Type="Int32" />
+    <Property Name="CC2SlabsMadeSchedule" Type="Int32" />
+    <Property Name="CC2ShedGradeOk" Type="Int32" />
+    <Property Name="CC2ShedWidthOk" Type="Int32" />
+    <Property Name="CC2ShedLengthOk" Type="Int32" />
+    <Property Name="CC2SlabsRFT" Type="Int32" />
+    <Property Name="CC2SlabsAppliedTGrade" Type="Int32" />
+    <Property Name="CC2TonnesMade" Type="Single" />
+    <Property Name="CC2TonnesMadeSchedule" Type="Single" />
+    <Property Name="CC2TonnesGradeOk" Type="Single" />
+    <Property Name="CC2TonnesWidthOk" Type="Single" />
+    <Property Name="CC2TonnesLengthOk" Type="Single" />
+    <Property Name="CC2TonnesRFT" Type="Single" />
+    <Property Name="CC2TonnesAppliedTGrade" Type="Single" />
+    <Property Name="CC3SlabsMade" Type="Int32" />
+    <Property Name="CC3SlabsMadeSchedule" Type="Int32" />
+    <Property Name="CC3ShedGradeOk" Type="Int32" />
+    <Property Name="CC3ShedWidthOk" Type="Int32" />
+    <Property Name="CC3ShedLengthOk" Type="Int32" />
+    <Property Name="CC3SlabsRFT" Type="Int32" />
+    <Property Name="CC3SlabsAppliedTGrade" Type="Int32" />
+    <Property Name="CC3TonnesMade" Type="Single" />
+    <Property Name="CC3TonnesMadeSchedule" Type="Single" />
+    <Property Name="CC3TonnesGradeOk" Type="Single" />
+    <Property Name="CC3TonnesWidthOk" Type="Single" />
+    <Property Name="CC3TonnesLengthOk" Type="Single" />
+    <Property Name="CC3TonnesRFT" Type="Single" />
+    <Property Name="CC3TonnesAppliedTGrade" Type="Single" />
+  </EntityType>
+  <EntityType Name="SlabStock">
+    <Key>
+      <PropertyRef Name="SSIndex" />
+    </Key>
+    <Property Type="Int32" Name="SSIndex" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="SSDate" />
+    <Property Type="String" Name="LSTD" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LSTT" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Type="Single" Name="SLAB_STOCK" />
+    <Property Type="Single" Name="PT_STOCK" />
+    <Property Type="Single" Name="LL_STOCK" />
+    <Property Type="Single" Name="IW_STOCK" />
+    <Property Type="Single" Name="FREETOROLL" />
+    <Property Type="Single" Name="PROCESSING" />
+    <Property Type="Single" Name="HELD" />
+    <Property Type="Single" Name="APPLIED" />
+    <Property Type="Single" Name="APPLIED_PT" />
+    <Property Type="Single" Name="APPLIED_LL" />
+    <Property Type="Single" Name="UNAPPLIED" />
+    <Property Type="Single" Name="UNAPPLIED_PT" />
+    <Property Type="Single" Name="UNAPPLIED_LL" />
+    <Property Type="Single" Name="CONCESSION" />
+    <Property Type="Single" Name="TAPERED" />
+    <Property Type="Single" Name="ONSCHED" />
+    <Property Type="Single" Name="GRIDDED" />
+    <Property Type="Single" Name="AVE_DWELL" />
+    <Property Type="Single" Name="AVE_EVENTS" />
+  </EntityType>
+  <EntityType Name="HotConnect">
+    <Key>
+      <PropertyRef Name="HCId" />
+    </Key>
+    <Property Type="Int32" Name="HCId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="HeatNumber" />
+    <Property Type="Int32" Name="HNS" />
+    <Property Type="Int32" Name="ProgramNumber" />
+    <Property Type="Int32" Name="HotConnectFlag" />
+    <Property Type="DateTime" Name="LastUpdate" />
+  </EntityType>
+</Schema>

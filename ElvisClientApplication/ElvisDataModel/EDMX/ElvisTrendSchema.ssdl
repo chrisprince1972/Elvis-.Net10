@@ -1,0 +1,898 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TrendSchema.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="TrendSchemaStoreContainer">
+    <EntitySet Name="CasterSum" EntityType="TrendSchema.Store.CasterSum" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="GroupConfig" EntityType="TrendSchema.Store.GroupConfig" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="GroupHighlight" EntityType="TrendSchema.Store.GroupHighlight" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPIActionRules" EntityType="TrendSchema.Store.KPIActionRules" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPIConfig" EntityType="TrendSchema.Store.KPIConfig" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPIConfigShift" EntityType="TrendSchema.Store.KPIConfigShift" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPIData" EntityType="TrendSchema.Store.KPIData" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPIDataMonth" EntityType="TrendSchema.Store.KPIDataMonth" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPIDataShift" EntityType="TrendSchema.Store.KPIDataShift" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPIDataWeek" EntityType="TrendSchema.Store.KPIDataWeek" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPITrendShift" EntityType="TrendSchema.Store.KPITrendShift" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPITrendShiftAnalysis" EntityType="TrendSchema.Store.KPITrendShiftAnalysis" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPITrendShiftCasterStuff" EntityType="TrendSchema.Store.KPITrendShiftCasterStuff" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPITrendShiftQuality" EntityType="TrendSchema.Store.KPITrendShiftQuality" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPITrendShiftSecStuff" EntityType="TrendSchema.Store.KPITrendShiftSecStuff" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPITrendShiftSteelStuff" EntityType="TrendSchema.Store.KPITrendShiftSteelStuff" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPITrendShiftTemps" EntityType="TrendSchema.Store.KPITrendShiftTemps" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPITrendShiftTimes" EntityType="TrendSchema.Store.KPITrendShiftTimes" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="KPITrendShiftWeights" EntityType="TrendSchema.Store.KPITrendShiftWeights" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="LogicTypes" EntityType="TrendSchema.Store.LogicTypes" store:Type="Tables" store:Schema="Trend" store:Name="LogicTypes">
+      <DefiningQuery>SELECT 
+      [LogicTypes].[LogicCode] AS [LogicCode], 
+      [LogicTypes].[RuleDesc] AS [RuleDesc]
+      FROM [Trend].[LogicTypes] AS [LogicTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ParConfig" EntityType="TrendSchema.Store.ParConfig" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="TrendDataAdditions" EntityType="TrendSchema.Store.TrendDataAdditions" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="TrendDataAnalysis" EntityType="TrendSchema.Store.TrendDataAnalysis" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="TrendDataIndex" EntityType="TrendSchema.Store.TrendDataIndex" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="TrendDataProcess" EntityType="TrendSchema.Store.TrendDataProcess" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="TrendDataTemps" EntityType="TrendSchema.Store.TrendDataTemps" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="TrendDataTimes" EntityType="TrendSchema.Store.TrendDataTimes" store:Type="Tables" Schema="Trend" />
+    <EntitySet Name="YieldDataShift" EntityType="TrendSchema.Store.YieldDataShift" store:Type="Tables" Schema="Trend" />
+    <AssociationSet Name="FK_GroupConfig_GroupHighlight" Association="TrendSchema.Store.FK_GroupConfig_GroupHighlight">
+      <End Role="GroupHighlight" EntitySet="GroupHighlight" />
+      <End Role="GroupConfig" EntitySet="GroupConfig" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KPITrendShiftAnalysis_KPITrendShift" Association="TrendSchema.Store.FK_KPITrendShiftAnalysis_KPITrendShift">
+      <End Role="KPITrendShift" EntitySet="KPITrendShift" />
+      <End Role="KPITrendShiftAnalysis" EntitySet="KPITrendShiftAnalysis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KPITrendShiftCasterStuff_KPITrendShift" Association="TrendSchema.Store.FK_KPITrendShiftCasterStuff_KPITrendShift">
+      <End Role="KPITrendShift" EntitySet="KPITrendShift" />
+      <End Role="KPITrendShiftCasterStuff" EntitySet="KPITrendShiftCasterStuff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KPITrendShiftQuality_KPITrendShift" Association="TrendSchema.Store.FK_KPITrendShiftQuality_KPITrendShift">
+      <End Role="KPITrendShift" EntitySet="KPITrendShift" />
+      <End Role="KPITrendShiftQuality" EntitySet="KPITrendShiftQuality" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KPITrendShiftSecStuff_KPITrendShift" Association="TrendSchema.Store.FK_KPITrendShiftSecStuff_KPITrendShift">
+      <End Role="KPITrendShift" EntitySet="KPITrendShift" />
+      <End Role="KPITrendShiftSecStuff" EntitySet="KPITrendShiftSecStuff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KPITrendShiftSteelStuff_KPITrendShift" Association="TrendSchema.Store.FK_KPITrendShiftSteelStuff_KPITrendShift">
+      <End Role="KPITrendShift" EntitySet="KPITrendShift" />
+      <End Role="KPITrendShiftSteelStuff" EntitySet="KPITrendShiftSteelStuff" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KPITrendShiftTemps_KPITrendShift" Association="TrendSchema.Store.FK_KPITrendShiftTemps_KPITrendShift">
+      <End Role="KPITrendShift" EntitySet="KPITrendShift" />
+      <End Role="KPITrendShiftTemps" EntitySet="KPITrendShiftTemps" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KPITrendShiftTimes_KPITrendShift" Association="TrendSchema.Store.FK_KPITrendShiftTimes_KPITrendShift">
+      <End Role="KPITrendShift" EntitySet="KPITrendShift" />
+      <End Role="KPITrendShiftTimes" EntitySet="KPITrendShiftTimes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KPITrendShiftWeights_KPITrendShift" Association="TrendSchema.Store.FK_KPITrendShiftWeights_KPITrendShift">
+      <End Role="KPITrendShift" EntitySet="KPITrendShift" />
+      <End Role="KPITrendShiftWeights" EntitySet="KPITrendShiftWeights" />
+    </AssociationSet>
+    <AssociationSet Name="GroupConfig_fk" Association="TrendSchema.Store.GroupConfig_fk">
+      <End Role="ParConfig" EntitySet="ParConfig" />
+      <End Role="GroupConfig" EntitySet="GroupConfig" />
+    </AssociationSet>
+    <AssociationSet Name="GroupConfig_fk2" Association="TrendSchema.Store.GroupConfig_fk2">
+      <End Role="ParConfig" EntitySet="ParConfig" />
+      <End Role="GroupConfig" EntitySet="GroupConfig" />
+    </AssociationSet>
+    <AssociationSet Name="GroupConfig_fk3" Association="TrendSchema.Store.GroupConfig_fk3">
+      <End Role="ParConfig" EntitySet="ParConfig" />
+      <End Role="GroupConfig" EntitySet="GroupConfig" />
+    </AssociationSet>
+    <AssociationSet Name="GroupConfig_fk4" Association="TrendSchema.Store.GroupConfig_fk4">
+      <End Role="ParConfig" EntitySet="ParConfig" />
+      <End Role="GroupConfig" EntitySet="GroupConfig" />
+    </AssociationSet>
+    <AssociationSet Name="GroupConfig_fk5" Association="TrendSchema.Store.GroupConfig_fk5">
+      <End Role="ParConfig" EntitySet="ParConfig" />
+      <End Role="GroupConfig" EntitySet="GroupConfig" />
+    </AssociationSet>
+    <AssociationSet Name="GroupConfig_fk6" Association="TrendSchema.Store.GroupConfig_fk6">
+      <End Role="ParConfig" EntitySet="ParConfig" />
+      <End Role="GroupConfig" EntitySet="GroupConfig" />
+    </AssociationSet>
+    <AssociationSet Name="KPIData_fk" Association="TrendSchema.Store.KPIData_fk">
+      <End Role="KPIConfig" EntitySet="KPIConfig" />
+      <End Role="KPIData" EntitySet="KPIData" />
+    </AssociationSet>
+    <AssociationSet Name="KPIData_fkW" Association="TrendSchema.Store.KPIData_fkW">
+      <End Role="KPIConfig" EntitySet="KPIConfig" />
+      <End Role="KPIDataWeek" EntitySet="KPIDataWeek" />
+    </AssociationSet>
+    <AssociationSet Name="ParConfig_fk" Association="TrendSchema.Store.ParConfig_fk">
+      <End Role="GroupConfig" EntitySet="GroupConfig" />
+      <End Role="ParConfig" EntitySet="ParConfig" />
+    </AssociationSet>
+    <AssociationSet Name="TrendDataAdditions_fk" Association="TrendSchema.Store.TrendDataAdditions_fk">
+      <End Role="TrendDataIndex" EntitySet="TrendDataIndex" />
+      <End Role="TrendDataAdditions" EntitySet="TrendDataAdditions" />
+    </AssociationSet>
+    <AssociationSet Name="TrendDataAnalysis_fk" Association="TrendSchema.Store.TrendDataAnalysis_fk">
+      <End Role="TrendDataIndex" EntitySet="TrendDataIndex" />
+      <End Role="TrendDataAnalysis" EntitySet="TrendDataAnalysis" />
+    </AssociationSet>
+    <AssociationSet Name="TrendDataProcess_fk" Association="TrendSchema.Store.TrendDataProcess_fk">
+      <End Role="TrendDataIndex" EntitySet="TrendDataIndex" />
+      <End Role="TrendDataProcess" EntitySet="TrendDataProcess" />
+    </AssociationSet>
+    <AssociationSet Name="TrendDataTemps_fk" Association="TrendSchema.Store.TrendDataTemps_fk">
+      <End Role="TrendDataIndex" EntitySet="TrendDataIndex" />
+      <End Role="TrendDataTemps" EntitySet="TrendDataTemps" />
+    </AssociationSet>
+    <AssociationSet Name="TrendDataTimes_fk" Association="TrendSchema.Store.TrendDataTimes_fk">
+      <End Role="TrendDataIndex" EntitySet="TrendDataIndex" />
+      <End Role="TrendDataTimes" EntitySet="TrendDataTimes" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="CasterSum">
+    <Key>
+      <PropertyRef Name="SumDate" />
+    </Key>
+    <Property Name="SumDate" Type="datetime" Nullable="false" />
+    <Property Name="CC1SteelInMould" Type="real" />
+    <Property Name="CC2SteelInMould" Type="real" />
+    <Property Name="CC3SteelInMould" Type="real" />
+    <Property Name="CC1SpeedRatio" Type="real" />
+    <Property Name="CC2SpeedRatio" Type="real" />
+    <Property Name="CC3SpeedRatio" Type="real" />
+  </EntityType>
+  <EntityType Name="GroupConfig">
+    <Key>
+      <PropertyRef Name="GroupIndex" />
+    </Key>
+    <Property Name="GroupIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupDesc" Type="varchar" MaxLength="100" />
+    <Property Name="DisplayCode" Type="int" />
+    <Property Name="GroupSort" Type="int" />
+    <Property Name="Par1" Type="int" />
+    <Property Name="Par2" Type="int" />
+    <Property Name="Par3" Type="int" />
+    <Property Name="Par4" Type="int" />
+    <Property Name="Par5" Type="int" />
+    <Property Name="Par6" Type="int" />
+    <Property Name="DefaultHighlight" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GroupHighlight">
+    <Key>
+      <PropertyRef Name="HighlightID" />
+    </Key>
+    <Property Name="HighlightID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="KPIActionRules">
+    <Key>
+      <PropertyRef Name="KPIActionIndex" />
+    </Key>
+    <Property Name="KPIActionIndex" Type="int" Nullable="false" />
+    <Property Name="KPIActionDescription" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="KPIConfig">
+    <Key>
+      <PropertyRef Name="KPIINdex" />
+    </Key>
+    <Property Name="KPIINdex" Type="int" Nullable="false" />
+    <Property Name="KPILevel" Type="real" />
+    <Property Name="KPIDescription" Type="varchar" MaxLength="100" />
+    <Property Name="Minimum" Type="real" />
+    <Property Name="Maximum" Type="real" />
+    <Property Name="KPISubLevel" Type="int" />
+    <Property Name="KPIActionIndex" Type="int" />
+    <Property Name="KPIActionGroup" Type="int" />
+    <Property Name="ShowValue" Type="bit" Nullable="false" />
+    <Property Name="ToolTip" Type="varchar" MaxLength="50" />
+    <Property Name="Dashboard" Type="real" />
+    <Property Name="StringFormat" Type="varchar" MaxLength="20" />
+    <Property Name="KPIInfo" Type="varchar" MaxLength="1500" />
+  </EntityType>
+  <EntityType Name="KPIConfigShift">
+    <Key>
+      <PropertyRef Name="KPIINdex" />
+    </Key>
+    <Property Name="KPIINdex" Type="int" Nullable="false" />
+    <Property Name="KPILevel" Type="real" />
+    <Property Name="KPIDescription" Type="varchar" MaxLength="100" />
+    <Property Name="Minimum" Type="real" />
+    <Property Name="Maximum" Type="real" />
+    <Property Name="KPISubLevel" Type="int" />
+    <Property Name="KPIActionIndex" Type="int" />
+    <Property Name="KPIActionGroup" Type="int" />
+    <Property Name="ShowValue" Type="bit" Nullable="false" />
+    <Property Name="ToolTip" Type="varchar" MaxLength="50" />
+    <Property Name="Dashboard" Type="real" />
+    <Property Name="StringFormat" Type="varchar" MaxLength="20" />
+    <Property Name="KPIInfo" Type="varchar" MaxLength="1500" />
+  </EntityType>
+  <EntityType Name="KPIData">
+    <Key>
+      <PropertyRef Name="KPIDate" />
+      <PropertyRef Name="KPIIndex" />
+    </Key>
+    <Property Name="KPIDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="KPIIndex" Type="int" Nullable="false" />
+    <Property Name="KPIValue" Type="real" />
+    <Property Name="KPIStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="KPIDataMonth">
+    <Key>
+      <PropertyRef Name="KPIYear" />
+      <PropertyRef Name="KPIMonth" />
+      <PropertyRef Name="KPIRota" />
+      <PropertyRef Name="KPIIndex" />
+    </Key>
+    <Property Name="KPIYear" Type="int" Nullable="false" />
+    <Property Name="KPIMonth" Type="int" Nullable="false" />
+    <Property Name="KPIRota" Type="varchar" Nullable="false" MaxLength="5" />
+    <Property Name="KPIIndex" Type="int" Nullable="false" />
+    <Property Name="KPIShifts" Type="int" />
+    <Property Name="KPIValue" Type="real" />
+    <Property Name="KPIStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="KPIDataShift">
+    <Key>
+      <PropertyRef Name="KPIDate" />
+      <PropertyRef Name="KPIShift" />
+      <PropertyRef Name="KPIIndex" />
+    </Key>
+    <Property Name="KPIDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="KPIShift" Type="int" Nullable="false" />
+    <Property Name="KPIIndex" Type="int" Nullable="false" />
+    <Property Name="KPIRota" Type="varchar" MaxLength="5" />
+    <Property Name="KPIValue" Type="real" />
+    <Property Name="KPIStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="KPIDataWeek">
+    <Key>
+      <PropertyRef Name="KPIYear" />
+      <PropertyRef Name="KPIWeek" />
+      <PropertyRef Name="KPIIndex" />
+    </Key>
+    <Property Name="KPIYear" Type="int" Nullable="false" />
+    <Property Name="KPIWeek" Type="int" Nullable="false" />
+    <Property Name="KPIDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="KPIIndex" Type="int" Nullable="false" />
+    <Property Name="KPIValue" Type="real" />
+    <Property Name="KPIStatus" Type="int" />
+  </EntityType>
+  <EntityType Name="KPITrendShift">
+    <Key>
+      <PropertyRef Name="TrendKPIShiftId" />
+    </Key>
+    <Property Name="TrendKPIShiftId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="KPIDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="KPIRota" Type="varchar" MaxLength="5" />
+    <Property Name="KPIShift" Type="int" Nullable="false" />
+    <Property Name="KPIYear" Type="int" />
+    <Property Name="KPIWeek" Type="int" />
+    <Property Name="KPIDay" Type="int" />
+  </EntityType>
+  <EntityType Name="KPITrendShiftAnalysis">
+    <Key>
+      <PropertyRef Name="TrendKPIShiftId" />
+    </Key>
+    <Property Name="TrendKPIShiftId" Type="int" Nullable="false" />
+    <Property Name="DeSAimsUnaltered" Type="real" />
+    <Property Name="SlagFeV1" Type="real" />
+    <Property Name="SlagF2V2" Type="real" />
+    <Property Name="COProductV1" Type="real" />
+    <Property Name="COProductV2" Type="real" />
+    <Property Name="EBPhos" Type="real" />
+    <Property Name="N2PickupCC1" Type="real" />
+    <Property Name="N2PickupCC2" Type="real" />
+    <Property Name="N2PickupCC3" Type="real" />
+    <Property Name="N2PickupSec" Type="real" />
+  </EntityType>
+  <EntityType Name="KPITrendShiftCasterStuff">
+    <Key>
+      <PropertyRef Name="TrendKPIShiftId" />
+    </Key>
+    <Property Name="TrendKPIShiftId" Type="int" Nullable="false" />
+    <Property Name="HeatsCast" Type="real" />
+    <Property Name="HeatCastCC1" Type="real" />
+    <Property Name="HeatCastCC2" Type="real" />
+    <Property Name="HeatCastCC3" Type="real" />
+    <Property Name="MetalInMouldPCTCC1" Type="real" />
+    <Property Name="MetalInMouldPCTCC2" Type="real" />
+    <Property Name="MetalInMouldPCTCC3" Type="real" />
+    <Property Name="SpeedRatioPctCC1" Type="real" />
+    <Property Name="SpeedRatioPctCC2" Type="real" />
+    <Property Name="SpeedRatioPctCC3" Type="real" />
+    <Property Name="CastRateCC1" Type="real" />
+    <Property Name="CastRateCC2" Type="real" />
+    <Property Name="CastRateCC3" Type="real" />
+    <Property Name="TundishHeatsCC1" Type="real" />
+    <Property Name="TundishHeatsCC2" Type="real" />
+    <Property Name="TundishHeatsCC3" Type="real" />
+    <Property Name="MachineConditionCC1" Type="real" />
+    <Property Name="MachineConditionCC2" Type="real" />
+    <Property Name="MachineConditionCC3" Type="real" />
+  </EntityType>
+  <EntityType Name="KPITrendShiftQuality">
+    <Key>
+      <PropertyRef Name="TrendKPIShiftId" />
+    </Key>
+    <Property Name="TrendKPIShiftId" Type="int" Nullable="false" />
+    <Property Name="Miscasts" Type="real" />
+    <Property Name="MiscastManufacturingPri" Type="real" />
+    <Property Name="MiscastTechnicalPri" Type="real" />
+    <Property Name="MiscastsEngineeringPri" Type="real" />
+    <Property Name="MiscastManufacturingSec" Type="real" />
+    <Property Name="MiscastTechnicalSec" Type="real" />
+    <Property Name="MiscastsEngineeringSec" Type="real" />
+    <Property Name="MiscastManufacturingCC" Type="real" />
+    <Property Name="MiscastTechnicalCC" Type="real" />
+    <Property Name="MiscastsEngineeringCC" Type="real" />
+    <Property Name="QualityRFTPct" Type="real" />
+    <Property Name="GradeRFTPct" Type="real" />
+    <Property Name="WidthRFTPct" Type="real" />
+    <Property Name="LengthRFTPct" Type="real" />
+  </EntityType>
+  <EntityType Name="KPITrendShiftSecStuff">
+    <Key>
+      <PropertyRef Name="TrendKPIShiftId" />
+    </Key>
+    <Property Name="TrendKPIShiftId" Type="int" Nullable="false" />
+    <Property Name="AverageReheat" Type="real" />
+    <Property Name="AverageFreeboard" Type="real" />
+    <Property Name="TippedTonnage" Type="real" />
+    <Property Name="LadleFreeOpenPct" Type="real" />
+    <Property Name="LadleBubblingCasPct" Type="real" />
+    <Property Name="LadleWrongPlan" Type="real" />
+  </EntityType>
+  <EntityType Name="KPITrendShiftSteelStuff">
+    <Key>
+      <PropertyRef Name="TrendKPIShiftId" />
+    </Key>
+    <Property Name="TrendKPIShiftId" Type="int" Nullable="false" />
+    <Property Name="HeatsBlown" Type="real" />
+    <Property Name="ScrapAdherenceCBM" Type="real" />
+    <Property Name="ScrapAdherenceHarsco" Type="real" />
+    <Property Name="CBMFluxes" Type="real" />
+    <Property Name="EBMOreOxy" Type="real" />
+    <Property Name="SlagDepthFailures" Type="real" />
+    <Property Name="ScrapRatio" Type="real" />
+    <Property Name="UpOnMetal" Type="real" />
+    <Property Name="UpOnMetalwithQA" Type="real" />
+    <Property Name="HeavySlops30Sec" Type="real" />
+    <Property Name="DartUsedPct" Type="real" />
+    <Property Name="DartWorkedPct" Type="real" />
+    <Property Name="OxygenSpill" Type="real" />
+    <Property Name="TPVBlows" Type="real" />
+    <Property Name="SublanceAvailV1" Type="real" />
+    <Property Name="SublanceAvailV2" Type="real" />
+  </EntityType>
+  <EntityType Name="KPITrendShiftTemps">
+    <Key>
+      <PropertyRef Name="TrendKPIShiftId" />
+    </Key>
+    <Property Name="TrendKPIShiftId" Type="int" Nullable="false" />
+    <Property Name="LadleTempFailures" Type="real" />
+    <Property Name="ReleaseTempFailures" Type="real" />
+    <Property Name="AimEBTempUnaltered" Type="real" />
+    <Property Name="EBTempStDevV1" Type="real" />
+    <Property Name="EBTempStDevV2" Type="real" />
+    <Property Name="LadleTempFailuresV1" Type="real" />
+    <Property Name="LadleTempFailuresV2" Type="real" />
+    <Property Name="LadleTempActAim" Type="real" />
+    <Property Name="ReleaseTempActAim" Type="real" />
+    <Property Name="LadleLiningTemp" Type="real" />
+    <Property Name="SSTempDips" Type="real" />
+    <Property Name="SSCeloxDips" Type="real" />
+  </EntityType>
+  <EntityType Name="KPITrendShiftTimes">
+    <Key>
+      <PropertyRef Name="TrendKPIShiftId" />
+    </Key>
+    <Property Name="TrendKPIShiftId" Type="int" Nullable="false" />
+    <Property Name="DeSTreatmentTime" Type="real" />
+    <Property Name="VesselCycleTimeSingleV1" Type="real" />
+    <Property Name="VesselCycleTimeSingleV2" Type="real" />
+    <Property Name="VesselCycleTimeBoth" Type="real" />
+    <Property Name="HeavySlopDuration" Type="real" />
+    <Property Name="EndBlowStartTap" Type="real" />
+    <Property Name="LadleTurnTime" Type="real" />
+    <Property Name="DwellTime" Type="real" />
+    <Property Name="FloatationTime" Type="real" />
+    <Property Name="TreatmentTimeActStd" Type="real" />
+  </EntityType>
+  <EntityType Name="KPITrendShiftWeights">
+    <Key>
+      <PropertyRef Name="TrendKPIShiftId" />
+    </Key>
+    <Property Name="TrendKPIShiftId" Type="int" Nullable="false" />
+    <Property Name="HMKgTls" Type="real" />
+    <Property Name="PlatedFe" Type="real" />
+    <Property Name="SlabWeightCC1" Type="real" />
+    <Property Name="SlabWeightCC2" Type="real" />
+    <Property Name="SlabWeightCC3" Type="real" />
+    <Property Name="PrimaryYield" Type="real" />
+    <Property Name="TapWeightV1" Type="real" />
+    <Property Name="TapWeightV2" Type="real" />
+    <Property Name="SteelSkull" Type="real" />
+    <Property Name="SkimLoss" Type="real" />
+    <Property Name="Tipped" Type="real" />
+    <Property Name="TundishSkull" Type="real" />
+    <Property Name="TundishWeightCC1" Type="real" />
+    <Property Name="TundishWeightCC2" Type="real" />
+    <Property Name="TundishWeightCC3" Type="real" />
+    <Property Name="ScrapSec" Type="real" />
+    <Property Name="ReturnedSteel" Type="real" />
+    <Property Name="Recycles" Type="real" />
+    <Property Name="PrimaryYieldV1" Type="real" />
+    <Property Name="PrimaryYieldV2" Type="real" />
+    <Property Name="StrandScrap" Type="real" />
+    <Property Name="ReturnedAndRecycled" Type="real" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Trend.LogicTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="LogicTypes">
+    <Key>
+      <PropertyRef Name="LogicCode" />
+    </Key>
+    <Property Name="LogicCode" Type="int" Nullable="false" />
+    <Property Name="RuleDesc" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="ParConfig">
+    <Key>
+      <PropertyRef Name="ParIndex" />
+    </Key>
+    <Property Name="ParIndex" Type="int" Nullable="false" />
+    <Property Name="ParDesc" Type="varchar" MaxLength="200" />
+    <Property Name="ParFieldName" Type="varchar" MaxLength="50" />
+    <Property Name="MinLimit" Type="real" />
+    <Property Name="MaxLimit" Type="real" />
+    <Property Name="AimTarget" Type="real" />
+    <Property Name="DisplayMin" Type="real" />
+    <Property Name="DisplayMax" Type="real" />
+    <Property Name="ActionCode" Type="int" />
+    <Property Name="ActionGroupNumber" Type="int" />
+    <Property Name="CellWidth" Type="real" />
+    <Property Name="Parameter" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TrendDataAdditions">
+    <Key>
+      <PropertyRef Name="TrendSampleIndex" />
+    </Key>
+    <Property Name="TrendSampleIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="HNS" Type="int" />
+    <Property Name="WobWeight" Type="real" />
+    <Property Name="DolofluxWeight" Type="real" />
+    <Property Name="OreWeight" Type="real" />
+    <Property Name="LimeWeight" Type="real" />
+    <Property Name="DolometWeight" Type="real" />
+    <Property Name="DeSTotalMgWeight" Type="real" />
+    <Property Name="HotMetalWeight" Type="real" />
+    <Property Name="ScrapWeight" Type="real" />
+    <Property Name="SecScrapWeight" Type="real" />
+    <Property Name="SteelSkullWeight" Type="real" />
+  </EntityType>
+  <EntityType Name="TrendDataAnalysis">
+    <Key>
+      <PropertyRef Name="TrendSampleIndex" />
+    </Key>
+    <Property Name="TrendSampleIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="HNS" Type="int" />
+    <Property Name="HMSi" Type="real" />
+    <Property Name="Basicity" Type="real" />
+    <Property Name="CaO" Type="real" />
+    <Property Name="SiO2" Type="real" />
+    <Property Name="TotalFe" Type="real" />
+    <Property Name="EBPhos" Type="real" />
+    <Property Name="HMS" Type="real" />
+    <Property Name="N2Pickup" Type="real" />
+    <Property Name="HMP" Type="real" />
+    <Property Name="HMMn" Type="real" />
+    <Property Name="LadleS" Type="real" />
+    <Property Name="LadleP" Type="real" />
+    <Property Name="LadleN" Type="real" />
+    <Property Name="TunC" Type="real" />
+    <Property Name="TunS" Type="real" />
+    <Property Name="TunP" Type="real" />
+    <Property Name="TunN" Type="real" />
+    <Property Name="TunAlSol" Type="real" />
+    <Property Name="SSHydris" Type="real" />
+    <Property Name="SecN2Pickup" Type="real" />
+    <Property Name="Al2O3" Type="real" />
+    <Property Name="MgO" Type="real" />
+  </EntityType>
+  <EntityType Name="TrendDataIndex">
+    <Key>
+      <PropertyRef Name="TrendSampleIndex" />
+    </Key>
+    <Property Name="TrendSampleIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="HNS" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="HMPour" Type="int" />
+    <Property Name="HMDesulph" Type="int" />
+    <Property Name="Vessel" Type="int" />
+    <Property Name="Cas1" Type="int" />
+    <Property Name="Cas2" Type="int" />
+    <Property Name="RH" Type="int" />
+    <Property Name="RD" Type="int" />
+    <Property Name="Caster" Type="int" />
+    <Property Name="Grade" Type="int" />
+    <Property Name="XHeat" Type="int" />
+    <Property Name="Rota" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="TrendDataProcess">
+    <Key>
+      <PropertyRef Name="TrendSampleIndex" />
+    </Key>
+    <Property Name="TrendSampleIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="HNS" Type="int" />
+    <Property Name="HMDesSkimLoss" Type="real" />
+    <Property Name="TapWeightError" Type="real" />
+    <Property Name="LadleReturnWeight" Type="real" />
+    <Property Name="HMLiquidRatio" Type="real" />
+    <Property Name="EBTempVar" Type="real" />
+    <Property Name="EBCoolReq" Type="real" />
+    <Property Name="EBCoolAdd" Type="real" />
+    <Property Name="EBOXYDiff" Type="real" />
+    <Property Name="LadleTempVar" Type="real" />
+    <Property Name="ReHeat" Type="real" />
+    <Property Name="SlagDepth" Type="real" />
+    <Property Name="Freeboard" Type="real" />
+    <Property Name="CCStartWeight" Type="real" />
+    <Property Name="CCEndWeight" Type="real" />
+    <Property Name="TapWeightActual" Type="real" />
+    <Property Name="TapWeightPred" Type="real" />
+    <Property Name="TapAdditions" Type="real" />
+    <Property Name="VesselSlop" Type="real" />
+    <Property Name="CastRate" Type="real" />
+    <Property Name="CastingSpeed" Type="real" />
+    <Property Name="TundishWeight" Type="real" />
+    <Property Name="LadleLiningTemp" Type="real" />
+    <Property Name="UpOnMetal" Type="real" />
+    <Property Name="LadleBubbling" Type="real" />
+    <Property Name="TundishSkullWeight" Type="real" />
+    <Property Name="Dart" Type="real" />
+    <Property Name="PrimaryYield" Type="real" />
+    <Property Name="LadleScheduleIndex" Type="real" />
+    <Property Name="TPVPressure" Type="real" />
+    <Property Name="HeavySlopDuration" Type="real" />
+    <Property Name="HeavySlopCount" Type="real" />
+    <Property Name="COProduct" Type="real" />
+  </EntityType>
+  <EntityType Name="TrendDataTemps">
+    <Key>
+      <PropertyRef Name="TrendSampleIndex" />
+    </Key>
+    <Property Name="TrendSampleIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="HNS" Type="int" />
+    <Property Name="HMTemp" Type="real" />
+    <Property Name="ActEBTemp" Type="real" />
+    <Property Name="AimEBTemp" Type="real" />
+    <Property Name="AimLadleTemp" Type="real" />
+    <Property Name="ActLadleTemp" Type="real" />
+    <Property Name="AimReleaseTemp" Type="real" />
+    <Property Name="ActReleaseTemp" Type="real" />
+    <Property Name="ReleaseTempDev" Type="real" />
+  </EntityType>
+  <EntityType Name="TrendDataTimes">
+    <Key>
+      <PropertyRef Name="TrendSampleIndex" />
+    </Key>
+    <Property Name="TrendSampleIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="HNS" Type="int" />
+    <Property Name="VesselCycleTime" Type="real" />
+    <Property Name="VesselCycleTimeSameVessel" Type="real" />
+    <Property Name="ChargeToBlowTime" Type="real" />
+    <Property Name="BlowingTime" Type="real" />
+    <Property Name="BlowToTapTime" Type="real" />
+    <Property Name="TappingTime" Type="real" />
+    <Property Name="TapToChargeTime" Type="real" />
+    <Property Name="PlannedDwellTime" Type="real" />
+    <Property Name="ActDwellTime" Type="real" />
+    <Property Name="WaitingTime" Type="real" />
+    <Property Name="TreatmentTime" Type="real" />
+    <Property Name="FloatationTime" Type="real" />
+    <Property Name="LadleTurnTime" Type="real" />
+    <Property Name="DeSStartToInject" Type="real" />
+    <Property Name="DeSInjectionTime" Type="real" />
+    <Property Name="DeSInjectToRabble" Type="real" />
+    <Property Name="DeSRabbleTime" Type="real" />
+    <Property Name="DeSRabbleToEnd" Type="real" />
+    <Property Name="DeSTotalTime" Type="real" />
+    <Property Name="DwellTimeDiff" Type="real" />
+  </EntityType>
+  <EntityType Name="YieldDataShift">
+    <Key>
+      <PropertyRef Name="YieldIndex" />
+    </Key>
+    <Property Name="YieldIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="KPIDate" Type="datetime" />
+    <Property Name="Shift" Type="int" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="HNS" Type="int" />
+    <Property Name="Outcome" Type="varchar" MaxLength="50" />
+    <Property Name="Weight" Type="real" />
+    <Property Name="Reason" Type="varchar" MaxLength="50" />
+    <Property Name="Outcome_id" Type="int" />
+    <Property Name="Reason_Id" Type="int" />
+  </EntityType>
+  <Association Name="FK_GroupConfig_GroupHighlight">
+    <End Role="GroupHighlight" Type="TrendSchema.Store.GroupHighlight" Multiplicity="1" />
+    <End Role="GroupConfig" Type="TrendSchema.Store.GroupConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupHighlight">
+        <PropertyRef Name="HighlightID" />
+      </Principal>
+      <Dependent Role="GroupConfig">
+        <PropertyRef Name="DefaultHighlight" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KPITrendShiftAnalysis_KPITrendShift">
+    <End Role="KPITrendShift" Type="TrendSchema.Store.KPITrendShift" Multiplicity="1" />
+    <End Role="KPITrendShiftAnalysis" Type="TrendSchema.Store.KPITrendShiftAnalysis" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KPITrendShift">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Principal>
+      <Dependent Role="KPITrendShiftAnalysis">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KPITrendShiftCasterStuff_KPITrendShift">
+    <End Role="KPITrendShift" Type="TrendSchema.Store.KPITrendShift" Multiplicity="1" />
+    <End Role="KPITrendShiftCasterStuff" Type="TrendSchema.Store.KPITrendShiftCasterStuff" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KPITrendShift">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Principal>
+      <Dependent Role="KPITrendShiftCasterStuff">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KPITrendShiftQuality_KPITrendShift">
+    <End Role="KPITrendShift" Type="TrendSchema.Store.KPITrendShift" Multiplicity="1" />
+    <End Role="KPITrendShiftQuality" Type="TrendSchema.Store.KPITrendShiftQuality" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KPITrendShift">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Principal>
+      <Dependent Role="KPITrendShiftQuality">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KPITrendShiftSecStuff_KPITrendShift">
+    <End Role="KPITrendShift" Type="TrendSchema.Store.KPITrendShift" Multiplicity="1" />
+    <End Role="KPITrendShiftSecStuff" Type="TrendSchema.Store.KPITrendShiftSecStuff" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KPITrendShift">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Principal>
+      <Dependent Role="KPITrendShiftSecStuff">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KPITrendShiftSteelStuff_KPITrendShift">
+    <End Role="KPITrendShift" Type="TrendSchema.Store.KPITrendShift" Multiplicity="1" />
+    <End Role="KPITrendShiftSteelStuff" Type="TrendSchema.Store.KPITrendShiftSteelStuff" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KPITrendShift">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Principal>
+      <Dependent Role="KPITrendShiftSteelStuff">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KPITrendShiftTemps_KPITrendShift">
+    <End Role="KPITrendShift" Type="TrendSchema.Store.KPITrendShift" Multiplicity="1" />
+    <End Role="KPITrendShiftTemps" Type="TrendSchema.Store.KPITrendShiftTemps" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KPITrendShift">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Principal>
+      <Dependent Role="KPITrendShiftTemps">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KPITrendShiftTimes_KPITrendShift">
+    <End Role="KPITrendShift" Type="TrendSchema.Store.KPITrendShift" Multiplicity="1" />
+    <End Role="KPITrendShiftTimes" Type="TrendSchema.Store.KPITrendShiftTimes" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KPITrendShift">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Principal>
+      <Dependent Role="KPITrendShiftTimes">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KPITrendShiftWeights_KPITrendShift">
+    <End Role="KPITrendShift" Type="TrendSchema.Store.KPITrendShift" Multiplicity="1" />
+    <End Role="KPITrendShiftWeights" Type="TrendSchema.Store.KPITrendShiftWeights" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="KPITrendShift">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Principal>
+      <Dependent Role="KPITrendShiftWeights">
+        <PropertyRef Name="TrendKPIShiftId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GroupConfig_fk">
+    <End Role="ParConfig" Type="TrendSchema.Store.ParConfig" Multiplicity="0..1" />
+    <End Role="GroupConfig" Type="TrendSchema.Store.GroupConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParConfig">
+        <PropertyRef Name="ParIndex" />
+      </Principal>
+      <Dependent Role="GroupConfig">
+        <PropertyRef Name="Par1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GroupConfig_fk2">
+    <End Role="ParConfig" Type="TrendSchema.Store.ParConfig" Multiplicity="0..1" />
+    <End Role="GroupConfig" Type="TrendSchema.Store.GroupConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParConfig">
+        <PropertyRef Name="ParIndex" />
+      </Principal>
+      <Dependent Role="GroupConfig">
+        <PropertyRef Name="Par2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GroupConfig_fk3">
+    <End Role="ParConfig" Type="TrendSchema.Store.ParConfig" Multiplicity="0..1" />
+    <End Role="GroupConfig" Type="TrendSchema.Store.GroupConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParConfig">
+        <PropertyRef Name="ParIndex" />
+      </Principal>
+      <Dependent Role="GroupConfig">
+        <PropertyRef Name="Par3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GroupConfig_fk4">
+    <End Role="ParConfig" Type="TrendSchema.Store.ParConfig" Multiplicity="0..1" />
+    <End Role="GroupConfig" Type="TrendSchema.Store.GroupConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParConfig">
+        <PropertyRef Name="ParIndex" />
+      </Principal>
+      <Dependent Role="GroupConfig">
+        <PropertyRef Name="Par4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GroupConfig_fk5">
+    <End Role="ParConfig" Type="TrendSchema.Store.ParConfig" Multiplicity="0..1" />
+    <End Role="GroupConfig" Type="TrendSchema.Store.GroupConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParConfig">
+        <PropertyRef Name="ParIndex" />
+      </Principal>
+      <Dependent Role="GroupConfig">
+        <PropertyRef Name="Par5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="GroupConfig_fk6">
+    <End Role="ParConfig" Type="TrendSchema.Store.ParConfig" Multiplicity="0..1" />
+    <End Role="GroupConfig" Type="TrendSchema.Store.GroupConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ParConfig">
+        <PropertyRef Name="ParIndex" />
+      </Principal>
+      <Dependent Role="GroupConfig">
+        <PropertyRef Name="Par6" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KPIData_fk">
+    <End Role="KPIConfig" Type="TrendSchema.Store.KPIConfig" Multiplicity="1" />
+    <End Role="KPIData" Type="TrendSchema.Store.KPIData" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KPIConfig">
+        <PropertyRef Name="KPIINdex" />
+      </Principal>
+      <Dependent Role="KPIData">
+        <PropertyRef Name="KPIIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="KPIData_fkW">
+    <End Role="KPIConfig" Type="TrendSchema.Store.KPIConfig" Multiplicity="1" />
+    <End Role="KPIDataWeek" Type="TrendSchema.Store.KPIDataWeek" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KPIConfig">
+        <PropertyRef Name="KPIINdex" />
+      </Principal>
+      <Dependent Role="KPIDataWeek">
+        <PropertyRef Name="KPIIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ParConfig_fk">
+    <End Role="GroupConfig" Type="TrendSchema.Store.GroupConfig" Multiplicity="0..1" />
+    <End Role="ParConfig" Type="TrendSchema.Store.ParConfig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GroupConfig">
+        <PropertyRef Name="GroupIndex" />
+      </Principal>
+      <Dependent Role="ParConfig">
+        <PropertyRef Name="ActionGroupNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TrendDataAdditions_fk">
+    <End Role="TrendDataIndex" Type="TrendSchema.Store.TrendDataIndex" Multiplicity="1" />
+    <End Role="TrendDataAdditions" Type="TrendSchema.Store.TrendDataAdditions" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TrendDataIndex">
+        <PropertyRef Name="TrendSampleIndex" />
+      </Principal>
+      <Dependent Role="TrendDataAdditions">
+        <PropertyRef Name="TrendSampleIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TrendDataAnalysis_fk">
+    <End Role="TrendDataIndex" Type="TrendSchema.Store.TrendDataIndex" Multiplicity="1" />
+    <End Role="TrendDataAnalysis" Type="TrendSchema.Store.TrendDataAnalysis" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TrendDataIndex">
+        <PropertyRef Name="TrendSampleIndex" />
+      </Principal>
+      <Dependent Role="TrendDataAnalysis">
+        <PropertyRef Name="TrendSampleIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TrendDataProcess_fk">
+    <End Role="TrendDataIndex" Type="TrendSchema.Store.TrendDataIndex" Multiplicity="1" />
+    <End Role="TrendDataProcess" Type="TrendSchema.Store.TrendDataProcess" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TrendDataIndex">
+        <PropertyRef Name="TrendSampleIndex" />
+      </Principal>
+      <Dependent Role="TrendDataProcess">
+        <PropertyRef Name="TrendSampleIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TrendDataTemps_fk">
+    <End Role="TrendDataIndex" Type="TrendSchema.Store.TrendDataIndex" Multiplicity="1" />
+    <End Role="TrendDataTemps" Type="TrendSchema.Store.TrendDataTemps" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TrendDataIndex">
+        <PropertyRef Name="TrendSampleIndex" />
+      </Principal>
+      <Dependent Role="TrendDataTemps">
+        <PropertyRef Name="TrendSampleIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="TrendDataTimes_fk">
+    <End Role="TrendDataIndex" Type="TrendSchema.Store.TrendDataIndex" Multiplicity="1" />
+    <End Role="TrendDataTimes" Type="TrendSchema.Store.TrendDataTimes" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TrendDataIndex">
+        <PropertyRef Name="TrendSampleIndex" />
+      </Principal>
+      <Dependent Role="TrendDataTimes">
+        <PropertyRef Name="TrendSampleIndex" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

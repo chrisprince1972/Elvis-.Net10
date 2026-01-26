@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CasterLevel3Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="CasterLevel3Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="cast_slab_view" EntityType="CasterLevel3Model.cast_slab_view" />
+    <EntitySet Name="cct_grade_failures" EntityType="CasterLevel3Model.cct_grade_failures" />
+    <EntitySet Name="cct_length_failures" EntityType="CasterLevel3Model.cct_length_failures" />
+    <EntitySet Name="cct_width_failures" EntityType="CasterLevel3Model.cct_width_failures" />
+    <EntitySet Name="cast_slab" EntityType="CasterLevel3Model.cast_slab" />
+  </EntityContainer>
+  <EntityType Name="cast_slab_view">
+    <Key>
+      <PropertyRef Name="SLAB_NUMBER_SET" />
+      <PropertyRef Name="CAST_SLAB_NUMBER" />
+    </Key>
+    <Property Name="SLAB_NUMBER_SET" Type="Int32" Nullable="false" />
+    <Property Name="CAST_SLAB_NUMBER" Type="Int32" Nullable="false" />
+    <Property Name="HEAT_NUMBER_SET" Type="Int32" />
+    <Property Name="CAST_HEAT_NUMBER" Type="Int32" />
+    <Property Name="STRAND_NUMBER" Type="Int16" />
+    <Property Name="ORDERED_SLAB_NUMBER" Type="Int32" />
+    <Property Name="SLAB_POSITION" Type="Int16" />
+    <Property Name="FIRST_SEGMENT_NUMBER" Type="Int32" />
+    <Property Name="WIDTH_MADE_FIRST_SEGMENT" Type="Int32" />
+    <Property Name="FIRST_SEGMENT_TIMESTAMP" Type="DateTime" />
+    <Property Name="FIRST_SEGMENT_TIMESTAMP_GMT" Type="DateTime" />
+    <Property Name="LAST_SEGMENT_NUMBER" Type="Int32" />
+    <Property Name="WIDTH_MADE_LAST_SEGMENT" Type="Int32" />
+    <Property Name="LAST_SEGMENT_TIMESTAMP" Type="DateTime" />
+    <Property Name="LAST_SEGMENT_TIMESTAMP_GMT" Type="DateTime" />
+    <Property Name="LENGTH_MADE" Type="Single" />
+    <Property Name="WEIGHT" Type="Single" />
+    <Property Name="GRADE_ORDERED" Type="Int16" />
+    <Property Name="GRADE_MADE" Type="Int16" />
+    <Property Name="THICKNESS_MADE" Type="Int16" />
+    <Property Name="COMMENT_TEXT" Type="String" MaxLength="64" Unicode="true" FixedLength="false" />
+    <Property Name="MADE_TO_GRADE" Type="Int16" />
+    <Property Name="DOWNGRADE_REASON" Type="Int16" />
+    <Property Name="MANUALLY_GRADED" Type="Int16" />
+    <Property Name="MANUALLY_GRADED_REASON" Type="Int16" />
+    <Property Name="ROTA" Type="Int16" />
+    <Property Name="SHIFT_NO" Type="Int16" />
+    <Property Name="DAY_NO" Type="Int16" />
+    <Property Name="WEEK_NO" Type="Int16" />
+    <Property Name="YEAR_NO" Type="Int16" />
+    <Property Name="SLAB_CUT_TIMESTAMP" Type="DateTime" />
+    <Property Name="SLAB_CUT_TIMESTAMP_GMT" Type="DateTime" />
+    <Property Name="CASTER" Type="Int32" />
+    <Property Name="MANUAL_INSERT" Type="Int32" />
+  </EntityType>
+  <EntityType Name="cct_grade_failures">
+    <Key>
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="SLAB_NUMBER" />
+    </Key>
+    <Property Type="Int32" Name="HEAT_NUMBER" Nullable="false" />
+    <Property Type="Int32" Name="SLAB_NUMBER" Nullable="false" />
+    <Property Type="String" Name="REASON_1" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REASON_2" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REASON_3" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COMMENT" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CREATED" />
+    <Property Type="Int32" Name="HEAT_NUMBER_SET" />
+    <Property Type="Int32" Name="RFT_FAILURE" />
+  </EntityType>
+  <EntityType Name="cct_length_failures">
+    <Key>
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="SLAB_NUMBER" />
+    </Key>
+    <Property Type="Int32" Name="HEAT_NUMBER" Nullable="false" />
+    <Property Type="Int32" Name="SLAB_NUMBER" Nullable="false" />
+    <Property Type="String" Name="REASON_1" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REASON_2" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REASON_3" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COMMENT" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CREATED" />
+    <Property Type="Int32" Name="HEAT_NUMBER_SET" />
+    <Property Type="Int32" Name="RFT_FAILURE" />
+  </EntityType>
+  <EntityType Name="cct_width_failures">
+    <Key>
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="SLAB_NUMBER" />
+    </Key>
+    <Property Type="Int32" Name="HEAT_NUMBER" Nullable="false" />
+    <Property Type="Int32" Name="SLAB_NUMBER" Nullable="false" />
+    <Property Type="String" Name="REASON_1" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REASON_2" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="REASON_3" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="COMMENT" MaxLength="1024" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="CREATED" />
+    <Property Type="Int32" Name="HEAT_NUMBER_SET" />
+    <Property Type="Int32" Name="RFT_FAILURE" />
+  </EntityType>
+  <EntityType Name="cast_slab">
+    <Key>
+      <PropertyRef Name="SLAB_NUMBER_SET" />
+      <PropertyRef Name="CAST_SLAB_NUMBER" />
+    </Key>
+    <Property Type="Int32" Name="SLAB_NUMBER_SET" Nullable="false" />
+    <Property Type="Int32" Name="CAST_SLAB_NUMBER" Nullable="false" />
+    <Property Type="Int32" Name="CONCAST_NUMBER_SET" />
+    <Property Type="Int32" Name="CONCAST_NUMBER" />
+    <Property Type="Int32" Name="HEAT_NUMBER_SET" />
+    <Property Type="Int32" Name="CAST_HEAT_NUMBER" />
+    <Property Type="Int32" Name="TUNDISH_TRIP_NUMBER" />
+    <Property Type="Int32" Name="SHROUD_NUMBER" />
+    <Property Type="Int32" Name="SES_NUMBER" />
+    <Property Type="Int32" Name="MOULD_POWDER_NUMBER" />
+    <Property Type="Int16" Name="STRAND_NUMBER" />
+    <Property Type="Int32" Name="ORDERED_SLAB_NUMBER" />
+    <Property Type="Int16" Name="SLAB_POSITION" />
+    <Property Type="Int32" Name="FIRST_SEGMENT_NUMBER" />
+    <Property Type="Int32" Name="WIDTH_MADE_FIRST_SEGMENT" />
+    <Property Type="Int32" Name="WIDTH_CHECKED_FIRST_SEGMENT" />
+    <Property Type="DateTime" Name="FIRST_SEGMENT_TIMESTAMP" />
+    <Property Type="DateTime" Name="FIRST_SEGMENT_TIMESTAMP_GMT" />
+    <Property Type="Int32" Name="LAST_SEGMENT_NUMBER" />
+    <Property Type="Int32" Name="WIDTH_MADE_LAST_SEGMENT" />
+    <Property Type="Int32" Name="WIDTH_CHECKED_LAST_SEGMENT" />
+    <Property Type="DateTime" Name="LAST_SEGMENT_TIMESTAMP" />
+    <Property Type="DateTime" Name="LAST_SEGMENT_TIMESTAMP_GMT" />
+    <Property Type="Int32" Name="SYSTEM_1_LENGTH" />
+    <Property Type="Int32" Name="SYSTEM_2_LENGTH" />
+    <Property Type="Int32" Name="SYSTEM_3_LENGTH" />
+    <Property Type="Int16" Name="LENGTH_SYSTEM_USED" />
+    <Property Type="Single" Name="LENGTH_MADE" />
+    <Property Type="Single" Name="LENGTH_CHECKED" />
+    <Property Type="Single" Name="WEIGHT" />
+    <Property Type="Int16" Name="GRADE_ORDERED" />
+    <Property Type="Int16" Name="GRADE_MADE" />
+    <Property Type="Int16" Name="THICKNESS_MADE" />
+    <Property Type="String" Name="COMMENT_TEXT" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="METALLOGRAPHY" MaxLength="64" FixedLength="false" Unicode="true" />
+    <Property Type="Single" Name="ACCUMETRIC_TEMPERATURE" />
+    <Property Type="Int16" Name="MADE_TO_GRADE" />
+    <Property Type="Int16" Name="DOWNGRADE_REASON" />
+    <Property Type="Int16" Name="MANUALLY_GRADED" />
+    <Property Type="Int16" Name="MANUALLY_GRADED_REASON" />
+    <Property Type="Single" Name="MOULD_TAPER" />
+    <Property Type="Single" Name="AVERAGE_STRAND_SPEED" />
+    <Property Type="Single" Name="AVERAGE_AR_FLOW_TO_NOZZLE" />
+    <Property Type="Single" Name="AVERAGE_AR_FLOW_TO_STOPPER" />
+    <Property Type="Single" Name="AVERAGE_AR_FLOW_TO_PLATE" />
+    <Property Type="Single" Name="AVERAGE_AR_PRESSURE_TO_NOZZLE" />
+    <Property Type="Single" Name="AVERAGE_AR_PRESSURE_TO_STOPPER" />
+    <Property Type="Single" Name="AVERAGE_AR_PRESSURE_TO_PLATE" />
+    <Property Type="Single" Name="STOPPER_BUILDUP" />
+    <Property Type="Single" Name="MAX_FLATNESS" />
+    <Property Type="Single" Name="LAST_TUNDISH_TEMPERATURE" />
+    <Property Type="Int16" Name="SES_SERVICE_LIFE" />
+    <Property Type="Int16" Name="SPRAY_WATER_PATTERN" />
+    <Property Type="Int16" Name="SPRAY_WATER_MODE" />
+    <Property Type="Single" Name="MOULD_THERM_VAR_TOP_S" />
+    <Property Type="Single" Name="MOULD_THERM_VAR_TOP_MID" />
+    <Property Type="Single" Name="MOULD_THERM_VAR_TOP_N" />
+    <Property Type="Single" Name="MOULD_THERM_VAR_BTM_S" />
+    <Property Type="Single" Name="MOULD_THERM_VAR_BTM_MID" />
+    <Property Type="Single" Name="MOULD_THERM_VAR_BTM_N" />
+    <Property Type="Int16" Name="SPEED_CHANGE" />
+    <Property Type="Int16" Name="FLUSH" />
+    <Property Type="Int16" Name="TUBE_CHANGE" />
+    <Property Type="Int16" Name="STREAM_UNSHROUDED" />
+    <Property Type="Int16" Name="MTM_ALARM" />
+    <Property Type="Single" Name="SURGE_SIZE" />
+    <Property Type="Int16" Name="MOULD_LEVEL_CONTROL_AUTO" />
+    <Property Type="Int16" Name="DOWNGRADE_FOR_TEMPERATURE" />
+    <Property Type="Int16" Name="DOWNGRADE_FOR_CASTING_SPEED" />
+    <Property Type="Int16" Name="DOWNGRADE_FOR_MOULD_LEVEL" />
+    <Property Type="Single" Name="QUALITY_CODE" />
+    <Property Type="Int16" Name="ROTA" />
+    <Property Type="Int16" Name="SHIFT_NO" />
+    <Property Type="Int16" Name="DAY_NO" />
+    <Property Type="Int16" Name="WEEK_NO" />
+    <Property Type="Int16" Name="YEAR_NO" />
+    <Property Type="DateTime" Name="SLAB_CUT_TIMESTAMP" />
+    <Property Type="DateTime" Name="SLAB_CUT_TIMESTAMP_GMT" />
+    <Property Type="Int32" Name="CASTER" />
+    <Property Type="Int32" Name="MANUAL_INSERT" />
+  </EntityType>
+</Schema>

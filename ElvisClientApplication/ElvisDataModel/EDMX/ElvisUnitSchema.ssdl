@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UnitSchemaEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="UnitSchemaEntitiesStoreContainer">
+    <EntitySet Name="Caster" EntityType="UnitSchemaEntities.Store.Caster" store:Type="Tables" Schema="Unit" />
+    <EntitySet Name="HMDesulph" EntityType="UnitSchemaEntities.Store.HMDesulph" store:Type="Tables" Schema="Unit" />
+    <EntitySet Name="HMDesulphReport" EntityType="UnitSchemaEntities.Store.HMDesulphReport" store:Type="Tables" Schema="Unit" />
+    <EntitySet Name="HMPour" EntityType="UnitSchemaEntities.Store.HMPour" store:Type="Tables" Schema="Unit" />
+    <EntitySet Name="SecSteel" EntityType="UnitSchemaEntities.Store.SecSteel" store:Type="Tables" Schema="Unit" />
+    <EntitySet Name="Vessel" EntityType="UnitSchemaEntities.Store.Vessel" store:Type="Tables" Schema="Unit" />
+  </EntityContainer>
+  <EntityType Name="Caster">
+    <Key>
+      <PropertyRef Name="CasterIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="CasterIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="LadleNumber" Type="int" />
+    <Property Name="TimeStampStart" Type="datetime" />
+    <Property Name="TimeStampEnd" Type="datetime" />
+    <Property Name="TimeStampStartGMT" Type="datetime" />
+    <Property Name="TimeStampEndGMT" Type="datetime" />
+    <Property Name="SpeedRatio" Type="real" />
+  </EntityType>
+  <EntityType Name="HMDesulph">
+    <Key>
+      <PropertyRef Name="HMDesIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="HMDesIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="TimeStampStart" Type="datetime" />
+    <Property Name="TimeStampEnd" Type="datetime" />
+    <Property Name="TimeStampStartGMT" Type="datetime" />
+    <Property Name="TimeStampEndGMT" Type="datetime" />
+    <Property Name="LadleNumber" Type="int" />
+    <Property Name="StartSulphur" Type="real" />
+    <Property Name="AimSulphur" Type="real" />
+    <Property Name="TemperatureStart" Type="real" />
+    <Property Name="TemperatureEnd" Type="real" />
+    <Property Name="TimeLastTemperature" Type="datetime" />
+    <Property Name="HMWeight" Type="real" />
+    <Property Name="SkimLoss" Type="real" />
+    <Property Name="TreatmentCount" Type="int" />
+    <Property Name="SkimCount" Type="int" />
+    <Property Name="LimeTotal" Type="real" />
+    <Property Name="MgTotal" Type="real" />
+    <Property Name="TimeCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HMDesulphReport">
+    <Key>
+      <PropertyRef Name="HMDesReportIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="HMDesReportIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="TimeStampGMT" Type="datetime" />
+    <Property Name="StartSulphur" Type="real" />
+    <Property Name="AimSulphur" Type="real" />
+    <Property Name="LimeDemand" Type="real" />
+    <Property Name="LimeActual" Type="real" />
+    <Property Name="MgDemand" Type="real" />
+    <Property Name="MgActual" Type="real" />
+    <Property Name="TimeCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HMPour">
+    <Key>
+      <PropertyRef Name="HMPourIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="HMPourIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="TimeStampStart" Type="datetime" />
+    <Property Name="TimeStampEnd" Type="datetime" />
+    <Property Name="TimeStampStartGMT" Type="datetime" />
+    <Property Name="TimeStampEndGMT" Type="datetime" />
+    <Property Name="LadleNumber" Type="int" />
+    <Property Name="HMLadleLife" Type="int" />
+    <Property Name="HMWeight" Type="real" />
+    <Property Name="HMLastTemperature" Type="real" />
+    <Property Name="TimeLastTemperature" Type="datetime" />
+    <Property Name="TimeCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="SecSteel">
+    <Key>
+      <PropertyRef Name="SecSteelIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="SecSteelIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="TImeStampStart" Type="datetime" />
+    <Property Name="TimeStampEnd" Type="datetime" />
+    <Property Name="TimeStampStartGMT" Type="datetime" />
+    <Property Name="TimeStampEndGMT" Type="datetime" />
+    <Property Name="TimeCreated" Type="datetime" />
+    <Property Name="SlagDepth" Type="smallint" />
+    <Property Name="Freeboard" Type="smallint" />
+  </EntityType>
+  <EntityType Name="Vessel">
+    <Key>
+      <PropertyRef Name="VesselIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="VesselIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="BlowCount" Type="int" />
+    <Property Name="TapCount" Type="int" />
+    <Property Name="TImeStampStart" Type="datetime" />
+    <Property Name="TimeStampEnd" Type="datetime" />
+    <Property Name="TimeStampStartGMT" Type="datetime" />
+    <Property Name="TimeStampEndGMT" Type="datetime" />
+    <Property Name="TimeCreated" Type="datetime" />
+    <Property Name="StartChargeTime" Type="datetime" />
+    <Property Name="StartBlowTime" Type="datetime" />
+    <Property Name="EndBlowTime" Type="datetime" />
+    <Property Name="StartTapTime" Type="datetime" />
+    <Property Name="EndTapTime" Type="datetime" />
+  </EntityType>
+</Schema>

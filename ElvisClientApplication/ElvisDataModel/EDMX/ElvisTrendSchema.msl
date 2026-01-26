@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TrendSchemaStoreContainer" CdmEntityContainer="TrendSchemaEntities">
+    <EntitySetMapping Name="LogicTypes">
+      <EntityTypeMapping TypeName="TrendSchema.LogicType">
+        <MappingFragment StoreEntitySet="LogicTypes">
+          <ScalarProperty Name="LogicCode" ColumnName="LogicCode" />
+          <ScalarProperty Name="RuleDesc" ColumnName="RuleDesc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrendDataIndexes">
+      <EntityTypeMapping TypeName="TrendSchema.TrendDataIndex">
+        <MappingFragment StoreEntitySet="TrendDataIndex">
+          <ScalarProperty Name="Rota" ColumnName="Rota" />
+          <ScalarProperty Name="XHeat" ColumnName="XHeat" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="RD" ColumnName="RD" />
+          <ScalarProperty Name="RH" ColumnName="RH" />
+          <ScalarProperty Name="Cas2" ColumnName="Cas2" />
+          <ScalarProperty Name="Cas1" ColumnName="Cas1" />
+          <ScalarProperty Name="Vessel" ColumnName="Vessel" />
+          <ScalarProperty Name="HMDesulph" ColumnName="HMDesulph" />
+          <ScalarProperty Name="HMPour" ColumnName="HMPour" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="TrendSampleIndex" ColumnName="TrendSampleIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupConfigs">
+      <EntityTypeMapping TypeName="TrendSchema.GroupConfig">
+        <MappingFragment StoreEntitySet="GroupConfig">
+          <ScalarProperty Name="DefaultHighlight" ColumnName="DefaultHighlight" />
+          <ScalarProperty Name="Par6" ColumnName="Par6" />
+          <ScalarProperty Name="Par5" ColumnName="Par5" />
+          <ScalarProperty Name="Par4" ColumnName="Par4" />
+          <ScalarProperty Name="Par3" ColumnName="Par3" />
+          <ScalarProperty Name="Par2" ColumnName="Par2" />
+          <ScalarProperty Name="Par1" ColumnName="Par1" />
+          <ScalarProperty Name="GroupSort" ColumnName="GroupSort" />
+          <ScalarProperty Name="DisplayCode" ColumnName="DisplayCode" />
+          <ScalarProperty Name="GroupDesc" ColumnName="GroupDesc" />
+          <ScalarProperty Name="GroupIndex" ColumnName="GroupIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParConfigs">
+      <EntityTypeMapping TypeName="TrendSchema.ParConfig">
+        <MappingFragment StoreEntitySet="ParConfig">
+          <ScalarProperty Name="Parameter" ColumnName="Parameter" />
+          <ScalarProperty Name="CellWidth" ColumnName="CellWidth" />
+          <ScalarProperty Name="ActionGroupNumber" ColumnName="ActionGroupNumber" />
+          <ScalarProperty Name="ActionCode" ColumnName="ActionCode" />
+          <ScalarProperty Name="DisplayMax" ColumnName="DisplayMax" />
+          <ScalarProperty Name="DisplayMin" ColumnName="DisplayMin" />
+          <ScalarProperty Name="AimTarget" ColumnName="AimTarget" />
+          <ScalarProperty Name="MaxLimit" ColumnName="MaxLimit" />
+          <ScalarProperty Name="MinLimit" ColumnName="MinLimit" />
+          <ScalarProperty Name="ParFieldName" ColumnName="ParFieldName" />
+          <ScalarProperty Name="ParDesc" ColumnName="ParDesc" />
+          <ScalarProperty Name="ParIndex" ColumnName="ParIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPIActionRules">
+      <EntityTypeMapping TypeName="TrendSchema.KPIActionRule">
+        <MappingFragment StoreEntitySet="KPIActionRules">
+          <ScalarProperty Name="KPIActionDescription" ColumnName="KPIActionDescription" />
+          <ScalarProperty Name="KPIActionIndex" ColumnName="KPIActionIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPIDatas">
+      <EntityTypeMapping TypeName="TrendSchema.KPIData">
+        <MappingFragment StoreEntitySet="KPIData">
+          <ScalarProperty Name="KPIStatus" ColumnName="KPIStatus" />
+          <ScalarProperty Name="KPIValue" ColumnName="KPIValue" />
+          <ScalarProperty Name="KPIIndex" ColumnName="KPIIndex" />
+          <ScalarProperty Name="KPIDate" ColumnName="KPIDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrendDataAdditions">
+      <EntityTypeMapping TypeName="TrendSchema.TrendDataAddition">
+        <MappingFragment StoreEntitySet="TrendDataAdditions">
+          <ScalarProperty Name="SteelSkullWeight" ColumnName="SteelSkullWeight" />
+          <ScalarProperty Name="SecScrapWeight" ColumnName="SecScrapWeight" />
+          <ScalarProperty Name="ScrapWeight" ColumnName="ScrapWeight" />
+          <ScalarProperty Name="HotMetalWeight" ColumnName="HotMetalWeight" />
+          <ScalarProperty Name="DeSTotalMgWeight" ColumnName="DeSTotalMgWeight" />
+          <ScalarProperty Name="DolometWeight" ColumnName="DolometWeight" />
+          <ScalarProperty Name="LimeWeight" ColumnName="LimeWeight" />
+          <ScalarProperty Name="OreWeight" ColumnName="OreWeight" />
+          <ScalarProperty Name="DolofluxWeight" ColumnName="DolofluxWeight" />
+          <ScalarProperty Name="WobWeight" ColumnName="WobWeight" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="TrendSampleIndex" ColumnName="TrendSampleIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrendDataTemps">
+      <EntityTypeMapping TypeName="TrendSchema.TrendDataTemp">
+        <MappingFragment StoreEntitySet="TrendDataTemps">
+          <ScalarProperty Name="ReleaseTempDev" ColumnName="ReleaseTempDev" />
+          <ScalarProperty Name="ActReleaseTemp" ColumnName="ActReleaseTemp" />
+          <ScalarProperty Name="AimReleaseTemp" ColumnName="AimReleaseTemp" />
+          <ScalarProperty Name="ActLadleTemp" ColumnName="ActLadleTemp" />
+          <ScalarProperty Name="AimLadleTemp" ColumnName="AimLadleTemp" />
+          <ScalarProperty Name="AimEBTemp" ColumnName="AimEBTemp" />
+          <ScalarProperty Name="ActEBTemp" ColumnName="ActEBTemp" />
+          <ScalarProperty Name="HMTemp" ColumnName="HMTemp" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="TrendSampleIndex" ColumnName="TrendSampleIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrendDataTimes">
+      <EntityTypeMapping TypeName="TrendSchema.TrendDataTime">
+        <MappingFragment StoreEntitySet="TrendDataTimes">
+          <ScalarProperty Name="DwellTimeDiff" ColumnName="DwellTimeDiff" />
+          <ScalarProperty Name="DeSTotalTime" ColumnName="DeSTotalTime" />
+          <ScalarProperty Name="DeSRabbleToEnd" ColumnName="DeSRabbleToEnd" />
+          <ScalarProperty Name="DeSRabbleTime" ColumnName="DeSRabbleTime" />
+          <ScalarProperty Name="DeSInjectToRabble" ColumnName="DeSInjectToRabble" />
+          <ScalarProperty Name="DeSInjectionTime" ColumnName="DeSInjectionTime" />
+          <ScalarProperty Name="DeSStartToInject" ColumnName="DeSStartToInject" />
+          <ScalarProperty Name="LadleTurnTime" ColumnName="LadleTurnTime" />
+          <ScalarProperty Name="FloatationTime" ColumnName="FloatationTime" />
+          <ScalarProperty Name="TreatmentTime" ColumnName="TreatmentTime" />
+          <ScalarProperty Name="WaitingTime" ColumnName="WaitingTime" />
+          <ScalarProperty Name="ActDwellTime" ColumnName="ActDwellTime" />
+          <ScalarProperty Name="PlannedDwellTime" ColumnName="PlannedDwellTime" />
+          <ScalarProperty Name="TapToChargeTime" ColumnName="TapToChargeTime" />
+          <ScalarProperty Name="TappingTime" ColumnName="TappingTime" />
+          <ScalarProperty Name="BlowToTapTime" ColumnName="BlowToTapTime" />
+          <ScalarProperty Name="BlowingTime" ColumnName="BlowingTime" />
+          <ScalarProperty Name="ChargeToBlowTime" ColumnName="ChargeToBlowTime" />
+          <ScalarProperty Name="VesselCycleTimeSameVessel" ColumnName="VesselCycleTimeSameVessel" />
+          <ScalarProperty Name="VesselCycleTime" ColumnName="VesselCycleTime" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="TrendSampleIndex" ColumnName="TrendSampleIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CasterSums">
+      <EntityTypeMapping TypeName="TrendSchema.CasterSum">
+        <MappingFragment StoreEntitySet="CasterSum">
+          <ScalarProperty Name="CC3SpeedRatio" ColumnName="CC3SpeedRatio" />
+          <ScalarProperty Name="CC2SpeedRatio" ColumnName="CC2SpeedRatio" />
+          <ScalarProperty Name="CC1SpeedRatio" ColumnName="CC1SpeedRatio" />
+          <ScalarProperty Name="CC3SteelInMould" ColumnName="CC3SteelInMould" />
+          <ScalarProperty Name="CC2SteelInMould" ColumnName="CC2SteelInMould" />
+          <ScalarProperty Name="CC1SteelInMould" ColumnName="CC1SteelInMould" />
+          <ScalarProperty Name="SumDate" ColumnName="SumDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPIDataWeeks">
+      <EntityTypeMapping TypeName="TrendSchema.KPIDataWeek">
+        <MappingFragment StoreEntitySet="KPIDataWeek">
+          <ScalarProperty Name="KPIStatus" ColumnName="KPIStatus" />
+          <ScalarProperty Name="KPIValue" ColumnName="KPIValue" />
+          <ScalarProperty Name="KPIIndex" ColumnName="KPIIndex" />
+          <ScalarProperty Name="KPIDate" ColumnName="KPIDate" />
+          <ScalarProperty Name="KPIWeek" ColumnName="KPIWeek" />
+          <ScalarProperty Name="KPIYear" ColumnName="KPIYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupHighlights">
+      <EntityTypeMapping TypeName="TrendSchema.GroupHighlight">
+        <MappingFragment StoreEntitySet="GroupHighlight">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="HighlightID" ColumnName="HighlightID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPIConfigs">
+      <EntityTypeMapping TypeName="TrendSchema.KPIConfig">
+        <MappingFragment StoreEntitySet="KPIConfig">
+          <ScalarProperty Name="KPIInfo" ColumnName="KPIInfo" />
+          <ScalarProperty Name="StringFormat" ColumnName="StringFormat" />
+          <ScalarProperty Name="Dashboard" ColumnName="Dashboard" />
+          <ScalarProperty Name="ToolTip" ColumnName="ToolTip" />
+          <ScalarProperty Name="ShowValue" ColumnName="ShowValue" />
+          <ScalarProperty Name="KPIActionGroup" ColumnName="KPIActionGroup" />
+          <ScalarProperty Name="KPIActionIndex" ColumnName="KPIActionIndex" />
+          <ScalarProperty Name="KPISubLevel" ColumnName="KPISubLevel" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="KPIDescription" ColumnName="KPIDescription" />
+          <ScalarProperty Name="KPILevel" ColumnName="KPILevel" />
+          <ScalarProperty Name="KPIINdex" ColumnName="KPIINdex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrendDataProcesses">
+      <EntityTypeMapping TypeName="TrendSchema.TrendDataProcess">
+        <MappingFragment StoreEntitySet="TrendDataProcess">
+          <ScalarProperty Name="COProduct" ColumnName="COProduct" />
+          <ScalarProperty Name="HeavySlopCount" ColumnName="HeavySlopCount" />
+          <ScalarProperty Name="HeavySlopDuration" ColumnName="HeavySlopDuration" />
+          <ScalarProperty Name="TPVPressure" ColumnName="TPVPressure" />
+          <ScalarProperty Name="LadleScheduleIndex" ColumnName="LadleScheduleIndex" />
+          <ScalarProperty Name="PrimaryYield" ColumnName="PrimaryYield" />
+          <ScalarProperty Name="Dart" ColumnName="Dart" />
+          <ScalarProperty Name="TundishSkullWeight" ColumnName="TundishSkullWeight" />
+          <ScalarProperty Name="LadleBubbling" ColumnName="LadleBubbling" />
+          <ScalarProperty Name="UpOnMetal" ColumnName="UpOnMetal" />
+          <ScalarProperty Name="LadleLiningTemp" ColumnName="LadleLiningTemp" />
+          <ScalarProperty Name="TundishWeight" ColumnName="TundishWeight" />
+          <ScalarProperty Name="CastingSpeed" ColumnName="CastingSpeed" />
+          <ScalarProperty Name="CastRate" ColumnName="CastRate" />
+          <ScalarProperty Name="VesselSlop" ColumnName="VesselSlop" />
+          <ScalarProperty Name="TapAdditions" ColumnName="TapAdditions" />
+          <ScalarProperty Name="TapWeightPred" ColumnName="TapWeightPred" />
+          <ScalarProperty Name="TapWeightActual" ColumnName="TapWeightActual" />
+          <ScalarProperty Name="CCEndWeight" ColumnName="CCEndWeight" />
+          <ScalarProperty Name="CCStartWeight" ColumnName="CCStartWeight" />
+          <ScalarProperty Name="Freeboard" ColumnName="Freeboard" />
+          <ScalarProperty Name="SlagDepth" ColumnName="SlagDepth" />
+          <ScalarProperty Name="ReHeat" ColumnName="ReHeat" />
+          <ScalarProperty Name="LadleTempVar" ColumnName="LadleTempVar" />
+          <ScalarProperty Name="EBOXYDiff" ColumnName="EBOXYDiff" />
+          <ScalarProperty Name="EBCoolAdd" ColumnName="EBCoolAdd" />
+          <ScalarProperty Name="EBCoolReq" ColumnName="EBCoolReq" />
+          <ScalarProperty Name="EBTempVar" ColumnName="EBTempVar" />
+          <ScalarProperty Name="HMLiquidRatio" ColumnName="HMLiquidRatio" />
+          <ScalarProperty Name="LadleReturnWeight" ColumnName="LadleReturnWeight" />
+          <ScalarProperty Name="TapWeightError" ColumnName="TapWeightError" />
+          <ScalarProperty Name="HMDesSkimLoss" ColumnName="HMDesSkimLoss" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="TrendSampleIndex" ColumnName="TrendSampleIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrendDataAnalysis1">
+      <EntityTypeMapping TypeName="TrendSchema.TrendDataAnalysis">
+        <MappingFragment StoreEntitySet="TrendDataAnalysis">
+          <ScalarProperty Name="MgO" ColumnName="MgO" />
+          <ScalarProperty Name="Al2O3" ColumnName="Al2O3" />
+          <ScalarProperty Name="SecN2Pickup" ColumnName="SecN2Pickup" />
+          <ScalarProperty Name="SSHydris" ColumnName="SSHydris" />
+          <ScalarProperty Name="TunAlSol" ColumnName="TunAlSol" />
+          <ScalarProperty Name="TunN" ColumnName="TunN" />
+          <ScalarProperty Name="TunP" ColumnName="TunP" />
+          <ScalarProperty Name="TunS" ColumnName="TunS" />
+          <ScalarProperty Name="TunC" ColumnName="TunC" />
+          <ScalarProperty Name="LadleN" ColumnName="LadleN" />
+          <ScalarProperty Name="LadleP" ColumnName="LadleP" />
+          <ScalarProperty Name="LadleS" ColumnName="LadleS" />
+          <ScalarProperty Name="HMMn" ColumnName="HMMn" />
+          <ScalarProperty Name="HMP" ColumnName="HMP" />
+          <ScalarProperty Name="N2Pickup" ColumnName="N2Pickup" />
+          <ScalarProperty Name="HMS" ColumnName="HMS" />
+          <ScalarProperty Name="EBPhos" ColumnName="EBPhos" />
+          <ScalarProperty Name="TotalFe" ColumnName="TotalFe" />
+          <ScalarProperty Name="SiO2" ColumnName="SiO2" />
+          <ScalarProperty Name="CaO" ColumnName="CaO" />
+          <ScalarProperty Name="Basicity" ColumnName="Basicity" />
+          <ScalarProperty Name="HMSi" ColumnName="HMSi" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="TrendSampleIndex" ColumnName="TrendSampleIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPIConfigShifts">
+      <EntityTypeMapping TypeName="TrendSchema.KPIConfigShift">
+        <MappingFragment StoreEntitySet="KPIConfigShift">
+          <ScalarProperty Name="KPIInfo" ColumnName="KPIInfo" />
+          <ScalarProperty Name="StringFormat" ColumnName="StringFormat" />
+          <ScalarProperty Name="Dashboard" ColumnName="Dashboard" />
+          <ScalarProperty Name="ToolTip" ColumnName="ToolTip" />
+          <ScalarProperty Name="ShowValue" ColumnName="ShowValue" />
+          <ScalarProperty Name="KPIActionGroup" ColumnName="KPIActionGroup" />
+          <ScalarProperty Name="KPIActionIndex" ColumnName="KPIActionIndex" />
+          <ScalarProperty Name="KPISubLevel" ColumnName="KPISubLevel" />
+          <ScalarProperty Name="Maximum" ColumnName="Maximum" />
+          <ScalarProperty Name="Minimum" ColumnName="Minimum" />
+          <ScalarProperty Name="KPIDescription" ColumnName="KPIDescription" />
+          <ScalarProperty Name="KPILevel" ColumnName="KPILevel" />
+          <ScalarProperty Name="KPIINdex" ColumnName="KPIINdex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPIDataShifts">
+      <EntityTypeMapping TypeName="TrendSchema.KPIDataShift">
+        <MappingFragment StoreEntitySet="KPIDataShift">
+          <ScalarProperty Name="KPIStatus" ColumnName="KPIStatus" />
+          <ScalarProperty Name="KPIValue" ColumnName="KPIValue" />
+          <ScalarProperty Name="KPIRota" ColumnName="KPIRota" />
+          <ScalarProperty Name="KPIIndex" ColumnName="KPIIndex" />
+          <ScalarProperty Name="KPIShift" ColumnName="KPIShift" />
+          <ScalarProperty Name="KPIDate" ColumnName="KPIDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPITrendShifts">
+      <EntityTypeMapping TypeName="TrendSchema.KPITrendShift">
+        <MappingFragment StoreEntitySet="KPITrendShift">
+          <ScalarProperty Name="KPIDay" ColumnName="KPIDay" />
+          <ScalarProperty Name="KPIWeek" ColumnName="KPIWeek" />
+          <ScalarProperty Name="KPIYear" ColumnName="KPIYear" />
+          <ScalarProperty Name="KPIShift" ColumnName="KPIShift" />
+          <ScalarProperty Name="KPIRota" ColumnName="KPIRota" />
+          <ScalarProperty Name="KPIDate" ColumnName="KPIDate" />
+          <ScalarProperty Name="TrendKPIShiftId" ColumnName="TrendKPIShiftId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPITrendShiftAnalysis">
+      <EntityTypeMapping TypeName="TrendSchema.KPITrendShiftAnalysi">
+        <MappingFragment StoreEntitySet="KPITrendShiftAnalysis">
+          <ScalarProperty Name="N2PickupSec" ColumnName="N2PickupSec" />
+          <ScalarProperty Name="N2PickupCC3" ColumnName="N2PickupCC3" />
+          <ScalarProperty Name="N2PickupCC2" ColumnName="N2PickupCC2" />
+          <ScalarProperty Name="N2PickupCC1" ColumnName="N2PickupCC1" />
+          <ScalarProperty Name="EBPhos" ColumnName="EBPhos" />
+          <ScalarProperty Name="COProductV2" ColumnName="COProductV2" />
+          <ScalarProperty Name="COProductV1" ColumnName="COProductV1" />
+          <ScalarProperty Name="SlagF2V2" ColumnName="SlagF2V2" />
+          <ScalarProperty Name="SlagFeV1" ColumnName="SlagFeV1" />
+          <ScalarProperty Name="DeSAimsUnaltered" ColumnName="DeSAimsUnaltered" />
+          <ScalarProperty Name="TrendKPIShiftId" ColumnName="TrendKPIShiftId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPITrendShiftCasterStuffs">
+      <EntityTypeMapping TypeName="TrendSchema.KPITrendShiftCasterStuff">
+        <MappingFragment StoreEntitySet="KPITrendShiftCasterStuff">
+          <ScalarProperty Name="MachineConditionCC3" ColumnName="MachineConditionCC3" />
+          <ScalarProperty Name="MachineConditionCC2" ColumnName="MachineConditionCC2" />
+          <ScalarProperty Name="MachineConditionCC1" ColumnName="MachineConditionCC1" />
+          <ScalarProperty Name="TundishHeatsCC3" ColumnName="TundishHeatsCC3" />
+          <ScalarProperty Name="TundishHeatsCC2" ColumnName="TundishHeatsCC2" />
+          <ScalarProperty Name="TundishHeatsCC1" ColumnName="TundishHeatsCC1" />
+          <ScalarProperty Name="CastRateCC3" ColumnName="CastRateCC3" />
+          <ScalarProperty Name="CastRateCC2" ColumnName="CastRateCC2" />
+          <ScalarProperty Name="CastRateCC1" ColumnName="CastRateCC1" />
+          <ScalarProperty Name="SpeedRatioPctCC3" ColumnName="SpeedRatioPctCC3" />
+          <ScalarProperty Name="SpeedRatioPctCC2" ColumnName="SpeedRatioPctCC2" />
+          <ScalarProperty Name="SpeedRatioPctCC1" ColumnName="SpeedRatioPctCC1" />
+          <ScalarProperty Name="MetalInMouldPCTCC3" ColumnName="MetalInMouldPCTCC3" />
+          <ScalarProperty Name="MetalInMouldPCTCC2" ColumnName="MetalInMouldPCTCC2" />
+          <ScalarProperty Name="MetalInMouldPCTCC1" ColumnName="MetalInMouldPCTCC1" />
+          <ScalarProperty Name="HeatCastCC3" ColumnName="HeatCastCC3" />
+          <ScalarProperty Name="HeatCastCC2" ColumnName="HeatCastCC2" />
+          <ScalarProperty Name="HeatCastCC1" ColumnName="HeatCastCC1" />
+          <ScalarProperty Name="HeatsCast" ColumnName="HeatsCast" />
+          <ScalarProperty Name="TrendKPIShiftId" ColumnName="TrendKPIShiftId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPITrendShiftQualities">
+      <EntityTypeMapping TypeName="TrendSchema.KPITrendShiftQuality">
+        <MappingFragment StoreEntitySet="KPITrendShiftQuality">
+          <ScalarProperty Name="LengthRFTPct" ColumnName="LengthRFTPct" />
+          <ScalarProperty Name="WidthRFTPct" ColumnName="WidthRFTPct" />
+          <ScalarProperty Name="GradeRFTPct" ColumnName="GradeRFTPct" />
+          <ScalarProperty Name="QualityRFTPct" ColumnName="QualityRFTPct" />
+          <ScalarProperty Name="MiscastsEngineeringCC" ColumnName="MiscastsEngineeringCC" />
+          <ScalarProperty Name="MiscastTechnicalCC" ColumnName="MiscastTechnicalCC" />
+          <ScalarProperty Name="MiscastManufacturingCC" ColumnName="MiscastManufacturingCC" />
+          <ScalarProperty Name="MiscastsEngineeringSec" ColumnName="MiscastsEngineeringSec" />
+          <ScalarProperty Name="MiscastTechnicalSec" ColumnName="MiscastTechnicalSec" />
+          <ScalarProperty Name="MiscastManufacturingSec" ColumnName="MiscastManufacturingSec" />
+          <ScalarProperty Name="MiscastsEngineeringPri" ColumnName="MiscastsEngineeringPri" />
+          <ScalarProperty Name="MiscastTechnicalPri" ColumnName="MiscastTechnicalPri" />
+          <ScalarProperty Name="MiscastManufacturingPri" ColumnName="MiscastManufacturingPri" />
+          <ScalarProperty Name="Miscasts" ColumnName="Miscasts" />
+          <ScalarProperty Name="TrendKPIShiftId" ColumnName="TrendKPIShiftId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPITrendShiftSecStuffs">
+      <EntityTypeMapping TypeName="TrendSchema.KPITrendShiftSecStuff">
+        <MappingFragment StoreEntitySet="KPITrendShiftSecStuff">
+          <ScalarProperty Name="LadleWrongPlan" ColumnName="LadleWrongPlan" />
+          <ScalarProperty Name="LadleBubblingCasPct" ColumnName="LadleBubblingCasPct" />
+          <ScalarProperty Name="LadleFreeOpenPct" ColumnName="LadleFreeOpenPct" />
+          <ScalarProperty Name="TippedTonnage" ColumnName="TippedTonnage" />
+          <ScalarProperty Name="AverageFreeboard" ColumnName="AverageFreeboard" />
+          <ScalarProperty Name="AverageReheat" ColumnName="AverageReheat" />
+          <ScalarProperty Name="TrendKPIShiftId" ColumnName="TrendKPIShiftId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPITrendShiftSteelStuffs">
+      <EntityTypeMapping TypeName="TrendSchema.KPITrendShiftSteelStuff">
+        <MappingFragment StoreEntitySet="KPITrendShiftSteelStuff">
+          <ScalarProperty Name="SublanceAvailV2" ColumnName="SublanceAvailV2" />
+          <ScalarProperty Name="SublanceAvailV1" ColumnName="SublanceAvailV1" />
+          <ScalarProperty Name="TPVBlows" ColumnName="TPVBlows" />
+          <ScalarProperty Name="OxygenSpill" ColumnName="OxygenSpill" />
+          <ScalarProperty Name="DartWorkedPct" ColumnName="DartWorkedPct" />
+          <ScalarProperty Name="DartUsedPct" ColumnName="DartUsedPct" />
+          <ScalarProperty Name="HeavySlops30Sec" ColumnName="HeavySlops30Sec" />
+          <ScalarProperty Name="UpOnMetalwithQA" ColumnName="UpOnMetalwithQA" />
+          <ScalarProperty Name="UpOnMetal" ColumnName="UpOnMetal" />
+          <ScalarProperty Name="ScrapRatio" ColumnName="ScrapRatio" />
+          <ScalarProperty Name="SlagDepthFailures" ColumnName="SlagDepthFailures" />
+          <ScalarProperty Name="EBMOreOxy" ColumnName="EBMOreOxy" />
+          <ScalarProperty Name="CBMFluxes" ColumnName="CBMFluxes" />
+          <ScalarProperty Name="ScrapAdherenceHarsco" ColumnName="ScrapAdherenceHarsco" />
+          <ScalarProperty Name="ScrapAdherenceCBM" ColumnName="ScrapAdherenceCBM" />
+          <ScalarProperty Name="HeatsBlown" ColumnName="HeatsBlown" />
+          <ScalarProperty Name="TrendKPIShiftId" ColumnName="TrendKPIShiftId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPITrendShiftTemps">
+      <EntityTypeMapping TypeName="TrendSchema.KPITrendShiftTemp">
+        <MappingFragment StoreEntitySet="KPITrendShiftTemps">
+          <ScalarProperty Name="SSCeloxDips" ColumnName="SSCeloxDips" />
+          <ScalarProperty Name="SSTempDips" ColumnName="SSTempDips" />
+          <ScalarProperty Name="LadleLiningTemp" ColumnName="LadleLiningTemp" />
+          <ScalarProperty Name="ReleaseTempActAim" ColumnName="ReleaseTempActAim" />
+          <ScalarProperty Name="LadleTempActAim" ColumnName="LadleTempActAim" />
+          <ScalarProperty Name="LadleTempFailuresV2" ColumnName="LadleTempFailuresV2" />
+          <ScalarProperty Name="LadleTempFailuresV1" ColumnName="LadleTempFailuresV1" />
+          <ScalarProperty Name="EBTempStDevV2" ColumnName="EBTempStDevV2" />
+          <ScalarProperty Name="EBTempStDevV1" ColumnName="EBTempStDevV1" />
+          <ScalarProperty Name="AimEBTempUnaltered" ColumnName="AimEBTempUnaltered" />
+          <ScalarProperty Name="ReleaseTempFailures" ColumnName="ReleaseTempFailures" />
+          <ScalarProperty Name="LadleTempFailures" ColumnName="LadleTempFailures" />
+          <ScalarProperty Name="TrendKPIShiftId" ColumnName="TrendKPIShiftId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPITrendShiftTimes">
+      <EntityTypeMapping TypeName="TrendSchema.KPITrendShiftTime">
+        <MappingFragment StoreEntitySet="KPITrendShiftTimes">
+          <ScalarProperty Name="TreatmentTimeActStd" ColumnName="TreatmentTimeActStd" />
+          <ScalarProperty Name="FloatationTime" ColumnName="FloatationTime" />
+          <ScalarProperty Name="DwellTime" ColumnName="DwellTime" />
+          <ScalarProperty Name="LadleTurnTime" ColumnName="LadleTurnTime" />
+          <ScalarProperty Name="EndBlowStartTap" ColumnName="EndBlowStartTap" />
+          <ScalarProperty Name="HeavySlopDuration" ColumnName="HeavySlopDuration" />
+          <ScalarProperty Name="VesselCycleTimeBoth" ColumnName="VesselCycleTimeBoth" />
+          <ScalarProperty Name="VesselCycleTimeSingleV2" ColumnName="VesselCycleTimeSingleV2" />
+          <ScalarProperty Name="VesselCycleTimeSingleV1" ColumnName="VesselCycleTimeSingleV1" />
+          <ScalarProperty Name="DeSTreatmentTime" ColumnName="DeSTreatmentTime" />
+          <ScalarProperty Name="TrendKPIShiftId" ColumnName="TrendKPIShiftId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPITrendShiftWeights">
+      <EntityTypeMapping TypeName="TrendSchema.KPITrendShiftWeight">
+        <MappingFragment StoreEntitySet="KPITrendShiftWeights">
+          <ScalarProperty Name="ReturnedAndRecycled" ColumnName="ReturnedAndRecycled" />
+          <ScalarProperty Name="StrandScrap" ColumnName="StrandScrap" />
+          <ScalarProperty Name="PrimaryYieldV2" ColumnName="PrimaryYieldV2" />
+          <ScalarProperty Name="PrimaryYieldV1" ColumnName="PrimaryYieldV1" />
+          <ScalarProperty Name="Recycles" ColumnName="Recycles" />
+          <ScalarProperty Name="ReturnedSteel" ColumnName="ReturnedSteel" />
+          <ScalarProperty Name="ScrapSec" ColumnName="ScrapSec" />
+          <ScalarProperty Name="TundishWeightCC3" ColumnName="TundishWeightCC3" />
+          <ScalarProperty Name="TundishWeightCC2" ColumnName="TundishWeightCC2" />
+          <ScalarProperty Name="TundishWeightCC1" ColumnName="TundishWeightCC1" />
+          <ScalarProperty Name="TundishSkull" ColumnName="TundishSkull" />
+          <ScalarProperty Name="Tipped" ColumnName="Tipped" />
+          <ScalarProperty Name="SkimLoss" ColumnName="SkimLoss" />
+          <ScalarProperty Name="SteelSkull" ColumnName="SteelSkull" />
+          <ScalarProperty Name="TapWeightV2" ColumnName="TapWeightV2" />
+          <ScalarProperty Name="TapWeightV1" ColumnName="TapWeightV1" />
+          <ScalarProperty Name="PrimaryYield" ColumnName="PrimaryYield" />
+          <ScalarProperty Name="SlabWeightCC3" ColumnName="SlabWeightCC3" />
+          <ScalarProperty Name="SlabWeightCC2" ColumnName="SlabWeightCC2" />
+          <ScalarProperty Name="SlabWeightCC1" ColumnName="SlabWeightCC1" />
+          <ScalarProperty Name="PlatedFe" ColumnName="PlatedFe" />
+          <ScalarProperty Name="HMKgTls" ColumnName="HMKgTls" />
+          <ScalarProperty Name="TrendKPIShiftId" ColumnName="TrendKPIShiftId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="YieldDataShifts">
+      <EntityTypeMapping TypeName="TrendSchema.YieldDataShift">
+        <MappingFragment StoreEntitySet="YieldDataShift">
+          <ScalarProperty Name="Reason_Id" ColumnName="Reason_Id" />
+          <ScalarProperty Name="Outcome_id" ColumnName="Outcome_id" />
+          <ScalarProperty Name="Reason" ColumnName="Reason" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Outcome" ColumnName="Outcome" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="KPIDate" ColumnName="KPIDate" />
+          <ScalarProperty Name="YieldIndex" ColumnName="YieldIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KPIDataMonths">
+      <EntityTypeMapping TypeName="TrendSchema.KPIDataMonth">
+        <MappingFragment StoreEntitySet="KPIDataMonth">
+          <ScalarProperty Name="KPIStatus" ColumnName="KPIStatus" />
+          <ScalarProperty Name="KPIValue" ColumnName="KPIValue" />
+          <ScalarProperty Name="KPIShifts" ColumnName="KPIShifts" />
+          <ScalarProperty Name="KPIIndex" ColumnName="KPIIndex" />
+          <ScalarProperty Name="KPIRota" ColumnName="KPIRota" />
+          <ScalarProperty Name="KPIMonth" ColumnName="KPIMonth" />
+          <ScalarProperty Name="KPIYear" ColumnName="KPIYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SecuritySchema" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="SecuritySchemaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Roles" EntityType="SecuritySchema.Role" />
+    <EntitySet Name="Users" EntityType="SecuritySchema.User" />
+    <AssociationSet Name="UserRoles" Association="SecuritySchema.UserRoles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Users" Relationship="SecuritySchema.UserRoles" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Fullname" Type="String" MaxLength="255" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Roles" Relationship="SecuritySchema.UserRoles" FromRole="Users" ToRole="Roles" />
+  </EntityType>
+  <Association Name="UserRoles">
+    <End Role="Roles" Type="SecuritySchema.Role" Multiplicity="*" />
+    <End Role="Users" Type="SecuritySchema.User" Multiplicity="*" />
+  </Association>
+</Schema>

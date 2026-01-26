@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SpecsSchemaEntitiesStoreContainer" CdmEntityContainer="SpecsSchemaEntities">
+    <EntitySetMapping Name="ELEMENT_TAG">
+      <EntityTypeMapping TypeName="SpecsSchema.ELEMENT_TAG">
+        <MappingFragment StoreEntitySet="ELEMENT_TAG">
+          <ScalarProperty Name="ELEMENT_TAG1" ColumnName="ELEMENT_TAG" />
+          <ScalarProperty Name="ELEMENT_INDEX" ColumnName="ELEMENT_INDEX" />
+          <ScalarProperty Name="ELEMENT_DESC" ColumnName="ELEMENT_DESC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRADEs">
+      <EntityTypeMapping TypeName="SpecsSchema.GRADE">
+        <MappingFragment StoreEntitySet="GRADE">
+          <ScalarProperty Name="GRADE_NUMBER" ColumnName="GRADE_NUMBER" />
+          <ScalarProperty Name="PRIORITY" ColumnName="PRIORITY" />
+          <ScalarProperty Name="STEEL_TYPE" ColumnName="STEEL_TYPE" />
+          <ScalarProperty Name="SCRAP_MIX" ColumnName="SCRAP_MIX" />
+          <ScalarProperty Name="BAP_CODE" ColumnName="BAP_CODE" />
+          <ScalarProperty Name="LANCE_PRACTICE" ColumnName="LANCE_PRACTICE" />
+          <ScalarProperty Name="END_BLOW_PRACTICE" ColumnName="END_BLOW_PRACTICE" />
+          <ScalarProperty Name="HMDS_TREATMENT_CODE" ColumnName="HMDS_TREATMENT_CODE" />
+          <ScalarProperty Name="HMDS_SKIM_CODE" ColumnName="HMDS_SKIM_CODE" />
+          <ScalarProperty Name="FLUX_PRACTICE" ColumnName="FLUX_PRACTICE" />
+          <ScalarProperty Name="PRECHARGE_PRACTICE" ColumnName="PRECHARGE_PRACTICE" />
+          <ScalarProperty Name="TAP_WEIGHT" ColumnName="TAP_WEIGHT" />
+          <ScalarProperty Name="MAX_HM_SULPHUR_TREATED" ColumnName="MAX_HM_SULPHUR_TREATED" />
+          <ScalarProperty Name="MAX_HM_SULPHUR_NOT_TREATED" ColumnName="MAX_HM_SULPHUR_NOT_TREATED" />
+          <ScalarProperty Name="ENDBLOW_TEMPERATURE" ColumnName="ENDBLOW_TEMPERATURE" />
+          <ScalarProperty Name="LADLE_TEMPERATURE" ColumnName="LADLE_TEMPERATURE" />
+          <ScalarProperty Name="LIQUIDUS_TEMPERATURE" ColumnName="LIQUIDUS_TEMPERATURE" />
+          <ScalarProperty Name="LIQUIDUS_CORRECTION" ColumnName="LIQUIDUS_CORRECTION" />
+          <ScalarProperty Name="REQUIRED_SUPERHEAT" ColumnName="REQUIRED_SUPERHEAT" />
+          <ScalarProperty Name="TIME_AND_DATE_CREATED" ColumnName="TIME_AND_DATE_CREATED" />
+          <ScalarProperty Name="TIME_AND_DATE_UPDATED" ColumnName="TIME_AND_DATE_UPDATED" />
+          <ScalarProperty Name="VERSION_NUMBER" ColumnName="VERSION_NUMBER" />
+          <ScalarProperty Name="GRADE_DESC" ColumnName="GRADE_DESC" />
+          <ScalarProperty Name="QUART_DESC" ColumnName="QUART_DESC" />
+          <ScalarProperty Name="REQ_NEW_PLATE" ColumnName="REQ_NEW_PLATE" />
+          <ScalarProperty Name="REQ_NEW_NOZZLE" ColumnName="REQ_NEW_NOZZLE" />
+          <ScalarProperty Name="REQ_HMSI_EQUIV_08" ColumnName="REQ_HMSI_EQUIV_08" />
+          <ScalarProperty Name="UP_ON_METAL" ColumnName="UP_ON_METAL" />
+          <ScalarProperty Name="X_HEAT" ColumnName="X_HEAT" />
+          <ScalarProperty Name="STEEL_GRADE_GROUP" ColumnName="STEEL_GRADE_GROUP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRADE_ADDITION">
+      <EntityTypeMapping TypeName="SpecsSchema.GRADE_ADDITION">
+        <MappingFragment StoreEntitySet="GRADE_ADDITION">
+          <ScalarProperty Name="GRADE_NUMBER" ColumnName="GRADE_NUMBER" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="MATERIAL_REFERENCE_NUMBER" ColumnName="MATERIAL_REFERENCE_NUMBER" />
+          <ScalarProperty Name="MATERIAL_CHARGE_REQUIRED" ColumnName="MATERIAL_CHARGE_REQUIRED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRADE_ANALYSIS">
+      <EntityTypeMapping TypeName="SpecsSchema.GRADE_ANALYSIS">
+        <MappingFragment StoreEntitySet="GRADE_ANALYSIS">
+          <ScalarProperty Name="GRADE_NUMBER" ColumnName="GRADE_NUMBER" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="ELEMENT_TAG" ColumnName="ELEMENT_TAG" />
+          <ScalarProperty Name="MAXIMUM" ColumnName="MAXIMUM" />
+          <ScalarProperty Name="MINIMUM" ColumnName="MINIMUM" />
+          <ScalarProperty Name="AIM" ColumnName="AIM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRADE_INSTRUCTIONS">
+      <EntityTypeMapping TypeName="SpecsSchema.GRADE_INSTRUCTIONS">
+        <MappingFragment StoreEntitySet="GRADE_INSTRUCTIONS">
+          <ScalarProperty Name="GRADE_NUMBER" ColumnName="GRADE_NUMBER" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="LINE_NUMBER" ColumnName="LINE_NUMBER" />
+          <ScalarProperty Name="INSTRUCTION_TEXT" ColumnName="INSTRUCTION_TEXT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRADE_TEMPERATURE">
+      <EntityTypeMapping TypeName="SpecsSchema.GRADE_TEMPERATURE">
+        <MappingFragment StoreEntitySet="GRADE_TEMPERATURE">
+          <ScalarProperty Name="GRADE_NUMBER" ColumnName="GRADE_NUMBER" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="MAXIMUM" ColumnName="MAXIMUM" />
+          <ScalarProperty Name="MINIMUM" ColumnName="MINIMUM" />
+          <ScalarProperty Name="AIM" ColumnName="AIM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRADE_TREATMENT">
+      <EntityTypeMapping TypeName="SpecsSchema.GRADE_TREATMENT">
+        <MappingFragment StoreEntitySet="GRADE_TREATMENT">
+          <ScalarProperty Name="GRADE_NUMBER" ColumnName="GRADE_NUMBER" />
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="STEP" ColumnName="STEP" />
+          <ScalarProperty Name="TREATMENT" ColumnName="TREATMENT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GradeChangeLogs">
+      <EntityTypeMapping TypeName="SpecsSchema.GradeChangeLog">
+        <MappingFragment StoreEntitySet="GradeChangeLog">
+          <ScalarProperty Name="GradeChangeIndex" ColumnName="GradeChangeIndex" />
+          <ScalarProperty Name="GradeNumber" ColumnName="GradeNumber" />
+          <ScalarProperty Name="ChangeTimeStamp" ColumnName="ChangeTimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TREATMENTs">
+      <EntityTypeMapping TypeName="SpecsSchema.TREATMENT">
+        <MappingFragment StoreEntitySet="TREATMENT">
+          <ScalarProperty Name="TREATMENT1" ColumnName="TREATMENT" />
+          <ScalarProperty Name="TREATMENT_DESC" ColumnName="TREATMENT_DESC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRADE_UNIT">
+      <EntityTypeMapping TypeName="SpecsSchema.GRADE_UNIT">
+        <MappingFragment StoreEntitySet="UNIT">
+          <ScalarProperty Name="UNIT1" ColumnName="UNIT" />
+          <ScalarProperty Name="UNIT_DESC" ColumnName="UNIT_DESC" />
+          <ScalarProperty Name="UNIT_ORDER" ColumnName="UNIT_ORDER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UNIT_TREATMENT">
+      <EntityTypeMapping TypeName="SpecsSchema.UNIT_TREATMENT">
+        <MappingFragment StoreEntitySet="UNIT_TREATMENT">
+          <ScalarProperty Name="UNIT" ColumnName="UNIT" />
+          <ScalarProperty Name="TREATMENT" ColumnName="TREATMENT" />
+          <ScalarProperty Name="TREATMENT_TIME" ColumnName="TREATMENT_TIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

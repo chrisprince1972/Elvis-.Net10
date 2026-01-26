@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ReportSchemaEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ReportSchemaEntitiesStoreContainer">
+    <EntitySet Name="AreaLookUp" EntityType="ReportSchemaEntities.Store.AreaLookUp" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="Codes" EntityType="ReportSchemaEntities.Store.Codes" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="Comments" EntityType="ReportSchemaEntities.Store.Comments" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="Cost" EntityType="ReportSchemaEntities.Store.Cost" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="Documents" EntityType="ReportSchemaEntities.Store.Documents" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="DRFActions" EntityType="ReportSchemaEntities.Store.DRFActions" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="DRFDropDownLookUp" EntityType="ReportSchemaEntities.Store.DRFDropDownLookUp" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="DRFLocationLookUp" EntityType="ReportSchemaEntities.Store.DRFLocationLookUp" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="DRFOwners" EntityType="ReportSchemaEntities.Store.DRFOwners" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="DRFReports" EntityType="ReportSchemaEntities.Store.DRFReports" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="FunctionLookUp" EntityType="ReportSchemaEntities.Store.FunctionLookUp" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="I3s" EntityType="ReportSchemaEntities.Store.I3s" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="IncidentActions" EntityType="ReportSchemaEntities.Store.IncidentActions" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="IncidentOwners" EntityType="ReportSchemaEntities.Store.IncidentOwners" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="IncidentReport" EntityType="ReportSchemaEntities.Store.IncidentReport" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="Links" EntityType="ReportSchemaEntities.Store.Links" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="MainReport" EntityType="ReportSchemaEntities.Store.MainReport" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="MangementAgendaThreats" EntityType="ReportSchemaEntities.Store.MangementAgendaThreats" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="Sections" EntityType="ReportSchemaEntities.Store.Sections" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="StatusLookUp" EntityType="ReportSchemaEntities.Store.StatusLookUp" store:Type="Tables" Schema="Report" />
+    <EntitySet Name="AimsAnalysisGridData" EntityType="ReportSchemaEntities.Store.AimsAnalysisGridData" store:Type="Views" store:Schema="Report" store:Name="AimsAnalysisGridData">
+      <DefiningQuery>SELECT 
+      [AimsAnalysisGridData].[AimAnalysisIndex] AS [AimAnalysisIndex], 
+      [AimsAnalysisGridData].[HeatNumber] AS [HeatNumber], 
+      [AimsAnalysisGridData].[HNS] AS [HNS], 
+      [AimsAnalysisGridData].[UnitNumber] AS [UnitNumber], 
+      [AimsAnalysisGridData].[Type] AS [Type], 
+      [AimsAnalysisGridData].[TimeStamp] AS [TimeStamp], 
+      [AimsAnalysisGridData].[C] AS [C], 
+      [AimsAnalysisGridData].[Si] AS [Si], 
+      [AimsAnalysisGridData].[S] AS [S], 
+      [AimsAnalysisGridData].[P] AS [P], 
+      [AimsAnalysisGridData].[Ni] AS [Ni], 
+      [AimsAnalysisGridData].[Cu] AS [Cu], 
+      [AimsAnalysisGridData].[Mn] AS [Mn], 
+      [AimsAnalysisGridData].[Sn] AS [Sn], 
+      [AimsAnalysisGridData].[Cr] AS [Cr], 
+      [AimsAnalysisGridData].[As] AS [As], 
+      [AimsAnalysisGridData].[Mo] AS [Mo], 
+      [AimsAnalysisGridData].[N2] AS [N2], 
+      [AimsAnalysisGridData].[AlT] AS [AlT], 
+      [AimsAnalysisGridData].[Ti] AS [Ti], 
+      [AimsAnalysisGridData].[AlS] AS [AlS], 
+      [AimsAnalysisGridData].[B] AS [B], 
+      [AimsAnalysisGridData].[Ca] AS [Ca], 
+      [AimsAnalysisGridData].[Ce] AS [Ce], 
+      [AimsAnalysisGridData].[Co] AS [Co], 
+      [AimsAnalysisGridData].[Nb] AS [Nb], 
+      [AimsAnalysisGridData].[V] AS [V], 
+      [AimsAnalysisGridData].[VersionNumber] AS [VersionNumber], 
+      [AimsAnalysisGridData].[TempTypeText] AS [TempTypeText], 
+      [AimsAnalysisGridData].[UnitText] AS [UnitText]
+      FROM [Report].[AimsAnalysisGridData] AS [AimsAnalysisGridData]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AimsExtendAnalysisGridData" EntityType="ReportSchemaEntities.Store.AimsExtendAnalysisGridData" store:Type="Views" store:Schema="Report" store:Name="AimsExtendAnalysisGridData">
+      <DefiningQuery>SELECT 
+      [AimsExtendAnalysisGridData].[AimAnalysisIndex] AS [AimAnalysisIndex], 
+      [AimsExtendAnalysisGridData].[HeatNumber] AS [HeatNumber], 
+      [AimsExtendAnalysisGridData].[HNS] AS [HNS], 
+      [AimsExtendAnalysisGridData].[UnitNumber] AS [UnitNumber], 
+      [AimsExtendAnalysisGridData].[Type] AS [Type], 
+      [AimsExtendAnalysisGridData].[TimeStamp] AS [TimeStamp], 
+      [AimsExtendAnalysisGridData].[VersionNumber] AS [VersionNumber], 
+      [AimsExtendAnalysisGridData].[TempTypeText] AS [TempTypeText], 
+      [AimsExtendAnalysisGridData].[CEV1] AS [CEV1], 
+      [AimsExtendAnalysisGridData].[CEV2] AS [CEV2], 
+      [AimsExtendAnalysisGridData].[CEV3] AS [CEV3], 
+      [AimsExtendAnalysisGridData].[FreeC1] AS [FreeC1], 
+      [AimsExtendAnalysisGridData].[FreeC2] AS [FreeC2], 
+      [AimsExtendAnalysisGridData].[XSTi1] AS [XSTi1], 
+      [AimsExtendAnalysisGridData].[XSTi2] AS [XSTi2], 
+      [AimsExtendAnalysisGridData].[XSTi3] AS [XSTi3], 
+      [AimsExtendAnalysisGridData].[AlN2] AS [AlN2], 
+      [AimsExtendAnalysisGridData].[CuP] AS [CuP], 
+      [AimsExtendAnalysisGridData].[BN2] AS [BN2], 
+      [AimsExtendAnalysisGridData].[SP] AS [SP], 
+      [AimsExtendAnalysisGridData].[CUNiCrMoSn] AS [CUNiCrMoSn], 
+      [AimsExtendAnalysisGridData].[CrEq] AS [CrEq], 
+      [AimsExtendAnalysisGridData].[SiForm] AS [SiForm], 
+      [AimsExtendAnalysisGridData].[MnS] AS [MnS], 
+      [AimsExtendAnalysisGridData].[MnSi] AS [MnSi], 
+      [AimsExtendAnalysisGridData].[FreeC3] AS [FreeC3], 
+      [AimsExtendAnalysisGridData].[UnitText] AS [UnitText]
+      FROM [Report].[AimsExtendAnalysisGridData] AS [AimsExtendAnalysisGridData]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="AnalysisGridData" EntityType="ReportSchemaEntities.Store.AnalysisGridData" store:Type="Views" store:Schema="Report" store:Name="AnalysisGridData">
+      <DefiningQuery>SELECT 
+      [AnalysisGridData].[TimeStamp] AS [TimeStamp], 
+      [AnalysisGridData].[SampleType] AS [SampleType], 
+      [AnalysisGridData].[UnitShort] AS [UnitShort], 
+      [AnalysisGridData].[C] AS [C], 
+      [AnalysisGridData].[Si] AS [Si], 
+      [AnalysisGridData].[S] AS [S], 
+      [AnalysisGridData].[P] AS [P], 
+      [AnalysisGridData].[Mn] AS [Mn], 
+      [AnalysisGridData].[Ni] AS [Ni], 
+      [AnalysisGridData].[Cu] AS [Cu], 
+      [AnalysisGridData].[Sn] AS [Sn], 
+      [AnalysisGridData].[Cr] AS [Cr], 
+      [AnalysisGridData].[As] AS [As], 
+      [AnalysisGridData].[Mo] AS [Mo], 
+      [AnalysisGridData].[N2] AS [N2], 
+      [AnalysisGridData].[AlT] AS [AlT], 
+      [AnalysisGridData].[AlS] AS [AlS], 
+      [AnalysisGridData].[Ti] AS [Ti], 
+      [AnalysisGridData].[B] AS [B], 
+      [AnalysisGridData].[Ca] AS [Ca], 
+      [AnalysisGridData].[Ce] AS [Ce], 
+      [AnalysisGridData].[Co] AS [Co], 
+      [AnalysisGridData].[Nb] AS [Nb], 
+      [AnalysisGridData].[V] AS [V], 
+      [AnalysisGridData].[AnalysisIndex] AS [AnalysisIndex], 
+      [AnalysisGridData].[HeatNumber] AS [HeatNumber], 
+      [AnalysisGridData].[HNS] AS [HNS], 
+      [AnalysisGridData].[SubSampleNumber] AS [SubSampleNumber]
+      FROM [Report].[AnalysisGridData] AS [AnalysisGridData]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ExtendAnalysisGridData" EntityType="ReportSchemaEntities.Store.ExtendAnalysisGridData" store:Type="Views" store:Schema="Report" store:Name="ExtendAnalysisGridData">
+      <DefiningQuery>SELECT 
+      [ExtendAnalysisGridData].[UnitShort] AS [UnitShort], 
+      [ExtendAnalysisGridData].[AnalysisIndex] AS [AnalysisIndex], 
+      [ExtendAnalysisGridData].[HeatNumber] AS [HeatNumber], 
+      [ExtendAnalysisGridData].[HNS] AS [HNS], 
+      [ExtendAnalysisGridData].[TimeStamp] AS [TimeStamp], 
+      [ExtendAnalysisGridData].[SampleType] AS [SampleType], 
+      [ExtendAnalysisGridData].[CEV1] AS [CEV1], 
+      [ExtendAnalysisGridData].[CEV2] AS [CEV2], 
+      [ExtendAnalysisGridData].[CEV3] AS [CEV3], 
+      [ExtendAnalysisGridData].[FreeC1] AS [FreeC1], 
+      [ExtendAnalysisGridData].[FreeC2] AS [FreeC2], 
+      [ExtendAnalysisGridData].[XSTi1] AS [XSTi1], 
+      [ExtendAnalysisGridData].[XSTi2] AS [XSTi2], 
+      [ExtendAnalysisGridData].[XSTi3] AS [XSTi3], 
+      [ExtendAnalysisGridData].[AlN2] AS [AlN2], 
+      [ExtendAnalysisGridData].[CuP] AS [CuP], 
+      [ExtendAnalysisGridData].[BN2] AS [BN2], 
+      [ExtendAnalysisGridData].[SP] AS [SP], 
+      [ExtendAnalysisGridData].[CUNiCrMoSn] AS [CUNiCrMoSn], 
+      [ExtendAnalysisGridData].[CrEq] AS [CrEq], 
+      [ExtendAnalysisGridData].[SiForm] AS [SiForm], 
+      [ExtendAnalysisGridData].[MnS] AS [MnS], 
+      [ExtendAnalysisGridData].[MnSi] AS [MnSi], 
+      [ExtendAnalysisGridData].[FreeC3] AS [FreeC3], 
+      [ExtendAnalysisGridData].[Fe] AS [Fe], 
+      [ExtendAnalysisGridData].[Liquidus] AS [Liquidus], 
+      [ExtendAnalysisGridData].[SubSampleNumber] AS [SubSampleNumber]
+      FROM [Report].[ExtendAnalysisGridData] AS [ExtendAnalysisGridData]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="HeatDetailsEvents" EntityType="ReportSchemaEntities.Store.HeatDetailsEvents" store:Type="Views" store:Schema="Report" store:Name="HeatDetailsEvents">
+      <DefiningQuery>SELECT 
+      [HeatDetailsEvents].[HeatNumber] AS [HeatNumber], 
+      [HeatDetailsEvents].[HNS] AS [HNS], 
+      [HeatDetailsEvents].[TimeStampStart] AS [TimeStampStart], 
+      [HeatDetailsEvents].[TimeStampEnd] AS [TimeStampEnd], 
+      [HeatDetailsEvents].[UnitShort] AS [UnitShort], 
+      [HeatDetailsEvents].[Duration] AS [Duration], 
+      [HeatDetailsEvents].[TimeCreated] AS [TimeCreated], 
+      [HeatDetailsEvents].[TrackIndex] AS [TrackIndex], 
+      [HeatDetailsEvents].[UnitNumber] AS [UnitNumber], 
+      [HeatDetailsEvents].[ProgramNumber] AS [ProgramNumber], 
+      [HeatDetailsEvents].[TempBegin] AS [TempBegin], 
+      [HeatDetailsEvents].[TempEnd] AS [TempEnd], 
+      [HeatDetailsEvents].[WeightBegin] AS [WeightBegin], 
+      [HeatDetailsEvents].[WeightEnd] AS [WeightEnd]
+      FROM [Report].[HeatDetailsEvents] AS [HeatDetailsEvents]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="ReportOverview" EntityType="ReportSchemaEntities.Store.ReportOverview" store:Type="Views" store:Schema="Report" store:Name="ReportOverview">
+      <DefiningQuery>SELECT 
+      [ReportOverview].[ReportID] AS [ReportID], 
+      [ReportOverview].[HeatID] AS [HeatID], 
+      [ReportOverview].[CodeID] AS [CodeID], 
+      [ReportOverview].[CostID] AS [CostID], 
+      [ReportOverview].[Description] AS [Description], 
+      [ReportOverview].[Status] AS [Status], 
+      [ReportOverview].[CreatedDT] AS [CreatedDT], 
+      [ReportOverview].[ClosedDT] AS [ClosedDT], 
+      [ReportOverview].[DamageOccurredDT] AS [DamageOccurredDT], 
+      [ReportOverview].[DamageOccurredShift] AS [DamageOccurredShift], 
+      [ReportOverview].[ReferencedSection] AS [ReferencedSection], 
+      [ReportOverview].[DamageCost] AS [DamageCost], 
+      [ReportOverview].[IndicationReportDeleted] AS [IndicationReportDeleted], 
+      [ReportOverview].[TypeCause] AS [TypeCause], 
+      [ReportOverview].[PCName] AS [PCName], 
+      [ReportOverview].[CentralMorningMeeting] AS [CentralMorningMeeting], 
+      [ReportOverview].[CentralMorningDiscussedDT] AS [CentralMorningDiscussedDT], 
+      [ReportOverview].[HMPrepMeeting] AS [HMPrepMeeting], 
+      [ReportOverview].[HMPrepDiscussedDT] AS [HMPrepDiscussedDT], 
+      [ReportOverview].[VesselsMeeting] AS [VesselsMeeting], 
+      [ReportOverview].[VesselsDiscussedDT] AS [VesselsDiscussedDT], 
+      [ReportOverview].[SecondaryAndLadleMeeting] AS [SecondaryAndLadleMeeting], 
+      [ReportOverview].[SecAndLadleDiscussedDT] AS [SecAndLadleDiscussedDT], 
+      [ReportOverview].[CasterMeeting] AS [CasterMeeting], 
+      [ReportOverview].[CasterMeetingDiscussedDT] AS [CasterMeetingDiscussedDT], 
+      [ReportOverview].[CommentsCentralMornMeet] AS [CommentsCentralMornMeet], 
+      [ReportOverview].[TotalCost] AS [TotalCost]
+      FROM [Report].[ReportOverview] AS [ReportOverview]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TempAimsData" EntityType="ReportSchemaEntities.Store.TempAimsData" store:Type="Views" store:Schema="Report" store:Name="TempAimsData">
+      <DefiningQuery>SELECT 
+      [TempAimsData].[HeatNumber] AS [HeatNumber], 
+      [TempAimsData].[AimTempIndex] AS [AimTempIndex], 
+      [TempAimsData].[HNS] AS [HNS], 
+      [TempAimsData].[ProgramNumber] AS [ProgramNumber], 
+      [TempAimsData].[UnitText] AS [UnitText], 
+      [TempAimsData].[TemperatureType] AS [TemperatureType], 
+      [TempAimsData].[Temperature] AS [Temperature], 
+      [TempAimsData].[TempTypeText] AS [TempTypeText]
+      FROM [Report].[TempAimsData] AS [TempAimsData]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TempDipData" EntityType="ReportSchemaEntities.Store.TempDipData" store:Type="Views" store:Schema="Report" store:Name="TempDipData">
+      <DefiningQuery>SELECT 
+      [TempDipData].[UnitText] AS [UnitText], 
+      [TempDipData].[DipIndex] AS [DipIndex], 
+      [TempDipData].[HeatNumber] AS [HeatNumber], 
+      [TempDipData].[HNS] AS [HNS], 
+      [TempDipData].[UnitNumber] AS [UnitNumber], 
+      [TempDipData].[DipType] AS [DipType], 
+      [TempDipData].[TimeStamp] AS [TimeStamp], 
+      [TempDipData].[Temperature] AS [Temperature], 
+      [TempDipData].[S] AS [S], 
+      [TempDipData].[O2] AS [O2], 
+      [TempDipData].[Al] AS [Al], 
+      [TempDipData].[EMF] AS [EMF], 
+      [TempDipData].[Carbon] AS [Carbon]
+      FROM [Report].[TempDipData] AS [TempDipData]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Codes_Sections1" Association="ReportSchemaEntities.Store.FK_Codes_Sections1">
+      <End Role="Sections" EntitySet="Sections" />
+      <End Role="Codes" EntitySet="Codes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_MainReport1" Association="ReportSchemaEntities.Store.FK_Comments_MainReport1">
+      <End Role="MainReport" EntitySet="MainReport" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Sections1" Association="ReportSchemaEntities.Store.FK_Comments_Sections1">
+      <End Role="Sections" EntitySet="Sections" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cost_MainReport1" Association="ReportSchemaEntities.Store.FK_Cost_MainReport1">
+      <End Role="MainReport" EntitySet="MainReport" />
+      <End Role="Cost" EntitySet="Cost" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documents_MainReport1" Association="ReportSchemaEntities.Store.FK_Documents_MainReport1">
+      <End Role="MainReport" EntitySet="MainReport" />
+      <End Role="Documents" EntitySet="Documents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IncidentActions_IncidentOwners" Association="ReportSchemaEntities.Store.FK_IncidentActions_IncidentOwners">
+      <End Role="IncidentOwners" EntitySet="IncidentOwners" />
+      <End Role="IncidentActions" EntitySet="IncidentActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IncidentActions_IncidentReport" Association="ReportSchemaEntities.Store.FK_IncidentActions_IncidentReport">
+      <End Role="IncidentReport" EntitySet="IncidentReport" />
+      <End Role="IncidentActions" EntitySet="IncidentActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IncidentActions_StatusLookUp" Association="ReportSchemaEntities.Store.FK_IncidentActions_StatusLookUp">
+      <End Role="StatusLookUp" EntitySet="StatusLookUp" />
+      <End Role="IncidentActions" EntitySet="IncidentActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IncidentReport_AreaLookUp" Association="ReportSchemaEntities.Store.FK_IncidentReport_AreaLookUp">
+      <End Role="AreaLookUp" EntitySet="AreaLookUp" />
+      <End Role="IncidentReport" EntitySet="IncidentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IncidentReport_FunctionLookUp" Association="ReportSchemaEntities.Store.FK_IncidentReport_FunctionLookUp">
+      <End Role="FunctionLookUp" EntitySet="FunctionLookUp" />
+      <End Role="IncidentReport" EntitySet="IncidentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IncidentReport_ReportOwnerID" Association="ReportSchemaEntities.Store.FK_IncidentReport_ReportOwnerID">
+      <End Role="IncidentOwners" EntitySet="IncidentOwners" />
+      <End Role="IncidentReport" EntitySet="IncidentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IncidentReport_StatusLookUp" Association="ReportSchemaEntities.Store.FK_IncidentReport_StatusLookUp">
+      <End Role="StatusLookUp" EntitySet="StatusLookUp" />
+      <End Role="IncidentReport" EntitySet="IncidentReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Links_MainReport1" Association="ReportSchemaEntities.Store.FK_Links_MainReport1">
+      <End Role="MainReport" EntitySet="MainReport" />
+      <End Role="Links" EntitySet="Links" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MainReport_Codes" Association="ReportSchemaEntities.Store.FK_MainReport_Codes">
+      <End Role="Codes" EntitySet="Codes" />
+      <End Role="MainReport" EntitySet="MainReport" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MainReport_Cost" Association="ReportSchemaEntities.Store.FK_MainReport_Cost">
+      <End Role="Cost" EntitySet="Cost" />
+      <End Role="MainReport" EntitySet="MainReport" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AreaLookUp">
+    <Key>
+      <PropertyRef Name="AreaId" />
+    </Key>
+    <Property Name="AreaId" Type="int" Nullable="false" />
+    <Property Name="AreaDesc" Type="varchar" MaxLength="10" />
+    <Property Name="AreaDescFull" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Codes">
+    <Key>
+      <PropertyRef Name="CodeID" />
+    </Key>
+    <Property Name="CodeID" Type="int" Nullable="false" />
+    <Property Name="ParentID" Type="int" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="SectionID" Type="int" Nullable="false" />
+    <Property Name="SerialNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="CommentID" />
+    </Key>
+    <Property Name="CommentID" Type="int" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="SectionID" Type="int" />
+    <Property Name="CreatedDT" Type="datetime" />
+    <Property Name="LastUpdatedDT" Type="datetime" />
+    <Property Name="PCName" Type="varchar" MaxLength="20" />
+    <Property Name="Username" Type="varchar" MaxLength="40" />
+    <Property Name="FullName" Type="varchar" MaxLength="40" />
+    <Property Name="SAPID" Type="varchar" MaxLength="10" />
+    <Property Name="Department" Type="varchar" MaxLength="20" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="15" />
+    <Property Name="CommentWhatHappened" Type="varchar" MaxLength="4000" />
+    <Property Name="CommentHowHappened" Type="varchar" MaxLength="4000" />
+    <Property Name="CommentWhatActions" Type="varchar" MaxLength="4000" />
+    <Property Name="CommentHowPrevent" Type="varchar" MaxLength="4000" />
+    <Property Name="CommentLMM" Type="varchar" MaxLength="4000" />
+  </EntityType>
+  <EntityType Name="Cost">
+    <Key>
+      <PropertyRef Name="CostID" />
+    </Key>
+    <Property Name="CostID" Type="int" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="PlanLengthTundish" Type="float" />
+    <Property Name="ActLengthTundish" Type="float" />
+    <Property Name="MinsCasterFailure" Type="float" />
+    <Property Name="TonTundishSkull" Type="float" />
+    <Property Name="TonSteelReturnVessel" Type="float" />
+    <Property Name="TonSteelInSlagPan" Type="float" />
+    <Property Name="ReheatingDegrees" Type="float" />
+    <Property Name="DamageAmountOthers" Type="float" />
+    <Property Name="CostPerTonTundishSkull" Type="float" />
+    <Property Name="CostPerMinFailCaster" Type="float" />
+    <Property Name="CostPerTonSteelToVessel" Type="float" />
+    <Property Name="CostPerTonSteelSlagPan" Type="float" />
+    <Property Name="CostPerDegreeReheatLadle" Type="float" />
+    <Property Name="Cost1Tundish" Type="float" />
+  </EntityType>
+  <EntityType Name="Documents">
+    <Key>
+      <PropertyRef Name="DocumentID" />
+    </Key>
+    <Property Name="DocumentID" Type="int" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ContentType" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IsImage" Type="bit" Nullable="false" />
+    <Property Name="Data" Type="varbinary(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DRFActions">
+    <Key>
+      <PropertyRef Name="ActionIndex" />
+    </Key>
+    <Property Name="ActionIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DRFIndex" Type="int" />
+    <Property Name="Action" Type="varchar(max)" />
+    <Property Name="ActionOwner" Type="varchar" MaxLength="100" />
+    <Property Name="TargetDate" Type="smalldatetime" />
+    <Property Name="ActionState" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DRFDropDownLookUp">
+    <Key>
+      <PropertyRef Name="DDIndex" />
+    </Key>
+    <Property Name="DDIndex" Type="int" Nullable="false" />
+    <Property Name="DelayType" Type="varchar" MaxLength="50" />
+    <Property Name="Discipline" Type="varchar" MaxLength="50" />
+    <Property Name="Shift" Type="varchar" MaxLength="10" />
+    <Property Name="Rota" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="DRFLocationLookUp">
+    <Key>
+      <PropertyRef Name="PlantIndex" />
+    </Key>
+    <Property Name="PlantIndex" Type="int" Nullable="false" />
+    <Property Name="Works" Type="varchar" MaxLength="50" />
+    <Property Name="Location" Type="varchar" MaxLength="50" />
+    <Property Name="PlantItem" Type="varchar" MaxLength="50" />
+    <Property Name="UnitGroup" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DRFOwners">
+    <Key>
+      <PropertyRef Name="Works" />
+      <PropertyRef Name="Owner" />
+    </Key>
+    <Property Name="Works" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Owner" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="ValidUntil" Type="datetime2" Precision="2" />
+  </EntityType>
+  <EntityType Name="DRFReports">
+    <Key>
+      <PropertyRef Name="DRFIndex" />
+    </Key>
+    <Property Name="DRFIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DateCreated" Type="smalldatetime" />
+    <Property Name="Works" Type="varchar" MaxLength="30" />
+    <Property Name="Location" Type="varchar" MaxLength="100" />
+    <Property Name="PlantItem" Type="varchar" MaxLength="100" />
+    <Property Name="StartDateTime" Type="smalldatetime" />
+    <Property Name="DelayDuration" Type="int" />
+    <Property Name="InitiatorName" Type="varchar" MaxLength="50" />
+    <Property Name="ShortDescription" Type="varchar" MaxLength="500" />
+    <Property Name="Description" Type="varchar(max)" />
+    <Property Name="ImmediateActions" Type="varchar(max)" />
+    <Property Name="RootCause" Type="varchar(max)" />
+    <Property Name="CorrectiveMeasure" Type="varchar(max)" />
+    <Property Name="ClosureDate" Type="smalldatetime" />
+    <Property Name="ClosedByName" Type="varchar" MaxLength="50" />
+    <Property Name="ReportStatus" Type="tinyint" />
+    <Property Name="OwnerName" Type="varchar" MaxLength="50" />
+    <Property Name="Discipline" Type="varchar" MaxLength="30" />
+    <Property Name="DelayType" Type="varchar" MaxLength="100" />
+    <Property Name="Year" Type="int" />
+    <Property Name="Week" Type="int" />
+    <Property Name="Day" Type="int" />
+    <Property Name="Rota" Type="varchar" MaxLength="5" />
+    <Property Name="Shift" Type="varchar" MaxLength="50" />
+    <Property Name="ReviewDate" Type="smalldatetime" />
+    <Property Name="TIBDelayIndex" Type="int" />
+    <Property Name="TIBIndex" Type="int" />
+    <Property Name="HasAttachments" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FunctionLookUp">
+    <Key>
+      <PropertyRef Name="FunctionId" />
+    </Key>
+    <Property Name="FunctionId" Type="int" Nullable="false" />
+    <Property Name="FunctionDesc" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="FunctionDescFull" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="I3s">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Created" Type="datetime" Nullable="false" />
+    <Property Name="Shift" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Title" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ShiftManager" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CompleteIn24Hrs" Type="bit" Nullable="false" />
+    <Property Name="HigherLevelInvestigationRequired" Type="bit" Nullable="false" />
+    <Property Name="Trio" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FeedBackBy" Type="date" />
+    <Property Name="Complete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IncidentActions">
+    <Key>
+      <PropertyRef Name="ActionId" />
+    </Key>
+    <Property Name="ActionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IncidentId" Type="int" Nullable="false" />
+    <Property Name="ActionDesc" Type="varchar(max)" Nullable="false" />
+    <Property Name="ActionOwner" Type="int" Nullable="false" />
+    <Property Name="ActionTargetDate" Type="datetime" Nullable="false" />
+    <Property Name="ActionStatus" Type="int" Nullable="false" />
+    <Property Name="TimeStampCreated" Type="datetime" />
+    <Property Name="TimeStampClosed" Type="datetime" />
+    <Property Name="ClosedBy" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="IncidentOwners">
+    <Key>
+      <PropertyRef Name="OwnerId" />
+    </Key>
+    <Property Name="OwnerId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="OwnerDesc" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="OwnerEmail" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="IncidentReport">
+    <Key>
+      <PropertyRef Name="IncidentId" />
+    </Key>
+    <Property Name="IncidentId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStampCreated" Type="datetime" Nullable="false" />
+    <Property Name="TimeStampClosed" Type="datetime" />
+    <Property Name="AreaId" Type="int" Nullable="false" />
+    <Property Name="FunctionId" Type="int" Nullable="false" />
+    <Property Name="IncidentDescription" Type="varchar(max)" Nullable="false" />
+    <Property Name="IncidentStatus" Type="int" Nullable="false" />
+    <Property Name="ReportOwnerID" Type="int" />
+  </EntityType>
+  <EntityType Name="Links">
+    <Key>
+      <PropertyRef Name="LinkID" />
+    </Key>
+    <Property Name="LinkID" Type="int" Nullable="false" />
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="URL" Type="varchar" Nullable="false" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="MainReport">
+    <Key>
+      <PropertyRef Name="ReportID" />
+    </Key>
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="HeatID" Type="varchar" MaxLength="5" />
+    <Property Name="CodeID" Type="int" />
+    <Property Name="CostID" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="char" MaxLength="1" />
+    <Property Name="CreatedDT" Type="datetime" />
+    <Property Name="ClosedDT" Type="datetime" />
+    <Property Name="DamageOccurredDT" Type="datetime" />
+    <Property Name="DamageOccurredShift" Type="varchar" MaxLength="5" />
+    <Property Name="ReferencedSection" Type="int" />
+    <Property Name="DamageCost" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="IndicationReportDeleted" Type="bit" />
+    <Property Name="TypeCause" Type="char" MaxLength="1" />
+    <Property Name="PCName" Type="varchar" MaxLength="20" />
+    <Property Name="CentralMorningMeeting" Type="bit" />
+    <Property Name="CentralMorningDiscussedDT" Type="datetime" />
+    <Property Name="HMPrepMeeting" Type="bit" />
+    <Property Name="HMPrepDiscussedDT" Type="datetime" />
+    <Property Name="VesselsMeeting" Type="bit" />
+    <Property Name="VesselsDiscussedDT" Type="datetime" />
+    <Property Name="SecondaryAndLadleMeeting" Type="bit" />
+    <Property Name="SecAndLadleDiscussedDT" Type="datetime" />
+    <Property Name="CasterMeeting" Type="bit" />
+    <Property Name="CasterMeetingDiscussedDT" Type="nchar" MaxLength="10" />
+    <Property Name="CommentsCentralMornMeet" Type="varchar" MaxLength="4000" />
+  </EntityType>
+  <EntityType Name="MangementAgendaThreats">
+    <Key>
+      <PropertyRef Name="DmaThreatId" />
+    </Key>
+    <Property Name="DmaThreatId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ThreatLocationId" Type="int" Nullable="false" />
+    <Property Name="ThreatTimeScaleId" Type="int" Nullable="false" />
+    <Property Name="Threat" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sections">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="15" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="SerialNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="StatusLookUp">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="StatusDesc" Type="varchar" Nullable="false" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.AimsAnalysisGridData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AimsAnalysisGridData">
+    <Key>
+      <PropertyRef Name="AimAnalysisIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AimAnalysisIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="C" Type="real" />
+    <Property Name="Si" Type="real" />
+    <Property Name="S" Type="real" />
+    <Property Name="P" Type="real" />
+    <Property Name="Ni" Type="real" />
+    <Property Name="Cu" Type="real" />
+    <Property Name="Mn" Type="real" />
+    <Property Name="Sn" Type="real" />
+    <Property Name="Cr" Type="real" />
+    <Property Name="As" Type="real" />
+    <Property Name="Mo" Type="real" />
+    <Property Name="N2" Type="real" />
+    <Property Name="AlT" Type="real" />
+    <Property Name="Ti" Type="real" />
+    <Property Name="AlS" Type="real" />
+    <Property Name="B" Type="real" />
+    <Property Name="Ca" Type="real" />
+    <Property Name="Ce" Type="real" />
+    <Property Name="Co" Type="real" />
+    <Property Name="Nb" Type="real" />
+    <Property Name="V" Type="real" />
+    <Property Name="VersionNumber" Type="int" />
+    <Property Name="TempTypeText" Type="varchar" MaxLength="3" />
+    <Property Name="UnitText" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.AimsExtendAnalysisGridData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AimsExtendAnalysisGridData">
+    <Key>
+      <PropertyRef Name="AimAnalysisIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AimAnalysisIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="VersionNumber" Type="int" />
+    <Property Name="TempTypeText" Type="varchar" MaxLength="3" />
+    <Property Name="CEV1" Type="real" />
+    <Property Name="CEV2" Type="real" />
+    <Property Name="CEV3" Type="real" />
+    <Property Name="FreeC1" Type="real" />
+    <Property Name="FreeC2" Type="real" />
+    <Property Name="XSTi1" Type="real" />
+    <Property Name="XSTi2" Type="real" />
+    <Property Name="XSTi3" Type="real" />
+    <Property Name="AlN2" Type="real" />
+    <Property Name="CuP" Type="real" />
+    <Property Name="BN2" Type="real" />
+    <Property Name="SP" Type="real" />
+    <Property Name="CUNiCrMoSn" Type="real" />
+    <Property Name="CrEq" Type="real" />
+    <Property Name="SiForm" Type="real" />
+    <Property Name="MnS" Type="real" />
+    <Property Name="MnSi" Type="real" />
+    <Property Name="FreeC3" Type="real" />
+    <Property Name="UnitText" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.AnalysisGridData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="AnalysisGridData">
+    <Key>
+      <PropertyRef Name="AnalysisIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="SampleType" Type="varchar" MaxLength="150" />
+    <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+    <Property Name="C" Type="real" />
+    <Property Name="Si" Type="real" />
+    <Property Name="S" Type="real" />
+    <Property Name="P" Type="real" />
+    <Property Name="Mn" Type="real" />
+    <Property Name="Ni" Type="real" />
+    <Property Name="Cu" Type="real" />
+    <Property Name="Sn" Type="real" />
+    <Property Name="Cr" Type="real" />
+    <Property Name="As" Type="real" />
+    <Property Name="Mo" Type="real" />
+    <Property Name="N2" Type="real" />
+    <Property Name="AlT" Type="real" />
+    <Property Name="AlS" Type="real" />
+    <Property Name="Ti" Type="real" />
+    <Property Name="B" Type="real" />
+    <Property Name="Ca" Type="real" />
+    <Property Name="Ce" Type="real" />
+    <Property Name="Co" Type="real" />
+    <Property Name="Nb" Type="real" />
+    <Property Name="V" Type="real" />
+    <Property Name="AnalysisIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="SubSampleNumber" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.ExtendAnalysisGridData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ExtendAnalysisGridData">
+    <Key>
+      <PropertyRef Name="AnalysisIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+    <Property Name="AnalysisIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="SampleType" Type="varchar" MaxLength="150" />
+    <Property Name="CEV1" Type="real" />
+    <Property Name="CEV2" Type="real" />
+    <Property Name="CEV3" Type="real" />
+    <Property Name="FreeC1" Type="real" />
+    <Property Name="FreeC2" Type="real" />
+    <Property Name="XSTi1" Type="real" />
+    <Property Name="XSTi2" Type="real" />
+    <Property Name="XSTi3" Type="real" />
+    <Property Name="AlN2" Type="real" />
+    <Property Name="CuP" Type="real" />
+    <Property Name="BN2" Type="real" />
+    <Property Name="SP" Type="real" />
+    <Property Name="CUNiCrMoSn" Type="real" />
+    <Property Name="CrEq" Type="real" />
+    <Property Name="SiForm" Type="real" />
+    <Property Name="MnS" Type="real" />
+    <Property Name="MnSi" Type="real" />
+    <Property Name="FreeC3" Type="real" />
+    <Property Name="Fe" Type="real" />
+    <Property Name="Liquidus" Type="real" />
+    <Property Name="SubSampleNumber" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.HeatDetailsEvents' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="HeatDetailsEvents">
+    <Key>
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+      <PropertyRef Name="TimeStampStart" />
+      <PropertyRef Name="TrackIndex" />
+      <PropertyRef Name="UnitNumber" />
+    </Key>
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="TimeStampStart" Type="datetime" Nullable="false" />
+    <Property Name="TimeStampEnd" Type="datetime" />
+    <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+    <Property Name="Duration" Type="int" />
+    <Property Name="TimeCreated" Type="datetime" />
+    <Property Name="TrackIndex" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="TempBegin" Type="real" />
+    <Property Name="TempEnd" Type="real" />
+    <Property Name="WeightBegin" Type="real" />
+    <Property Name="WeightEnd" Type="real" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.ReportOverview' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="ReportOverview">
+    <Key>
+      <PropertyRef Name="ReportID" />
+    </Key>
+    <Property Name="ReportID" Type="int" Nullable="false" />
+    <Property Name="HeatID" Type="varchar" MaxLength="5" />
+    <Property Name="CodeID" Type="int" />
+    <Property Name="CostID" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="char" MaxLength="1" />
+    <Property Name="CreatedDT" Type="datetime" />
+    <Property Name="ClosedDT" Type="datetime" />
+    <Property Name="DamageOccurredDT" Type="datetime" />
+    <Property Name="DamageOccurredShift" Type="varchar" MaxLength="5" />
+    <Property Name="ReferencedSection" Type="int" />
+    <Property Name="DamageCost" Type="decimal" Precision="19" Scale="4" />
+    <Property Name="IndicationReportDeleted" Type="bit" />
+    <Property Name="TypeCause" Type="char" MaxLength="1" />
+    <Property Name="PCName" Type="varchar" MaxLength="20" />
+    <Property Name="CentralMorningMeeting" Type="bit" />
+    <Property Name="CentralMorningDiscussedDT" Type="datetime" />
+    <Property Name="HMPrepMeeting" Type="bit" />
+    <Property Name="HMPrepDiscussedDT" Type="datetime" />
+    <Property Name="VesselsMeeting" Type="bit" />
+    <Property Name="VesselsDiscussedDT" Type="datetime" />
+    <Property Name="SecondaryAndLadleMeeting" Type="bit" />
+    <Property Name="SecAndLadleDiscussedDT" Type="datetime" />
+    <Property Name="CasterMeeting" Type="bit" />
+    <Property Name="CasterMeetingDiscussedDT" Type="nchar" MaxLength="10" />
+    <Property Name="CommentsCentralMornMeet" Type="varchar" MaxLength="4000" />
+    <Property Name="TotalCost" Type="float" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.TempAimsData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TempAimsData">
+    <Key>
+      <PropertyRef Name="AimTempIndex" />
+    </Key>
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="AimTempIndex" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="UnitText" Type="varchar" MaxLength="20" />
+    <Property Name="TemperatureType" Type="int" />
+    <Property Name="Temperature" Type="int" />
+    <Property Name="TempTypeText" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Report.TempDipData' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TempDipData">
+    <Key>
+      <PropertyRef Name="DipIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+      <PropertyRef Name="UnitNumber" />
+      <PropertyRef Name="DipType" />
+      <PropertyRef Name="TimeStamp" />
+    </Key>
+    <Property Name="UnitText" Type="varchar" MaxLength="50" />
+    <Property Name="DipIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="DipType" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+    <Property Name="Temperature" Type="real" />
+    <Property Name="S" Type="real" />
+    <Property Name="O2" Type="real" />
+    <Property Name="Al" Type="real" />
+    <Property Name="EMF" Type="real" />
+    <Property Name="Carbon" Type="real" />
+  </EntityType>
+  <Association Name="FK_Codes_Sections1">
+    <End Role="Sections" Type="ReportSchemaEntities.Store.Sections" Multiplicity="1" />
+    <End Role="Codes" Type="ReportSchemaEntities.Store.Codes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sections">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="Codes">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_MainReport1">
+    <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="1" />
+    <End Role="Comments" Type="ReportSchemaEntities.Store.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MainReport">
+        <PropertyRef Name="ReportID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="ReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Sections1">
+    <End Role="Sections" Type="ReportSchemaEntities.Store.Sections" Multiplicity="0..1" />
+    <End Role="Comments" Type="ReportSchemaEntities.Store.Comments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sections">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cost_MainReport1">
+    <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="1" />
+    <End Role="Cost" Type="ReportSchemaEntities.Store.Cost" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MainReport">
+        <PropertyRef Name="ReportID" />
+      </Principal>
+      <Dependent Role="Cost">
+        <PropertyRef Name="ReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documents_MainReport1">
+    <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="1" />
+    <End Role="Documents" Type="ReportSchemaEntities.Store.Documents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MainReport">
+        <PropertyRef Name="ReportID" />
+      </Principal>
+      <Dependent Role="Documents">
+        <PropertyRef Name="ReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IncidentActions_IncidentOwners">
+    <End Role="IncidentOwners" Type="ReportSchemaEntities.Store.IncidentOwners" Multiplicity="1" />
+    <End Role="IncidentActions" Type="ReportSchemaEntities.Store.IncidentActions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IncidentOwners">
+        <PropertyRef Name="OwnerId" />
+      </Principal>
+      <Dependent Role="IncidentActions">
+        <PropertyRef Name="ActionOwner" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IncidentActions_IncidentReport">
+    <End Role="IncidentReport" Type="ReportSchemaEntities.Store.IncidentReport" Multiplicity="1" />
+    <End Role="IncidentActions" Type="ReportSchemaEntities.Store.IncidentActions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IncidentReport">
+        <PropertyRef Name="IncidentId" />
+      </Principal>
+      <Dependent Role="IncidentActions">
+        <PropertyRef Name="IncidentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IncidentActions_StatusLookUp">
+    <End Role="StatusLookUp" Type="ReportSchemaEntities.Store.StatusLookUp" Multiplicity="1" />
+    <End Role="IncidentActions" Type="ReportSchemaEntities.Store.IncidentActions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusLookUp">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="IncidentActions">
+        <PropertyRef Name="ActionStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IncidentReport_AreaLookUp">
+    <End Role="AreaLookUp" Type="ReportSchemaEntities.Store.AreaLookUp" Multiplicity="1" />
+    <End Role="IncidentReport" Type="ReportSchemaEntities.Store.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AreaLookUp">
+        <PropertyRef Name="AreaId" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="AreaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IncidentReport_FunctionLookUp">
+    <End Role="FunctionLookUp" Type="ReportSchemaEntities.Store.FunctionLookUp" Multiplicity="1" />
+    <End Role="IncidentReport" Type="ReportSchemaEntities.Store.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FunctionLookUp">
+        <PropertyRef Name="FunctionId" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="FunctionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IncidentReport_ReportOwnerID">
+    <End Role="IncidentOwners" Type="ReportSchemaEntities.Store.IncidentOwners" Multiplicity="0..1" />
+    <End Role="IncidentReport" Type="ReportSchemaEntities.Store.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IncidentOwners">
+        <PropertyRef Name="OwnerId" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="ReportOwnerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IncidentReport_StatusLookUp">
+    <End Role="StatusLookUp" Type="ReportSchemaEntities.Store.StatusLookUp" Multiplicity="1" />
+    <End Role="IncidentReport" Type="ReportSchemaEntities.Store.IncidentReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="StatusLookUp">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="IncidentReport">
+        <PropertyRef Name="IncidentStatus" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Links_MainReport1">
+    <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="1" />
+    <End Role="Links" Type="ReportSchemaEntities.Store.Links" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MainReport">
+        <PropertyRef Name="ReportID" />
+      </Principal>
+      <Dependent Role="Links">
+        <PropertyRef Name="ReportID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MainReport_Codes">
+    <End Role="Codes" Type="ReportSchemaEntities.Store.Codes" Multiplicity="0..1" />
+    <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Codes">
+        <PropertyRef Name="CodeID" />
+      </Principal>
+      <Dependent Role="MainReport">
+        <PropertyRef Name="CodeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MainReport_Cost">
+    <End Role="Cost" Type="ReportSchemaEntities.Store.Cost" Multiplicity="0..1" />
+    <End Role="MainReport" Type="ReportSchemaEntities.Store.MainReport" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cost">
+        <PropertyRef Name="CostID" />
+      </Principal>
+      <Dependent Role="MainReport">
+        <PropertyRef Name="CostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

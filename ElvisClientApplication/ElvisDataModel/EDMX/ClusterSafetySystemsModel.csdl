@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WW_SafetySystemsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="ClusterWW_SafetySystemsModel" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="SAS_NM_DataWithDateAndTimeJoinedForElvis" EntityType="WW_SafetySystemsModel.SAS_NM_DataWithDateAndTimeJoinedForElvis" />
+    <EntitySet Name="SAS_NM_Actions" EntityType="WW_SafetySystemsModel.SAS_NM_Actions" />
+    <EntitySet Name="SAS_NM_DataForElvis" EntityType="WW_SafetySystemsModel.SAS_NM_DataForElvis" />
+  </EntityContainer>
+  <EntityType Name="SAS_NM_DataWithDateAndTimeJoinedForElvis">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="PossibleInjury" />
+      <PropertyRef Name="DamageToPlant" />
+      <PropertyRef Name="SiteInspected" />
+      <PropertyRef Name="PersonToldOfRecommendation" />
+      <PropertyRef Name="Contained" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="DateTime" Name="Date" />
+    <Property Type="String" Name="Location" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InitiatorsName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DescriptionOfAccident" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="PossibleInjury" Nullable="false" />
+    <Property Type="Boolean" Name="DamageToPlant" Nullable="false" />
+    <Property Type="DateTime" Name="TimeInspected" />
+    <Property Type="Boolean" Name="SiteInspected" Nullable="false" />
+    <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="InitialActionTaken" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SupervisorsName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SafetyRepsComments" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SafetyRepsName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="SectionManagersComments" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="status" />
+    <Property Type="Boolean" Name="PersonToldOfRecommendation" Nullable="false" />
+    <Property Type="String" Name="Employer" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="works_area" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="sectionmanagersname" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="SEVERITY" />
+    <Property Type="DateTime" Name="closure_date" />
+    <Property Type="String" Name="OWNER" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ROTA" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="works_area_id" />
+    <Property Type="String" Name="Closed_by_name" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="Priority" />
+    <Property Type="String" Name="Closed_by_id" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Nearmiss_type" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="report_type" />
+    <Property Type="Boolean" Name="Contained" Nullable="false" />
+    <Property Type="String" Name="NoteYesNo" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NoteNumber" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="Byte" Name="MPriority" />
+  </EntityType>
+  <EntityType Name="SAS_NM_Actions">
+    <Key>
+      <PropertyRef Name="ACTION_INDEX" />
+    </Key>
+    <Property Type="Int32" Name="ACTION_INDEX" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="NM_INDEX" />
+    <Property Type="String" Name="ACTION" MaxLength="2048" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ACTION_OWNER" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="ACTION_STATUS" />
+    <Property Type="DateTime" Name="ACTION_COMPLETE" />
+    <Property Type="DateTime" Name="ACTION_TARGET" />
+    <Property Type="String" Name="ACTION_NOTIFICATION" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SAS_NM_DataForElvis">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="managerSeverityCatagory" />
+      <PropertyRef Name="managerPriority" />
+      <PropertyRef Name="managerContained" />
+      <PropertyRef Name="ownerPersonToldOfRecomendation" />
+      <PropertyRef Name="ownerPriority" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="initiatorName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="initiatorTrioAllocation" MaxLength="103" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="initiatorLocation" MaxLength="103" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="initiatorType" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="initiatorEmployerAndRota" MaxLength="63" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="initiatorDateAndTime" />
+    <Property Type="String" Name="initiatorReportType" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="initiatorSapNotification" MaxLength="62" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="initiatorDescriptionOfIncident" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="managerName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="managerSiteInspected" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="managerSeverityCatagory" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="managerPriority" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="managerContained" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="managerInitialActionTaken" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="managerComments" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="repName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="repComments" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ownerName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ownerPersonToldOfRecomendation" Nullable="false" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ownerPriority" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ownerSectionManagersComments" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

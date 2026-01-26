@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelSchemaEntitiesStoreContainer" CdmEntityContainer="ModelSchemaEntities">
+    <EntitySetMapping Name="CbmDisplayAnalysis1">
+      <EntityTypeMapping TypeName="ModelSchema.CbmDisplayAnalysis">
+        <MappingFragment StoreEntitySet="CbmDisplayAnalysis">
+          <ScalarProperty Name="RECYCLE_HEAT_NUMBER" ColumnName="RECYCLE_HEAT_NUMBER" />
+          <ScalarProperty Name="CbmRunNumber" ColumnName="CbmRunNumber" />
+          <ScalarProperty Name="IndexCbm" ColumnName="IndexCbm" />
+          <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="CBM_RUN_TIME" ColumnName="CBM_RUN_TIME" />
+          <ScalarProperty Name="CBM_RUN_TIME_GMT" ColumnName="CBM_RUN_TIME_GMT" />
+          <ScalarProperty Name="CALC_HM_TEMPERATURE" ColumnName="CALC_HM_TEMPERATURE" />
+          <ScalarProperty Name="CALC_HM_CARBON" ColumnName="CALC_HM_CARBON" />
+          <ScalarProperty Name="CALC_HM_SILICON" ColumnName="CALC_HM_SILICON" />
+          <ScalarProperty Name="CALC_HM_MANGANESE" ColumnName="CALC_HM_MANGANESE" />
+          <ScalarProperty Name="CALC_HM_PHOSPHORUS" ColumnName="CALC_HM_PHOSPHORUS" />
+          <ScalarProperty Name="CALC_HM_SULPHUR" ColumnName="CALC_HM_SULPHUR" />
+          <ScalarProperty Name="CALC_HM_NITROGEN" ColumnName="CALC_HM_NITROGEN" />
+          <ScalarProperty Name="CALC_HM_WEIGHT" ColumnName="CALC_HM_WEIGHT" />
+          <ScalarProperty Name="CALC_HM_DIP_TIME" ColumnName="CALC_HM_DIP_TIME" />
+          <ScalarProperty Name="HM_LADLE_TEMPERATURE" ColumnName="HM_LADLE_TEMPERATURE" />
+          <ScalarProperty Name="HM_LADLE_CARBON" ColumnName="HM_LADLE_CARBON" />
+          <ScalarProperty Name="HM_LADLE_SILICON" ColumnName="HM_LADLE_SILICON" />
+          <ScalarProperty Name="HM_LADLE_MANGANESE" ColumnName="HM_LADLE_MANGANESE" />
+          <ScalarProperty Name="HM_LADLE_PHOSPHORUS" ColumnName="HM_LADLE_PHOSPHORUS" />
+          <ScalarProperty Name="HM_LADLE_SULPHUR" ColumnName="HM_LADLE_SULPHUR" />
+          <ScalarProperty Name="HM_LADLE_NITROGEN" ColumnName="HM_LADLE_NITROGEN" />
+          <ScalarProperty Name="HM_LADLE_WEIGHT" ColumnName="HM_LADLE_WEIGHT" />
+          <ScalarProperty Name="HM_LADLE_DIP_TIME" ColumnName="HM_LADLE_DIP_TIME" />
+          <ScalarProperty Name="DESULPH_TEMPERATURE" ColumnName="DESULPH_TEMPERATURE" />
+          <ScalarProperty Name="DESULPH_CARBON" ColumnName="DESULPH_CARBON" />
+          <ScalarProperty Name="DESULPH_SILICON" ColumnName="DESULPH_SILICON" />
+          <ScalarProperty Name="DESULPH_MANGANESE" ColumnName="DESULPH_MANGANESE" />
+          <ScalarProperty Name="DESULPH_PHOSPHORUS" ColumnName="DESULPH_PHOSPHORUS" />
+          <ScalarProperty Name="DESULPH_SULPHUR" ColumnName="DESULPH_SULPHUR" />
+          <ScalarProperty Name="DESULPH_NITROGEN" ColumnName="DESULPH_NITROGEN" />
+          <ScalarProperty Name="DESULPH_WEIGHT" ColumnName="DESULPH_WEIGHT" />
+          <ScalarProperty Name="DESULPH_DIP_TIME" ColumnName="DESULPH_DIP_TIME" />
+          <ScalarProperty Name="RECYCLE_TEMPERATURE" ColumnName="RECYCLE_TEMPERATURE" />
+          <ScalarProperty Name="RECYCLE_CARBON" ColumnName="RECYCLE_CARBON" />
+          <ScalarProperty Name="RECYCLE_SILICON" ColumnName="RECYCLE_SILICON" />
+          <ScalarProperty Name="RECYCLE_MANGANESE" ColumnName="RECYCLE_MANGANESE" />
+          <ScalarProperty Name="RECYCLE_PHOSPHORUS" ColumnName="RECYCLE_PHOSPHORUS" />
+          <ScalarProperty Name="RECYCLE_SULPHUR" ColumnName="RECYCLE_SULPHUR" />
+          <ScalarProperty Name="RECYCLE_NITROGEN" ColumnName="RECYCLE_NITROGEN" />
+          <ScalarProperty Name="RECYCLE_WEIGHT" ColumnName="RECYCLE_WEIGHT" />
+          <ScalarProperty Name="RECYCLE_DIP_TIME" ColumnName="RECYCLE_DIP_TIME" />
+          <ScalarProperty Name="INBLOW_AIM_TEMPERATURE" ColumnName="INBLOW_AIM_TEMPERATURE" />
+          <ScalarProperty Name="INBLOW_AIM_CARBON" ColumnName="INBLOW_AIM_CARBON" />
+          <ScalarProperty Name="INBLOW_AIM_SILICON" ColumnName="INBLOW_AIM_SILICON" />
+          <ScalarProperty Name="INBLOW_AIM_MANGANESE" ColumnName="INBLOW_AIM_MANGANESE" />
+          <ScalarProperty Name="INBLOW_AIM_PHOSPHORUS" ColumnName="INBLOW_AIM_PHOSPHORUS" />
+          <ScalarProperty Name="INBLOW_AIM_SULPHUR" ColumnName="INBLOW_AIM_SULPHUR" />
+          <ScalarProperty Name="INBLOW_AIM_NITROGEN" ColumnName="INBLOW_AIM_NITROGEN" />
+          <ScalarProperty Name="INBLOW_AIM_WEIGHT" ColumnName="INBLOW_AIM_WEIGHT" />
+          <ScalarProperty Name="INBLOW_AIM_DIP_TIME" ColumnName="INBLOW_AIM_DIP_TIME" />
+          <ScalarProperty Name="INBLOW_ACTUAL_TEMPERATURE" ColumnName="INBLOW_ACTUAL_TEMPERATURE" />
+          <ScalarProperty Name="INBLOW_ACTUAL_CARBON" ColumnName="INBLOW_ACTUAL_CARBON" />
+          <ScalarProperty Name="INBLOW_ACTUAL_SILICON" ColumnName="INBLOW_ACTUAL_SILICON" />
+          <ScalarProperty Name="INBLOW_ACTUAL_MANGANESE" ColumnName="INBLOW_ACTUAL_MANGANESE" />
+          <ScalarProperty Name="INBLOW_ACTUAL_PHOSPHORUS" ColumnName="INBLOW_ACTUAL_PHOSPHORUS" />
+          <ScalarProperty Name="INBLOW_ACTUAL_SULPHUR" ColumnName="INBLOW_ACTUAL_SULPHUR" />
+          <ScalarProperty Name="INBLOW_ACTUAL_NITROGEN" ColumnName="INBLOW_ACTUAL_NITROGEN" />
+          <ScalarProperty Name="INBLOW_ACTUAL_WEIGHT" ColumnName="INBLOW_ACTUAL_WEIGHT" />
+          <ScalarProperty Name="INBLOW_ACTUAL_DIP_TIME" ColumnName="INBLOW_ACTUAL_DIP_TIME" />
+          <ScalarProperty Name="ENDBLOW_AIM_TEMPERATURE" ColumnName="ENDBLOW_AIM_TEMPERATURE" />
+          <ScalarProperty Name="ENDBLOW_AIM_CARBON" ColumnName="ENDBLOW_AIM_CARBON" />
+          <ScalarProperty Name="ENDBLOW_AIM_SILICON" ColumnName="ENDBLOW_AIM_SILICON" />
+          <ScalarProperty Name="ENDBLOW_AIM_MANGANESE" ColumnName="ENDBLOW_AIM_MANGANESE" />
+          <ScalarProperty Name="ENDBLOW_AIM_PHOSPHORUS" ColumnName="ENDBLOW_AIM_PHOSPHORUS" />
+          <ScalarProperty Name="ENDBLOW_AIM_SULPHUR" ColumnName="ENDBLOW_AIM_SULPHUR" />
+          <ScalarProperty Name="ENDBLOW_AIM_NITROGEN" ColumnName="ENDBLOW_AIM_NITROGEN" />
+          <ScalarProperty Name="ENDBLOW_AIM_WEIGHT" ColumnName="ENDBLOW_AIM_WEIGHT" />
+          <ScalarProperty Name="ENDBLOW_AIM_DIP_TIME" ColumnName="ENDBLOW_AIM_DIP_TIME" />
+          <ScalarProperty Name="ENDBLOW_ACTUAL_TEMPERATURE" ColumnName="ENDBLOW_ACTUAL_TEMPERATURE" />
+          <ScalarProperty Name="ENDBLOW_ACTUAL_CARBON" ColumnName="ENDBLOW_ACTUAL_CARBON" />
+          <ScalarProperty Name="ENDBLOW_ACTUAL_SILICON" ColumnName="ENDBLOW_ACTUAL_SILICON" />
+          <ScalarProperty Name="ENDBLOW_ACTUAL_MANGANESE" ColumnName="ENDBLOW_ACTUAL_MANGANESE" />
+          <ScalarProperty Name="ENDBLOW_ACTUAL_PHOSPHORUS" ColumnName="ENDBLOW_ACTUAL_PHOSPHORUS" />
+          <ScalarProperty Name="ENDBLOW_ACTUAL_SULPHUR" ColumnName="ENDBLOW_ACTUAL_SULPHUR" />
+          <ScalarProperty Name="ENDBLOW_ACTUAL_NITROGEN" ColumnName="ENDBLOW_ACTUAL_NITROGEN" />
+          <ScalarProperty Name="ENDBLOW_ACTUAL_WEIGHT" ColumnName="ENDBLOW_ACTUAL_WEIGHT" />
+          <ScalarProperty Name="ENDBLOW_ACTUAL_DIP_TIME" ColumnName="ENDBLOW_ACTUAL_DIP_TIME" />
+          <ScalarProperty Name="STEEL_CALC_TEMPERATURE" ColumnName="STEEL_CALC_TEMPERATURE" />
+          <ScalarProperty Name="STEEL_CALC_CARBON" ColumnName="STEEL_CALC_CARBON" />
+          <ScalarProperty Name="STEEL_CALC_SILICON" ColumnName="STEEL_CALC_SILICON" />
+          <ScalarProperty Name="STEEL_CALC_MANGANESE" ColumnName="STEEL_CALC_MANGANESE" />
+          <ScalarProperty Name="STEEL_CALC_PHOSPHORUS" ColumnName="STEEL_CALC_PHOSPHORUS" />
+          <ScalarProperty Name="STEEL_CALC_SULPHUR" ColumnName="STEEL_CALC_SULPHUR" />
+          <ScalarProperty Name="STEEL_CALC_NITROGEN" ColumnName="STEEL_CALC_NITROGEN" />
+          <ScalarProperty Name="STEEL_CALC_WEIGHT" ColumnName="STEEL_CALC_WEIGHT" />
+          <ScalarProperty Name="STEEL_CALC_DIP_TIME" ColumnName="STEEL_CALC_DIP_TIME" />
+          <ScalarProperty Name="SLAG_CALC_FE" ColumnName="SLAG_CALC_FE" />
+          <ScalarProperty Name="SLAG_CALC_CAO" ColumnName="SLAG_CALC_CAO" />
+          <ScalarProperty Name="SLAG_CALC_SIO2" ColumnName="SLAG_CALC_SIO2" />
+          <ScalarProperty Name="SLAG_CALC_MGO" ColumnName="SLAG_CALC_MGO" />
+          <ScalarProperty Name="SLAG_CALC_VR" ColumnName="SLAG_CALC_VR" />
+          <ScalarProperty Name="SLAG_CALC_P2O5" ColumnName="SLAG_CALC_P2O5" />
+          <ScalarProperty Name="SLAG_CALC_MNO" ColumnName="SLAG_CALC_MNO" />
+          <ScalarProperty Name="SLAG_CALC_WEIGHT" ColumnName="SLAG_CALC_WEIGHT" />
+          <ScalarProperty Name="SLAG_ACTUAL_FE" ColumnName="SLAG_ACTUAL_FE" />
+          <ScalarProperty Name="SLAG_ACTUAL_CAO" ColumnName="SLAG_ACTUAL_CAO" />
+          <ScalarProperty Name="SLAG_ACTUAL_SIO2" ColumnName="SLAG_ACTUAL_SIO2" />
+          <ScalarProperty Name="SLAG_ACTUAL_MGO" ColumnName="SLAG_ACTUAL_MGO" />
+          <ScalarProperty Name="SLAG_ACTUAL_VR" ColumnName="SLAG_ACTUAL_VR" />
+          <ScalarProperty Name="SLAG_ACTUAL_P2O5" ColumnName="SLAG_ACTUAL_P2O5" />
+          <ScalarProperty Name="SLAG_ACTUAL_MNO" ColumnName="SLAG_ACTUAL_MNO" />
+          <ScalarProperty Name="SLAG_ACTUAL_WEIGHT" ColumnName="SLAG_ACTUAL_WEIGHT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CbmDisplayMaterials">
+      <EntityTypeMapping TypeName="ModelSchema.CbmDisplayMaterial">
+        <MappingFragment StoreEntitySet="CbmDisplayMaterial">
+          <ScalarProperty Name="CbmRunNumber" ColumnName="CbmRunNumber" />
+          <ScalarProperty Name="IndexCbm" ColumnName="IndexCbm" />
+          <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="CBM_RUN_TIME" ColumnName="CBM_RUN_TIME" />
+          <ScalarProperty Name="CBM_RUN_TIME_GMT" ColumnName="CBM_RUN_TIME_GMT" />
+          <ScalarProperty Name="OXYGEN_DESC_TEXT" ColumnName="OXYGEN_DESC_TEXT" />
+          <ScalarProperty Name="OXYGEN_CALCULATED" ColumnName="OXYGEN_CALCULATED" />
+          <ScalarProperty Name="OXYGEN_CONSTRAINED" ColumnName="OXYGEN_CONSTRAINED" />
+          <ScalarProperty Name="OXYGEN_PREPARED" ColumnName="OXYGEN_PREPARED" />
+          <ScalarProperty Name="OXYGEN_ACTUAL" ColumnName="OXYGEN_ACTUAL" />
+          <ScalarProperty Name="HM_DESC_TEXT" ColumnName="HM_DESC_TEXT" />
+          <ScalarProperty Name="HM_CALCULATED" ColumnName="HM_CALCULATED" />
+          <ScalarProperty Name="HM_CONSTRAINED" ColumnName="HM_CONSTRAINED" />
+          <ScalarProperty Name="HM_PREPARED" ColumnName="HM_PREPARED" />
+          <ScalarProperty Name="HM_ACTUAL" ColumnName="HM_ACTUAL" />
+          <ScalarProperty Name="SCRAP_DESC_TEXT" ColumnName="SCRAP_DESC_TEXT" />
+          <ScalarProperty Name="SCRAP_CALCULATED" ColumnName="SCRAP_CALCULATED" />
+          <ScalarProperty Name="SCRAP_CONSTRAINED" ColumnName="SCRAP_CONSTRAINED" />
+          <ScalarProperty Name="SCRAP_PREPARED" ColumnName="SCRAP_PREPARED" />
+          <ScalarProperty Name="SCRAP_ACTUAL" ColumnName="SCRAP_ACTUAL" />
+          <ScalarProperty Name="HM_RATIO_DESC_TEXT" ColumnName="HM_RATIO_DESC_TEXT" />
+          <ScalarProperty Name="HM_RATIO_CALCULATED" ColumnName="HM_RATIO_CALCULATED" />
+          <ScalarProperty Name="HM_RATIO_CONSTRAINED" ColumnName="HM_RATIO_CONSTRAINED" />
+          <ScalarProperty Name="HM_RATIO_PREPARED" ColumnName="HM_RATIO_PREPARED" />
+          <ScalarProperty Name="HM_RATIO_ACTUAL" ColumnName="HM_RATIO_ACTUAL" />
+          <ScalarProperty Name="RECYCLE_DESC_TEXT" ColumnName="RECYCLE_DESC_TEXT" />
+          <ScalarProperty Name="RECYCLE_CALCULATED" ColumnName="RECYCLE_CALCULATED" />
+          <ScalarProperty Name="RECYCLE_CONSTRAINED" ColumnName="RECYCLE_CONSTRAINED" />
+          <ScalarProperty Name="RECYCLE_PREPARED" ColumnName="RECYCLE_PREPARED" />
+          <ScalarProperty Name="RECYCLE_ACTUAL" ColumnName="RECYCLE_ACTUAL" />
+          <ScalarProperty Name="CHB_MAT_1_DESC_TEXT" ColumnName="CHB_MAT_1_DESC_TEXT" />
+          <ScalarProperty Name="CHB_MAT_1_CALCULATED" ColumnName="CHB_MAT_1_CALCULATED" />
+          <ScalarProperty Name="CHB_MAT_1_CONSTRAINED" ColumnName="CHB_MAT_1_CONSTRAINED" />
+          <ScalarProperty Name="CHB_MAT_1_PREPARED" ColumnName="CHB_MAT_1_PREPARED" />
+          <ScalarProperty Name="CHB_MAT_1_ACTUAL" ColumnName="CHB_MAT_1_ACTUAL" />
+          <ScalarProperty Name="CHB_MAT_2_DESC_TEXT" ColumnName="CHB_MAT_2_DESC_TEXT" />
+          <ScalarProperty Name="CHB_MAT_2_CALCULATED" ColumnName="CHB_MAT_2_CALCULATED" />
+          <ScalarProperty Name="CHB_MAT_2_CONSTRAINED" ColumnName="CHB_MAT_2_CONSTRAINED" />
+          <ScalarProperty Name="CHB_MAT_2_PREPARED" ColumnName="CHB_MAT_2_PREPARED" />
+          <ScalarProperty Name="CHB_MAT_2_ACTUAL" ColumnName="CHB_MAT_2_ACTUAL" />
+          <ScalarProperty Name="CHB_MAT_3_DESC_TEXT" ColumnName="CHB_MAT_3_DESC_TEXT" />
+          <ScalarProperty Name="CHB_MAT_3_CALCULATED" ColumnName="CHB_MAT_3_CALCULATED" />
+          <ScalarProperty Name="CHB_MAT_3_CONSTRAINED" ColumnName="CHB_MAT_3_CONSTRAINED" />
+          <ScalarProperty Name="CHB_MAT_3_PREPARED" ColumnName="CHB_MAT_3_PREPARED" />
+          <ScalarProperty Name="CHB_MAT_3_ACTUAL" ColumnName="CHB_MAT_3_ACTUAL" />
+          <ScalarProperty Name="CHB_MAT_4_DESC_TEXT" ColumnName="CHB_MAT_4_DESC_TEXT" />
+          <ScalarProperty Name="CHB_MAT_4_CALCULATED" ColumnName="CHB_MAT_4_CALCULATED" />
+          <ScalarProperty Name="CHB_MAT_4_CONSTRAINED" ColumnName="CHB_MAT_4_CONSTRAINED" />
+          <ScalarProperty Name="CHB_MAT_4_PREPARED" ColumnName="CHB_MAT_4_PREPARED" />
+          <ScalarProperty Name="CHB_MAT_4_ACTUAL" ColumnName="CHB_MAT_4_ACTUAL" />
+          <ScalarProperty Name="CHB_MAT_5_DESC_TEXT" ColumnName="CHB_MAT_5_DESC_TEXT" />
+          <ScalarProperty Name="CHB_MAT_5_CALCULATED" ColumnName="CHB_MAT_5_CALCULATED" />
+          <ScalarProperty Name="CHB_MAT_5_CONSTRAINED" ColumnName="CHB_MAT_5_CONSTRAINED" />
+          <ScalarProperty Name="CHB_MAT_5_PREPARED" ColumnName="CHB_MAT_5_PREPARED" />
+          <ScalarProperty Name="CHB_MAT_5_ACTUAL" ColumnName="CHB_MAT_5_ACTUAL" />
+          <ScalarProperty Name="CHB_MAT_6_DESC_TEXT" ColumnName="CHB_MAT_6_DESC_TEXT" />
+          <ScalarProperty Name="CHB_MAT_6_CALCULATED" ColumnName="CHB_MAT_6_CALCULATED" />
+          <ScalarProperty Name="CHB_MAT_6_CONSTRAINED" ColumnName="CHB_MAT_6_CONSTRAINED" />
+          <ScalarProperty Name="CHB_MAT_6_PREPARED" ColumnName="CHB_MAT_6_PREPARED" />
+          <ScalarProperty Name="CHB_MAT_6_ACTUAL" ColumnName="CHB_MAT_6_ACTUAL" />
+          <ScalarProperty Name="TF_MAT_1_DESC_TEXT" ColumnName="TF_MAT_1_DESC_TEXT" />
+          <ScalarProperty Name="TF_MAT_1_CALCULATED" ColumnName="TF_MAT_1_CALCULATED" />
+          <ScalarProperty Name="TF_MAT_1_CONSTRAINED" ColumnName="TF_MAT_1_CONSTRAINED" />
+          <ScalarProperty Name="TF_MAT_1_PREPARED" ColumnName="TF_MAT_1_PREPARED" />
+          <ScalarProperty Name="TF_MAT_1_ACTUAL" ColumnName="TF_MAT_1_ACTUAL" />
+          <ScalarProperty Name="TF_MAT_2_DESC_TEXT" ColumnName="TF_MAT_2_DESC_TEXT" />
+          <ScalarProperty Name="TF_MAT_2_CALCULATED" ColumnName="TF_MAT_2_CALCULATED" />
+          <ScalarProperty Name="TF_MAT_2_CONSTRAINED" ColumnName="TF_MAT_2_CONSTRAINED" />
+          <ScalarProperty Name="TF_MAT_2_PREPARED" ColumnName="TF_MAT_2_PREPARED" />
+          <ScalarProperty Name="TF_MAT_2_ACTUAL" ColumnName="TF_MAT_2_ACTUAL" />
+          <ScalarProperty Name="MAN_MAT_1_DESC_TEXT" ColumnName="MAN_MAT_1_DESC_TEXT" />
+          <ScalarProperty Name="MAN_MAT_1_CALCULATED" ColumnName="MAN_MAT_1_CALCULATED" />
+          <ScalarProperty Name="MAN_MAT_1_CONSTRAINED" ColumnName="MAN_MAT_1_CONSTRAINED" />
+          <ScalarProperty Name="MAN_MAT_1_PREPARED" ColumnName="MAN_MAT_1_PREPARED" />
+          <ScalarProperty Name="MAN_MAT_1_ACTUAL" ColumnName="MAN_MAT_1_ACTUAL" />
+          <ScalarProperty Name="MAN_MAT_2_DESC_TEXT" ColumnName="MAN_MAT_2_DESC_TEXT" />
+          <ScalarProperty Name="MAN_MAT_2_CALCULATED" ColumnName="MAN_MAT_2_CALCULATED" />
+          <ScalarProperty Name="MAN_MAT_2_CONSTRAINED" ColumnName="MAN_MAT_2_CONSTRAINED" />
+          <ScalarProperty Name="MAN_MAT_2_PREPARED" ColumnName="MAN_MAT_2_PREPARED" />
+          <ScalarProperty Name="MAN_MAT_2_ACTUAL" ColumnName="MAN_MAT_2_ACTUAL" />
+          <ScalarProperty Name="MAN_MAT_3_DESC_TEXT" ColumnName="MAN_MAT_3_DESC_TEXT" />
+          <ScalarProperty Name="MAN_MAT_3_CALCULATED" ColumnName="MAN_MAT_3_CALCULATED" />
+          <ScalarProperty Name="MAN_MAT_3_CONSTRAINED" ColumnName="MAN_MAT_3_CONSTRAINED" />
+          <ScalarProperty Name="MAN_MAT_3_PREPARED" ColumnName="MAN_MAT_3_PREPARED" />
+          <ScalarProperty Name="MAN_MAT_3_ACTUAL" ColumnName="MAN_MAT_3_ACTUAL" />
+          <ScalarProperty Name="MAN_MAT_4_DESC_TEXT" ColumnName="MAN_MAT_4_DESC_TEXT" />
+          <ScalarProperty Name="MAN_MAT_4_CALCULATED" ColumnName="MAN_MAT_4_CALCULATED" />
+          <ScalarProperty Name="MAN_MAT_4_CONSTRAINED" ColumnName="MAN_MAT_4_CONSTRAINED" />
+          <ScalarProperty Name="MAN_MAT_4_PREPARED" ColumnName="MAN_MAT_4_PREPARED" />
+          <ScalarProperty Name="MAN_MAT_4_ACTUAL" ColumnName="MAN_MAT_4_ACTUAL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CbmMaterialReqs">
+      <EntityTypeMapping TypeName="ModelSchema.CbmMaterialReq">
+        <MappingFragment StoreEntitySet="CbmMaterialReq">
+          <ScalarProperty Name="CbmRunNumber" ColumnName="CbmRunNumber" />
+          <ScalarProperty Name="IndexCbm" ColumnName="IndexCbm" />
+          <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="MATERIAL_TYPE" ColumnName="MATERIAL_TYPE" />
+          <ScalarProperty Name="MATERIAL_DESCRIPTOR" ColumnName="MATERIAL_DESCRIPTOR" />
+          <ScalarProperty Name="RUN_TIME" ColumnName="RUN_TIME" />
+          <ScalarProperty Name="RUN_TIME_GMT" ColumnName="RUN_TIME_GMT" />
+          <ScalarProperty Name="QUANTITY" ColumnName="QUANTITY" />
+          <ScalarProperty Name="CONSTRAINED" ColumnName="CONSTRAINED" />
+          <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CbmMessages">
+      <EntityTypeMapping TypeName="ModelSchema.CbmMessage">
+        <MappingFragment StoreEntitySet="CbmMessage">
+          <ScalarProperty Name="CbmRunNumber" ColumnName="CbmRunNumber" />
+          <ScalarProperty Name="IndexCbm" ColumnName="IndexCbm" />
+          <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="CBM_RUN_TIME_STAMP" ColumnName="CBM_RUN_TIME_STAMP" />
+          <ScalarProperty Name="CBM_RUN_TIME_STAMP_GMT" ColumnName="CBM_RUN_TIME_STAMP_GMT" />
+          <ScalarProperty Name="MESSAGE_NUMBER" ColumnName="MESSAGE_NUMBER" />
+          <ScalarProperty Name="MESSAGE_TYPE" ColumnName="MESSAGE_TYPE" />
+          <ScalarProperty Name="MESSAGE_TEXT" ColumnName="MESSAGE_TEXT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CbmResults">
+      <EntityTypeMapping TypeName="ModelSchema.CbmResult">
+        <MappingFragment StoreEntitySet="CbmResult">
+          <ScalarProperty Name="CbmRunNumber" ColumnName="CbmRunNumber" />
+          <ScalarProperty Name="IndexCbm" ColumnName="IndexCbm" />
+          <ScalarProperty Name="HEAT_NUMBER_SET" ColumnName="HEAT_NUMBER_SET" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="RUN_TIME" ColumnName="RUN_TIME" />
+          <ScalarProperty Name="RUN_TIME_GMT" ColumnName="RUN_TIME_GMT" />
+          <ScalarProperty Name="HEAT_STATUS" ColumnName="HEAT_STATUS" />
+          <ScalarProperty Name="RECYCLED_STEEL_WEIGHT" ColumnName="RECYCLED_STEEL_WEIGHT" />
+          <ScalarProperty Name="PREDICTED_TAP_WEIGHT" ColumnName="PREDICTED_TAP_WEIGHT" />
+          <ScalarProperty Name="PREDICTED_SLAG_WEIGHT" ColumnName="PREDICTED_SLAG_WEIGHT" />
+          <ScalarProperty Name="PREDICTED_END_BLOW_TEMP" ColumnName="PREDICTED_END_BLOW_TEMP" />
+          <ScalarProperty Name="PREDICTED_OXYGEN" ColumnName="PREDICTED_OXYGEN" />
+          <ScalarProperty Name="COMMIT_TIME" ColumnName="COMMIT_TIME" />
+          <ScalarProperty Name="COMMIT_TIME_GMT" ColumnName="COMMIT_TIME_GMT" />
+          <ScalarProperty Name="COMMIT_OPERATOR_ID" ColumnName="COMMIT_OPERATOR_ID" />
+          <ScalarProperty Name="ERROR_MESSAGE_LINE_1" ColumnName="ERROR_MESSAGE_LINE_1" />
+          <ScalarProperty Name="ERROR_MESSAGE_LINE_2" ColumnName="ERROR_MESSAGE_LINE_2" />
+          <ScalarProperty Name="ERROR_MESSAGE_LINE_3" ColumnName="ERROR_MESSAGE_LINE_3" />
+          <ScalarProperty Name="HM_LADLE_NUMBER" ColumnName="HM_LADLE_NUMBER" />
+          <ScalarProperty Name="HM_CARBON" ColumnName="HM_CARBON" />
+          <ScalarProperty Name="HM_SILICON" ColumnName="HM_SILICON" />
+          <ScalarProperty Name="HM_MANGANESE" ColumnName="HM_MANGANESE" />
+          <ScalarProperty Name="HM_PHOSPHORUS" ColumnName="HM_PHOSPHORUS" />
+          <ScalarProperty Name="HM_SULPHUR" ColumnName="HM_SULPHUR" />
+          <ScalarProperty Name="HM_NITROGEN" ColumnName="HM_NITROGEN" />
+          <ScalarProperty Name="HM_TEMPERATURE" ColumnName="HM_TEMPERATURE" />
+          <ScalarProperty Name="PREDICTED_TAP_CARBON" ColumnName="PREDICTED_TAP_CARBON" />
+          <ScalarProperty Name="PREDICTED_TAP_MANGANESE" ColumnName="PREDICTED_TAP_MANGANESE" />
+          <ScalarProperty Name="PREDICTED_TAP_PHOSPHORUS" ColumnName="PREDICTED_TAP_PHOSPHORUS" />
+          <ScalarProperty Name="PREDICTED_TAP_SULPHUR" ColumnName="PREDICTED_TAP_SULPHUR" />
+          <ScalarProperty Name="PREDICTED_TAP_NITROGEN" ColumnName="PREDICTED_TAP_NITROGEN" />
+          <ScalarProperty Name="PREDICTED_SLAG_FE" ColumnName="PREDICTED_SLAG_FE" />
+          <ScalarProperty Name="PREDICTED_SLAG_CAO" ColumnName="PREDICTED_SLAG_CAO" />
+          <ScalarProperty Name="PREDICTED_SLAG_SIO2" ColumnName="PREDICTED_SLAG_SIO2" />
+          <ScalarProperty Name="PREDICTED_SLAG_AL2O3" ColumnName="PREDICTED_SLAG_AL2O3" />
+          <ScalarProperty Name="PREDICTED_SLAG_MGO" ColumnName="PREDICTED_SLAG_MGO" />
+          <ScalarProperty Name="PREDICTED_SLAG_P2O5" ColumnName="PREDICTED_SLAG_P2O5" />
+          <ScalarProperty Name="PREDICTED_SLAG_S" ColumnName="PREDICTED_SLAG_S" />
+          <ScalarProperty Name="PREDICTED_SLAG_MNO" ColumnName="PREDICTED_SLAG_MNO" />
+          <ScalarProperty Name="PREDICTED_SLAG_FEO" ColumnName="PREDICTED_SLAG_FEO" />
+          <ScalarProperty Name="PREDICTED_SLAG_TIO2" ColumnName="PREDICTED_SLAG_TIO2" />
+          <ScalarProperty Name="NUMBER" ColumnName="NUMBER" />
+          <ScalarProperty Name="CONVERTER" ColumnName="CONVERTER" />
+          <ScalarProperty Name="RUN_MODE" ColumnName="RUN_MODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EbmDisplays">
+      <EntityTypeMapping TypeName="ModelSchema.EbmDisplay">
+        <MappingFragment StoreEntitySet="EbmDisplay">
+          <ScalarProperty Name="ErrorText" ColumnName="ErrorText" />
+          <ScalarProperty Name="RunoutTimeSecs" ColumnName="RunoutTimeSecs" />
+          <ScalarProperty Name="RunoutTimeMins" ColumnName="RunoutTimeMins" />
+          <ScalarProperty Name="TundishNitrogen" ColumnName="TundishNitrogen" />
+          <ScalarProperty Name="TundishManganese" ColumnName="TundishManganese" />
+          <ScalarProperty Name="TundishPhosphorus" ColumnName="TundishPhosphorus" />
+          <ScalarProperty Name="TundishSulphur" ColumnName="TundishSulphur" />
+          <ScalarProperty Name="TundishSilicon" ColumnName="TundishSilicon" />
+          <ScalarProperty Name="TundishCarbon" ColumnName="TundishCarbon" />
+          <ScalarProperty Name="QtNitrogen" ColumnName="QtNitrogen" />
+          <ScalarProperty Name="QtManganese" ColumnName="QtManganese" />
+          <ScalarProperty Name="QtPhosphorus" ColumnName="QtPhosphorus" />
+          <ScalarProperty Name="QtSulphur" ColumnName="QtSulphur" />
+          <ScalarProperty Name="QtSilicon" ColumnName="QtSilicon" />
+          <ScalarProperty Name="QtCarbon" ColumnName="QtCarbon" />
+          <ScalarProperty Name="Pb1Nitrogen" ColumnName="Pb1Nitrogen" />
+          <ScalarProperty Name="Pb1Manganese" ColumnName="Pb1Manganese" />
+          <ScalarProperty Name="Pb1Phosphorus" ColumnName="Pb1Phosphorus" />
+          <ScalarProperty Name="Pb1Sulphur" ColumnName="Pb1Sulphur" />
+          <ScalarProperty Name="Pb1Silicon" ColumnName="Pb1Silicon" />
+          <ScalarProperty Name="Pb1Carbon" ColumnName="Pb1Carbon" />
+          <ScalarProperty Name="IbNitrogen" ColumnName="IbNitrogen" />
+          <ScalarProperty Name="IbManganese" ColumnName="IbManganese" />
+          <ScalarProperty Name="IbPhosphorus" ColumnName="IbPhosphorus" />
+          <ScalarProperty Name="IbSulphur" ColumnName="IbSulphur" />
+          <ScalarProperty Name="IbSilicon" ColumnName="IbSilicon" />
+          <ScalarProperty Name="IbCarbon" ColumnName="IbCarbon" />
+          <ScalarProperty Name="HmNitrogen" ColumnName="HmNitrogen" />
+          <ScalarProperty Name="HmManganese" ColumnName="HmManganese" />
+          <ScalarProperty Name="HmPhosphorus" ColumnName="HmPhosphorus" />
+          <ScalarProperty Name="HmSulphur" ColumnName="HmSulphur" />
+          <ScalarProperty Name="HmSilicon" ColumnName="HmSilicon" />
+          <ScalarProperty Name="HmCarbon" ColumnName="HmCarbon" />
+          <ScalarProperty Name="LadleActualCarbon" ColumnName="LadleActualCarbon" />
+          <ScalarProperty Name="LadleActualTemperature" ColumnName="LadleActualTemperature" />
+          <ScalarProperty Name="LadleAimCarbon" ColumnName="LadleAimCarbon" />
+          <ScalarProperty Name="LadleAimTemperature" ColumnName="LadleAimTemperature" />
+          <ScalarProperty Name="ReblowRequired" ColumnName="ReblowRequired" />
+          <ScalarProperty Name="DeltaTemperature" ColumnName="DeltaTemperature" />
+          <ScalarProperty Name="CoolbackOre" ColumnName="CoolbackOre" />
+          <ScalarProperty Name="ReblowOxygen" ColumnName="ReblowOxygen" />
+          <ScalarProperty Name="SlspDolofluxWt" ColumnName="SlspDolofluxWt" />
+          <ScalarProperty Name="SlspOxyActivityQC" ColumnName="SlspOxyActivityQC" />
+          <ScalarProperty Name="SlspOxyActivity" ColumnName="SlspOxyActivity" />
+          <ScalarProperty Name="EstPbCarbon" ColumnName="EstPbCarbon" />
+          <ScalarProperty Name="EstOxyActivity" ColumnName="EstOxyActivity" />
+          <ScalarProperty Name="TsoRequired" ColumnName="TsoRequired" />
+          <ScalarProperty Name="PhosphorusAlarm" ColumnName="PhosphorusAlarm" />
+          <ScalarProperty Name="ScrapAlarm" ColumnName="ScrapAlarm" />
+          <ScalarProperty Name="LimeAlarm" ColumnName="LimeAlarm" />
+          <ScalarProperty Name="OreAlarm" ColumnName="OreAlarm" />
+          <ScalarProperty Name="Pb2BathHeight" ColumnName="Pb2BathHeight" />
+          <ScalarProperty Name="Pb2ImmersionDepthQC" ColumnName="Pb2ImmersionDepthQC" />
+          <ScalarProperty Name="Pb2ImmersionDepth" ColumnName="Pb2ImmersionDepth" />
+          <ScalarProperty Name="Pb2CalculatedCarbon" ColumnName="Pb2CalculatedCarbon" />
+          <ScalarProperty Name="Pb2OxyActivityQC" ColumnName="Pb2OxyActivityQC" />
+          <ScalarProperty Name="Pb2OxyActivity" ColumnName="Pb2OxyActivity" />
+          <ScalarProperty Name="Pb2TemperatureQC" ColumnName="Pb2TemperatureQC" />
+          <ScalarProperty Name="Pb2Temperature" ColumnName="Pb2Temperature" />
+          <ScalarProperty Name="Pb1BathHeight" ColumnName="Pb1BathHeight" />
+          <ScalarProperty Name="Pb1ImmersionDepthQC" ColumnName="Pb1ImmersionDepthQC" />
+          <ScalarProperty Name="Pb1ImmersionDepth" ColumnName="Pb1ImmersionDepth" />
+          <ScalarProperty Name="Pb1CalculatedCarbon" ColumnName="Pb1CalculatedCarbon" />
+          <ScalarProperty Name="Pb1OxyActivityQC" ColumnName="Pb1OxyActivityQC" />
+          <ScalarProperty Name="Pb1OxyActivity" ColumnName="Pb1OxyActivity" />
+          <ScalarProperty Name="Pb1TemperatureQC" ColumnName="Pb1TemperatureQC" />
+          <ScalarProperty Name="Pb1Temperature" ColumnName="Pb1Temperature" />
+          <ScalarProperty Name="InblowCarbonQC" ColumnName="InblowCarbonQC" />
+          <ScalarProperty Name="InblowCarbon" ColumnName="InblowCarbon" />
+          <ScalarProperty Name="AimCarbon" ColumnName="AimCarbon" />
+          <ScalarProperty Name="InblowTemperatureQC" ColumnName="InblowTemperatureQC" />
+          <ScalarProperty Name="InblowTemperature" ColumnName="InblowTemperature" />
+          <ScalarProperty Name="AimTemperature" ColumnName="AimTemperature" />
+          <ScalarProperty Name="OreAtPostBlow" ColumnName="OreAtPostBlow" />
+          <ScalarProperty Name="OreEbModel" ColumnName="OreEbModel" />
+          <ScalarProperty Name="OreAtInBlow" ColumnName="OreAtInBlow" />
+          <ScalarProperty Name="OreCbModel" ColumnName="OreCbModel" />
+          <ScalarProperty Name="OxygenVolumeToCharge" ColumnName="OxygenVolumeToCharge" />
+          <ScalarProperty Name="OxygenAtPostBlow" ColumnName="OxygenAtPostBlow" />
+          <ScalarProperty Name="OxygenEbModel" ColumnName="OxygenEbModel" />
+          <ScalarProperty Name="OxygenAtInBlow" ColumnName="OxygenAtInBlow" />
+          <ScalarProperty Name="OxygenCbModel" ColumnName="OxygenCbModel" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
+          <ScalarProperty Name="EbmDisplayID" ColumnName="EbmDisplayID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HmdsmResults">
+      <EntityTypeMapping TypeName="ModelSchema.HmdsmResult">
+        <MappingFragment StoreEntitySet="HmdsmResult">
+          <ScalarProperty Name="AimHMSulpur" ColumnName="AimHMSulpur" />
+          <ScalarProperty Name="StartHMSulphur" ColumnName="StartHMSulphur" />
+          <ScalarProperty Name="HMTemperatureLoss" ColumnName="HMTemperatureLoss" />
+          <ScalarProperty Name="HMWeightLoss" ColumnName="HMWeightLoss" />
+          <ScalarProperty Name="TotalLimeWeight" ColumnName="TotalLimeWeight" />
+          <ScalarProperty Name="TotalMgWeight" ColumnName="TotalMgWeight" />
+          <ScalarProperty Name="TreatmentTime" ColumnName="TreatmentTime" />
+          <ScalarProperty Name="HmdsmTreatmentTypeID" ColumnName="HmdsmTreatmentTypeID" />
+          <ScalarProperty Name="HmdsmRunTimeStampGMT" ColumnName="HmdsmRunTimeStampGMT" />
+          <ScalarProperty Name="HmdsmRunTimeStamp" ColumnName="HmdsmRunTimeStamp" />
+          <ScalarProperty Name="TreatmentStage" ColumnName="TreatmentStage" />
+          <ScalarProperty Name="HMLadleNumber" ColumnName="HMLadleNumber" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HmdsmResultID" ColumnName="HmdsmResultID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

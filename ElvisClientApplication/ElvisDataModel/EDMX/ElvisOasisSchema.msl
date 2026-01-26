@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OasisSchemaStoreContainer" CdmEntityContainer="OasisSchemaEntities">
+    <EntitySetMapping Name="RFTDatas">
+      <EntityTypeMapping TypeName="OasisSchema.RFTData">
+        <MappingFragment StoreEntitySet="RFTData">
+          <ScalarProperty Name="RFTIndex" ColumnName="RFTIndex" />
+          <ScalarProperty Name="RFTDate" ColumnName="RFTDate" />
+          <ScalarProperty Name="SlabsMade" ColumnName="SlabsMade" />
+          <ScalarProperty Name="SlabsMadeSchedule" ColumnName="SlabsMadeSchedule" />
+          <ScalarProperty Name="ShedGradeOk" ColumnName="ShedGradeOk" />
+          <ScalarProperty Name="ShedWidthOk" ColumnName="ShedWidthOk" />
+          <ScalarProperty Name="ShedLengthOk" ColumnName="ShedLengthOk" />
+          <ScalarProperty Name="SlabsRFT" ColumnName="SlabsRFT" />
+          <ScalarProperty Name="SlabsAppliedTGrade" ColumnName="SlabsAppliedTGrade" />
+          <ScalarProperty Name="TonnesMade" ColumnName="TonnesMade" />
+          <ScalarProperty Name="TonnesMadeSchedule" ColumnName="TonnesMadeSchedule" />
+          <ScalarProperty Name="TonnesGradeOk" ColumnName="TonnesGradeOk" />
+          <ScalarProperty Name="TonnesWidthOk" ColumnName="TonnesWidthOk" />
+          <ScalarProperty Name="TonnesLengthOk" ColumnName="TonnesLengthOk" />
+          <ScalarProperty Name="TonnesRFT" ColumnName="TonnesRFT" />
+          <ScalarProperty Name="TonnesAppliedTGrade" ColumnName="TonnesAppliedTGrade" />
+          <ScalarProperty Name="CC1SlabsMade" ColumnName="CC1SlabsMade" />
+          <ScalarProperty Name="CC1SlabsMadeSchedule" ColumnName="CC1SlabsMadeSchedule" />
+          <ScalarProperty Name="CC1ShedGradeOk" ColumnName="CC1ShedGradeOk" />
+          <ScalarProperty Name="CC1ShedWidthOk" ColumnName="CC1ShedWidthOk" />
+          <ScalarProperty Name="CC1ShedLengthOk" ColumnName="CC1ShedLengthOk" />
+          <ScalarProperty Name="CC1SlabsRFT" ColumnName="CC1SlabsRFT" />
+          <ScalarProperty Name="CC1SlabsAppliedTGrade" ColumnName="CC1SlabsAppliedTGrade" />
+          <ScalarProperty Name="CC1TonnesMade" ColumnName="CC1TonnesMade" />
+          <ScalarProperty Name="CC1TonnesMadeSchedule" ColumnName="CC1TonnesMadeSchedule" />
+          <ScalarProperty Name="CC1TonnesGradeOk" ColumnName="CC1TonnesGradeOk" />
+          <ScalarProperty Name="CC1TonnesWidthOk" ColumnName="CC1TonnesWidthOk" />
+          <ScalarProperty Name="CC1TonnesLengthOk" ColumnName="CC1TonnesLengthOk" />
+          <ScalarProperty Name="CC1TonnesRFT" ColumnName="CC1TonnesRFT" />
+          <ScalarProperty Name="CC1TonnesAppliedTGrade" ColumnName="CC1TonnesAppliedTGrade" />
+          <ScalarProperty Name="CC2SlabsMade" ColumnName="CC2SlabsMade" />
+          <ScalarProperty Name="CC2SlabsMadeSchedule" ColumnName="CC2SlabsMadeSchedule" />
+          <ScalarProperty Name="CC2ShedGradeOk" ColumnName="CC2ShedGradeOk" />
+          <ScalarProperty Name="CC2ShedWidthOk" ColumnName="CC2ShedWidthOk" />
+          <ScalarProperty Name="CC2ShedLengthOk" ColumnName="CC2ShedLengthOk" />
+          <ScalarProperty Name="CC2SlabsRFT" ColumnName="CC2SlabsRFT" />
+          <ScalarProperty Name="CC2SlabsAppliedTGrade" ColumnName="CC2SlabsAppliedTGrade" />
+          <ScalarProperty Name="CC2TonnesMade" ColumnName="CC2TonnesMade" />
+          <ScalarProperty Name="CC2TonnesMadeSchedule" ColumnName="CC2TonnesMadeSchedule" />
+          <ScalarProperty Name="CC2TonnesGradeOk" ColumnName="CC2TonnesGradeOk" />
+          <ScalarProperty Name="CC2TonnesWidthOk" ColumnName="CC2TonnesWidthOk" />
+          <ScalarProperty Name="CC2TonnesLengthOk" ColumnName="CC2TonnesLengthOk" />
+          <ScalarProperty Name="CC2TonnesRFT" ColumnName="CC2TonnesRFT" />
+          <ScalarProperty Name="CC2TonnesAppliedTGrade" ColumnName="CC2TonnesAppliedTGrade" />
+          <ScalarProperty Name="CC3SlabsMade" ColumnName="CC3SlabsMade" />
+          <ScalarProperty Name="CC3SlabsMadeSchedule" ColumnName="CC3SlabsMadeSchedule" />
+          <ScalarProperty Name="CC3ShedGradeOk" ColumnName="CC3ShedGradeOk" />
+          <ScalarProperty Name="CC3ShedWidthOk" ColumnName="CC3ShedWidthOk" />
+          <ScalarProperty Name="CC3ShedLengthOk" ColumnName="CC3ShedLengthOk" />
+          <ScalarProperty Name="CC3SlabsRFT" ColumnName="CC3SlabsRFT" />
+          <ScalarProperty Name="CC3SlabsAppliedTGrade" ColumnName="CC3SlabsAppliedTGrade" />
+          <ScalarProperty Name="CC3TonnesMade" ColumnName="CC3TonnesMade" />
+          <ScalarProperty Name="CC3TonnesMadeSchedule" ColumnName="CC3TonnesMadeSchedule" />
+          <ScalarProperty Name="CC3TonnesGradeOk" ColumnName="CC3TonnesGradeOk" />
+          <ScalarProperty Name="CC3TonnesWidthOk" ColumnName="CC3TonnesWidthOk" />
+          <ScalarProperty Name="CC3TonnesLengthOk" ColumnName="CC3TonnesLengthOk" />
+          <ScalarProperty Name="CC3TonnesRFT" ColumnName="CC3TonnesRFT" />
+          <ScalarProperty Name="CC3TonnesAppliedTGrade" ColumnName="CC3TonnesAppliedTGrade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SlabStocks">
+      <EntityTypeMapping TypeName="OasisSchema.SlabStock">
+        <MappingFragment StoreEntitySet="SlabStocks">
+          <ScalarProperty Name="AVE_EVENTS" ColumnName="AVE_EVENTS" />
+          <ScalarProperty Name="AVE_DWELL" ColumnName="AVE_DWELL" />
+          <ScalarProperty Name="GRIDDED" ColumnName="GRIDDED" />
+          <ScalarProperty Name="ONSCHED" ColumnName="ONSCHED" />
+          <ScalarProperty Name="TAPERED" ColumnName="TAPERED" />
+          <ScalarProperty Name="CONCESSION" ColumnName="CONCESSION" />
+          <ScalarProperty Name="UNAPPLIED_LL" ColumnName="UNAPPLIED_LL" />
+          <ScalarProperty Name="UNAPPLIED_PT" ColumnName="UNAPPLIED_PT" />
+          <ScalarProperty Name="UNAPPLIED" ColumnName="UNAPPLIED" />
+          <ScalarProperty Name="APPLIED_LL" ColumnName="APPLIED_LL" />
+          <ScalarProperty Name="APPLIED_PT" ColumnName="APPLIED_PT" />
+          <ScalarProperty Name="APPLIED" ColumnName="APPLIED" />
+          <ScalarProperty Name="HELD" ColumnName="HELD" />
+          <ScalarProperty Name="PROCESSING" ColumnName="PROCESSING" />
+          <ScalarProperty Name="FREETOROLL" ColumnName="FREETOROLL" />
+          <ScalarProperty Name="IW_STOCK" ColumnName="IW_STOCK" />
+          <ScalarProperty Name="LL_STOCK" ColumnName="LL_STOCK" />
+          <ScalarProperty Name="PT_STOCK" ColumnName="PT_STOCK" />
+          <ScalarProperty Name="SLAB_STOCK" ColumnName="SLAB_STOCK" />
+          <ScalarProperty Name="LSTT" ColumnName="LSTT" />
+          <ScalarProperty Name="LSTD" ColumnName="LSTD" />
+          <ScalarProperty Name="SSDate" ColumnName="SSDate" />
+          <ScalarProperty Name="SSIndex" ColumnName="SSIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HotConnects">
+      <EntityTypeMapping TypeName="OasisSchema.HotConnect">
+        <MappingFragment StoreEntitySet="HotConnect">
+          <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+          <ScalarProperty Name="HotConnectFlag" ColumnName="HotConnectFlag" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HCId" ColumnName="HCId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,726 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EventSchemaEntitiesStoreContainer" CdmEntityContainer="EventSchemaEntities">
+    <EntitySetMapping Name="Additions">
+      <EntityTypeMapping TypeName="EventSchema.Addition">
+        <MappingFragment StoreEntitySet="Additions">
+          <ScalarProperty Name="AddIndex" ColumnName="AddIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TimeStampGMT" ColumnName="TimeStampGMT" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="RequestWeight" ColumnName="RequestWeight" />
+          <ScalarProperty Name="AddedWeight" ColumnName="AddedWeight" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="PointOfCharge" ColumnName="PointOfCharge" />
+          <ScalarProperty Name="Initiator" ColumnName="Initiator" />
+          <ScalarProperty Name="InitiatorType" ColumnName="InitiatorType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Analyses">
+      <EntityTypeMapping TypeName="EventSchema.Analysis">
+        <MappingFragment StoreEntitySet="Analysis">
+          <ScalarProperty Name="AnalysisIndex" ColumnName="AnalysisIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TimeStampGMT" ColumnName="TimeStampGMT" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="SubSampleNumber" ColumnName="SubSampleNumber" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="Si" ColumnName="Si" />
+          <ScalarProperty Name="S" ColumnName="S" />
+          <ScalarProperty Name="P" ColumnName="P" />
+          <ScalarProperty Name="Mn" ColumnName="Mn" />
+          <ScalarProperty Name="Ni" ColumnName="Ni" />
+          <ScalarProperty Name="Cu" ColumnName="Cu" />
+          <ScalarProperty Name="Sn" ColumnName="Sn" />
+          <ScalarProperty Name="Cr" ColumnName="Cr" />
+          <ScalarProperty Name="As" ColumnName="As" />
+          <ScalarProperty Name="Mo" ColumnName="Mo" />
+          <ScalarProperty Name="N2" ColumnName="N2" />
+          <ScalarProperty Name="AlT" ColumnName="AlT" />
+          <ScalarProperty Name="AlS" ColumnName="AlS" />
+          <ScalarProperty Name="Ti" ColumnName="Ti" />
+          <ScalarProperty Name="B" ColumnName="B" />
+          <ScalarProperty Name="Ca" ColumnName="Ca" />
+          <ScalarProperty Name="Ce" ColumnName="Ce" />
+          <ScalarProperty Name="Co" ColumnName="Co" />
+          <ScalarProperty Name="Nb" ColumnName="Nb" />
+          <ScalarProperty Name="V" ColumnName="V" />
+          <ScalarProperty Name="CEV1" ColumnName="CEV1" />
+          <ScalarProperty Name="CEV2" ColumnName="CEV2" />
+          <ScalarProperty Name="CEV3" ColumnName="CEV3" />
+          <ScalarProperty Name="FreeC1" ColumnName="FreeC1" />
+          <ScalarProperty Name="FreeC2" ColumnName="FreeC2" />
+          <ScalarProperty Name="XSTi1" ColumnName="XSTi1" />
+          <ScalarProperty Name="XSTi2" ColumnName="XSTi2" />
+          <ScalarProperty Name="XSTi3" ColumnName="XSTi3" />
+          <ScalarProperty Name="AlN2" ColumnName="AlN2" />
+          <ScalarProperty Name="CuP" ColumnName="CuP" />
+          <ScalarProperty Name="BN2" ColumnName="BN2" />
+          <ScalarProperty Name="SP" ColumnName="SP" />
+          <ScalarProperty Name="CUNiCrMoSn" ColumnName="CUNiCrMoSn" />
+          <ScalarProperty Name="CrEq" ColumnName="CrEq" />
+          <ScalarProperty Name="SiForm" ColumnName="SiForm" />
+          <ScalarProperty Name="MnS" ColumnName="MnS" />
+          <ScalarProperty Name="MnSi" ColumnName="MnSi" />
+          <ScalarProperty Name="FreeC3" ColumnName="FreeC3" />
+          <ScalarProperty Name="Fe" ColumnName="Fe" />
+          <ScalarProperty Name="Liquidus" ColumnName="Liquidus" />
+          <ScalarProperty Name="ForDebugging" ColumnName="ForDebugging" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoordFixes">
+      <EntityTypeMapping TypeName="EventSchema.CoordFix">
+        <MappingFragment StoreEntitySet="CoordFix">
+          <ScalarProperty Name="FixDate" ColumnName="FixDate" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TimeStampGMT" ColumnName="TimeStampGMT" />
+          <ScalarProperty Name="PROGRAM_NUMBER" ColumnName="PROGRAM_NUMBER" />
+          <ScalarProperty Name="GRADE_1" ColumnName="GRADE_1" />
+          <ScalarProperty Name="GRADE_2" ColumnName="GRADE_2" />
+          <ScalarProperty Name="VESSEL_NUMBER" ColumnName="VESSEL_NUMBER" />
+          <ScalarProperty Name="STEEL_LADLE_NUMBER" ColumnName="STEEL_LADLE_NUMBER" />
+          <ScalarProperty Name="SS_UNIT" ColumnName="SS_UNIT" />
+          <ScalarProperty Name="CASTER_NUMBER" ColumnName="CASTER_NUMBER" />
+          <ScalarProperty Name="PLANNED_POUR_TIME" ColumnName="PLANNED_POUR_TIME" />
+          <ScalarProperty Name="PLANNED_END_DESULPH_TIME" ColumnName="PLANNED_END_DESULPH_TIME" />
+          <ScalarProperty Name="PLANNED_CHARGE_TIME" ColumnName="PLANNED_CHARGE_TIME" />
+          <ScalarProperty Name="PLANNED_TAP_TIME" ColumnName="PLANNED_TAP_TIME" />
+          <ScalarProperty Name="ACTUAL_TAP_TIME" ColumnName="ACTUAL_TAP_TIME" />
+          <ScalarProperty Name="PLANNED_END_SS_TIME" ColumnName="PLANNED_END_SS_TIME" />
+          <ScalarProperty Name="PLANNED_DWELL_TIME" ColumnName="PLANNED_DWELL_TIME" />
+          <ScalarProperty Name="PLANNED_START_CAST_TIME" ColumnName="PLANNED_START_CAST_TIME" />
+          <ScalarProperty Name="PLANNED_END_CAST_TIME" ColumnName="PLANNED_END_CAST_TIME" />
+          <ScalarProperty Name="COMBINED_WIDTH" ColumnName="COMBINED_WIDTH" />
+          <ScalarProperty Name="CAST_DURATION" ColumnName="CAST_DURATION" />
+          <ScalarProperty Name="CASTING_RATE" ColumnName="CASTING_RATE" />
+          <ScalarProperty Name="CASTING_SPEED" ColumnName="CASTING_SPEED" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_TIME" ColumnName="UPDATE_TIME" />
+          <ScalarProperty Name="LADLE_AIM_TEMP" ColumnName="LADLE_AIM_TEMP" />
+          <ScalarProperty Name="Release_Temperature" ColumnName="Release_Temperature" />
+          <ScalarProperty Name="Aim_Ladle_Temperature" ColumnName="Aim_Ladle_Temperature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoordLinkFulls">
+      <EntityTypeMapping TypeName="EventSchema.CoordLinkFull">
+        <MappingFragment StoreEntitySet="CoordLinkFull">
+          <ScalarProperty Name="ScheduleIndex" ColumnName="ScheduleIndex" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TimeStampGMT" ColumnName="TimeStampGMT" />
+          <ScalarProperty Name="PROGRAM_NUMBER" ColumnName="PROGRAM_NUMBER" />
+          <ScalarProperty Name="GRADE_1" ColumnName="GRADE_1" />
+          <ScalarProperty Name="GRADE_2" ColumnName="GRADE_2" />
+          <ScalarProperty Name="VESSEL_NUMBER" ColumnName="VESSEL_NUMBER" />
+          <ScalarProperty Name="STEEL_LADLE_NUMBER" ColumnName="STEEL_LADLE_NUMBER" />
+          <ScalarProperty Name="SS_UNIT" ColumnName="SS_UNIT" />
+          <ScalarProperty Name="CASTER_NUMBER" ColumnName="CASTER_NUMBER" />
+          <ScalarProperty Name="PLANNED_POUR_TIME" ColumnName="PLANNED_POUR_TIME" />
+          <ScalarProperty Name="PLANNED_END_DESULPH_TIME" ColumnName="PLANNED_END_DESULPH_TIME" />
+          <ScalarProperty Name="PLANNED_CHARGE_TIME" ColumnName="PLANNED_CHARGE_TIME" />
+          <ScalarProperty Name="PLANNED_TAP_TIME" ColumnName="PLANNED_TAP_TIME" />
+          <ScalarProperty Name="ACTUAL_TAP_TIME" ColumnName="ACTUAL_TAP_TIME" />
+          <ScalarProperty Name="PLANNED_END_SS_TIME" ColumnName="PLANNED_END_SS_TIME" />
+          <ScalarProperty Name="PLANNED_DWELL_TIME" ColumnName="PLANNED_DWELL_TIME" />
+          <ScalarProperty Name="PLANNED_START_CAST_TIME" ColumnName="PLANNED_START_CAST_TIME" />
+          <ScalarProperty Name="PLANNED_END_CAST_TIME" ColumnName="PLANNED_END_CAST_TIME" />
+          <ScalarProperty Name="COMBINED_WIDTH" ColumnName="COMBINED_WIDTH" />
+          <ScalarProperty Name="CAST_DURATION" ColumnName="CAST_DURATION" />
+          <ScalarProperty Name="CASTING_RATE" ColumnName="CASTING_RATE" />
+          <ScalarProperty Name="CASTING_SPEED" ColumnName="CASTING_SPEED" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_TIME" ColumnName="UPDATE_TIME" />
+          <ScalarProperty Name="LADLE_AIM_TEMP" ColumnName="LADLE_AIM_TEMP" />
+          <ScalarProperty Name="Release_Temperature" ColumnName="Release_Temperature" />
+          <ScalarProperty Name="Aim_Ladle_Temperature" ColumnName="Aim_Ladle_Temperature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoordLocks">
+      <EntityTypeMapping TypeName="EventSchema.CoordLock">
+        <MappingFragment StoreEntitySet="CoordLock">
+          <ScalarProperty Name="ScheduleIndex" ColumnName="ScheduleIndex" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TimeStampGMT" ColumnName="TimeStampGMT" />
+          <ScalarProperty Name="PROGRAM_NUMBER" ColumnName="PROGRAM_NUMBER" />
+          <ScalarProperty Name="GRADE_1" ColumnName="GRADE_1" />
+          <ScalarProperty Name="GRADE_2" ColumnName="GRADE_2" />
+          <ScalarProperty Name="VESSEL_NUMBER" ColumnName="VESSEL_NUMBER" />
+          <ScalarProperty Name="STEEL_LADLE_NUMBER" ColumnName="STEEL_LADLE_NUMBER" />
+          <ScalarProperty Name="SS_UNIT" ColumnName="SS_UNIT" />
+          <ScalarProperty Name="CASTER_NUMBER" ColumnName="CASTER_NUMBER" />
+          <ScalarProperty Name="PLANNED_POUR_TIME" ColumnName="PLANNED_POUR_TIME" />
+          <ScalarProperty Name="PLANNED_END_DESULPH_TIME" ColumnName="PLANNED_END_DESULPH_TIME" />
+          <ScalarProperty Name="PLANNED_CHARGE_TIME" ColumnName="PLANNED_CHARGE_TIME" />
+          <ScalarProperty Name="PLANNED_TAP_TIME" ColumnName="PLANNED_TAP_TIME" />
+          <ScalarProperty Name="ACTUAL_TAP_TIME" ColumnName="ACTUAL_TAP_TIME" />
+          <ScalarProperty Name="PLANNED_END_SS_TIME" ColumnName="PLANNED_END_SS_TIME" />
+          <ScalarProperty Name="PLANNED_DWELL_TIME" ColumnName="PLANNED_DWELL_TIME" />
+          <ScalarProperty Name="PLANNED_START_CAST_TIME" ColumnName="PLANNED_START_CAST_TIME" />
+          <ScalarProperty Name="PLANNED_END_CAST_TIME" ColumnName="PLANNED_END_CAST_TIME" />
+          <ScalarProperty Name="COMBINED_WIDTH" ColumnName="COMBINED_WIDTH" />
+          <ScalarProperty Name="CAST_DURATION" ColumnName="CAST_DURATION" />
+          <ScalarProperty Name="CASTING_RATE" ColumnName="CASTING_RATE" />
+          <ScalarProperty Name="CASTING_SPEED" ColumnName="CASTING_SPEED" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="UPDATE_TIME" ColumnName="UPDATE_TIME" />
+          <ScalarProperty Name="LADLE_AIM_TEMP" ColumnName="LADLE_AIM_TEMP" />
+          <ScalarProperty Name="Release_Temperature" ColumnName="Release_Temperature" />
+          <ScalarProperty Name="Aim_Ladle_Temperature" ColumnName="Aim_Ladle_Temperature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DipResults">
+      <EntityTypeMapping TypeName="EventSchema.DipResult">
+        <MappingFragment StoreEntitySet="DipResult">
+          <ScalarProperty Name="DipIndex" ColumnName="DipIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="DipType" ColumnName="DipType" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TimeStampGMT" ColumnName="TimeStampGMT" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="S" ColumnName="S" />
+          <ScalarProperty Name="O2" ColumnName="O2" />
+          <ScalarProperty Name="Al" ColumnName="Al" />
+          <ScalarProperty Name="EMF" ColumnName="EMF" />
+          <ScalarProperty Name="Carbon" ColumnName="Carbon" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="Hydrogen" ColumnName="Hydrogen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventLists">
+      <EntityTypeMapping TypeName="EventSchema.EventList">
+        <MappingFragment StoreEntitySet="EventList">
+          <ScalarProperty Name="ListIndex" ColumnName="ListIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HeatAimAnalysis">
+      <EntityTypeMapping TypeName="EventSchema.HeatAimAnalysi">
+        <MappingFragment StoreEntitySet="HeatAimAnalysis">
+          <ScalarProperty Name="AimAnalysisIndex" ColumnName="AimAnalysisIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="Si" ColumnName="Si" />
+          <ScalarProperty Name="S" ColumnName="S" />
+          <ScalarProperty Name="P" ColumnName="P" />
+          <ScalarProperty Name="Mn" ColumnName="Mn" />
+          <ScalarProperty Name="Ni" ColumnName="Ni" />
+          <ScalarProperty Name="Cu" ColumnName="Cu" />
+          <ScalarProperty Name="Sn" ColumnName="Sn" />
+          <ScalarProperty Name="Cr" ColumnName="Cr" />
+          <ScalarProperty Name="As" ColumnName="As" />
+          <ScalarProperty Name="Mo" ColumnName="Mo" />
+          <ScalarProperty Name="N2" ColumnName="N2" />
+          <ScalarProperty Name="AlT" ColumnName="AlT" />
+          <ScalarProperty Name="AlS" ColumnName="AlS" />
+          <ScalarProperty Name="Ti" ColumnName="Ti" />
+          <ScalarProperty Name="B" ColumnName="B" />
+          <ScalarProperty Name="Ca" ColumnName="Ca" />
+          <ScalarProperty Name="Ce" ColumnName="Ce" />
+          <ScalarProperty Name="Co" ColumnName="Co" />
+          <ScalarProperty Name="Nb" ColumnName="Nb" />
+          <ScalarProperty Name="V" ColumnName="V" />
+          <ScalarProperty Name="CEV1" ColumnName="CEV1" />
+          <ScalarProperty Name="CEV2" ColumnName="CEV2" />
+          <ScalarProperty Name="CEV3" ColumnName="CEV3" />
+          <ScalarProperty Name="FreeC1" ColumnName="FreeC1" />
+          <ScalarProperty Name="FreeC2" ColumnName="FreeC2" />
+          <ScalarProperty Name="XSTi1" ColumnName="XSTi1" />
+          <ScalarProperty Name="XSTi2" ColumnName="XSTi2" />
+          <ScalarProperty Name="XSTi3" ColumnName="XSTi3" />
+          <ScalarProperty Name="AlN2" ColumnName="AlN2" />
+          <ScalarProperty Name="CuP" ColumnName="CuP" />
+          <ScalarProperty Name="BN2" ColumnName="BN2" />
+          <ScalarProperty Name="SP" ColumnName="SP" />
+          <ScalarProperty Name="CUNiCrMoSn" ColumnName="CUNiCrMoSn" />
+          <ScalarProperty Name="CrEq" ColumnName="CrEq" />
+          <ScalarProperty Name="SiForm" ColumnName="SiForm" />
+          <ScalarProperty Name="MnS" ColumnName="MnS" />
+          <ScalarProperty Name="MnSi" ColumnName="MnSi" />
+          <ScalarProperty Name="FreeC3" ColumnName="FreeC3" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HeatAimGenerals">
+      <EntityTypeMapping TypeName="EventSchema.HeatAimGeneral">
+        <MappingFragment StoreEntitySet="HeatAimGeneral">
+          <ScalarProperty Name="AimGenIndex" ColumnName="AimGenIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="CastingTime" ColumnName="CastingTime" />
+          <ScalarProperty Name="LiquidusTemperature" ColumnName="LiquidusTemperature" />
+          <ScalarProperty Name="MaxHMSTreated" ColumnName="MaxHMSTreated" />
+          <ScalarProperty Name="MaxHMSNotTreated" ColumnName="MaxHMSNotTreated" />
+          <ScalarProperty Name="MaxHMSReTreatReq" ColumnName="MaxHMSReTreatReq" />
+          <ScalarProperty Name="ScrapMix" ColumnName="ScrapMix" />
+          <ScalarProperty Name="BapCode" ColumnName="BapCode" />
+          <ScalarProperty Name="HMDSTreatmentCode" ColumnName="HMDSTreatmentCode" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HeatAimGrades">
+      <EntityTypeMapping TypeName="EventSchema.HeatAimGrade">
+        <MappingFragment StoreEntitySet="HeatAimGrades">
+          <ScalarProperty Name="AimGradeIndex" ColumnName="AimGradeIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HeatAimTemperatures">
+      <EntityTypeMapping TypeName="EventSchema.HeatAimTemperature">
+        <MappingFragment StoreEntitySet="HeatAimTemperatures">
+          <ScalarProperty Name="AimTempIndex" ColumnName="AimTempIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="TemperatureType" ColumnName="TemperatureType" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HeatDates">
+      <EntityTypeMapping TypeName="EventSchema.HeatDate">
+        <MappingFragment StoreEntitySet="HeatDate">
+          <ScalarProperty Name="HeatDateIndex" ColumnName="HeatDateIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="TapYear" ColumnName="TapYear" />
+          <ScalarProperty Name="TapWeek" ColumnName="TapWeek" />
+          <ScalarProperty Name="TapDay" ColumnName="TapDay" />
+          <ScalarProperty Name="TapShift" ColumnName="TapShift" />
+          <ScalarProperty Name="TapRota" ColumnName="TapRota" />
+          <ScalarProperty Name="CastYear" ColumnName="CastYear" />
+          <ScalarProperty Name="CastWeek" ColumnName="CastWeek" />
+          <ScalarProperty Name="CastDay" ColumnName="CastDay" />
+          <ScalarProperty Name="CastShift" ColumnName="CastShift" />
+          <ScalarProperty Name="CastRota" ColumnName="CastRota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HeatLogs">
+      <EntityTypeMapping TypeName="EventSchema.HeatLog">
+        <MappingFragment StoreEntitySet="HeatLog">
+          <ScalarProperty Name="ListIndex" ColumnName="ListIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="Unit" ColumnName="Unit" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HM_Stocks">
+      <EntityTypeMapping TypeName="EventSchema.HM_Stocks">
+        <MappingFragment StoreEntitySet="HM_Stocks">
+          <ScalarProperty Name="O2Spill" ColumnName="O2Spill" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="HM_LEVEL" ColumnName="HM_LEVEL" />
+          <ScalarProperty Name="BF_OUTPUT" ColumnName="BF_OUTPUT" />
+          <ScalarProperty Name="CASTER_OUTPUT" ColumnName="CASTER_OUTPUT" />
+          <ScalarProperty Name="cc1_output" ColumnName="cc1_output" />
+          <ScalarProperty Name="cc2_output" ColumnName="cc2_output" />
+          <ScalarProperty Name="cc3_output" ColumnName="cc3_output" />
+          <ScalarProperty Name="BF4_OUTPUT" ColumnName="BF4_OUTPUT" />
+          <ScalarProperty Name="BF5_OUTPUT" ColumnName="BF5_OUTPUT" />
+          <ScalarProperty Name="HMIndex" ColumnName="HMIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NonMetalAnalysis">
+      <EntityTypeMapping TypeName="EventSchema.NonMetalAnalysi">
+        <MappingFragment StoreEntitySet="NonMetalAnalysis">
+          <ScalarProperty Name="NMAnalysisIndex" ColumnName="NMAnalysisIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TimeStampGMT" ColumnName="TimeStampGMT" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+          <ScalarProperty Name="SubSampleNumber" ColumnName="SubSampleNumber" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="FeO" ColumnName="FeO" />
+          <ScalarProperty Name="TFe" ColumnName="TFe" />
+          <ScalarProperty Name="CaO" ColumnName="CaO" />
+          <ScalarProperty Name="SiO2" ColumnName="SiO2" />
+          <ScalarProperty Name="Al2O3" ColumnName="Al2O3" />
+          <ScalarProperty Name="MgO" ColumnName="MgO" />
+          <ScalarProperty Name="MnO" ColumnName="MnO" />
+          <ScalarProperty Name="P2O5" ColumnName="P2O5" />
+          <ScalarProperty Name="S" ColumnName="S" />
+          <ScalarProperty Name="VR" ColumnName="VR" />
+          <ScalarProperty Name="K2O" ColumnName="K2O" />
+          <ScalarProperty Name="Na2O" ColumnName="Na2O" />
+          <ScalarProperty Name="Cr2O3" ColumnName="Cr2O3" />
+          <ScalarProperty Name="TiO2" ColumnName="TiO2" />
+          <ScalarProperty Name="V2O5" ColumnName="V2O5" />
+          <ScalarProperty Name="Fe2O3" ColumnName="Fe2O3" />
+          <ScalarProperty Name="P" ColumnName="P" />
+          <ScalarProperty Name="Mn" ColumnName="Mn" />
+          <ScalarProperty Name="Liquidus" ColumnName="Liquidus" />
+          <ScalarProperty Name="ForDebugging" ColumnName="ForDebugging" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProgramHistories">
+      <EntityTypeMapping TypeName="EventSchema.ProgramHistory">
+        <MappingFragment StoreEntitySet="ProgramHistory">
+          <ScalarProperty Name="ProgramIndex" ColumnName="ProgramIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="TargetGrade" ColumnName="TargetGrade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIBDelays">
+      <EntityTypeMapping TypeName="EventSchema.TIBDelay">
+        <MappingFragment StoreEntitySet="TIBDelays">
+          <ScalarProperty Name="TibDelayIndex" ColumnName="TibDelayIndex" />
+          <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+          <ScalarProperty Name="DelayNumber" ColumnName="DelayNumber" />
+          <ScalarProperty Name="DelayStart" ColumnName="DelayStart" />
+          <ScalarProperty Name="DelayEnd" ColumnName="DelayEnd" />
+          <ScalarProperty Name="DelayDuration" ColumnName="DelayDuration" />
+          <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+          <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+          <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+          <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+          <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="OEECategory" ColumnName="OEECategory" />
+          <ScalarProperty Name="LossType" ColumnName="LossType" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="ReportingTextLevel1" ColumnName="ReportingTextLevel1" />
+          <ScalarProperty Name="ReportingTextLevel2" ColumnName="ReportingTextLevel2" />
+          <ScalarProperty Name="ObjectDescription" ColumnName="ObjectDescription" />
+          <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+          <ScalarProperty Name="DamageDescription" ColumnName="DamageDescription" />
+          <ScalarProperty Name="DamageCode" ColumnName="DamageCode" />
+          <ScalarProperty Name="DeviationType" ColumnName="DeviationType" />
+          <ScalarProperty Name="CauseText" ColumnName="CauseText" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="ExternalInternal" ColumnName="ExternalInternal" />
+          <ScalarProperty Name="SupplierDownStream" ColumnName="SupplierDownStream" />
+          <ScalarProperty Name="NoExtraWork" ColumnName="NoExtraWork" />
+          <ScalarProperty Name="FlocDescriptionL3" ColumnName="FlocDescriptionL3" />
+          <ScalarProperty Name="FlocNumberL3" ColumnName="FlocNumberL3" />
+          <ScalarProperty Name="FlocDescriptionL4" ColumnName="FlocDescriptionL4" />
+          <ScalarProperty Name="FlocNumberL4" ColumnName="FlocNumberL4" />
+          <ScalarProperty Name="FlocDescriptionL5" ColumnName="FlocDescriptionL5" />
+          <ScalarProperty Name="FlocNumberL5" ColumnName="FlocNumberL5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIBEvents">
+      <EntityTypeMapping TypeName="EventSchema.TIBEvent">
+        <MappingFragment StoreEntitySet="TIBEvents">
+          <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="TimeStampStart" ColumnName="TimeStampStart" />
+          <ScalarProperty Name="TimeStampStartGMT" ColumnName="TimeStampStartGMT" />
+          <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+          <ScalarProperty Name="TimeStampEndGMT" ColumnName="TimeStampEndGMT" />
+          <ScalarProperty Name="EventStart" ColumnName="EventStart" />
+          <ScalarProperty Name="EventEnd" ColumnName="EventEnd" />
+          <ScalarProperty Name="TibStatus" ColumnName="TibStatus" />
+          <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+          <ScalarProperty Name="ReportNumber" ColumnName="ReportNumber" />
+          <ScalarProperty Name="TrackIndex" ColumnName="TrackIndex" />
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="WeekNumber" ColumnName="WeekNumber" />
+          <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Rota" ColumnName="Rota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trackings">
+      <EntityTypeMapping TypeName="EventSchema.Tracking">
+        <MappingFragment StoreEntitySet="Tracking">
+          <ScalarProperty Name="TrackIndex" ColumnName="TrackIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="TimeStampStart" ColumnName="TimeStampStart" />
+          <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+          <ScalarProperty Name="TimeStampStartGMT" ColumnName="TimeStampStartGMT" />
+          <ScalarProperty Name="TimeStampEndGMT" ColumnName="TimeStampEndGMT" />
+          <ScalarProperty Name="UnitTableIndex" ColumnName="UnitTableIndex" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TreatmentTrackings">
+      <EntityTypeMapping TypeName="EventSchema.TreatmentTracking">
+        <MappingFragment StoreEntitySet="TreatmentTracking">
+          <ScalarProperty Name="TreatmentIndex" ColumnName="TreatmentIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="TreatmentNumber" ColumnName="TreatmentNumber" />
+          <ScalarProperty Name="TimeStampStart" ColumnName="TimeStampStart" />
+          <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+          <ScalarProperty Name="TimeStampStartGMT" ColumnName="TimeStampStartGMT" />
+          <ScalarProperty Name="TimeStampEndGMT" ColumnName="TimeStampEndGMT" />
+          <ScalarProperty Name="UnitTableIndex" ColumnName="UnitTableIndex" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Weights">
+      <EntityTypeMapping TypeName="EventSchema.Weight">
+        <MappingFragment StoreEntitySet="Weights">
+          <ScalarProperty Name="WeightIndex" ColumnName="WeightIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TimeStampGMT" ColumnName="TimeStampGMT" />
+          <ScalarProperty Name="Weight1" ColumnName="Weight" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LastProgramNumbers">
+      <EntityTypeMapping TypeName="EventSchema.LastProgramNumber">
+        <MappingFragment StoreEntitySet="LastProgramNumber">
+          <ScalarProperty Name="TargetGrade" ColumnName="TargetGrade" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="ProgramIndex" ColumnName="ProgramIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CoordLinks">
+      <EntityTypeMapping TypeName="EventSchema.CoordLink">
+        <MappingFragment StoreEntitySet="CoordLink">
+          <ScalarProperty Name="HotConnectFlag" ColumnName="HotConnectFlag" />
+          <ScalarProperty Name="QACastingTime" ColumnName="QACastingTime" />
+          <ScalarProperty Name="Aim_Ladle_Temperature" ColumnName="Aim_Ladle_Temperature" />
+          <ScalarProperty Name="Release_Temperature" ColumnName="Release_Temperature" />
+          <ScalarProperty Name="LADLE_AIM_TEMP" ColumnName="LADLE_AIM_TEMP" />
+          <ScalarProperty Name="UPDATE_TIME" ColumnName="UPDATE_TIME" />
+          <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+          <ScalarProperty Name="CASTING_SPEED" ColumnName="CASTING_SPEED" />
+          <ScalarProperty Name="CASTING_RATE" ColumnName="CASTING_RATE" />
+          <ScalarProperty Name="CAST_DURATION" ColumnName="CAST_DURATION" />
+          <ScalarProperty Name="COMBINED_WIDTH" ColumnName="COMBINED_WIDTH" />
+          <ScalarProperty Name="PLANNED_END_CAST_TIME" ColumnName="PLANNED_END_CAST_TIME" />
+          <ScalarProperty Name="PLANNED_START_CAST_TIME" ColumnName="PLANNED_START_CAST_TIME" />
+          <ScalarProperty Name="PLANNED_DWELL_TIME" ColumnName="PLANNED_DWELL_TIME" />
+          <ScalarProperty Name="PLANNED_END_SS_TIME" ColumnName="PLANNED_END_SS_TIME" />
+          <ScalarProperty Name="ACTUAL_TAP_TIME" ColumnName="ACTUAL_TAP_TIME" />
+          <ScalarProperty Name="PLANNED_TAP_TIME" ColumnName="PLANNED_TAP_TIME" />
+          <ScalarProperty Name="PLANNED_CHARGE_TIME" ColumnName="PLANNED_CHARGE_TIME" />
+          <ScalarProperty Name="PLANNED_END_DESULPH_TIME" ColumnName="PLANNED_END_DESULPH_TIME" />
+          <ScalarProperty Name="PLANNED_POUR_TIME" ColumnName="PLANNED_POUR_TIME" />
+          <ScalarProperty Name="CASTER_NUMBER" ColumnName="CASTER_NUMBER" />
+          <ScalarProperty Name="SS_UNIT" ColumnName="SS_UNIT" />
+          <ScalarProperty Name="STEEL_LADLE_NUMBER" ColumnName="STEEL_LADLE_NUMBER" />
+          <ScalarProperty Name="VESSEL_NUMBER" ColumnName="VESSEL_NUMBER" />
+          <ScalarProperty Name="GRADE_2" ColumnName="GRADE_2" />
+          <ScalarProperty Name="GRADE_1" ColumnName="GRADE_1" />
+          <ScalarProperty Name="PROGRAM_NUMBER" ColumnName="PROGRAM_NUMBER" />
+          <ScalarProperty Name="TimeStampGMT" ColumnName="TimeStampGMT" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+          <ScalarProperty Name="ScheduleIndex" ColumnName="ScheduleIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScrapBoxLoads">
+      <EntityTypeMapping TypeName="EventSchema.ScrapBoxLoad">
+        <MappingFragment StoreEntitySet="ScrapBoxLoad">
+          <ScalarProperty Name="ScrapBoxTypeID" ColumnName="ScrapBoxTypeID" />
+          <ScalarProperty Name="TotalScrapLoadedWeight" ColumnName="TotalScrapLoadedWeight" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="ScrapBoxLoadTimeStampGMT" ColumnName="ScrapBoxLoadTimeStampGMT" />
+          <ScalarProperty Name="ScrapBoxLoadTimeStamp" ColumnName="ScrapBoxLoadTimeStamp" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="ScrapBoxLoadID" ColumnName="ScrapBoxLoadID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScrapBoxStatusEvents">
+      <EntityTypeMapping TypeName="EventSchema.ScrapBoxStatusEvent">
+        <MappingFragment StoreEntitySet="ScrapBoxStatusEvents">
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="ScrapEventTypeID" ColumnName="ScrapEventTypeID" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="ScrapEventTimeStampGMT" ColumnName="ScrapEventTimeStampGMT" />
+          <ScalarProperty Name="ScrapEventTimeStamp" ColumnName="ScrapEventTimeStamp" />
+          <ScalarProperty Name="ScrapBoxStatusEventID" ColumnName="ScrapBoxStatusEventID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ScrapDemands">
+      <EntityTypeMapping TypeName="EventSchema.ScrapDemand">
+        <MappingFragment StoreEntitySet="ScrapDemand">
+          <ScalarProperty Name="DemandWeight" ColumnName="DemandWeight" />
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="ScrapDemandID" ColumnName="ScrapDemandID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TapWeights">
+      <EntityTypeMapping TypeName="EventSchema.TapWeight">
+        <MappingFragment StoreEntitySet="TapWeights">
+          <ScalarProperty Name="TapTemperature" ColumnName="TapTemperature" />
+          <ScalarProperty Name="TapWeight1" ColumnName="TapWeight" />
+          <ScalarProperty Name="LadleNumber" ColumnName="LadleNumber" />
+          <ScalarProperty Name="EventTimeGMT" ColumnName="EventTimeGMT" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="TapWeightID" ColumnName="TapWeightID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Torpedoes">
+      <EntityTypeMapping TypeName="EventSchema.Torpedo">
+        <MappingFragment StoreEntitySet="Torpedo">
+          <ScalarProperty Name="TotalPouredWeight" ColumnName="TotalPouredWeight" />
+          <ScalarProperty Name="TimeUnpluggedGMT" ColumnName="TimeUnpluggedGMT" />
+          <ScalarProperty Name="TimeUnplugged" ColumnName="TimeUnplugged" />
+          <ScalarProperty Name="TimePluggedInGMT" ColumnName="TimePluggedInGMT" />
+          <ScalarProperty Name="TimePluggedIn" ColumnName="TimePluggedIn" />
+          <ScalarProperty Name="PourStationTimeGMT" ColumnName="PourStationTimeGMT" />
+          <ScalarProperty Name="PourStationTime" ColumnName="PourStationTime" />
+          <ScalarProperty Name="HMPourStation" ColumnName="HMPourStation" />
+          <ScalarProperty Name="TheoreticalEmptyWeight" ColumnName="TheoreticalEmptyWeight" />
+          <ScalarProperty Name="EstimatedWeight" ColumnName="EstimatedWeight" />
+          <ScalarProperty Name="RunnerTemperature" ColumnName="RunnerTemperature" />
+          <ScalarProperty Name="IronN2" ColumnName="IronN2" />
+          <ScalarProperty Name="IronTi" ColumnName="IronTi" />
+          <ScalarProperty Name="IronMn" ColumnName="IronMn" />
+          <ScalarProperty Name="IronP" ColumnName="IronP" />
+          <ScalarProperty Name="IronS" ColumnName="IronS" />
+          <ScalarProperty Name="IronSi" ColumnName="IronSi" />
+          <ScalarProperty Name="IronC" ColumnName="IronC" />
+          <ScalarProperty Name="NumberOfCastsInTorpedo" ColumnName="NumberOfCastsInTorpedo" />
+          <ScalarProperty Name="BfNumber" ColumnName="BfNumber" />
+          <ScalarProperty Name="StartBfPourTimeGMT" ColumnName="StartBfPourTimeGMT" />
+          <ScalarProperty Name="StartBfPourTime" ColumnName="StartBfPourTime" />
+          <ScalarProperty Name="FirstCastIn" ColumnName="FirstCastIn" />
+          <ScalarProperty Name="HMLadleNumber" ColumnName="HMLadleNumber" />
+          <ScalarProperty Name="TorpedoNumber" ColumnName="TorpedoNumber" />
+          <ScalarProperty Name="UnitID" ColumnName="UnitID" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="TorpedoID" ColumnName="TorpedoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ManInputDays">
+      <EntityTypeMapping TypeName="EventSchema.ManInputDay">
+        <MappingFragment StoreEntitySet="ManInputDay">
+          <ScalarProperty Name="OPPracticeIndex" ColumnName="OPPracticeIndex" />
+          <ScalarProperty Name="BFOutput" ColumnName="BFOutput" />
+          <ScalarProperty Name="DayDate" ColumnName="DayDate" />
+          <ScalarProperty Name="DayDateIndex" ColumnName="DayDateIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIBDelaysViews">
+      <EntityTypeMapping TypeName="EventSchema.TIBDelaysView">
+        <MappingFragment StoreEntitySet="TIBDelaysView">
+          <ScalarProperty Name="TibDelayIndex" ColumnName="TibDelayIndex" />
+          <ScalarProperty Name="TIBDisText" ColumnName="TIBDisText" />
+          <ScalarProperty Name="TIBClassText" ColumnName="TIBClassText" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+          <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+          <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+          <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+          <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+          <ScalarProperty Name="DelayDuration" ColumnName="DelayDuration" />
+          <ScalarProperty Name="DelayEnd" ColumnName="DelayEnd" />
+          <ScalarProperty Name="DelayStart" ColumnName="DelayStart" />
+          <ScalarProperty Name="DelayNumber" ColumnName="DelayNumber" />
+          <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DesulphSkimPercentages">
+      <EntityTypeMapping TypeName="EventSchema.DesulphSkimPercentage">
+        <MappingFragment StoreEntitySet="DesulphSkimPercentage">
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="SkimPercentage" ColumnName="SkimPercentage" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="DateTimeStamp" ColumnName="DateTimeStamp" />
+          <ScalarProperty Name="StationNumber" ColumnName="StationNumber" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

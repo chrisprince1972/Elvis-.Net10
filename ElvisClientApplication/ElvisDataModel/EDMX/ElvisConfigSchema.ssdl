@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ConfigSchemaEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ConfigSchemaEntitiesStoreContainer">
+    <EntitySet Name="AimUnits" EntityType="ConfigSchemaEntities.Store.AimUnits" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="CasterTags" EntityType="ConfigSchemaEntities.Store.CasterTags" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ChartAreas" EntityType="ConfigSchemaEntities.Store.ChartAreas" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ChartAxis" EntityType="ConfigSchemaEntities.Store.ChartAxis" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ChartDataLocations" EntityType="ConfigSchemaEntities.Store.ChartDataLocations" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ChartsConfiguration" EntityType="ConfigSchemaEntities.Store.ChartsConfiguration" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ChartSeries" EntityType="ConfigSchemaEntities.Store.ChartSeries" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ChartSeriesSet" EntityType="ConfigSchemaEntities.Store.ChartSeriesSet" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="DateLookup" EntityType="ConfigSchemaEntities.Store.DateLookup" store:Type="Tables" store:Schema="Config" store:Name="DateLookup">
+      <DefiningQuery>SELECT 
+      [DateLookup].[Date] AS [Date], 
+      [DateLookup].[YearNumber] AS [YearNumber], 
+      [DateLookup].[WeekNumber] AS [WeekNumber], 
+      [DateLookup].[DayNumber] AS [DayNumber], 
+      [DateLookup].[DayRota] AS [DayRota], 
+      [DateLookup].[NightRota] AS [NightRota], 
+      [DateLookup].[TataYear] AS [TataYear], 
+      [DateLookup].[TataWeek] AS [TataWeek], 
+      [DateLookup].[StartDay] AS [StartDay], 
+      [DateLookup].[StartNight] AS [StartNight], 
+      [DateLookup].[EndNight] AS [EndNight]
+      FROM [Config].[DateLookup] AS [DateLookup]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DipTypes" EntityType="ConfigSchemaEntities.Store.DipTypes" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="HmdsmTreatmentTypes" EntityType="ConfigSchemaEntities.Store.HmdsmTreatmentTypes" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="Logs" EntityType="ConfigSchemaEntities.Store.Logs" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="MessageTypes" EntityType="ConfigSchemaEntities.Store.MessageTypes" store:Type="Tables" store:Schema="Config" store:Name="MessageTypes">
+      <DefiningQuery>SELECT 
+      [MessageTypes].[MessageType] AS [MessageType], 
+      [MessageTypes].[MessageTypeShort] AS [MessageTypeShort], 
+      [MessageTypes].[MessageTypeText] AS [MessageTypeText]
+      FROM [Config].[MessageTypes] AS [MessageTypes]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="OpPractice" EntityType="ConfigSchemaEntities.Store.OpPractice" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="Parameters" EntityType="ConfigSchemaEntities.Store.Parameters" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ScrapBoxTypes" EntityType="ConfigSchemaEntities.Store.ScrapBoxTypes" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ScrapEventTypes" EntityType="ConfigSchemaEntities.Store.ScrapEventTypes" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ScrapTypes" EntityType="ConfigSchemaEntities.Store.ScrapTypes" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="StdTimes" EntityType="ConfigSchemaEntities.Store.StdTimes" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ThreatLocation" EntityType="ConfigSchemaEntities.Store.ThreatLocation" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="ThreatTimeScale" EntityType="ConfigSchemaEntities.Store.ThreatTimeScale" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="TIB2Reasons" EntityType="ConfigSchemaEntities.Store.TIB2Reasons" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="TibCategoryLookUp" EntityType="ConfigSchemaEntities.Store.TibCategoryLookUp" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="TibClassLookUp" EntityType="ConfigSchemaEntities.Store.TibClassLookUp" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="TibDisciplineLookUp" EntityType="ConfigSchemaEntities.Store.TibDisciplineLookUp" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="TIBReasons" EntityType="ConfigSchemaEntities.Store.TIBReasons" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="TIBStates" EntityType="ConfigSchemaEntities.Store.TIBStates" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="Treatments" EntityType="ConfigSchemaEntities.Store.Treatments" store:Type="Tables" Schema="Config" />
+    <EntitySet Name="Units" EntityType="ConfigSchemaEntities.Store.Units" store:Type="Tables" Schema="Config" />
+    <AssociationSet Name="FK_ChartAreas_ChartsConfiguration" Association="ConfigSchemaEntities.Store.FK_ChartAreas_ChartsConfiguration">
+      <End Role="ChartsConfiguration" EntitySet="ChartsConfiguration" />
+      <End Role="ChartAreas" EntitySet="ChartAreas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChartAxis_ChartAreas" Association="ConfigSchemaEntities.Store.FK_ChartAxis_ChartAreas">
+      <End Role="ChartAreas" EntitySet="ChartAreas" />
+      <End Role="ChartAxis" EntitySet="ChartAxis" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChartSeries_ChartDataLocations" Association="ConfigSchemaEntities.Store.FK_ChartSeries_ChartDataLocations">
+      <End Role="ChartDataLocations" EntitySet="ChartDataLocations" />
+      <End Role="ChartSeries" EntitySet="ChartSeries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ChartSeries_ChartSeriesSet" Association="ConfigSchemaEntities.Store.FK_ChartSeries_ChartSeriesSet">
+      <End Role="ChartSeriesSet" EntitySet="ChartSeriesSet" />
+      <End Role="ChartSeries" EntitySet="ChartSeries" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AimUnits">
+    <Key>
+      <PropertyRef Name="UnitNumber" />
+    </Key>
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="UnitText" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="CasterTags">
+    <Key>
+      <PropertyRef Name="CasterTagID" />
+    </Key>
+    <Property Name="CasterTagID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Caster" Type="float" />
+    <Property Name="TagName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Min" Type="float" Nullable="false" />
+    <Property Name="Max" Type="float" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Show" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChartAreas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ChartID" Type="smallint" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PositionAuto" Type="bit" />
+    <Property Name="PositionHeight" Type="float" />
+    <Property Name="PositionWidth" Type="float" />
+    <Property Name="PositionY" Type="float" />
+  </EntityType>
+  <EntityType Name="ChartAxis">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="AxisType" Type="smallint" />
+    <Property Name="Title" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="IntervalType" Type="smallint" />
+    <Property Name="Min" Type="float" />
+    <Property Name="Max" Type="float" />
+    <Property Name="MajorGridLineColor" Type="nvarchar" MaxLength="7" />
+    <Property Name="MajorGridLineDashStyle" Type="int" />
+    <Property Name="ChartAreasID" Type="int" Nullable="false" />
+    <Property Name="Interval" Type="float" />
+    <Property Name="LabelStyleFormat" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="MajorGridLineColorHighContrast" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="TitleForeColor" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="TitleForeColorHighContrast" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="LineColor" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="LineColorHighContrast" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="MajorTickMarkLineColor" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="MajorTickMarkLineColorHighContrast" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="LabelStyleForeColor" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="LabelStyleForeColorHighContrast" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="LabelStyleInterval" Type="float" />
+    <Property Name="LabelStyleIntervalType" Type="int" />
+  </EntityType>
+  <EntityType Name="ChartDataLocations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="ReferenceId" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Min" Type="float" />
+    <Property Name="Max" Type="float" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Scale" Type="float" />
+    <Property Name="RetrievalDataMethodID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChartsConfiguration">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="smallint" Nullable="false" />
+    <Property Name="ChartName" Type="nvarchar" Nullable="false" MaxLength="100" />
+    <Property Name="BackColour" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="BackColourHighContrast" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="ForeColour" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="ForeColourHighContrast" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="ChartSeriesSetID" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChartSeries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ChartSeriesSetID" Type="smallint" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Colour" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="ChartDataLocationsID" Type="int" Nullable="false" />
+    <Property Name="VisableByDefault" Type="bit" Nullable="false" />
+    <Property Name="ChartAreasID" Type="int" Nullable="false" />
+    <Property Name="ColourHighContrast" Type="nvarchar" Nullable="false" MaxLength="7" />
+    <Property Name="SeriesGroup" Type="smallint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ChartSeriesSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="smallint" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Config.DateLookup' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="DateLookup">
+    <Key>
+      <PropertyRef Name="Date" />
+      <PropertyRef Name="YearNumber" />
+      <PropertyRef Name="WeekNumber" />
+      <PropertyRef Name="DayNumber" />
+      <PropertyRef Name="DayRota" />
+      <PropertyRef Name="NightRota" />
+      <PropertyRef Name="TataYear" />
+      <PropertyRef Name="TataWeek" />
+    </Key>
+    <Property Name="Date" Type="smalldatetime" Nullable="false" />
+    <Property Name="YearNumber" Type="smallint" Nullable="false" />
+    <Property Name="WeekNumber" Type="tinyint" Nullable="false" />
+    <Property Name="DayNumber" Type="tinyint" Nullable="false" />
+    <Property Name="DayRota" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="NightRota" Type="char" Nullable="false" MaxLength="5" />
+    <Property Name="TataYear" Type="smallint" Nullable="false" />
+    <Property Name="TataWeek" Type="tinyint" Nullable="false" />
+    <Property Name="StartDay" Type="smalldatetime" StoreGeneratedPattern="Computed" />
+    <Property Name="StartNight" Type="smalldatetime" StoreGeneratedPattern="Computed" />
+    <Property Name="EndNight" Type="smalldatetime" StoreGeneratedPattern="Computed" />
+  </EntityType>
+  <EntityType Name="DipTypes">
+    <Key>
+      <PropertyRef Name="DipTypeNumber" />
+    </Key>
+    <Property Name="DipTypeNumber" Type="int" Nullable="false" />
+    <Property Name="DipTypeText" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="HmdsmTreatmentTypes">
+    <Key>
+      <PropertyRef Name="HmdsmTreatmentTypeID" />
+    </Key>
+    <Property Name="HmdsmTreatmentTypeID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Logs">
+    <Key>
+      <PropertyRef Name="LogID" />
+    </Key>
+    <Property Name="LogID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TimeStamp" Type="datetime2" />
+    <Property Name="LogLevel" Type="varchar" MaxLength="100" />
+    <Property Name="Logger" Type="varchar" />
+    <Property Name="MachineName" Type="varchar" MaxLength="100" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" />
+    <Property Name="Message" Type="varchar" />
+    <Property Name="Exception" Type="varchar" />
+    <Property Name="StackTrace" Type="varchar" />
+    <Property Name="CallSite" Type="varchar" />
+    <Property Name="Thread" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Config.MessageTypes' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="MessageTypes">
+    <Key>
+      <PropertyRef Name="MessageType" />
+    </Key>
+    <Property Name="MessageType" Type="int" Nullable="false" />
+    <Property Name="MessageTypeShort" Type="varchar" MaxLength="30" />
+    <Property Name="MessageTypeText" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="OpPractice">
+    <Key>
+      <PropertyRef Name="OpPracticeIndex" />
+    </Key>
+    <Property Name="OpPracticeIndex" Type="int" Nullable="false" />
+    <Property Name="OpPracticeText" Type="varchar" MaxLength="30" />
+    <Property Name="StdHeats" Type="int" />
+  </EntityType>
+  <EntityType Name="Parameters">
+    <Key>
+      <PropertyRef Name="ParIndexNumber" />
+    </Key>
+    <Property Name="ParIndexNumber" Type="int" Nullable="false" />
+    <Property Name="ParValue" Type="varchar" MaxLength="150" />
+    <Property Name="ParDescription" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="ScrapBoxTypes">
+    <Key>
+      <PropertyRef Name="ScrapBoxTypeID" />
+    </Key>
+    <Property Name="ScrapBoxTypeID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="IsUsed" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ScrapEventTypes">
+    <Key>
+      <PropertyRef Name="ScrapEventTypeID" />
+    </Key>
+    <Property Name="ScrapEventTypeID" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="ScrapTypes">
+    <Key>
+      <PropertyRef Name="ScrapTypeID" />
+    </Key>
+    <Property Name="ScrapTypeID" Type="int" Nullable="false" />
+    <Property Name="Code" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="Description" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="FullDescription" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StdTimes">
+    <Key>
+      <PropertyRef Name="UnitNumber" />
+    </Key>
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="CycleTime" Type="int" />
+    <Property Name="LeadTime" Type="int" />
+    <Property Name="LagTime" Type="int" />
+    <Property Name="ExtraCycleTime" Type="int" />
+  </EntityType>
+  <EntityType Name="ThreatLocation">
+    <Key>
+      <PropertyRef Name="ThreatLocationId" />
+    </Key>
+    <Property Name="ThreatLocationId" Type="int" Nullable="false" />
+    <Property Name="LocationName" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ThreatTimeScale">
+    <Key>
+      <PropertyRef Name="ThreatTimeScaleId" />
+    </Key>
+    <Property Name="ThreatTimeScaleId" Type="int" Nullable="false" />
+    <Property Name="TimeScaleName" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TIB2Reasons">
+    <Key>
+      <PropertyRef Name="ReasonIndex" />
+    </Key>
+    <Property Name="ReasonIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DelayIndex" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="PlantArea" Type="varchar" MaxLength="32" />
+    <Property Name="DelayReason1" Type="varchar" MaxLength="150" />
+    <Property Name="DelayReason2" Type="varchar" MaxLength="150" />
+    <Property Name="DelayReason3" Type="varchar" MaxLength="150" />
+    <Property Name="DelayReason4" Type="varchar" MaxLength="150" />
+    <Property Name="DelayClass" Type="int" />
+    <Property Name="Category" Type="int" />
+    <Property Name="Discipline" Type="int" />
+    <Property Name="OEECategory" Type="varchar" MaxLength="100" />
+    <Property Name="LossType" Type="varchar" MaxLength="100" />
+    <Property Name="Owner" Type="varchar" MaxLength="100" />
+    <Property Name="ReportingTextLevel1" Type="varchar" MaxLength="100" />
+    <Property Name="ReportingTextLevel2" Type="varchar" MaxLength="100" />
+    <Property Name="ObjectDescription" Type="varchar" MaxLength="150" />
+    <Property Name="ObjectCode" Type="varchar" MaxLength="150" />
+    <Property Name="DamageDescription" Type="varchar" MaxLength="150" />
+    <Property Name="DamageCode" Type="varchar" MaxLength="150" />
+    <Property Name="DeviationType" Type="varchar" MaxLength="150" />
+    <Property Name="CauseText" Type="varchar" MaxLength="150" />
+    <Property Name="Section" Type="varchar" MaxLength="150" />
+    <Property Name="ExternalInternal" Type="varchar" MaxLength="150" />
+    <Property Name="SupplierDownStream" Type="varchar" MaxLength="150" />
+    <Property Name="NoExtraWork" Type="varchar" MaxLength="150" />
+    <Property Name="FlocDescriptionL3" Type="varchar" MaxLength="150" />
+    <Property Name="FlocNumberL3" Type="varchar" MaxLength="150" />
+    <Property Name="FlocDescriptionL4" Type="varchar" MaxLength="150" />
+    <Property Name="FlocNumberL4" Type="varchar" MaxLength="150" />
+    <Property Name="FlocDescriptionL5" Type="varchar" MaxLength="150" />
+    <Property Name="FlocNumberL5" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TibCategoryLookUp">
+    <Key>
+      <PropertyRef Name="TIBCategoryIndex" />
+    </Key>
+    <Property Name="TIBCategoryIndex" Type="int" Nullable="false" />
+    <Property Name="TIBCategoryText" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TibClassLookUp">
+    <Key>
+      <PropertyRef Name="TIBClassIndex" />
+    </Key>
+    <Property Name="TIBClassIndex" Type="int" Nullable="false" />
+    <Property Name="TIBClassText" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TibDisciplineLookUp">
+    <Key>
+      <PropertyRef Name="TIBDisIndex" />
+    </Key>
+    <Property Name="TIBDisIndex" Type="int" Nullable="false" />
+    <Property Name="TIBDisText" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TIBReasons">
+    <Key>
+      <PropertyRef Name="ReasonIndex" />
+    </Key>
+    <Property Name="ReasonIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DelayIndex" Type="int" Nullable="false" />
+    <Property Name="UnitGroup" Type="int" />
+    <Property Name="PlantArea" Type="nvarchar" MaxLength="32" />
+    <Property Name="DelayReason1" Type="nvarchar" MaxLength="128" />
+    <Property Name="DelayReason2" Type="nvarchar" MaxLength="128" />
+    <Property Name="DelayReason3" Type="nvarchar" MaxLength="128" />
+    <Property Name="DelayReason4" Type="nvarchar" MaxLength="128" />
+    <Property Name="DelayClass" Type="int" />
+    <Property Name="Category" Type="int" />
+    <Property Name="Discipline" Type="int" />
+    <Property Name="OEECategory" Type="varchar" MaxLength="100" />
+    <Property Name="LossType" Type="varchar" MaxLength="100" />
+    <Property Name="Owner" Type="varchar" MaxLength="100" />
+    <Property Name="ReportingTextLevel1" Type="varchar" MaxLength="100" />
+    <Property Name="ReportingTextLevel2" Type="varchar" MaxLength="100" />
+    <Property Name="ObjectDescription" Type="varchar" MaxLength="150" />
+    <Property Name="ObjectCode" Type="varchar" MaxLength="150" />
+    <Property Name="DamageDescription" Type="varchar" MaxLength="150" />
+    <Property Name="DamageCode" Type="varchar" MaxLength="150" />
+    <Property Name="DeviationType" Type="varchar" MaxLength="150" />
+    <Property Name="CauseText" Type="varchar" MaxLength="150" />
+    <Property Name="Section" Type="varchar" MaxLength="150" />
+    <Property Name="ExternalInternal" Type="varchar" MaxLength="150" />
+    <Property Name="SupplierDownStream" Type="varchar" MaxLength="150" />
+    <Property Name="NoExtraWork" Type="varchar" MaxLength="150" />
+    <Property Name="FlocDescriptionL3" Type="varchar" MaxLength="150" />
+    <Property Name="FlocNumberL3" Type="varchar" MaxLength="150" />
+    <Property Name="FlocDescriptionL4" Type="varchar" MaxLength="150" />
+    <Property Name="FlocNumberL4" Type="varchar" MaxLength="150" />
+    <Property Name="FlocDescriptionL5" Type="varchar" MaxLength="150" />
+    <Property Name="FlocNumberL5" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TIBStates">
+    <Key>
+      <PropertyRef Name="TIBStatus" />
+    </Key>
+    <Property Name="TIBStatus" Type="int" Nullable="false" />
+    <Property Name="TIBStatusDescription" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Treatments">
+    <Key>
+      <PropertyRef Name="TreatmentNumber" />
+      <PropertyRef Name="UnitNumber" />
+    </Key>
+    <Property Name="TreatmentNumber" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="TreatmentText" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Units">
+    <Key>
+      <PropertyRef Name="UnitNumber" />
+    </Key>
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="UnitText" Type="varchar" MaxLength="50" />
+    <Property Name="UnitShort" Type="varchar" MaxLength="20" />
+    <Property Name="UnitGroupText" Type="varchar" MaxLength="50" />
+    <Property Name="UnitGroupNumber" Type="int" />
+    <Property Name="UnitGroupSort" Type="int" />
+  </EntityType>
+  <Association Name="FK_ChartAreas_ChartsConfiguration">
+    <End Role="ChartsConfiguration" Type="ConfigSchemaEntities.Store.ChartsConfiguration" Multiplicity="1" />
+    <End Role="ChartAreas" Type="ConfigSchemaEntities.Store.ChartAreas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChartsConfiguration">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChartAreas">
+        <PropertyRef Name="ChartID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChartAxis_ChartAreas">
+    <End Role="ChartAreas" Type="ConfigSchemaEntities.Store.ChartAreas" Multiplicity="1" />
+    <End Role="ChartAxis" Type="ConfigSchemaEntities.Store.ChartAxis" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChartAreas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ChartAxis">
+        <PropertyRef Name="ChartAreasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChartSeries_ChartDataLocations">
+    <End Role="ChartDataLocations" Type="ConfigSchemaEntities.Store.ChartDataLocations" Multiplicity="1" />
+    <End Role="ChartSeries" Type="ConfigSchemaEntities.Store.ChartSeries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChartDataLocations">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChartSeries">
+        <PropertyRef Name="ChartDataLocationsID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ChartSeries_ChartSeriesSet">
+    <End Role="ChartSeriesSet" Type="ConfigSchemaEntities.Store.ChartSeriesSet" Multiplicity="1" />
+    <End Role="ChartSeries" Type="ConfigSchemaEntities.Store.ChartSeries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChartSeriesSet">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ChartSeries">
+        <PropertyRef Name="ChartSeriesSetID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

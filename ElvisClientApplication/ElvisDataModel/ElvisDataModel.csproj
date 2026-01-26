@@ -12,6 +12,45 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="EDMX\CasterL3Model.csdl" />
+    <None Remove="EDMX\CasterL3Model.msl" />
+    <None Remove="EDMX\CasterL3Model.ssdl" />
+    <None Remove="EDMX\CasterMachineConditionModel.csdl" />
+    <None Remove="EDMX\CasterMachineConditionModel.msl" />
+    <None Remove="EDMX\CasterMachineConditionModel.ssdl" />
+    <None Remove="EDMX\ClusterSafetySystemsModel.csdl" />
+    <None Remove="EDMX\ClusterSafetySystemsModel.msl" />
+    <None Remove="EDMX\ClusterSafetySystemsModel.ssdl" />
+    <None Remove="EDMX\ElvisConfigSchema.csdl" />
+    <None Remove="EDMX\ElvisConfigSchema.msl" />
+    <None Remove="EDMX\ElvisConfigSchema.ssdl" />
+    <None Remove="EDMX\ElvisModelSchema.csdl" />
+    <None Remove="EDMX\ElvisModelSchema.msl" />
+    <None Remove="EDMX\ElvisModelSchema.ssdl" />
+    <None Remove="EDMX\ElvisOasisSchema.csdl" />
+    <None Remove="EDMX\ElvisOasisSchema.msl" />
+    <None Remove="EDMX\ElvisOasisSchema.ssdl" />
+    <None Remove="EDMX\ElvisReportMiscastSchema.csdl" />
+    <None Remove="EDMX\ElvisReportMiscastSchema.msl" />
+    <None Remove="EDMX\ElvisReportMiscastSchema.ssdl" />
+    <None Remove="EDMX\ElvisReportSchema.csdl" />
+    <None Remove="EDMX\ElvisReportSchema.msl" />
+    <None Remove="EDMX\ElvisReportSchema.ssdl" />
+    <None Remove="EDMX\ElvisSecuritySchema.csdl" />
+    <None Remove="EDMX\ElvisSecuritySchema.msl" />
+    <None Remove="EDMX\ElvisSecuritySchema.ssdl" />
+    <None Remove="EDMX\ElvisSpecsSchema.csdl" />
+    <None Remove="EDMX\ElvisSpecsSchema.msl" />
+    <None Remove="EDMX\ElvisSpecsSchema.ssdl" />
+    <None Remove="EDMX\ElvisStoredProcedures.csdl" />
+    <None Remove="EDMX\ElvisStoredProcedures.msl" />
+    <None Remove="EDMX\ElvisStoredProcedures.ssdl" />
+    <None Remove="EDMX\ElvisTrendSchema.csdl" />
+    <None Remove="EDMX\ElvisTrendSchema.msl" />
+    <None Remove="EDMX\ElvisTrendSchema.ssdl" />
+  </ItemGroup>
+
   <!-- App.config should still be included for net48.
        For net10, you can keep it in the project; runtime behavior depends on how you load config. -->
   <ItemGroup>
@@ -31,5 +70,56 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net10.0'">
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
 
+	<ItemGroup>
+		<EmbeddedResource Include="EDMX\CasterL3Model.csdl" />
+		<EmbeddedResource Include="EDMX\CasterL3Model.msl" />
+		<EmbeddedResource Include="EDMX\CasterL3Model.ssdl" />
+		<EmbeddedResource Include="EDMX\CasterMachineConditionModel.csdl" />
+		<EmbeddedResource Include="EDMX\CasterMachineConditionModel.msl" />
+		<EmbeddedResource Include="EDMX\CasterMachineConditionModel.ssdl" />
+		<EmbeddedResource Include="EDMX\ClusterSafetySystemsModel.csdl" />
+		<EmbeddedResource Include="EDMX\ClusterSafetySystemsModel.msl" />
+		<EmbeddedResource Include="EDMX\ClusterSafetySystemsModel.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisConfigSchema.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisConfigSchema.msl" />
+		<EmbeddedResource Include="EDMX\ElvisConfigSchema.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisEventSchema.csdl">
+			<LogicalName>EDMX.ElvisEventSchema.csdl</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="EDMX\ElvisEventSchema.ssdl">
+			<LogicalName>EDMX.ElvisEventSchema.ssdl</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="EDMX\ElvisEventSchema.msl">
+			<LogicalName>EDMX.ElvisEventSchema.msl</LogicalName>
+		</EmbeddedResource>
+		<EmbeddedResource Include="EDMX\ElvisModelSchema.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisModelSchema.msl" />
+		<EmbeddedResource Include="EDMX\ElvisModelSchema.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisOasisSchema.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisOasisSchema.msl" />
+		<EmbeddedResource Include="EDMX\ElvisOasisSchema.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisReportMiscastSchema.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisReportMiscastSchema.msl" />
+		<EmbeddedResource Include="EDMX\ElvisReportMiscastSchema.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisReportSchema.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisReportSchema.msl" />
+		<EmbeddedResource Include="EDMX\ElvisReportSchema.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisSecuritySchema.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisSecuritySchema.msl" />
+		<EmbeddedResource Include="EDMX\ElvisSecuritySchema.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisSpecsSchema.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisSpecsSchema.msl" />
+		<EmbeddedResource Include="EDMX\ElvisSpecsSchema.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisStoredProcedures.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisStoredProcedures.msl" />
+		<EmbeddedResource Include="EDMX\ElvisStoredProcedures.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisTrendSchema.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisTrendSchema.msl" />
+		<EmbeddedResource Include="EDMX\ElvisTrendSchema.ssdl" />
+	</ItemGroup>
+	
 </Project>

@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ReportSchemaEntitiesStoreContainer" CdmEntityContainer="ReportSchemaEntities">
+    <EntitySetMapping Name="Codes">
+      <EntityTypeMapping TypeName="ReportSchema.Code">
+        <MappingFragment StoreEntitySet="Codes">
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+          <ScalarProperty Name="ParentID" ColumnName="ParentID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="ReportSchema.Comment">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="CreatedDT" ColumnName="CreatedDT" />
+          <ScalarProperty Name="LastUpdatedDT" ColumnName="LastUpdatedDT" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="SAPID" ColumnName="SAPID" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="CommentWhatHappened" ColumnName="CommentWhatHappened" />
+          <ScalarProperty Name="CommentHowHappened" ColumnName="CommentHowHappened" />
+          <ScalarProperty Name="CommentWhatActions" ColumnName="CommentWhatActions" />
+          <ScalarProperty Name="CommentHowPrevent" ColumnName="CommentHowPrevent" />
+          <ScalarProperty Name="CommentLMM" ColumnName="CommentLMM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Costs">
+      <EntityTypeMapping TypeName="ReportSchema.Cost">
+        <MappingFragment StoreEntitySet="Cost">
+          <ScalarProperty Name="CostID" ColumnName="CostID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="PlanLengthTundish" ColumnName="PlanLengthTundish" />
+          <ScalarProperty Name="ActLengthTundish" ColumnName="ActLengthTundish" />
+          <ScalarProperty Name="MinsCasterFailure" ColumnName="MinsCasterFailure" />
+          <ScalarProperty Name="TonTundishSkull" ColumnName="TonTundishSkull" />
+          <ScalarProperty Name="TonSteelReturnVessel" ColumnName="TonSteelReturnVessel" />
+          <ScalarProperty Name="TonSteelInSlagPan" ColumnName="TonSteelInSlagPan" />
+          <ScalarProperty Name="ReheatingDegrees" ColumnName="ReheatingDegrees" />
+          <ScalarProperty Name="DamageAmountOthers" ColumnName="DamageAmountOthers" />
+          <ScalarProperty Name="CostPerTonTundishSkull" ColumnName="CostPerTonTundishSkull" />
+          <ScalarProperty Name="CostPerMinFailCaster" ColumnName="CostPerMinFailCaster" />
+          <ScalarProperty Name="CostPerTonSteelToVessel" ColumnName="CostPerTonSteelToVessel" />
+          <ScalarProperty Name="CostPerTonSteelSlagPan" ColumnName="CostPerTonSteelSlagPan" />
+          <ScalarProperty Name="CostPerDegreeReheatLadle" ColumnName="CostPerDegreeReheatLadle" />
+          <ScalarProperty Name="Cost1Tundish" ColumnName="Cost1Tundish" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documents">
+      <EntityTypeMapping TypeName="ReportSchema.Document">
+        <MappingFragment StoreEntitySet="Documents">
+          <ScalarProperty Name="DocumentID" ColumnName="DocumentID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ContentType" ColumnName="ContentType" />
+          <ScalarProperty Name="IsImage" ColumnName="IsImage" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRFActions">
+      <EntityTypeMapping TypeName="ReportSchema.DRFAction">
+        <MappingFragment StoreEntitySet="DRFActions">
+          <ScalarProperty Name="ActionIndex" ColumnName="ActionIndex" />
+          <ScalarProperty Name="DRFIndex" ColumnName="DRFIndex" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="ActionOwner" ColumnName="ActionOwner" />
+          <ScalarProperty Name="TargetDate" ColumnName="TargetDate" />
+          <ScalarProperty Name="ActionState" ColumnName="ActionState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRFDropDownLookUps">
+      <EntityTypeMapping TypeName="ReportSchema.DRFDropDownLookUp">
+        <MappingFragment StoreEntitySet="DRFDropDownLookUp">
+          <ScalarProperty Name="DDIndex" ColumnName="DDIndex" />
+          <ScalarProperty Name="DelayType" ColumnName="DelayType" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Rota" ColumnName="Rota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRFLocationLookUps">
+      <EntityTypeMapping TypeName="ReportSchema.DRFLocationLookUp">
+        <MappingFragment StoreEntitySet="DRFLocationLookUp">
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="PlantIndex" ColumnName="PlantIndex" />
+          <ScalarProperty Name="Works" ColumnName="Works" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="PlantItem" ColumnName="PlantItem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Links">
+      <EntityTypeMapping TypeName="ReportSchema.Link">
+        <MappingFragment StoreEntitySet="Links">
+          <ScalarProperty Name="LinkID" ColumnName="LinkID" />
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainReports">
+      <EntityTypeMapping TypeName="ReportSchema.MainReport">
+        <MappingFragment StoreEntitySet="MainReport">
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="HeatID" ColumnName="HeatID" />
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+          <ScalarProperty Name="CostID" ColumnName="CostID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDT" ColumnName="CreatedDT" />
+          <ScalarProperty Name="ClosedDT" ColumnName="ClosedDT" />
+          <ScalarProperty Name="DamageOccurredDT" ColumnName="DamageOccurredDT" />
+          <ScalarProperty Name="DamageOccurredShift" ColumnName="DamageOccurredShift" />
+          <ScalarProperty Name="ReferencedSection" ColumnName="ReferencedSection" />
+          <ScalarProperty Name="DamageCost" ColumnName="DamageCost" />
+          <ScalarProperty Name="IndicationReportDeleted" ColumnName="IndicationReportDeleted" />
+          <ScalarProperty Name="TypeCause" ColumnName="TypeCause" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="CentralMorningMeeting" ColumnName="CentralMorningMeeting" />
+          <ScalarProperty Name="CentralMorningDiscussedDT" ColumnName="CentralMorningDiscussedDT" />
+          <ScalarProperty Name="HMPrepMeeting" ColumnName="HMPrepMeeting" />
+          <ScalarProperty Name="HMPrepDiscussedDT" ColumnName="HMPrepDiscussedDT" />
+          <ScalarProperty Name="VesselsMeeting" ColumnName="VesselsMeeting" />
+          <ScalarProperty Name="VesselsDiscussedDT" ColumnName="VesselsDiscussedDT" />
+          <ScalarProperty Name="SecondaryAndLadleMeeting" ColumnName="SecondaryAndLadleMeeting" />
+          <ScalarProperty Name="SecAndLadleDiscussedDT" ColumnName="SecAndLadleDiscussedDT" />
+          <ScalarProperty Name="CasterMeeting" ColumnName="CasterMeeting" />
+          <ScalarProperty Name="CasterMeetingDiscussedDT" ColumnName="CasterMeetingDiscussedDT" />
+          <ScalarProperty Name="CommentsCentralMornMeet" ColumnName="CommentsCentralMornMeet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="ReportSchema.Section">
+        <MappingFragment StoreEntitySet="Sections">
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AimsAnalysisGridDatas">
+      <EntityTypeMapping TypeName="ReportSchema.AimsAnalysisGridData">
+        <MappingFragment StoreEntitySet="AimsAnalysisGridData">
+          <ScalarProperty Name="AimAnalysisIndex" ColumnName="AimAnalysisIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="Si" ColumnName="Si" />
+          <ScalarProperty Name="S" ColumnName="S" />
+          <ScalarProperty Name="P" ColumnName="P" />
+          <ScalarProperty Name="Ni" ColumnName="Ni" />
+          <ScalarProperty Name="Cu" ColumnName="Cu" />
+          <ScalarProperty Name="Mn" ColumnName="Mn" />
+          <ScalarProperty Name="Sn" ColumnName="Sn" />
+          <ScalarProperty Name="Cr" ColumnName="Cr" />
+          <ScalarProperty Name="As" ColumnName="As" />
+          <ScalarProperty Name="Mo" ColumnName="Mo" />
+          <ScalarProperty Name="N2" ColumnName="N2" />
+          <ScalarProperty Name="AlT" ColumnName="AlT" />
+          <ScalarProperty Name="Ti" ColumnName="Ti" />
+          <ScalarProperty Name="AlS" ColumnName="AlS" />
+          <ScalarProperty Name="B" ColumnName="B" />
+          <ScalarProperty Name="Ca" ColumnName="Ca" />
+          <ScalarProperty Name="Ce" ColumnName="Ce" />
+          <ScalarProperty Name="Co" ColumnName="Co" />
+          <ScalarProperty Name="Nb" ColumnName="Nb" />
+          <ScalarProperty Name="V" ColumnName="V" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="TempTypeText" ColumnName="TempTypeText" />
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AimsExtendAnalysisGridDatas">
+      <EntityTypeMapping TypeName="ReportSchema.AimsExtendAnalysisGridData">
+        <MappingFragment StoreEntitySet="AimsExtendAnalysisGridData">
+          <ScalarProperty Name="AimAnalysisIndex" ColumnName="AimAnalysisIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+          <ScalarProperty Name="TempTypeText" ColumnName="TempTypeText" />
+          <ScalarProperty Name="CEV1" ColumnName="CEV1" />
+          <ScalarProperty Name="CEV2" ColumnName="CEV2" />
+          <ScalarProperty Name="CEV3" ColumnName="CEV3" />
+          <ScalarProperty Name="FreeC1" ColumnName="FreeC1" />
+          <ScalarProperty Name="FreeC2" ColumnName="FreeC2" />
+          <ScalarProperty Name="XSTi1" ColumnName="XSTi1" />
+          <ScalarProperty Name="XSTi2" ColumnName="XSTi2" />
+          <ScalarProperty Name="XSTi3" ColumnName="XSTi3" />
+          <ScalarProperty Name="AlN2" ColumnName="AlN2" />
+          <ScalarProperty Name="CuP" ColumnName="CuP" />
+          <ScalarProperty Name="BN2" ColumnName="BN2" />
+          <ScalarProperty Name="SP" ColumnName="SP" />
+          <ScalarProperty Name="CUNiCrMoSn" ColumnName="CUNiCrMoSn" />
+          <ScalarProperty Name="CrEq" ColumnName="CrEq" />
+          <ScalarProperty Name="SiForm" ColumnName="SiForm" />
+          <ScalarProperty Name="MnS" ColumnName="MnS" />
+          <ScalarProperty Name="MnSi" ColumnName="MnSi" />
+          <ScalarProperty Name="FreeC3" ColumnName="FreeC3" />
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AnalysisGridDatas">
+      <EntityTypeMapping TypeName="ReportSchema.AnalysisGridData">
+        <MappingFragment StoreEntitySet="AnalysisGridData">
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="C" ColumnName="C" />
+          <ScalarProperty Name="Si" ColumnName="Si" />
+          <ScalarProperty Name="S" ColumnName="S" />
+          <ScalarProperty Name="P" ColumnName="P" />
+          <ScalarProperty Name="Mn" ColumnName="Mn" />
+          <ScalarProperty Name="Ni" ColumnName="Ni" />
+          <ScalarProperty Name="Cu" ColumnName="Cu" />
+          <ScalarProperty Name="Sn" ColumnName="Sn" />
+          <ScalarProperty Name="Cr" ColumnName="Cr" />
+          <ScalarProperty Name="As" ColumnName="As" />
+          <ScalarProperty Name="Mo" ColumnName="Mo" />
+          <ScalarProperty Name="N2" ColumnName="N2" />
+          <ScalarProperty Name="AlT" ColumnName="AlT" />
+          <ScalarProperty Name="AlS" ColumnName="AlS" />
+          <ScalarProperty Name="Ti" ColumnName="Ti" />
+          <ScalarProperty Name="B" ColumnName="B" />
+          <ScalarProperty Name="Ca" ColumnName="Ca" />
+          <ScalarProperty Name="Ce" ColumnName="Ce" />
+          <ScalarProperty Name="Co" ColumnName="Co" />
+          <ScalarProperty Name="Nb" ColumnName="Nb" />
+          <ScalarProperty Name="V" ColumnName="V" />
+          <ScalarProperty Name="AnalysisIndex" ColumnName="AnalysisIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="SubSampleNumber" ColumnName="SubSampleNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExtendAnalysisGridDatas">
+      <EntityTypeMapping TypeName="ReportSchema.ExtendAnalysisGridData">
+        <MappingFragment StoreEntitySet="ExtendAnalysisGridData">
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="AnalysisIndex" ColumnName="AnalysisIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="SampleType" ColumnName="SampleType" />
+          <ScalarProperty Name="CEV1" ColumnName="CEV1" />
+          <ScalarProperty Name="CEV2" ColumnName="CEV2" />
+          <ScalarProperty Name="CEV3" ColumnName="CEV3" />
+          <ScalarProperty Name="FreeC1" ColumnName="FreeC1" />
+          <ScalarProperty Name="FreeC2" ColumnName="FreeC2" />
+          <ScalarProperty Name="XSTi1" ColumnName="XSTi1" />
+          <ScalarProperty Name="XSTi2" ColumnName="XSTi2" />
+          <ScalarProperty Name="XSTi3" ColumnName="XSTi3" />
+          <ScalarProperty Name="AlN2" ColumnName="AlN2" />
+          <ScalarProperty Name="CuP" ColumnName="CuP" />
+          <ScalarProperty Name="BN2" ColumnName="BN2" />
+          <ScalarProperty Name="SP" ColumnName="SP" />
+          <ScalarProperty Name="CUNiCrMoSn" ColumnName="CUNiCrMoSn" />
+          <ScalarProperty Name="CrEq" ColumnName="CrEq" />
+          <ScalarProperty Name="SiForm" ColumnName="SiForm" />
+          <ScalarProperty Name="MnS" ColumnName="MnS" />
+          <ScalarProperty Name="MnSi" ColumnName="MnSi" />
+          <ScalarProperty Name="FreeC3" ColumnName="FreeC3" />
+          <ScalarProperty Name="Fe" ColumnName="Fe" />
+          <ScalarProperty Name="Liquidus" ColumnName="Liquidus" />
+          <ScalarProperty Name="SubSampleNumber" ColumnName="SubSampleNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HeatDetailsEvents">
+      <EntityTypeMapping TypeName="ReportSchema.HeatDetailsEvent">
+        <MappingFragment StoreEntitySet="HeatDetailsEvents">
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="TimeStampStart" ColumnName="TimeStampStart" />
+          <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+          <ScalarProperty Name="TrackIndex" ColumnName="TrackIndex" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="TempBegin" ColumnName="TempBegin" />
+          <ScalarProperty Name="TempEnd" ColumnName="TempEnd" />
+          <ScalarProperty Name="WeightBegin" ColumnName="WeightBegin" />
+          <ScalarProperty Name="WeightEnd" ColumnName="WeightEnd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReportOverviews">
+      <EntityTypeMapping TypeName="ReportSchema.ReportOverview">
+        <MappingFragment StoreEntitySet="ReportOverview">
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="HeatID" ColumnName="HeatID" />
+          <ScalarProperty Name="CodeID" ColumnName="CodeID" />
+          <ScalarProperty Name="CostID" ColumnName="CostID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CreatedDT" ColumnName="CreatedDT" />
+          <ScalarProperty Name="ClosedDT" ColumnName="ClosedDT" />
+          <ScalarProperty Name="DamageOccurredDT" ColumnName="DamageOccurredDT" />
+          <ScalarProperty Name="DamageOccurredShift" ColumnName="DamageOccurredShift" />
+          <ScalarProperty Name="ReferencedSection" ColumnName="ReferencedSection" />
+          <ScalarProperty Name="DamageCost" ColumnName="DamageCost" />
+          <ScalarProperty Name="IndicationReportDeleted" ColumnName="IndicationReportDeleted" />
+          <ScalarProperty Name="TypeCause" ColumnName="TypeCause" />
+          <ScalarProperty Name="PCName" ColumnName="PCName" />
+          <ScalarProperty Name="CentralMorningMeeting" ColumnName="CentralMorningMeeting" />
+          <ScalarProperty Name="CentralMorningDiscussedDT" ColumnName="CentralMorningDiscussedDT" />
+          <ScalarProperty Name="HMPrepMeeting" ColumnName="HMPrepMeeting" />
+          <ScalarProperty Name="HMPrepDiscussedDT" ColumnName="HMPrepDiscussedDT" />
+          <ScalarProperty Name="VesselsMeeting" ColumnName="VesselsMeeting" />
+          <ScalarProperty Name="VesselsDiscussedDT" ColumnName="VesselsDiscussedDT" />
+          <ScalarProperty Name="SecondaryAndLadleMeeting" ColumnName="SecondaryAndLadleMeeting" />
+          <ScalarProperty Name="SecAndLadleDiscussedDT" ColumnName="SecAndLadleDiscussedDT" />
+          <ScalarProperty Name="CasterMeeting" ColumnName="CasterMeeting" />
+          <ScalarProperty Name="CasterMeetingDiscussedDT" ColumnName="CasterMeetingDiscussedDT" />
+          <ScalarProperty Name="CommentsCentralMornMeet" ColumnName="CommentsCentralMornMeet" />
+          <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempAimsDatas">
+      <EntityTypeMapping TypeName="ReportSchema.TempAimsData">
+        <MappingFragment StoreEntitySet="TempAimsData">
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="AimTempIndex" ColumnName="AimTempIndex" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+          <ScalarProperty Name="TemperatureType" ColumnName="TemperatureType" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="TempTypeText" ColumnName="TempTypeText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TempDipDatas">
+      <EntityTypeMapping TypeName="ReportSchema.TempDipData">
+        <MappingFragment StoreEntitySet="TempDipData">
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+          <ScalarProperty Name="DipIndex" ColumnName="DipIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="DipType" ColumnName="DipType" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+          <ScalarProperty Name="S" ColumnName="S" />
+          <ScalarProperty Name="O2" ColumnName="O2" />
+          <ScalarProperty Name="Al" ColumnName="Al" />
+          <ScalarProperty Name="EMF" ColumnName="EMF" />
+          <ScalarProperty Name="Carbon" ColumnName="Carbon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="I3s">
+      <EntityTypeMapping TypeName="ReportSchema.I3s">
+        <MappingFragment StoreEntitySet="I3s">
+          <ScalarProperty Name="Complete" ColumnName="Complete" />
+          <ScalarProperty Name="FeedBackBy" ColumnName="FeedBackBy" />
+          <ScalarProperty Name="Trio" ColumnName="Trio" />
+          <ScalarProperty Name="HigherLevelInvestigationRequired" ColumnName="HigherLevelInvestigationRequired" />
+          <ScalarProperty Name="CompleteIn24Hrs" ColumnName="CompleteIn24Hrs" />
+          <ScalarProperty Name="ShiftManager" ColumnName="ShiftManager" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRFReports">
+      <EntityTypeMapping TypeName="ReportSchema.DRFReport">
+        <MappingFragment StoreEntitySet="DRFReports">
+          <ScalarProperty Name="HasAttachments" ColumnName="HasAttachments" />
+          <ScalarProperty Name="TIBIndex" ColumnName="TIBIndex" />
+          <ScalarProperty Name="TIBDelayIndex" ColumnName="TIBDelayIndex" />
+          <ScalarProperty Name="ReviewDate" ColumnName="ReviewDate" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Rota" ColumnName="Rota" />
+          <ScalarProperty Name="Day" ColumnName="Day" />
+          <ScalarProperty Name="Week" ColumnName="Week" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="DelayType" ColumnName="DelayType" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+          <ScalarProperty Name="ReportStatus" ColumnName="ReportStatus" />
+          <ScalarProperty Name="ClosedByName" ColumnName="ClosedByName" />
+          <ScalarProperty Name="ClosureDate" ColumnName="ClosureDate" />
+          <ScalarProperty Name="CorrectiveMeasure" ColumnName="CorrectiveMeasure" />
+          <ScalarProperty Name="RootCause" ColumnName="RootCause" />
+          <ScalarProperty Name="ImmediateActions" ColumnName="ImmediateActions" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="InitiatorName" ColumnName="InitiatorName" />
+          <ScalarProperty Name="DelayDuration" ColumnName="DelayDuration" />
+          <ScalarProperty Name="StartDateTime" ColumnName="StartDateTime" />
+          <ScalarProperty Name="PlantItem" ColumnName="PlantItem" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="Works" ColumnName="Works" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DRFIndex" ColumnName="DRFIndex" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StatusLookUps">
+      <EntityTypeMapping TypeName="ReportSchema.StatusLookUp">
+        <MappingFragment StoreEntitySet="StatusLookUp">
+          <ScalarProperty Name="StatusDesc" ColumnName="StatusDesc" />
+          <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FunctionLookUps">
+      <EntityTypeMapping TypeName="ReportSchema.FunctionLookUp">
+        <MappingFragment StoreEntitySet="FunctionLookUp">
+          <ScalarProperty Name="FunctionDescFull" ColumnName="FunctionDescFull" />
+          <ScalarProperty Name="FunctionDesc" ColumnName="FunctionDesc" />
+          <ScalarProperty Name="FunctionId" ColumnName="FunctionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncidentOwners">
+      <EntityTypeMapping TypeName="ReportSchema.IncidentOwner">
+        <MappingFragment StoreEntitySet="IncidentOwners">
+          <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+          <ScalarProperty Name="OwnerDesc" ColumnName="OwnerDesc" />
+          <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncidentReports">
+      <EntityTypeMapping TypeName="ReportSchema.IncidentReport">
+        <MappingFragment StoreEntitySet="IncidentReport">
+          <ScalarProperty Name="ReportOwnerID" ColumnName="ReportOwnerID" />
+          <ScalarProperty Name="IncidentStatus" ColumnName="IncidentStatus" />
+          <ScalarProperty Name="IncidentDescription" ColumnName="IncidentDescription" />
+          <ScalarProperty Name="FunctionId" ColumnName="FunctionId" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+          <ScalarProperty Name="TimeStampClosed" ColumnName="TimeStampClosed" />
+          <ScalarProperty Name="TimeStampCreated" ColumnName="TimeStampCreated" />
+          <ScalarProperty Name="IncidentId" ColumnName="IncidentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AreaLookUps">
+      <EntityTypeMapping TypeName="ReportSchema.AreaLookUp">
+        <MappingFragment StoreEntitySet="AreaLookUp">
+          <ScalarProperty Name="AreaDescFull" ColumnName="AreaDescFull" />
+          <ScalarProperty Name="AreaDesc" ColumnName="AreaDesc" />
+          <ScalarProperty Name="AreaId" ColumnName="AreaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IncidentActions">
+      <EntityTypeMapping TypeName="ReportSchema.IncidentAction">
+        <MappingFragment StoreEntitySet="IncidentActions">
+          <ScalarProperty Name="ClosedBy" ColumnName="ClosedBy" />
+          <ScalarProperty Name="TimeStampClosed" ColumnName="TimeStampClosed" />
+          <ScalarProperty Name="TimeStampCreated" ColumnName="TimeStampCreated" />
+          <ScalarProperty Name="ActionStatus" ColumnName="ActionStatus" />
+          <ScalarProperty Name="ActionTargetDate" ColumnName="ActionTargetDate" />
+          <ScalarProperty Name="ActionOwner" ColumnName="ActionOwner" />
+          <ScalarProperty Name="ActionDesc" ColumnName="ActionDesc" />
+          <ScalarProperty Name="IncidentId" ColumnName="IncidentId" />
+          <ScalarProperty Name="ActionId" ColumnName="ActionId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MangementAgendaThreats">
+      <EntityTypeMapping TypeName="ReportSchema.MangementAgendaThreat">
+        <MappingFragment StoreEntitySet="MangementAgendaThreats">
+          <ScalarProperty Name="Threat" ColumnName="Threat" />
+          <ScalarProperty Name="ThreatTimeScaleId" ColumnName="ThreatTimeScaleId" />
+          <ScalarProperty Name="ThreatLocationId" ColumnName="ThreatLocationId" />
+          <ScalarProperty Name="DmaThreatId" ColumnName="DmaThreatId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DRFOwners">
+      <EntityTypeMapping TypeName="ReportSchema.DRFOwner">
+        <MappingFragment StoreEntitySet="DRFOwners">
+          <ScalarProperty Name="ValidUntil" ColumnName="ValidUntil" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Works" ColumnName="Works" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

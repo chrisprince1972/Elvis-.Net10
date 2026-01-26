@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UnitSchemaEntitiesStoreContainer" CdmEntityContainer="UnitSchemaEntities">
+    <EntitySetMapping Name="Casters">
+      <EntityTypeMapping TypeName="UnitSchema.Caster">
+        <MappingFragment StoreEntitySet="Caster">
+          <ScalarProperty Name="SpeedRatio" ColumnName="SpeedRatio" />
+          <ScalarProperty Name="CasterIndex" ColumnName="CasterIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="LadleNumber" ColumnName="LadleNumber" />
+          <ScalarProperty Name="TimeStampStart" ColumnName="TimeStampStart" />
+          <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+          <ScalarProperty Name="TimeStampStartGMT" ColumnName="TimeStampStartGMT" />
+          <ScalarProperty Name="TimeStampEndGMT" ColumnName="TimeStampEndGMT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HMDesulphs">
+      <EntityTypeMapping TypeName="UnitSchema.HMDesulph">
+        <MappingFragment StoreEntitySet="HMDesulph">
+          <ScalarProperty Name="HMDesIndex" ColumnName="HMDesIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="TimeStampStart" ColumnName="TimeStampStart" />
+          <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+          <ScalarProperty Name="TimeStampStartGMT" ColumnName="TimeStampStartGMT" />
+          <ScalarProperty Name="TimeStampEndGMT" ColumnName="TimeStampEndGMT" />
+          <ScalarProperty Name="LadleNumber" ColumnName="LadleNumber" />
+          <ScalarProperty Name="StartSulphur" ColumnName="StartSulphur" />
+          <ScalarProperty Name="AimSulphur" ColumnName="AimSulphur" />
+          <ScalarProperty Name="TemperatureStart" ColumnName="TemperatureStart" />
+          <ScalarProperty Name="TemperatureEnd" ColumnName="TemperatureEnd" />
+          <ScalarProperty Name="TimeLastTemperature" ColumnName="TimeLastTemperature" />
+          <ScalarProperty Name="HMWeight" ColumnName="HMWeight" />
+          <ScalarProperty Name="SkimLoss" ColumnName="SkimLoss" />
+          <ScalarProperty Name="TreatmentCount" ColumnName="TreatmentCount" />
+          <ScalarProperty Name="SkimCount" ColumnName="SkimCount" />
+          <ScalarProperty Name="LimeTotal" ColumnName="LimeTotal" />
+          <ScalarProperty Name="MgTotal" ColumnName="MgTotal" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HMDesulphReports">
+      <EntityTypeMapping TypeName="UnitSchema.HMDesulphReport">
+        <MappingFragment StoreEntitySet="HMDesulphReport">
+          <ScalarProperty Name="HMDesReportIndex" ColumnName="HMDesReportIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="TimeStampGMT" ColumnName="TimeStampGMT" />
+          <ScalarProperty Name="StartSulphur" ColumnName="StartSulphur" />
+          <ScalarProperty Name="AimSulphur" ColumnName="AimSulphur" />
+          <ScalarProperty Name="LimeDemand" ColumnName="LimeDemand" />
+          <ScalarProperty Name="LimeActual" ColumnName="LimeActual" />
+          <ScalarProperty Name="MgDemand" ColumnName="MgDemand" />
+          <ScalarProperty Name="MgActual" ColumnName="MgActual" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HMPours">
+      <EntityTypeMapping TypeName="UnitSchema.HMPour">
+        <MappingFragment StoreEntitySet="HMPour">
+          <ScalarProperty Name="HMPourIndex" ColumnName="HMPourIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="TimeStampStart" ColumnName="TimeStampStart" />
+          <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+          <ScalarProperty Name="TimeStampStartGMT" ColumnName="TimeStampStartGMT" />
+          <ScalarProperty Name="TimeStampEndGMT" ColumnName="TimeStampEndGMT" />
+          <ScalarProperty Name="LadleNumber" ColumnName="LadleNumber" />
+          <ScalarProperty Name="HMLadleLife" ColumnName="HMLadleLife" />
+          <ScalarProperty Name="HMWeight" ColumnName="HMWeight" />
+          <ScalarProperty Name="HMLastTemperature" ColumnName="HMLastTemperature" />
+          <ScalarProperty Name="TimeLastTemperature" ColumnName="TimeLastTemperature" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SecSteels">
+      <EntityTypeMapping TypeName="UnitSchema.SecSteel">
+        <MappingFragment StoreEntitySet="SecSteel">
+          <ScalarProperty Name="Freeboard" ColumnName="Freeboard" />
+          <ScalarProperty Name="SlagDepth" ColumnName="SlagDepth" />
+          <ScalarProperty Name="SecSteelIndex" ColumnName="SecSteelIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="TImeStampStart" ColumnName="TImeStampStart" />
+          <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+          <ScalarProperty Name="TimeStampStartGMT" ColumnName="TimeStampStartGMT" />
+          <ScalarProperty Name="TimeStampEndGMT" ColumnName="TimeStampEndGMT" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vessels">
+      <EntityTypeMapping TypeName="UnitSchema.Vessel">
+        <MappingFragment StoreEntitySet="Vessel">
+          <ScalarProperty Name="EndTapTime" ColumnName="EndTapTime" />
+          <ScalarProperty Name="StartTapTime" ColumnName="StartTapTime" />
+          <ScalarProperty Name="EndBlowTime" ColumnName="EndBlowTime" />
+          <ScalarProperty Name="StartBlowTime" ColumnName="StartBlowTime" />
+          <ScalarProperty Name="StartChargeTime" ColumnName="StartChargeTime" />
+          <ScalarProperty Name="VesselIndex" ColumnName="VesselIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="BlowCount" ColumnName="BlowCount" />
+          <ScalarProperty Name="TapCount" ColumnName="TapCount" />
+          <ScalarProperty Name="TImeStampStart" ColumnName="TImeStampStart" />
+          <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+          <ScalarProperty Name="TimeStampStartGMT" ColumnName="TimeStampStartGMT" />
+          <ScalarProperty Name="TimeStampEndGMT" ColumnName="TimeStampEndGMT" />
+          <ScalarProperty Name="TimeCreated" ColumnName="TimeCreated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

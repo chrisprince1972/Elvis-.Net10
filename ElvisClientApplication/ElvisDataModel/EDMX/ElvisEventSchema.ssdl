@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EventSchemaEntities.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EventSchemaEntitiesStoreContainer">
+    <EntitySet Name="Additions" EntityType="EventSchemaEntities.Store.Additions" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="Analysis" EntityType="EventSchemaEntities.Store.Analysis" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="CoordFix" EntityType="EventSchemaEntities.Store.CoordFix" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="CoordLinkFull" EntityType="EventSchemaEntities.Store.CoordLinkFull" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="CoordLock" EntityType="EventSchemaEntities.Store.CoordLock" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="DesulphSkimPercentage" EntityType="EventSchemaEntities.Store.DesulphSkimPercentage" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="DipResult" EntityType="EventSchemaEntities.Store.DipResult" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="EventList" EntityType="EventSchemaEntities.Store.EventList" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="HeatAimAnalysis" EntityType="EventSchemaEntities.Store.HeatAimAnalysis" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="HeatAimGeneral" EntityType="EventSchemaEntities.Store.HeatAimGeneral" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="HeatAimGrades" EntityType="EventSchemaEntities.Store.HeatAimGrades" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="HeatAimTemperatures" EntityType="EventSchemaEntities.Store.HeatAimTemperatures" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="HeatDate" EntityType="EventSchemaEntities.Store.HeatDate" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="HeatLog" EntityType="EventSchemaEntities.Store.HeatLog" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="HM_Stocks" EntityType="EventSchemaEntities.Store.HM_Stocks" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="ManInputDay" EntityType="EventSchemaEntities.Store.ManInputDay" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="NonMetalAnalysis" EntityType="EventSchemaEntities.Store.NonMetalAnalysis" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="ProgramHistory" EntityType="EventSchemaEntities.Store.ProgramHistory" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="ScrapBoxLoad" EntityType="EventSchemaEntities.Store.ScrapBoxLoad" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="ScrapBoxStatusEvents" EntityType="EventSchemaEntities.Store.ScrapBoxStatusEvents" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="ScrapDemand" EntityType="EventSchemaEntities.Store.ScrapDemand" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="TapWeights" EntityType="EventSchemaEntities.Store.TapWeights" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="TIBDelays" EntityType="EventSchemaEntities.Store.TIBDelays" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="TIBEvents" EntityType="EventSchemaEntities.Store.TIBEvents" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="Torpedo" EntityType="EventSchemaEntities.Store.Torpedo" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="Tracking" EntityType="EventSchemaEntities.Store.Tracking" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="TreatmentTracking" EntityType="EventSchemaEntities.Store.TreatmentTracking" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="Weights" EntityType="EventSchemaEntities.Store.Weights" store:Type="Tables" Schema="Event" />
+    <EntitySet Name="CoordLink" EntityType="EventSchemaEntities.Store.CoordLink" store:Type="Views" store:Schema="Event" store:Name="CoordLink">
+      <DefiningQuery>SELECT 
+      [CoordLink].[ScheduleIndex] AS [ScheduleIndex], 
+      [CoordLink].[HEAT_NUMBER] AS [HEAT_NUMBER], 
+      [CoordLink].[HNS] AS [HNS], 
+      [CoordLink].[TimeStamp] AS [TimeStamp], 
+      [CoordLink].[TimeStampGMT] AS [TimeStampGMT], 
+      [CoordLink].[PROGRAM_NUMBER] AS [PROGRAM_NUMBER], 
+      [CoordLink].[GRADE_1] AS [GRADE_1], 
+      [CoordLink].[GRADE_2] AS [GRADE_2], 
+      [CoordLink].[VESSEL_NUMBER] AS [VESSEL_NUMBER], 
+      [CoordLink].[STEEL_LADLE_NUMBER] AS [STEEL_LADLE_NUMBER], 
+      [CoordLink].[SS_UNIT] AS [SS_UNIT], 
+      [CoordLink].[CASTER_NUMBER] AS [CASTER_NUMBER], 
+      [CoordLink].[PLANNED_POUR_TIME] AS [PLANNED_POUR_TIME], 
+      [CoordLink].[PLANNED_END_DESULPH_TIME] AS [PLANNED_END_DESULPH_TIME], 
+      [CoordLink].[PLANNED_CHARGE_TIME] AS [PLANNED_CHARGE_TIME], 
+      [CoordLink].[PLANNED_TAP_TIME] AS [PLANNED_TAP_TIME], 
+      [CoordLink].[ACTUAL_TAP_TIME] AS [ACTUAL_TAP_TIME], 
+      [CoordLink].[PLANNED_END_SS_TIME] AS [PLANNED_END_SS_TIME], 
+      [CoordLink].[PLANNED_DWELL_TIME] AS [PLANNED_DWELL_TIME], 
+      [CoordLink].[PLANNED_START_CAST_TIME] AS [PLANNED_START_CAST_TIME], 
+      [CoordLink].[PLANNED_END_CAST_TIME] AS [PLANNED_END_CAST_TIME], 
+      [CoordLink].[COMBINED_WIDTH] AS [COMBINED_WIDTH], 
+      [CoordLink].[CAST_DURATION] AS [CAST_DURATION], 
+      [CoordLink].[CASTING_RATE] AS [CASTING_RATE], 
+      [CoordLink].[CASTING_SPEED] AS [CASTING_SPEED], 
+      [CoordLink].[COMMENTS] AS [COMMENTS], 
+      [CoordLink].[UPDATE_TIME] AS [UPDATE_TIME], 
+      [CoordLink].[LADLE_AIM_TEMP] AS [LADLE_AIM_TEMP], 
+      [CoordLink].[Release_Temperature] AS [Release_Temperature], 
+      [CoordLink].[Aim_Ladle_Temperature] AS [Aim_Ladle_Temperature], 
+      [CoordLink].[QACastingTime] AS [QACastingTime], 
+      [CoordLink].[HotConnectFlag] AS [HotConnectFlag]
+      FROM [Event].[CoordLink] AS [CoordLink]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="LastProgramNumber" EntityType="EventSchemaEntities.Store.LastProgramNumber" store:Type="Views" store:Schema="Event" store:Name="LastProgramNumber">
+      <DefiningQuery>SELECT 
+      [LastProgramNumber].[ProgramIndex] AS [ProgramIndex], 
+      [LastProgramNumber].[HeatNumber] AS [HeatNumber], 
+      [LastProgramNumber].[HNS] AS [HNS], 
+      [LastProgramNumber].[UnitNumber] AS [UnitNumber], 
+      [LastProgramNumber].[ProgramNumber] AS [ProgramNumber], 
+      [LastProgramNumber].[TimeCreated] AS [TimeCreated], 
+      [LastProgramNumber].[TargetGrade] AS [TargetGrade]
+      FROM [Event].[LastProgramNumber] AS [LastProgramNumber]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TIBDelaysView" EntityType="EventSchemaEntities.Store.TIBDelaysView" store:Type="Views" store:Schema="Event" store:Name="TIBDelaysView">
+      <DefiningQuery>SELECT 
+      [TIBDelaysView].[TibIndex] AS [TibIndex], 
+      [TIBDelaysView].[DelayNumber] AS [DelayNumber], 
+      [TIBDelaysView].[DelayStart] AS [DelayStart], 
+      [TIBDelaysView].[DelayEnd] AS [DelayEnd], 
+      [TIBDelaysView].[DelayDuration] AS [DelayDuration], 
+      [TIBDelaysView].[PlantArea] AS [PlantArea], 
+      [TIBDelaysView].[DelayReason1] AS [DelayReason1], 
+      [TIBDelaysView].[DelayReason2] AS [DelayReason2], 
+      [TIBDelaysView].[DelayReason3] AS [DelayReason3], 
+      [TIBDelaysView].[DelayReason4] AS [DelayReason4], 
+      [TIBDelaysView].[UnitGroup] AS [UnitGroup], 
+      [TIBDelaysView].[DelayClass] AS [DelayClass], 
+      [TIBDelaysView].[Category] AS [Category], 
+      [TIBDelaysView].[Discipline] AS [Discipline], 
+      [TIBDelaysView].[Comment] AS [Comment], 
+      [TIBDelaysView].[TIBClassText] AS [TIBClassText], 
+      [TIBDelaysView].[TIBDisText] AS [TIBDisText], 
+      [TIBDelaysView].[TibDelayIndex] AS [TibDelayIndex]
+      FROM [Event].[TIBDelaysView] AS [TIBDelaysView]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="Additions">
+    <Key>
+      <PropertyRef Name="AddIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AddIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+    <Property Name="TimeStampGMT" Type="datetime" />
+    <Property Name="Material" Type="varchar" MaxLength="20" />
+    <Property Name="RequestWeight" Type="real" />
+    <Property Name="AddedWeight" Type="real" />
+    <Property Name="TimeCreated" Type="datetime" />
+    <Property Name="PointOfCharge" Type="int" />
+    <Property Name="Initiator" Type="varchar" MaxLength="100" />
+    <Property Name="InitiatorType" Type="int" />
+  </EntityType>
+  <EntityType Name="Analysis">
+    <Key>
+      <PropertyRef Name="AnalysisIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AnalysisIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="TimeStampGMT" Type="datetime" />
+    <Property Name="SampleType" Type="varchar" MaxLength="150" />
+    <Property Name="MaterialCode" Type="int" />
+    <Property Name="LocationCode" Type="int" />
+    <Property Name="SubSampleNumber" Type="int" />
+    <Property Name="C" Type="real" />
+    <Property Name="Si" Type="real" />
+    <Property Name="S" Type="real" />
+    <Property Name="P" Type="real" />
+    <Property Name="Mn" Type="real" />
+    <Property Name="Ni" Type="real" />
+    <Property Name="Cu" Type="real" />
+    <Property Name="Sn" Type="real" />
+    <Property Name="Cr" Type="real" />
+    <Property Name="As" Type="real" />
+    <Property Name="Mo" Type="real" />
+    <Property Name="N2" Type="real" />
+    <Property Name="AlT" Type="real" />
+    <Property Name="AlS" Type="real" />
+    <Property Name="Ti" Type="real" />
+    <Property Name="B" Type="real" />
+    <Property Name="Ca" Type="real" />
+    <Property Name="Ce" Type="real" />
+    <Property Name="Co" Type="real" />
+    <Property Name="Nb" Type="real" />
+    <Property Name="V" Type="real" />
+    <Property Name="CEV1" Type="real" />
+    <Property Name="CEV2" Type="real" />
+    <Property Name="CEV3" Type="real" />
+    <Property Name="FreeC1" Type="real" />
+    <Property Name="FreeC2" Type="real" />
+    <Property Name="XSTi1" Type="real" />
+    <Property Name="XSTi2" Type="real" />
+    <Property Name="XSTi3" Type="real" />
+    <Property Name="AlN2" Type="real" />
+    <Property Name="CuP" Type="real" />
+    <Property Name="BN2" Type="real" />
+    <Property Name="SP" Type="real" />
+    <Property Name="CUNiCrMoSn" Type="real" />
+    <Property Name="CrEq" Type="real" />
+    <Property Name="SiForm" Type="real" />
+    <Property Name="MnS" Type="real" />
+    <Property Name="MnSi" Type="real" />
+    <Property Name="FreeC3" Type="real" />
+    <Property Name="Fe" Type="real" />
+    <Property Name="Liquidus" Type="real" />
+    <Property Name="ForDebugging" Type="varchar" MaxLength="150" />
+    <Property Name="TimeCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="CoordFix">
+    <Key>
+      <PropertyRef Name="FixDate" />
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="FixDate" Type="datetime" Nullable="false" />
+    <Property Name="HEAT_NUMBER" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="TimeStampGMT" Type="datetime" />
+    <Property Name="PROGRAM_NUMBER" Type="smallint" />
+    <Property Name="GRADE_1" Type="smallint" />
+    <Property Name="GRADE_2" Type="smallint" />
+    <Property Name="VESSEL_NUMBER" Type="smallint" />
+    <Property Name="STEEL_LADLE_NUMBER" Type="smallint" />
+    <Property Name="SS_UNIT" Type="nvarchar" MaxLength="10" />
+    <Property Name="CASTER_NUMBER" Type="smallint" />
+    <Property Name="PLANNED_POUR_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_DESULPH_TIME" Type="datetime" />
+    <Property Name="PLANNED_CHARGE_TIME" Type="datetime" />
+    <Property Name="PLANNED_TAP_TIME" Type="datetime" />
+    <Property Name="ACTUAL_TAP_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_SS_TIME" Type="datetime" />
+    <Property Name="PLANNED_DWELL_TIME" Type="smallint" />
+    <Property Name="PLANNED_START_CAST_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_CAST_TIME" Type="datetime" />
+    <Property Name="COMBINED_WIDTH" Type="smallint" />
+    <Property Name="CAST_DURATION" Type="smallint" />
+    <Property Name="CASTING_RATE" Type="float" />
+    <Property Name="CASTING_SPEED" Type="float" />
+    <Property Name="COMMENTS" Type="nvarchar" MaxLength="80" />
+    <Property Name="UPDATE_TIME" Type="datetime" />
+    <Property Name="LADLE_AIM_TEMP" Type="float" />
+    <Property Name="Release_Temperature" Type="real" />
+    <Property Name="Aim_Ladle_Temperature" Type="real" />
+  </EntityType>
+  <EntityType Name="CoordLinkFull">
+    <Key>
+      <PropertyRef Name="ScheduleIndex" />
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="ScheduleIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HEAT_NUMBER" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="TimeStampGMT" Type="datetime" />
+    <Property Name="PROGRAM_NUMBER" Type="smallint" />
+    <Property Name="GRADE_1" Type="smallint" />
+    <Property Name="GRADE_2" Type="smallint" />
+    <Property Name="VESSEL_NUMBER" Type="smallint" />
+    <Property Name="STEEL_LADLE_NUMBER" Type="smallint" />
+    <Property Name="SS_UNIT" Type="nvarchar" MaxLength="10" />
+    <Property Name="CASTER_NUMBER" Type="smallint" />
+    <Property Name="PLANNED_POUR_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_DESULPH_TIME" Type="datetime" />
+    <Property Name="PLANNED_CHARGE_TIME" Type="datetime" />
+    <Property Name="PLANNED_TAP_TIME" Type="datetime" />
+    <Property Name="ACTUAL_TAP_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_SS_TIME" Type="datetime" />
+    <Property Name="PLANNED_DWELL_TIME" Type="smallint" />
+    <Property Name="PLANNED_START_CAST_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_CAST_TIME" Type="datetime" />
+    <Property Name="COMBINED_WIDTH" Type="smallint" />
+    <Property Name="CAST_DURATION" Type="smallint" />
+    <Property Name="CASTING_RATE" Type="float" />
+    <Property Name="CASTING_SPEED" Type="float" />
+    <Property Name="COMMENTS" Type="nvarchar" MaxLength="80" />
+    <Property Name="UPDATE_TIME" Type="datetime" />
+    <Property Name="LADLE_AIM_TEMP" Type="float" />
+    <Property Name="Release_Temperature" Type="real" />
+    <Property Name="Aim_Ladle_Temperature" Type="real" />
+  </EntityType>
+  <EntityType Name="CoordLock">
+    <Key>
+      <PropertyRef Name="ScheduleIndex" />
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="ScheduleIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HEAT_NUMBER" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="TimeStampGMT" Type="datetime" />
+    <Property Name="PROGRAM_NUMBER" Type="smallint" />
+    <Property Name="GRADE_1" Type="smallint" />
+    <Property Name="GRADE_2" Type="smallint" />
+    <Property Name="VESSEL_NUMBER" Type="smallint" />
+    <Property Name="STEEL_LADLE_NUMBER" Type="smallint" />
+    <Property Name="SS_UNIT" Type="nvarchar" MaxLength="10" />
+    <Property Name="CASTER_NUMBER" Type="smallint" />
+    <Property Name="PLANNED_POUR_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_DESULPH_TIME" Type="datetime" />
+    <Property Name="PLANNED_CHARGE_TIME" Type="datetime" />
+    <Property Name="PLANNED_TAP_TIME" Type="datetime" />
+    <Property Name="ACTUAL_TAP_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_SS_TIME" Type="datetime" />
+    <Property Name="PLANNED_DWELL_TIME" Type="smallint" />
+    <Property Name="PLANNED_START_CAST_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_CAST_TIME" Type="datetime" />
+    <Property Name="COMBINED_WIDTH" Type="smallint" />
+    <Property Name="CAST_DURATION" Type="smallint" />
+    <Property Name="CASTING_RATE" Type="float" />
+    <Property Name="CASTING_SPEED" Type="float" />
+    <Property Name="COMMENTS" Type="nvarchar" MaxLength="80" />
+    <Property Name="UPDATE_TIME" Type="datetime" />
+    <Property Name="LADLE_AIM_TEMP" Type="float" />
+    <Property Name="Release_Temperature" Type="real" />
+    <Property Name="Aim_Ladle_Temperature" Type="real" />
+  </EntityType>
+  <EntityType Name="DesulphSkimPercentage">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="StationNumber" Type="int" Nullable="false" />
+    <Property Name="DateTimeStamp" Type="datetime" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="SkimPercentage" Type="float" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" StoreGeneratedPattern="Computed" />
+    <Property Name="HNS" Type="int" />
+  </EntityType>
+  <EntityType Name="DipResult">
+    <Key>
+      <PropertyRef Name="DipIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="DipIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="DipType" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+    <Property Name="TimeStampGMT" Type="datetime" />
+    <Property Name="Temperature" Type="real" />
+    <Property Name="S" Type="real" />
+    <Property Name="O2" Type="real" />
+    <Property Name="Al" Type="real" />
+    <Property Name="EMF" Type="real" />
+    <Property Name="Carbon" Type="real" />
+    <Property Name="TimeCreated" Type="datetime" />
+    <Property Name="Hydrogen" Type="real" />
+  </EntityType>
+  <EntityType Name="EventList">
+    <Key>
+      <PropertyRef Name="ListIndex" />
+    </Key>
+    <Property Name="ListIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="EventType" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="HeatAimAnalysis">
+    <Key>
+      <PropertyRef Name="AimAnalysisIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AimAnalysisIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="Type" Type="int" />
+    <Property Name="C" Type="real" />
+    <Property Name="Si" Type="real" />
+    <Property Name="S" Type="real" />
+    <Property Name="P" Type="real" />
+    <Property Name="Mn" Type="real" />
+    <Property Name="Ni" Type="real" />
+    <Property Name="Cu" Type="real" />
+    <Property Name="Sn" Type="real" />
+    <Property Name="Cr" Type="real" />
+    <Property Name="As" Type="real" />
+    <Property Name="Mo" Type="real" />
+    <Property Name="N2" Type="real" />
+    <Property Name="AlT" Type="real" />
+    <Property Name="AlS" Type="real" />
+    <Property Name="Ti" Type="real" />
+    <Property Name="B" Type="real" />
+    <Property Name="Ca" Type="real" />
+    <Property Name="Ce" Type="real" />
+    <Property Name="Co" Type="real" />
+    <Property Name="Nb" Type="real" />
+    <Property Name="V" Type="real" />
+    <Property Name="CEV1" Type="real" />
+    <Property Name="CEV2" Type="real" />
+    <Property Name="CEV3" Type="real" />
+    <Property Name="FreeC1" Type="real" />
+    <Property Name="FreeC2" Type="real" />
+    <Property Name="XSTi1" Type="real" />
+    <Property Name="XSTi2" Type="real" />
+    <Property Name="XSTi3" Type="real" />
+    <Property Name="AlN2" Type="real" />
+    <Property Name="CuP" Type="real" />
+    <Property Name="BN2" Type="real" />
+    <Property Name="SP" Type="real" />
+    <Property Name="CUNiCrMoSn" Type="real" />
+    <Property Name="CrEq" Type="real" />
+    <Property Name="SiForm" Type="real" />
+    <Property Name="MnS" Type="real" />
+    <Property Name="MnSi" Type="real" />
+    <Property Name="FreeC3" Type="real" />
+    <Property Name="VersionNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="HeatAimGeneral">
+    <Key>
+      <PropertyRef Name="AimGenIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AimGenIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="ProgramNumber" Type="int" Nullable="false" />
+    <Property Name="CastingTime" Type="int" />
+    <Property Name="LiquidusTemperature" Type="int" />
+    <Property Name="MaxHMSTreated" Type="real" />
+    <Property Name="MaxHMSNotTreated" Type="real" />
+    <Property Name="MaxHMSReTreatReq" Type="real" />
+    <Property Name="ScrapMix" Type="int" />
+    <Property Name="BapCode" Type="int" />
+    <Property Name="HMDSTreatmentCode" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+  </EntityType>
+  <EntityType Name="HeatAimGrades">
+    <Key>
+      <PropertyRef Name="AimGradeIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AimGradeIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="Grade" Type="int" />
+    <Property Name="VersionNumber" Type="int" />
+  </EntityType>
+  <EntityType Name="HeatAimTemperatures">
+    <Key>
+      <PropertyRef Name="AimTempIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="AimTempIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="TemperatureType" Type="int" />
+    <Property Name="Temperature" Type="int" />
+  </EntityType>
+  <EntityType Name="HeatDate">
+    <Key>
+      <PropertyRef Name="HeatDateIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="HeatDateIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="TapYear" Type="int" />
+    <Property Name="TapWeek" Type="int" />
+    <Property Name="TapDay" Type="int" />
+    <Property Name="TapShift" Type="varchar" MaxLength="10" />
+    <Property Name="TapRota" Type="varchar" MaxLength="10" />
+    <Property Name="CastYear" Type="int" />
+    <Property Name="CastWeek" Type="int" />
+    <Property Name="CastDay" Type="int" />
+    <Property Name="CastShift" Type="varchar" MaxLength="10" />
+    <Property Name="CastRota" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="HeatLog">
+    <Key>
+      <PropertyRef Name="ListIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="ListIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="Unit" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="EventType" Type="varchar" MaxLength="1024" />
+  </EntityType>
+  <EntityType Name="HM_Stocks">
+    <Key>
+      <PropertyRef Name="HMIndex" />
+    </Key>
+    <Property Name="DATE" Type="smalldatetime" Nullable="false" />
+    <Property Name="HM_LEVEL" Type="int" />
+    <Property Name="BF_OUTPUT" Type="real" />
+    <Property Name="CASTER_OUTPUT" Type="real" />
+    <Property Name="cc1_output" Type="real" />
+    <Property Name="cc2_output" Type="real" />
+    <Property Name="cc3_output" Type="real" />
+    <Property Name="BF4_OUTPUT" Type="real" />
+    <Property Name="BF5_OUTPUT" Type="real" />
+    <Property Name="HMIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="O2Spill" Type="real" />
+  </EntityType>
+  <EntityType Name="ManInputDay">
+    <Key>
+      <PropertyRef Name="DayDateIndex" />
+    </Key>
+    <Property Name="DayDateIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DayDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="BFOutput" Type="real" />
+    <Property Name="OPPracticeIndex" Type="int" />
+  </EntityType>
+  <EntityType Name="NonMetalAnalysis">
+    <Key>
+      <PropertyRef Name="NMAnalysisIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="NMAnalysisIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="TimeStampGMT" Type="datetime" />
+    <Property Name="SampleType" Type="varchar" MaxLength="150" />
+    <Property Name="MaterialCode" Type="int" />
+    <Property Name="LocationCode" Type="int" />
+    <Property Name="SubSampleNumber" Type="int" />
+    <Property Name="C" Type="real" />
+    <Property Name="FeO" Type="real" />
+    <Property Name="TFe" Type="real" />
+    <Property Name="CaO" Type="real" />
+    <Property Name="SiO2" Type="real" />
+    <Property Name="Al2O3" Type="real" />
+    <Property Name="MgO" Type="real" />
+    <Property Name="MnO" Type="real" />
+    <Property Name="P2O5" Type="real" />
+    <Property Name="S" Type="real" />
+    <Property Name="VR" Type="real" />
+    <Property Name="K2O" Type="real" />
+    <Property Name="Na2O" Type="real" />
+    <Property Name="Cr2O3" Type="real" />
+    <Property Name="TiO2" Type="real" />
+    <Property Name="V2O5" Type="real" />
+    <Property Name="Fe2O3" Type="real" />
+    <Property Name="P" Type="real" />
+    <Property Name="Mn" Type="real" />
+    <Property Name="Liquidus" Type="real" />
+    <Property Name="ForDebugging" Type="varchar" MaxLength="150" />
+    <Property Name="TimeCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProgramHistory">
+    <Key>
+      <PropertyRef Name="ProgramIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="ProgramIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="TimeCreated" Type="datetime" />
+    <Property Name="TargetGrade" Type="int" />
+  </EntityType>
+  <EntityType Name="ScrapBoxLoad">
+    <Key>
+      <PropertyRef Name="ScrapBoxLoadID" />
+    </Key>
+    <Property Name="ScrapBoxLoadID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="ScrapBoxLoadTimeStamp" Type="datetime" Nullable="false" />
+    <Property Name="ScrapBoxLoadTimeStampGMT" Type="datetime" Nullable="false" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="TotalScrapLoadedWeight" Type="real" Nullable="false" />
+    <Property Name="ScrapBoxTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ScrapBoxStatusEvents">
+    <Key>
+      <PropertyRef Name="ScrapBoxStatusEventID" />
+    </Key>
+    <Property Name="ScrapBoxStatusEventID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ScrapEventTimeStamp" Type="datetime" />
+    <Property Name="ScrapEventTimeStampGMT" Type="datetime" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="ScrapEventTypeID" Type="int" Nullable="false" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ScrapDemand">
+    <Key>
+      <PropertyRef Name="ScrapDemandID" />
+    </Key>
+    <Property Name="ScrapDemandID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+    <Property Name="MaterialCode" Type="varchar" MaxLength="7" />
+    <Property Name="DemandWeight" Type="real" />
+  </EntityType>
+  <EntityType Name="TapWeights">
+    <Key>
+      <PropertyRef Name="TapWeightID" />
+    </Key>
+    <Property Name="TapWeightID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
+    <Property Name="EventTime" Type="datetime" />
+    <Property Name="EventTimeGMT" Type="datetime" />
+    <Property Name="LadleNumber" Type="int" />
+    <Property Name="TapWeight" Type="real" />
+    <Property Name="TapTemperature" Type="real" />
+  </EntityType>
+  <EntityType Name="TIBDelays">
+    <Key>
+      <PropertyRef Name="TibDelayIndex" />
+    </Key>
+    <Property Name="TibDelayIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TibIndex" Type="int" Nullable="false" />
+    <Property Name="DelayNumber" Type="int" Nullable="false" />
+    <Property Name="DelayStart" Type="datetime" />
+    <Property Name="DelayEnd" Type="datetime" />
+    <Property Name="DelayDuration" Type="int" />
+    <Property Name="PlantArea" Type="varchar" MaxLength="50" />
+    <Property Name="DelayReason1" Type="varchar" MaxLength="128" />
+    <Property Name="DelayReason2" Type="varchar" MaxLength="128" />
+    <Property Name="DelayReason3" Type="varchar" MaxLength="128" />
+    <Property Name="DelayReason4" Type="varchar" MaxLength="128" />
+    <Property Name="UnitGroup" Type="int" />
+    <Property Name="DelayClass" Type="int" />
+    <Property Name="Category" Type="int" />
+    <Property Name="Discipline" Type="int" />
+    <Property Name="Comment" Type="varchar(max)" />
+    <Property Name="UserName" Type="varchar" MaxLength="100" />
+    <Property Name="MachineName" Type="varchar" MaxLength="100" />
+    <Property Name="OEECategory" Type="varchar" MaxLength="100" />
+    <Property Name="LossType" Type="varchar" MaxLength="100" />
+    <Property Name="Owner" Type="varchar" MaxLength="100" />
+    <Property Name="ReportingTextLevel1" Type="varchar" MaxLength="100" />
+    <Property Name="ReportingTextLevel2" Type="varchar" MaxLength="100" />
+    <Property Name="ObjectDescription" Type="varchar" MaxLength="150" />
+    <Property Name="ObjectCode" Type="varchar" MaxLength="150" />
+    <Property Name="DamageDescription" Type="varchar" MaxLength="150" />
+    <Property Name="DamageCode" Type="varchar" MaxLength="150" />
+    <Property Name="DeviationType" Type="varchar" MaxLength="150" />
+    <Property Name="CauseText" Type="varchar" MaxLength="150" />
+    <Property Name="Section" Type="varchar" MaxLength="150" />
+    <Property Name="ExternalInternal" Type="varchar" MaxLength="150" />
+    <Property Name="SupplierDownStream" Type="varchar" MaxLength="150" />
+    <Property Name="NoExtraWork" Type="varchar" MaxLength="150" />
+    <Property Name="FlocDescriptionL3" Type="varchar" MaxLength="150" />
+    <Property Name="FlocNumberL3" Type="varchar" MaxLength="150" />
+    <Property Name="FlocDescriptionL4" Type="varchar" MaxLength="150" />
+    <Property Name="FlocNumberL4" Type="varchar" MaxLength="150" />
+    <Property Name="FlocDescriptionL5" Type="varchar" MaxLength="150" />
+    <Property Name="FlocNumberL5" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TIBEvents">
+    <Key>
+      <PropertyRef Name="TibIndex" />
+      <PropertyRef Name="UnitNumber" />
+    </Key>
+    <Property Name="TibIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" />
+    <Property Name="HNS" Type="int" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="TimeStampStart" Type="datetime" />
+    <Property Name="TimeStampStartGMT" Type="datetime" />
+    <Property Name="TimeStampEnd" Type="datetime" />
+    <Property Name="TimeStampEndGMT" Type="datetime" />
+    <Property Name="EventStart" Type="datetime" />
+    <Property Name="EventEnd" Type="datetime" />
+    <Property Name="TibStatus" Type="int" />
+    <Property Name="TibDuration" Type="int" />
+    <Property Name="ReportNumber" Type="int" />
+    <Property Name="TrackIndex" Type="int" />
+    <Property Name="UnitGroup" Type="int" />
+    <Property Name="YearNumber" Type="int" />
+    <Property Name="WeekNumber" Type="int" />
+    <Property Name="DayNumber" Type="int" />
+    <Property Name="Shift" Type="varchar" MaxLength="10" />
+    <Property Name="Rota" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Torpedo">
+    <Key>
+      <PropertyRef Name="TorpedoID" />
+    </Key>
+    <Property Name="TorpedoID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="UnitID" Type="int" />
+    <Property Name="TorpedoNumber" Type="int" Nullable="false" />
+    <Property Name="HMLadleNumber" Type="smallint" />
+    <Property Name="FirstCastIn" Type="int" />
+    <Property Name="StartBfPourTime" Type="datetime" />
+    <Property Name="StartBfPourTimeGMT" Type="datetime" />
+    <Property Name="BfNumber" Type="smallint" />
+    <Property Name="NumberOfCastsInTorpedo" Type="smallint" />
+    <Property Name="IronC" Type="real" />
+    <Property Name="IronSi" Type="real" />
+    <Property Name="IronS" Type="real" />
+    <Property Name="IronP" Type="real" />
+    <Property Name="IronMn" Type="real" />
+    <Property Name="IronTi" Type="real" />
+    <Property Name="IronN2" Type="real" />
+    <Property Name="RunnerTemperature" Type="real" />
+    <Property Name="EstimatedWeight" Type="real" />
+    <Property Name="TheoreticalEmptyWeight" Type="real" />
+    <Property Name="HMPourStation" Type="int" />
+    <Property Name="PourStationTime" Type="datetime" />
+    <Property Name="PourStationTimeGMT" Type="datetime" />
+    <Property Name="TimePluggedIn" Type="datetime" />
+    <Property Name="TimePluggedInGMT" Type="datetime" />
+    <Property Name="TimeUnplugged" Type="datetime" />
+    <Property Name="TimeUnpluggedGMT" Type="datetime" />
+    <Property Name="TotalPouredWeight" Type="real" />
+  </EntityType>
+  <EntityType Name="Tracking">
+    <Key>
+      <PropertyRef Name="TrackIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="TrackIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="TimeStampStart" Type="datetime" Nullable="false" />
+    <Property Name="TimeStampEnd" Type="datetime" />
+    <Property Name="TimeStampStartGMT" Type="datetime" />
+    <Property Name="TimeStampEndGMT" Type="datetime" />
+    <Property Name="UnitTableIndex" Type="int" />
+    <Property Name="TimeCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TreatmentTracking">
+    <Key>
+      <PropertyRef Name="TreatmentIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="TreatmentIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="TreatmentNumber" Type="int" Nullable="false" />
+    <Property Name="TimeStampStart" Type="datetime" />
+    <Property Name="TimeStampEnd" Type="datetime" />
+    <Property Name="TimeStampStartGMT" Type="datetime" />
+    <Property Name="TimeStampEndGMT" Type="datetime" />
+    <Property Name="UnitTableIndex" Type="int" />
+    <Property Name="TimeCreated" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Weights">
+    <Key>
+      <PropertyRef Name="WeightIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="WeightIndex" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" Nullable="false" />
+    <Property Name="TimeStampGMT" Type="datetime" />
+    <Property Name="Weight" Type="real" />
+    <Property Name="TimeCreated" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Event.CoordLink' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="CoordLink">
+    <Key>
+      <PropertyRef Name="ScheduleIndex" />
+      <PropertyRef Name="HEAT_NUMBER" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="ScheduleIndex" Type="int" Nullable="false" />
+    <Property Name="HEAT_NUMBER" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="TimeStamp" Type="datetime" />
+    <Property Name="TimeStampGMT" Type="datetime" />
+    <Property Name="PROGRAM_NUMBER" Type="smallint" />
+    <Property Name="GRADE_1" Type="smallint" />
+    <Property Name="GRADE_2" Type="smallint" />
+    <Property Name="VESSEL_NUMBER" Type="smallint" />
+    <Property Name="STEEL_LADLE_NUMBER" Type="smallint" />
+    <Property Name="SS_UNIT" Type="nvarchar" MaxLength="10" />
+    <Property Name="CASTER_NUMBER" Type="smallint" />
+    <Property Name="PLANNED_POUR_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_DESULPH_TIME" Type="datetime" />
+    <Property Name="PLANNED_CHARGE_TIME" Type="datetime" />
+    <Property Name="PLANNED_TAP_TIME" Type="datetime" />
+    <Property Name="ACTUAL_TAP_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_SS_TIME" Type="datetime" />
+    <Property Name="PLANNED_DWELL_TIME" Type="smallint" />
+    <Property Name="PLANNED_START_CAST_TIME" Type="datetime" />
+    <Property Name="PLANNED_END_CAST_TIME" Type="datetime" />
+    <Property Name="COMBINED_WIDTH" Type="smallint" />
+    <Property Name="CAST_DURATION" Type="smallint" />
+    <Property Name="CASTING_RATE" Type="float" />
+    <Property Name="CASTING_SPEED" Type="float" />
+    <Property Name="COMMENTS" Type="nvarchar" MaxLength="80" />
+    <Property Name="UPDATE_TIME" Type="datetime" />
+    <Property Name="LADLE_AIM_TEMP" Type="float" />
+    <Property Name="Release_Temperature" Type="real" />
+    <Property Name="Aim_Ladle_Temperature" Type="real" />
+    <Property Name="QACastingTime" Type="int" />
+    <Property Name="HotConnectFlag" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Event.LastProgramNumber' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="LastProgramNumber">
+    <Key>
+      <PropertyRef Name="ProgramIndex" />
+      <PropertyRef Name="HeatNumber" />
+      <PropertyRef Name="HNS" />
+    </Key>
+    <Property Name="ProgramIndex" Type="int" Nullable="false" />
+    <Property Name="HeatNumber" Type="int" Nullable="false" />
+    <Property Name="HNS" Type="int" Nullable="false" />
+    <Property Name="UnitNumber" Type="int" />
+    <Property Name="ProgramNumber" Type="int" />
+    <Property Name="TimeCreated" Type="datetime" />
+    <Property Name="TargetGrade" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'elvisdb.Event.TIBDelaysView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="TIBDelaysView">
+    <Key>
+      <PropertyRef Name="TibIndex" />
+      <PropertyRef Name="DelayNumber" />
+      <PropertyRef Name="TibDelayIndex" />
+    </Key>
+    <Property Name="TibIndex" Type="int" Nullable="false" />
+    <Property Name="DelayNumber" Type="int" Nullable="false" />
+    <Property Name="DelayStart" Type="datetime" />
+    <Property Name="DelayEnd" Type="datetime" />
+    <Property Name="DelayDuration" Type="int" />
+    <Property Name="PlantArea" Type="varchar" MaxLength="50" />
+    <Property Name="DelayReason1" Type="varchar" MaxLength="128" />
+    <Property Name="DelayReason2" Type="varchar" MaxLength="128" />
+    <Property Name="DelayReason3" Type="varchar" MaxLength="128" />
+    <Property Name="DelayReason4" Type="varchar" MaxLength="128" />
+    <Property Name="UnitGroup" Type="int" />
+    <Property Name="DelayClass" Type="int" />
+    <Property Name="Category" Type="int" />
+    <Property Name="Discipline" Type="int" />
+    <Property Name="Comment" Type="varchar(max)" />
+    <Property Name="TIBClassText" Type="varchar" MaxLength="30" />
+    <Property Name="TIBDisText" Type="varchar" MaxLength="30" />
+    <Property Name="TibDelayIndex" Type="int" Nullable="false" />
+  </EntityType>
+</Schema>

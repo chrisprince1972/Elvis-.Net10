@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 using Elvis.Common;
 using System.Drawing.Drawing2D;
 using System.Diagnostics;
-
+using ElvisDataModel.EDMX;
 namespace Elvis.Forms
 {
     public partial class SplashScreen : Form
@@ -33,20 +33,28 @@ namespace Elvis.Forms
         #region Constructor
         public SplashScreen(MainForm mainForm)
         {
-            //InitializeComponent();
-            //this.main = mainForm;
-            //this.main.SkipSplash = false;
-            //lblVersion.Text += HelperFunctions.GetVersionNumber();
-            //lblCopyright.Text = "© Tata Steel " + DateTime.Now.Year;
+            this.main = mainForm;
 
-            //if (Debugger.IsAttached)
-            //{
-            //    btnSkip.Visible = true;
-            //}
+            if (Debugger.IsAttached)
+            {
+                var asm = typeof(ElvisDataModel.EDMX.EventSchemaEntities).Assembly;
 
-            //rectangleShape3.Enabled = false;
-            //rectangleShape1.Enabled = false;
+                // Show which DLL is actually being used at runtime
+                MessageBox.Show(asm.Location, "ElvisDataModel.dll loaded from");
+
+                // Show any embedded resources that mention ElvisEventSchema
+                var names = asm.GetManifestResourceNames()
+                               .Where(n => n.IndexOf("ElvisEventSchema", StringComparison.OrdinalIgnoreCase) >= 0)
+                               .ToArray();
+
+                MessageBox.Show(names.Length == 0 ? "NO ElvisEventSchema resources found"
+                                                  : string.Join("\n", names),
+                                "ElvisEventSchema embedded resources");
+            }
         }
+
+
+
         #endregion
 
         #region Methods

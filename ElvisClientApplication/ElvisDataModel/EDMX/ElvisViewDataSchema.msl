@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ViewDataSchemaEntitiesStoreContainer" CdmEntityContainer="ViewDataSchemaEntities">
+    <EntitySetMapping Name="CastTimes">
+      <EntityTypeMapping TypeName="ViewDataSchema.CastTime">
+        <MappingFragment StoreEntitySet="CastTimes">
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="StartCast" ColumnName="StartCast" />
+          <ScalarProperty Name="EndCast" ColumnName="EndCast" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailyPlanCasterHeats">
+      <EntityTypeMapping TypeName="ViewDataSchema.DailyPlanCasterHeat">
+        <MappingFragment StoreEntitySet="DailyPlanCasterHeats">
+          <ScalarProperty Name="FixDate" ColumnName="FixDate" />
+          <ScalarProperty Name="AimGenIndex" ColumnName="AimGenIndex" />
+          <ScalarProperty Name="BestCastTime" ColumnName="BestCastTime" />
+          <ScalarProperty Name="PROGRAM_NUMBER" ColumnName="PROGRAM_NUMBER" />
+          <ScalarProperty Name="GRADE_1" ColumnName="GRADE_1" />
+          <ScalarProperty Name="CASTER_NUMBER" ColumnName="CASTER_NUMBER" />
+          <ScalarProperty Name="PLANNED_START_CAST_TIME" ColumnName="PLANNED_START_CAST_TIME" />
+          <ScalarProperty Name="PLANNED_END_CAST_TIME" ColumnName="PLANNED_END_CAST_TIME" />
+          <ScalarProperty Name="PlannedCastTime" ColumnName="PlannedCastTime" />
+          <ScalarProperty Name="HEAT_NUMBER" ColumnName="HEAT_NUMBER" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HMDesulphTrackTibViews">
+      <EntityTypeMapping TypeName="ViewDataSchema.HMDesulphTrackTibView">
+        <MappingFragment StoreEntitySet="HMDesulphTrackTibView">
+          <ScalarProperty Name="HMDesIndex" ColumnName="HMDesIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="TrackingStart" ColumnName="TrackingStart" />
+          <ScalarProperty Name="TrackingEnd" ColumnName="TrackingEnd" />
+          <ScalarProperty Name="TrackingDuration" ColumnName="TrackingDuration" />
+          <ScalarProperty Name="StartSulphur" ColumnName="StartSulphur" />
+          <ScalarProperty Name="AimSulphur" ColumnName="AimSulphur" />
+          <ScalarProperty Name="LastTemperature" ColumnName="LastTemperature" />
+          <ScalarProperty Name="InjectionCount" ColumnName="InjectionCount" />
+          <ScalarProperty Name="SkimCount" ColumnName="SkimCount" />
+          <ScalarProperty Name="LimeTotal" ColumnName="LimeTotal" />
+          <ScalarProperty Name="MgTotal" ColumnName="MgTotal" />
+          <ScalarProperty Name="TibProdStart" ColumnName="TibProdStart" />
+          <ScalarProperty Name="TibProdEnd" ColumnName="TibProdEnd" />
+          <ScalarProperty Name="TIbProdDuration" ColumnName="TIbProdDuration" />
+          <ScalarProperty Name="TibProdDelayStart" ColumnName="TibProdDelayStart" />
+          <ScalarProperty Name="TibProdDelayEnd" ColumnName="TibProdDelayEnd" />
+          <ScalarProperty Name="TibProdDelayDuration" ColumnName="TibProdDelayDuration" />
+          <ScalarProperty Name="StartTreatment" ColumnName="StartTreatment" />
+          <ScalarProperty Name="EndTreatment" ColumnName="EndTreatment" />
+          <ScalarProperty Name="TreatmentDuration" ColumnName="TreatmentDuration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HMDesulphTrackTibView2">
+      <EntityTypeMapping TypeName="ViewDataSchema.HMDesulphTrackTibView2">
+        <MappingFragment StoreEntitySet="HMDesulphTrackTibView2">
+          <ScalarProperty Name="TrackIndex" ColumnName="TrackIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="TrackingStart" ColumnName="TrackingStart" />
+          <ScalarProperty Name="TrackingEnd" ColumnName="TrackingEnd" />
+          <ScalarProperty Name="TrackingDuration" ColumnName="TrackingDuration" />
+          <ScalarProperty Name="StartSulphur" ColumnName="StartSulphur" />
+          <ScalarProperty Name="AimSulphur" ColumnName="AimSulphur" />
+          <ScalarProperty Name="TreatmentCount" ColumnName="TreatmentCount" />
+          <ScalarProperty Name="SkimCount" ColumnName="SkimCount" />
+          <ScalarProperty Name="LimeTotal" ColumnName="LimeTotal" />
+          <ScalarProperty Name="MgTotal" ColumnName="MgTotal" />
+          <ScalarProperty Name="TibProdStart" ColumnName="TibProdStart" />
+          <ScalarProperty Name="TibProdEnd" ColumnName="TibProdEnd" />
+          <ScalarProperty Name="TibProdDuration" ColumnName="TibProdDuration" />
+          <ScalarProperty Name="TibProdDelayStart" ColumnName="TibProdDelayStart" />
+          <ScalarProperty Name="TibProdDelayEnd" ColumnName="TibProdDelayEnd" />
+          <ScalarProperty Name="TibProdDelayDuration" ColumnName="TibProdDelayDuration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HMDesulphTreatments">
+      <EntityTypeMapping TypeName="ViewDataSchema.HMDesulphTreatment">
+        <MappingFragment StoreEntitySet="HMDesulphTreatments">
+          <ScalarProperty Name="TreatmentIndex" ColumnName="TreatmentIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="TimeStampStart" ColumnName="TimeStampStart" />
+          <ScalarProperty Name="TimeStampEnd" ColumnName="TimeStampEnd" />
+          <ScalarProperty Name="TreatmentDuration" ColumnName="TreatmentDuration" />
+          <ScalarProperty Name="TreatmentText" ColumnName="TreatmentText" />
+          <ScalarProperty Name="TapShift" ColumnName="TapShift" />
+          <ScalarProperty Name="TapYear" ColumnName="TapYear" />
+          <ScalarProperty Name="TapWeek" ColumnName="TapWeek" />
+          <ScalarProperty Name="TapDay" ColumnName="TapDay" />
+          <ScalarProperty Name="TapRota" ColumnName="TapRota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HMPourTrackTibViews">
+      <EntityTypeMapping TypeName="ViewDataSchema.HMPourTrackTibView">
+        <MappingFragment StoreEntitySet="HMPourTrackTibView">
+          <ScalarProperty Name="HMPourIndex" ColumnName="HMPourIndex" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="TrackingStart" ColumnName="TrackingStart" />
+          <ScalarProperty Name="TrackingEnd" ColumnName="TrackingEnd" />
+          <ScalarProperty Name="TrackDur" ColumnName="TrackDur" />
+          <ScalarProperty Name="TibProdStart" ColumnName="TibProdStart" />
+          <ScalarProperty Name="TibProdEnd" ColumnName="TibProdEnd" />
+          <ScalarProperty Name="TibProdDuration" ColumnName="TibProdDuration" />
+          <ScalarProperty Name="TibProdDelayStart" ColumnName="TibProdDelayStart" />
+          <ScalarProperty Name="TibProdDelayEnd" ColumnName="TibProdDelayEnd" />
+          <ScalarProperty Name="TibProdDelayDuration" ColumnName="TibProdDelayDuration" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TapTimes">
+      <EntityTypeMapping TypeName="ViewDataSchema.TapTime">
+        <MappingFragment StoreEntitySet="TapTimes">
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="StartTap" ColumnName="StartTap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ThreeMonthProds">
+      <EntityTypeMapping TypeName="ViewDataSchema.ThreeMonthProd">
+        <MappingFragment StoreEntitySet="ThreeMonthProd">
+          <ScalarProperty Name="Heat" ColumnName="Heat" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Ladle" ColumnName="Ladle" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="StartBlow" ColumnName="StartBlow" />
+          <ScalarProperty Name="StartTap" ColumnName="StartTap" />
+          <ScalarProperty Name="StartCast" ColumnName="StartCast" />
+          <ScalarProperty Name="EndCast" ColumnName="EndCast" />
+          <ScalarProperty Name="DwellTime" ColumnName="DwellTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TibOEEReports">
+      <EntityTypeMapping TypeName="ViewDataSchema.TibOEEReport">
+        <MappingFragment StoreEntitySet="TibOEEReport">
+          <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="UnitGroupText" ColumnName="UnitGroupText" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="EventStart" ColumnName="EventStart" />
+          <ScalarProperty Name="EventEnd" ColumnName="EventEnd" />
+          <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+          <ScalarProperty Name="TibStatus" ColumnName="TibStatus" />
+          <ScalarProperty Name="TIBStatusDescription" ColumnName="TIBStatusDescription" />
+          <ScalarProperty Name="DelayNumber" ColumnName="DelayNumber" />
+          <ScalarProperty Name="DelayStart" ColumnName="DelayStart" />
+          <ScalarProperty Name="DelayEnd" ColumnName="DelayEnd" />
+          <ScalarProperty Name="DelayDuration" ColumnName="DelayDuration" />
+          <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+          <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+          <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+          <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+          <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+          <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+          <ScalarProperty Name="TIBClassText" ColumnName="TIBClassText" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="TIBCategoryText" ColumnName="TIBCategoryText" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="TIBDisText" ColumnName="TIBDisText" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="TibDelayIndex" ColumnName="TibDelayIndex" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="WeekNumber" ColumnName="WeekNumber" />
+          <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Rota" ColumnName="Rota" />
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+          <ScalarProperty Name="OEECategory" ColumnName="OEECategory" />
+          <ScalarProperty Name="LossType" ColumnName="LossType" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="ReportingTextLevel1" ColumnName="ReportingTextLevel1" />
+          <ScalarProperty Name="ReportingTextLevel2" ColumnName="ReportingTextLevel2" />
+          <ScalarProperty Name="ObjectDescription" ColumnName="ObjectDescription" />
+          <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+          <ScalarProperty Name="DamageDescription" ColumnName="DamageDescription" />
+          <ScalarProperty Name="DamageCode" ColumnName="DamageCode" />
+          <ScalarProperty Name="DeviationType" ColumnName="DeviationType" />
+          <ScalarProperty Name="CauseText" ColumnName="CauseText" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="ExternalInternal" ColumnName="ExternalInternal" />
+          <ScalarProperty Name="SupplierDownStream" ColumnName="SupplierDownStream" />
+          <ScalarProperty Name="NoExtraWork" ColumnName="NoExtraWork" />
+          <ScalarProperty Name="FlocDescriptionL3" ColumnName="FlocDescriptionL3" />
+          <ScalarProperty Name="FlocNumberL3" ColumnName="FlocNumberL3" />
+          <ScalarProperty Name="FlocDescriptionL4" ColumnName="FlocDescriptionL4" />
+          <ScalarProperty Name="FlocNumberL4" ColumnName="FlocNumberL4" />
+          <ScalarProperty Name="FlocDescriptionL5" ColumnName="FlocDescriptionL5" />
+          <ScalarProperty Name="FlocNumberL5" ColumnName="FlocNumberL5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIBReasonsViews">
+      <EntityTypeMapping TypeName="ViewDataSchema.TIBReasonsView">
+        <MappingFragment StoreEntitySet="TIBReasonsView">
+          <ScalarProperty Name="TIBCategoryText" ColumnName="TIBCategoryText" />
+          <ScalarProperty Name="UnitGroupText" ColumnName="UnitGroupText" />
+          <ScalarProperty Name="ReasonIndex" ColumnName="ReasonIndex" />
+          <ScalarProperty Name="DelayIndex" ColumnName="DelayIndex" />
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+          <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+          <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+          <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+          <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+          <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="TIBClassIndex" ColumnName="TIBClassIndex" />
+          <ScalarProperty Name="TIBClassText" ColumnName="TIBClassText" />
+          <ScalarProperty Name="TIBDisIndex" ColumnName="TIBDisIndex" />
+          <ScalarProperty Name="TIBDisText" ColumnName="TIBDisText" />
+          <ScalarProperty Name="OEECategory" ColumnName="OEECategory" />
+          <ScalarProperty Name="LossType" ColumnName="LossType" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="ReportingTextLevel1" ColumnName="ReportingTextLevel1" />
+          <ScalarProperty Name="ReportingTextLevel2" ColumnName="ReportingTextLevel2" />
+          <ScalarProperty Name="ObjectDescription" ColumnName="ObjectDescription" />
+          <ScalarProperty Name="ObjectCode" ColumnName="ObjectCode" />
+          <ScalarProperty Name="DamageDescription" ColumnName="DamageDescription" />
+          <ScalarProperty Name="DamageCode" ColumnName="DamageCode" />
+          <ScalarProperty Name="DeviationType" ColumnName="DeviationType" />
+          <ScalarProperty Name="CauseText" ColumnName="CauseText" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+          <ScalarProperty Name="ExternalInternal" ColumnName="ExternalInternal" />
+          <ScalarProperty Name="SupplierDownStream" ColumnName="SupplierDownStream" />
+          <ScalarProperty Name="NoExtraWork" ColumnName="NoExtraWork" />
+          <ScalarProperty Name="FlocDescriptionL3" ColumnName="FlocDescriptionL3" />
+          <ScalarProperty Name="FlocNumberL3" ColumnName="FlocNumberL3" />
+          <ScalarProperty Name="FlocDescriptionL4" ColumnName="FlocDescriptionL4" />
+          <ScalarProperty Name="FlocNumberL4" ColumnName="FlocNumberL4" />
+          <ScalarProperty Name="FlocDescriptionL5" ColumnName="FlocDescriptionL5" />
+          <ScalarProperty Name="FlocNumberL5" ColumnName="FlocNumberL5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TibReportDelaysViews">
+      <EntityTypeMapping TypeName="ViewDataSchema.TibReportDelaysView">
+        <MappingFragment StoreEntitySet="TibReportDelaysView">
+          <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+          <ScalarProperty Name="TibReportsDelayViewID" ColumnName="TibReportsDelayViewID" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="UnitGroupText" ColumnName="UnitGroupText" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="EventStart" ColumnName="EventStart" />
+          <ScalarProperty Name="EventEnd" ColumnName="EventEnd" />
+          <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+          <ScalarProperty Name="TibStatus" ColumnName="TibStatus" />
+          <ScalarProperty Name="TIBStatusDescription" ColumnName="TIBStatusDescription" />
+          <ScalarProperty Name="DelayNumber" ColumnName="DelayNumber" />
+          <ScalarProperty Name="DelayStart" ColumnName="DelayStart" />
+          <ScalarProperty Name="DelayEnd" ColumnName="DelayEnd" />
+          <ScalarProperty Name="DelayDuration" ColumnName="DelayDuration" />
+          <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+          <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+          <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+          <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+          <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+          <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+          <ScalarProperty Name="TIBClassText" ColumnName="TIBClassText" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="TIBCategoryText" ColumnName="TIBCategoryText" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="TIBDisText" ColumnName="TIBDisText" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="TibDelayIndex" ColumnName="TibDelayIndex" />
+          <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+          <ScalarProperty Name="TataYear" ColumnName="TataYear" />
+          <ScalarProperty Name="TataWeek" ColumnName="TataWeek" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Rota" ColumnName="Rota" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TibReportsViews">
+      <EntityTypeMapping TypeName="ViewDataSchema.TibReportsView">
+        <MappingFragment StoreEntitySet="TibReportsView">
+          <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="UnitShort" ColumnName="UnitShort" />
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="UnitGroupText" ColumnName="UnitGroupText" />
+          <ScalarProperty Name="HeatNumber" ColumnName="HeatNumber" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="ProgramNumber" ColumnName="ProgramNumber" />
+          <ScalarProperty Name="EventStart" ColumnName="EventStart" />
+          <ScalarProperty Name="EventEnd" ColumnName="EventEnd" />
+          <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+          <ScalarProperty Name="TibStatus" ColumnName="TibStatus" />
+          <ScalarProperty Name="TIBStatusDescription" ColumnName="TIBStatusDescription" />
+          <ScalarProperty Name="DelayNumber" ColumnName="DelayNumber" />
+          <ScalarProperty Name="DelayStart" ColumnName="DelayStart" />
+          <ScalarProperty Name="DelayEnd" ColumnName="DelayEnd" />
+          <ScalarProperty Name="DelayDuration" ColumnName="DelayDuration" />
+          <ScalarProperty Name="PlantArea" ColumnName="PlantArea" />
+          <ScalarProperty Name="DelayReason1" ColumnName="DelayReason1" />
+          <ScalarProperty Name="DelayReason2" ColumnName="DelayReason2" />
+          <ScalarProperty Name="DelayReason3" ColumnName="DelayReason3" />
+          <ScalarProperty Name="DelayReason4" ColumnName="DelayReason4" />
+          <ScalarProperty Name="DelayClass" ColumnName="DelayClass" />
+          <ScalarProperty Name="TIBClassText" ColumnName="TIBClassText" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="TIBCategoryText" ColumnName="TIBCategoryText" />
+          <ScalarProperty Name="Discipline" ColumnName="Discipline" />
+          <ScalarProperty Name="TIBDisText" ColumnName="TIBDisText" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="TibDelayIndex" ColumnName="TibDelayIndex" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="WeekNumber" ColumnName="WeekNumber" />
+          <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+          <ScalarProperty Name="Shift" ColumnName="Shift" />
+          <ScalarProperty Name="Rota" ColumnName="Rota" />
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TibTimeInProductionViews">
+      <EntityTypeMapping TypeName="ViewDataSchema.TibTimeInProductionView">
+        <MappingFragment StoreEntitySet="TibTimeInProductionView">
+          <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+          <ScalarProperty Name="EventStart" ColumnName="EventStart" />
+          <ScalarProperty Name="EventEnd" ColumnName="EventEnd" />
+          <ScalarProperty Name="UnitNumber" ColumnName="UnitNumber" />
+          <ScalarProperty Name="UnitGroupSort" ColumnName="UnitGroupSort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TibUnitTimeInProductionViews">
+      <EntityTypeMapping TypeName="ViewDataSchema.TibUnitTimeInProductionView">
+        <MappingFragment StoreEntitySet="TibUnitTimeInProductionView">
+          <ScalarProperty Name="TibIndex" ColumnName="TibIndex" />
+          <ScalarProperty Name="UnitGroup" ColumnName="UnitGroup" />
+          <ScalarProperty Name="TibDuration" ColumnName="TibDuration" />
+          <ScalarProperty Name="YearNumber" ColumnName="YearNumber" />
+          <ScalarProperty Name="WeekNumber" ColumnName="WeekNumber" />
+          <ScalarProperty Name="DayNumber" ColumnName="DayNumber" />
+          <ScalarProperty Name="UnitText" ColumnName="UnitText" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TwoWeekProds">
+      <EntityTypeMapping TypeName="ViewDataSchema.TwoWeekProd">
+        <MappingFragment StoreEntitySet="TwoWeekProd">
+          <ScalarProperty Name="Heat" ColumnName="Heat" />
+          <ScalarProperty Name="HNS" ColumnName="HNS" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Ladle" ColumnName="Ladle" />
+          <ScalarProperty Name="Caster" ColumnName="Caster" />
+          <ScalarProperty Name="StartBlow" ColumnName="StartBlow" />
+          <ScalarProperty Name="StartTap" ColumnName="StartTap" />
+          <ScalarProperty Name="StartCast" ColumnName="StartCast" />
+          <ScalarProperty Name="EndCast" ColumnName="EndCast" />
+          <ScalarProperty Name="DwellTime" ColumnName="DwellTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
