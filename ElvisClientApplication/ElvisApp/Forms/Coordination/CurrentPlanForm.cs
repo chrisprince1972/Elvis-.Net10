@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Windows.Forms;
+using Elvis.Common;
 using ElvisDataModel;
 using ElvisDataModel.EDMX;
 using NLog;
@@ -150,7 +151,7 @@ namespace Elvis.Forms.Coordination
         {
             // Title
             e.Graphics.DrawString(
-                "BOS Plant - Current Schedule Screenshot - " + DateTime.Now.ToString("dd MMM yyyy HH:mm"),
+                "BOS Plant - Current Schedule Screenshot - " + MyDateTime.Now.ToString("dd MMM yyyy HH:mm"),
                 new Font("Arial", 16),
                 SystemBrushes.WindowText, 25, 20);
 

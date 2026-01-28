@@ -63,8 +63,8 @@ namespace Elvis.UserControls.DatePickers
 
         private void InitialDateSetup()
         {
-            int weekNo = TimeFunctions.GetWeekNumber(DateTime.Now);
-            int yearNo = DateTime.Now.Year;
+            int weekNo = TimeFunctions.GetWeekNumber(MyDateTime.Now);
+            int yearNo = MyDateTime.Now.Year;
 
             numWeekTo.Value = weekNo;
             numYearTo.Value = yearNo;

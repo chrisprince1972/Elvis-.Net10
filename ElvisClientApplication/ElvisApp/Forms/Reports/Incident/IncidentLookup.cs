@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using BusinessLogic.Models.Reports.Incident;
 using BusinessLogic.Models.Reports.Incident;
+using Elvis.Common;
 
 namespace Elvis.Forms.Reports.Incident
 {
@@ -75,9 +76,9 @@ namespace Elvis.Forms.Reports.Incident
         /// </summary>
         private void InitialDateSetup()
         {
-            DateTime dateNow = new DateTime(DateTime.Now.Year,
-                                            DateTime.Now.Month,
-                                            DateTime.Now.Day,
+            DateTime dateNow = new DateTime(MyDateTime.Now.Year,
+                                            MyDateTime.Now.Month,
+                                            MyDateTime.Now.Day,
                                             0, 0, 0);
             DateTime earliestTimeStampCreated;
 
@@ -211,7 +212,7 @@ namespace Elvis.Forms.Reports.Incident
             dgvActions.Rows[index].Cells["colActionTargetDate"].Value = actionToPopulate.TargetDate;
 
             //if action overdue
-            if (actionToPopulate.State.StatusId.Value != 2 && actionToPopulate.TargetDate < DateTime.Now.Date)
+            if (actionToPopulate.State.StatusId.Value != 2 && actionToPopulate.TargetDate < MyDateTime.Now.Date)
             {
                 DataGridViewCellStyle bold = new DataGridViewCellStyle();
                 bold.Font = new Font(dgvActions.Font, FontStyle.Bold);
@@ -539,7 +540,7 @@ namespace Elvis.Forms.Reports.Incident
             if (ir.Actions.Count > 0 && ir.CheckAllActionsClosed())
             {
                 ir.ReportStatus = new Status(Status.IncidentStatus.Close);
-                ir.TimeClosed = DateTime.Now;
+                ir.TimeClosed = MyDateTime.Now;
                 dgvIncidents.Rows[selectedRow].Cells["colClosed"].Value = ir.TimeClosed;
                 bClose = true;
             }

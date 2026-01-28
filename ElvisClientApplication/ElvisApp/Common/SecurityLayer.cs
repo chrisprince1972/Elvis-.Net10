@@ -27,7 +27,8 @@ namespace Elvis.Common
 
             try
             {
-                User user = EntityHelper.Users.GetUserByName(windowsIdentity.Name);
+                //  User user = EntityHelper.Users.GetUserByName(windowsIdentity.Name);
+                User user = EntityHelper.Users.GetUserByName("BSPT_PROC_CTRL\\joslinm");
                 if (user != null)
                 {
                     roles = user.Roles.Select(r => r.RoleName).ToArray<string>();

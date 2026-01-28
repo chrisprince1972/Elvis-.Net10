@@ -104,7 +104,8 @@ namespace Elvis.UserControls.Analysis
         {
             if (ddlAims.Items.Count > 0)
             {
-                int.TryParse(ddlAims.SelectedValue.ToString(), out this.unitNumber);
+                //int.TryParse(ddlAims.SelectedValue.ToString(), out this.unitNumber);
+                this.unitNumber = ((ElvisDataModel.EDMX.AimUnit)ddlAims.SelectedItem).UnitNumber;
                 GetAnalysisAimData();
                 GetAnalysisData();
                 ClearGridviewSelections();
@@ -116,7 +117,10 @@ namespace Elvis.UserControls.Analysis
         {
             if (ddlExtAims.Items.Count > 0)
             {
-                int.TryParse(ddlExtAims.SelectedValue.ToString(), out this.extendUnitNumber);
+              //  int.TryParse(ddlExtAims.SelectedValue.ToString(), out this.extendUnitNumber);
+                this.extendUnitNumber =
+                    ((ElvisDataModel.EDMX.AimUnit)ddlExtAims.SelectedItem).UnitNumber;
+
                 GetExtendedAimsData();
                 GetExtendedAnalysisData();
                 ClearGridviewSelections();

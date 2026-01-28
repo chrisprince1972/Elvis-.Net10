@@ -46,12 +46,12 @@ namespace Elvis.Forms.Reports
         private void InitialDateSetup()
         {
             //Conversion of DayOfWeek range 0-6, we want 1-7 so add 1
-            numDay.Value = (int)DateTime.Now.DayOfWeek + 1;
-            numWeek.Value = DateTime.Now.WeekOfYear();
-            numYear.Maximum = numYear.Value = DateTime.Now.Year;
-            numYear.Minimum = DateTime.Now.Year - 5;
+            numDay.Value = (int)MyDateTime.Now.DayOfWeek + 1;
+            numWeek.Value = MyDateTime.Now.WeekOfYear();
+            numYear.Maximum = numYear.Value = MyDateTime.Now.Year;
+            numYear.Minimum = MyDateTime.Now.Year - 5;
 
-            dpFrom.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 7, 00, 00);
+            dpFrom.Value = new DateTime(MyDateTime.Now.Year, MyDateTime.Now.Month, MyDateTime.Now.Day, 7, 00, 00);
             dpTo.Value = dpFrom.Value.AddDays(1);
         }
 

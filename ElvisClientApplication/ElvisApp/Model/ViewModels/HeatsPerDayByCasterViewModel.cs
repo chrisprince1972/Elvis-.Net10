@@ -6,6 +6,7 @@
 
 namespace Elvis.Model.ViewModels
 {
+    using Elvis.Common;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -55,7 +56,7 @@ namespace Elvis.Model.ViewModels
         }
 
         public HeatsPerDayByCasterViewModel()
-            : this(DateTime.Now)
+            : this(MyDateTime.Now)
         {
         }
 

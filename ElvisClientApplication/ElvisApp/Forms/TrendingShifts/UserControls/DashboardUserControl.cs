@@ -113,8 +113,8 @@ namespace Elvis.Forms.TrendingShifts.UserControls
 
             SplitDescription = new Splitter();
 
-            StartDate = new DateTime(DateTime.Now.Year,
-                    DateTime.Now.Month, 1, 0, 0, 0);
+            StartDate = new DateTime(MyDateTime.Now.Year,
+                    MyDateTime.Now.Month, 1, 0, 0, 0);
 
             RowHeight = Settings.Default.DashboardRowHeight;
             RowCount = 0;

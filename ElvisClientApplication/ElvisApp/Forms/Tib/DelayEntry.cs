@@ -195,9 +195,9 @@ namespace Elvis.Forms.Tib
             }
             else//No End Time so it's ongoing.
             {
-                lblEndTime.Text = DateTimeExtensions.FormatAndGetDateTime(DateTime.Now, 0);
+                lblEndTime.Text = DateTimeExtensions.FormatAndGetDateTime(MyDateTime.Now, 0);
                 txtEndTime.Text = "Ongoing";
-                this.onGoingEndTime = DateTime.Now;
+                this.onGoingEndTime = MyDateTime.Now;
                 this.durationToUse = HelperFunctions.GetDuration(
                     tibEvent.EventStart,
                     this.onGoingEndTime);

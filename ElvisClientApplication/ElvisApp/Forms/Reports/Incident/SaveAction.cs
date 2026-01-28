@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BusinessLogic.Models.Reports.Incident;
+using Elvis.Common;
 
 namespace Elvis.Forms.Reports.Incident
 {
@@ -65,7 +66,7 @@ namespace Elvis.Forms.Reports.Incident
 
             txtDescription.Text = Action.ActionDesc;
             cboOwner.SelectedValue = Action.ActionOwner.OwnerId;
-            dtpTargetDate.Value = Action.TargetDate == DateTime.MinValue ? DateTime.Now.Date : Action.TargetDate;
+            dtpTargetDate.Value = Action.TargetDate == DateTime.MinValue ? MyDateTime.Now.Date : Action.TargetDate;
             txtActionCreated.Text = ((Action.TimeCreated == DateTime.MinValue) || (Action.TimeCreated.HasValue==false)) ? "<New Action>" : Action.TimeCreated.ToString();
 
             SetupActionStatus(Action.TimeClosed);
@@ -137,7 +138,7 @@ namespace Elvis.Forms.Reports.Incident
         private void btnCloseAction_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            Action.TimeClosed = DateTime.Now;
+            Action.TimeClosed = MyDateTime.Now;
             txtStatus.Text = Action.TimeClosed.ToString();
             Action.ClosedBy = Environment.UserName.ToString();
             txtClosedBy.Text = Action.ClosedBy;
@@ -214,7 +215,7 @@ namespace Elvis.Forms.Reports.Incident
             }
             else
             {
-                Action.TimeCreated= Action.NewAction ? DateTime.Now : Action.TimeCreated;
+                Action.TimeCreated= Action.NewAction ? MyDateTime.Now : Action.TimeCreated;
                 Action.ActionDesc = txtDescription.Text;
                 Action.ActionOwner = (IncidentOwner)cboOwner.SelectedItem;
                 Action.TargetDate = dtpTargetDate.Value;

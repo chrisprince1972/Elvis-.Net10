@@ -189,7 +189,7 @@ namespace Elvis.Forms.Reports.OEE
                 ReportParameter p2 = new ReportParameter("DateTo", this.toDate.ToString("dd/MMM/yyyy HH:mm"));
                 reportViewer1.LocalReport.SetParameters(p2);
 
-                ReportParameter p3 = new ReportParameter("DateCreated", DateTime.Now.ToString("dd/MMM/yyyy HH:mm"));
+                ReportParameter p3 = new ReportParameter("DateCreated", MyDateTime.Now.ToString("dd/MMM/yyyy HH:mm"));
                 reportViewer1.LocalReport.SetParameters(p3);
 
                 ReportParameter p4 = new ReportParameter("Unit", cmboUnit.Text);
@@ -324,12 +324,12 @@ namespace Elvis.Forms.Reports.OEE
         private void InitialDateSetup()
         {
             //Conversion of DayOfWeek range 0-6, we want 1-7 so add 1
-            numDay.Value = (int)DateTime.Now.DayOfWeek + 1;
-            numWeek.Value = DateTime.Now.WeekOfYear();
-            numYear.Maximum = numYear.Value = DateTime.Now.Year;
-            numYear.Minimum = DateTime.Now.Year - 5;
+            numDay.Value = (int)MyDateTime.Now.DayOfWeek + 1;
+            numWeek.Value = MyDateTime.Now.WeekOfYear();
+            numYear.Maximum = numYear.Value = MyDateTime.Now.Year;
+            numYear.Minimum = MyDateTime.Now.Year - 5;
 
-            dpFrom.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 7, 00, 00);
+            dpFrom.Value = new DateTime(MyDateTime.Now.Year, MyDateTime.Now.Month, MyDateTime.Now.Day, 7, 00, 00);
             dpTo.Value = dpFrom.Value.AddDays(1);
         }
 
@@ -554,7 +554,7 @@ namespace Elvis.Forms.Reports.OEE
                             v.EventEnd = nextEvent.EventStart;
                         //Fix 3: Only if there is no next event outside of the range use the current date
                         else
-                            v.EventEnd = DateTime.Now;
+                            v.EventEnd = MyDateTime.Now;
                     }
                     v.TibDuration = Convert.ToInt32((v.EventEnd.Value - v.EventStart.Value).TotalMinutes);
                 }

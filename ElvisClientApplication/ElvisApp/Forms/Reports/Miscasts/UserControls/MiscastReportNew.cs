@@ -478,7 +478,7 @@ namespace Elvis.Forms.Reports.Miscasts.UserControls
                     this.miscast.TechComments = txtTechComments.Text;
                     this.miscast.TechNameID = HelperFunctions.GetIntOrNullSafely(cmboTechName.SelectedValue);
                     this.miscast.RootCauseID = HelperFunctions.GetIntOrNullSafely(cmboRootCause.SelectedValue);
-                    this.miscast.LastEdit = DateTime.Now;
+                    this.miscast.LastEdit = MyDateTime.Now;
                     GetMiscastInvestigations();
 
                     if (EntityHelper.MiscastMain.EditExisting(this.miscast))

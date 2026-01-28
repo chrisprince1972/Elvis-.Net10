@@ -357,7 +357,7 @@ namespace Elvis.Common
         /// <returns>True or False depending on verification.</returns>
         public static bool VerifyFilterSelections(DateTime dateFrom, DateTime dateTo)
         {
-            if (dateFrom > DateTime.Now)
+            if (dateFrom > MyDateTime.Now)
             {
                 MessageBox.Show(
                     "From date cannot be in the future.",

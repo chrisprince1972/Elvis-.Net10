@@ -138,8 +138,8 @@ namespace Elvis.Common
             double currentBlastOutput, double maxYValue)
         {
             double runningTotal = currentHMStock;
-            for (DateTime nextMinute = DateTime.Now.Date.AddHours(DateTime.Now.Hour).AddMinutes(DateTime.Now.Minute);
-                nextMinute < DateTime.Now.AddHours(hoursToPredict);
+            for (DateTime nextMinute = MyDateTime.Now.Date.AddHours(MyDateTime.Now.Hour).AddMinutes(MyDateTime.Now.Minute);
+                nextMinute < MyDateTime.Now.AddHours(hoursToPredict);
                 nextMinute = nextMinute.AddMinutes(1))
             {
                 maxYValue = CheckYMaxValue(maxYValue, currentBlastOutput);
@@ -167,8 +167,8 @@ namespace Elvis.Common
         /// <param name="hoursToPredict">The amount of hours to predict.</param>
         public static void AddPredictedBlastOutputToChart(Chart chart, double currentBlastOutput, int hoursToPredict)
         {
-            for (DateTime nextHour = DateTime.Now;
-                nextHour < DateTime.Now.AddHours(hoursToPredict);
+            for (DateTime nextHour = MyDateTime.Now;
+                nextHour < MyDateTime.Now.AddHours(hoursToPredict);
                 nextHour = nextHour.AddHours(1))
             {
                 chart.Series["BF Output"].Points.AddXY(nextHour, currentBlastOutput);
@@ -205,8 +205,8 @@ namespace Elvis.Common
             bool plotTargetTonnesPerMin = false;
 
             //Draw the casting rate line, starting at the time now
-            for (DateTime nextMinute = DateTime.Now.Date.AddHours(DateTime.Now.Hour).AddMinutes(DateTime.Now.Minute);
-                nextMinute < DateTime.Now.AddHours(hoursToPredict);
+            for (DateTime nextMinute = MyDateTime.Now.Date.AddHours(MyDateTime.Now.Hour).AddMinutes(MyDateTime.Now.Minute);
+                nextMinute < MyDateTime.Now.AddHours(hoursToPredict);
                 nextMinute = nextMinute.AddMinutes(1))
             {
                 foreach (var heat in plannedHeats)
@@ -318,7 +318,7 @@ namespace Elvis.Common
                 if (cl.PLANNED_END_CAST_TIME.HasValue)
                 {
                     DateTime endTime = cl.PLANNED_END_CAST_TIME.Value;
-                    TimeSpan ts = endTime - DateTime.Now;
+                    TimeSpan ts = endTime - MyDateTime.Now;
                     if (ts.TotalHours > 11)
                         return Convert.ToInt32(ts.TotalHours) + 1;
                 }
@@ -341,7 +341,7 @@ namespace Elvis.Common
             double minuteBlastTonnage = currentBlastOutput / 60;
 
             for (DateTime nextMinute = dateFrom;
-                nextMinute < DateTime.Now.AddHours(12);
+                nextMinute < MyDateTime.Now.AddHours(12);
                 nextMinute = nextMinute.AddMinutes(1))
             {
                 hmbRunningTotal += minuteBlastTonnage;

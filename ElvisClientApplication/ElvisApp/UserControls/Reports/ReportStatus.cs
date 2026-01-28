@@ -139,7 +139,7 @@ namespace Elvis.UserControls
         private void chbArea_CheckedChanged(object sender, EventArgs e)
         {
             if (chbArea.Checked)
-                Enable(DateTime.Now.Date, DateTime.Now);
+                Enable(MyDateTime.Now.Date, MyDateTime.Now);
             else
                 Disable(false);
         }

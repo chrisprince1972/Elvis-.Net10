@@ -42,7 +42,7 @@ namespace Elvis.Forms.Tib
         /// <param name="delayNo">The Delay Number.</param>
         /// <param name="minsRemaining">The minutes remaining on the event. Can leave this zero if editing.</param>
         /// <param name="onGoingEndTime">The ongoing end time if there is one. 
-        /// Set to DateTime.Now, will be ignored if there is an end time.</param>
+        /// Set to MyDateTime.Now, will be ignored if there is an end time.</param>
         public DelayPopup(int tibIndex, int tibDelayIndex,
             int minsRemaining, DateTime onGoingEndTime)
         {

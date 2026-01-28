@@ -39,7 +39,7 @@ namespace Elvis.Model
                         Grade = planHeat.GRADE_1 ?? 0,
                         CasterName = GetCasterName(planHeat.CASTER_NUMBER),
                         UnitId = planHeat.CASTER_NUMBER.Value + 10,
-                        StartTime = planHeat.PLANNED_START_CAST_TIME ?? DateTime.Now,
+                        StartTime = planHeat.PLANNED_START_CAST_TIME ?? MyDateTime.Now,
                         EndTime = planHeat.PLANNED_END_CAST_TIME,
                         CastDuration = planHeat.PlannedCastTime ?? 0,
                         IdealCastingTime = planHeat.BestCastTime ?? 0,
@@ -110,7 +110,7 @@ namespace Elvis.Model
                 hour, 0, 0);
             DateTime dateTo = dateFrom.AddHours(24);
 
-            //TODO: check where this method went maybe lost on conversion
+            //TODO: CP check where this method went maybe lost on conversion
             //tibEventList = Tib.GetCasterReviewActualEvents(dateFrom, dateTo);
             tibEventList = null;
             // Fix missing end times by creating an end time that is 2 minutes before the start time
@@ -128,7 +128,7 @@ namespace Elvis.Model
 
                         if (nextTibEvent == null)
                         {
-                            tibEvent.EndTime = DateTime.Now;
+                            tibEvent.EndTime = MyDateTime.Now;
                         }
                         else if (nextTibEvent.StartTime.HasValue)
                         {
@@ -138,7 +138,7 @@ namespace Elvis.Model
                     else
                     {
                         // It's the last one so default to now
-                        tibEvent.EndTime = DateTime.Now;
+                        tibEvent.EndTime = MyDateTime.Now;
                     }
                 }
             }
@@ -209,7 +209,7 @@ namespace Elvis.Model
 
                         if (nextHeat == null)
                         {
-                            heat.EndTime = DateTime.Now;
+                            heat.EndTime = MyDateTime.Now;
                         }
                         else
                         {
@@ -219,7 +219,7 @@ namespace Elvis.Model
                     else
                     {
                         // It's the last one so default to now
-                        heat.EndTime = DateTime.Now;
+                        heat.EndTime = MyDateTime.Now;
                     }
                 }
             }

@@ -57,7 +57,7 @@ namespace Elvis.Forms.Trending
             legendToolStripMenuItem.Checked = Settings.Default.TrendShowLegend;
             SetupForm();
             SetupDateSelector();
-            InitialDateSetup(DateTime.Now);
+            InitialDateSetup(MyDateTime.Now);
             SetupWeekNo();
             btnGenerate.Enabled = false;
             CustomiseColours();
@@ -117,10 +117,10 @@ namespace Elvis.Forms.Trending
         /// </summary>
         private void SetupForm()
         {
-            dpFrom.MaxDate = DateTime.Now;
-            dpTo.MaxDate = DateTime.Now.AddDays(7);
-            this.dateTo = dpTo.Value = DateTime.Now.AddDays(1);
-            this.dateFrom = dpFrom.Value = DateTime.Now.AddDays(-2);
+            dpFrom.MaxDate = MyDateTime.Now;
+            dpTo.MaxDate = MyDateTime.Now.AddDays(7);
+            this.dateTo = dpTo.Value = MyDateTime.Now.AddDays(1);
+            this.dateFrom = dpFrom.Value = MyDateTime.Now.AddDays(-2);
             rbFixed.Checked = true;
 
             lblDateStatus.Text = "No data generated";
@@ -142,7 +142,7 @@ namespace Elvis.Forms.Trending
             else
                 dpFrom.Value = dpFrom.MaxDate;
 
-            if (dateTo <= dpTo.MaxDate && dateTo <= DateTime.Now)
+            if (dateTo <= dpTo.MaxDate && dateTo <= MyDateTime.Now)
                 dpTo.Value = dateTo;
             else
                 dpTo.Value = dpFrom.MaxDate.AddDays(1);
@@ -273,7 +273,7 @@ namespace Elvis.Forms.Trending
                 #region Heat Wrap Test Code
                 ////Heat Wrap Testing!
                 //int heatNumber = 10000;
-                //DateTime dt = DateTime.Now;
+                //DateTime dt = MyDateTime.Now;
 
                 //for (int i = 0; i <= 10; i++)
                 //{
@@ -433,7 +433,7 @@ namespace Elvis.Forms.Trending
             }
             else if (rbFixed.Checked)
             {
-                DateTime startOfCurrentShift = TimeFunctions.StartOfShift_PT(DateTime.Now);
+                DateTime startOfCurrentShift = TimeFunctions.StartOfShift_PT(MyDateTime.Now);
 
                 if (rbLastShift.Checked)
                 {//Last Shift
@@ -478,7 +478,7 @@ namespace Elvis.Forms.Trending
                 }
                 else
                 {//Current Shift
-                    return DateTime.Now;
+                    return MyDateTime.Now;
                 }
             }
             //Default to Date Picker
@@ -620,7 +620,7 @@ namespace Elvis.Forms.Trending
             }
             else
             {
-                DateTime startOfCurrentShift = TimeFunctions.StartOfShift_PT(DateTime.Now);
+                DateTime startOfCurrentShift = TimeFunctions.StartOfShift_PT(MyDateTime.Now);
 
                 if (rbLastShift.Checked)
                 {//Last Shift
@@ -1259,7 +1259,7 @@ namespace Elvis.Forms.Trending
 
             pnlCharts.Controls.Clear();
             SetupForm();
-            InitialDateSetup(DateTime.Now);
+            InitialDateSetup(MyDateTime.Now);
             SetupWeekNo();
             GenerateLegend();
 
@@ -1531,7 +1531,7 @@ namespace Elvis.Forms.Trending
                     headerFont, Brushes.Black, e.MarginBounds.X, e.MarginBounds.Y);
 
                 //Print Footer Onto Page.
-                e.Graphics.DrawString(DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
+                e.Graphics.DrawString(MyDateTime.Now.ToString("dd/MM/yyyy HH:mm"),
                     dateFont, Brushes.Black,
                     e.PageSettings.PrintableArea.Width - e.MarginBounds.X - 60,
                     e.PageSettings.PrintableArea.Height - e.MarginBounds.Y + 30);

@@ -51,9 +51,9 @@ namespace Elvis.Forms.Trending
             cmboOperatingPrac.DisplayMember = "OpPracticeText";
 
             dpDate.Value = new DateTime(
-                DateTime.Now.Year,
-                DateTime.Now.Month,
-                DateTime.Now.Day,
+                MyDateTime.Now.Year,
+                MyDateTime.Now.Month,
+                MyDateTime.Now.Day,
                 0, 0, 0);
 
             if (manInputDay != null)

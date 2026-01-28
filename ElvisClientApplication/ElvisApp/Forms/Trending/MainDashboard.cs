@@ -202,7 +202,7 @@ namespace Elvis.Forms.Trending
         {
             if (picker != null)
             {
-                DateTime weekStart = DateTime.Now.StartOfWeek(DayOfWeek.Sunday);
+                DateTime weekStart = MyDateTime.Now.StartOfWeek(DayOfWeek.Sunday);
 
                 picker.Value = new DateTime(
                     weekStart.Year,
@@ -222,7 +222,7 @@ namespace Elvis.Forms.Trending
                 this.picker.Value.ToString("dd/MM/yy HH:mm"),
                 this.picker.Value.AddDays(noOfDays).ToString("dd/MM/yy HH:mm"));
 
-            DateTime weekStart = DateTime.Now.StartOfWeek(DayOfWeek.Sunday);
+            DateTime weekStart = MyDateTime.Now.StartOfWeek(DayOfWeek.Sunday);
 
             toolStripThisWeek.ToolTipText = "Go to " +
                 weekStart.ToString("dd/MM/yy 07:00");
@@ -356,7 +356,7 @@ namespace Elvis.Forms.Trending
         private void toolStripThisWeek_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            picker.Value = DateTime.Now.StartOfWeek(DayOfWeek.Sunday).AddHours(7);
+            picker.Value = MyDateTime.Now.StartOfWeek(DayOfWeek.Sunday).AddHours(7);
             this.Cursor = Cursors.Default;
         }
 

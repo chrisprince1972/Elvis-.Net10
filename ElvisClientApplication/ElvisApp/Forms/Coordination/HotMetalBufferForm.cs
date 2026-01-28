@@ -55,7 +55,7 @@ namespace Elvis.Forms.Coordination
         /// </summary>
         private void ChartDateChange()
         {
-            if (EndDate >= DateTime.Now)
+            if (EndDate >= MyDateTime.Now)
             {
                 GetPlanningData();
                 this.hoursToPredict = ChartFunctions.GetHoursToPredict(this.plannedHeats);
@@ -103,7 +103,7 @@ namespace Elvis.Forms.Coordination
                 this.hmStocks = EntityHelper.HMStocks.GetHMStocksForPeriod(StartDate, EndDate);
                 if (this.hmStocks != null && this.hmStocks.Count == 0)
                 {
-                    hmStocks = EntityHelper.HMStocks.GetHMStocksForPeriod(DateTime.Now.AddHours(-1), DateTime.Now);
+                    hmStocks = EntityHelper.HMStocks.GetHMStocksForPeriod(MyDateTime.Now.AddHours(-1), MyDateTime.Now);
                 }
             }
             catch (Exception ex)
@@ -236,7 +236,7 @@ namespace Elvis.Forms.Coordination
                     );//Actual Casting Rate
 
                 //Only add predicted data if the future is shown.
-                if (EndDate >= DateTime.Now)
+                if (EndDate >= MyDateTime.Now)
                 {
                     maxYValue = ChartFunctions.AddPredictedHMStockToChart(
                         chart1, this.plannedHeats, this.hoursToPredict,
@@ -252,7 +252,7 @@ namespace Elvis.Forms.Coordination
                         this.hoursToPredict
                         );//Predicted Casting Rate Line
 
-                    ChartFunctions.DrawVerticalAnnotation(chart1, DateTime.Now);
+                    ChartFunctions.DrawVerticalAnnotation(chart1, MyDateTime.Now);
                 }
 
                 //Set max value for Y Axis of chart.
@@ -396,7 +396,7 @@ namespace Elvis.Forms.Coordination
         {
             // Title
             e.Graphics.DrawString(
-                "Hot Metal Stock Screenshot - " + DateTime.Now.ToString("dd MMM yyyy HH:mm"),
+                "Hot Metal Stock Screenshot - " + MyDateTime.Now.ToString("dd MMM yyyy HH:mm"),
                 new Font("Arial", 16),
                 SystemBrushes.WindowText,
                 e.PageBounds.X + 98, 60);
@@ -450,8 +450,8 @@ namespace Elvis.Forms.Coordination
         private void GoToNow()
         {
             btnForward.Enabled = true;
-            StartDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 7, 0, 0);
-            if (StartDate > DateTime.Now)
+            StartDate = new DateTime(MyDateTime.Now.Year, MyDateTime.Now.Month, MyDateTime.Now.Day, 7, 0, 0);
+            if (StartDate > MyDateTime.Now)
             {
                 StartDate = StartDate.AddHours(-12);
             }
@@ -477,7 +477,7 @@ namespace Elvis.Forms.Coordination
         {
             StartDate = StartDate.AddHours(12);
             EndDate = StartDate.AddHours(TimeSpan);
-            if (EndDate > DateTime.Now.AddDays(3))
+            if (EndDate > MyDateTime.Now.AddDays(3))
                 btnForward.Enabled = false;
             ChartDateChange();
         }

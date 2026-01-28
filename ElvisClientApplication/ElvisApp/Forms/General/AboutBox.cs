@@ -17,7 +17,7 @@ namespace Elvis.Forms
             this.Text = String.Format("About {0}", AssemblyTitle);
             this.labelProductName.Text = AssemblyProduct;
             this.labelVersion.Text = String.Format("Version {0}", HelperFunctions.GetVersionNumber());
-            this.labelCopyright.Text = AssemblyCopyright + DateTime.Now.Year;
+            this.labelCopyright.Text = AssemblyCopyright + MyDateTime.Now.Year;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;
         }

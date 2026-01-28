@@ -49,6 +49,12 @@
     <None Remove="EDMX\ElvisTrendSchema.csdl" />
     <None Remove="EDMX\ElvisTrendSchema.msl" />
     <None Remove="EDMX\ElvisTrendSchema.ssdl" />
+    <None Remove="EDMX\ElvisUnitSchema.csdl" />
+    <None Remove="EDMX\ElvisUnitSchema.msl" />
+    <None Remove="EDMX\ElvisUnitSchema.ssdl" />
+    <None Remove="EDMX\ElvisViewDataSchema.csdl" />
+    <None Remove="EDMX\ElvisViewDataSchema.msl" />
+    <None Remove="EDMX\ElvisViewDataSchema.ssdl" />
   </ItemGroup>
 
   <!-- App.config should still be included for net48.
@@ -120,6 +126,27 @@
 		<EmbeddedResource Include="EDMX\ElvisTrendSchema.csdl" />
 		<EmbeddedResource Include="EDMX\ElvisTrendSchema.msl" />
 		<EmbeddedResource Include="EDMX\ElvisTrendSchema.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisUnitSchema.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisUnitSchema.msl" />
+		<EmbeddedResource Include="EDMX\ElvisUnitSchema.ssdl" />
+		<EmbeddedResource Include="EDMX\ElvisViewDataSchema.csdl" />
+		<EmbeddedResource Include="EDMX\ElvisViewDataSchema.msl" />
+		<EmbeddedResource Include="EDMX\ElvisViewDataSchema.ssdl" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="Properties\Settings.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Settings.settings</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Properties\Settings.settings">
+	    <Generator>SettingsSingleFileGenerator</Generator>
+	    <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+	  </None>
 	</ItemGroup>
 	
 </Project>

@@ -107,9 +107,9 @@ namespace Elvis.UserControls.DatePickers
         private void DPFromToCalender_Load(object sender, EventArgs e)
         {
             DateTime dateNow = new DateTime(
-                DateTime.Now.Year,
-                DateTime.Now.Month,
-                DateTime.Now.Day,
+                MyDateTime.Now.Year,
+                MyDateTime.Now.Month,
+                MyDateTime.Now.Day,
                 7, 0, 0
             );
 

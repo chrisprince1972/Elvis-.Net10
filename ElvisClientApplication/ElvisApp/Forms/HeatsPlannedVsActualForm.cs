@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Elvis;
+using Elvis.Common;
 using Elvis.Model;
 using Elvis.Model.ViewModels;
 
@@ -25,7 +26,7 @@ namespace Elvis.Forms
         private List<DataGridView> ActualHeatsDataGridViews { get; set; }
 
         public HeatsPlannedVsActualForm()
-            : this(DateTime.Now, ShiftType.Day)
+            : this(MyDateTime.Now, ShiftType.Day)
         {
         }
 
@@ -130,7 +131,7 @@ namespace Elvis.Forms
         private void nowButton_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            SelectedDate = DateTime.Now;
+            SelectedDate = MyDateTime.Now;
             LoadData();
             this.Cursor = Cursors.Default;
         }

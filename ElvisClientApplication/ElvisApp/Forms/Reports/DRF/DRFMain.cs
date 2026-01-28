@@ -32,7 +32,7 @@ namespace Elvis.Forms.Reports.DRF
         {
             InitializeComponent();
             SetupDateSelector();
-            InitialDateSetup(DateTime.Now);
+            InitialDateSetup(MyDateTime.Now);
             SetupWeekNo();
             GetDropDownData();
             BindDropDowns();
@@ -614,10 +614,10 @@ namespace Elvis.Forms.Reports.DRF
             BusinessLogic.Constants.DrfWorksArea.All)
         {
 
-            dpFrom.MaxDate = DateTime.Now;
-            dpTo.MaxDate = DateTime.Now.AddDays(2);
-            dateFrom = dpFrom.Value = DateTime.Now.AddMonths(-1).AddDays(1);
-            dateTo = dpTo.Value = DateTime.Now.AddDays(1);
+            dpFrom.MaxDate = MyDateTime.Now;
+            dpTo.MaxDate = MyDateTime.Now.AddDays(2);
+            dateFrom = dpFrom.Value = MyDateTime.Now.AddMonths(-1).AddDays(1);
+            dateTo = dpTo.Value = MyDateTime.Now.AddDays(1);
             rbDaily.Checked = true;
             dgvReports.AutoGenerateColumns = false;
             dgvReports.Visible = true;
@@ -873,7 +873,7 @@ namespace Elvis.Forms.Reports.DRF
             rbDate.Checked = true;
             rbStatusBoth.Checked = true;
 
-            InitialDateSetup(DateTime.Now);
+            InitialDateSetup(MyDateTime.Now);
             SetupWeekNo();
             SetupForm();
 
@@ -952,7 +952,7 @@ namespace Elvis.Forms.Reports.DRF
                         report.TIBIndex.Value,
                         report.TIBDelayIndex.Value,
                         0,
-                        DateTime.Now))
+                        MyDateTime.Now))
                     {
                         DialogResult result = delayPopup.ShowDialog();
                         if (result == DialogResult.OK)

@@ -1,4 +1,5 @@
-﻿using Elvis.Properties;
+﻿using Elvis.Common;
+using Elvis.Properties;
 using Elvis.UserControls.Generic;
 using ElvisDataModel;
 using ElvisDataModel.EDMX;
@@ -131,14 +132,14 @@ namespace Elvis.UserControls.HeatDetails
         /// Generates an end time for the graph.  Returns a time that's 
         /// 2 hours ahead of the start time if the event has no end time and
         /// has been running longer than 2 hours.  Or returns the actual end time. 
-        /// Or returns the DateTime.Now as default value if none of the above apply.
+        /// Or returns the MyDateTime.Now as default value if none of the above apply.
         /// </summary>
         /// <param name="endTime">The End time of the tracking event.</param>
         /// <returns>A DateTime to be used as an end time.</returns>
         private DateTime GetEndTime(DateTime? endDateTime)
         {
             this.HasNoEndTime = true;
-            DateTime returnValue = DateTime.Now;
+            DateTime returnValue = MyDateTime.Now;
 
             if(this.startTime.HasValue)
             {
@@ -147,7 +148,7 @@ namespace Elvis.UserControls.HeatDetails
                     this.HasNoEndTime = false;
                     returnValue = endDateTime.Value;
                 }
-                else if (this.startTime.Value.AddHours(2) < DateTime.Now)
+                else if (this.startTime.Value.AddHours(2) < MyDateTime.Now)
                 {
                     returnValue = startTime.Value.AddHours(2);
                 }

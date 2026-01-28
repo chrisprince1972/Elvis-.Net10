@@ -74,7 +74,7 @@ namespace Elvis.Forms.Reports.I3
         /// </summary>
         private void InitialDateSetup()
         {
-            DateTime dt = DateTime.Now.AddDays(-1);
+            DateTime dt = MyDateTime.Now.AddDays(-1);
 
             //Conversion of DayOfWeek range 0-6, we want 1-7 so add 1
             nudDay.Value = (int)dt.DayOfWeek + 1;
@@ -197,10 +197,10 @@ namespace Elvis.Forms.Reports.I3
         /// </summary>
         private void SetupForm()
         {
-            dpFrom.MaxDate = DateTime.Now;
-            dpTo.MaxDate = DateTime.Now.AddDays(2);
-            dpFrom.Value = DateTime.Now.AddMonths(-1).AddDays(1);
-            dpTo.Value = DateTime.Now.AddDays(1);
+            dpFrom.MaxDate = MyDateTime.Now;
+            dpTo.MaxDate = MyDateTime.Now.AddDays(2);
+            dpFrom.Value = MyDateTime.Now.AddMonths(-1).AddDays(1);
+            dpTo.Value = MyDateTime.Now.AddDays(1);
             rdoDaily.Checked = true;
             dgvReports.AutoGenerateColumns = false;
             dgvReports.Visible = true;

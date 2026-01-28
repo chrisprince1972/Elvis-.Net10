@@ -152,7 +152,7 @@ namespace Elvis.UserControls
             try
             {
                 //Set to the start of the last shift.
-                DateTime startOfCurrentShift = TimeFunctions.StartOfShift_PT(DateTime.Now);
+                DateTime startOfCurrentShift = TimeFunctions.StartOfShift_PT(MyDateTime.Now);
                 this.scheduler.FirstDateTime = startOfCurrentShift.AddHours(-12);
                 this.scheduler.CellWidth = (this.scheduler.Width - this.scheduler.LeftResourceWidth) / 12;
                 this.scheduler.HoursResolution = HoursResolutions.One;
@@ -172,7 +172,7 @@ namespace Elvis.UserControls
             try
             {
                 // Set to the start of the last day.
-                DateTime startOfCurrentShift = TimeFunctions.StartOfShift_PT(DateTime.Now);
+                DateTime startOfCurrentShift = TimeFunctions.StartOfShift_PT(MyDateTime.Now);
                 this.scheduler.FirstDateTime = startOfCurrentShift.AddDays(-1);
                 this.scheduler.CellWidth = (this.scheduler.Width - this.scheduler.LeftResourceWidth) / 24;
                 this.scheduler.HoursResolution = HoursResolutions.One;

@@ -1,4 +1,5 @@
 ﻿using System;
+using Elvis.Common;
 using ElvisDataModel.EDMX;
 
 namespace Elvis.Model
@@ -217,7 +218,7 @@ namespace Elvis.Model
         {
             TimeSpan tsExpectedMaxLength = GetExpectedLength();
             //If time now exceeds the expected finish time
-            if (DateTime.Now > this.startTime.Add(tsExpectedMaxLength))
+            if (MyDateTime.Now > this.startTime.Add(tsExpectedMaxLength))
             {
                 return true;//Event should have finished
             }

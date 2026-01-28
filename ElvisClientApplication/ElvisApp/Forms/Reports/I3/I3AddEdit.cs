@@ -168,7 +168,7 @@ namespace Elvis.Forms.Reports.I3
                     }
                     else//Add new Report
                     {
-                        I3Report.Created = DateTime.Now;
+                        I3Report.Created = MyDateTime.Now;
                         EntityHelper.I3Report.AddNew(I3Report);
                     }
                 }

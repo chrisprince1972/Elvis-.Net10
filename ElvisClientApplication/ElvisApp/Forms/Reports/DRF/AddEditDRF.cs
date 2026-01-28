@@ -189,8 +189,8 @@ namespace Elvis.Forms.Reports.DRF
 
             HideGridviewIfEmpty();
 
-            dtDate.MaxDate = DateTime.Now;
-            dtTime.MaxDate = DateTime.Now;
+            dtDate.MaxDate = MyDateTime.Now;
+            dtTime.MaxDate = MyDateTime.Now;
         }
 
         /// <summary>
@@ -688,7 +688,7 @@ namespace Elvis.Forms.Reports.DRF
         {
             return new DRFReport()
             {
-                DateCreated = DateTime.Now,
+                DateCreated = MyDateTime.Now,
                 Works =  GetSelectedWorksArea(),
                 Location = cmboLocation.Text,
                 PlantItem = cmboPlantItem.Text,
@@ -881,7 +881,7 @@ namespace Elvis.Forms.Reports.DRF
                     this.tibDelay.TibIndex,
                     this.tibDelay.TibDelayIndex,
                     0,
-                    DateTime.Now))
+                    MyDateTime.Now))
                 {
                     delayPopup.ShowDialog();
                 }
@@ -896,7 +896,7 @@ namespace Elvis.Forms.Reports.DRF
         {
             DialogResult result = MessageBox.Show(
                 string.Format("Are you sure you wish to set this report as reviewed on {0}?",
-                    DateTime.Now.ToString("dd MMM yyyy HH:mm")),
+                    MyDateTime.Now.ToString("dd MMM yyyy HH:mm")),
                 "Confirmation Required",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question

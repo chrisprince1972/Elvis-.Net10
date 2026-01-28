@@ -112,7 +112,7 @@ namespace Elvis.Common
 
         public static DateTime Now()
         {
-            return TruncDatumTijdOpMinuten(DateTime.Now);
+            return TruncDatumTijdOpMinuten(MyDateTime.Now);
         }
 
         public static DateTime TruncDatumTijdOpMinuten(DateTime DT)

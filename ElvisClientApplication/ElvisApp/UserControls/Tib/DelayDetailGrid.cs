@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using ElvisDataModel;
 using System.Reflection;
+using Elvis.Common;
 
 namespace Elvis.UserControls.Tib
 {
@@ -403,7 +404,7 @@ namespace Elvis.UserControls.Tib
                                 delay.TibIndex,
                                 delay.TibDelayIndex,
                                 GetTotalUnallocatedEventTime(delay.TibIndex),
-                                DateTime.Now
+                                MyDateTime.Now
                             )
                 )
                 {

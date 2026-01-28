@@ -174,9 +174,9 @@ namespace Elvis.Forms.Reports.Miscasts
             else
             {
                 DateTime dateNow = new DateTime(
-                    DateTime.Now.Year,
-                    DateTime.Now.Month,
-                    DateTime.Now.Day,
+                    MyDateTime.Now.Year,
+                    MyDateTime.Now.Month,
+                    MyDateTime.Now.Day,
                     7, 0, 0
                 );
 

@@ -3,6 +3,7 @@ using Elvis.Properties;
 using System.Collections.Generic;
 using System;
 using ElvisDataModel.EDMX;
+using Elvis.Common;
 
 namespace Elvis.UserControls.CasterMachineCondition
 {
@@ -37,12 +38,12 @@ namespace Elvis.UserControls.CasterMachineCondition
 
         private void GetData()
         {
-            ucStrandAssessmentSummaryC1S1.GetData(1, 1, DateTime.Now);
-            ucStrandAssessmentSummaryC1S2.GetData(1, 2, DateTime.Now);
-            ucStrandAssessmentSummaryC2S5.GetData(2, 5, DateTime.Now);
-            ucStrandAssessmentSummaryC2S6.GetData(2, 6, DateTime.Now);
-            ucStrandAssessmentSummaryC3S3.GetData(3, 3, DateTime.Now);
-            ucStrandAssessmentSummaryC3S4.GetData(3, 4, DateTime.Now);
+            ucStrandAssessmentSummaryC1S1.GetData(1, 1, MyDateTime.Now);
+            ucStrandAssessmentSummaryC1S2.GetData(1, 2, MyDateTime.Now);
+            ucStrandAssessmentSummaryC2S5.GetData(2, 5, MyDateTime.Now);
+            ucStrandAssessmentSummaryC2S6.GetData(2, 6, MyDateTime.Now);
+            ucStrandAssessmentSummaryC3S3.GetData(3, 3, MyDateTime.Now);
+            ucStrandAssessmentSummaryC3S4.GetData(3, 4, MyDateTime.Now);
             ucUnitChangePrioritySummaryC1S1.GetData();
         }
 
@@ -120,7 +121,7 @@ namespace Elvis.UserControls.CasterMachineCondition
             ComboBox cmboStrand = options.Controls["cmboStrand"] as ComboBox;
             cmboStrand.Text = strand.ToString();
             DateTimePicker dtTestDate = options.Controls["dtTestDate"] as DateTimePicker;
-            dtTestDate.Value = DateTime.Now.Date;
+            dtTestDate.Value = MyDateTime.Now.Date;
             Button btnSearch = options.Controls["btnSearch"] as Button;
             CMCTabControl.SelectTab("singleStrandTabPage");
         }

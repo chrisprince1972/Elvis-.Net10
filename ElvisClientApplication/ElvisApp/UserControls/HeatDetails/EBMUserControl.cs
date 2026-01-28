@@ -71,7 +71,7 @@ namespace Elvis.UserControls.HeatDetails
             this.chart.AddTramLines("Tram Lines", Color.DarkTurquoise, 7, 19, 35, 20);
             this.CheckBoxesChecked = new List<Tuple<int, bool>>();
             this.chart.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ChartMouseClick);
-            this.EndTime = DateTime.Now;
+            this.EndTime = MyDateTime.Now;
             this.ListChartSeries = null;
             CustomiseColours();
         }
@@ -207,7 +207,7 @@ namespace Elvis.UserControls.HeatDetails
             if (vessel != null)
             {
                 this.StartTime = vessel.TImeStampStart;
-                this.EndTime = vessel.TimeStampEnd.HasValue ? vessel.TimeStampEnd.Value : DateTime.Now;
+                this.EndTime = vessel.TimeStampEnd.HasValue ? vessel.TimeStampEnd.Value : MyDateTime.Now;
                 // 5 = vessel 1
                 this.IsVessel1 = vessel.UnitNumber == 5;
             }

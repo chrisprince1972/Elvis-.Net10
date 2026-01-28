@@ -72,9 +72,9 @@ namespace Elvis.UserControls.DatePickers
         private void InitialDateSetup()
         {
             //Conversion of DayOfWeek range 0-6, we want 1-7 so add 1
-            numDay.Value = (int)DateTime.Now.DayOfWeek + 1;
-            numWeek.Value = TimeFunctions.GetWeekNumber(DateTime.Now);//it was giving the wrong week number with dt.WeekOfYear();
-            numYear.Value = DateTime.Now.Year;
+            numDay.Value = (int)MyDateTime.Now.DayOfWeek + 1;
+            numWeek.Value = TimeFunctions.GetWeekNumber(MyDateTime.Now);//it was giving the wrong week number with dt.WeekOfYear();
+            numYear.Value = MyDateTime.Now.Year;
         }
 
         private void SetDate(DateTime value)

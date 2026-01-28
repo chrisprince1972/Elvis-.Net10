@@ -109,9 +109,9 @@ namespace Elvis.Forms.TrendingShifts
             if (picker != null)
             {
                 picker.MaxDate = new DateTime(
-                    DateTime.Now.Year,
-                    DateTime.Now.Month,
-                    DateTime.Now.Day,
+                    MyDateTime.Now.Year,
+                    MyDateTime.Now.Month,
+                    MyDateTime.Now.Day,
                     0, 0, 0, 0);
                 picker.MaxDate = picker.MaxDate.AddDays(-1);
 
@@ -371,7 +371,7 @@ namespace Elvis.Forms.TrendingShifts
             e.Graphics.DrawImage(bm3, rect3);
 
             //Print Footer Onto Page. Not showing up for some reason!
-            e.Graphics.DrawString(DateTime.Now.ToString("dd/MM/yyyy HH:mm"),
+            e.Graphics.DrawString(MyDateTime.Now.ToString("dd/MM/yyyy HH:mm"),
                 dateFont, Brushes.Black,
                 e.PageSettings.PrintableArea.Width - e.MarginBounds.X - 60,
                 e.PageSettings.PrintableArea.Height - e.MarginBounds.Y + 30);

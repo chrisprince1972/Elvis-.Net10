@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using ElvisDataModel.EDMX;
 using NLog;
 using ElvisDataModel;
+using Elvis.Common;
 
 namespace Elvis.Forms.General
 {
@@ -73,7 +74,7 @@ namespace Elvis.Forms.General
             int monthsOfData = GetNoOfMonths();
             string username = Environment.UserName;
             string machineName = Environment.MachineName;
-            DateTime dateFrom = DateTime.Now.AddMonths(-monthsOfData);
+            DateTime dateFrom = MyDateTime.Now.AddMonths(-monthsOfData);
 
             if (menuAllLogs.Checked)
             {//Filter By Date

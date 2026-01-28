@@ -1,6 +1,8 @@
-﻿using System.Data.Entity.Core.EntityClient;
+﻿using ElvisDataModel.Properties;
+using System;
+using System.Configuration;
+using System.Data.Entity.Core.EntityClient;
 using System.Data.SqlClient;
-using ElvisDataModel.Properties;
 
 namespace ElvisDataModel
 {
@@ -56,10 +58,19 @@ namespace ElvisDataModel
 
             private static string BuildTestConnection()
             {
+                string machineName = ConfigurationManager.AppSettings["MachineName"]?.Trim();
+
+                if (string.IsNullOrWhiteSpace(machineName))
+                {
+                    throw new ConfigurationErrorsException(
+                        "Missing required App.config key: MachineName"
+                    );
+                }
+
                 // Specify the provider name, server and database.
                 string providerName = "System.Data.SqlClient";
-                string serverName = @"CPLAPTOP\MSSQLSERVER01";
-                string databaseName = "elvisdb";
+                string serverName = $@"{machineName}\MSSQLSERVER01";
+                string databaseName = "ElvisDB";
 
                 // Initialize the connection string builder for the
                 // underlying provider.
@@ -93,9 +104,18 @@ namespace ElvisDataModel
 
             private static string BuildLiveConnection()
             {
+                string machineName = ConfigurationManager.AppSettings["MachineName"]?.Trim();
+
+                if (string.IsNullOrWhiteSpace(machineName))
+                {
+                    throw new ConfigurationErrorsException(
+                        "Missing required App.config key: MachineName"
+                    );
+                }
+
                 // Specify the provider name, server and database.
                 string providerName = "System.Data.SqlClient";
-                string serverName = @"CPLAPTOP\MSSQLSERVER01";
+                string serverName = $@"{machineName}\MSSQLSERVER01";
                 string databaseName = "ElvisDB";
 
                 // Initialize the connection string builder for the

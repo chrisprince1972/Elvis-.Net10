@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using Elvis.Common;
 using Elvis.Properties;
 using ElvisDataModel;
 using ElvisDataModel.EDMX;
@@ -120,7 +121,7 @@ namespace Elvis.Forms.TrendingShifts
         /// <returns>True if user can edit, false otherwise.</returns>
         private bool CanUserEdit()
         {
-            if (DateTime.Now.Hour >= lowerTimeConstraint && DateTime.Now.Hour < upperTimeConstraint)
+            if (MyDateTime.Now.Hour >= lowerTimeConstraint && MyDateTime.Now.Hour < upperTimeConstraint)
             {
                 return true;
             }

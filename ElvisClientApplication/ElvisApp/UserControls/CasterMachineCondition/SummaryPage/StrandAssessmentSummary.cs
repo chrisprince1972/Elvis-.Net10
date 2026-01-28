@@ -4,6 +4,7 @@ using Elvis.Properties;
 using ElvisDataModel.EDMX;
 using System.Drawing;
 using System.ComponentModel;
+using Elvis.Common;
 
 namespace Elvis.UserControls.CasterMachineCondition
 {
@@ -58,7 +59,7 @@ namespace Elvis.UserControls.CasterMachineCondition
 
                 sarcladTestDate = ElvisDataModel.EntityHelper.CasterMachineCondition.GetTopSingle<SarcladTestIndex>
                                        ("it.Caster = " + caster + " and it.Strand = " + strand, "it.TestDate desc").TestDate;
-                daysSinceLastSarclad = (DateTime.Now - sarcladTestDate).Value.Days;
+                daysSinceLastSarclad = (MyDateTime.Now - sarcladTestDate).Value.Days;
                 BindData(strandAssessment, daysSinceLastSarclad);
             }
             catch (Exception ex)

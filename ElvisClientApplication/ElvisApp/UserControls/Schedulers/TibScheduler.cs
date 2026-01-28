@@ -60,8 +60,8 @@ namespace Elvis.UserControls
         {
             InitializeComponent();
             this.isMiscastAdmin = isMiscastAdmin;
-            this.scheduler.MinDate = DateTime.Now.AddDays(-Settings.Default.TibDaysToShow);
-            this.scheduler.MaxDate = DateTime.Now.AddDays(2);
+            this.scheduler.MinDate = MyDateTime.Now.AddDays(-Settings.Default.TibDaysToShow);
+            this.scheduler.MaxDate = MyDateTime.Now.AddDays(2);
             ColourLegend();
         }
         #endregion
@@ -89,7 +89,7 @@ namespace Elvis.UserControls
                 var lastEvent = evt.Events.OrderBy(e => e.StartTime).LastOrDefault();
                 if (lastEvent != null && !lastEvent.EndTime.HasValue)
                 {
-                    lastEvent.EndTime = DateTime.Now;
+                    lastEvent.EndTime = MyDateTime.Now;
                     lastEvent.Ongoing = true;
                 }
             }
@@ -175,12 +175,12 @@ namespace Elvis.UserControls
                         };
                         AddAppointment(appointment);
                     }
-                    //Add remaining block to ongoing event to reach DateTime.Now
+                    //Add remaining block to ongoing event to reach MyDateTime.Now
                     else if (tibEvent.Ongoing)
                     {
                         int remainingMins = tibEvent.Duration.Value - delayOffset;
                         DateTime start = tibEvent.StartTime.Value.AddMinutes(delayOffset);
-                        DateTime end = DateTime.Now;
+                        DateTime end = MyDateTime.Now;
 
                         Appointment appointment = new Appointment()
                         {
@@ -219,9 +219,9 @@ namespace Elvis.UserControls
                         int index = FindResourceIndex(unitEvent.UnitId);
 
                         //Check if the event has started, if so set startime to now to cut the planning block
-                        if (unitEvent.PlanStartTime < DateTime.Now)
+                        if (unitEvent.PlanStartTime < MyDateTime.Now)
                         {
-                            unitEvent.StartTime = DateTime.Now;
+                            unitEvent.StartTime = MyDateTime.Now;
                         }
 
                         if (unitEvent.StartTime >= unitEvent.EndTime)
@@ -250,8 +250,8 @@ namespace Elvis.UserControls
 
                             DateTime start = unitEvent.EndTime.Value.AddMinutes(
                                 -(unitEvent.CastDuration - unitEvent.IdealCastingTime));
-                            if (start < DateTime.Now)
-                                start = DateTime.Now;//Stops overflow of blocks onto historical side of scheduler
+                            if (start < MyDateTime.Now)
+                                start = MyDateTime.Now;//Stops overflow of blocks onto historical side of scheduler
 
                             Appointment slowCastEvent = new Appointment()
                             {

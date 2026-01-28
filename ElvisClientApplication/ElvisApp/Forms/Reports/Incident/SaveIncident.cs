@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BusinessLogic.Models.Reports.Incident;
+using Elvis.Common;
 
 namespace Elvis.Forms.Reports.Incident
 {
@@ -103,7 +104,7 @@ namespace Elvis.Forms.Reports.Incident
             dgvActions.Rows[index].Cells["colTargetDate"].Value = actionToPopulate.TargetDate;
 
             //if action overdue
-            if (actionToPopulate.State.StatusId.Value != 2 && actionToPopulate.TargetDate < DateTime.Now.Date)
+            if (actionToPopulate.State.StatusId.Value != 2 && actionToPopulate.TargetDate < MyDateTime.Now.Date)
             {
                 DataGridViewCellStyle bold = new DataGridViewCellStyle();
                 bold.Font = new Font(dgvActions.Font, FontStyle.Bold);
@@ -191,7 +192,7 @@ namespace Elvis.Forms.Reports.Incident
             if (checkAllActionsClosed())
             {
                 Incident.ReportStatus.StatusId = (int)Status.IncidentStatus.Close;
-                Incident.TimeClosed = DateTime.Now;
+                Incident.TimeClosed = MyDateTime.Now;
                 setupClosedIncident();
                 IncidentChanged();
             }
@@ -396,7 +397,7 @@ namespace Elvis.Forms.Reports.Incident
             if(Incident.Actions.Count > 0 && Incident.CheckAllActionsClosed())
             {
                 Incident.ReportStatus = new Status(Status.IncidentStatus.Close);
-                Incident.TimeClosed = DateTime.Now;
+                Incident.TimeClosed = MyDateTime.Now;
                 bClose = true;
             }
             Incident.Save(bClose);

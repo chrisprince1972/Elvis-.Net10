@@ -193,7 +193,7 @@ namespace Elvis.Model
                                     .Where(e => e.UnitNumber == unitEvents[i].UnitNumber && e.TibIndex > unitEvents[i].TibIndex)
                                     .FirstOrDefault();
 
-                                unitEvents[i].EventEnd = nextEventForUnit != null ? nextEventForUnit.EventStart : DateTime.Now;
+                                unitEvents[i].EventEnd = nextEventForUnit != null ? nextEventForUnit.EventStart : MyDateTime.Now;
 
                                 unitEvents[i].TibDuration = Convert.ToInt32(
                                     (unitEvents[i].EventEnd.Value - unitEvents[i].EventStart.Value).TotalMinutes);

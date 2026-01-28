@@ -19,9 +19,9 @@ namespace Elvis.UserControls.DatePickers
 
         public static void SetupYearControl(NumericUpDown numYear)
         {
-            numYear.Maximum = DateTime.Now.Year;
-            numYear.Minimum = DateTime.Now.Year - 5;
-            numYear.Value = DateTime.Now.Year;
+            numYear.Maximum = MyDateTime.Now.Year;
+            numYear.Minimum = MyDateTime.Now.Year - 5;
+            numYear.Value = MyDateTime.Now.Year;
         }
 
         public static void AddUserControlToGroupBox(GroupBox grpBoxParent, 

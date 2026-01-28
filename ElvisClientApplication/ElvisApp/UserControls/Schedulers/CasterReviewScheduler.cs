@@ -89,7 +89,7 @@ namespace Elvis.UserControls
         {
             InitializeComponent();
             this.isMiscastAdmin = isMiscastAdmin;
-            SelectedDate = DateTime.Now.Hour < 7 ? DateTime.Now.AddDays(-1) : DateTime.Now;
+            SelectedDate = MyDateTime.Now.Hour < 7 ? MyDateTime.Now.AddDays(-1) : MyDateTime.Now;
             SetMinMaxDate(SelectedDate);
             CustomiseColours();
         }
@@ -342,7 +342,7 @@ namespace Elvis.UserControls
 
             if (hmStocks.Count == 0)
             {//Get most recent stocks data for calcs if no data present
-                hmStocks = GetHMStocks(DateTime.Now.AddHours(-1), DateTime.Now);
+                hmStocks = GetHMStocks(MyDateTime.Now.AddHours(-1), MyDateTime.Now);
             }
 
             SystemConfiguration systemConfiguration = ConfigurationCoordinator.LoadConfiguration();
@@ -372,7 +372,7 @@ namespace Elvis.UserControls
                 );//Actual Casting Rate
 
             //Only add predicted data if the future is shown.
-            if (dateTo >= DateTime.Now)
+            if (dateTo >= MyDateTime.Now)
             {
                 maxYValue = ChartFunctions.AddPredictedHMStockToChart(
                     chartHMBuffer, plannedHeats, hoursToPredict,
@@ -389,7 +389,7 @@ namespace Elvis.UserControls
                     dateFrom, hoursToPredict
                     );//Predicted Casting Rate Line
 
-                ChartFunctions.DrawVerticalAnnotation(chartHMBuffer, DateTime.Now);
+                ChartFunctions.DrawVerticalAnnotation(chartHMBuffer, MyDateTime.Now);
             }
 
             if (show7amHMStock)
@@ -584,7 +584,7 @@ namespace Elvis.UserControls
             }
             else
             {
-                SetMinMaxDate(DateTime.Now);
+                SetMinMaxDate(MyDateTime.Now);
             }
 
             scheduler.Appointments.Clear();
@@ -737,7 +737,7 @@ namespace Elvis.UserControls
                     var lastEvent = evt.Events.OrderBy(e => e.StartTime).LastOrDefault();
                     if (lastEvent != null && !lastEvent.EndTime.HasValue)
                     {
-                        lastEvent.EndTime = DateTime.Now;
+                        lastEvent.EndTime = MyDateTime.Now;
                         lastEvent.Ongoing = true;
                     }
                 }
@@ -823,12 +823,12 @@ namespace Elvis.UserControls
                             };
                             AddAppointment(appointment);
                         }
-                        //Add remaining block to ongoing event to reach DateTime.Now
+                        //Add remaining block to ongoing event to reach MyDateTime.Now
                         else if (tibEvent.Ongoing)
                         {
                             int remainingMins = tibEvent.Duration.Value - delayOffset;
                             DateTime start = tibEvent.StartTime.Value.AddMinutes(delayOffset);
-                            DateTime end = DateTime.Now;
+                            DateTime end = MyDateTime.Now;
 
                             Appointment appointment = new Appointment()
                             {
@@ -861,7 +861,7 @@ namespace Elvis.UserControls
 
             foreach (ProductionEvent heat in plannedHeats)
             {
-                if (heat != null && heat.PlanStartTime >= DateTime.Now)
+                if (heat != null && heat.PlanStartTime >= MyDateTime.Now)
                 {
                     //Find the index of the unit in the left hand column
                     int index = FindResourceIndex((int)(heat.UnitId + 1000));
@@ -869,7 +869,7 @@ namespace Elvis.UserControls
                     Appointment appointment = new Appointment
                     {
                         Start = heat.StartTime,
-                        End = heat.EndTime.HasValue ? heat.EndTime.Value : DateTime.Now,
+                        End = heat.EndTime.HasValue ? heat.EndTime.Value : MyDateTime.Now,
                         Text = heat.HeatNumber.ToString(),
                         Tag = heat,
                         CustomHeight = Model.Tib.GetAppointmentHeight(2),

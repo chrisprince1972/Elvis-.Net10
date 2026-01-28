@@ -22,7 +22,7 @@ namespace Elvis.Forms.General
             InitializeComponent();
             this.isMiscastAdmin = isMiscastAdmin;
             dgvResults.AutoGenerateColumns = false;
-            elvisDateTimeRangeSelector.SetupUserControl(DateTime.Now.AddDays(-2), DateTime.Now.AddDays(1));
+            elvisDateTimeRangeSelector.SetupUserControl(MyDateTime.Now.AddDays(-2), MyDateTime.Now.AddDays(1));
             GetData();
             PopulateGradesCombo();
             CustomiseColours();
@@ -210,7 +210,7 @@ namespace Elvis.Forms.General
         private void btnReset_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
-            elvisDateTimeRangeSelector.SetupUserControl(DateTime.Now.AddDays(-2), DateTime.Now.AddDays(1));
+            elvisDateTimeRangeSelector.SetupUserControl(MyDateTime.Now.AddDays(-2), MyDateTime.Now.AddDays(1));
             dgvResults.DataSource = null;
             this.Cursor = Cursors.Default;
         }

@@ -254,7 +254,7 @@ namespace Elvis.Model
             
             ORDER BY ue.unit_id, ue.event_start ";
             
-            sql = sql.Replace("@starttime", DateTime.Now.AddDays(-20).ToString("dd-MMM-yyy HH:mm:ss"));
+            sql = sql.Replace("@starttime", MyDateTime.Now.AddDays(-20).ToString("dd-MMM-yyy HH:mm:ss"));
 
             OdbcConnection connection = new OdbcConnection("DSN=psmet; UID=int_ro; PWD=bosmis");
             OdbcCommand command = new OdbcCommand(sql, connection);

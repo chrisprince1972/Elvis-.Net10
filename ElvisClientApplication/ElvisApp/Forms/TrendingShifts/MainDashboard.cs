@@ -149,7 +149,7 @@ namespace Elvis.Forms.TrendingShifts
 
         private void SetToday()
         {
-            SetDate(GetMonthStart(DateTime.Now));
+            SetDate(GetMonthStart(MyDateTime.Now));
         }
         
         /// <returns>The total height with an added offset.</returns>
@@ -185,7 +185,7 @@ namespace Elvis.Forms.TrendingShifts
             DashboardUserControl.StartDate = dt;
             UpdateDateDisplay(dt);
             UpdateTitleStatus();
-            DateTime weekStart = GetMonthStart(DateTime.Now);
+            DateTime weekStart = GetMonthStart(MyDateTime.Now);
 
             toolStripThisMonth.ToolTipText = "Go to " +
                 weekStart.ToString(DATE_MONTH_FORMAT);

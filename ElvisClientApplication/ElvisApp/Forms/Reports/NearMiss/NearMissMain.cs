@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Elvis.Common;
 using Elvis.Properties;
 using ElvisDataModel;
 using NLog;
@@ -100,7 +101,7 @@ namespace Elvis.Forms.Reports.NearMiss
         /// </summary>
         private void SetupForm()
         {
-            elvisDateTimeRangeSelector.SetupUserControl(DateTime.Now.AddDays(-14), DateTime.Now);
+            elvisDateTimeRangeSelector.SetupUserControl(MyDateTime.Now.AddDays(-14), MyDateTime.Now);
             elvisDateTimeRangeSelector.SelectPickDate();
 
             dgvNearMiss.AutoGenerateColumns = false;

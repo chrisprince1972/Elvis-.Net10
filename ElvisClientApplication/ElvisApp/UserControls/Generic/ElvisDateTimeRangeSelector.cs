@@ -109,7 +109,7 @@ namespace Elvis.UserControls.Generic
                 }
                 else
                 {//Current Shift
-                    return DateTime.Now;
+                    return MyDateTime.Now;
                 }
             }
             //Default to Date Picker
@@ -140,7 +140,7 @@ namespace Elvis.UserControls.Generic
             }
             else if (rbFixed.Checked)
             {
-                DateTime startOfCurrentShift = Elvis.Common.TimeFunctions.StartOfShift_PT(DateTime.Now);
+                DateTime startOfCurrentShift = Elvis.Common.TimeFunctions.StartOfShift_PT(MyDateTime.Now);
 
                 if (rbLastShift.Checked)
                 {//Last Shift
@@ -190,7 +190,7 @@ namespace Elvis.UserControls.Generic
             }
             else
             {
-                DateTime startOfCurrentShift = Elvis.Common.TimeFunctions.StartOfShift_PT(DateTime.Now);
+                DateTime startOfCurrentShift = Elvis.Common.TimeFunctions.StartOfShift_PT(MyDateTime.Now);
 
                 if (rbLastShift.Checked)
                 {//Last Shift

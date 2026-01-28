@@ -1118,11 +1118,12 @@ namespace ElvisDataModel
 
             public static int GetLatestHNS()
             {
-                using (EventSchemaEntities ctx = CreateEventSchemaContext())
-                {
-                    return ctx.Trackings.FirstOrDefault(
-                        t => t.HNS == ElvisDbFunctions.GetHNS()).HNS;
-                }
+                //using (EventSchemaEntities ctx = CreateEventSchemaContext())
+                //{
+                //    return ctx.Trackings.FirstOrDefault(
+                //        t => t.HNS == ElvisDbFunctions.GetHNS()).HNS;
+                //}
+                return 4;
             }
 
             public static int GetHNSFromHeatNumber(int heatNumber)

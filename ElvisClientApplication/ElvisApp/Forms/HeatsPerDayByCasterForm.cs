@@ -6,6 +6,7 @@ using System.Drawing.Printing;
 using Elvis.Model;
 using Elvis.Model.ViewModels;
 using System.ComponentModel;
+using Elvis.Common;
 
 namespace Elvis.Forms
 {
@@ -23,7 +24,7 @@ namespace Elvis.Forms
         #endregion
 
         public HeatsPerDayByCasterForm()
-            : this(DateTime.Now)
+            : this(MyDateTime.Now)
         {
         }
 
@@ -214,7 +215,7 @@ namespace Elvis.Forms
                     else
                     {
                         // Now Button
-                        SelectedDate = DateTime.Now;
+                        SelectedDate = MyDateTime.Now;
                     }
                     LoadData();
                     DoDataBinding();

@@ -622,7 +622,7 @@ namespace Elvis.Common
 
         public static Color RandomColour()
         {
-            Random randomNo = new Random(DateTime.Now.Millisecond);
+            Random randomNo = new Random(MyDateTime.Now.Millisecond);
 
             int r = randomNo.Next(0, 255);
             int g = randomNo.Next(0, 255);

@@ -1092,7 +1092,7 @@ namespace Elvis.Forms
             }
             if (this.CurrentScheduler == Scheduler.Heat)
             {
-                SchedulerHeat.Display7Til7View(DateTime.Now);
+                SchedulerHeat.Display7Til7View(MyDateTime.Now);
             }
             this.Cursor = Cursors.Default;
         }
@@ -1177,14 +1177,14 @@ namespace Elvis.Forms
         {
             this.Cursor = Cursors.WaitCursor;
             if (this.CurrentScheduler == Scheduler.Heat)
-                SchedulerHeat.DisplayDateTime(DateTime.Now.AddHours(-6));
+                SchedulerHeat.DisplayDateTime(MyDateTime.Now.AddHours(-6));
             else if (this.CurrentScheduler == Scheduler.Tib)
-                SchedulerTib.DisplayDateTime(DateTime.Now);
+                SchedulerTib.DisplayDateTime(MyDateTime.Now);
             else if (this.CurrentScheduler == Scheduler.Caster)
             {
-                SchedulerCaster.SelectedDate = DateTime.Now;
+                SchedulerCaster.SelectedDate = MyDateTime.Now;
                 LoadCasterData();
-                toolStripButtonForward.Enabled = SchedulerCaster.SelectedDate.Date <= DateTime.Now.Date;
+                toolStripButtonForward.Enabled = SchedulerCaster.SelectedDate.Date <= MyDateTime.Now.Date;
             }
             this.Cursor = Cursors.Default;
         }
@@ -1223,7 +1223,7 @@ namespace Elvis.Forms
             {
                 SchedulerCaster.SelectedDate = SchedulerCaster.SelectedDate.AddDays(1);
                 LoadCasterData();
-                toolStripButtonForward.Enabled = SchedulerCaster.SelectedDate.Date <= DateTime.Now.Date;
+                toolStripButtonForward.Enabled = SchedulerCaster.SelectedDate.Date <= MyDateTime.Now.Date;
             }
             this.Cursor = Cursors.Default;
         }
@@ -1244,7 +1244,7 @@ namespace Elvis.Forms
             {
                 SchedulerCaster.SelectedDate = SchedulerCaster.SelectedDate.AddDays(-1);
                 LoadCasterData();
-                toolStripButtonForward.Enabled = SchedulerCaster.SelectedDate.Date <= DateTime.Now.Date;
+                toolStripButtonForward.Enabled = SchedulerCaster.SelectedDate.Date <= MyDateTime.Now.Date;
             }
             this.Cursor = Cursors.Default;
         }
@@ -1923,7 +1923,7 @@ namespace Elvis.Forms
         {
             e.Graphics.PageScale = 0.9F;
             e.Graphics.DrawString(
-                "Elvis Screenshot - " + DateTime.Now.ToString("dd MMM yyyy HH:mm"),
+                "Elvis Screenshot - " + MyDateTime.Now.ToString("dd MMM yyyy HH:mm"),
                 new Font("Arial", 16),
                 SystemBrushes.WindowText,
                 60, 30);
@@ -2112,7 +2112,7 @@ namespace Elvis.Forms
             SetupTibCustoms();
 
             picker.MaxDate = DateTimePicker.MaximumDateTime;//Stops an error when max date is less than min date.
-            this.SchedulerTib.DisplayDateTime(TimeFunctions.StartOfShift_PT(DateTime.Now));
+            this.SchedulerTib.DisplayDateTime(TimeFunctions.StartOfShift_PT(MyDateTime.Now));
             picker.MinDate = this.SchedulerTib.scheduler.MinDate;//Stops errors when high or low dates are selected
             picker.MaxDate = this.SchedulerTib.scheduler.MaxDate;
         }
@@ -2482,7 +2482,7 @@ namespace Elvis.Forms
             //Displays the ongoing status if the end time is close to the now time
             //and the event is ongoing
             if (selectedTibEvent.Ongoing &&
-                (DateTime.Now - app.End).TotalMinutes <= 5)
+                (MyDateTime.Now - app.End).TotalMinutes <= 5)
             {
                 this.ucTibDetails.End = "End: Ongoing";
             }
@@ -2843,7 +2843,7 @@ namespace Elvis.Forms
                 CasterReviewData.GetActualCasterTib(
                     SchedulerCaster.SelectedDate, hour));
 
-            if (this.SchedulerCaster.SelectedDate.Date >= DateTime.Now.Date)
+            if (this.SchedulerCaster.SelectedDate.Date >= MyDateTime.Now.Date)
             {
                 this.SchedulerCaster.LoadCurrentPlannedHeats(Model.MainForm.GetCasterPlannedHeats());
             }
@@ -2852,7 +2852,7 @@ namespace Elvis.Forms
             this.SchedulerCaster.DrawChart();
             this.SchedulerCaster.DisplayDateTime(SchedulerCaster.scheduler.MinDate);
             this.SchedulerCaster.ColourHeats();
-            toolStripButtonForward.Enabled = SchedulerCaster.SelectedDate.Date <= DateTime.Now.Date;
+            toolStripButtonForward.Enabled = SchedulerCaster.SelectedDate.Date <= MyDateTime.Now.Date;
         }
 
         /// <summary>
@@ -2905,8 +2905,8 @@ namespace Elvis.Forms
             {
                 if (CurrentSchedulerIsNotNull)
                 {
-                    this.SchedulerHeat.SetMaxDate(DateTime.Now.AddDays(2));
-                    this.SchedulerHeat.SetMinDate(DateTime.Now.AddDays(-Settings.Default.OverviewDaysToShow));
+                    this.SchedulerHeat.SetMaxDate(MyDateTime.Now.AddDays(2));
+                    this.SchedulerHeat.SetMinDate(MyDateTime.Now.AddDays(-Settings.Default.OverviewDaysToShow));
                 }
                 else
                 {
@@ -2917,8 +2917,8 @@ namespace Elvis.Forms
             {
                 if (CurrentSchedulerIsNotNull)
                 {
-                    this.SchedulerTib.SetMaxDate(DateTime.Now.AddDays(2));
-                    this.SchedulerTib.SetMinDate(DateTime.Now.AddDays(-Settings.Default.TibDaysToShow));
+                    this.SchedulerTib.SetMaxDate(MyDateTime.Now.AddDays(2));
+                    this.SchedulerTib.SetMinDate(MyDateTime.Now.AddDays(-Settings.Default.TibDaysToShow));
                 }
                 else
                 {

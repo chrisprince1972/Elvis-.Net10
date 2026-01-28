@@ -55,9 +55,9 @@ namespace Elvis.UserControls
         {
             this.InitializeComponent();
             //Needs the minus 2 hours to stop a weird scroll error.
-            this.scheduler.MinDate = DateTime.Now.AddDays(-Settings.Default.OverviewDaysToShow).AddHours(-2);
-            this.scheduler.MaxDate = DateTime.Now.AddDays(2);
-            this.scheduler.FirstDateTime = DateTime.Now.AddHours(-6);
+            this.scheduler.MinDate = MyDateTime.Now.AddDays(-Settings.Default.OverviewDaysToShow).AddHours(-2);
+            this.scheduler.MaxDate = MyDateTime.Now.AddDays(2);
+            this.scheduler.FirstDateTime = MyDateTime.Now.AddHours(-6);
         }
         #endregion
 
@@ -226,7 +226,7 @@ namespace Elvis.UserControls
                             }
                             else//Normal
                             {
-                                unitEvent.EndTime = DateTime.Now;
+                                unitEvent.EndTime = MyDateTime.Now;
                             }
                         }
 
@@ -243,9 +243,9 @@ namespace Elvis.UserControls
                         if (isPlanning)
                         {
                             //Check if the event has started, if so set startime to now to cut the planning block
-                            if (unitEvent.PlanStartTime < DateTime.Now)
+                            if (unitEvent.PlanStartTime < MyDateTime.Now)
                             {
-                                unitEvent.StartTime = DateTime.Now;
+                                unitEvent.StartTime = MyDateTime.Now;
                             }
                         }
 
@@ -274,8 +274,8 @@ namespace Elvis.UserControls
 
                             DateTime start = unitEvent.EndTime.Value.AddMinutes(
                                     -(unitEvent.CastDuration - unitEvent.IdealCastingTime));
-                            if (start < DateTime.Now)
-                                start = DateTime.Now;//Stops overflow of blocks onto historical side of scheduler
+                            if (start < MyDateTime.Now)
+                                start = MyDateTime.Now;//Stops overflow of blocks onto historical side of scheduler
 
                             Appointment slowCastEvent = new Appointment()
                             {

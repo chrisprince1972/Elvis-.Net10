@@ -14,7 +14,7 @@ namespace Elvis.Common
         {
             get
             {
-                return DateTime.Now - System.Diagnostics.Process.GetCurrentProcess().StartTime;
+                return MyDateTime.Now - System.Diagnostics.Process.GetCurrentProcess().StartTime;
             }
         }
     }

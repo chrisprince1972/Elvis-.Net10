@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.ComponentModel;
+using Elvis.Common;
 
 namespace Elvis.UserControls.DatePickers
 {
@@ -188,7 +189,7 @@ namespace Elvis.UserControls.DatePickers
                     return dpDayWeekYear.DateFrom;
 
                 default:
-                    return DateTime.Now;
+                    return MyDateTime.Now;
             }
         }
 
@@ -207,7 +208,7 @@ namespace Elvis.UserControls.DatePickers
                     return dpDayWeekYear.DateTo;
 
                 default:
-                    return DateTime.Now;
+                    return MyDateTime.Now;
             }
         }
 

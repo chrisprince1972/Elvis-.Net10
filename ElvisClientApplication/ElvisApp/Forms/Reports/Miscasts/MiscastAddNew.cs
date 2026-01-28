@@ -62,7 +62,7 @@ namespace Elvis.Forms.Reports.Miscasts
 
         private void MiscastAddNew_Load(object sender, EventArgs e)
         {
-            txtDateRaised.Text = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+            txtDateRaised.Text = MyDateTime.Now.ToString("dd/MM/yyyy HH:mm");
             if (string.IsNullOrWhiteSpace(txtHeatNumberSet.Text))
             {
                 LoadHeatNumberSet();

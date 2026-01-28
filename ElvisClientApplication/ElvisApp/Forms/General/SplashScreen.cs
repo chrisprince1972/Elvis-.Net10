@@ -33,24 +33,24 @@ namespace Elvis.Forms
         #region Constructor
         public SplashScreen(MainForm mainForm)
         {
-            this.main = mainForm;
+            //this.main = mainForm;
 
-            if (Debugger.IsAttached)
-            {
-                var asm = typeof(ElvisDataModel.EDMX.EventSchemaEntities).Assembly;
+            //if (Debugger.IsAttached)
+            //{
+            //    var asm = typeof(ElvisDataModel.EDMX.EventSchemaEntities).Assembly;
 
-                // Show which DLL is actually being used at runtime
-                MessageBox.Show(asm.Location, "ElvisDataModel.dll loaded from");
+            //    // Show which DLL is actually being used at runtime
+            //    MessageBox.Show(asm.Location, "ElvisDataModel.dll loaded from");
 
-                // Show any embedded resources that mention ElvisEventSchema
-                var names = asm.GetManifestResourceNames()
-                               .Where(n => n.IndexOf("ElvisEventSchema", StringComparison.OrdinalIgnoreCase) >= 0)
-                               .ToArray();
+            //    // Show any embedded resources that mention ElvisEventSchema
+            //    var names = asm.GetManifestResourceNames()
+            //                   .Where(n => n.IndexOf("ElvisEventSchema", StringComparison.OrdinalIgnoreCase) >= 0)
+            //                   .ToArray();
 
-                MessageBox.Show(names.Length == 0 ? "NO ElvisEventSchema resources found"
-                                                  : string.Join("\n", names),
-                                "ElvisEventSchema embedded resources");
-            }
+            //    MessageBox.Show(names.Length == 0 ? "NO ElvisEventSchema resources found"
+            //                                      : string.Join("\n", names),
+            //                    "ElvisEventSchema embedded resources");
+            //}
         }
 
 
